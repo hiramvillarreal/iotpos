@@ -1,0 +1,978 @@
+# translation of es.po to Español
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Miguel Chavez Gamboa <miguel@lemonpos.org>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: es\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?"
+"atid=1011570&group_id=209899&func=browse\n"
+"POT-Creation-Date: 2008-01-30 16:21-0600\n"
+"PO-Revision-Date: 2007-12-21 13:10-0600\n"
+"Last-Translator: Miguel Chavez Gamboa <miguel@lemonpos.org>\n"
+"Language-Team: Español <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: clienteditor.cpp:40
+msgid "Client Editor"
+msgstr "Editor de clientes"
+
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 34
+#: main.cpp:8 po/extractedrc.cpp:273 extractedrc.cpp:273
+msgid "Squeeze your lemon!"
+msgstr "Exprime tu limón"
+
+#: main.cpp:14
+msgid "squeeze"
+msgstr "squeeze"
+
+#: main.cpp:14
+msgid "(C) 2007 Miguel Chavez Gamboa"
+msgstr "(C) 2007 Miguel Chávez Gamboa"
+
+#: main.cpp:15
+msgid "Miguel Chavez Gamboa"
+msgstr "Miguel Chávez Gamboa"
+
+#: main.cpp:19
+msgid "Document to open"
+msgstr "Document to open"
+
+#. i18n: tag label
+#. i18n: file ./squeeze.kcfg line 9
+#: po/extractedrc.cpp:3 extractedrc.cpp:3
+msgid "How the main window is divided."
+msgstr "How the main window is divided."
+
+#. i18n: tag label
+#. i18n: file ./squeeze.kcfg line 14
+#: po/extractedrc.cpp:6 extractedrc.cpp:6
+msgid "DB Server Name"
+msgstr "DB Server Name"
+
+#. i18n: tag label
+#. i18n: file ./squeeze.kcfg line 18
+#: po/extractedrc.cpp:9 extractedrc.cpp:9
+msgid "DB Username"
+msgstr "DB Username"
+
+#. i18n: tag label
+#. i18n: file ./squeeze.kcfg line 22
+#: po/extractedrc.cpp:12 extractedrc.cpp:12
+msgid "DB Password"
+msgstr "DB Password"
+
+#. i18n: tag label
+#. i18n: file ./squeeze.kcfg line 26
+#: po/extractedrc.cpp:15 extractedrc.cpp:15
+msgid "DB Name"
+msgstr "DB Name"
+
+#. i18n: tag text
+#. i18n: file ./squeezeui.rc line 4
+#: po/extractedrc.cpp:18 extractedrc.cpp:18
+msgid "Main Toolbar"
+msgstr "Main Toolbar"
+
+#. i18n: tag text
+#. i18n: file ./squeezeui.rc line 8
+#: po/extractedrc.cpp:21 extractedrc.cpp:21
+msgid "Database ToolBar"
+msgstr "Database ToolBar"
+
+#. i18n: tag string
+#. i18n: file ./ui/editclient_widget.ui line 13
+#. i18n: tag string
+#. i18n: file ./ui/editpromo_widget.ui line 19
+#. i18n: tag string
+#. i18n: file ./ui/edituser_widget.ui line 13
+#. i18n: tag string
+#. i18n: file ./ui/prefs_db.ui line 13
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 13
+#. i18n: tag string
+#. i18n: file ./ui/editclient_widget.ui line 13
+#. i18n: tag string
+#. i18n: file ./ui/editpromo_widget.ui line 19
+#. i18n: tag string
+#. i18n: file ./ui/edituser_widget.ui line 13
+#. i18n: tag string
+#. i18n: file ./ui/prefs_db.ui line 13
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 13
+#: po/extractedrc.cpp:24 po/extractedrc.cpp:48 po/extractedrc.cpp:60
+#: po/extractedrc.cpp:87 po/extractedrc.cpp:270 extractedrc.cpp:24
+#: extractedrc.cpp:48 extractedrc.cpp:60 extractedrc.cpp:87
+#: extractedrc.cpp:270
+msgid "Form"
+msgstr "Form"
+
+#. i18n: tag string
+#. i18n: file ./ui/editclient_widget.ui line 19
+#: po/extractedrc.cpp:27 extractedrc.cpp:27
+msgid "&Name:"
+msgstr "&Nombre:"
+
+#. i18n: tag string
+#. i18n: file ./ui/editclient_widget.ui line 60
+#. i18n: tag string
+#. i18n: file ./ui/edituser_widget.ui line 93
+#. i18n: tag string
+#. i18n: file ./ui/editclient_widget.ui line 60
+#. i18n: tag string
+#. i18n: file ./ui/edituser_widget.ui line 93
+#: po/extractedrc.cpp:30 po/extractedrc.cpp:75 extractedrc.cpp:30
+#: extractedrc.cpp:75
+msgid "&Address:"
+msgstr "&Dirección:"
+
+#. i18n: tag string
+#. i18n: file ./ui/editclient_widget.ui line 83
+#. i18n: tag string
+#. i18n: file ./ui/edituser_widget.ui line 86
+#. i18n: tag string
+#. i18n: file ./ui/editclient_widget.ui line 83
+#. i18n: tag string
+#. i18n: file ./ui/edituser_widget.ui line 86
+#: po/extractedrc.cpp:33 po/extractedrc.cpp:72 extractedrc.cpp:33
+#: extractedrc.cpp:72
+msgid "Change &Photo"
+msgstr "Cambiar &Foto:"
+
+#. i18n: tag string
+#. i18n: file ./ui/editclient_widget.ui line 90
+#. i18n: tag string
+#. i18n: file ./ui/edituser_widget.ui line 129
+#. i18n: tag string
+#. i18n: file ./ui/editclient_widget.ui line 90
+#. i18n: tag string
+#. i18n: file ./ui/edituser_widget.ui line 129
+#: po/extractedrc.cpp:36 po/extractedrc.cpp:78 extractedrc.cpp:36
+#: extractedrc.cpp:78
+msgid "Phone"
+msgstr "Teléfono:"
+
+#. i18n: tag string
+#. i18n: file ./ui/editclient_widget.ui line 103
+#. i18n: tag string
+#. i18n: file ./ui/edituser_widget.ui line 142
+#. i18n: tag string
+#. i18n: file ./ui/editclient_widget.ui line 103
+#. i18n: tag string
+#. i18n: file ./ui/edituser_widget.ui line 142
+#: po/extractedrc.cpp:39 po/extractedrc.cpp:81 extractedrc.cpp:39
+#: extractedrc.cpp:81
+msgid "Cell Phone:"
+msgstr "Celular:"
+
+#. i18n: tag string
+#. i18n: file ./ui/editclient_widget.ui line 129
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 265
+#. i18n: tag string
+#. i18n: file ./ui/editclient_widget.ui line 129
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 265
+#: po/extractedrc.cpp:42 po/extractedrc.cpp:129 extractedrc.cpp:42
+#: extractedrc.cpp:129
+msgid "Points:"
+msgstr "Puntos:"
+
+#. i18n: tag string
+#. i18n: file ./ui/editclient_widget.ui line 139
+#: po/extractedrc.cpp:45 extractedrc.cpp:45
+msgid "Discount:"
+msgstr "Descuento:"
+
+#. i18n: tag string
+#. i18n: file ./ui/editpromo_widget.ui line 33
+#: po/extractedrc.cpp:51 extractedrc.cpp:51
+msgid "Affects to product:"
+msgstr "Afecta al producto:"
+
+#. i18n: tag string
+#. i18n: file ./ui/editpromo_widget.ui line 49
+#: po/extractedrc.cpp:54 extractedrc.cpp:54
+msgid "Discount percentage:"
+msgstr "Descuento (%):"
+
+#. i18n: tag string
+#. i18n: file ./ui/editpromo_widget.ui line 106
+#: po/extractedrc.cpp:57 extractedrc.cpp:57
+msgid "Valid Until"
+msgstr "Válido hasta"
+
+#. i18n: tag string
+#. i18n: file ./ui/edituser_widget.ui line 19
+#. i18n: tag string
+#. i18n: file ./ui/prefs_db.ui line 38
+#. i18n: tag string
+#. i18n: file ./ui/edituser_widget.ui line 19
+#. i18n: tag string
+#. i18n: file ./ui/prefs_db.ui line 38
+#: po/extractedrc.cpp:63 po/extractedrc.cpp:96 extractedrc.cpp:63
+#: extractedrc.cpp:96
+msgid "&Username:"
+msgstr "&Usuario:"
+
+#. i18n: tag string
+#. i18n: file ./ui/edituser_widget.ui line 60
+#. i18n: tag string
+#. i18n: file ./ui/prefs_db.ui line 51
+#. i18n: tag string
+#. i18n: file ./ui/edituser_widget.ui line 60
+#. i18n: tag string
+#. i18n: file ./ui/prefs_db.ui line 51
+#: po/extractedrc.cpp:66 po/extractedrc.cpp:99 extractedrc.cpp:66
+#: extractedrc.cpp:99
+msgid "&Password:"
+msgstr "&Contraseña:"
+
+#. i18n: tag string
+#. i18n: file ./ui/edituser_widget.ui line 73
+#: po/extractedrc.cpp:69 extractedrc.cpp:69
+msgid "&Full Name:"
+msgstr "&Nombre completo:"
+
+#. i18n: tag string
+#. i18n: file ./ui/prefs_base.ui line 16
+#: po/extractedrc.cpp:84 extractedrc.cpp:84
+msgid "Not Used!"
+msgstr "Sin Usar!"
+
+#. i18n: tag string
+#. i18n: file ./ui/prefs_db.ui line 19
+#: po/extractedrc.cpp:90 squeeze.cpp:214 extractedrc.cpp:90
+msgid "Database"
+msgstr "Base de datos"
+
+#. i18n: tag string
+#. i18n: file ./ui/prefs_db.ui line 25
+#: po/extractedrc.cpp:93 extractedrc.cpp:93
+msgid "&Server:"
+msgstr "&Servidor:"
+
+#. i18n: tag string
+#. i18n: file ./ui/prefs_db.ui line 77
+#: po/extractedrc.cpp:102 extractedrc.cpp:102
+msgid "&Database Name:"
+msgstr "&Nombre de la base de datos:"
+
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 13
+#: po/extractedrc.cpp:105 producteditor.cpp:40 extractedrc.cpp:105
+msgid "Product Editor"
+msgstr "Editor de productos"
+
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 28
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 83
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 28
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 83
+#: po/extractedrc.cpp:108 po/extractedrc.cpp:183 extractedrc.cpp:108
+#: extractedrc.cpp:183
+msgid "&Code:"
+msgstr "&Código:"
+
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 92
+#: po/extractedrc.cpp:111 extractedrc.cpp:111
+msgid "Enable Code Editing"
+msgstr "Habilitar cambio de código"
+
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 140
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 186
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 140
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 186
+#: po/extractedrc.cpp:114 po/extractedrc.cpp:189 extractedrc.cpp:114
+#: extractedrc.cpp:189
+msgid "Change photo"
+msgstr "Cambiar foto"
+
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 170
+#: po/extractedrc.cpp:117 extractedrc.cpp:117
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600; color:#ff0000;\">New code already exists.</span></p></body></"
+"html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600; color:#ff0000;\">El nuevo código ya existe.</span></p></body></"
+"html>"
+
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 189
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 204
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 189
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 204
+#: po/extractedrc.cpp:123 po/extractedrc.cpp:192 extractedrc.cpp:123
+#: extractedrc.cpp:192
+msgid "&Description:"
+msgstr "&Descripción:"
+
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 218
+#: po/extractedrc.cpp:126 extractedrc.cpp:126
+msgid "&Stock Qty:"
+msgstr "Cantidad en inventario:"
+
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 312
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 283
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 312
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 283
+#: po/extractedrc.cpp:132 po/extractedrc.cpp:198 extractedrc.cpp:132
+#: extractedrc.cpp:198
+msgid "C&ategory:"
+msgstr "C&ategoría:"
+
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 344
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 315
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 344
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 315
+#: po/extractedrc.cpp:135 po/extractedrc.cpp:201 extractedrc.cpp:135
+#: extractedrc.cpp:201
+msgid "So&ld by:"
+msgstr "Vendido &por:"
+
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 376
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 347
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 376
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 347
+#: po/extractedrc.cpp:138 po/extractedrc.cpp:204 extractedrc.cpp:138
+#: extractedrc.cpp:204
+msgid "C&ost:"
+msgstr "C&osto:"
+
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 417
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 582
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 417
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 582
+#: po/extractedrc.cpp:142 po/extractedrc.cpp:234 extractedrc.cpp:142
+#: extractedrc.cpp:234
+#, no-c-format
+msgid "Pro&fit (%):"
+msgstr "&Utilidad (%):"
+
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 464
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 488
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 464
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 488
+#: po/extractedrc.cpp:146 po/extractedrc.cpp:217 extractedrc.cpp:146
+#: extractedrc.cpp:217
+#, no-c-format
+msgid "&Tax (%):"
+msgstr "&IVA (%):"
+
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 495
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 519
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 495
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 519
+#: po/extractedrc.cpp:149 po/extractedrc.cpp:220 extractedrc.cpp:149
+#: extractedrc.cpp:220
+msgid "This is the tax in percentage."
+msgstr "En porcentaje"
+
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 508
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 532
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 508
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 532
+#: po/extractedrc.cpp:152 po/extractedrc.cpp:223 extractedrc.cpp:152
+#: extractedrc.cpp:223
+msgid "Special Tax"
+msgstr "Otros impuestos"
+
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 514
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 538
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 514
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 538
+#: po/extractedrc.cpp:156 po/extractedrc.cpp:227 extractedrc.cpp:156
+#: extractedrc.cpp:227
+#, no-c-format
+msgid "Ot&her Taxes (%):"
+msgstr "Otros impuestos:"
+
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 545
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 569
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 545
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 569
+#: po/extractedrc.cpp:159 po/extractedrc.cpp:230 extractedrc.cpp:159
+#: extractedrc.cpp:230
+msgid "This is the extra tax in percentage."
+msgstr "Otros impuestos, en porcentaje."
+
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 561
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 614
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 561
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 614
+#: po/extractedrc.cpp:162 po/extractedrc.cpp:237 extractedrc.cpp:162
+#: extractedrc.cpp:237
+msgid "&Public price:"
+msgstr "&Precio al público:"
+
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 597
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 647
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 597
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 647
+#: po/extractedrc.cpp:165 po/extractedrc.cpp:240 extractedrc.cpp:165
+#: extractedrc.cpp:240
+msgid "Can be calculated with de + button"
+msgstr "Para calcular, presione el boton +."
+
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 971
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 1021
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 971
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 1021
+#: po/extractedrc.cpp:168 po/extractedrc.cpp:243 extractedrc.cpp:168
+#: extractedrc.cpp:243
+msgid "Calculate price based on utility"
+msgstr "Calcula el precio basado en la utilidad."
+
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 974
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 1024
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 974
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 1024
+#: po/extractedrc.cpp:171 po/extractedrc.cpp:246 extractedrc.cpp:171
+#: extractedrc.cpp:246
+msgid "Calculate price automatically"
+msgstr "Calcular el precio automáticamente."
+
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 977
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 1027
+#. i18n: tag string
+#. i18n: file ./ui/producteditor.ui line 977
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 1027
+#: po/extractedrc.cpp:174 po/extractedrc.cpp:249 extractedrc.cpp:174
+#: extractedrc.cpp:249
+msgid "$"
+msgstr "$"
+
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 31
+#: po/extractedrc.cpp:177 purchaseeditor.cpp:41 squeeze.cpp:150
+#: extractedrc.cpp:177
+msgid "Purchase"
+msgstr "Compra"
+
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 61
+#: po/extractedrc.cpp:180 extractedrc.cpp:180
+msgid ""
+"<p>Fill data for each product you purchased and click \"add item\" to "
+"continue with another product. Note that if a product exists on database, it "
+"will be updated.</p><p>When finish, click \"Ok\" button.<p>"
+msgstr ""
+"<p>Llene los datos del producto y al terminar presione \"agregar artículo\" "
+"para continuar con otro producto. Note que si el producto existe, será "
+"actualizado.</p> <p>Cuando termine con los productos, presione el botón "
+"\"Aceptar\".<p>"
+
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 118
+#: po/extractedrc.cpp:186 extractedrc.cpp:186
+msgid "Pu&rchase Qty:"
+msgstr "Cant. Comprada:"
+
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 236
+#: po/extractedrc.cpp:195 extractedrc.cpp:195
+msgid "&Points:"
+msgstr "&Puntos:"
+
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 394
+#: po/extractedrc.cpp:207 extractedrc.cpp:207
+msgid "Boxed products"
+msgstr "Productos en caja"
+
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 412
+#: po/extractedrc.cpp:210 extractedrc.cpp:210
+msgid "&Items per box:"
+msgstr "Art&ículos por caja:"
+
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 447
+#: po/extractedrc.cpp:213 extractedrc.cpp:213
+msgid "Price per &box:"
+msgstr "Precio por caja:"
+
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 1397
+#: po/extractedrc.cpp:252 extractedrc.cpp:252
+msgid "add this item"
+msgstr "Agregar artículo"
+
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 1410
+#: po/extractedrc.cpp:255 extractedrc.cpp:255
+msgid "Added Items in this pruchase:"
+msgstr "Artículos en ésta compra:"
+
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 1421
+#: po/extractedrc.cpp:258 extractedrc.cpp:258
+msgid "Code"
+msgstr "Código:"
+
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 1426
+#: po/extractedrc.cpp:261 squeezeview.cpp:435 squeezeview.cpp:460
+#: extractedrc.cpp:261
+msgid "Description"
+msgstr "Descripción"
+
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 1431
+#: po/extractedrc.cpp:264 extractedrc.cpp:264
+msgid "Purchased Qty"
+msgstr "Cant. Comprada"
+
+#. i18n: tag string
+#. i18n: file ./ui/purchaseeditor.ui line 1436
+#: po/extractedrc.cpp:267 extractedrc.cpp:267
+msgid "Total Qty"
+msgstr "En total"
+
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 72
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 190
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 72
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 190
+#: po/extractedrc.cpp:276 po/extractedrc.cpp:303 extractedrc.cpp:276
+#: extractedrc.cpp:303
+msgid "Filter"
+msgstr "Filtro"
+
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 84
+#: po/extractedrc.cpp:279 extractedrc.cpp:279
+msgid "by description"
+msgstr "por descripción"
+
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 94
+#: po/extractedrc.cpp:282 extractedrc.cpp:282
+msgid "by category"
+msgstr "por categoría"
+
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 104
+#: po/extractedrc.cpp:285 extractedrc.cpp:285
+msgid "show available items"
+msgstr "mostrar artículos en existencia"
+
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 111
+#: po/extractedrc.cpp:288 extractedrc.cpp:288
+msgid "show sold out items"
+msgstr "mostrar artículos agotados"
+
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 118
+#: po/extractedrc.cpp:291 extractedrc.cpp:291
+msgid "show most sold"
+msgstr "artículos más vendidos primero"
+
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 125
+#: po/extractedrc.cpp:294 extractedrc.cpp:294
+msgid "show less sold"
+msgstr "artículos menos vendidos primero"
+
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 170
+#: po/extractedrc.cpp:297 extractedrc.cpp:297
+msgid "Add Product"
+msgstr "Agregar producto"
+
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 177
+#: po/extractedrc.cpp:300 extractedrc.cpp:300
+msgid "Delete Product"
+msgstr "Borrar producto"
+
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 202
+#: po/extractedrc.cpp:306 extractedrc.cpp:306
+msgid "by product description"
+msgstr "por descripción del producto"
+
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 212
+#: po/extractedrc.cpp:309 extractedrc.cpp:309
+msgid "by discount's end date"
+msgstr "por fecha de fin de oferta"
+
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 225
+#: po/extractedrc.cpp:312 extractedrc.cpp:312
+msgid "To modify an item double click it."
+msgstr "Para modificar algo, haga doble click sobre él."
+
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 256
+#: po/extractedrc.cpp:315 extractedrc.cpp:315
+msgid "Create New Offer"
+msgstr "Crear nueva oferta"
+
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 263
+#: po/extractedrc.cpp:318 extractedrc.cpp:318
+msgid "Delete Selected Offer"
+msgstr "Borrar oferta seleccionada"
+
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 276
+#: po/extractedrc.cpp:321 extractedrc.cpp:321
+msgid "To edit an user, double click on it."
+msgstr "Para editar un usuario, haga doble click sobre él"
+
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 304
+#: po/extractedrc.cpp:324 extractedrc.cpp:324
+msgid "Add User"
+msgstr "Agregar usuario"
+
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 311
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 359
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 404
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 442
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 311
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 359
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 404
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 442
+#: po/extractedrc.cpp:327 po/extractedrc.cpp:333 po/extractedrc.cpp:339
+#: po/extractedrc.cpp:345 extractedrc.cpp:327 extractedrc.cpp:333
+#: extractedrc.cpp:339 extractedrc.cpp:345
+msgid "Delete Selected"
+msgstr "Borrar seleccionado"
+
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 352
+#: po/extractedrc.cpp:330 extractedrc.cpp:330
+msgid "Add Measure"
+msgstr "Agregar medida"
+
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 397
+#: po/extractedrc.cpp:336 extractedrc.cpp:336
+msgid "Add Category"
+msgstr "Agregar categoría"
+
+#. i18n: tag string
+#. i18n: file ./ui/squeezeview_base.ui line 435
+#: po/extractedrc.cpp:342 extractedrc.cpp:342
+msgid "Add Client"
+msgstr "Agregar cliente"
+
+#: po/extractedrc.cpp:346 extractedrc.cpp:346
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Miguel Chávez Gamboa"
+
+#: po/extractedrc.cpp:347 extractedrc.cpp:347
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "miguel@lemonpos.org           "
+
+#: promoeditor.cpp:40
+msgid "Discounts Editor"
+msgstr "Editor de descuentos"
+
+#: purchaseeditor.cpp:440
+msgid "No Photo"
+msgstr "Sin Foto"
+
+#: squeeze.cpp:96
+msgid "Login"
+msgstr "Login"
+
+#: squeeze.cpp:102
+msgid "Browse products"
+msgstr "Navegar productos"
+
+#: squeeze.cpp:108
+msgid "Browse offers"
+msgstr "Navegar ofertas"
+
+#: squeeze.cpp:114
+msgid "Browse users"
+msgstr "Navegar usuarios"
+
+#: squeeze.cpp:120
+msgid "Browse Measures"
+msgstr "Navegar medidas"
+
+#: squeeze.cpp:126
+msgid "Browse Categories"
+msgstr "Navegar categorías"
+
+#: squeeze.cpp:132
+msgid "Browse Balances"
+msgstr "Navegar Cortes de caja"
+
+#: squeeze.cpp:138
+msgid "Browse Transactions"
+msgstr "Navegar transacciones"
+
+#: squeeze.cpp:144
+msgid "Browse Clients"
+msgstr "Navegar clientes"
+
+#: squeeze.cpp:210
+msgid "General"
+msgstr "General"
+
+#: squeezeview.cpp:126
+msgid "Products"
+msgstr "Productos"
+
+#: squeezeview.cpp:134
+msgid "Offers"
+msgstr "Ofertas"
+
+#: squeezeview.cpp:145
+msgid "Users"
+msgstr "Usuarios"
+
+#: squeezeview.cpp:153
+msgid "Weight and Measures"
+msgstr "Pesos y medidas"
+
+#: squeezeview.cpp:161
+msgid "Categories"
+msgstr "Categorías"
+
+#: squeezeview.cpp:169
+msgid "Clients"
+msgstr "Clientes"
+
+#: squeezeview.cpp:250 squeezeview.cpp:450 squeezeview.cpp:475
+#: squeezeview.cpp:503
+msgid ""
+"Squeeze has encountered an error, click details to see the error details."
+msgstr ""
+"Squeeze encontro un error, presione detalles para ver los detalles del error"
+
+#: squeezeview.cpp:250 squeezeview.cpp:450 squeezeview.cpp:475
+#: squeezeview.cpp:503 squeezeview.cpp:888
+msgid "Error"
+msgstr "Error"
+
+#: squeezeview.cpp:403
+msgid "Id"
+msgstr "Id"
+
+#: squeezeview.cpp:404
+msgid "Product Affected"
+msgstr "Afecta al producto"
+
+#: squeezeview.cpp:405
+msgid "Discount Applied (%)"
+msgstr "Descuento aplicado (%)"
+
+#: squeezeview.cpp:406
+msgid "Until Day"
+msgstr "Hasta el día"
+
+#: squeezeview.cpp:407
+msgid "Until Month"
+msgstr "Hasta el més"
+
+#: squeezeview.cpp:408
+msgid "Until Year"
+msgstr "Hasta el año"
+
+#: squeezeview.cpp:512
+msgid "Settings changed"
+msgstr "Configuración cambiada"
+
+#: squeezeview.cpp:887
+msgid ""
+"Error #%1, Type:%2\n"
+"'%3'"
+msgstr ""
+"Error #%1, Tipo:%2\n"
+"'%3'"
+
+#: squeezeview.cpp:888
+msgid ""
+"Squeeze has encountered an error when querying the database, click details "
+"to see the error details."
+msgstr ""
+"Squeeze encontro un error, presione detalles para ver los detalles del error"
+
+#: squeezeview.cpp:1081
+msgid "Please select a client to delete, then press the delete button again."
+msgstr ""
+"Por favor seleccione un cliente a borrar y presione el boton \"borrar\""
+
+#: squeezeview.cpp:1081 squeezeview.cpp:1094 squeezeview.cpp:1103
+#: squeezeview.cpp:1124 squeezeview.cpp:1143 squeezeview.cpp:1161
+#: squeezeview.cpp:1173 squeezeview.cpp:1182
+msgid "Cannot delete"
+msgstr "No se puede borrar"
+
+#: squeezeview.cpp:1087
+msgid "Do you really want to delete the client named %1?"
+msgstr "¿Realmente desea borrar el cliente llamado %1?"
+
+#: squeezeview.cpp:1088 squeezeview.cpp:1109 squeezeview.cpp:1129
+#: squeezeview.cpp:1147 squeezeview.cpp:1167 squeezeview.cpp:1186
+msgid "Delete"
+msgstr "Borrado"
+
+#: squeezeview.cpp:1094
+msgid "Default client cannot be deleted."
+msgstr "El cliente principal (Público) no puede ser borrado."
+
+#: squeezeview.cpp:1103
+msgid "Please select a user to delete, then press the delete button again."
+msgstr ""
+"Por favor seleccione un usuario a borrar y presione el boton \"borrar\""
+
+#: squeezeview.cpp:1108
+msgid "Do you really want to delete the user named %1?"
+msgstr "¿Realmente desea borrar el usuario llamado %1?"
+
+#: squeezeview.cpp:1124
+msgid "Please select an offer to delete, then press the delete button again."
+msgstr ""
+"Por favor seleccione una oferta a borrar y presione el boton \"borrar\""
+
+#: squeezeview.cpp:1128
+msgid "Do you really want to delete the selected discount?"
+msgstr "¿Realmente desea borrar la oferta seleccionada?"
+
+#: squeezeview.cpp:1143
+msgid "Please select a product to delete, then press the delete button."
+msgstr ""
+"Por favor seleccione un producto a borrar y presione el boton \"borrar\""
+
+#: squeezeview.cpp:1146
+msgid "Do you really want to delete the selected product?"
+msgstr "¿Realmente desea borrar el producto seleccionado?"
+
+#: squeezeview.cpp:1161
+msgid "Please select a row to delete, then press the delete button again."
+msgstr ""
+"Por favor seleccione un renglón a borrar y presione el boton \"borrar\""
+
+#: squeezeview.cpp:1166
+msgid "Do you really want to delete the selected row?"
+msgstr "¿Realmente desea borrar el renglón seleccionado?"
+
+#: squeezeview.cpp:1173
+msgid "Default measure cannot be deleted."
+msgstr "La medida principal (pieza) no puede ser borrada."
+
+#: squeezeview.cpp:1182
+msgid "Please select a category to delete, then press the delete button again."
+msgstr ""
+"Por favor seleccione una categoría a borrar y presione el boton \"borrar\""
+
+#: squeezeview.cpp:1185
+msgid "Do you really want to delete the selected category?"
+msgstr "¿Realmente desea borrar la categoría seleccionado?"
+
+#: usereditor.cpp:40
+msgid "User Editor"
+msgstr "Editor de usuarios"
+
+#: ../../src/productdelegate.cpp:113
+msgid " Out of stock "
+msgstr " Agotado "

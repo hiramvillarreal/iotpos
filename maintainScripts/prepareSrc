@@ -1,0 +1,21 @@
+
+# delete backup files (.*)
+echo "Deleting backup files..."
+find lemonpos/ -depth -type f -name .\* -exec rm {} \;
+find lemonpos/ -depth -type f -name \*.\*~ -exec rm {} \;
+find lemonpos/ -depth -type f -name \*~ -exec rm {} \;
+find lemonpos/ -depth -type f -name  CMakeLists.txt.user -exec rm {} \;
+find lemonpos/ -depth -type f -name .directory -exec rm {} \;
+
+echo "Deleting .svn directories"
+find lemonpos/ -depth -type d -name .svn -exec rm -rf {} \;
+
+echo deleting BUILD folder...
+#rm -rf lemonpos/build/
+rm lemonpos/notas.txt
+
+echo "MAKING A TAR BALL"
+tar -jcf real-last.tar.bz2 lemonpos/
+
+echo "Done, you can sync now..."
+

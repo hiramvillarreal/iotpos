@@ -1,0 +1,2263 @@
+# translation of fr.po to chinese
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Miguel Chavez Gamboa <miguel.chavez.gamboa@gmail.com>, 2007.
+# Girard Yanqing <girardyanqing@free.fr>, 2007.
+# Scott Wu, 2009
+msgid ""
+msgstr ""
+"Project-Id-Version: zh\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?"
+"atid=1011570&group_id=209899&func=browse\n"
+"POT-Creation-Date: 2012-08-09 16:28-0500\n"
+"PO-Revision-Date: 2007-12-25 22:30+0100\n"
+"Last-Translator: Scott Wu <lolinux_2008@hotmail.com>\n"
+"Language-Team: Zh <zh@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../../dataAccess/azahar.cpp:112 ../../dataAccess/azahar.cpp:139
+#: ../../dataAccess/azahar.cpp:234 ../../dataAccess/azahar.cpp:1096
+#: ../../dataAccess/azahar.cpp:1367 ../../dataAccess/azahar.cpp:2027
+#: ../../dataAccess/azahar.cpp:2063 ../../dataAccess/azahar.cpp:2095
+#: ../../dataAccess/azahar.cpp:2132 ../../dataAccess/azahar.cpp:2169
+#: ../../dataAccess/azahar.cpp:2199 ../../dataAccess/azahar.cpp:2232
+#: ../../dataAccess/azahar.cpp:2307 ../../dataAccess/azahar.cpp:2347
+#: ../../dataAccess/azahar.cpp:2367 ../../dataAccess/azahar.cpp:2389
+#: ../../dataAccess/azahar.cpp:2409 ../../dataAccess/azahar.cpp:2451
+#: ../../dataAccess/azahar.cpp:2653 ../../dataAccess/azahar.cpp:2706
+#: ../../dataAccess/azahar.cpp:2796 ../../dataAccess/azahar.cpp:2872
+#: ../../dataAccess/azahar.cpp:2899 ../../dataAccess/azahar.cpp:3481
+#: ../../dataAccess/azahar.cpp:3509 ../../dataAccess/azahar.cpp:3535
+#: ../../dataAccess/azahar.cpp:3728
+msgid ""
+"Error #%1, Type:%2\n"
+"'%3'"
+msgstr ""
+"出误 #%1, Type:%2\n"
+" '%3'"
+
+#: ../../dataAccess/azahar.cpp:115 ../../dataAccess/azahar.cpp:1099
+#, fuzzy
+msgid "Error serching product id %1, Rows affected: %2"
+msgstr "出错 搜索提供的ID %1,影响行数:%2"
+
+#: ../../dataAccess/azahar.cpp:142
+msgid "Error serching offer id %1, Rows affected: %2"
+msgstr "出错 搜索提供的ID %1,影响行数:%2"
+
+#: ../../dataAccess/azahar.cpp:235
+msgid "Error getting product information for code %1, Rows affected: %2"
+msgstr "出错 获取code %1 的产品信息，影响行数： %2"
+
+#: ../../dataAccess/azahar.cpp:1339
+msgid ""
+"Unable to set an offer/discount for the selected produc because it is NOT "
+"DISCOUNTABLE"
+msgstr ""
+
+#: ../../dataAccess/azahar.cpp:1370
+msgid "Error deleting offer id %1, Rows affected: %2"
+msgstr "出错  删除提供的ID %1,影响行数：%2"
+
+#: ../../dataAccess/azahar.cpp:2502
+msgid "Money return on cancelling ticket #%1 "
+msgstr "返回取消支票#%1 的金额"
+
+#: ../../dataAccess/azahar.cpp:2509
+#, fuzzy
+msgid "Ticket #%1 was already canceled."
+msgstr "支票#%1 已经被取消或出售未成功"
+
+#: ../../dataAccess/azahar.cpp:3482 ../../dataAccess/azahar.cpp:3510
+#: ../../dataAccess/azahar.cpp:3536 ../../dataAccess/azahar.cpp:3729
+#, fuzzy
+msgid "Error getting special Order information, id: %1, Rows affected: %2"
+msgstr "出错 获取code %1 的产品信息，影响行数： %2"
+
+#: ../../dataAccess/azahar.cpp:4742
+msgid ""
+"Could not add the serie. Process Aborted!.\n"
+"%1"
+msgstr ""
+
+#: ../../dataAccess/azahar.cpp:4793
+msgid ""
+"No se inserto ningún folio debido a que estaban duplicados.\n"
+" %1"
+msgstr ""
+
+#: ../../dataAccess/azahar.cpp:4799
+msgid ""
+"Se insertan %1 folios. Algunos folios estaban duplicados y se ignoran:\n"
+" %2"
+msgstr ""
+
+#: dialogclientdata.cpp:39
+msgid "Datos del Cliente"
+msgstr ""
+
+#: inputdialog.cpp:68
+#, fuzzy
+msgid "Product Code:"
+msgstr "产品"
+
+#: inputdialog.cpp:80
+msgid "Month or Season:"
+msgstr ""
+
+#: inputdialog.cpp:81
+#, fuzzy
+msgid "New Stock Qty:"
+msgstr "低库存提示"
+
+#: inputdialog.cpp:82
+#, fuzzy
+msgid "New currency factor:"
+msgstr "&货币类型全称:"
+
+# removed f-u-z-z-y
+#: inputdialog.cpp:83
+msgid "Amount:"
+msgstr "数额"
+
+#: inputdialog.cpp:85
+#, fuzzy
+msgid "New Message:"
+msgstr "&M发票信息 :"
+
+# removed f-u-z-z-y
+#: inputdialog.cpp:86
+#, fuzzy
+msgid "New Currency Name:"
+msgstr "货币 "
+
+#: inputdialog.cpp:87
+msgid "Reason:"
+msgstr "原因"
+
+# removed f-u-z-z-y
+#: inputdialog.cpp:89
+msgid "Ticket #:"
+msgstr "发票  # %1"
+
+#: inputdialog.cpp:102
+msgid "valid amount between %1 and %2"
+msgstr ""
+
+#: inputdialog.cpp:109
+#, fuzzy
+msgid "Enter the product code here..."
+msgstr "选择退还的产品"
+
+#: inputdialog.cpp:110
+msgid "Enter the new stock quantity here..."
+msgstr ""
+
+#: inputdialog.cpp:117
+#, fuzzy
+msgid "Terminal Number:"
+msgstr "结束号码 &T:"
+
+# removed f-u-z-z-y
+#: inputdialog.cpp:118
+#, fuzzy
+msgid "Enter the terminal number here..."
+msgstr "输入要取消发票的号码"
+
+#: inputdialog.cpp:125
+#, fuzzy
+msgid "Enter the number of the month or season here..."
+msgstr "选择退还的产品"
+
+# removed f-u-z-z-y
+#: inputdialog.cpp:131
+#, fuzzy
+msgid "Enter the new currency name..."
+msgstr "输入要取消发票的号码"
+
+#: inputdialog.cpp:132
+#, fuzzy
+msgid "Enter the new currency factor..."
+msgstr "选择退还的产品"
+
+#: inputdialog.cpp:173
+msgid "Ok"
+msgstr "确定"
+
+#: inputdialog.cpp:176
+msgid "Cancel"
+msgstr "取消"
+
+#: lemon.cpp:155
+msgid "Login"
+msgstr "登录"
+
+#: lemon.cpp:161
+msgctxt "Account balance"
+msgid "Balance"
+msgstr "余额"
+
+#: lemon.cpp:167
+msgid "Enter Code"
+msgstr "输入代码"
+
+#: lemon.cpp:173
+msgid "Search Item"
+msgstr "寻找产品"
+
+#: lemon.cpp:179
+msgid "Delete Selected Item"
+msgstr "删除已选择产品"
+
+#: lemon.cpp:189
+msgid "Finish transaction"
+msgstr "结束交易"
+
+#: lemon.cpp:195
+msgid "Cancel transaction"
+msgstr "取消交易"
+
+#: lemon.cpp:201
+msgid "Cancel a ticket"
+msgstr "取消一张发票"
+
+#: lemon.cpp:208
+msgid "Start Operation"
+msgstr "开始操作"
+
+#: lemon.cpp:214
+msgid "Pay focus"
+msgstr "付款"
+
+#: lemon.cpp:221
+msgid "Show/Hide Products Grid"
+msgstr "显示/隐藏产品网格"
+
+#: lemon.cpp:228
+msgid "Show Price Checker"
+msgstr "显示价格检查员"
+
+#: lemon.cpp:234
+msgid "Reprint ticket"
+msgstr "重新打印发票"
+
+# removed f-u-z-z-y
+#: lemon.cpp:240 lemonview.cpp:4804
+msgid "Cash Out"
+msgstr "提金"
+
+#: lemon.cpp:246
+#, fuzzy
+msgid "Cash in drawer"
+msgstr "抽屉余额不足."
+
+#: lemon.cpp:252 lemonview.cpp:4847
+#, fuzzy
+msgid "Cash In"
+msgstr "现金"
+
+#: lemon.cpp:258 lemonview.cpp:4066
+msgid "End of day report"
+msgstr ""
+
+#: lemon.cpp:265
+msgid "Add Special Order"
+msgstr ""
+
+#: lemon.cpp:273
+msgid "Complete Special Order"
+msgstr ""
+
+#: lemon.cpp:280
+msgid "Lock Screen"
+msgstr ""
+
+#: lemon.cpp:287
+msgid "Suspend Sale"
+msgstr ""
+
+#: lemon.cpp:294 lemon.cpp:301
+#, fuzzy
+msgid "Change Special Order Status"
+msgstr "更改出售日期"
+
+#: lemon.cpp:308 resume.cpp:46
+msgid "Resume Sale"
+msgstr ""
+
+#: lemon.cpp:315
+msgid "Reserve Items"
+msgstr ""
+
+#: lemon.cpp:322 reservations.cpp:59
+#, fuzzy
+msgid "Reservations"
+msgstr "描述"
+
+#: lemon.cpp:329
+#, fuzzy
+msgid "Show Credits"
+msgstr "显示现金"
+
+#: lemon.cpp:336
+#, fuzzy
+msgid "Add Reservation Payment"
+msgstr "描述"
+
+#: lemon.cpp:343
+msgid "Emitir una factura"
+msgstr ""
+
+#: lemon.cpp:349
+#, fuzzy
+msgid "Cancelar una factura"
+msgstr "取消一张发票"
+
+#: lemon.cpp:355
+msgid "Reimprimir una factura"
+msgstr ""
+
+#: lemon.cpp:361
+msgid "Número de facturas disponibles"
+msgstr ""
+
+#: lemon.cpp:452 lemon.cpp:484
+msgid "Database"
+msgstr "数据库"
+
+#: lemon.cpp:470
+msgid "General"
+msgstr "一般"
+
+#: lemon.cpp:475
+msgid "Store"
+msgstr "商店"
+
+#: lemon.cpp:480
+msgid "Facturas"
+msgstr ""
+
+#: lemon.cpp:488
+msgid "Appearence"
+msgstr "外形"
+
+#: lemon.cpp:495
+msgid "Security"
+msgstr "安全"
+
+#: lemon.cpp:499
+msgid "Printer"
+msgstr "打印机"
+
+#: lemon.cpp:564
+#, fuzzy
+msgid ""
+"Administrator or Supervisor needs to start operation before you can start "
+"selling..."
+msgstr "需要管理员开始操作之后你才能开始卖..."
+
+#: lemon.cpp:823
+msgid "Transaction #%1"
+msgstr "交易 #%1"
+
+#: lemonview.cpp:106
+msgid "Continue"
+msgstr "继续"
+
+#: lemonview.cpp:163
+msgid "Welcome to Lemon"
+msgstr "欢迎进入Lemon"
+
+#: lemonview.cpp:164
+msgid "Enter username and password to start using the system."
+msgstr "输入用户名和密码使用此系统."
+
+#: lemonview.cpp:167
+msgid "Authorisation Required"
+msgstr "需要授权"
+
+#: lemonview.cpp:168
+msgid "Enter administrator password please."
+msgstr "请输入管理员密码"
+
+#: lemonview.cpp:310 lemonview.cpp:311
+msgid "Enter code or qty*code. <Enter> or <+> Keys to go pay"
+msgstr ""
+
+#: lemonview.cpp:312
+msgid "Enter an amount."
+msgstr ""
+
+#: lemonview.cpp:403 lemonview.cpp:1357 lemonview.cpp:1591
+msgid "%1 has %2 %3 but requested %4 + %5"
+msgstr ""
+
+# removed f-u-z-z-y
+#: lemonview.cpp:421 lemonview.cpp:1372 lemonview.cpp:1601
+#, fuzzy
+msgid ""
+"<html><font color=red><b>The group/pack is not available because:<br>%1</b></"
+"font></html>"
+msgstr "<html><font color=red weight=bold>此产品已无库存.</font></html>"
+
+# removed f-u-z-z-y
+#: lemonview.cpp:423 lemonview.cpp:1374 lemonview.cpp:1611
+#, fuzzy
+msgid ""
+"<html><font color=red><b>There are only %1 articles of your choice at stock."
+"<br> You requested %2</b></font></html>"
+msgstr "<html><font color=red weight=bold>此产品已无库存.</font></html>"
+
+#: lemonview.cpp:555
+msgid "Invalid input"
+msgstr ""
+
+#: lemonview.cpp:730
+msgid "No product selected"
+msgstr "没有选择任何产品"
+
+#: lemonview.cpp:759
+msgid "Enter the ticket number to cancel"
+msgstr "输入要取消发票的号码"
+
+# removed f-u-z-z-y
+#: lemonview.cpp:792
+msgid "Enter the ticket number"
+msgstr "输入要取消发票的号码"
+
+#: lemonview.cpp:973
+msgid ""
+"Could not connect to database, please press 'login' button again to raise a "
+"database configuration."
+msgstr "无法连接到数据库，请重新登录以取得数据库配置窗口"
+
+# removed f-u-z-z-y
+#: lemonview.cpp:974
+msgid "Error:"
+msgstr "错误："
+
+#: lemonview.cpp:1068
+msgid "%1 item found"
+msgid_plural "%1 items found."
+msgstr[0] "%1 artícle trouvé."
+msgstr[1] "%1 artículos encontrados."
+
+#: lemonview.cpp:1069
+msgid "No items found."
+msgstr "没找到任何产品"
+
+#: lemonview.cpp:1410
+msgid ""
+"Only Special Orders can be added. Please finish the current special order "
+"before adding any other product."
+msgstr ""
+
+#: lemonview.cpp:1421
+msgid "Cannot Add more items to the Reservation."
+msgstr ""
+
+#: lemonview.cpp:1460
+msgid "Cannot change client while Special Orders are in Purchase."
+msgstr ""
+
+#: lemonview.cpp:1488
+msgid "<b>Welcome</b> <i>%1</i>. You have remaining <b>debit</b> of %2 to use."
+msgstr ""
+
+#: lemonview.cpp:1490
+msgid "<b>Welcome</b> <i>%1</i>. You have remaining <b>credit</b> of %2 used."
+msgstr ""
+
+#: lemonview.cpp:1502
+msgid "No Client found with code %1."
+msgstr ""
+
+#: lemonview.cpp:1544
+msgid ""
+"The requiered qty is %1 and its not allowed for the required product, please "
+"verify the quantity"
+msgstr ""
+
+# removed f-u-z-z-y
+#: lemonview.cpp:1564
+msgid ""
+"<html><font color=red><b>Product not found in database.</b></font></html>"
+msgstr ""
+"<html><font color=red weight=bold>在数据库中未找到此产品.</font></html>"
+
+#: lemonview.cpp:1770
+msgid "Cannot delete items from a reservation."
+msgstr ""
+
+#: lemonview.cpp:1819
+msgid "Removing an Special Item from shopping list. Authorized by %1"
+msgstr ""
+
+#: lemonview.cpp:1885
+msgid "Removing an article from shopping list. Authorized by %1"
+msgstr ""
+
+#: lemonview.cpp:1939
+msgid "Enter the number of %1"
+msgstr "输入输入号码 : %1"
+
+# removed f-u-z-z-y
+#: lemonview.cpp:1974
+#, fuzzy
+msgid ""
+"<html><font color=red><b>Product not available in stock for the requested "
+"quantity.</b></font></html>"
+msgstr "<html><font color=red weight=bold>此产品已无库存.</font></html>"
+
+#: lemonview.cpp:2025
+msgid "Taxes:"
+msgstr "税收 :"
+
+#: lemonview.cpp:2026
+msgid "Tax:"
+msgstr "附加增值税 :"
+
+#: lemonview.cpp:2027
+msgid "Other taxes:"
+msgstr "其他税收 :"
+
+#: lemonview.cpp:2028
+msgid "Sold by:"
+msgstr "售货员:"
+
+#: lemonview.cpp:2029
+msgid "Price:"
+msgstr "价格 :"
+
+#: lemonview.cpp:2030 lemonview.cpp:4304 pricechecker.cpp:53
+msgid "Discount:"
+msgstr "折扣 :"
+
+#: lemonview.cpp:2031
+msgid "Points:"
+msgstr "点 :"
+
+#: lemonview.cpp:2119
+msgid ""
+"Lemon has encountered an error when openning database, click details to see "
+"the error details."
+msgstr "Lemon 在打开数据库时遇到一个错误. 点击详情查看错误."
+
+#: lemonview.cpp:2119
+msgid "Create New Transaction: Error"
+msgstr "创建新交易 : 错误"
+
+# removed f-u-z-z-y
+#: lemonview.cpp:2178
+#, fuzzy
+msgid ""
+"<html><font color=red><b>Please fill the correct payment amount before "
+"finishing a transaction.</b></font></html>"
+msgstr ""
+"<html><font color=red weight=bold>结束交易之前请填写正确付款金额.</font></"
+"html>"
+
+#: lemonview.cpp:2187
+msgid ""
+"Please be sure to enter an appropiate amount in this field. The number seems "
+"to be a barcode entered by mistake in the amount field."
+msgstr ""
+
+# removed f-u-z-z-y
+#: lemonview.cpp:2203
+#, fuzzy
+msgid "<html><font color=red><b>Note: card number missing.</b></font></html>"
+msgstr "<html><font color=red weight=bold>请输入卡号.</font></html>"
+
+# removed f-u-z-z-y
+#: lemonview.cpp:2211
+#, fuzzy
+msgid ""
+"<html><font color=red><b>Note: Authorisation number from the bank voucher "
+"missing.</b></font></html>"
+msgstr "<html><font color=red weight=bold>输入银行授权号码 .</font></html>"
+
+# removed f-u-z-z-y
+#: lemonview.cpp:2219
+#, fuzzy
+msgid ""
+"<html><font color=red><b>The Card Type must be of some valid type.</b></"
+"font></html>"
+msgstr "<html><font color=red weight=bold>请输入卡号.</font></html>"
+
+#: lemonview.cpp:2229
+msgid "Before selling, you must start operations."
+msgstr "卖之前必须开始操作."
+
+# removed f-u-z-z-y
+#: lemonview.cpp:2233
+#, fuzzy
+msgid ""
+"<html><font color=red><b>The Client for an interal credit sale must not be "
+"the default client.</b> Please select another client</font></html>"
+msgstr "<html><font color=red weight=bold>请输入卡号.</font></html>"
+
+#: lemonview.cpp:2668
+msgid "The Drawer is not initialized, please start operation first."
+msgstr "收银抽屉没有初始化,请先启动操作."
+
+#: lemonview.cpp:2757
+msgid "Facturación"
+msgstr ""
+
+#: lemonview.cpp:2757
+msgid "¿Desea facturar?"
+msgstr ""
+
+#: lemonview.cpp:2819
+msgid "No se pudo crear la factura"
+msgstr ""
+
+#: lemonview.cpp:2825
+msgid "Folio Obtenido es invalido."
+msgstr ""
+
+#: lemonview.cpp:2880
+msgid "Cash level in drawer is low."
+msgstr "抽屉余额不足."
+
+#: lemonview.cpp:2955 lemonview.cpp:3041 lemonview.cpp:4718 lemonview.cpp:5070
+#: lemonview.cpp:6528
+#, fuzzy
+msgid "Notes:"
+msgstr "点 :"
+
+#: lemonview.cpp:2984
+msgid "Imprimir Factura"
+msgstr ""
+
+#: lemonview.cpp:3016
+msgid ""
+"The ticket was not printed because it is ZERO in the amount to pay. Just to "
+"save trees."
+msgstr ""
+
+#: lemonview.cpp:3025
+msgid "Salesperson: %1"
+msgstr "售货员: %1"
+
+#: lemonview.cpp:3026 lemonview.cpp:3241 lemonview.cpp:3353 lemonview.cpp:3390
+msgid "Qty"
+msgstr "数量."
+
+#: lemonview.cpp:3027
+msgid "Product"
+msgstr "产品"
+
+#: lemonview.cpp:3028
+msgid "Price"
+msgstr "价格"
+
+#: lemonview.cpp:3029 lemonview.cpp:4563
+msgid "Discount"
+msgstr "折扣"
+
+#: lemonview.cpp:3030 lemonview.cpp:4562 refacturar.cpp:117
+msgid "Total"
+msgstr "总额"
+
+#: lemonview.cpp:3031
+#, fuzzy
+msgid "Your Personal Discount"
+msgstr "您的折扣 : %1"
+
+#: lemonview.cpp:3032
+msgid "Your points this buy: %1"
+msgstr "此次购买得到的点 : %1"
+
+#: lemonview.cpp:3033
+msgid "Your total points: %1"
+msgstr "总点数 : %1:"
+
+#: lemonview.cpp:3034
+msgid "# %1"
+msgstr ""
+
+#: lemonview.cpp:3035
+msgid "Terminal #%1"
+msgstr "结束 #%1"
+
+#: lemonview.cpp:3036
+msgid "PRE PAYMENT OF"
+msgstr ""
+
+#: lemonview.cpp:3037
+msgid "COMPLETED PAYMENT WITH"
+msgstr ""
+
+#: lemonview.cpp:3038
+msgid "To complete your payment"
+msgstr ""
+
+#: lemonview.cpp:3039
+#, fuzzy
+msgid "Your pre payment"
+msgstr "Scott Wu"
+
+#: lemonview.cpp:3040
+msgid "SPECIAL ORDERS"
+msgstr ""
+
+#: lemonview.cpp:3042
+msgid "Delivery"
+msgstr ""
+
+#: lemonview.cpp:3043
+#, fuzzy
+msgid "Tax"
+msgstr "附加增值税 :"
+
+#: lemonview.cpp:3044
+#, fuzzy
+msgid "Subtotal"
+msgstr "总额"
+
+#: lemonview.cpp:3045
+msgid "Tendered"
+msgstr ""
+
+#: lemonview.cpp:3158 lemonview.cpp:3246 lemonview.cpp:3359
+msgid "%1 article."
+msgid_plural "%1 articles."
+msgstr[0] "%1 artícle"
+msgstr[1] "%1 artículos"
+
+#: lemonview.cpp:3159
+msgid "A total of"
+msgstr "总数"
+
+#: lemonview.cpp:3162
+msgid "<br>Paid with %1, your change is <b>%2</b><br>"
+msgstr "<br>付款 %1, 找零为 <b>%2</b><br>"
+
+#: lemonview.cpp:3171
+#, fuzzy
+msgid "You saved %1"
+msgstr "您节省了 $%1"
+
+#: lemonview.cpp:3178
+msgid "Paid with %1, your change is %2"
+msgstr "<br>付款 %1, 找零为 <b>%2</b><br>"
+
+#: lemonview.cpp:3183
+msgid "<br>Card # %1<br>Authorisation # %2"
+msgstr "<br>卡# %1<br>授权 # %2"
+
+# removed f-u-z-z-y
+#: lemonview.cpp:3184
+msgid ""
+"Card Number:%1 \n"
+"Authorisation #:%2"
+msgstr "<br>卡号：# %1<br>授权 # %2"
+
+#: lemonview.cpp:3224
+msgid ""
+" %3 [ %4 ]| You got %1 points | Your accumulated is :%2 | | Your credit "
+"balance is: %5"
+msgstr ""
+
+#: lemonview.cpp:3226 lemonview.cpp:3358
+msgid " %3 [ %4 ]| You got %1 points | Your accumulated is :%2 | "
+msgstr ""
+
+#: lemonview.cpp:3237 lemonview.cpp:3349
+msgid "Phone: "
+msgstr ""
+
+#: lemonview.cpp:3249
+#, fuzzy
+msgid "Change"
+msgstr "找零 :"
+
+#: lemonview.cpp:3251
+#, fuzzy
+msgid "Card Number  : %1"
+msgstr "&N卡号 :"
+
+#: lemonview.cpp:3252
+#, fuzzy
+msgid "Authorization : %1"
+msgstr "授权号码 :"
+
+#: lemonview.cpp:3271
+msgid " RESERVATION "
+msgstr ""
+
+#: lemonview.cpp:3273
+msgid "Purchase Total Amount"
+msgstr ""
+
+#: lemonview.cpp:3275
+msgid "Reservation Total Amount"
+msgstr ""
+
+#: lemonview.cpp:3289
+msgid ""
+"Print Receipt -- Press ESC to export to PDF to your home/lemon-printing/ "
+"folder"
+msgstr ""
+
+#: lemonview.cpp:3372
+#, fuzzy
+msgid "Print Receipt"
+msgstr "打印选择的发票"
+
+#: lemonview.cpp:3406
+msgid "Print Special Order Instructions "
+msgstr ""
+
+#: lemonview.cpp:3515
+msgid ""
+"Lemon has encountered an error when querying the database, click details to "
+"see the error details."
+msgstr "Lemon 在访问数据库时遇到一个错误. 点击详情查看错误."
+
+#: lemonview.cpp:3515
+msgid "Delete Transaction: Error"
+msgstr "删除交易 : 错误"
+
+#: lemonview.cpp:3571
+msgid ""
+"The ticket cannot be cancelled because it was paid with a credit/debit card."
+msgstr ""
+
+#: lemonview.cpp:3583
+msgid "Cancelling transaction #%1. Authorized by %2"
+msgstr ""
+
+#: lemonview.cpp:3593
+#, fuzzy
+msgid "The ticket was sucessfully cancelled."
+msgstr "支票#%1 已经被取消或出售未成功"
+
+#: lemonview.cpp:3605
+#, fuzzy
+msgid "Error cancelling ticket: %1"
+msgstr "返回取消支票#%1 的金额"
+
+#: lemonview.cpp:3628 reservations.cpp:248
+#, fuzzy
+msgid "There is not enough cash available in the drawer."
+msgstr "抽屉现金不足"
+
+#: lemonview.cpp:3630
+msgid "Ticket to cancel does not exists!"
+msgstr ""
+
+#: lemonview.cpp:3648
+msgid "Enter the amount of money to deposit in the drawer"
+msgstr "输入存入收银柜里的金额总数 "
+
+#: lemonview.cpp:3672
+msgid "Operation Started by %1 at terminal %2"
+msgstr ""
+
+#: lemonview.cpp:3794
+#, fuzzy
+msgid "Balance Id:%1"
+msgstr "余额"
+
+#: lemonview.cpp:3800
+#, fuzzy
+msgid "%1 at Terminal # %2"
+msgstr "结束 #%1"
+
+#: lemonview.cpp:3801
+msgid "Initial Amount deposited:"
+msgstr "初始化存入金额 :"
+
+#: lemonview.cpp:3802
+msgid "Deposit"
+msgstr "存入"
+
+#: lemonview.cpp:3803
+msgid "In"
+msgstr "进入"
+
+#: lemonview.cpp:3804
+msgid "Out"
+msgstr "输出"
+
+#: lemonview.cpp:3805
+msgid "In Drawer"
+msgstr "在收银柜里"
+
+#: lemonview.cpp:3806
+msgid "Drawer Balance"
+msgstr "收银柜结余"
+
+#: lemonview.cpp:3807
+msgid "Transactions Details"
+msgstr "交易详情"
+
+#: lemonview.cpp:3808
+msgid "Transactions"
+msgstr "交易"
+
+#: lemonview.cpp:3809 lemonview.cpp:4067
+msgid "Id"
+msgstr "号码"
+
+#: lemonview.cpp:3810 lemonview.cpp:3844 lemonview.cpp:4071 resume.cpp:155
+msgid "Time"
+msgstr "时间"
+
+#: lemonview.cpp:3811 lemonview.cpp:4072 lemonview.cpp:6347 lemonview.cpp:6409
+msgid "Amount"
+msgstr "数额"
+
+#: lemonview.cpp:3812
+#, fuzzy
+msgid "Paid"
+msgstr "付款"
+
+#: lemonview.cpp:3813 lemonview.cpp:4074
+#, fuzzy
+msgid "Method"
+msgstr "付款方式"
+
+#: lemonview.cpp:3814
+msgid ""
+"When Completing Reservations, the Amount may be grater than Paid (amount) "
+"because of the reservation payment."
+msgstr ""
+
+#: lemonview.cpp:3833
+msgid "Start: %1"
+msgstr ""
+
+#: lemonview.cpp:3834
+msgid "End  : %1"
+msgstr ""
+
+#: lemonview.cpp:3841
+msgid "Cash flow Details"
+msgstr ""
+
+#: lemonview.cpp:3842
+msgid "Type"
+msgstr ""
+
+#: lemonview.cpp:3843
+#, fuzzy
+msgid "Reason"
+msgstr "原因"
+
+#: lemonview.cpp:3845
+msgid "This payment was not paid in cash."
+msgstr ""
+
+#: lemonview.cpp:3993
+#, fuzzy
+msgid "Print Balance"
+msgstr "余额"
+
+#: lemonview.cpp:4049
+msgid "End of Day report printed by %1 at terminal %2 on %3"
+msgstr ""
+
+#: lemonview.cpp:4069
+#, fuzzy
+msgid "at terminal # %1"
+msgstr "结束 #%1"
+
+#: lemonview.cpp:4073
+#, fuzzy
+msgid "Profit"
+msgstr "打印机"
+
+#: lemonview.cpp:4075
+msgid "Total taxes collected for this terminal: "
+msgstr ""
+
+#: lemonview.cpp:4108
+msgid "Total Sales : %1"
+msgstr ""
+
+#: lemonview.cpp:4109
+#, fuzzy
+msgid "Total Profit: %1"
+msgstr "总点数 : %1:"
+
+#: lemonview.cpp:4127 lemonview.cpp:4153
+msgid "Print end of day report"
+msgstr ""
+
+#: lemonview.cpp:4302
+msgid "Price: "
+msgstr "价格 :"
+
+#: lemonview.cpp:4303
+msgid "Available: "
+msgstr "有效的 :"
+
+#: lemonview.cpp:4305
+msgid "Category:"
+msgstr "种类 :"
+
+#: lemonview.cpp:4306
+msgid "in stock"
+msgstr "有库存"
+
+#: lemonview.cpp:4307
+msgid "in your shopping cart, Total Available"
+msgstr "您的购物车里，总的有效产品"
+
+#: lemonview.cpp:4512
+#, fuzzy
+msgid "Discount: <b>%1%</b> [<b>%2</b>]"
+msgstr "折扣 : %1%"
+
+#: lemonview.cpp:4514
+#, fuzzy
+msgid "Discount: <b>%1%</b>"
+msgstr "折扣 : %1%"
+
+#: lemonview.cpp:4517
+#, fuzzy
+msgid "<i>%1</i> points"
+msgstr "点 :"
+
+#: lemonview.cpp:4531
+msgid "Credit Total: <i>%1</i>"
+msgstr ""
+
+#: lemonview.cpp:4557
+msgid "Tr"
+msgstr "报告"
+
+#: lemonview.cpp:4558 reservations.cpp:174 resume.cpp:158
+msgid "Client"
+msgstr "客户"
+
+# removed f-u-z-z-y
+#: lemonview.cpp:4559 lemonview.cpp:6345 lemonview.cpp:6407
+#: reservations.cpp:173 resume.cpp:156 soselector.cpp:171 sostatus.cpp:167
+msgid "Date"
+msgstr "日期"
+
+# removed f-u-z-z-y
+#: lemonview.cpp:4560
+msgid "User"
+msgstr "用户名 :"
+
+#: lemonview.cpp:4561
+msgid "Items"
+msgstr "产品"
+
+#: lemonview.cpp:4614
+msgid "Please select a ticket to print."
+msgstr "请选择要打印的发票"
+
+# removed f-u-z-z-y
+#: lemonview.cpp:4614
+msgid "Cannot print ticket"
+msgstr "无法打印发票"
+
+#: lemonview.cpp:4634
+#, fuzzy
+msgid "Reprint ticket cancelled."
+msgstr "重新打印发票"
+
+#: lemonview.cpp:4798
+msgid "Cash not available at drawer!"
+msgstr "抽屉现金不足"
+
+#: lemonview.cpp:4825
+msgid "Cash-OUT by %1 at terminal %2 on %3"
+msgstr ""
+
+#: lemonview.cpp:4869
+msgid "Cash-IN [%1] by %2 at terminal %3 on %4"
+msgstr ""
+
+#: lemonview.cpp:4880
+msgid "There are <b> %1 in cash </b> available at the drawer."
+msgstr ""
+
+#: lemonview.cpp:4901
+msgid "Please finish the current transaction before creating a special order."
+msgstr ""
+
+#: lemonview.cpp:5006
+msgid ""
+"Please finish the current transaction before completing a special order."
+msgstr ""
+
+#: lemonview.cpp:5023
+msgid "The given ticket number does not contains any special order."
+msgstr ""
+
+#: lemonview.cpp:5030
+msgid "These special orders cannot be completed because:"
+msgstr ""
+
+#: lemonview.cpp:5037
+msgid "<b>is Cancelled</b>"
+msgstr ""
+
+#: lemonview.cpp:5039
+msgid "is already <b>Delivered</b>"
+msgstr ""
+
+#: lemonview.cpp:5040
+msgid "%1 %2."
+msgstr ""
+
+#: lemonview.cpp:5051
+msgid ""
+"The special order %1 in ticket %2 is completely paid. Marked as delivered."
+msgstr ""
+
+#: lemonview.cpp:5136
+msgid ""
+"<b>This terminal is locked.</b> <br><i>Please enter the user's password to "
+"unlock it</i>."
+msgstr ""
+
+#: lemonview.cpp:5324
+#, fuzzy
+msgid "The sale %1 has been sucessfully suspended."
+msgstr "支票#%1 已经被取消或出售未成功"
+
+#: lemonview.cpp:5376 specialordereditor.cpp:493
+#, fuzzy
+msgid "Notes: %1"
+msgstr "点: %1"
+
+#: lemonview.cpp:5405
+msgid ""
+"Please finish the current transaction before changing state for a special "
+"order."
+msgstr ""
+
+#: lemonview.cpp:5503
+msgid "Changing price to product %1, from %2 to %3. Authorized by %4"
+msgstr ""
+
+#: lemonview.cpp:5536
+msgid "Applying occasional discount. Authorized by %1"
+msgstr ""
+
+#: lemonview.cpp:5607
+msgid ""
+"Please Enter the reservation Amount in the Payment Amount and try again."
+msgstr ""
+
+#: lemonview.cpp:5678
+msgid "Reservation #%1 [tr. %2]"
+msgstr ""
+
+#: lemonview.cpp:5700
+msgid "Cash-IN [%1] for RESERVATION [%5] by %2 at terminal %3 on %4"
+msgstr ""
+
+#: lemonview.cpp:5760
+msgid ""
+"Cannot make a reservation, no products on the list. Special Orders are not "
+"considered."
+msgstr ""
+
+#: lemonview.cpp:5785
+#, fuzzy
+msgid "The sale %1 has been sucessfully reserved."
+msgstr "支票#%1 已经被取消或出售未成功"
+
+#: lemonview.cpp:5891
+msgid ""
+"You need to finish or suspend the current sale or reservation before adding "
+"a payment for a reservation."
+msgstr ""
+
+#: lemonview.cpp:5913
+msgid "Enter the amount to pay to the reservation. The Maximum amount is %1"
+msgstr ""
+
+#: lemonview.cpp:5941
+msgid "Payment for Reservation %1"
+msgstr ""
+
+#: lemonview.cpp:5956
+msgid ""
+"Cash-IN-ReservationPayment [%1] for reservation %5 by %2 at terminal %3 on %4"
+msgstr ""
+
+#: lemonview.cpp:6106
+#, fuzzy
+msgid "Make partial payment"
+msgstr "Scott Wu"
+
+# removed f-u-z-z-y
+#: lemonview.cpp:6108
+#, fuzzy
+msgid "Pay"
+msgstr "<b>付款</b>"
+
+#: lemonview.cpp:6226
+msgid "Payment for Credit %1"
+msgstr ""
+
+#: lemonview.cpp:6241
+msgid "Cash-IN-CreditPayment [%1] for credit %5 by %2 at terminal %3 on %4"
+msgstr ""
+
+#: lemonview.cpp:6296
+msgid "CREDIT REPORT"
+msgstr ""
+
+#: lemonview.cpp:6308
+#, fuzzy
+msgid "Balance: %1"
+msgstr "余额"
+
+#: lemonview.cpp:6333
+msgid "Today Credit History"
+msgstr ""
+
+#: lemonview.cpp:6349 lemonview.cpp:6411
+#, fuzzy
+msgid "Sale #"
+msgstr "出售日期"
+
+#: lemonview.cpp:6351 lemonview.cpp:6413
+msgid "Invoice"
+msgstr ""
+
+# removed f-u-z-z-y
+#: lemonview.cpp:6363 lemonview.cpp:6425
+msgid "Payment"
+msgstr "<b>付款</b>"
+
+#: lemonview.cpp:6391
+msgid "Credit History"
+msgstr ""
+
+#: lemonview.cpp:6467 lemonview.cpp:6472 lemonview.cpp:6486 lemonview.cpp:6571
+#: lemonview.cpp:6616 lemonview.cpp:6619
+msgid "Facturar"
+msgstr ""
+
+#: lemonview.cpp:6467
+msgid "No hay folios disponibles. No se puede facturar"
+msgstr ""
+
+#: lemonview.cpp:6472
+msgid "Numero de Ticket:"
+msgstr ""
+
+#: lemonview.cpp:6486
+msgid ""
+"No se puede facturar, la venta YA HABIA SIDO FACTURADA.\n"
+"El folio de esta venta es el %1"
+msgstr ""
+
+#: lemonview.cpp:6571
+msgid ""
+"No se puede facturar. El folio obtenido es inválido, verifique sus folios."
+msgstr ""
+
+#: lemonview.cpp:6616
+msgid "El ticket %1 no existe. No se puede facturar"
+msgstr ""
+
+#: lemonview.cpp:6619
+msgid "No se escribio un numero de ticket. No se puede facturar"
+msgstr ""
+
+#: lemonview.cpp:6634
+#, fuzzy
+msgid "Cancelar Factura"
+msgstr "取消一张发票"
+
+#: lemonview.cpp:6634
+msgid "Folio de la Factura:"
+msgstr ""
+
+#: lemonview.cpp:6642 lemonview.cpp:6644 lemonview.cpp:6648 lemonview.cpp:6650
+msgid "Cancelación de factura"
+msgstr ""
+
+#: lemonview.cpp:6642
+msgid "Se cancelo la factura con folio %1."
+msgstr ""
+
+#: lemonview.cpp:6644
+msgid ""
+"No se pudo cancelar la factura con folio %1.\n"
+" Detalle:"
+msgstr ""
+
+#: lemonview.cpp:6648
+msgid "La factura %1 ya estaba cancelada"
+msgstr ""
+
+#: lemonview.cpp:6650
+msgid "La factura %1 no existe."
+msgstr ""
+
+#: loginwindow.cpp:64
+msgid "&Quit"
+msgstr "&Q退出"
+
+#: loginwindow.cpp:65
+msgid "&Ok"
+msgstr "&O接受"
+
+#: loginwindow.cpp:171
+msgid "Username:"
+msgstr "用户名 :"
+
+#: loginwindow.cpp:172
+msgid "Password:"
+msgstr "密码 :"
+
+#: loginwindow.cpp:307
+msgid "Invalid username or password"
+msgstr "用户名或密码无效"
+
+#: main.cpp:43
+msgid "Lemon, A point of sale for linux"
+msgstr "Lemon , linux的一个卖点"
+
+#: main.cpp:52
+msgid "lemon"
+msgstr "lemon"
+
+#: main.cpp:52
+#, fuzzy
+msgid "(C) 2007-2011 Miguel Chavez Gamboa"
+msgstr "(C) 2007 Miguel Chávez Gamboa"
+
+#: main.cpp:53
+msgid "Miguel Chavez Gamboa"
+msgstr "Miguel Chávez Gamboa"
+
+#: main.cpp:57
+msgid "Biel Frontera"
+msgstr ""
+
+#: main.cpp:57 main.cpp:58
+msgid "Code contributor"
+msgstr ""
+
+#: main.cpp:58
+msgid "Vitali Kari"
+msgstr ""
+
+#: main.cpp:59
+msgid "Jose Nivar"
+msgstr ""
+
+#: main.cpp:59
+msgid "Many ideas, bug reports and testing"
+msgstr ""
+
+#: main.cpp:60
+msgid "Roberto Aceves"
+msgstr ""
+
+#: main.cpp:60
+msgid "Many ideas and general help"
+msgstr ""
+
+#: main.cpp:61
+msgid "Benjamin Burt"
+msgstr ""
+
+#: main.cpp:61
+msgid ""
+"Many ideas, Documentation Writer, How-to Videos Creation, and general help "
+"and support"
+msgstr ""
+
+#: po/extractedrc.cpp:1 extractedrc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Scott Wu"
+
+#: po/extractedrc.cpp:2 extractedrc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "lolinux_2008@hotmail.com"
+
+# removed f-u-z-z-y
+#: pricechecker.cpp:45
+msgid "Price Checker"
+msgstr "价格 :"
+
+# removed f-u-z-z-y
+#: pricechecker.cpp:47
+msgctxt "Price-Checker dialog"
+msgid "Price"
+msgstr "价格"
+
+# removed f-u-z-z-y
+#: pricechecker.cpp:48
+msgctxt "Price-Checker dialog"
+msgid "Checker"
+msgstr "价格 :"
+
+#: pricechecker.cpp:49
+msgid "&Code:"
+msgstr "&C密码 :"
+
+#: pricechecker.cpp:50
+msgid "Press ESC to Close"
+msgstr "按ESC关闭"
+
+#: pricechecker.cpp:51
+msgid "Regular price:"
+msgstr "普通价格"
+
+#: pricechecker.cpp:52
+msgid "Final price:"
+msgstr "最终价格"
+
+#: productdelegate.cpp:125
+msgid " Out of stock "
+msgstr "没有库存"
+
+#: productdelegate.cpp:155
+#, fuzzy
+msgid " Raw Product "
+msgstr "产品"
+
+#: productdelegate.cpp:168
+msgid " Group "
+msgstr ""
+
+#: refacturar.cpp:45
+msgid "Reimprimir Factura"
+msgstr ""
+
+#: refacturar.cpp:112
+msgid "Factura"
+msgstr ""
+
+#: refacturar.cpp:113
+msgid "Fecha"
+msgstr ""
+
+# removed f-u-z-z-y
+#: refacturar.cpp:114
+#, fuzzy
+msgid "Ticket #"
+msgstr "发票  # %1"
+
+#: refacturar.cpp:115
+#, fuzzy
+msgid "Nombre del Cliente"
+msgstr "客户"
+
+#: refacturar.cpp:116
+#, fuzzy
+msgid "RFC del Cliente"
+msgstr "客户"
+
+#: reservations.cpp:172 resume.cpp:154
+msgid "Tr. #"
+msgstr ""
+
+#: reservations.cpp:228
+msgid "Reimbursement for CANCELLED Reservation #%1 [tr. %2]"
+msgstr ""
+
+#: reservations.cpp:238
+msgid "The reimbursement for the reservation is %1. Get it from the drawer."
+msgstr ""
+
+#: resume.cpp:157
+#, fuzzy
+msgid "Terminal"
+msgstr "结束 #%1"
+
+#: soselector.cpp:45 specialordereditor.cpp:60
+msgid "Special Orders"
+msgstr ""
+
+#: soselector.cpp:169 sostatus.cpp:165
+msgid "Order #"
+msgstr ""
+
+#: soselector.cpp:170 sostatus.cpp:166
+#, fuzzy
+msgid "Name"
+msgstr "&N名称:"
+
+#: soselector.cpp:172 sostatus.cpp:168
+msgid "Status"
+msgstr ""
+
+#: soselector.cpp:173 sostatus.cpp:169
+msgid "Tr. Id"
+msgstr ""
+
+#: sostatus.cpp:45
+#, fuzzy
+msgid "Change Status"
+msgstr "更改出售日期"
+
+# removed f-u-z-z-y
+#: specialordereditor.cpp:106
+#, fuzzy
+msgid "Enter client name here..."
+msgstr "输入要取消发票的号码"
+
+#: specialordereditor.cpp:107
+#, fuzzy
+msgid "Enter client phone here..."
+msgstr "选择退还的产品"
+
+# removed f-u-z-z-y
+#: specialordereditor.cpp:108
+#, fuzzy
+msgid "Enter client cell phone here..."
+msgstr "输入要取消发票的号码"
+
+#: specialordereditor.cpp:243 specialordereditor.cpp:265
+msgid "<i>%1</i> rounded to %2"
+msgstr ""
+
+#: specialordereditor.cpp:251 specialordereditor.cpp:274
+msgid "<i>%1</i> <b>requested %2, on stock %3</b><br>"
+msgstr ""
+
+#: specialordereditor.cpp:334
+msgid ""
+"<b>Product sold by pieces</b>, qty must be an integer value: \n"
+"%1"
+msgstr ""
+
+# removed f-u-z-z-y
+#: specialordereditor.cpp:502
+#, fuzzy
+msgid ""
+"<html><font color=red><b>The delivery date is in the past.</b></font></html>"
+msgstr "<html><font color=red weight=bold>请输入卡号.</font></html>"
+
+#: specialordereditor.cpp:648
+msgid "%1 chars of %2 allowed."
+msgstr ""
+
+#, fuzzy
+#~ msgid "Discount: %1"
+#~ msgstr "折扣 : %1%"
+
+#~ msgid "How the main window is divided."
+#~ msgstr "主要窗口是怎样划分的."
+
+#, fuzzy
+#~ msgid "How the grid/purchase-list is divided."
+#~ msgstr "主要窗口是怎样划分的."
+
+#~ msgid "Store Name"
+#~ msgstr "商店名称"
+
+#, fuzzy
+#~ msgid "Store Phone Number"
+#~ msgstr "商店分号"
+
+#, fuzzy
+#~ msgid "Store Address"
+#~ msgstr "商店名称"
+
+#~ msgid "Ticket Message"
+#~ msgstr "发票信息"
+
+#, fuzzy
+#~ msgid "Print Logo on ticket Top"
+#~ msgstr "打印选择的发票"
+
+#~ msgid "POS Number"
+#~ msgstr "收银台号码"
+
+#~ msgid "Requiere delete authorisation"
+#~ msgstr "需要删除授权"
+
+# removed f-u-z-z-y
+#~ msgid "Low Security Mode"
+#~ msgstr "低安全模式"
+
+#~ msgid "Show Currency"
+#~ msgstr "显示现金"
+
+#~ msgid "Full Currency String"
+#~ msgstr "货币种类全称"
+
+#~ msgid "Short Currency String"
+#~ msgstr "货币类简写"
+
+#~ msgid "Show Products Grid"
+#~ msgstr "显示产品框栏"
+
+#~ msgid "Low Stock Alert"
+#~ msgstr "低库存提示"
+
+#~ msgid "Low Cash Level"
+#~ msgstr "低现金等级"
+
+#~ msgid "Display Low Cash Warning"
+#~ msgstr "显示低现金提示"
+
+#~ msgid "DB Server Name"
+#~ msgstr "数据库服务器名称"
+
+#~ msgid "DB Username"
+#~ msgstr "数据库用户名"
+
+#~ msgid "DB Password"
+#~ msgstr "数据库密码"
+
+#~ msgid "DB Name"
+#~ msgstr "数据库名称"
+
+#~ msgid "Delete empty cancelled transactions"
+#~ msgstr "删除空的已取消交易"
+
+#~ msgid "Use style"
+#~ msgstr "使用类型"
+
+#~ msgid "Get Stylesheet Name"
+#~ msgstr "获取表格名称"
+
+#~ msgid "Allow any user to quit application"
+#~ msgstr "准许所有用户退出程序"
+
+#~ msgid "Show a dialog when printing the ticket"
+#~ msgstr "打印发票时显示对话框"
+
+#~ msgid "Time showing the ticket dialog"
+#~ msgstr "发票里显示时间"
+
+#, fuzzy
+#~ msgid "Print a small receipt using a ticket printer -dot matrix-."
+#~ msgstr "打印发票(如果你有发票打印机)"
+
+#, fuzzy
+#~ msgid "Print a small receipt using a thermal ticket printer -CUPS-"
+#~ msgstr "打印发票(如果你有发票打印机)"
+
+#, fuzzy
+#~ msgid "Print balances using ticket printer"
+#~ msgstr "打印发票(如果你有发票打印机)"
+
+#, fuzzy
+#~ msgid "Print Group/Pack Contents on tickets"
+#~ msgstr "打印选择的发票"
+
+#, fuzzy
+#~ msgid "Print Random Messages on tickets"
+#~ msgstr "打印选择的发票"
+
+#~ msgid "Print Ticket (dou you have a ticket printer?)"
+#~ msgstr "打印发票(你有要发票打印机吗?)"
+
+#~ msgid "Print Date Changed Ticket"
+#~ msgstr "打印日期更改的发票"
+
+#~ msgid "Get printer device to use for printing"
+#~ msgstr "获取打印设备"
+
+#~ msgid "Get Printer Codec to use"
+#~ msgstr "获取打印解码"
+
+#~ msgid "Basic Use Toolbar"
+#~ msgstr "基本工具栏"
+
+#~ msgid "Administrator's Toolbar"
+#~ msgstr "管理员工具栏"
+
+#~ msgid "Form"
+#~ msgstr "表格"
+
+#~ msgid "label"
+#~ msgstr "标签"
+
+#~ msgid "Ca&sh"
+#~ msgstr "&X现金"
+
+#~ msgid "Ca&rd"
+#~ msgstr "&K卡"
+
+#~ msgid "Cash &Amount:"
+#~ msgstr "&A现金数额 :"
+
+#, fuzzy
+#~ msgid "Currency conversion"
+#~ msgstr "货币种类全称"
+
+#~ msgid "$"
+#~ msgstr "$"
+
+#~ msgid "Card &Number:"
+#~ msgstr "&N卡号 :"
+
+#~ msgid "0000-0000-0000-0000; "
+#~ msgstr "0000-0000-0000-0000;"
+
+#~ msgid "---"
+#~ msgstr "---"
+
+#~ msgid "Authorization number:"
+#~ msgstr "授权号码 :"
+
+#~ msgid "Sale Date"
+#~ msgstr "出售日期"
+
+#~ msgid "Change Sale Date"
+#~ msgstr "更改出售日期"
+
+# removed f-u-z-z-y
+#~ msgid "filter by popularity this month"
+#~ msgstr "该月流行产品过滤"
+
+#~ msgid "filter by description"
+#~ msgstr "描述过滤"
+
+#~ msgid "filter by category"
+#~ msgstr "种类过滤 "
+
+#~ msgid "Code"
+#~ msgstr "流水号"
+
+#~ msgid "Description"
+#~ msgstr "描述"
+
+#~ msgid "Units"
+#~ msgstr "单位"
+
+#~ msgid "Total:"
+#~ msgstr "总额 :"
+
+#~ msgid "Change:"
+#~ msgstr "找零 :"
+
+#, fuzzy
+#~ msgid "Subtotal:"
+#~ msgstr "总额 :"
+
+#~ msgid "TextLabel"
+#~ msgstr "文本标签"
+
+#~ msgid "Go back"
+#~ msgstr "返回 "
+
+#~ msgid "Enter item description:"
+#~ msgstr "输入产品描述 :"
+
+# removed f-u-z-z-y
+#~ msgid ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">.<span style=\" font-"
+#~ "weight:600; color:#ff6347;\">.</span></p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600; color:#ff7f50;\">Total HT</span></p></body></html>"
+
+# removed f-u-z-z-y
+#~ msgid "Reprint Ticket"
+#~ msgstr "重新打印发票"
+
+#~ msgid "Show tickets before"
+#~ msgstr "预览发票"
+
+#~ msgid "Print selected ticket"
+#~ msgstr "打印选择的发票"
+
+#~ msgid "Back"
+#~ msgstr "返回"
+
+# removed f-u-z-z-y
+#~ msgid "Return Products"
+#~ msgstr "退还产品"
+
+# removed f-u-z-z-y
+#~ msgid "Ticket number:"
+#~ msgstr "发票号码"
+
+# removed f-u-z-z-y
+#~ msgid "Date and time:"
+#~ msgstr "&D日期与时间 :"
+
+# removed f-u-z-z-y
+#~ msgid "Client:"
+#~ msgstr "客户"
+
+#~ msgid "Select the products to return"
+#~ msgstr "选择退还的产品"
+
+#~ msgid "Qty on purchase"
+#~ msgstr "购买的数量"
+
+#~ msgid "Qty to return"
+#~ msgstr "退还的数量"
+
+#~ msgid "Selected products details"
+#~ msgstr "选取产品详细信息"
+
+#, fuzzy
+#~ msgid "Currency Conversion"
+#~ msgstr "货币种类全称"
+
+#, fuzzy
+#~ msgid "Quantity:"
+#~ msgstr "&Q退出"
+
+#, fuzzy
+#~ msgid "Change Price"
+#~ msgstr "找零 :"
+
+# removed f-u-z-z-y
+#, fuzzy
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Lucida Grande'; font-size:8pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">The next sales are "
+#~ "suspended. Please <span style=\" font-weight:600;\">select one to resume</"
+#~ "span> and press the <span style=\" font-weight:600; font-style:italic;"
+#~ "\">Ok</span> button; or press the <span style=\" font-weight:600; font-"
+#~ "style:italic;\">cancel</span>  button to <span style=\" font-weight:600;"
+#~ "\">start a new one</span>.</p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600; color:#ff7f50;\">Total HT</span></p></body></html>"
+
+#, fuzzy
+#~ msgid "Contents"
+#~ msgstr "继续"
+
+#, fuzzy
+#~ msgid "Enter Client Id:"
+#~ msgstr "商店名称"
+
+# removed f-u-z-z-y
+#, fuzzy
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Ubuntu'; font-size:11pt; font-"
+#~ "weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "size:14pt; font-weight:600; font-style:italic; color:#0c8eff;\">Tendered:"
+#~ "</span></p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600; color:#ff7f50;\">Total HT</span></p></body></html>"
+
+# removed f-u-z-z-y
+#, fuzzy
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Ubuntu'; font-size:11pt; font-"
+#~ "weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "size:14pt; font-weight:600; font-style:italic; color:#0c8eff;\">Change:</"
+#~ "span></p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600; color:#ff7f50;\">Total HT</span></p></body></html>"
+
+# removed f-u-z-z-y
+#, fuzzy
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Ubuntu'; font-size:11pt; font-"
+#~ "weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "size:14pt; font-weight:600; font-style:italic; color:#0c8eff;\">0.0</"
+#~ "span></p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600; color:#ff7f50;\">Total HT</span></p></body></html>"
+
+#, fuzzy
+#~ msgid "Print"
+#~ msgstr "打印机"
+
+#, fuzzy
+#~ msgid "Print the ticket as"
+#~ msgstr "打印选择的发票"
+
+#, fuzzy
+#~ msgid "Small receipt using a thermal ticket printer (using CUPS)"
+#~ msgstr "打印发票(如果你有发票打印机)"
+
+#, fuzzy
+#~ msgid "Small receipt using a dot-matrix ticket printer (using /dev/lpX)"
+#~ msgstr "打印发票(如果你有发票打印机)"
+
+# removed f-u-z-z-y
+#~ msgid "Printer Device:"
+#~ msgstr "打印机"
+
+# removed f-u-z-z-y
+#~ msgid "Printer Codec:"
+#~ msgstr "输入编码："
+
+#, fuzzy
+#~ msgid "Open drawer"
+#~ msgstr "在收银柜里"
+
+#, fuzzy
+#~ msgid "Print Balances on your selected printer (above)."
+#~ msgstr "打印发票(如果你有发票打印机)"
+
+#~ msgid "Print Date Changed Tickets"
+#~ msgstr "打印日期更改的发票"
+
+#, fuzzy
+#~ msgid "Print a random message on tickets."
+#~ msgstr "打印日期更改的发票"
+
+#~ msgid "This is the &Terminal Number:"
+#~ msgstr "结束号码 &T:"
+
+#~ msgid "0000; "
+#~ msgstr "0000;"
+
+# removed f-u-z-z-y
+#, fuzzy
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Ubuntu'; font-size:11pt; font-"
+#~ "weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Any barcode starting "
+#~ "with \"4\" will be interpreted as a customer id and will not search for a "
+#~ "product. For more information about this standard, see <a href=\"http://"
+#~ "en.wikipedia.org/wiki/Universal_Product_Code#Prefixes\"><span style=\" "
+#~ "text-decoration: underline; color:#0000ff;\">http://en.wikipedia.org/wiki/"
+#~ "Universal_Product_Code#Prefixes</span></a></p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600; color:#ff7f50;\">Total HT</span></p></body></html>"
+
+#~ msgid "Dialogs and Authorizations"
+#~ msgstr "对话和授权"
+
+#~ msgid "Show a dialog when printing ticket"
+#~ msgstr "显示打印对话框"
+
+#~ msgid "Time showing the dialog:"
+#~ msgstr "显示时间"
+
+#~ msgid " seconds"
+#~ msgstr "秒"
+
+#~ msgid "Requiere authorisation to delete items from shopping list"
+#~ msgstr "从购物表中删除产品需要授权"
+
+#~ msgid "Products Grid"
+#~ msgstr "产品框栏"
+
+#~ msgid "Show products grid"
+#~ msgstr "显示产品框栏"
+
+#~ msgid "Low Stock"
+#~ msgstr "低库存"
+
+#~ msgid "Minimum value for alert"
+#~ msgstr "提示最小值"
+
+#~ msgid "Drawer Cash Level"
+#~ msgstr "银柜现金级别"
+
+#~ msgid "Display warning message when level is lower than"
+#~ msgstr "当级别低于 显示提示信息"
+
+#, fuzzy
+#~ msgid "Taxes"
+#~ msgstr "税收 :"
+
+#~ msgid "&Server:"
+#~ msgstr "&S服务器 :"
+
+#~ msgid "&Username:"
+#~ msgstr "&U用户名 :"
+
+#~ msgid "&Password:"
+#~ msgstr "&M密码 :"
+
+#~ msgid "&Database Name:"
+#~ msgstr "&D数据库名称 :"
+
+#~ msgid "Extra options"
+#~ msgstr "其他选项"
+
+#~ msgid "Allow any user to quit, asking for administrator's password"
+#~ msgstr "允许任何用户退出，在输入管理员密码后 "
+
+#~ msgid "Do not ask for admin password (Low Security Mode)"
+#~ msgstr "不需要管理员密码（低安全模式）"
+
+#~ msgid "Use style sheet"
+#~ msgstr "使用类型表格"
+
+#~ msgid "Tickets from all terminals"
+#~ msgstr "来自所有终端发票"
+
+# removed f-u-z-z-y
+#~ msgid "Ticket Number"
+#~ msgstr "发票号码"
+
+# removed f-u-z-z-y
+#~ msgid "Ticket Items"
+#~ msgstr "发票信息"
+
+# removed f-u-z-z-y
+#, fuzzy
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-"
+#~ "weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "family:'Lucida Grande'; font-size:8pt;\">The next sales are reserved. "
+#~ "Please </span><span style=\" font-family:'Lucida Grande'; font-size:8pt; "
+#~ "font-weight:600;\">select one to finish the sale</span><span style=\" "
+#~ "font-family:'Lucida Grande'; font-size:8pt;\"> and press the </span><span "
+#~ "style=\" font-family:'Lucida Grande'; font-size:8pt; font-weight:600; "
+#~ "font-style:italic;\">Ok</span><span style=\" font-family:'Lucida Grande'; "
+#~ "font-size:8pt;\"> button; or press the </span><span style=\" font-"
+#~ "family:'Lucida Grande'; font-size:8pt; font-weight:600; font-style:italic;"
+#~ "\">Cancel Selected</span><span style=\" font-family:'Lucida Grande'; font-"
+#~ "size:8pt;\">  button to </span><span style=\" font-family:'Lucida "
+#~ "Grande'; font-size:8pt; font-weight:600;\">cancel the selected "
+#~ "reservation</span><span style=\" font-family:'Lucida Grande'; font-"
+#~ "size:8pt;\">.</span></p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600; color:#ff7f50;\">Total HT</span></p></body></html>"
+
+#, fuzzy
+#~ msgid "Cancel Selected"
+#~ msgstr "删除已选择产品"
+
+#, fuzzy
+#~ msgid "filter by ticket #:"
+#~ msgstr "种类过滤 "
+
+#, fuzzy
+#~ msgid "filter by name:"
+#~ msgstr "种类过滤 "
+
+#, fuzzy
+#~ msgid "New Status:"
+#~ msgstr "低库存提示"
+
+#, fuzzy
+#~ msgid "Special Item"
+#~ msgstr "寻找产品"
+
+# removed f-u-z-z-y
+#, fuzzy
+#~ msgid "Ticket :"
+#~ msgstr "发票  # %1"
+
+# removed f-u-z-z-y
+#, fuzzy
+#~ msgid "&Client:"
+#~ msgstr "客户"
+
+#, fuzzy
+#~ msgid "&Qty:"
+#~ msgstr "数量."
+
+#, fuzzy
+#~ msgid "Qty to add"
+#~ msgstr "退还的数量"
+
+#, fuzzy
+#~ msgid "Add selected products to the components"
+#~ msgstr "选取产品详细信息"
+
+#, fuzzy
+#~ msgid "You can filter the products by description,"
+#~ msgstr "描述过滤"
+
+# removed f-u-z-z-y
+#, fuzzy
+#~ msgid "Payment:"
+#~ msgstr "<b>付款</b>"
+
+#, fuzzy
+#~ msgid "Enter Client Address"
+#~ msgstr "商店名称"
+
+#~ msgid "&Name:"
+#~ msgstr "&N名称:"
+
+#, fuzzy
+#~ msgid "&Phone:"
+#~ msgstr "&C密码 :"
+
+#~ msgid "Ticket &Message:"
+#~ msgstr "&M发票信息 :"
+
+#, fuzzy
+#~ msgid "Store Logo:"
+#~ msgstr "商店"
+
+#, fuzzy
+#~ msgid "Enter the discount percentage to apply"
+#~ msgstr "输入要取消发票的号码"
+
+#~ msgid "Offer"
+#~ msgstr "原价"
+
+# removed f-u-z-z-y
+#~ msgid "<html><font color=red><b>Product not available in stock.</b></font>"
+#~ msgstr "<html><font color=red weight=bold>此产品已无库存.</font>"
+
+#~ msgid "Ticket # %1"
+#~ msgstr "发票  # %1"
+
+#, fuzzy
+#~ msgid "$ "
+#~ msgstr "$"
+
+#~ msgid "Warning:"
+#~ msgstr "警告:"
+
+#, fuzzy
+#~ msgid "Amount Discounted: %1"
+#~ msgstr "折扣数 : %1 %2"
+
+#~ msgid "Cancel Transaction: Error"
+#~ msgstr "取消交易 : 错误"
+
+#~ msgid "Pay Method"
+#~ msgstr "付款方式"
+
+#, fuzzy
+#~ msgid "Transaction Id"
+#~ msgstr "交易"
+
+#, fuzzy
+#~ msgid "Balance for user %1 at Terminal # %2"
+#~ msgstr "客户结余  %1"
+
+#, fuzzy
+#~ msgid "%1 Articles"
+#~ msgstr "%1 artícle"
+
+#, fuzzy
+#~ msgid "Totals"
+#~ msgstr "总额"
+
+#~ msgid "Currency: %1"
+#~ msgstr "货币类型: %1"
+
+#~ msgid "Error"
+#~ msgstr "错误"
+
+#~ msgid "Currency"
+#~ msgstr "货币 "
+
+#~ msgid "&Short currency string:"
+#~ msgstr "&A货币类型简写 :"
+
+#~ msgid ""
+#~ "If checked the short currency is shown aside the total due, otherwise "
+#~ "only full currency is shown above it."
+#~ msgstr "检查货币简写是否在总额旁边, 不然的话货币全称显示在上面."
+
+#~ msgid ""
+#~ "This is an option which If checked the short currency is shown aside the "
+#~ "total due, otherwise only full currency is shown above it."
+#~ msgstr "货币简写或全称选项"
+
+#~ msgid "Show the short currency on the total label"
+#~ msgstr "在总额标签上显示货币简写"
+
+#~ msgid "Card"
+#~ msgstr "卡"
+
+#~ msgid "Unknown"
+#~ msgstr "未知"

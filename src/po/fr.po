@@ -1,0 +1,2241 @@
+# translation of fr.po to français
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Miguel Chavez Gamboa <miguel.chavez.gamboa@gmail.com>, 2007.
+# Girard Henri <girardhenri@free.fr>, 2007.
+# This is not updated since 0.5 version.
+msgid ""
+msgstr ""
+"Project-Id-Version: fr\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?"
+"atid=1011570&group_id=209899&func=browse\n"
+"POT-Creation-Date: 2012-08-09 16:28-0500\n"
+"PO-Revision-Date: 2007-12-25 11:08+0100\n"
+"Last-Translator: girard henri <girardhenri@free.fr>\n"
+"Language-Team: français <fr@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: KBabel 1.11.4\n"
+"X-Language: fr_FR\n"
+
+#: ../../dataAccess/azahar.cpp:112 ../../dataAccess/azahar.cpp:139
+#: ../../dataAccess/azahar.cpp:234 ../../dataAccess/azahar.cpp:1096
+#: ../../dataAccess/azahar.cpp:1367 ../../dataAccess/azahar.cpp:2027
+#: ../../dataAccess/azahar.cpp:2063 ../../dataAccess/azahar.cpp:2095
+#: ../../dataAccess/azahar.cpp:2132 ../../dataAccess/azahar.cpp:2169
+#: ../../dataAccess/azahar.cpp:2199 ../../dataAccess/azahar.cpp:2232
+#: ../../dataAccess/azahar.cpp:2307 ../../dataAccess/azahar.cpp:2347
+#: ../../dataAccess/azahar.cpp:2367 ../../dataAccess/azahar.cpp:2389
+#: ../../dataAccess/azahar.cpp:2409 ../../dataAccess/azahar.cpp:2451
+#: ../../dataAccess/azahar.cpp:2653 ../../dataAccess/azahar.cpp:2706
+#: ../../dataAccess/azahar.cpp:2796 ../../dataAccess/azahar.cpp:2872
+#: ../../dataAccess/azahar.cpp:2899 ../../dataAccess/azahar.cpp:3481
+#: ../../dataAccess/azahar.cpp:3509 ../../dataAccess/azahar.cpp:3535
+#: ../../dataAccess/azahar.cpp:3728
+msgid ""
+"Error #%1, Type:%2\n"
+"'%3'"
+msgstr ""
+"Erreur #%1, Type : %2\n"
+"'%3'"
+
+#: ../../dataAccess/azahar.cpp:115 ../../dataAccess/azahar.cpp:1099
+msgid "Error serching product id %1, Rows affected: %2"
+msgstr "Erreur en cherchant un produit id %1, Lignes affectées : %2"
+
+#: ../../dataAccess/azahar.cpp:142
+msgid "Error serching offer id %1, Rows affected: %2"
+msgstr "Erreur en cherchant une offre id %1, Lignes affectées : %2"
+
+#: ../../dataAccess/azahar.cpp:235
+msgid "Error getting product information for code %1, Rows affected: %2"
+msgstr ""
+"Erreur en cherchant l'information d'un produit id %1, Lignes affectées : %2"
+
+#: ../../dataAccess/azahar.cpp:1339
+msgid ""
+"Unable to set an offer/discount for the selected produc because it is NOT "
+"DISCOUNTABLE"
+msgstr ""
+
+#: ../../dataAccess/azahar.cpp:1370
+msgid "Error deleting offer id %1, Rows affected: %2"
+msgstr "Erreur d'effacement de l'offre id %1, ligne affectée : %2"
+
+#: ../../dataAccess/azahar.cpp:2502
+msgid "Money return on cancelling ticket #%1 "
+msgstr "Retour des espèces en annulant le ticket"
+
+#: ../../dataAccess/azahar.cpp:2509
+msgid "Ticket #%1 was already canceled."
+msgstr "Ticket #%1a déjà été annulé"
+
+#: ../../dataAccess/azahar.cpp:3482 ../../dataAccess/azahar.cpp:3510
+#: ../../dataAccess/azahar.cpp:3536 ../../dataAccess/azahar.cpp:3729
+msgid "Error getting special Order information, id: %1, Rows affected: %2"
+msgstr ""
+"Erreur en récupérant les informations de commandes, id: %1, lignes "
+"affectées : %2"
+
+#: ../../dataAccess/azahar.cpp:4742
+msgid ""
+"Could not add the serie. Process Aborted!.\n"
+"%1"
+msgstr ""
+
+#: ../../dataAccess/azahar.cpp:4793
+msgid ""
+"No se inserto ningún folio debido a que estaban duplicados.\n"
+" %1"
+msgstr ""
+
+#: ../../dataAccess/azahar.cpp:4799
+msgid ""
+"Se insertan %1 folios. Algunos folios estaban duplicados y se ignoran:\n"
+" %2"
+msgstr ""
+
+#: dialogclientdata.cpp:39
+msgid "Datos del Cliente"
+msgstr ""
+
+#: inputdialog.cpp:68
+msgid "Product Code:"
+msgstr "Code produit :"
+
+#: inputdialog.cpp:80
+msgid "Month or Season:"
+msgstr "Mois ou saison :"
+
+#: inputdialog.cpp:81
+msgid "New Stock Qty:"
+msgstr "Nouvelle Qté en stock :"
+
+#: inputdialog.cpp:82
+msgid "New currency factor:"
+msgstr ""
+
+#: inputdialog.cpp:83
+msgid "Amount:"
+msgstr "Montant :"
+
+#: inputdialog.cpp:85
+msgid "New Message:"
+msgstr "Nouveau Message :"
+
+#: inputdialog.cpp:86
+#, fuzzy
+msgid "New Currency Name:"
+msgstr "Afficher la monnaie "
+
+#: inputdialog.cpp:87
+msgid "Reason:"
+msgstr "Raison :"
+
+#: inputdialog.cpp:89
+msgid "Ticket #:"
+msgstr "Ticket  # :"
+
+#: inputdialog.cpp:102
+msgid "valid amount between %1 and %2"
+msgstr "Montant valide entre %1 et %2"
+
+#: inputdialog.cpp:109
+msgid "Enter the product code here..."
+msgstr "Saisir le numéro du ticket à annuler..."
+
+#: inputdialog.cpp:110
+msgid "Enter the new stock quantity here..."
+msgstr "Entrer la nouvelle Qté en stock ici ..."
+
+#: inputdialog.cpp:117
+msgid "Terminal Number:"
+msgstr "Numéro de terminal :"
+
+#: inputdialog.cpp:118
+msgid "Enter the terminal number here..."
+msgstr "Entrer le Numéro de terminal ici ..."
+
+#: inputdialog.cpp:125
+msgid "Enter the number of the month or season here..."
+msgstr "Saisir le numéro du mois ou de la saison ici..."
+
+#: inputdialog.cpp:131
+#, fuzzy
+msgid "Enter the new currency name..."
+msgstr "Entrer la nouvelle Qté en stock ici ..."
+
+#: inputdialog.cpp:132
+#, fuzzy
+msgid "Enter the new currency factor..."
+msgstr "Entrer la nouvelle Qté en stock ici ..."
+
+#: inputdialog.cpp:173
+msgid "Ok"
+msgstr "Ok"
+
+#: inputdialog.cpp:176
+msgid "Cancel"
+msgstr "Annuler"
+
+#: lemon.cpp:155
+msgid "Login"
+msgstr "Login"
+
+#: lemon.cpp:161
+msgctxt "Account balance"
+msgid "Balance"
+msgstr "Solde"
+
+#: lemon.cpp:167
+msgid "Enter Code"
+msgstr "Entrer le code"
+
+#: lemon.cpp:173
+msgid "Search Item"
+msgstr "Chercher l'article"
+
+#: lemon.cpp:179
+msgid "Delete Selected Item"
+msgstr "Effacer l'article sélectionné"
+
+#: lemon.cpp:189
+msgid "Finish transaction"
+msgstr "Terminer la transaction"
+
+#: lemon.cpp:195
+msgid "Cancel transaction"
+msgstr "Annuler la transaction"
+
+#: lemon.cpp:201
+msgid "Cancel a ticket"
+msgstr "Annuler un ticket"
+
+#: lemon.cpp:208
+msgid "Start Operation"
+msgstr "Commencer les opérations"
+
+#: lemon.cpp:214
+msgid "Pay focus"
+msgstr "Payer"
+
+#: lemon.cpp:221
+msgid "Show/Hide Products Grid"
+msgstr "Montrer/Cacher la grille de produits "
+
+#: lemon.cpp:228
+msgid "Show Price Checker"
+msgstr "Afficher la vérification du prix"
+
+#: lemon.cpp:234
+msgid "Reprint ticket"
+msgstr "Réimprimer le ticket"
+
+#: lemon.cpp:240 lemonview.cpp:4804
+msgid "Cash Out"
+msgstr "Monaie rendue"
+
+#: lemon.cpp:246
+msgid "Cash in drawer"
+msgstr "Tiroir caisse"
+
+#: lemon.cpp:252 lemonview.cpp:4847
+msgid "Cash In"
+msgstr "Entrée en Caisse"
+
+#: lemon.cpp:258 lemonview.cpp:4066
+msgid "End of day report"
+msgstr "Rapport de fin de journée"
+
+#: lemon.cpp:265
+msgid "Add Special Order"
+msgstr "Ajouter une commande spéciale"
+
+#: lemon.cpp:273
+msgid "Complete Special Order"
+msgstr "Commande spéciale complète"
+
+#: lemon.cpp:280
+msgid "Lock Screen"
+msgstr "Bloquer l'écran"
+
+#: lemon.cpp:287
+msgid "Suspend Sale"
+msgstr "Vente en suspend"
+
+#: lemon.cpp:294 lemon.cpp:301
+msgid "Change Special Order Status"
+msgstr "Changement d'état des commandes spéciales"
+
+#: lemon.cpp:308 resume.cpp:46
+msgid "Resume Sale"
+msgstr "Vente résumées"
+
+#: lemon.cpp:315
+msgid "Reserve Items"
+msgstr ""
+
+#: lemon.cpp:322 reservations.cpp:59
+#, fuzzy
+msgid "Reservations"
+msgstr "Description"
+
+#: lemon.cpp:329
+#, fuzzy
+msgid "Show Credits"
+msgstr "Afficher la monnaie "
+
+#: lemon.cpp:336
+#, fuzzy
+msgid "Add Reservation Payment"
+msgstr "Description"
+
+#: lemon.cpp:343
+msgid "Emitir una factura"
+msgstr ""
+
+#: lemon.cpp:349
+#, fuzzy
+msgid "Cancelar una factura"
+msgstr "Annuler un ticket"
+
+#: lemon.cpp:355
+msgid "Reimprimir una factura"
+msgstr ""
+
+#: lemon.cpp:361
+msgid "Número de facturas disponibles"
+msgstr ""
+
+#: lemon.cpp:452 lemon.cpp:484
+msgid "Database"
+msgstr "Base de données"
+
+#: lemon.cpp:470
+msgid "General"
+msgstr "Général"
+
+#: lemon.cpp:475
+msgid "Store"
+msgstr "Magasin"
+
+#: lemon.cpp:480
+msgid "Facturas"
+msgstr ""
+
+#: lemon.cpp:488
+msgid "Appearence"
+msgstr "Apparence"
+
+#: lemon.cpp:495
+msgid "Security"
+msgstr "Securité"
+
+#: lemon.cpp:499
+msgid "Printer"
+msgstr "Imprimante"
+
+#: lemon.cpp:564
+msgid ""
+"Administrator or Supervisor needs to start operation before you can start "
+"selling..."
+msgstr ""
+"L'administrateur doit commencer les opérations avant de pouvoir vendre..."
+
+#: lemon.cpp:823
+msgid "Transaction #%1"
+msgstr "Transaction #%1"
+
+#: lemonview.cpp:106
+msgid "Continue"
+msgstr "Continuer"
+
+#: lemonview.cpp:163
+msgid "Welcome to Lemon"
+msgstr "Bienvenue dans Lémon"
+
+#: lemonview.cpp:164
+msgid "Enter username and password to start using the system."
+msgstr ""
+"Entrer un nom d'utilisateur et un mot de passe pour utiliser le logiciel."
+
+#: lemonview.cpp:167
+msgid "Authorisation Required"
+msgstr "Autorisation nécessaire"
+
+#: lemonview.cpp:168
+msgid "Enter administrator password please."
+msgstr "Entrer le mot de passe admin SVP"
+
+#: lemonview.cpp:310 lemonview.cpp:311
+msgid "Enter code or qty*code. <Enter> or <+> Keys to go pay"
+msgstr ""
+"Entrer le code ou la qté*code. <Enter> ou <+> les clés pour pouvoir payer"
+
+#: lemonview.cpp:312
+msgid "Enter an amount."
+msgstr ""
+
+#: lemonview.cpp:403 lemonview.cpp:1357 lemonview.cpp:1591
+msgid "%1 has %2 %3 but requested %4 + %5"
+msgstr "%1 a  %2 %3 mais attendu %4 + %5"
+
+#: lemonview.cpp:421 lemonview.cpp:1372 lemonview.cpp:1601
+msgid ""
+"<html><font color=red><b>The group/pack is not available because:<br>%1</b></"
+"font></html>"
+msgstr ""
+"<html><font color=red weight=bold>Le Groupe/paquet n'est pas disponible "
+"parce-que : <br>%1</b></font></html>"
+
+#: lemonview.cpp:423 lemonview.cpp:1374 lemonview.cpp:1611
+msgid ""
+"<html><font color=red><b>There are only %1 articles of your choice at stock."
+"<br> You requested %2</b></font></html>"
+msgstr ""
+"<html><font color=red><b>Il n'y a que %1 articles de votre choix en stock."
+"<br> Vous en avez demandé %2</b></font></html>"
+
+#: lemonview.cpp:555
+msgid "Invalid input"
+msgstr ""
+
+#: lemonview.cpp:730
+msgid "No product selected"
+msgstr "Aucun produit sélectionné "
+
+#: lemonview.cpp:759
+msgid "Enter the ticket number to cancel"
+msgstr "Saisir le numéro du ticket à annuler"
+
+#: lemonview.cpp:792
+msgid "Enter the ticket number"
+msgstr "Saisir le numéro du ticket"
+
+#: lemonview.cpp:973
+msgid ""
+"Could not connect to database, please press 'login' button again to raise a "
+"database configuration."
+msgstr ""
+"Impossible de se connecter à la base de données, SVP appuyez sur le bouton "
+"'login' à nouveau pour faire apparaitre la configuration de la base de "
+"données."
+
+#: lemonview.cpp:974
+msgid "Error:"
+msgstr "Erreur :"
+
+#: lemonview.cpp:1068
+msgid "%1 item found"
+msgid_plural "%1 items found."
+msgstr[0] "%1 artícle trouvé."
+msgstr[1] "%1 articles trouvés."
+
+#: lemonview.cpp:1069
+msgid "No items found."
+msgstr "Aucun article trouvé"
+
+#: lemonview.cpp:1410
+msgid ""
+"Only Special Orders can be added. Please finish the current special order "
+"before adding any other product."
+msgstr ""
+"Seules les commandes spéciales peuvent etre ajoutées.SVP finissez la "
+"commande en cours avant d'ajouter d'autres produits."
+
+#: lemonview.cpp:1421
+msgid "Cannot Add more items to the Reservation."
+msgstr ""
+
+#: lemonview.cpp:1460
+msgid "Cannot change client while Special Orders are in Purchase."
+msgstr ""
+
+#: lemonview.cpp:1488
+msgid "<b>Welcome</b> <i>%1</i>. You have remaining <b>debit</b> of %2 to use."
+msgstr ""
+
+#: lemonview.cpp:1490
+msgid "<b>Welcome</b> <i>%1</i>. You have remaining <b>credit</b> of %2 used."
+msgstr ""
+
+#: lemonview.cpp:1502
+msgid "No Client found with code %1."
+msgstr ""
+
+#: lemonview.cpp:1544
+msgid ""
+"The requiered qty is %1 and its not allowed for the required product, please "
+"verify the quantity"
+msgstr ""
+
+#: lemonview.cpp:1564
+msgid ""
+"<html><font color=red><b>Product not found in database.</b></font></html>"
+msgstr ""
+"<html><font color=red weight=bold>Produit non trouvé dans la base de données."
+"</font></html>"
+
+#: lemonview.cpp:1770
+msgid "Cannot delete items from a reservation."
+msgstr ""
+
+#: lemonview.cpp:1819
+msgid "Removing an Special Item from shopping list. Authorized by %1"
+msgstr "Effacer les articles spéciaux de la liste d'achat. Autoriser par %1"
+
+#: lemonview.cpp:1885
+msgid "Removing an article from shopping list. Authorized by %1"
+msgstr "Effacer l'article de la liste d'achat. Autoriser par %1"
+
+#: lemonview.cpp:1939
+msgid "Enter the number of %1"
+msgstr "Entrer le Numéro de %1"
+
+#: lemonview.cpp:1974
+msgid ""
+"<html><font color=red><b>Product not available in stock for the requested "
+"quantity.</b></font></html>"
+msgstr ""
+"<html><font color=red weight=bold>Produit non disponible en inventaire pour "
+"une telle quantité.</font></html>"
+
+#: lemonview.cpp:2025
+msgid "Taxes:"
+msgstr "Taxes :"
+
+#: lemonview.cpp:2026
+msgid "Tax:"
+msgstr "TVA :"
+
+#: lemonview.cpp:2027
+msgid "Other taxes:"
+msgstr "Autres taxes :"
+
+#: lemonview.cpp:2028
+msgid "Sold by:"
+msgstr "Vendu par :"
+
+#: lemonview.cpp:2029
+msgid "Price:"
+msgstr "Prix :"
+
+#: lemonview.cpp:2030 lemonview.cpp:4304 pricechecker.cpp:53
+msgid "Discount:"
+msgstr "Remise :"
+
+#: lemonview.cpp:2031
+msgid "Points:"
+msgstr "Avoir :"
+
+#: lemonview.cpp:2119
+msgid ""
+"Lemon has encountered an error when openning database, click details to see "
+"the error details."
+msgstr ""
+"Lemon a rencontré une erreur en ouvrant la base de données. Cliquer sur "
+"détails pour voir l'erreur."
+
+#: lemonview.cpp:2119
+msgid "Create New Transaction: Error"
+msgstr "Créer une nouvelle transaction : Erreur"
+
+#: lemonview.cpp:2178
+#, fuzzy
+msgid ""
+"<html><font color=red><b>Please fill the correct payment amount before "
+"finishing a transaction.</b></font></html>"
+msgstr ""
+"<html><font color=red weight=bold>Saisir le montant exact avant de terminer "
+"la transaction SVP.</font></html>"
+
+#: lemonview.cpp:2187
+msgid ""
+"Please be sure to enter an appropiate amount in this field. The number seems "
+"to be a barcode entered by mistake in the amount field."
+msgstr ""
+
+#: lemonview.cpp:2203
+#, fuzzy
+msgid "<html><font color=red><b>Note: card number missing.</b></font></html>"
+msgstr ""
+"<html><font color=red weight=bold>Entrer le numéro de carte SVP.</font></"
+"html>"
+
+#: lemonview.cpp:2211
+#, fuzzy
+msgid ""
+"<html><font color=red><b>Note: Authorisation number from the bank voucher "
+"missing.</b></font></html>"
+msgstr ""
+"<html><font color=red weight=bold>Entrer le numéro confidentiel de la banque "
+"SVP.</font></html>"
+
+#: lemonview.cpp:2219
+#, fuzzy
+msgid ""
+"<html><font color=red><b>The Card Type must be of some valid type.</b></"
+"font></html>"
+msgstr ""
+"<html><font color=red weight=bold>La date de livraison est passé.</font></"
+"html>"
+
+#: lemonview.cpp:2229
+msgid "Before selling, you must start operations."
+msgstr "Avant de vendre vous devez initialiser les opérations."
+
+#: lemonview.cpp:2233
+#, fuzzy
+msgid ""
+"<html><font color=red><b>The Client for an interal credit sale must not be "
+"the default client.</b> Please select another client</font></html>"
+msgstr ""
+"<html><font color=red weight=bold>La date de livraison est passé.</font></"
+"html>"
+
+#: lemonview.cpp:2668
+msgid "The Drawer is not initialized, please start operation first."
+msgstr ""
+"Le tiroir caisse n'est pas initialisé, effectuer cette opération d'abord SVP."
+
+#: lemonview.cpp:2757
+msgid "Facturación"
+msgstr ""
+
+#: lemonview.cpp:2757
+msgid "¿Desea facturar?"
+msgstr ""
+
+#: lemonview.cpp:2819
+msgid "No se pudo crear la factura"
+msgstr ""
+
+#: lemonview.cpp:2825
+msgid "Folio Obtenido es invalido."
+msgstr ""
+
+#: lemonview.cpp:2880
+msgid "Cash level in drawer is low."
+msgstr "Le niveau de caisse est trop bas"
+
+#: lemonview.cpp:2955 lemonview.cpp:3041 lemonview.cpp:4718 lemonview.cpp:5070
+#: lemonview.cpp:6528
+msgid "Notes:"
+msgstr "Avoir :"
+
+#: lemonview.cpp:2984
+msgid "Imprimir Factura"
+msgstr ""
+
+#: lemonview.cpp:3016
+msgid ""
+"The ticket was not printed because it is ZERO in the amount to pay. Just to "
+"save trees."
+msgstr ""
+"Le ticket n'a pas été imprimé parce-qu'il y a ZERO à payer. Juste sauver le "
+"résultat."
+
+#: lemonview.cpp:3025
+msgid "Salesperson: %1"
+msgstr "Vendeur : %1"
+
+#: lemonview.cpp:3026 lemonview.cpp:3241 lemonview.cpp:3353 lemonview.cpp:3390
+msgid "Qty"
+msgstr "Qté"
+
+#: lemonview.cpp:3027
+msgid "Product"
+msgstr "Produit"
+
+#: lemonview.cpp:3028
+msgid "Price"
+msgstr "Prix"
+
+#: lemonview.cpp:3029 lemonview.cpp:4563
+msgid "Discount"
+msgstr "remise"
+
+#: lemonview.cpp:3030 lemonview.cpp:4562 refacturar.cpp:117
+msgid "Total"
+msgstr "Total"
+
+#: lemonview.cpp:3031
+msgid "Your Personal Discount"
+msgstr "Votre escompte : %1"
+
+#: lemonview.cpp:3032
+msgid "Your points this buy: %1"
+msgstr "Vos points pour cet achat : %1"
+
+#: lemonview.cpp:3033
+msgid "Your total points: %1"
+msgstr "Avoir total : %1:"
+
+#: lemonview.cpp:3034
+msgid "# %1"
+msgstr "# %1"
+
+#: lemonview.cpp:3035
+msgid "Terminal #%1"
+msgstr "Terminal #%1"
+
+#: lemonview.cpp:3036
+#, fuzzy
+msgid "PRE PAYMENT OF"
+msgstr " PREPAIEMENT DE"
+
+#: lemonview.cpp:3037
+#, fuzzy
+msgid "COMPLETED PAYMENT WITH"
+msgstr "PAIEMENT TOTAL AVEC"
+
+#: lemonview.cpp:3038
+#, fuzzy
+msgid "To complete your payment"
+msgstr "Pour complèter votre paiement"
+
+#: lemonview.cpp:3039
+#, fuzzy
+msgid "Your pre payment"
+msgstr "   Votre prépaiement "
+
+#: lemonview.cpp:3040
+msgid "SPECIAL ORDERS"
+msgstr "COMMANDES SPECIALES"
+
+#: lemonview.cpp:3042
+#, fuzzy
+msgid "Delivery"
+msgstr "  Livraison : "
+
+#: lemonview.cpp:3043
+msgid "Tax"
+msgstr "Taxe :"
+
+#: lemonview.cpp:3044
+#, fuzzy
+msgid "Subtotal"
+msgstr "Total"
+
+#: lemonview.cpp:3045
+msgid "Tendered"
+msgstr ""
+
+#: lemonview.cpp:3158 lemonview.cpp:3246 lemonview.cpp:3359
+msgid "%1 article."
+msgid_plural "%1 articles."
+msgstr[0] "%1 artícle"
+msgstr[1] "%1 artícles"
+
+#: lemonview.cpp:3159
+msgid "A total of"
+msgstr "Un total de "
+
+#: lemonview.cpp:3162
+msgid "<br>Paid with %1, your change is <b>%2</b><br>"
+msgstr "<br>Paiement en %1, votre monaie est <b>%2</b><br>"
+
+#: lemonview.cpp:3171
+msgid "You saved %1"
+msgstr "Vous avez économisé %1"
+
+#: lemonview.cpp:3178
+msgid "Paid with %1, your change is %2"
+msgstr "<br>Paiement en %1, votre monaie est <b>%2</b><br>"
+
+#: lemonview.cpp:3183
+msgid "<br>Card # %1<br>Authorisation # %2"
+msgstr "<br>Carte# %1<br>Autorisation # %2"
+
+#: lemonview.cpp:3184
+#, fuzzy
+msgid ""
+"Card Number:%1 \n"
+"Authorisation #:%2"
+msgstr ""
+"<br>numéro de Carte :# %1\n"
+"<br>Autorisation :# %2"
+
+#: lemonview.cpp:3224
+#, fuzzy
+msgid ""
+" %3 [ %4 ]| You got %1 points | Your accumulated is :%2 | | Your credit "
+"balance is: %5"
+msgstr " %3 [ %4 ]| Vous avez %1 points | Vos points cumulés :%2 | "
+
+#: lemonview.cpp:3226 lemonview.cpp:3358
+msgid " %3 [ %4 ]| You got %1 points | Your accumulated is :%2 | "
+msgstr " %3 [ %4 ]| Vous avez %1 points | Vos points cumulés :%2 | "
+
+#: lemonview.cpp:3237 lemonview.cpp:3349
+msgid "Phone: "
+msgstr "Téléphone :"
+
+#: lemonview.cpp:3249
+#, fuzzy
+msgid "Change"
+msgstr "Monaie :"
+
+#: lemonview.cpp:3251
+msgid "Card Number  : %1"
+msgstr "Numéro de carte :"
+
+#: lemonview.cpp:3252
+msgid "Authorization : %1"
+msgstr "Authorisation :"
+
+#: lemonview.cpp:3271
+msgid " RESERVATION "
+msgstr ""
+
+#: lemonview.cpp:3273
+msgid "Purchase Total Amount"
+msgstr ""
+
+#: lemonview.cpp:3275
+msgid "Reservation Total Amount"
+msgstr ""
+
+#: lemonview.cpp:3289
+msgid ""
+"Print Receipt -- Press ESC to export to PDF to your home/lemon-printing/ "
+"folder"
+msgstr ""
+
+#: lemonview.cpp:3372
+msgid "Print Receipt"
+msgstr "Imprimer le reçu"
+
+#: lemonview.cpp:3406
+msgid "Print Special Order Instructions "
+msgstr "Imprimer les instructions de commandes spéciales "
+
+#: lemonview.cpp:3515
+msgid ""
+"Lemon has encountered an error when querying the database, click details to "
+"see the error details."
+msgstr ""
+"Lemon a rencontré une erreur en interrogeant la base de données. Cliquer sur "
+"détails pour savoir l'erreur."
+
+#: lemonview.cpp:3515
+msgid "Delete Transaction: Error"
+msgstr "Effacer la transaction : Erreur"
+
+#: lemonview.cpp:3571
+msgid ""
+"The ticket cannot be cancelled because it was paid with a credit/debit card."
+msgstr ""
+"Le ticket ne peut pas etre annulé parce-qu'il a été payé avec une carte de "
+"crédit"
+
+#: lemonview.cpp:3583
+msgid "Cancelling transaction #%1. Authorized by %2"
+msgstr "Transaction annulée #%1. Autorisé par %2"
+
+#: lemonview.cpp:3593
+msgid "The ticket was sucessfully cancelled."
+msgstr "Le ticket a été annulé avec succès"
+
+#: lemonview.cpp:3605
+msgid "Error cancelling ticket: %1"
+msgstr "Erreur d'annulation du ticket : %1"
+
+#: lemonview.cpp:3628 reservations.cpp:248
+msgid "There is not enough cash available in the drawer."
+msgstr "Il n'y a plus assez d'argent disponible dans la caisse."
+
+#: lemonview.cpp:3630
+msgid "Ticket to cancel does not exists!"
+msgstr "Le ticket d'annulation n'existe pas !"
+
+#: lemonview.cpp:3648
+msgid "Enter the amount of money to deposit in the drawer"
+msgstr "Entrer le montant à déposer dans le tiroir caisse :"
+
+#: lemonview.cpp:3672
+msgid "Operation Started by %1 at terminal %2"
+msgstr "Opération démarée sur le %1 au terminal %2"
+
+#: lemonview.cpp:3794
+msgid "Balance Id:%1"
+msgstr "Solde id : %1"
+
+#: lemonview.cpp:3800
+msgid "%1 at Terminal # %2"
+msgstr "%1 Au terminal # %2"
+
+#: lemonview.cpp:3801
+msgid "Initial Amount deposited:"
+msgstr "Montant initial déposé :"
+
+#: lemonview.cpp:3802
+msgid "Deposit"
+msgstr "Dépôt"
+
+#: lemonview.cpp:3803
+msgid "In"
+msgstr "recette"
+
+#: lemonview.cpp:3804
+msgid "Out"
+msgstr "dépense"
+
+#: lemonview.cpp:3805
+msgid "In Drawer"
+msgstr "dans la caisse"
+
+#: lemonview.cpp:3806
+msgid "Drawer Balance"
+msgstr "Solde de la caisse"
+
+#: lemonview.cpp:3807
+msgid "Transactions Details"
+msgstr "Détails des transactions "
+
+#: lemonview.cpp:3808
+msgid "Transactions"
+msgstr "Transactions "
+
+#: lemonview.cpp:3809 lemonview.cpp:4067
+msgid "Id"
+msgstr "Numéro"
+
+#: lemonview.cpp:3810 lemonview.cpp:3844 lemonview.cpp:4071 resume.cpp:155
+msgid "Time"
+msgstr "Heure"
+
+#: lemonview.cpp:3811 lemonview.cpp:4072 lemonview.cpp:6347 lemonview.cpp:6409
+msgid "Amount"
+msgstr "Montant"
+
+#: lemonview.cpp:3812
+msgid "Paid"
+msgstr "Payé"
+
+#: lemonview.cpp:3813 lemonview.cpp:4074
+msgid "Method"
+msgstr "Méthode"
+
+#: lemonview.cpp:3814
+msgid ""
+"When Completing Reservations, the Amount may be grater than Paid (amount) "
+"because of the reservation payment."
+msgstr ""
+
+#: lemonview.cpp:3833
+msgid "Start: %1"
+msgstr "Début : %1"
+
+#: lemonview.cpp:3834
+msgid "End  : %1"
+msgstr "Fin : %1"
+
+#: lemonview.cpp:3841
+msgid "Cash flow Details"
+msgstr "Détails du fond de roulement"
+
+#: lemonview.cpp:3842
+msgid "Type"
+msgstr "Type"
+
+#: lemonview.cpp:3843
+msgid "Reason"
+msgstr "Raison"
+
+#: lemonview.cpp:3845
+msgid "This payment was not paid in cash."
+msgstr ""
+
+#: lemonview.cpp:3993
+msgid "Print Balance"
+msgstr "Imprimer le solde "
+
+#: lemonview.cpp:4049
+msgid "End of Day report printed by %1 at terminal %2 on %3"
+msgstr "Rapport de fin de journée imprimé par  %1 au terminal %2 on %3"
+
+#: lemonview.cpp:4069
+msgid "at terminal # %1"
+msgstr "Au Terminal # %1"
+
+#: lemonview.cpp:4073
+msgid "Profit"
+msgstr "Bénéfice"
+
+#: lemonview.cpp:4075
+msgid "Total taxes collected for this terminal: "
+msgstr ""
+
+#: lemonview.cpp:4108
+msgid "Total Sales : %1"
+msgstr "Ventes totales"
+
+#: lemonview.cpp:4109
+msgid "Total Profit: %1"
+msgstr "Bénéfice total : %1:"
+
+#: lemonview.cpp:4127 lemonview.cpp:4153
+msgid "Print end of day report"
+msgstr "Impression du rapport de fin de journée"
+
+#: lemonview.cpp:4302
+msgid "Price: "
+msgstr "Prix :"
+
+#: lemonview.cpp:4303
+msgid "Available: "
+msgstr "Disponible :"
+
+#: lemonview.cpp:4305
+msgid "Category:"
+msgstr "Catégorie :"
+
+#: lemonview.cpp:4306
+msgid "in stock"
+msgstr "En stock"
+
+#: lemonview.cpp:4307
+msgid "in your shopping cart, Total Available"
+msgstr "Total disponible dans votre carte d'achat"
+
+#: lemonview.cpp:4512
+#, fuzzy
+msgid "Discount: <b>%1%</b> [<b>%2</b>]"
+msgstr "Remise : %1%"
+
+#: lemonview.cpp:4514
+#, fuzzy
+msgid "Discount: <b>%1%</b>"
+msgstr "Remise : %1%"
+
+#: lemonview.cpp:4517
+#, fuzzy
+msgid "<i>%1</i> points"
+msgstr "%1 points"
+
+#: lemonview.cpp:4531
+msgid "Credit Total: <i>%1</i>"
+msgstr ""
+
+#: lemonview.cpp:4557
+msgid "Tr"
+msgstr "Tr"
+
+#: lemonview.cpp:4558 reservations.cpp:174 resume.cpp:158
+msgid "Client"
+msgstr "Client"
+
+#: lemonview.cpp:4559 lemonview.cpp:6345 lemonview.cpp:6407
+#: reservations.cpp:173 resume.cpp:156 soselector.cpp:171 sostatus.cpp:167
+msgid "Date"
+msgstr "Date"
+
+#: lemonview.cpp:4560
+msgid "User"
+msgstr "utilisateur"
+
+#: lemonview.cpp:4561
+msgid "Items"
+msgstr "Articles"
+
+#: lemonview.cpp:4614
+msgid "Please select a ticket to print."
+msgstr "SVP sauver le ticket à imprimer."
+
+#: lemonview.cpp:4614
+msgid "Cannot print ticket"
+msgstr "Impossible d'imprimer le ticket"
+
+#: lemonview.cpp:4634
+#, fuzzy
+msgid "Reprint ticket cancelled."
+msgstr "Réimprimer le ticket"
+
+#: lemonview.cpp:4798
+msgid "Cash not available at drawer!"
+msgstr "Il n'y a plus d'argent disponible dans le tiroir !"
+
+#: lemonview.cpp:4825
+msgid "Cash-OUT by %1 at terminal %2 on %3"
+msgstr "Décaissement par %1 au terminal %2 sur %3"
+
+#: lemonview.cpp:4869
+msgid "Cash-IN [%1] by %2 at terminal %3 on %4"
+msgstr "Encaissement[%1] par %2 au terminal %3 sur %4"
+
+#: lemonview.cpp:4880
+msgid "There are <b> %1 in cash </b> available at the drawer."
+msgstr "Il y a <b> %1 en espèces </b> disponible dans le tiroir."
+
+#: lemonview.cpp:4901
+msgid "Please finish the current transaction before creating a special order."
+msgstr ""
+"SVP finir la transaction en cours avant de créer une commande spéciale."
+
+#: lemonview.cpp:5006
+msgid ""
+"Please finish the current transaction before completing a special order."
+msgstr ""
+"SVP finir la transaction en cours avant de compléter une commande spéciale."
+
+#: lemonview.cpp:5023
+msgid "The given ticket number does not contains any special order."
+msgstr "Le n° de ticket donné ne contient aucune commande spéciale. "
+
+#: lemonview.cpp:5030
+msgid "These special orders cannot be completed because:"
+msgstr "Cette commande spéciale ne peut pas etre faite parce-que :"
+
+#: lemonview.cpp:5037
+msgid "<b>is Cancelled</b>"
+msgstr "<b>est annulé</b>"
+
+#: lemonview.cpp:5039
+msgid "is already <b>Delivered</b>"
+msgstr "est déjà <b>livrée</b>"
+
+#: lemonview.cpp:5040
+msgid "%1 %2."
+msgstr "%1 %2."
+
+#: lemonview.cpp:5051
+msgid ""
+"The special order %1 in ticket %2 is completely paid. Marked as delivered."
+msgstr ""
+"La commande spéciale %1 avec le ticket %2 est totalement payée. Marquée "
+"comme livrée."
+
+#: lemonview.cpp:5136
+msgid ""
+"<b>This terminal is locked.</b> <br><i>Please enter the user's password to "
+"unlock it</i>."
+msgstr ""
+"<b>Ce terminal is bloqué.</b> <br><i>SVP entrer le mot de passe utilisateur "
+"pour le débloquer</i>."
+
+#: lemonview.cpp:5324
+msgid "The sale %1 has been sucessfully suspended."
+msgstr "La vente %1 a été suspendue avec succès."
+
+#: lemonview.cpp:5376 specialordereditor.cpp:493
+msgid "Notes: %1"
+msgstr "Notes : %1"
+
+#: lemonview.cpp:5405
+msgid ""
+"Please finish the current transaction before changing state for a special "
+"order."
+msgstr ""
+"SVP finir la transaction courante avant de changer l'état d'une "
+"commandespéciale."
+
+#: lemonview.cpp:5503
+msgid "Changing price to product %1, from %2 to %3. Authorized by %4"
+msgstr ""
+
+#: lemonview.cpp:5536
+#, fuzzy
+msgid "Applying occasional discount. Authorized by %1"
+msgstr "Appliquer une remise occasionnelle. Autorisez par %1"
+
+#: lemonview.cpp:5607
+msgid ""
+"Please Enter the reservation Amount in the Payment Amount and try again."
+msgstr ""
+
+#: lemonview.cpp:5678
+msgid "Reservation #%1 [tr. %2]"
+msgstr ""
+
+#: lemonview.cpp:5700
+#, fuzzy
+msgid "Cash-IN [%1] for RESERVATION [%5] by %2 at terminal %3 on %4"
+msgstr "Encaissement[%1] par %2 au terminal %3 sur %4"
+
+#: lemonview.cpp:5760
+msgid ""
+"Cannot make a reservation, no products on the list. Special Orders are not "
+"considered."
+msgstr ""
+
+#: lemonview.cpp:5785
+#, fuzzy
+msgid "The sale %1 has been sucessfully reserved."
+msgstr "La vente %1 a été suspendue avec succès."
+
+#: lemonview.cpp:5891
+#, fuzzy
+msgid ""
+"You need to finish or suspend the current sale or reservation before adding "
+"a payment for a reservation."
+msgstr ""
+"SVP finir la transaction courante avant de changer l'état d'une "
+"commandespéciale."
+
+#: lemonview.cpp:5913
+msgid "Enter the amount to pay to the reservation. The Maximum amount is %1"
+msgstr ""
+
+#: lemonview.cpp:5941
+msgid "Payment for Reservation %1"
+msgstr ""
+
+#: lemonview.cpp:5956
+#, fuzzy
+msgid ""
+"Cash-IN-ReservationPayment [%1] for reservation %5 by %2 at terminal %3 on %4"
+msgstr "Encaissement[%1] par %2 au terminal %3 sur %4"
+
+#: lemonview.cpp:6106
+#, fuzzy
+msgid "Make partial payment"
+msgstr "   Votre prépaiement "
+
+#: lemonview.cpp:6108
+#, fuzzy
+msgid "Pay"
+msgstr "<b>Paiement</b>"
+
+#: lemonview.cpp:6226
+msgid "Payment for Credit %1"
+msgstr ""
+
+#: lemonview.cpp:6241
+#, fuzzy
+msgid "Cash-IN-CreditPayment [%1] for credit %5 by %2 at terminal %3 on %4"
+msgstr "Encaissement[%1] par %2 au terminal %3 sur %4"
+
+#: lemonview.cpp:6296
+msgid "CREDIT REPORT"
+msgstr ""
+
+#: lemonview.cpp:6308
+#, fuzzy
+msgid "Balance: %1"
+msgstr "Solde id : %1"
+
+#: lemonview.cpp:6333
+msgid "Today Credit History"
+msgstr ""
+
+#: lemonview.cpp:6349 lemonview.cpp:6411
+#, fuzzy
+msgid "Sale #"
+msgstr "Date de vente"
+
+#: lemonview.cpp:6351 lemonview.cpp:6413
+msgid "Invoice"
+msgstr ""
+
+#: lemonview.cpp:6363 lemonview.cpp:6425
+msgid "Payment"
+msgstr "<b>Paiement</b>"
+
+#: lemonview.cpp:6391
+msgid "Credit History"
+msgstr ""
+
+#: lemonview.cpp:6467 lemonview.cpp:6472 lemonview.cpp:6486 lemonview.cpp:6571
+#: lemonview.cpp:6616 lemonview.cpp:6619
+msgid "Facturar"
+msgstr ""
+
+#: lemonview.cpp:6467
+msgid "No hay folios disponibles. No se puede facturar"
+msgstr ""
+
+#: lemonview.cpp:6472
+msgid "Numero de Ticket:"
+msgstr ""
+
+#: lemonview.cpp:6486
+msgid ""
+"No se puede facturar, la venta YA HABIA SIDO FACTURADA.\n"
+"El folio de esta venta es el %1"
+msgstr ""
+
+#: lemonview.cpp:6571
+msgid ""
+"No se puede facturar. El folio obtenido es inválido, verifique sus folios."
+msgstr ""
+
+#: lemonview.cpp:6616
+msgid "El ticket %1 no existe. No se puede facturar"
+msgstr ""
+
+#: lemonview.cpp:6619
+msgid "No se escribio un numero de ticket. No se puede facturar"
+msgstr ""
+
+#: lemonview.cpp:6634
+#, fuzzy
+msgid "Cancelar Factura"
+msgstr "Annuler un ticket"
+
+#: lemonview.cpp:6634
+msgid "Folio de la Factura:"
+msgstr ""
+
+#: lemonview.cpp:6642 lemonview.cpp:6644 lemonview.cpp:6648 lemonview.cpp:6650
+msgid "Cancelación de factura"
+msgstr ""
+
+#: lemonview.cpp:6642
+msgid "Se cancelo la factura con folio %1."
+msgstr ""
+
+#: lemonview.cpp:6644
+msgid ""
+"No se pudo cancelar la factura con folio %1.\n"
+" Detalle:"
+msgstr ""
+
+#: lemonview.cpp:6648
+msgid "La factura %1 ya estaba cancelada"
+msgstr ""
+
+#: lemonview.cpp:6650
+msgid "La factura %1 no existe."
+msgstr ""
+
+#: loginwindow.cpp:64
+msgid "&Quit"
+msgstr "&Quitter"
+
+#: loginwindow.cpp:65
+msgid "&Ok"
+msgstr "&Ok"
+
+#: loginwindow.cpp:171
+msgid "Username:"
+msgstr "Nom :"
+
+#: loginwindow.cpp:172
+msgid "Password:"
+msgstr "Mot de passe :"
+
+#: loginwindow.cpp:307
+msgid "Invalid username or password"
+msgstr "Utilisateur ou mot de passe invalide"
+
+#: main.cpp:43
+msgid "Lemon, A point of sale for linux"
+msgstr "Lemon point de vente pour linux"
+
+#: main.cpp:52
+msgid "lemon"
+msgstr "lemon"
+
+#: main.cpp:52
+#, fuzzy
+msgid "(C) 2007-2011 Miguel Chavez Gamboa"
+msgstr "(C) 2007 Miguel Chávez Gamboa"
+
+#: main.cpp:53
+msgid "Miguel Chavez Gamboa"
+msgstr "Miguel Chávez Gamboa"
+
+#: main.cpp:57
+msgid "Biel Frontera"
+msgstr "Biel Frontera"
+
+#: main.cpp:57 main.cpp:58
+msgid "Code contributor"
+msgstr "Contributeur de code"
+
+#: main.cpp:58
+msgid "Vitali Kari"
+msgstr ""
+
+#: main.cpp:59
+msgid "Jose Nivar"
+msgstr ""
+
+#: main.cpp:59
+msgid "Many ideas, bug reports and testing"
+msgstr ""
+
+#: main.cpp:60
+msgid "Roberto Aceves"
+msgstr ""
+
+#: main.cpp:60
+msgid "Many ideas and general help"
+msgstr ""
+
+#: main.cpp:61
+msgid "Benjamin Burt"
+msgstr ""
+
+#: main.cpp:61
+msgid ""
+"Many ideas, Documentation Writer, How-to Videos Creation, and general help "
+"and support"
+msgstr ""
+
+#: po/extractedrc.cpp:1 extractedrc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Girard Henri"
+
+#: po/extractedrc.cpp:2 extractedrc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "girardhenri@free.fr"
+
+#: pricechecker.cpp:45
+msgid "Price Checker"
+msgstr "Vérifier le prix"
+
+#: pricechecker.cpp:47
+msgctxt "Price-Checker dialog"
+msgid "Price"
+msgstr "Prix"
+
+#: pricechecker.cpp:48
+msgctxt "Price-Checker dialog"
+msgid "Checker"
+msgstr "Vérifier"
+
+#: pricechecker.cpp:49
+msgid "&Code:"
+msgstr "&Códe :"
+
+#: pricechecker.cpp:50
+msgid "Press ESC to Close"
+msgstr "Appuyez sur ESC pour fermer "
+
+#: pricechecker.cpp:51
+msgid "Regular price:"
+msgstr "Prix régulier :"
+
+#: pricechecker.cpp:52
+msgid "Final price:"
+msgstr "Prix final :"
+
+#: productdelegate.cpp:125
+msgid " Out of stock "
+msgstr "Plus dans le stock "
+
+#: productdelegate.cpp:155
+msgid " Raw Product "
+msgstr "Produit brut"
+
+#: productdelegate.cpp:168
+msgid " Group "
+msgstr "Groupe"
+
+#: refacturar.cpp:45
+msgid "Reimprimir Factura"
+msgstr ""
+
+#: refacturar.cpp:112
+msgid "Factura"
+msgstr ""
+
+#: refacturar.cpp:113
+msgid "Fecha"
+msgstr ""
+
+#: refacturar.cpp:114
+#, fuzzy
+msgid "Ticket #"
+msgstr "Ticket  # :"
+
+#: refacturar.cpp:115
+#, fuzzy
+msgid "Nombre del Cliente"
+msgstr "Nouveau client :"
+
+#: refacturar.cpp:116
+#, fuzzy
+msgid "RFC del Cliente"
+msgstr "Nouveau client :"
+
+#: reservations.cpp:172 resume.cpp:154
+msgid "Tr. #"
+msgstr "Tr. #"
+
+#: reservations.cpp:228
+msgid "Reimbursement for CANCELLED Reservation #%1 [tr. %2]"
+msgstr ""
+
+#: reservations.cpp:238
+msgid "The reimbursement for the reservation is %1. Get it from the drawer."
+msgstr ""
+
+#: resume.cpp:157
+msgid "Terminal"
+msgstr "Terminal"
+
+#: soselector.cpp:45 specialordereditor.cpp:60
+msgid "Special Orders"
+msgstr "Commande spéciales"
+
+#: soselector.cpp:169 sostatus.cpp:165
+msgid "Order #"
+msgstr "Order #"
+
+#: soselector.cpp:170 sostatus.cpp:166
+msgid "Name"
+msgstr "Nom"
+
+#: soselector.cpp:172 sostatus.cpp:168
+msgid "Status"
+msgstr "Status"
+
+#: soselector.cpp:173 sostatus.cpp:169
+msgid "Tr. Id"
+msgstr "Tr. Id"
+
+#: sostatus.cpp:45
+msgid "Change Status"
+msgstr "Status changé"
+
+#: specialordereditor.cpp:106
+msgid "Enter client name here..."
+msgstr "Entrer le nom du client ici..."
+
+#: specialordereditor.cpp:107
+msgid "Enter client phone here..."
+msgstr "Entrer le N° téléphone ici..."
+
+#: specialordereditor.cpp:108
+msgid "Enter client cell phone here..."
+msgstr "Entrer le N° portable ici..."
+
+#: specialordereditor.cpp:243 specialordereditor.cpp:265
+msgid "<i>%1</i> rounded to %2"
+msgstr "<i>%1</i> arrondi à %2"
+
+#: specialordereditor.cpp:251 specialordereditor.cpp:274
+msgid "<i>%1</i> <b>requested %2, on stock %3</b><br>"
+msgstr "<i>%1</i> <b>Demandé %2, en stock %3</b><br>"
+
+#: specialordereditor.cpp:334
+msgid ""
+"<b>Product sold by pieces</b>, qty must be an integer value: \n"
+"%1"
+msgstr ""
+"<b>Produit vendu en pièces</b>, qté en valeur entière seulement : \n"
+"%1"
+
+#: specialordereditor.cpp:502
+msgid ""
+"<html><font color=red><b>The delivery date is in the past.</b></font></html>"
+msgstr ""
+"<html><font color=red weight=bold>La date de livraison est passé.</font></"
+"html>"
+
+#: specialordereditor.cpp:648
+msgid "%1 chars of %2 allowed."
+msgstr ""
+
+#, fuzzy
+#~ msgid "Discount: %1"
+#~ msgstr "Remise : %1%"
+
+#~ msgid "How the main window is divided."
+#~ msgstr "Division de la fenêtre principale"
+
+#, fuzzy
+#~ msgid "How the grid/purchase-list is divided."
+#~ msgstr "Division de la fenêtre principale"
+
+#~ msgid "Store Name"
+#~ msgstr "Nom du magasin"
+
+#~ msgid "Store Phone Number"
+#~ msgstr "Numéro de téléphone du magasin"
+
+#~ msgid "Store Address"
+#~ msgstr "Adresse du magasin"
+
+#~ msgid "Ticket Message"
+#~ msgstr "Message du ticket"
+
+#~ msgid "Store Logo file"
+#~ msgstr "Fichier d'enregistrement du magasin"
+
+#~ msgid "Print Logo on ticket Top"
+#~ msgstr "Imprimer le logo sur le haut du ticket"
+
+#~ msgid "POS Number"
+#~ msgstr "Numéro de caisse"
+
+#~ msgid "Requiere delete authorisation"
+#~ msgstr "Autorisation nécessaire pour effacer des articles de la liste "
+
+#~ msgid "Low Security Mode"
+#~ msgstr "Mode de Securité faible"
+
+#~ msgid "Show Currency"
+#~ msgstr "Afficher la monnaie "
+
+#~ msgid "Full Currency String"
+#~ msgstr "Type de monaie "
+
+#~ msgid "Short Currency String"
+#~ msgstr "Abréviation du type de monnaie"
+
+#~ msgid "Show Products Grid"
+#~ msgstr "Afficher la grille de produits"
+
+#~ msgid "Low Stock Alert"
+#~ msgstr "Alerte de stock bas"
+
+#~ msgid "Low Cash Level"
+#~ msgstr "Niveau de caisse bas"
+
+#~ msgid "Display Low Cash Warning"
+#~ msgstr "Afficher une alerte de liquidité faible"
+
+#~ msgid "Add tax to prices. Tax is not included in price"
+#~ msgstr "Ajouter une taxe aux prix. La taxe n'est pas incluse dans le prix"
+
+#~ msgid "DB Server Name"
+#~ msgstr "Nom du serveur de BD"
+
+#~ msgid "DB Username"
+#~ msgstr "Utilisateur de la B.D."
+
+#~ msgid "DB Password"
+#~ msgstr "Mot de passe de la B.D."
+
+#~ msgid "DB Name"
+#~ msgstr "Nom de la B.D."
+
+#~ msgid "Delete empty cancelled transactions"
+#~ msgstr "Effacer les transactions annulées vides "
+
+#~ msgid "Use style"
+#~ msgstr "Utiliser un style"
+
+#~ msgid "Get Stylesheet Name"
+#~ msgstr "Obtenir le nom d'un style"
+
+#~ msgid "Allow any user to quit application"
+#~ msgstr "Permettre n'importe-quel utilisateur de quitter l'application"
+
+#~ msgid "Show a dialog when printing the ticket"
+#~ msgstr "Afficher un dialogue à l'impression"
+
+#~ msgid "Time showing the ticket dialog"
+#~ msgstr "Temps d'afficher le ticket de dialogue"
+
+#~ msgid "There is a drawer and use it"
+#~ msgstr "Il y a un tiroir et il faut l'utiliser"
+
+#~ msgid "Print a small receipt using a ticket printer -dot matrix-."
+#~ msgstr "Imprimer un petit ticket avec l'imprimante matricielle."
+
+#~ msgid "Print a small receipt using a thermal ticket printer -CUPS-"
+#~ msgstr "Imprimer un petit ticket avec l'imprimante thermale (CUPS)."
+
+#~ msgid "Print a big receipt using a normal printer"
+#~ msgstr "Imprimer un grand reçu avec l'imprimante normale"
+
+#~ msgid "Print balances using ticket printer"
+#~ msgstr "Imprimer les soldes avec l'imprimante à ticket"
+
+#~ msgid "Print Group/Pack Contents on tickets"
+#~ msgstr "Imprimer le contenu du Groupe/paquet sur les tickets"
+
+#~ msgid "Print SpecialOrders Instructions"
+#~ msgstr "Imprimer des instructions de commandes spéciales"
+
+#~ msgid "Print Random Messages on tickets"
+#~ msgstr "Imprimer des messages aléatoires sur les tickets"
+
+#~ msgid "Print Ticket (dou you have a ticket printer?)"
+#~ msgstr "Imprimer Ie ticket"
+
+#~ msgid "Print Date Changed Ticket"
+#~ msgstr "Imprimer la date de changement de ticket"
+
+#~ msgid "Get printer device to use for printing"
+#~ msgstr "Obtenir l'imprimante par défaut"
+
+#~ msgid "Get Printer Codec to use"
+#~ msgstr "Obtenir les codec pour l'imprimante"
+
+#~ msgid "Basic Use Toolbar"
+#~ msgstr "Barre à outils de base "
+
+#~ msgid "Administrator's Toolbar"
+#~ msgstr "Barre d'outils de l'administrateur"
+
+#~ msgid "Form"
+#~ msgstr "Formulaire"
+
+#~ msgid "label"
+#~ msgstr "libellé"
+
+#~ msgid "Ca&sh"
+#~ msgstr "&Espèces"
+
+#~ msgid "Ca&rd"
+#~ msgstr "&Carte"
+
+#~ msgid "Cash &Amount:"
+#~ msgstr "&Montant :"
+
+#, fuzzy
+#~ msgid "Currency conversion"
+#~ msgstr "Type de monaie "
+
+#~ msgid "$"
+#~ msgstr "$"
+
+#~ msgid "Card &Number:"
+#~ msgstr "&Numéro carte :"
+
+#~ msgid "0000-0000-0000-0000; "
+#~ msgstr "0000-0000-0000-0000;"
+
+#~ msgid "---"
+#~ msgstr "---"
+
+#~ msgid "Authorization number:"
+#~ msgstr "Numéro d'autorisation :"
+
+#~ msgid "Sale Date"
+#~ msgstr "Date de vente"
+
+#~ msgid "Change Sale Date"
+#~ msgstr "Date de vente changée"
+
+#~ msgid "filter by popularity this month"
+#~ msgstr "filtrer par popularité de ce mois"
+
+#~ msgid "filter by description"
+#~ msgstr "filtrer par description"
+
+#~ msgid "filter by category"
+#~ msgstr "filtrer par catégorie "
+
+#~ msgid "Code"
+#~ msgstr "Code"
+
+#~ msgid "Description"
+#~ msgstr "Description"
+
+#~ msgid "Units"
+#~ msgstr "Unité "
+
+#~ msgid "Total:"
+#~ msgstr "Total :"
+
+#~ msgid "Change:"
+#~ msgstr "Monaie :"
+
+#, fuzzy
+#~ msgid "Subtotal:"
+#~ msgstr "Total :"
+
+#~ msgid "TextLabel"
+#~ msgstr "Libellé"
+
+#~ msgid "Go back"
+#~ msgstr "Retour "
+
+#~ msgid "Enter item description:"
+#~ msgstr "Entrer la Description de l'article :"
+
+#~ msgid ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">.<span style=\" font-"
+#~ "weight:600; color:#ff6347;\">.</span></p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600; color:#ff7f50;\">Total HT</span></p></body></html>Enter code "
+#~ "or qty*code. <Enter> or <+> Keys to go pay"
+
+#~ msgid "Reprint Ticket"
+#~ msgstr "Reimprimer un ticket"
+
+#~ msgid "Show tickets before"
+#~ msgstr "Afficher d'abord d'abord les tickets"
+
+#~ msgid "Print selected ticket"
+#~ msgstr "Imprimer le ticket sélectionnés"
+
+#~ msgid "Back"
+#~ msgstr "Retour"
+
+#~ msgid "Return Products"
+#~ msgstr "Retour Produits"
+
+#~ msgid "Ticket number:"
+#~ msgstr "Numéro de ticket"
+
+#~ msgid "Date and time:"
+#~ msgstr "Heure et date :"
+
+#~ msgid "Client:"
+#~ msgstr "Client :"
+
+#~ msgid "Select the products to return"
+#~ msgstr "Sélectionner le produit a retourné"
+
+#~ msgid "Qty on purchase"
+#~ msgstr "Qté d'achat"
+
+#~ msgid "Qty to return"
+#~ msgstr "Qté  en retour"
+
+#~ msgid "Selected products details"
+#~ msgstr "Détails des produits sélectionnés"
+
+#, fuzzy
+#~ msgid "Currency Conversion"
+#~ msgstr "Type de monaie "
+
+#, fuzzy
+#~ msgid "Change Price"
+#~ msgstr "Monaie :"
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Lucida Grande'; font-size:8pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">The next sales are "
+#~ "suspended. Please <span style=\" font-weight:600;\">select one to resume</"
+#~ "span> and press the <span style=\" font-weight:600; font-style:italic;"
+#~ "\">Ok</span> button; or press the <span style=\" font-weight:600; font-"
+#~ "style:italic;\">cancel</span>  button to <span style=\" font-weight:600;"
+#~ "\">start a new one</span>.</p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600; color:#ff7f50;\">Total HT</span></p></body></html>"
+
+#~ msgid "Contents"
+#~ msgstr "Contenus"
+
+#, fuzzy
+#~ msgid "Enter Client Id:"
+#~ msgstr "entrer l'adresse client "
+
+#, fuzzy
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Ubuntu'; font-size:11pt; font-"
+#~ "weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "size:14pt; font-weight:600; font-style:italic; color:#0c8eff;\">Tendered:"
+#~ "</span></p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600; color:#ff7f50;\">Total HT</span></p></body></html>Enter code "
+#~ "or qty*code. <Enter> or <+> Keys to go pay"
+
+#, fuzzy
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Ubuntu'; font-size:11pt; font-"
+#~ "weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "size:14pt; font-weight:600; font-style:italic; color:#0c8eff;\">Change:</"
+#~ "span></p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600; color:#ff7f50;\">Total HT</span></p></body></html>Enter code "
+#~ "or qty*code. <Enter> or <+> Keys to go pay"
+
+#, fuzzy
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Ubuntu'; font-size:11pt; font-"
+#~ "weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "size:14pt; font-weight:600; font-style:italic; color:#0c8eff;\">0.0</"
+#~ "span></p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600; color:#ff7f50;\">Total HT</span></p></body></html>Enter code "
+#~ "or qty*code. <Enter> or <+> Keys to go pay"
+
+#, fuzzy
+#~ msgid "Print"
+#~ msgstr "Imprimante"
+
+#~ msgid "Print the ticket as"
+#~ msgstr "Imprimer le ticket comme"
+
+#~ msgid "Small receipt using a thermal ticket printer (using CUPS)"
+#~ msgstr "Imprimer un petit ticket avec l'imprimante thermale (CUPS)."
+
+#~ msgid "Small receipt using a dot-matrix ticket printer (using /dev/lpX)"
+#~ msgstr "Imprimer un petit ticket avec l'imprimante matricielle(dev/lpX)"
+
+#~ msgid "Printer Device:"
+#~ msgstr "Imprimante :"
+
+#~ msgid "Printer Codec:"
+#~ msgstr "Codec de l'imprimante"
+
+#~ msgid "Open drawer"
+#~ msgstr "Ouvrir la caisse"
+
+#~ msgid "Big format [A4, Letter] receipt using normal printer (using CUPS)"
+#~ msgstr "grand  format [A4, Letter]pour imprimer le reçu en normal (CUPS)"
+
+#~ msgid "Print Balances on your selected printer (above)."
+#~ msgstr "Imprimer les soldes avec l'imprimante par dessus(au-dessous)"
+
+#~ msgid "Print Date Changed Tickets"
+#~ msgstr "Imprimer la date de changement de tickets"
+
+#~ msgid "Print Special Orders"
+#~ msgstr "Imprimer les commandes spéciales"
+
+#~ msgid "Print tickets with a ZERO total payment."
+#~ msgstr "Imprimer les tickets avec ZERO de paiement total"
+
+#~ msgid "Print Group/Pack Contents on tickets."
+#~ msgstr "Imprimer le contenu des groupes/paquets sur le ticket "
+
+#~ msgid "Print a random message on tickets."
+#~ msgstr "Imprimer des messages aléatoires sur les tickets"
+
+#~ msgid "This is the &Terminal Number:"
+#~ msgstr "Numéro de &terminal:"
+
+#~ msgid "0000; "
+#~ msgstr "0000; "
+
+#, fuzzy
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Ubuntu'; font-size:11pt; font-"
+#~ "weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Any barcode starting "
+#~ "with \"4\" will be interpreted as a customer id and will not search for a "
+#~ "product. For more information about this standard, see <a href=\"http://"
+#~ "en.wikipedia.org/wiki/Universal_Product_Code#Prefixes\"><span style=\" "
+#~ "text-decoration: underline; color:#0000ff;\">http://en.wikipedia.org/wiki/"
+#~ "Universal_Product_Code#Prefixes</span></a></p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600; color:#ff7f50;\">Total HT</span></p></body></html>"
+
+#~ msgid "Dialogs and Authorizations"
+#~ msgstr "Dialogues et autorisations"
+
+#~ msgid "Show a dialog when printing ticket"
+#~ msgstr "Afficher le dialogue d'impression"
+
+#~ msgid "Time showing the dialog:"
+#~ msgstr "Temps affichant le dialogue"
+
+#~ msgid " seconds"
+#~ msgstr " secondes"
+
+#~ msgid "Requiere authorisation to delete items from shopping list"
+#~ msgstr ""
+#~ "Nécessite une autorisation pour effacer un élément de la liste d'achats"
+
+#~ msgid "Products Grid"
+#~ msgstr "Grille de produits"
+
+#~ msgid "Show products grid"
+#~ msgstr "Afficher la grille de produits"
+
+#~ msgid "Low Stock"
+#~ msgstr "Stock bas"
+
+#~ msgid "Minimum value for alert"
+#~ msgstr "Valeur mini d'alerte"
+
+#~ msgid "Drawer Cash Level"
+#~ msgstr "Niveau de tiroir caisse"
+
+#~ msgid "Display warning message when level is lower than"
+#~ msgstr "Afficher un message d'alerte quand le niveau est le plus bas"
+
+#~ msgid "Taxes"
+#~ msgstr "Taxes :"
+
+#~ msgid "Add taxes to sale (not included in price)"
+#~ msgstr "Ajouter les taxes à la vente (non inclus dans le prix)"
+
+#~ msgid "&Server:"
+#~ msgstr "&Serveur :"
+
+#~ msgid "&Username:"
+#~ msgstr "Nom :"
+
+#~ msgid "&Password:"
+#~ msgstr "&Mot de passe :"
+
+#~ msgid "&Database Name:"
+#~ msgstr "Nom de la B.&D :"
+
+#~ msgid "Extra options"
+#~ msgstr "Options diverses"
+
+#~ msgid "Allow any user to quit, asking for administrator's password"
+#~ msgstr ""
+#~ "Permettre à chaque utilisateur de quitter en demandant le mot de passe "
+#~ "administrateur "
+
+#~ msgid "Do not ask for admin password (Low Security Mode)"
+#~ msgstr "Ne plus demander le mot de passe admin (niveau de sécurité faible"
+
+#~ msgid "Use style sheet"
+#~ msgstr "Utiliser un style"
+
+#~ msgid "Tickets from all terminals"
+#~ msgstr "Tickets de tous les terminaux"
+
+#~ msgid "Ticket Number"
+#~ msgstr "Numéro de ticket"
+
+#~ msgid "Ticket Items"
+#~ msgstr "Articles du ticket"
+
+#, fuzzy
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-"
+#~ "weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "family:'Lucida Grande'; font-size:8pt;\">The next sales are reserved. "
+#~ "Please </span><span style=\" font-family:'Lucida Grande'; font-size:8pt; "
+#~ "font-weight:600;\">select one to finish the sale</span><span style=\" "
+#~ "font-family:'Lucida Grande'; font-size:8pt;\"> and press the </span><span "
+#~ "style=\" font-family:'Lucida Grande'; font-size:8pt; font-weight:600; "
+#~ "font-style:italic;\">Ok</span><span style=\" font-family:'Lucida Grande'; "
+#~ "font-size:8pt;\"> button; or press the </span><span style=\" font-"
+#~ "family:'Lucida Grande'; font-size:8pt; font-weight:600; font-style:italic;"
+#~ "\">Cancel Selected</span><span style=\" font-family:'Lucida Grande'; font-"
+#~ "size:8pt;\">  button to </span><span style=\" font-family:'Lucida "
+#~ "Grande'; font-size:8pt; font-weight:600;\">cancel the selected "
+#~ "reservation</span><span style=\" font-family:'Lucida Grande'; font-"
+#~ "size:8pt;\">.</span></p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600; color:#ff7f50;\">Total HT</span></p></body></html>"
+
+#, fuzzy
+#~ msgid "Cancel Selected"
+#~ msgstr "Effacer l'article sélectionné"
+
+#~ msgid "Special Order"
+#~ msgstr "Commandes spéciales"
+
+#~ msgid "Show All"
+#~ msgstr "Afficher tout"
+
+#~ msgid "filter by ticket #:"
+#~ msgstr "filtrer par ticket # :"
+
+#~ msgid "filter by name:"
+#~ msgstr "filtrer par nom :"
+
+#~ msgid "New Status:"
+#~ msgstr "Nouvel état"
+
+#~ msgid "Special Item"
+#~ msgstr "Article spécial"
+
+#~ msgid "Ticket :"
+#~ msgstr "Ticket :"
+
+#~ msgid "#"
+#~ msgstr "#"
+
+#~ msgid "Vendor:"
+#~ msgstr "Vendeur :"
+
+#~ msgid "&Client:"
+#~ msgstr "&Client :"
+
+#~ msgid "launch a dialog with more options"
+#~ msgstr "Lancer un dialogue avec plus d'options"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "&Qty:"
+#~ msgstr "Qantité :"
+
+#~ msgid "Delivery date:"
+#~ msgstr "Date de livraison :"
+
+#~ msgid "Components"
+#~ msgstr "Composants"
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Lucida Grande'; font-size:8pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "style:italic;\">Select</span> products from the left list and click the "
+#~ "'&gt;' button to <span style=\" font-weight:600;\">add</span> them to the "
+#~ "group on the right. You can<span style=\" font-style:italic;\"> </"
+#~ "span><span style=\" font-weight:600; font-style:italic;\">increment</"
+#~ "span><span style=\" font-weight:600;\"> </span>item quantities on the "
+#~ "right table by <span style=\" font-weight:600;\">double clicking</span> "
+#~ "on the item</p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Lucida Grande'; font-size:8pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "style:italic;\">Sélectionner </span> les produits de la liste à gauche et "
+#~ "cliquer'&gt;'le bouton pour <span style=\" font-weight:600;\">les "
+#~ "ajouter</span>au groupe de droite. Il est possible<span style=\" font-"
+#~ "style:italic;\"> </span><span style=\" font-weight:600; font-style:italic;"
+#~ "\">d'incrementer</span><span style=\" font-weight:600;\"> </span>les "
+#~ "quantités d'article sur la table de droite par <span style=\" font-"
+#~ "weight:600;\">un double clique</span> sur l'article</p></body></html>"
+
+#~ msgid "Qty to add"
+#~ msgstr "Qté à ajouter"
+
+#~ msgid "Add selected products to the components"
+#~ msgstr "Ajouter les produits sélectionnés aux composants"
+
+#~ msgid ">"
+#~ msgstr ">"
+
+#~ msgid "Remove selected products from the components"
+#~ msgstr "Effacer les produits sélectionnés des composants"
+
+#~ msgid "<"
+#~ msgstr "<"
+
+#~ msgid "Filter:"
+#~ msgstr "Filtre :"
+
+#~ msgid "You can filter the products by description,"
+#~ msgstr "Filtrer par description"
+
+#~ msgid "Price and Payment"
+#~ msgstr "Prix et paiement"
+
+#~ msgid "Payment:"
+#~ msgstr "<b>Paiement :</b>"
+
+#~ msgid "Enter Client Address"
+#~ msgstr "entrer l'adresse client "
+
+#~ msgid "&Name:"
+#~ msgstr "&Nom de la B.D.:"
+
+#~ msgid "&Address:"
+#~ msgstr "&Adress :"
+
+#~ msgid "&Phone:"
+#~ msgstr "Télé&phone :"
+
+#~ msgid "Ticket &Message:"
+#~ msgstr "&Message du ticket :"
+
+#~ msgid "Store Logo:"
+#~ msgstr "Logo du Magasin :"
+
+#~ msgid "Print Logo on ticket top, otherwise at the right"
+#~ msgstr "Imprimer le logo sur le haut du ticket sinon à droite"
+
+#~ msgid "[%1]"
+#~ msgstr "[%1]"
+
+#~ msgid "Enter the discount percentage to apply"
+#~ msgstr "Saisir le pourcentage de remise à appliquer"
+
+#~ msgid "Offer"
+#~ msgstr "Offre"

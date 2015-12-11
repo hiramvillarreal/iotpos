@@ -1,0 +1,45 @@
+Readme file for taxmodels.
+==========================
+
+Tax models feature is the way to group taxes and make an easier way to modify
+taxes in a single place instead of on each product.
+
+The model is a container of tax rates applicable for a product or group of
+products. It contains elements, each element is a tax rate with a name for it.
+
+A product can contain only one model, but each model can contain as many
+elements as you need.
+
+For example, cigarettes can contain special tax for tobacco and the other
+taxes:
+
+    special tax : 10%
+    VAT         : 8%
+    state tax   : 3%
+
+    The Model for cigarettes is:
+        
+        Model name: 'Cigarrets'
+        Model id  : 2
+        Model elements: 5,6,7
+
+    The elements for the cigarettes-model:
+        
+        Element id: 5
+        Element name: 'VAT'
+        Element rate: 8
+
+        Element id: 6
+        Element name: 'state tax'
+        Element rate: 3
+
+        Element id: 7
+        Element name: 'special tax'
+        Element rate: 10
+
+So, if the tax laws changes, and -lets say- the state tax rate changes to 10%, you
+do not need to modify each product that has the state tax. You only need to change
+the rate of the element named 'state tax' to 10% and all your products are updated.
+
+The same when -again, lets say- cigarettes are added with a 'healt tax', you only
+need to add the element 'healt tax' and add this element to the 'cigarettes' model.

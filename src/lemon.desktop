@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=lemon
+Exec=lemon %i -caption "%c"
+Icon=lemon
+Type=Application
+DocPath=lemon/lemon.html
+GenericName=Lemon Point of sale
+Terminal=0

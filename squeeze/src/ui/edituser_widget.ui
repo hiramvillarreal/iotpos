@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>userEditor</class>
+ <widget class="QWidget" name="userEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>420</width>
+    <height>465</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_14">
+     <property name="text">
+      <string>&amp;Username:</string>
+     </property>
+     <property name="buddy">
+      <cstring>editUsersUsername</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" rowspan="5">
+    <widget class="QLabel" name="labelUsersPhoto">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>128</width>
+       <height>128</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLineEdit" name="editUsersUsername"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="labelp">
+     <property name="text">
+      <string>&amp;Password:</string>
+     </property>
+     <property name="buddy">
+      <cstring>editUsersPassword</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLineEdit" name="editUsersPassword"/>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_15">
+     <property name="text">
+      <string>&amp;Full Name:</string>
+     </property>
+     <property name="buddy">
+      <cstring>editUsersName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLineEdit" name="editUsersName"/>
+   </item>
+   <item row="5" column="1" rowspan="2">
+    <widget class="QPushButton" name="btnChangeUserPhoto">
+     <property name="text">
+      <string>Change &amp;Photo</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="label_16">
+     <property name="text">
+      <string>&amp;Address:</string>
+     </property>
+     <property name="buddy">
+      <cstring>editUsersAddress</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QTextEdit" name="editUsersAddress">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="tabChangesFocus">
+      <bool>true</bool>
+     </property>
+     <property name="acceptRichText">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="label_17">
+     <property name="text">
+      <string>Phone</string>
+     </property>
+     <property name="buddy">
+      <cstring>editUsersPhone</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0">
+    <widget class="QLineEdit" name="editUsersPhone"/>
+   </item>
+   <item row="10" column="0">
+    <widget class="QLabel" name="label_18">
+     <property name="text">
+      <string>Cell Phone:</string>
+     </property>
+     <property name="buddy">
+      <cstring>editUsersCell</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0">
+    <widget class="QLineEdit" name="editUsersCell"/>
+   </item>
+   <item row="12" column="0">
+    <widget class="QGroupBox" name="groupRoles">
+     <property name="title">
+      <string>User Role</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QRadioButton" name="chRoleBasic">
+        <property name="text">
+         <string>Vendor</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="chRoleSupervisor">
+        <property name="text">
+         <string>Supervisor</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="chRoleAdmin">
+        <property name="text">
+         <string>Administrator</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

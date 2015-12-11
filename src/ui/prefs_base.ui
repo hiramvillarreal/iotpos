@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>prefs_base</class>
+ <widget class="QWidget" name="prefs_base">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>535</width>
+    <height>564</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>525</height>
+   </size>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="spacing">
+    <number>2</number>
+   </property>
+   <property name="margin">
+    <number>2</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout">
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>This is the &amp;Terminal Number:</string>
+       </property>
+       <property name="buddy">
+        <cstring>kcfg_editTerminalNumber</cstring>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="kcfg_editTerminalNumber">
+       <property name="inputMask">
+        <string>0000; </string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="kcfg_groupUserIdAsCode">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="toolTip">
+      <string>Use this to enter Customer IDs at the product code input box. This can improve usability (speed up customer selection) in an environment with many customers.
+
+This would make some products (if any, depending on the mode selected) to be bypassed in favor of customer IDs.</string>
+     </property>
+     <property name="title">
+      <string>Use Product Code Input to Identify Customers</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <widget class="QRadioButton" name="kcfg_rb6Digits">
+        <property name="toolTip">
+         <string>Use 6 digits to identify customers. Any product with 6 digits (UPC-E) will be discarded and only clients will be searched.</string>
+        </property>
+        <property name="text">
+         <string>As 6 digits code (exactly 6). Discard products with 6 digits code.</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="kcfg_rb12DigitsCustom">
+        <property name="toolTip">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Any barcode starting with &amp;quot;4&amp;quot; will be interpreted as a customer id and will not search for a product. For more information about this standard, see &lt;a href=&quot;http://en.wikipedia.org/wiki/Universal_Product_Code#Prefixes&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://en.wikipedia.org/wiki/Universal_Product_Code#Prefixes&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="text">
+         <string>As 12/13 Digits Starting with digit &quot;4&quot;. As described in UPC Standard.</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBoxOb">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Dialogs and Authorizations</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="spacing">
+       <number>2</number>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+      <item>
+       <widget class="QCheckBox" name="kcfg_showDialogOnPrinting">
+        <property name="text">
+         <string>Show a dialog when printing ticket</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="spacing">
+         <number>3</number>
+        </property>
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMinimumSize</enum>
+        </property>
+        <property name="margin">
+         <number>1</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Time showing the dialog:</string>
+          </property>
+          <property name="indent">
+           <number>30</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="kcfg_ticketTime">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>22</height>
+           </size>
+          </property>
+          <property name="suffix">
+           <string> seconds</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="kcfg_requiereDelAuth">
+        <property name="text">
+         <string>Requiere authorisation to delete items from shopping list</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupMatrix">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title">
+      <string>Products Grid</string>
+     </property>
+     <layout class="QVBoxLayout">
+      <property name="spacing">
+       <number>2</number>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+      <item>
+       <widget class="QCheckBox" name="kcfg_showGrid">
+        <property name="text">
+         <string>Show products grid</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title">
+      <string>Low Stock</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>2</number>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Minimum value for alert</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="kcfg_stockAlertValue">
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>9999</number>
+          </property>
+          <property name="value">
+           <number>10</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="kcfg_allowNegativeStock">
+     <property name="text">
+      <string>Allow negative stock, but alert the user.</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>80</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Drawer Cash Level</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QCheckBox" name="kcfg_displayWarningOnLowCash">
+        <property name="text">
+         <string>Display warning message when level is lower than</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="kcfg_cashMinLevel">
+        <property name="prefix">
+         <string>$</string>
+        </property>
+        <property name="maximum">
+         <double>999999.989999999990687</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupDiscount">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title">
+      <string>Discounts</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QCheckBox" name="kcfg_firstDiscountOnly">
+        <property name="text">
+         <string>Apply only first discount</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupTax">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title">
+      <string>Taxes</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QCheckBox" name="kcfg_addTax">
+        <property name="text">
+         <string>Add taxes to sale (not included in price)</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupRounding">
+     <property name="title">
+      <string>Rounding</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <widget class="QCheckBox" name="kcfg_roundToUSStandard">
+        <property name="toolTip">
+         <string>0.001-0.004 round down to 0.00 and 0.005 - 0.009 round up to 0.01</string>
+        </property>
+        <property name="text">
+         <string>Round  using US Standard 5/4.</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupInvoice">
+     <property name="title">
+      <string>Invoices (Mexico Only)</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_7">
+      <item>
+       <widget class="QCheckBox" name="kcfg_askForInvoice">
+        <property name="text">
+         <string>Ask for invoice generation</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <includes>
+  <include location="local">kcolorbutton.h</include>
+ </includes>
+ <resources/>
+ <connections/>
+</ui>

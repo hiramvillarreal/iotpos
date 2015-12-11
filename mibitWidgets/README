@@ -1,0 +1,71 @@
+mibitWidgets
+====================================================
+
+Author: Miguel Chavez Gamboa
+        miguel@lemonpos.org
+
+License: LGPL v2 
+
+
+Description:
+This widgets were designed to be incorporated in the lemonPOS project. 
+They are Qt widgets.
+====================================================
+
+Widgets Included:
+===================================================
+
+MibitLineEdit -------------------------------------
+
+  This class is used to replace standard QLineEdit.
+  it provides a hint in a grayed-out text when the
+  line is empty, even when its focused. Also provides
+  a setError() method to indicate there is something
+  erroneous in the text entered, coloring the line
+  edit with a changing color from orange to yellow
+  for a few seconds.
+
+
+MibitTip ------------------------------------------
+
+  This class is used to display animated messages
+  growing or shrinking when showing/hiding.
+ 
+  The concept is based on the idea of providing a less
+  intrusive message when the user needs some little information.
+  The concept is sometimes refered as "No dialogs on dialogs".
+ 
+  It loads a file in SVG format and render it as the skin.
+ 
+  It is resized according to its parter, and displayed
+  horizontally centered and vertically positioned below
+  its partner.
+ 
+  This was designed for lemonPOS project.
+
+
+MibitDialog --------------------------------------
+
+  This class is used to display animated dialogs
+  appering on screen from top or middle. 
+  Are svg themed and borderless.
+
+  Can contain one icon and, text message, and a 
+  close button.
+
+
+MibitFloatPanel ---------------------------------
+
+  This class is used as a special panel to hide
+  itself when the mouse cursor leaves it bounds 
+  and show when the mouse cursor enters its 
+  visible -minimum- area.
+
+  It is designed to save space on screen when 
+  having a lot of things to show only on certain
+  conditions. For example to show a group of
+  widgets related to a database filter options.
+
+----------------------------------------------------
+
+

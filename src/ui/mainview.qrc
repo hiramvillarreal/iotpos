@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="/images/icons">
+    <file>images/owncredit.png</file>
+    <file>images/card.png</file>
+    <file>images/money.png</file>
+  </qresource>
+</RCC>

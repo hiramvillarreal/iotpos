@@ -1,0 +1,276 @@
+/**  Elegant Style for lemon (Default style).
+ **  Miguel Chavez Gamboa 2007-2010
+ **  miguel@lemonpos.org
+ **
+ **  Some notes to style writers:
+ **  KPos Styles are Qt stylesheets. And this are a modification of HTML CSS.
+ **  For more information about qt stylesheets syntax consult the qt documentation:
+ **  http://doc.trolltech.com/4.3/stylesheet
+ **
+ **  All paths to images are encoded as "[STYLE_PATH]" (without quotes), and at runtime
+ **  will be expanded to real path which will be the kde "appdata" dir and the kpos's styles subdir.
+ **  Note that there is no space or other character between [STYLE_PATH] and the image filename.
+ */
+
+/** login window **/
+/* NOTE: QDialog, QWidget, only support the background property, not the border.
+         thats why the login/password windows experiment problems at diferent screen resolutions.
+         A workaround is to select an image acording to the screen size. 
+         for widescreens at 1280x800. and changed the name below.
+*/
+LoginWindow#passwordDialog{
+   background-image: url([STYLE_PATH]passwordBackground_wide.png); /* choose resolution */
+   background-position: center center;
+   background-attachment: fixed;
+   background-repeat:no-repeat;
+}
+
+LoginWindow#loginDialog {
+   background-image: url([STYLE_PATH]loginBackground_1280x800.png); /* choose resolution */
+   background-position: center center;
+   background-attachment: fixed;
+   background-repeat:no-repeat;
+}
+
+
+LoginWindow#passwordDialog > QLabel#labelCaption {
+  color: #005f00;
+  font-weight: bold;
+  font-size:15px;
+}
+
+LoginWindow#loginDialog > QLabel#labelCaption {
+  color: #005f00;
+  font-weight: bold;
+  font-size:40px;
+}
+
+LoginWindow#passwordDialog > QLabel#labelPrompt {
+  color: #005f00;
+  font-weight: bold;
+  font-size:10px;
+}
+
+LoginWindow#loginDialog > QLabel#labelPrompt {
+  color: #005f00;
+  font-weight: bold;
+  font-size:18px;
+}
+
+QStatusBar::item {
+    border-width: 1;
+    border-color: gray;
+    border-style: solid;
+    border-radius: 2;
+}
+
+QLineEdit, QDoubleSpinBox
+{
+  background-position: top left;
+  background-repeat: no-repeat;
+  border-width: 4px;
+  border-image: url([STYLE_PATH]editbox.png) 4 4 4 4 stretch stretch;
+}
+
+QLineEdit:focus, QDoubleSpinBox:focus
+{
+    border-width: 3px;
+    padding: 0px;
+}
+
+QLabel#lblSaleTaxes, QLabel#lblSubtotal, QLabel#labelTotalDiscount
+{
+  color: darkGray;
+  font-weight: bold;
+  font-size:30px;
+}
+
+QLabel#lblSaleTaxesPre, QLabel#lblSubtotalPre, QLabel#labelTotalDiscountpre
+{
+  color: darkGray;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+QLabel#labelTotal, QLabel#labelChange
+{
+ color: #0b69fd;
+ font-weight: bold;
+ font-size:40px;
+}
+
+QLabel#labelTotalpre , QLabel#labelChangepre
+{
+ color: black;
+ font-weight: bold;
+ font-size: 40px;
+}
+
+QGroupBox#groupInput
+{ /* FIXME: Hacer un grafico diferente... */
+ border-image: url([STYLE_PATH]groupbox.png);
+ background-position: top left;
+ background-repeat: no-repeat;
+}
+
+QGroupBox#groupPayment, QGroupBox#groupDetails
+{
+ border-image: url([STYLE_PATH]groupbox.png);
+ background-position: top left;
+ background-repeat: no-repeat;
+}
+
+QLabel#labelDetailDesc, QLabel#labelPayment
+{
+ color: white;
+ font-weight: bold;
+ border-image: url([STYLE_PATH]headers.png);
+ background-position: top left;
+ background-repeat: no-repeat;
+}
+
+
+QLabel#labelAuthNumber, QLabel#labelCardNumber, QLabel#labelCashAmount
+{
+ color: rgb(50,50,50);
+}
+
+
+QDoubleSpinBox::up-button, QDoubleSpinBox::down-button
+{
+ padding: 2px;
+ color: black;
+ border: 0px solid gray;
+ background-color: rgb(230,230,230);
+}
+
+QGroupBox#groupBoxR, QGroupBox#groupBoxL, QFrame#stackedWidget
+{
+ border: 0px solid white;
+}
+
+QGroupBox#groupTotals
+{
+ border-image: url([STYLE_PATH]hgroupbox.png);
+ background-position: top left;
+ background-repeat: no-repeat;
+}
+
+QLabel#totaltitle, QLabel#totaltitle2
+{
+ color: rgb(80,80,80);
+ font-weight:bold;
+ border-image: url([STYLE_PATH]headers.png);
+ background-position: top left;
+ background-repeat: no-repeat;
+}
+
+QPushButton
+{
+ background-position: top left;
+ background-repeat: no-repeat;
+ border-width: 4px;
+ padding: 3px;
+ border-image: url([STYLE_PATH]button.png) 4 4 4 4 stretch stretch;
+ min-width: 14ex;
+ min-height: 2.5ex;
+}
+
+QPushButton:hover
+{
+ border-width : 4px;
+ border-image: url([STYLE_PATH]button_hover.png) 4 4 4 4 stretch stretch;
+ background-position: top left;
+ background-repeat: no-repeat;
+}
+
+
+QPushButton:pressed {
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+/* maybe opacity only works if composite enabled.. */
+QToolTip {
+    padding: 5px;
+    border-radius: 3px;
+    opacity: 100;
+}
+
+QRadioButton::indicator:off
+{
+ padding-left: 4px;
+ spacing: 5px;
+ border-image: url([STYLE_PATH]radiobutton_off.png);
+ background-position: top left;
+ background-repeat: no-repeat;
+}
+
+QRadioButton::indicator:on
+{
+ padding-left: 4px;
+ spacing: 5px;
+ border-image: url([STYLE_PATH]radiobutton_on.png);
+ background-position: top left;
+ background-repeat: no-repeat;
+}
+
+
+QCheckBox:hover, QRadioButton:hover
+{
+ border-width: 4px;
+ border-image: url([STYLE_PATH]checks_bg.png) 4 4 4 4 stretch stretch;
+ background-position: top left;
+ background-repeat: no-repeat;
+}
+
+QCheckBox::indicator:unchecked
+{
+ padding-left: 4px;
+ spacing: 5px;
+ border-image: url([STYLE_PATH]checkbox_off.png);
+ background-position: top left;
+ background-repeat: no-repeat;
+}
+
+QCheckBox::indicator:checked
+{
+ padding-left: 4px;
+ spacing: 5px;
+ border-image: url([STYLE_PATH]checkbox_on.png);
+ background-position: top left;
+ background-repeat: no-repeat;
+}
+
+
+/** Table **/
+QTableWidget
+{
+  background-position: top left;
+  background-repeat: no-repeat;
+  selection-background-color: #c4e4f7;
+  selection-color: blue;
+}
+
+QHeaderView::section
+{
+  color: blue;
+  font-weight:bold;
+  margin:0;
+  padding:0;
+  border-image: url([STYLE_PATH]headerview.png);
+}
+
+QHeaderView::section:hover
+{
+border-image: url([STYLE_PATH]headerview_hover.png);
+color:white;
+}
+
+QAbstractScrollArea
+{
+ background-image: url([STYLE_PATH]backg.png);
+ background-position: center center;
+ background-attachment: fixed;
+ background-repeat:no-repeat;
+}

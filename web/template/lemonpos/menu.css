@@ -1,0 +1,156 @@
+#ajaxmenu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	}
+
+#ajaxmenu ul li {
+	position: relative;
+	float: left;
+	width: 80px; /*70*/
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	font-weight: normal;
+        /*background-color:blue;*/
+}
+	
+#ajaxmenu ul li ul {
+	position: absolute;
+	left: 1px; /* Set 1px less than menu width */
+	top:21px;
+	line-height: 16px;
+        width:120px; /* This is the width for the submenu (dropdown) to let it be bigger that the menu entry MCH*/
+        margin:5px;
+	}
+
+#ajaxmenu ul li a {
+	color: white;
+	font-weight: bold;
+        font-size:14px;
+}
+
+
+/* Styles for Menu Items */
+#ajaxmenu ul li.firstcategory {
+
+	color: #062E4B;
+	font-weight: bold;
+	height: 19px;
+	line-height: 19px;
+	padding-right: 0px;
+	padding-left: 0px;
+/* 	background-image: url(images/array_332x28.jpg); */
+	background-repeat: no-repeat;
+	background-position: 0px;
+	margin: 0px;
+
+	}
+#ajaxmenu ul li.category {
+	color: #062E4B;
+	font-weight: bold;
+	height: 19px; /*28px;*/
+	line-height: 19px;
+	padding-right: 0px;
+	padding-left: 0px;
+/* 	background-image: url(images/array_332x28.jpg); */
+	background-repeat: no-repeat;
+	background-position: -111px;
+	margin: 0px;
+
+	}
+#ajaxmenu ul li.lastcategory {
+	color: #062E4B;
+	font-weight: bold;
+	height: 19px;
+	line-height: 19px;
+	padding-right: 0px;
+	padding-left: 0px;
+/* 	background-image: url(images/array_332x28.jpg); */
+	background-repeat: no-repeat;
+	background-position: -222px;
+	margin: 0px;
+
+	}
+
+
+#ajaxmenu ul li.firstcategory:hover, #ajaxmenu ul li.firstcategory.over {
+	color: yellow;
+        background-color:transparent;
+	/*background-image: url(images/array_332x28_roll.jpg);*/
+}
+
+#ajaxmenu ul li.category:hover, #ajaxmenu ul li.category.over {
+	color: yellow;
+	/*background-image: url(images/array_332x28_roll.jpg);*/
+}
+#ajaxmenu ul li.lastcategory:hover, #ajaxmenu ul li.lastcategory.over {
+	color: yellow;
+	/*background-image: url(images/array_332x28_roll.jpg);*/
+}
+
+/* commented backslash \*/ 
+* html ul li a {height:1%}
+/* end hack */ 
+#ajaxmenu li a {
+	text-decoration: none;
+}
+
+/* hovered lists */
+#ajaxmenu li a, #ajaxmenu li.over a {
+	color: white;
+	width: 70px; /*70px;*/
+	display: block;
+
+}
+
+
+#ajaxmenu li li a:hover, #ajaxmenu li.over li a:hover {
+	/*background-image: url(images/bullet-11x9_roll.png)  !important;*/
+	color: yellow;
+        font-weight:bold;
+	background-repeat: no-repeat;
+        background-color: #8dc15e; /*#8dbc00;*/
+	background-position: left center;
+	text-indent: 8pt;
+}
+
+/* set dropdown */
+#ajaxmenu li li a, #ajaxmenu li.over li a {
+	color: #ffffff;
+	background-image: url(images/bullet-11x9.png) !important;
+	background-repeat: no-repeat !important;
+	text-align: left;
+	font-weight: normal;
+	width: 120px;
+        background-color: #72b338;
+	background-position: left center;
+	text-indent: 8pt;
+}
+#ajaxmenu li ul li a {
+	background-image: url(images/sub_color_4x25.jpg);
+	background-repeat: repeat-x;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 5px;
+	padding-left: 5px;
+} /* Sub Menu Styles */
+
+#ajaxmenu li ul, #ajaxmenu li.over ul { 
+	display: block;
+} /* The pop */
+
+#ajaxmenu {
+        position:absolute;
+        right:25px;
+	width: 430px;
+        height:22px;
+        margin:0px;
+        padding:0px;
+        top:55px;
+}
+
+.B_currentCrumb {
+      font-style:italic;
+}
+

@@ -1,0 +1,29 @@
+
+LemonPOS is an open source Point of Sale software targeted for micro, small and medium businesses.
+MySQL is employed for data management and storage, and can be used a single database with
+many POS terminals on a network.
+Being Linux or any other unix the target operating system, your information is safer against
+virus attacks, and lowers the costs in licenses.
+
+Lemon provides a modern themeable and easy to use Interface, a search panel, a price-checker tool,
+an administration tool for managing your store, printed reports, and more...
+
+It has beeen tested with a parallel matrix printer (Star Micronics SP500), an USB thermal printer
+(Star Micronics TSP143), and an USB barcode reader (Dataogic DLC6065-M0).
+
+More information on 
+
+Project Home Page:
+http://lemonpos.org/
+
+Project Development Blog:
+http://lemonpos.wordpress.com/
+
+Bug and feature request ticket system:
+http://apps.sourceforge.net/trac/lemonpos/
+
+Wiki:
+http://apps.sourceforge.net/mediawiki/lemonpos/
+
+Author email is:
+miguel -AT- lemonpos.org

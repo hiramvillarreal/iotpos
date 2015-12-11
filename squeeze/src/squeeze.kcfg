@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="squeezerc"/>
+  <group name="squeezeView">
+    <entry name="SplitterSizes" type="IntList">
+      <label>How the main window is divided.</label>
+    </entry>
+    <entry name="isProductsGridDefault" type="Bool">
+    <label>The default view for products</label>
+    <default>true</default>
+   </entry>
+  </group>
+  <group name="QuickView">
+  <entry name="mostSoldMaxValue" type="Int">
+  <label>Most Sold products filter Max value</label>
+  <default>15</default>
+  </entry>
+  <entry name="mostSoldMinValue" type="Int">
+  <label>Most Sold products filter Main value</label>
+  <default>0</default>
+  </entry>
+  </group>
+  <group name="Styles">
+  <entry name="styleName" type="String">
+  <label>Get Stylesheet Name</label>
+  <default>simple</default>
+  </entry>
+  </group>
+  <group name="Security">
+   <entry name="lowSecurityMode" type="Bool">
+    <label>Low security mode</label>
+    <default>false</default>
+   </entry>
+  </group>
+  <group name="Database">
+    <entry name="editDBServer" type="String">
+      <label>DB Server Name</label>
+      <default>localhost</default>
+    </entry>
+    <entry name="editDBUsername" type="String">
+      <label>DB Username</label>
+      <default>lemonclient</default>
+    </entry>
+    <entry name="editDBPassword" type="String">
+      <label>DB Password</label>
+      <default>xarwit0721</default>
+    </entry>
+    <entry name="editDBName" type="String">
+      <label>DB Name</label>
+      <default>lemondb</default>
+    </entry>
+  </group>
+  <group name="Printer">
+    <entry name="showDialogOnPrinting" type="Bool">
+     <label>Show a dialog when printing the ticket</label>
+     <default>true</default>
+    </entry>
+    <entry name="ticketTime" type="Int">
+     <label>Time showing the ticket dialog</label>
+     <default>3</default>
+    </entry>
+    <entry name="smallTicketDotMatrix" type="Bool">
+      <label>Print a small receipt using a ticket printer -dot matrix-.</label>
+      <default>false</default>
+    </entry>
+    <entry name="smallTicketCUPS" type="Bool">
+      <label>Print a small receipt using a thermal ticket printer -CUPS-</label>
+      <default>true</default>
+    </entry>
+    <entry name="bigReceipt" type="Bool">
+      <label>Print a big receipt using a normal printer</label>
+      <default>false</default>
+    </entry>
+    <entry name="printBalances" type="Bool">
+      <label>Print balances using ticket printer</label>
+      <default>false</default>
+    </entry>
+    <entry name="printTicket" type="Bool">
+      <label>Print Ticket (dou you have a ticket printer?)</label>
+      <default>false</default>
+    </entry>
+    <entry name="printChangedDateTicket" type="Bool">
+      <label>Print Date Changed Ticket</label>
+      <default>false</default>
+    </entry>
+    <entry name="printerDevice" type="String">
+      <label>Get printer device to use for printing</label>
+      <default>/dev/lp0</default>
+    </entry>
+    <entry name="printerCodec" type="String">
+      <label>Get Printer Codec to use</label>
+      <default>UTF-8</default>
+    </entry>
+  </group>
+</kcfg>

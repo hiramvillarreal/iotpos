@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>[(site_name)] | [*pagetitle*]</title>
+<meta http-equiv="Content-Type" content="text/html; charset=[(modx_charset)]" />
+<base href="[(site_url)]"></base>
+<link rel="stylesheet" href="assets/templates/lemonpos/layout.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="assets/templates/lemonpos/menu.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="assets/templates/lemonpos/form.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="assets/templates/lemonpos/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="assets/templates/lemonpos/print.css" type="text/css" media="print" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="[(site_url)][~11~]" />
+
+</head>
+<body>
+<div id="wrapper">
+<!--<div id="minHeight"></div>-->
+<div id="outer">
+<div id="inner">
+<div id="right">
+<div id="right-inner">
+<h1 style="text-indent: -5000px;padding: 0px; margin:0px; font-size: 1px;">[(site_name)]</h1>
+</div>
+<!-- end right inner-->
+</div>
+<!-- end right -->
+<div id="left">
+<div id="left-inner">
+<div id="content">
+<base href="[(site_url)]" />
+[[Breadcrumbs]]
+<div class="post">
+<!-- <h2>[*longtitle*]</h2> -->
+[*#content*] </div>
+<!-- close .post (main column content) -->
+</div>
+<!-- close #content -->
+</div>
+<!-- end left-inner -->
+</div>
+<!-- end left -->
+</div>
+<!-- end inner -->
+<div id="header">
+<h1><a id="logo" href="[~[(site_start)]~]" title="[(site_name)]">[(site_name)]</a></h1>
+<div id="search">[!AjaxSearch? ajaxSearch=`1` &AS_landing=`8` &moreResultsPage=`8` &showMoreResults=`1` &addJscript=`0` &extract=`0` &AS_showResults=`0`!]</div>
+<div id="ajaxmenu"> [[Wayfinder?startId=`0` &outerTpl=`mh.OuterTpl` &innerTpl=`mh.InnerTpl` &rowTpl=`mh.RowTpl` &innerRowTpl=`mh.InnerRowTpl` &firstClass=`first` &hereClass=``]] </div>
+<!-- end topmenu -->
+</div>
+<!-- end header -->
+<br style="clear:both;height:0;font-size: 1px" />
+<div id="clearfooter"></div>
+<div id="footer">
+{{lemonfooter}}
+</div>
+<!-- end footer -->
+</div>
+<!-- end outer div -->
+</div>
+<!-- end wrapper -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+  var pageTracker = _gat._getTracker("UA-7037042-1");
+  pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://sourceforge.net/apps/piwik/lemonpos/" : "http://sourceforge.net/apps/piwik/lemonpos/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+  var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+  piwikTracker.trackPageView();
+  piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://sourceforge.net/apps/piwik/lemonpos/piwik.php?idsite=1" style="border:0" alt=""/></p></noscript>
+<!-- End Piwik Tag -->
+</body>
+</html>

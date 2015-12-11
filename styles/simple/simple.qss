@@ -1,0 +1,198 @@
+/**  Simple Style for Lemon (Default style).
+ **  Miguel Chavez Gamboa 2007-2010
+ **  miguel@lemonpos.org
+ **
+ **  This style themes only certain objects, such as login&passowrd dialog some labels, and
+ **  the tableview/listview. All other objects are left with the kde/qt theme used. In my case
+ **  I wanted to use the oxygen style.
+ **
+ **  Some notes to style writers:
+ **  Lemon Styles are Qt stylesheets. And this are a modification of HTML CSS.
+ **  For more information about qt stylesheets syntax consult the qt documentation:
+ **  http://doc.trolltech.com/4.3/stylesheet.html
+ **
+ **  All paths to images are encoded as "[STYLE_PATH]" (without quotes), and at runtime
+ **  will be expanded to real path which will be the kde "appdata" dir and the lemon's styles subdir.
+ **  Note that there is no space or other character between [STYLE_PATH] and the image filename.
+ */
+
+
+/** login window **/
+/* NOTE: QDialog, QWidget, only support the background property, not the border.
+         thats why the login/password windows experiment problems at diferent screen resolutions.
+         A workaround is to select an image acording to the screen size. I added a loginBackground_1280x800.jpg
+         for widescreens at 1280x800. and changed the name below.
+*/
+
+LoginWindow#passwordDialog {
+   background-image: url([STYLE_PATH]passwordBackground_1366x768.png); /* choose resolution and provide the image */
+   background-position: top left;
+   background-attachment: fixed;
+   background-repeat:no-repeat;
+}
+
+LoginWindow#loginDialog {
+   background-image: url([STYLE_PATH]loginBackground_1366x768.png); /* choose resolution and provide the image */
+   background-position: center center;
+   background-attachment: fixed;
+   background-repeat:no-repeat;
+}
+
+
+LoginWindow#passwordDialog > QLabel#labelCaption {
+  color: #a3ff00;
+  font-weight: bold;
+  font-size:15px;
+}
+
+LoginWindow#loginDialog > QLabel#labelCaption {
+  color: white;
+  font-weight: bold;
+  font-size:40px;
+}
+
+LoginWindow#passwordDialog > QLabel#labelPrompt {
+  color: #e6ff00;
+  font-weight: bold;
+  font-size:10px;
+}
+
+LoginWindow#loginDialog > QLabel#labelPrompt {
+  color: #fff500;
+  font-weight: bold;
+  font-size:18px;
+}
+
+QLabel#lblSaleTaxes, QLabel#lblSubtotal, QLabel#labelTotalDiscount
+{
+ color: darkGray;
+ font-weight: bold;
+ font-size:30px;
+}
+
+QLabel#lblSaleTaxesPre, QLabel#lblSubtotalPre, QLabel#labelTotalDiscountpre
+{
+ color: darkGray;
+ font-weight: bold;
+ font-size: 30px;
+}
+
+QLabel#labelTotal, QLabel#labelChange
+{
+ color: #0b69fd;
+ font-weight: bold;
+ font-size:30px;
+}
+
+QLabel#labelTotalpre , QLabel#labelChangepre
+{
+ color: black;
+ font-weight: bold;
+ font-size: 30px;
+}
+
+QLabel#labelDetailDesc, QLabel#labelPayment
+{
+/*  color: black; */
+ font-weight: bold;
+ background-position: top left;
+ background-repeat: no-repeat;
+}
+
+QLabel#labelAuthNumber, QLabel#labelCardNumber, QLabel#labelCashAmount
+{
+ color: rgb(50,50,50);
+}
+
+QLabel#totaltitle, QLabel#totaltitle2
+{
+ color: rgb(80,80,80);
+ font-weight:bold;
+ background-position: top left;
+ background-repeat: no-repeat;
+}
+
+/** Special Orders **/
+QLabel#lblPriceLabel {
+  color: black;
+  font-weight: bold;
+  font-size:22px;
+}
+QLabel#lblPrice {
+  color: #0b69fd;;
+  font-weight: bold;
+  font-size:22px;
+}
+
+
+/** the price checker **/
+QLabel#titleTop, #titleBottom {
+  color: #a3ff00;
+  font-weight: bold;
+  font-size:35px;
+}
+
+QLabel#labelPCClose {
+  color: #cdbd63;
+  font-style: italic;
+  font-size:11px;
+}
+QLabel#labelPCCode {
+  color: white;
+}
+QLabel#labelPCPrice, QLabel#labelPCDiscount,  QLabel#labelPClPrice, QLabel#labelPClDiscount{
+  color: #e5dfbd;
+  font-size:14px;
+}
+QLabel#labelPCDiscount {
+  color: #c42a03;
+  font-size:14px;
+}
+QLabel#labelPCTotal, QLabel#labelPClTotal {
+  color: #e6ce21;
+  font-size:14px;
+  font-weight: bold;
+  font-style: italic;
+}
+QLabel#labelPCName {
+  color: #ffb100;
+  font-weight: bold;
+  font-size:18px;
+}
+
+/** dialog - cancelar ticket, corte de caja **/
+QLabel#titleLabelInputDialog {
+  color: #e6ce21;
+  font-size:12px;
+  font-weight: bold;
+}
+
+/** dialog sostatus **/
+QLabel#lblNewStatus {
+  color: red;
+  font-size:14px;
+  font-weight: bold;
+}
+
+/**  Client Discount **/
+QLabel#lblClientDiscount
+{
+  color: #0b69fd;
+  font-weight: bold;
+  font-size:15px;
+}
+
+/** Table **/
+/* Including the listviews.. :O.
+   Theming the ScrollArea gives same result but, with a strange behavoir, the headers are black...*/
+QTableWidget#tableReturnProducts, QListView#listView, QTableWidget#tableWidget,QTableWidget#tableSearch,QTableView#ticketView
+{
+  background-position: top left;
+  background-repeat: no-repeat;
+  selection-background-color: #94f2b4; /*#c4e4f7;*/
+  selection-color: blue;
+  background-image: url([STYLE_PATH]backg.png);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+}

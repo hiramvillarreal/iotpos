@@ -1,0 +1,46 @@
+There is a more detailed install manual at the wiki, if you can use it instead.
+There is also a little user guide at the wiki.
+
+http://sourceforge.net/apps/mediawiki/lemonpos/
+
+To compile and install:
+
+* First make sure you have kde4 installed (kdelibs4, kdebase4, kdepimlibs4) and all of his
+  dependencies (qt4...).
+  
+* The basic instructions are:
+
+  cd lemonpos
+  mkdir build
+  cd build
+  cmake .. -DCMAKE_INSTALL_PREFIX=`kde4-config --prefix`
+  make
+  su
+  make install
+  
+  Now, copy the lemonrc file to your local .kde/share/config directory:
+  
+  cp lemonpos/src/lemonrc /home/USER/.kde4/share/config/ #Replace USER with your username.
+  
+* After installation, you need to create a database and user on mysql, to do this:
+
+  cd lemonpos/database_resources
+  cat lemon_mysql.sql | mysql -u root -p
+  
+  
+* To start using lemon, type 
+
+  lemon
+  
+  If for any reason lemon binary is not found, and if your kde4 install path is /opt/kde4 do:
+  
+  /opt/kde4/bin/lemon
+  
+ * The default and only user and password is (without quotation marks):
+ 
+   username: "admin"
+   password: "linux"
+
+  By default, squeeze has security disabled, this to let you configure squeeze database settings in case
+  you have installed the database server at a different computer.
+  

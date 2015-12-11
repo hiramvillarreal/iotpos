@@ -1,0 +1,73 @@
+<!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
+<kpartgui name="squeeze" version="10">
+<ToolBar name="aGeneral">
+  <text>General ToolBar</text>
+  <Action name="quickViewPlots" />
+  <Action name="productsBrowse" />
+  <Action name="offersBrowse" />
+  <Action name="usersBrowse" />
+  <Action name="measuresBrowse" />
+  <Action name="departmentsBrowse" />
+  <Action name="categoriesBrowse" />
+  <Action name="subcategoriesBrowse" />
+  <Action name="clientsBrowse" />
+  <Action name="randomMsgsBrowse" />
+  <Action name="viewLog" />
+  <Action name="currenciesBrowse" />
+  <Action name="reservationsBrowse" />
+</ToolBar>
+
+<ToolBar name="bStockMovement">
+ <text>Stock Movement</text>
+ <Action name="doPurchase" />
+ <Action name="checkOut" />
+ <Action name="stockCorrection" />
+</ToolBar>
+
+<ToolBar name="cReports">
+  <text>Reports</text>
+  <Action name="reports" />
+</ToolBar>
+
+<ToolBar name="dOther">
+ <text>Other Actions</text>
+ <Action name="login" />
+ <Action name="file_quit" />
+ <Action name="options_configure" />
+</ToolBar>
+
+<!-- MENU -->
+<MenuBar>
+    <Menu noMerge="1" name="Data"><text>&amp;Data</text>
+      <Action name="productsBrowse" />
+      <Action name="offersBrowse" />
+      <Action name="usersBrowse" />
+      <Action name="measuresBrowse" />
+      <Action name="departmentsBrowse" />
+      <Action name="categoriesBrowse" />
+      <Action name="subcategoriesBrowse" />
+      <Action name="clientsBrowse" />
+      <Action name="randomMsgsBrowse" />
+      <Action name="reservationsBrowse" />
+      <Action name="currenciesBrowse" />
+      <Action name="viewLog" />
+    </Menu>
+    <Menu name="Reports"><text>&amp;Facturación</text>
+        <Action name="agregarSerieFolios" />
+        <Action name="cancelarFactura" />
+    </Menu>
+    <Menu name="Reports"><text>&amp;Reports</text>
+      <Action name="cashFlowBrowse" />
+      <Action name="transactionsBrowse" />
+      <Action name="showSpecialOrders" />
+      <Action name="balancesBrowse" />
+      <Separator/>
+      <Action name="printEndOfDay" />
+      <Action name="printEndOfDayGral" />
+      <Action name="printEndOfMonth" />
+      <Action name="printLowStock" />
+      <Action name="printSoldOut" />
+    </Menu>
+</MenuBar>
+
+</kpartgui>

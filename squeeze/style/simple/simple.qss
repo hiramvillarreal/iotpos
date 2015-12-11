@@ -1,0 +1,116 @@
+/**  Simple Style for Squeeze (Default style).
+ **  Miguel Chavez Gamboa 2007-2010
+ **  miguel@lemonpos.org
+ **
+ **  This style themes only certain objects, such as login&passowrd dialog some labels, and
+ **  the tableview/listview. All other objects are left with the kde/qt theme used. In my case
+ **  I wanted to use the oxygen style.
+ **
+ **  Some notes to style writers:
+ **  Lemon Styles are Qt stylesheets. And this are a modification of HTML CSS.
+ **  For more information about qt stylesheets syntax consult the qt documentation:
+ **  http://doc.trolltech.com/4.3/stylesheet.html
+ **
+ **  All paths to images are encoded as "[STYLE_PATH]" (without quotes), and at runtime
+ **  will be expanded to real path which will be the kde "appdata" dir and the lemon's styles subdir.
+ **  Note that there is no space or other character between [STYLE_PATH] and the image filename.
+ */
+
+
+/** login window **/
+/* NOTE: QDialog, QWidget, only support the background property, not the border.
+         thats why the login/password windows experiment problems at diferent screen resolutions.
+         A workaround is to select an image acording to the screen size. I added a loginBackground_1280x800.jpg
+         for widescreens at 1280x800. and changed the name below.
+*/
+
+LoginWindow#passwordDialog {
+   background-image: url([STYLE_PATH]passwordBackground_wide.png); /* choose resolution and provide the image */
+   background-position: top left;
+   background-attachment: fixed;
+   background-repeat:no-repeat;
+}
+
+LoginWindow#passwordDialog > QLabel#labelCaption {
+  color: #a3ff00;
+  font-weight: bold;
+  font-size:15px;
+}
+
+LoginWindow#loginDialog > QLabel#labelCaption {
+  color: #a3ff00;
+  font-weight: bold;
+  font-size:40px;
+}
+
+LoginWindow#passwordDialog > QLabel#labelPrompt {
+  color: #e6ff00;
+  font-weight: bold;
+  font-size:10px;
+}
+
+LoginWindow#loginDialog > QLabel#labelPrompt {
+  color: #e6ff00;
+  font-weight: bold;
+  font-size:18px;
+}
+
+/** Header Labels **/
+QLabel#headerLabel {
+  color: blue;
+  font-size:30px;
+  font-weight: bold;
+}
+
+/** Plot Title Labels **/
+
+QLabel#lblGraphSales,QLabel#lblGraphProfit,QLabel#lblGraphSoldItems,QLabel#lblGraphAlmostSoldOutItems {
+  color: Blue;
+  font-size:14px;
+  font-weight: bold;
+}
+
+QLabel#counter1, QLabel#counter2, QLabel#counter3,QLabel#counter4,QLabel#counter5 {
+  color: Yellow;
+  font-size:20px;
+  font-weight:bold;
+}
+
+QLabel#lblProd1, QLabel#lblProd2, QLabel#lblProd3,QLabel#lblProd4,QLabel#lblProd5 {
+  color: White;
+  font-size:14px;
+}
+
+/** Table **/
+/* Including the listviews.. :O.
+   Theming the ScrollArea gives same result but, with a strange behavoir, the headers are black...*/
+QTableView#productsViewAlt, QTableView#tableBrowseOffers, QTableView#tableMeasures, QTableView#tableCategories, QTableView#cashFlowTable, QTableView#transactionsTable, QTableView#balancesTable, QTableView#balancesTable, QTableView#tableSO
+{
+  background-position: top left;
+  background-repeat: no-repeat;
+  selection-background-color: #94f2b4;
+  selection-color: blue;
+  background-image: url([STYLE_PATH]backg.png);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+}
+
+QListView#usersView, QListView#clientsView, QListView#productsView
+{
+  background-position: top left;
+  background-repeat: no-repeat;
+  selection-background-color: #94f2b4;
+  selection-color: blue;
+  background-image: url([STYLE_PATH]backg.png);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+}
+
+/** dialog - cancelar ticket, corte de caja **/
+QLabel#titleLabelInputDialog {
+  color: #e6ce21;
+  color:white;
+  font-size:13px;
+}

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=squeeze
+Exec=squeeze %i -caption "%c"
+Icon=squeeze
+Type=Application
+DocPath=squeeze/squeeze.html
+GenericName=lemonPOS administration module
+Terminal=0

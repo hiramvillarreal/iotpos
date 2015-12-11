@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>clientEditor</class>
+ <widget class="QWidget" name="clientEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>409</width>
+    <height>345</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_14">
+     <property name="text">
+      <string>&amp;Code:</string>
+     </property>
+     <property name="buddy">
+      <cstring>editClientCode</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2" rowspan="6">
+    <widget class="QLabel" name="labelClientPhoto">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>128</width>
+       <height>128</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="MibitLineEdit" name="editClientName"/>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_16">
+     <property name="text">
+      <string>&amp;Address:</string>
+     </property>
+     <property name="buddy">
+      <cstring>editClientAddress</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="2">
+    <widget class="QTextEdit" name="editClientAddress">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="tabChangesFocus">
+      <bool>true</bool>
+     </property>
+     <property name="acceptRichText">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="label_17">
+     <property name="text">
+      <string>Phone</string>
+     </property>
+     <property name="buddy">
+      <cstring>editClientPhone</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QLabel" name="label_18">
+     <property name="text">
+      <string>Cell Phone:</string>
+     </property>
+     <property name="buddy">
+      <cstring>editClientCell</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="MibitLineEdit" name="editClientPhone">
+     <property name="minimumSize">
+      <size>
+       <width>94</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="MibitLineEdit" name="editClientCell">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="2">
+    <widget class="QPushButton" name="btnChangeClientPhoto">
+     <property name="text">
+      <string>Change &amp;Photo</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Points:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Discount:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0">
+    <widget class="MibitLineEdit" name="editClientPoints">
+     <property name="minimumSize">
+      <size>
+       <width>94</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="1">
+    <widget class="MibitLineEdit" name="editClientDiscount">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Since:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0" colspan="2">
+    <widget class="KDateWidget" name="sinceDatePicker"/>
+   </item>
+   <item row="12" column="0" colspan="3">
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="0">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Minimum</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>5</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="MibitLineEdit" name="editClientCode"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>&amp;Name:</string>
+     </property>
+     <property name="buddy">
+      <cstring>editClientName</cstring>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KDateWidget</class>
+   <extends>QWidget</extends>
+   <header>kdatewidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>MibitLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>../../mibitWidgets/mibitlineedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>editClientCode</tabstop>
+  <tabstop>editClientName</tabstop>
+  <tabstop>editClientAddress</tabstop>
+  <tabstop>editClientPhone</tabstop>
+  <tabstop>editClientCell</tabstop>
+  <tabstop>editClientPoints</tabstop>
+  <tabstop>editClientDiscount</tabstop>
+  <tabstop>sinceDatePicker</tabstop>
+  <tabstop>btnChangeClientPhoto</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

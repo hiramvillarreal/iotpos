@@ -1,0 +1,27 @@
+Note, if you are using 0.9.3 rc1 or rc2 :
+
+cat fix_0.9.3rc.sql | mysql -uroot -p
+
+-----
+Note for UPGRADE from 0.9.1 / 0.9.2:
+
+For 0.9.2 or 0.9.1, you need to run the fix_0.9.2.sql and fix_roles.sql scripts to upgrade to 0.9.3 version.
+
+cat fix_0.9.2.sql | mysql -u root -p
+cat fix_roles.sql | mysql -u root -p
+
+-----
+
+If you have database for lemonpos 0.6 or 0.6.1 you can update it for the 0.7 version running:
+
+cat upgrade-database_0.6_to_0.7.sql | mysql -u root -p
+
+If you have 0.7 version, you can fix the database running:
+
+cat fix_0.7.sql | mysql -u root -p
+
+if You have 0.8 version, run the script:
+
+cat fix_0.8.sql | mysql -u root -p
+
+

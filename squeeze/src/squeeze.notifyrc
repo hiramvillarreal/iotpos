@@ -1,0 +1,10 @@
+[Global]
+IconName=squeeze
+Comment=Squeeze - LemonPOS Admin Module
+Name=Squeeze
+
+[Event/information]
+Name=information
+Comment=Show pertinent information
+Action=Sound|Popup
+

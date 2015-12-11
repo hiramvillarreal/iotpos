@@ -1,0 +1,197 @@
+<ui version="4.0" >
+ <class>promoEditor</class>
+ <widget class="QWidget" name="promoEditor" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>541</width>
+    <height>452</height>
+   </rect>
+  </property>
+  <property name="sizePolicy" >
+   <sizepolicy vsizetype="Maximum" hsizetype="Maximum" >
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize" >
+   <size>
+    <width>532</width>
+    <height>290</height>
+   </size>
+  </property>
+  <property name="windowTitle" >
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" >
+   <item row="0" column="0" >
+    <widget class="QLabel" name="label9" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Preferred" hsizetype="Maximum" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text" >
+      <string>Discount for product:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="3" >
+    <layout class="QGridLayout" >
+     <item rowspan="4" row="0" column="0" >
+      <widget class="QListView" name="productsList" />
+     </item>
+     <item row="0" column="1" >
+      <widget class="QRadioButton" name="chByName" >
+       <property name="text" >
+        <string>Filter by name</string>
+       </property>
+       <property name="checked" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" colspan="2" >
+      <widget class="QLineEdit" name="editName" />
+     </item>
+     <item row="2" column="1" colspan="2" >
+      <widget class="QRadioButton" name="chByCat" >
+       <property name="text" >
+        <string>Filter by category</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1" colspan="2" >
+      <widget class="QComboBox" name="comboCategory" />
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0" >
+    <widget class="QLabel" name="label_9" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Preferred" hsizetype="Maximum" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text" >
+      <string>Discount percentage:</string>
+     </property>
+     <property name="buddy" >
+      <cstring>spinboxDiscount</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1" colspan="2" >
+    <layout class="QHBoxLayout" >
+     <item>
+      <widget class="QDoubleSpinBox" name="spinboxDiscount" />
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" >
+        <size>
+         <width>101</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="0" colspan="2" >
+    <widget class="QGroupBox" name="groupValidDate_2" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Preferred" hsizetype="Minimum" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize" >
+      <size>
+       <width>120</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="title" >
+      <string>Valid From</string>
+     </property>
+     <layout class="QVBoxLayout" >
+      <property name="spacing" >
+       <number>2</number>
+      </property>
+      <property name="leftMargin" >
+       <number>4</number>
+      </property>
+      <property name="topMargin" >
+       <number>4</number>
+      </property>
+      <property name="rightMargin" >
+       <number>4</number>
+      </property>
+      <property name="bottomMargin" >
+       <number>4</number>
+      </property>
+      <item>
+       <widget class="KDatePicker" name="offersDatepickerStart" />
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="3" column="2" >
+    <widget class="QGroupBox" name="groupValidDate" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Preferred" hsizetype="Minimum" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize" >
+      <size>
+       <width>150</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="title" >
+      <string>Valid Until</string>
+     </property>
+     <layout class="QVBoxLayout" >
+      <property name="spacing" >
+       <number>2</number>
+      </property>
+      <property name="leftMargin" >
+       <number>4</number>
+      </property>
+      <property name="topMargin" >
+       <number>4</number>
+      </property>
+      <property name="rightMargin" >
+       <number>4</number>
+      </property>
+      <property name="bottomMargin" >
+       <number>4</number>
+      </property>
+      <item>
+       <widget class="KDatePicker" name="offersDatepickerEnd" />
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KDatePicker</class>
+   <extends>QFrame</extends>
+   <header>kdatepicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,9 @@
+Important notes:
+
+  -At measures table, 'PIECES' MUST BE id=1 at whichever translated string is. That is because a hardcoded way of implementing the method to
+   know if a product is sold by pieces or other measure, to decide if at inserting a product we must ask the user to enter the amount to
+   be sold, for example how many kilograms of sugar; and not asking when selling a chocolate bar that is sold by pieces. 
+   
+  -At Clients table, the default client ID IS 1, at whichever translated string is. This is the one that is to be selected by default.
+
+  -The same applies to all the default data inserted by the database creation script. You can change freely the text for these data.

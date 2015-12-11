@@ -1,0 +1,107 @@
+<ui version="4.0" >
+ <class>prefs_db</class>
+ <widget class="QWidget" name="prefs_db" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>323</width>
+    <height>184</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <item>
+    <widget class="QGroupBox" name="groupBox" >
+     <property name="title" >
+      <string>Database</string>
+     </property>
+     <layout class="QGridLayout" >
+      <item row="0" column="0" >
+       <widget class="QLabel" name="label" >
+        <property name="text" >
+         <string>&amp;Server:</string>
+        </property>
+        <property name="buddy" >
+         <cstring>kcfg_editDBServer</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" colspan="2" >
+       <widget class="QLineEdit" name="kcfg_editDBServer" />
+      </item>
+      <item row="1" column="0" >
+       <widget class="QLabel" name="label_2" >
+        <property name="text" >
+         <string>&amp;Username:</string>
+        </property>
+        <property name="buddy" >
+         <cstring>kcfg_editDBUsername</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="2" >
+       <widget class="QLineEdit" name="kcfg_editDBUsername" />
+      </item>
+      <item row="2" column="0" >
+       <widget class="QLabel" name="label_3" >
+        <property name="text" >
+         <string>&amp;Password:</string>
+        </property>
+        <property name="buddy" >
+         <cstring>kcfg_editDBPassword</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" colspan="2" >
+       <widget class="QLineEdit" name="kcfg_editDBPassword" >
+        <property name="inputMask" >
+         <string/>
+        </property>
+        <property name="echoMode" >
+         <enum>QLineEdit::Password</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="2" >
+       <widget class="QLabel" name="label_4" >
+        <property name="sizePolicy" >
+         <sizepolicy vsizetype="Minimum" hsizetype="MinimumExpanding" >
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text" >
+         <string>&amp;Database Name:</string>
+        </property>
+        <property name="buddy" >
+         <cstring>kcfg_editDBName</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2" >
+       <widget class="QLineEdit" name="kcfg_editDBName" />
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" >
+      <size>
+       <width>305</width>
+       <height>41</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

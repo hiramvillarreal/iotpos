@@ -1,0 +1,10 @@
+[Global]
+IconName=lemon
+Comment=Lemon Point of Sale
+Name=lemonPOS
+
+[Event/information]
+Name=information
+Comment=Show pertinent information
+Action=Sound|Popup
+

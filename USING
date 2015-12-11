@@ -1,0 +1,48 @@
+There is a users guide at the wiki:
+
+http://sourceforge.net/apps/mediawiki/lemonpos/
+
+For use you need:
+
+  * Start lemon
+  * Login as an user, the only one after installation is "admin" with password "linux".
+  * Start operations
+     -enter the requiered data (admin's password and money quantity to deposit at the cash drawer).
+  * Add items to the list, by entering de code with the keyboard, scanning code with the barcode scanner,
+    selecting products from the products grid or searching products from the search page.
+  * When last item is entered, select payment method (cash, card), and enter the amount paid
+    and press enter. After a few seconds, a new transaction will be initiated.
+  * Repeat the process until the end of the day or clerk's turn is over. Then you can make a balance for him/her.
+    When asking for the money to deposit in the cash-drawer, enter the quantity if you want to start again with the
+    same user, or press ESC to cancell and press Login button to enter as a different user.
+    Repeat the process from the 2nd or 3rd step as requiered.
+  
+  
+Note:
+   Until now, if you do not have a printer, the program hangs (waiting the printer to finish).
+   The program searches for a printer at /dev/lp0 -the default configuration-. 
+   You can configure another location for your device, changing these device file at the printer
+   configuration section of lemon.
+   The device file must have lp group. Also your  user (which runs lemon) has to be member 
+   of lp group. See udev documentation for more details regarding device permissions.
+   
+   If you have a different printer brand/model, please test it and send me any comments about.
+   
+   For the moment, by default lemon is configured to do not print a ticket, but if you have one
+   enable it at the preferences dialog under the printer section.
+   
+
+For administration backend, run "squeeze". You will be asked for admin's password.
+
+   By default, security is disabled, this to let you configure squeeze database settings in case
+   you have installed the database server at a different computer.
+
+   There is a quick information section to show you some basic data of sales, profit, most sold 
+   products and products near sold-out. All represented in a graphical way.
+   
+   With squeeze you can modify, insert and delete products, users, clients, offers, categories, 
+   weights and measures. There is also a purchase option at "Stock Movements, Check-in" to enter
+   products that were purchased to the database.
+   
+   You can also view other records such as Transactions and Balances. For now, it is limited only
+   to view it, not modify it.
