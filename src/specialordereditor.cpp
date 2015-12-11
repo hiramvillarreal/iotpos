@@ -30,10 +30,10 @@
 #include <QDateTime>
 
 #include "specialordereditor.h"
-#include "../../dataAccess/azahar.h"
-#include "../../src/inputdialog.h"
-#include "../../mibitWidgets/mibittip.h"
-#include "../../mibitWidgets/mibitfloatpanel.h"
+#include "../dataAccess/azahar.h"
+#include "../src/inputdialog.h"
+#include "../mibitWidgets/mibittip.h"
+#include "../mibitWidgets/mibitfloatpanel.h"
 
 
 SpecialOrderUI::SpecialOrderUI( QWidget *parent )

@@ -34,7 +34,7 @@
 #include "settings.h"
 #include "reservations.h"
 #include "../../dataAccess/azahar.h"
-#include "../../mibitWidgets/mibitfloatpanel.h"
+#include "../mibitWidgets/mibitfloatpanel.h"
 
 ReservationsDialogUI::ReservationsDialogUI( QWidget *parent )
 : QFrame( parent )

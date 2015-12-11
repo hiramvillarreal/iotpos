@@ -27,7 +27,7 @@
 #include <QtSql>
 
 #include "ui_special_order.h"
-#include "../../src/structs.h"
+#include "../src/structs.h"
 
 class MibitTip;
 class MibitFloatPanel;

@@ -37,11 +37,11 @@
 #include "saleqtydelegate.h"
 #include "dialogclientdata.h"
 #include "bundlelist.h"
-#include "../../mibitWidgets/mibittip.h"
-#include "../../mibitWidgets/mibitpassworddlg.h"
-#include "../../mibitWidgets/mibitfloatpanel.h"
-#include "../../mibitWidgets/mibitnotifier.h"
-#include "../../squeeze/src/clienteditor.h"
+#include "../mibitWidgets/mibittip.h"
+#include "../mibitWidgets/mibitpassworddlg.h"
+#include "../mibitWidgets/mibitfloatpanel.h"
+#include "../mibitWidgets/mibitnotifier.h"
+#include "../squeeze/src/clienteditor.h"
 
 #include "BasketPriceCalculationService.h"
 

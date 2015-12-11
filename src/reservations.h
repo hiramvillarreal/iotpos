@@ -27,8 +27,8 @@
 #include <QtSql>
 
 #include "ui_reservations.h"
-#include "../../src/structs.h"
-#include "../../src/enums.h"
+#include "../src/structs.h"
+#include "../src/enums.h"
 #include "gaveta.h"
 
 class QDateTime;
