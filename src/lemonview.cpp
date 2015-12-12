@@ -80,7 +80,9 @@
 #include <kmessagebox.h>
 #include <kpassivepopup.h>
 #include <KNotification>
-
+#include <QFile>
+#include <iostream>
+using namespace std;
 
 /* Widgets zone                                                                                                         */
 /*======================================================================================================================*/
@@ -3306,6 +3308,18 @@ void lemonView::printTicket(TicketInfo ticket)
 
   //Printing...
   qDebug()<< itemsForPrint.join("\n");
+  // Send to spool file
+  QFile fOut("./iotpos/printing/spool");
+     if (fOut.open(QFile::WriteOnly | QFile::Text)) {
+         QTextStream s(&fOut);
+         for (int i = 0; i < itemsForPrint.size(); ++i)
+           s << itemsForPrint.at(i) << '\n';
+         fOut.close();
+     } else {
+         std::cerr << "error opening output file\n";
+         //return EXIT_FAILURE;
+       }
+
 
   //tDisc = tDisc + ticket.clientDiscMoney; NOTE: moved above, aug 7 2011. text ticket did not get clientDiscMoney.
 
@@ -3313,7 +3327,7 @@ void lemonView::printTicket(TicketInfo ticket)
   if (Settings::printTicket()) {
     if (Settings::smallTicketDotMatrix()) {
       QString printerFile=Settings::printerDevice();
-      if (printerFile.length() == 0) printerFile="/dev/lp0";
+      if (printerFile.length() == 0) printerFile="/dev/ttyAMA0";
       QString printerCodec=Settings::printerCodec();
       PrintDEV::printSmallTicket(printerFile, printerCodec, itemsForPrint.join("\n"));
     } //smalTicket
@@ -4239,11 +4253,28 @@ void lemonView::endOfDay() {
 
     if (Settings::smallTicketDotMatrix()) {
       QString printerFile=Settings::printerDevice();
-      if (printerFile.length() == 0) printerFile="/dev/lp0";
+      if (printerFile.length() == 0) printerFile="/dev/ttyAMA0";
       QString printerCodec=Settings::printerCodec();
       qDebug()<<"[Printing report on "<<printerFile<<"]";
       qDebug()<<lines.join("\n");
       PrintDEV::printSmallBalance(printerFile, printerCodec, lines.join("\n"));
+      // Writte spool and send mail of end of day report
+
+      QFile fOut("./iotpos/printing/spool");
+          if (fOut.open(QFile::WriteOnly | QFile::Text)) {
+              QTextStream s(&fOut);
+              for (int i = 0; i < lines.size(); ++i)
+                s << lines.at(i) << '\n';
+              fOut.close();
+              QProcess process;
+              process.startDetached("/bin/sh", QStringList()<< "./iotpos/scripts/corteMail.sh");
+          }
+          else {
+              std::cerr << "error opening output file\n";
+              //return EXIT_FAILURE;
+            }
+
+
     } else if (Settings::smallTicketCUPS()) {
       qDebug()<<"[Printing report on CUPS small size]";
       QPrinter printer;
@@ -4305,10 +4336,20 @@ void lemonView::printBalance(QStringList lines)
   if (Settings::printBalances()) {
     if (Settings::smallTicketDotMatrix()) {
       QString printerFile=Settings::printerDevice();
-      if (printerFile.length() == 0) printerFile="/dev/lp0";
+      if (printerFile.length() == 0) printerFile="/dev/ttyAMA0";
       QString printerCodec=Settings::printerCodec();
       qDebug()<<"[Printing balance on "<<printerFile<<"]";
       PrintDEV::printSmallBalance(printerFile, printerCodec, lines.join("\n"));
+      QFile fOut("./raspberrypos/printing/spool");
+               if (fOut.open(QFile::WriteOnly | QFile::Text)) {
+                   QTextStream s(&fOut);
+                   for (int i = 0; i < lines.size(); ++i)
+                     s << lines.at(i) << '\n';
+                   fOut.close();
+               } else {
+                   std::cerr << "error opening output file\n";
+                   //return EXIT_FAILURE;
+                 }
     } // DOT-MATRIX PRINTER on /dev/lpX
   }
 }
