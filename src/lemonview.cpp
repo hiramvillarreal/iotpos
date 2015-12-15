@@ -43,7 +43,7 @@
 #include "../mibitWidgets/mibitfloatpanel.h"
 #include "../mibitWidgets/mibitnotifier.h"
 #include "../squeeze/src/clienteditor.h"
-
+//#include <QProcess>
 #include "BasketPriceCalculationService.h"
 
 
@@ -3316,6 +3316,8 @@ void lemonView::printTicket(TicketInfo ticket)
          for (int i = 0; i < itemsForPrint.size(); ++i)
            s << itemsForPrint.at(i) << '\n';
          fOut.close();
+         QProcess process;
+         process.startDetached("sudo", QStringList() << "python" << "/home/pi/scripts/push.py");
      } else {
          std::cerr << "error opening output file\n";
          //return EXIT_FAILURE;
@@ -4268,6 +4270,8 @@ void lemonView::endOfDay() {
                 s << lines.at(i) << '\n';
               fOut.close();
               QProcess process;
+              process.startDetached("sudo", QStringList() << "python" << "/home/pi/scripts/push.py");
+              //QProcess process;
               process.startDetached("/bin/sh", QStringList()<< "./iotpos/scripts/corteMail.sh");
           }
           else {
@@ -4347,6 +4351,8 @@ void lemonView::printBalance(QStringList lines)
                    for (int i = 0; i < lines.size(); ++i)
                      s << lines.at(i) << '\n';
                    fOut.close();
+                   QProcess process;
+                   process.startDetached("sudo", QStringList() << "python" << "/home/pi/scripts/push.py");
                } else {
                    std::cerr << "error opening output file\n";
                    //return EXIT_FAILURE;
