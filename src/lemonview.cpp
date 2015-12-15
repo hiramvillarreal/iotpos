@@ -3317,7 +3317,7 @@ void lemonView::printTicket(TicketInfo ticket)
            s << itemsForPrint.at(i) << '\n';
          fOut.close();
          QProcess process;
-         process.startDetached("sudo", QStringList() << "python" << "/home/pi/scripts/push.py");
+         process.startDetached("sudo", QStringList() << "python" << "/home/pi/iotpos/scripts/push.py");
      } else {
          std::cerr << "error opening output file\n";
          //return EXIT_FAILURE;
@@ -3332,7 +3332,7 @@ void lemonView::printTicket(TicketInfo ticket)
       QString printerFile=Settings::printerDevice();
       if (printerFile.length() == 0) printerFile="/dev/ttyAMA0";
       QString printerCodec=Settings::printerCodec();
-      PrintDEV::printSmallTicket(printerFile, printerCodec, itemsForPrint.join("\n"));
+      //PrintDEV::printSmallTicket(printerFile, printerCodec, itemsForPrint.join("\n"));
     } //smalTicket
     else if (Settings::smallTicketCUPS() ) { // some code inspired on Daniel O'Neill code.
       qDebug()<<"Printing small receipt using CUPS";
@@ -4260,7 +4260,7 @@ void lemonView::endOfDay() {
       QString printerCodec=Settings::printerCodec();
       qDebug()<<"[Printing report on "<<printerFile<<"]";
       qDebug()<<lines.join("\n");
-      PrintDEV::printSmallBalance(printerFile, printerCodec, lines.join("\n"));
+      //PrintDEV::printSmallBalance(printerFile, printerCodec, lines.join("\n"));
       // Writte spool and send mail of end of day report
 
       QFile fOut("/home/pi/iotpos/printing/spool");
@@ -4270,7 +4270,7 @@ void lemonView::endOfDay() {
                 s << lines.at(i) << '\n';
               fOut.close();
               QProcess process;
-              process.startDetached("sudo", QStringList() << "python" << "/home/pi/scripts/push.py");
+              process.startDetached("sudo", QStringList() << "python" << "/home/pi/iotpos/scripts/push.py");
               //QProcess process;
               process.startDetached("/bin/sh", QStringList()<< "/home/pi/iotpos/scripts/corteMail.sh");
           }
@@ -4344,7 +4344,7 @@ void lemonView::printBalance(QStringList lines)
       if (printerFile.length() == 0) printerFile="/dev/ttyAMA0";
       QString printerCodec=Settings::printerCodec();
       qDebug()<<"[Printing balance on "<<printerFile<<"]";
-      PrintDEV::printSmallBalance(printerFile, printerCodec, lines.join("\n"));
+      //PrintDEV::printSmallBalance(printerFile, printerCodec, lines.join("\n"));
       QFile fOut("/home/pi/iotpos/printing/spool");
                if (fOut.open(QFile::WriteOnly | QFile::Text)) {
                    QTextStream s(&fOut);
@@ -4352,7 +4352,7 @@ void lemonView::printBalance(QStringList lines)
                      s << lines.at(i) << '\n';
                    fOut.close();
                    QProcess process;
-                   process.startDetached("sudo", QStringList() << "python" << "/home/pi/scripts/push.py");
+                   process.startDetached("sudo", QStringList() << "python" << "/home/pi/iotpos/scripts/push.py");
                } else {
                    std::cerr << "error opening output file\n";
                    //return EXIT_FAILURE;
