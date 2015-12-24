@@ -14,6 +14,7 @@ To compile and install:
   mkdir build
   cd build
   cmake .. -DCMAKE_INSTALL_PREFIX=`kde4-config --prefix`
+cmake -DCMAKE_INSTALL_PREFIX=kde4-config --prefix -DQT_QMAKE_EXECUTABLE=which qmake-qt4 -DQT_INCLUDE_DIR=/usr/include/qt4 -DCMAKE_BUILD_TYPE=Release ..
   make
   su
   make install
