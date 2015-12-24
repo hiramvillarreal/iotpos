@@ -129,9 +129,9 @@ bool Gaveta::isUnused()
 void Gaveta::open()
 {
     QProcess process;
-    process.startDetached("sudo", QStringList() << "python" << "/home/pi/py-thermal-printer-master/printer2.py");
+    process.startDetached("sudo", QStringList() << "python" << "/home/pi/iotpos/py-thermal-printer-master/printer2.py");
     process.startDetached("sudo", QStringList() << "python" << "/home/pi/iotpos/scripts/pulse.py");
-   // process.startDetached("sudo", QStringList() << "python" << "/home/pi/scripts/push.py");
+
   QFile file(printerDevice);
   if (file.open(QIODevice::ReadWrite)) {
     qDebug()<<"Pinter | Openning drawer...";
