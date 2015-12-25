@@ -3286,12 +3286,9 @@ void lemonView::printTicket(TicketInfo ticket)
   line = QString("%1  %2 %3").arg(harticles).arg(htotal).arg(KGlobal::locale()->formatMoney(ticket.total, QString(), 2));
   itemsForPrint.append(line);
   itemsForPrint.append("  ");
-  itemsForPrint.append("  ");
-  if (tDisc > 0) {
+   if (tDisc > 0) {
     line = i18n("You saved %1", KGlobal::locale()->formatMoney(tDisc, QString(), 2));
     itemsForPrint.append(line);
-    itemsForPrint.append(" /n");
-    itemsForPrint.append(" /n");
   }
   if (ticket.clientDiscMoney>0) itemsForPrint.append(hClientDisc+": "+QString::number(ticket.clientDiscMoney));
   if (ticket.buyPoints>0 && ticket.clientid>1) itemsForPrint.append(hClientBuyPoints);
