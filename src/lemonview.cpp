@@ -3313,8 +3313,8 @@ void lemonView::printTicket(TicketInfo ticket)
   }
   line = QString(Settings::editTicketMessage());
   itemsForPrint.append(line);
-  itemsForPrint.append(" ");
-  itemsForPrint.append(" ");
+  itemsForPrint.append("\n");
+  itemsForPrint.append("\n");
   ticketHtml.append("</body></html>");
 
   //Printing...
@@ -4046,6 +4046,7 @@ void lemonView::corteDeCaja()
     lines.append(line);
     lines.append("----------  ----------  ----------");
     lines.append(line);
+   // lines.append(line);
     QList<qulonglong> transactionsByUser = drawer->getTransactionIds();
     QStringList trList;
 
@@ -4130,9 +4131,9 @@ void lemonView::corteDeCaja()
         cfList.append(data);
     }
     pbInfo.cfList = cfList;
+
     line = QString("</table></body></html>");
     linesHTML.append(line);
-
 
     if (Settings::smallTicketDotMatrix()) {
       //print it on the /dev/lpXX...   send lines to print
