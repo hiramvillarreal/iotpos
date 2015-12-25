@@ -2,39 +2,59 @@ Installing iotPOS on the Raspberry Pi
 
 To compile and install:
 
-* First make sure you have kde4 installed (kdelibs4, kdebase4, kdepimlibs4) and all of his
-  dependencies (qt4...):
+The first step is to make sure everything is up to date:
+
   sudo apt-get update
+  sudo apt-get upgrade
+
+Now that everything is up to date, we can install the needed kde4 packages   (kdelibs4, kdebase4, kdepimlibs4) and all of his
+  dependencies (qt4...):
+  
   sudo apt-get install kde-standard libqt4-dev
 
-While kde is installed, it will prompt you to either choose LightDM or KDE. Being that we already have LXDE, we can choose LightDM since it has less resouces to install.
+  While kde is installed, it will prompt you to either choose LightDM or KDE. Being that we already have LXDE, we can choose LightDM since it has less resouces to install.
 
 Once you have KDE, and QT4 installed, we can install mysql:
+
   sudo apt-get install mysql-client mysql-server
+  
+Now we need to install everything else that’s needed for the compile:
+
   sudo apt-get install build-essential g++ cmake gettext libqt4-sql-mysql kdelibs5-dev
  
  The next step is to download the source:
- 
+  cd ~
   git clone https://github.com/hiramvillarreal/iotpos
+  
+Move into the newly created directory, and create a 'build' Direcotry and move into it:
+
   cd iotpos 
   mkdir build
   cd build
+
+Run CMake with your path to KDE4:
+
   cmake -DCMAKE_INSTALL_PREFIX=kde4-config --prefix -DQT_QMAKE_EXECUTABLE=which qmake-qt4 -DQT_INCLUDE_DIR=/usr/include/qt4 -DCMAKE_BUILD_TYPE=Release ..
-  make
-  su
-  make install
+ 
+Run make to compile lemonpos. This took about an hour on the Pi A, A+, B and B+, took 15 minutes on the new Pi2:
   
-  Now, copy the lemonrc file to your local .kde/share/config directory:
+  make
+  
+After the compile is finished, you will need to install everything:  
+  
+  sudo make install
+  
+Now, copy the lemonrc file to your local .kde/share/config directory:
   
   cp iotpos/src/lemonrc /home/pi/.kde/share/config/  #Replace USER with your username.
   
-* After installation, you need to create a database and user on mysql, to do this:
+After installation, you need to create a database and user on mysql, to do this:
 
   cd lemonpos/database_resources
   cat lemon_mysql.sql | mysql -u root -p
   
   
-* To start using lemon, type 
+To start using lemon, type 
 
   lemon
   
