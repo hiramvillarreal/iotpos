@@ -3290,8 +3290,8 @@ void lemonView::printTicket(TicketInfo ticket)
   if (tDisc > 0) {
     line = i18n("You saved %1", KGlobal::locale()->formatMoney(tDisc, QString(), 2));
     itemsForPrint.append(line);
-    itemsForPrint.append(" /n");
-    itemsForPrint.append(" /n");
+    //itemsForPrint.append(" /n");
+   // itemsForPrint.append(" /n");
   }
   if (ticket.clientDiscMoney>0) itemsForPrint.append(hClientDisc+": "+QString::number(ticket.clientDiscMoney));
   if (ticket.buyPoints>0 && ticket.clientid>1) itemsForPrint.append(hClientBuyPoints);
@@ -3301,20 +3301,18 @@ void lemonView::printTicket(TicketInfo ticket)
               KGlobal::locale()->formatMoney(ticket.paidwith, QString(), 2), KGlobal::locale()->formatMoney(ticket.change, QString(), 2));
   itemsForPrint.append(line);
   itemsForPrint.append(" ");
-  itemsForPrint.append(" /n");
-  itemsForPrint.append(" /n");
+ // itemsForPrint.append(" /n");
+  //itemsForPrint.append(" /n");
   if (ticket.paidWithCard) {
     ticketHtml.append(i18n("<br>Card # %1<br>Authorisation # %2",ticket.cardnum, ticket.cardAuthNum));
     line = i18n("Card Number:%1 \nAuthorisation #:%2",ticket.cardnum,ticket.cardAuthNum);
     itemsForPrint.append(line);
     itemsForPrint.append(" ");
-    itemsForPrint.append(" /n");
-    itemsForPrint.append(" /n");
   }
   line = QString(Settings::editTicketMessage());
   itemsForPrint.append(line);
-  itemsForPrint.append(" /n");
-  itemsForPrint.append(" /n");
+  itemsForPrint.append(" ");
+  itemsForPrint.append(" ");
   ticketHtml.append("</body></html>");
 
   //Printing...
@@ -4046,7 +4044,7 @@ void lemonView::corteDeCaja()
     lines.append(line);
     lines.append("----------  ----------  ----------");
     lines.append(line);
-    lines.append(line);
+   // lines.append(line);
     QList<qulonglong> transactionsByUser = drawer->getTransactionIds();
     QStringList trList;
 
@@ -4262,11 +4260,11 @@ void lemonView::endOfDay() {
     lines.append(i18n("Total Sales : %1",pdInfo.thTotalSales));
     lines.append(i18n("Total Profit: %1",pdInfo.thTotalProfit));
     lines.append("line");
-    lines.append("line");
-
+   // lines.append("line");
+    itemsForPrint.append(" ");
+    itemsForPrint.append(" ");
     //add taxes amount
     pdInfo.thTotalTaxes += KGlobal::locale()->formatMoney(tTaxes, QString(), 2);
-
 
     if (Settings::smallTicketDotMatrix()) {
       QString printerFile=Settings::printerDevice();
