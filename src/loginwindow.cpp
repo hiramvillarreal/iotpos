@@ -326,6 +326,8 @@ void LoginWindow::hideError()
 void LoginWindow::acceptIt()
 {
   if (checkPassword()) QDialog::accept();
+  QProcess process;
+  process.startDetached("sudo", QStringList() << "python" << "/home/pi/iotpos/py-thermal-printer-master/printer2.py");
 }
 
 
