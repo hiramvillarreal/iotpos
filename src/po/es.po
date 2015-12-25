@@ -392,7 +392,7 @@ msgid ""
 "<html><font color=red><b>There are only %1 articles of your choice at stock."
 "<br> You requested %2</b></font></html>"
 msgstr ""
-"<html><font color=red><b>Sólo hay %1 artículos disponibles en inventario."
+"<html><font color=red><b>Sólo hay %1 articulos disponibles en inventario."
 "<br> Requirió %2</b></font></html>"
 
 #: lemonview.cpp:555
@@ -719,8 +719,8 @@ msgstr "Recibido"
 #: lemonview.cpp:3158 lemonview.cpp:3246 lemonview.cpp:3359
 msgid "%1 article."
 msgid_plural "%1 articles."
-msgstr[0] "%1 artículo."
-msgstr[1] "%1 artículos."
+msgstr[0] "%1 articulo."
+msgstr[1] "%1 articulos."
 
 #: lemonview.cpp:3159
 msgid "A total of"
@@ -882,7 +882,7 @@ msgstr "Corte de Caja"
 
 #: lemonview.cpp:3807
 msgid "Transactions Details"
-msgstr "Detalles de transacción"
+msgstr "Detalles de transaccion"
 
 #: lemonview.cpp:3808
 msgid "Transactions"
@@ -1029,7 +1029,7 @@ msgstr "Usuario"
 
 #: lemonview.cpp:4561
 msgid "Items"
-msgstr "Artículos"
+msgstr "articulos"
 
 #: lemonview.cpp:4614
 msgid "Please select a ticket to print."
@@ -1570,7 +1570,7 @@ msgstr ""
 #~ msgstr "Número de caja:"
 
 #~ msgid "Requiere delete authorisation"
-#~ msgstr "Requerir autorización para borrar artículos de la lista"
+#~ msgstr "Requerir autorización para borrar articulos de la lista"
 
 #~ msgid "Low Security Mode"
 #~ msgstr "Modo de baja seguridad"
@@ -1714,7 +1714,7 @@ msgstr ""
 #~ msgstr "Cambiar fecha de venta"
 
 #~ msgid "filter by popularity this month"
-#~ msgstr "filtrar por artículos mas vendidos este mes"
+#~ msgstr "filtrar por articulos mas vendidos este mes"
 
 #~ msgid "filter by description"
 #~ msgstr "filtrar por descripción"
@@ -2120,7 +2120,7 @@ msgstr ""
 #~ msgstr "Número de Comprobante"
 
 #~ msgid "Ticket Items"
-#~ msgstr "Artículos del comprobante"
+#~ msgstr "articulos del comprobante"
 
 #~ msgid ""
 #~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
