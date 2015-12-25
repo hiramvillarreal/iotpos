@@ -4255,8 +4255,9 @@ void lemonView::endOfDay() {
 
     lines.append(i18n("Total Sales : %1",pdInfo.thTotalSales));
     lines.append(i18n("Total Profit: %1",pdInfo.thTotalProfit));
-    lines.append("line");
-    lines.append("line");
+    itemsForPrint.append("  ");
+    itemsForPrint.append("\n");
+    itemsForPrint.append("  ");
 
     //add taxes amount
     pdInfo.thTotalTaxes += KGlobal::locale()->formatMoney(tTaxes, QString(), 2);
