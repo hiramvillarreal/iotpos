@@ -3313,6 +3313,8 @@ void lemonView::printTicket(TicketInfo ticket)
   }
   line = QString(Settings::editTicketMessage());
   itemsForPrint.append(line);
+  itemsForPrint.append(" /n");
+  itemsForPrint.append(" /n");
   ticketHtml.append("</body></html>");
 
   //Printing...
