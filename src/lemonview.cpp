@@ -3297,23 +3297,17 @@ void lemonView::printTicket(TicketInfo ticket)
   line = i18n("Paid with %1, your change is %2",
               KGlobal::locale()->formatMoney(ticket.paidwith, QString(), 2), KGlobal::locale()->formatMoney(ticket.change, QString(), 2));
   itemsForPrint.append(line);
-//  itemsForPrint.append(" ");
- // itemsForPrint.append(" /n");
- // itemsForPrint.append(" /n");
   if (ticket.paidWithCard) {
     ticketHtml.append(i18n("<br>Card # %1<br>Authorisation # %2",ticket.cardnum, ticket.cardAuthNum));
     line = i18n("Card Number:%1 \nAuthorisation #:%2",ticket.cardnum,ticket.cardAuthNum);
     itemsForPrint.append(line);
     itemsForPrint.append(" ");
-   // itemsForPrint.append(" /n");
-   // itemsForPrint.append(" /n");
   }
   line = QString(Settings::editTicketMessage());
   itemsForPrint.append(line);
   itemsForPrint.append("  ");
   itemsForPrint.append("\n");
   itemsForPrint.append("  ");
-  //itemsForPrint.append("\n");
   ticketHtml.append("</body></html>");
 
   //Printing...
@@ -4045,7 +4039,6 @@ void lemonView::corteDeCaja()
     lines.append(line);
     lines.append("----------  ----------  ----------");
     lines.append(line);
-   // lines.append(line);
     QList<qulonglong> transactionsByUser = drawer->getTransactionIds();
     QStringList trList;
 
@@ -4130,7 +4123,9 @@ void lemonView::corteDeCaja()
         cfList.append(data);
     }
     pbInfo.cfList = cfList;
-
+    lines.append("  ");
+    lines.append("\n");
+    lines.append("  ");
     line = QString("</table></body></html>");
     linesHTML.append(line);
 
