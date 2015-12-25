@@ -3293,7 +3293,7 @@ void lemonView::printTicket(TicketInfo ticket)
   if (ticket.clientDiscMoney>0) itemsForPrint.append(hClientDisc+": "+QString::number(ticket.clientDiscMoney));
   if (ticket.buyPoints>0 && ticket.clientid>1) itemsForPrint.append(hClientBuyPoints);
   if (ticket.clientPoints>0 && ticket.clientid>1) itemsForPrint.append(hClientPoints);
-  itemsForPrint.append(" ");
+//  itemsForPrint.append(" ");
   line = i18n("Paid with %1, your change is %2",
               KGlobal::locale()->formatMoney(ticket.paidwith, QString(), 2), KGlobal::locale()->formatMoney(ticket.change, QString(), 2));
   itemsForPrint.append(line);
