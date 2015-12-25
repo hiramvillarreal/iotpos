@@ -3300,9 +3300,9 @@ void lemonView::printTicket(TicketInfo ticket)
   line = i18n("Paid with %1, your change is %2",
               KGlobal::locale()->formatMoney(ticket.paidwith, QString(), 2), KGlobal::locale()->formatMoney(ticket.change, QString(), 2));
   itemsForPrint.append(line);
-  itemsForPrint.append(" ");
-  itemsForPrint.append(" /n");
-  itemsForPrint.append(" /n");
+//  itemsForPrint.append(" ");
+ // itemsForPrint.append(" /n");
+ // itemsForPrint.append(" /n");
   if (ticket.paidWithCard) {
     ticketHtml.append(i18n("<br>Card # %1<br>Authorisation # %2",ticket.cardnum, ticket.cardAuthNum));
     line = i18n("Card Number:%1 \nAuthorisation #:%2",ticket.cardnum,ticket.cardAuthNum);
@@ -3316,7 +3316,7 @@ void lemonView::printTicket(TicketInfo ticket)
   itemsForPrint.append("  ");
   itemsForPrint.append("\n");
   itemsForPrint.append("  ");
-  itemsForPrint.append("\n");
+  //itemsForPrint.append("\n");
   ticketHtml.append("</body></html>");
 
   //Printing...
