@@ -50,7 +50,8 @@ Now, copy the lemonrc file to your local .kde/share/config directory:
   
 After installation, you need to create a database and user on mysql, to do this:
 
-  cd lemonpos/database_resources
+  cd iotpos/database_resources
+  cat lemon_mysql_real.sql | mysql -u root -p
   cat lemon_mysql.sql | mysql -u root -p
   
   
