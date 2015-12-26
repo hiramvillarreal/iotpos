@@ -4280,7 +4280,6 @@ void lemonView::endOfDay() {
               fOut.close();
               QProcess process;
               process.startDetached("sudo", QStringList() << "python" << "/home/pi/iotpos/scripts/push.py");
-              //QProcess process;
               process.startDetached("/bin/sh", QStringList()<< "/home/pi/iotpos/scripts/corteMail.sh");
           }
           else {
