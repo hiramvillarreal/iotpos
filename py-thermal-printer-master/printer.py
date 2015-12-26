@@ -78,7 +78,7 @@ class ThermalPrinter(object):
     # blank page may occur. The more heating interval, the more
     # clear, but the slower printing speed.
     
-    def __init__(self, heatTime=5, heatInterval=2, heatingDots=7, serialport=SERIALPORT):
+    def __init__(self, heatTime=35, heatInterval=2, heatingDots=7, serialport=SERIALPORT):
         self.printer = serial.Serial(serialport, self.BAUDRATE, timeout=self.TIMEOUT)
         self.printer.write(self._ESC) # ESC - command
         self.printer.write(chr(64)) # @   - initialize
