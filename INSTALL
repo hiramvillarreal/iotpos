@@ -70,3 +70,23 @@ To start using lemon, type
   By default, squeeze has security disabled, this to let you configure squeeze database settings in case
   you have installed the database server at a different computer.
   
+SERIAL THERMAL PRINTER INSTALL
+
+
+Python Libraries; These libraries are required by the thermal printer library and example programs:
+
+sudo apt-get install python-serial python-imaging python-unidecode
+
+This takes a couple of minutes. 
+
+Test the printer with:
+
+  cd iotpos/py-thermal-printer-master
+  sudo python printer.py
+
+
+
+
+
+
+
