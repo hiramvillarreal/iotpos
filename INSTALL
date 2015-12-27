@@ -34,8 +34,8 @@ Move into the newly created directory, and create a 'build' Direcotry and move i
 
 Run CMake with your path to KDE4:
 
-  cmake -DCMAKE_INSTALL_PREFIX=kde4-config --prefix -DQT_QMAKE_EXECUTABLE=which qmake-qt4 -DQT_INCLUDE_DIR=/usr/include/qt4 -DCMAKE_BUILD_TYPE=Release ..
- 
+  cmake .. -DCMAKE_INSTALL_PREFIX=`kde4-config --prefix`
+  
 Run make to compile lemonpos. This took about an hour on the Pi A, A+, B and B+, took 15 minutes on the new Pi2:
   
   make
