@@ -10,7 +10,7 @@ The first step is to make sure everything is up to date:
 Now that everything is up to date, we can install the needed kde4 packages   (kdelibs4, kdebase4, kdepimlibs4) and all of his
   dependencies (qt4...):
   
-  sudo apt-get install kde-standard libqt4-dev
+  sudo apt-get install kde-standard libqt4-dev libqt4-core libqt4-gui 
 
   While kde is installed, it will prompt you to either choose LightDM or KDE. Being that we already have LXDE, we can choose LightDM since it has less resouces to install.
 
