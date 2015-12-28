@@ -1,4 +1,6 @@
-Installing iotPOS on the Raspberry Pi
+Installing iotPOS on the Raspberry Pi and Hardware setup.
+
+---------------------------------------------------SOFTWARE-SETUP------------------------------------------------------
 
 To compile and install:
 
@@ -11,6 +13,7 @@ Now that everything is up to date, we can install the needed kde4 packages   (kd
   dependencies (qt4...):
   
   sudo apt-get install kde-standard libqt4-dev libqt4-core libqt4-gui 
+  sudo apt-get install kde-standard libqt4-dev
 
   While kde is installed, it will prompt you to either choose LightDM or KDE. Being that we already have LXDE, we can choose LightDM since it has less resouces to install.
 
@@ -21,7 +24,7 @@ Once you have KDE, and QT4 installed, we can install mysql:
 Now we need to install everything else that’s needed for the compile:
 
   sudo apt-get install build-essential g++ cmake gettext libqt4-sql-mysql kdelibs5-dev
- 
+
  The next step is to download the source:
   cd ~
   git clone https://github.com/hiramvillarreal/iotpos
@@ -71,12 +74,23 @@ To start using lemon, type
   By default, squeeze has security disabled, this to let you configure squeeze database settings in case
   you have installed the database server at a different computer.
   
+---------------------------------------------------HARDWARE-SETUP------------------------------------------------------
+
 SERIAL THERMAL PRINTER INSTALL
 
+The serial port on the Raspberry Pi’s GPIO header is normally configured for console cable use,
+will output a Console from your Pi that,with a suitable Serial cable, you can use to control your Pi via the command-line.
+But now we want to use this port for the thermal printer instead, so we’ll need to disable this default behavior.
 
-Python Libraries; These libraries are required by the thermal printer library and example programs:
+  sudo raspi-config 
+  Advanced options
+  Serial /  Enable/Disable shell and kernel messages on the serial connection
+   Would you like a login shell to be accessible over       │
+          │ serial?  NO
 
-sudo apt-get install python-serial python-imaging python-unidecode
+These libraries are required by the thermal printer library and example programs:
+
+  sudo apt-get install python-serial python-imaging python-unidecode
 
 This takes a couple of minutes. 
 
@@ -84,6 +98,18 @@ Test the printer with:
 
   cd iotpos/py-thermal-printer-master
   sudo python printer.py
+
+CONECCTIONS FOR THE HARDWARE
+
+-----SERIAL THERMAL PRINTER----
+  Serial Data Cable rx TO    Physical pin 8 It's also commonly known as "Serial TX" ttyAMA0.
+  Serial Data Cable tx  DO NOT CONNECT IT TO THE GPIO RX AS SOME ARE 5 V TTL WILL DAMAGE THE RASPBERRY PI!!!
+  Serial GND from  serial printer to any gpio GND could use Physical pin 6,9, 14. 
+  
+-----Push buttom and LED.
+
+
+
 
 
 
