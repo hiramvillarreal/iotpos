@@ -108,7 +108,8 @@ CONECCTIONS FOR THE HARDWARE
   
 -----Push buttom and LED.
 
-
+Push bottom N.O. to Physical pin 16 switch to GND.
+LED+ Physical pin 12 LED- TO any GND available.
 
 
 
