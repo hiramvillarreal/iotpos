@@ -1,18 +1,19 @@
 
-Welcome to iotPOS an open source Point of Sale software based on LemonPOS is targeted for micro, small and medium businesses.
+Welcome to Lemon/iotPOS an open source Point of Sale software based on LemonPOS is targeted for micro, small and medium businesses.
 MySQL is employed for data management and storage, and can be used a single database with
 many POS terminals on a network.
 
 Being Linux or any other unix the target operating system, your information is safer against
 virus attacks, and lowers the costs in licenses. IotPOS provides a modern and easy to use Interface, a search panel, a price-checker tool, 
 an administration tool for managing your store, printed reports, and more...
-This POS was developed for single-board computers as the Raspberry pi, banana pi and BeagleBone Black due it use the GPIO as interfaces.
-Even so, you can compile it with a PC for testing.
 
-This project reduces costs because include two of the more expensive hardwareparts  on a Point of sale: the CPU and the thermal printer.  
-Just add monitor keyboard and mouse and you ready to go.
+This Point of Sale was developed for single-board computers (SBC) as the Raspberry pi, banana pi and BeagleBone Black due it make use of
+the GPIO interface. Even so, you can compile it with a PC for testing.
+
+This project reduces costs because include two of the more expensive hardware parts on a Point of sale: the CPU and the thermal printer.  
+Just add monitor, keyboard and mouse and you ready to go.
 
 Work with many USB barcode readers, wireless keyboard and mouse. A HDMI monitor it needs, not all the HDMI to VGA converters works
 with some SBC like the Raspberry pi.
 
-The generic  serial thermal printer use the GPIO and the ttyAMA0 serial out.
+The generic serial thermal printer use the GPIO and the ttyAMA0 serial out.
