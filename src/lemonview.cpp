@@ -4286,7 +4286,7 @@ void lemonView::endOfDay() {
               std::cerr << "error opening output file\n";
               //return EXIT_FAILURE;
             }
-
+//
 
     } else if (Settings::smallTicketCUPS()) {
       qDebug()<<"[Printing report on CUPS small size]";
