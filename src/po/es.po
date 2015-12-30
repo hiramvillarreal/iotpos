@@ -1714,13 +1714,13 @@ msgid "Change Sale Date"
 msgstr "Cambiar fecha de venta"
 
 msgid "filter by popularity this month"
-msgstr "filtrar por artículos mas vendidos este mes"
+msgstr "Filtrar por artículos mas vendidos este mes"
 
 msgid "filter by description"
-msgstr "filtrar por descripción"
+msgstr "Filtrar por descripción"
 
 msgid "filter by category"
-msgstr "filtrar por categoría"
+msgstr "Filtrar por categoría"
 
 msgid "Code"
 msgstr "Código"
@@ -1937,9 +1937,27 @@ msgid "Small receipt using a thermal ticket printer (using CUPS)"
 msgstr "Ticket pequeño usando una impresora de tickets (via CUPS)"
 
 msgid "Small receipt using the thermal ticket printer (/dev/ttyAMA0)"
-msgstr "Ticket pequeño usando la impresora de tickets (/dev/lpX)"
+msgstr "Ticket pequeño usando la impresora de tickets (/dev/ttyAMA0)"
 
 msgid "Printer Device:"
+msgstr "Dispositivo de impresión:"
+
+msgid "Discounts"
+msgstr "Dispositivo de impresión:"
+
+msgid "Allow negative stock, but alert the user."
+msgstr "Permitir existencia negativa alertando"
+
+msgid "Apply only first discount"
+msgstr "Aplicar solo primer descuento"
+
+msgid "Invoices (Mexico Only)"
+msgstr "Facturas (México solamente)"
+
+msgid "Ask for invoice generation"
+msgstr "Preguntar generar factura"
+
+msgid "Discounts"
 msgstr "Dispositivo de impresión:"
 
 msgid "Printer Codec:"
@@ -2054,8 +2072,8 @@ msgid "Requiere authorisation to delete items from shopping list"
 msgstr ""
 "Requerir autorización para borrar un elemento de la lista de compras."
 
-#~ msgid "Products Grid"
-#~ msgstr "Mostrar Rejilla de productos"
+msgid "Products Grid"
+msgstr "Mostrar Rejilla de productos"
 
 msgid "Show products grid"
 msgstr "Mostrar Rejilla de productos"
