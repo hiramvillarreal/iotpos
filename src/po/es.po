@@ -1734,8 +1734,8 @@ msgstr ""
 #~ msgid "Total:"
 #~ msgstr "Total:"
 
-#~ msgid "Change:"
-#~ msgstr "Cambio:"
+msgid "Change:"
+msgstr "Cambio:"
 
 #~ msgid "Subtotal:"
 #~ msgstr "subtotal:"
@@ -1945,8 +1945,8 @@ msgstr ""
 #~ msgid "Printer Codec:"
 #~ msgstr "Código de impresión a usar (codec):"
 
-#~ msgid "Open drawer"
-#~ msgstr "Abrir la gaveta"
+msgid "Open drawer"
+msgstr "Abrir la gaveta"
 
 #~ msgid "Big format [A4, Letter] receipt using normal printer (using CUPS)"
 #~ msgstr "Un recibo grande [A4,Carta] usando una impresora normal (via CUPS)"
