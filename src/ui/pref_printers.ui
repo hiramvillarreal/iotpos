@@ -49,6 +49,13 @@
        </widget>
       </item>
       <item>
+       <widget class="QRadioButton" name="kcfg_bigReceipt">
+        <property name="text">
+         <string>Big format [A4, Letter] receipt using normal printer (using CUPS)</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QRadioButton" name="kcfg_smallTicketDotMatrix">
         <property name="sizePolicy">
          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
@@ -129,13 +136,6 @@
        <widget class="QCheckBox" name="kcfg_printZeroTicket">
         <property name="text">
          <string>Print  under demand (physical bottom).</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="kcfg_bigReceipt">
-        <property name="text">
-         <string>Big format [A4, Letter] receipt using normal printer (using CUPS)</string>
         </property>
        </widget>
       </item>

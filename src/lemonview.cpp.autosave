@@ -4294,7 +4294,7 @@ if (Settings::printZeroTicket()) {
         else {
              PrintDEV::printSmallBalance(printerFile, printerCodec, lines.join("\n"));
          }
-
+}
 
     } else if (Settings::smallTicketCUPS()) {
       qDebug()<<"[Printing report on CUPS small size]";
@@ -4379,7 +4379,9 @@ void lemonView::printBalance(QStringList lines)
    else {
         PrintDEV::printSmallBalance(printerFile, printerCodec, lines.join("\n"));}
     }
-}
+
+  }
+
 }
 /* MODEL Zone */
 
