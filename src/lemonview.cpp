@@ -3305,9 +3305,11 @@ void lemonView::printTicket(TicketInfo ticket)
   }
   line = QString(Settings::editTicketMessage());
   itemsForPrint.append(line);
+ if (Settings::printZeroTicket()) {
   itemsForPrint.append("  ");
   itemsForPrint.append("\n");
   itemsForPrint.append("  ");
+ }
   ticketHtml.append("</body></html>");
 
   //Printing...
@@ -4127,9 +4129,11 @@ void lemonView::corteDeCaja()
         cfList.append(data);
     }
     pbInfo.cfList = cfList;
+    if (Settings::printZeroTicket()) {
     lines.append("  ");
     lines.append("\n");
     lines.append("  ");
+    }
     line = QString("</table></body></html>");
     linesHTML.append(line);
 
@@ -4259,10 +4263,11 @@ void lemonView::endOfDay() {
 
     lines.append(i18n("Total Sales : %1",pdInfo.thTotalSales));
     lines.append(i18n("Total Profit: %1",pdInfo.thTotalProfit));
+if (Settings::printZeroTicket()) {
     lines.append("  ");
     lines.append("\n");
     lines.append("  ");
-
+}
     //add taxes amount
     pdInfo.thTotalTaxes += KGlobal::locale()->formatMoney(tTaxes, QString(), 2);
 
