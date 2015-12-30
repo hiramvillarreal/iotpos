@@ -57,7 +57,7 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>Small receipt using a dot-matrix ticket printer (using /dev/ttyAM0)</string>
+         <string>Small receipt using a dot-matrix ticket printer (using /dev/ttyAMA0)</string>
         </property>
         <property name="checked">
          <bool>false</bool>
@@ -119,7 +119,7 @@
         <item>
          <widget class="QCheckBox" name="kcfg_openDrawer">
           <property name="text">
-           <string>Open drawer</string>
+           <string>Imprimir bajo demanda</string>
           </property>
          </widget>
         </item>

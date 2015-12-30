@@ -4353,6 +4353,7 @@ void lemonView::printBalance(QStringList lines)
       QString printerCodec=Settings::printerCodec();
       qDebug()<<"[Printing balance on "<<printerFile<<"]";
       //PrintDEV::printSmallBalance(printerFile, printerCodec, lines.join("\n"));
+   if (Settings::openDrawer()) {
       QFile fOut("/home/pi/iotpos/printing/spool");
                if (fOut.open(QFile::WriteOnly | QFile::Text)) {
                    QTextStream s(&fOut);
@@ -4365,11 +4366,15 @@ void lemonView::printBalance(QStringList lines)
                    std::cerr << "error opening output file\n";
                    //return EXIT_FAILURE;
                  }
-    } // DOT-MATRIX PRINTER on /dev/lpX
+
+       } // DOT-MATRIX PRINTER on /dev/lpX
+   else {
+        PrintDEV::printSmallBalance(printerFile, printerCodec, lines.join("\n"));}
+    }
+
   }
+
 }
-
-
 /* MODEL Zone */
 
 void lemonView::setupModel()
