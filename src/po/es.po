@@ -1942,9 +1942,6 @@ msgstr "Ticket pequeño usando la impresora de tickets (/dev/ttyAMA0)"
 msgid "Printer Device:"
 msgstr "Dispositivo de impresión:"
 
-#~ msgid "Discounts"
-#~ msgstr "Dispositivo de impresión:"
-
 msgid "Allow negative stock, but alert the user."
 msgstr "Permitir existencia negativa alertando"
 
@@ -1956,9 +1953,6 @@ msgstr "Facturas (México solamente)"
 
 msgid "Ask for invoice generation"
 msgstr "Preguntar generar factura"
-
-#~ msgid "Discounts"
-#~ msgstr "Dispositivo de impresión:"
 
 msgid "Printer Codec:"
 msgstr "Código de impresión a usar (codec):"
