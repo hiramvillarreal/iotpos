@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>526</width>
+    <width>532</width>
     <height>382</height>
    </rect>
   </property>
@@ -39,23 +39,6 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QRadioButton" name="kcfg_smallTicketCUPS">
-        <property name="text">
-         <string>Small receipt using a thermal ticket printer (using CUPS)</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="kcfg_bigReceipt">
-        <property name="text">
-         <string>Big format [A4, Letter] receipt using normal printer (using CUPS)</string>
-        </property>
-       </widget>
-      </item>
-      <item>
        <widget class="QRadioButton" name="kcfg_smallTicketDotMatrix">
         <property name="sizePolicy">
          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
@@ -64,7 +47,7 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>Small receipt using a dot-matrix ticket printer (using /dev/ttyAMA0)</string>
+         <string>Small receipt using the thermal ticket printer (/dev/ttyAMA0)</string>
         </property>
         <property name="checked">
          <bool>false</bool>
@@ -136,6 +119,23 @@
        <widget class="QCheckBox" name="kcfg_printZeroTicket">
         <property name="text">
          <string>Print  under demand (physical bottom).</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="kcfg_smallTicketCUPS">
+        <property name="text">
+         <string>Small receipt using a thermal ticket printer (using CUPS)</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="kcfg_bigReceipt">
+        <property name="text">
+         <string>Big format [A4, Letter] receipt using normal printer (using CUPS)</string>
         </property>
        </widget>
       </item>
