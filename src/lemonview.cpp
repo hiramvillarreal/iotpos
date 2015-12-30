@@ -165,7 +165,7 @@ lemonView::lemonView() //: QWidget(parent)
   QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
   db = QSqlDatabase::addDatabase("QMYSQL"); //moved here because calling multiple times cause a crash on certain installations (Not kubuntu 8.10).
   ui_mainview.setupUi(this);
-  dlgLogin = new LoginWindow(i18n("Welcome to Lemon"),
+  dlgLogin = new LoginWindow(i18n("Welcome to IotPOS"),
                              i18n("Enter username and password to start using the system."),
                              LoginWindow::FullScreen);
   dlgPassword = new LoginWindow(i18n("Authorisation Required"),
@@ -2222,7 +2222,7 @@ void lemonView::createNewTransaction(TransactionType type)
     currentTransaction = myDb->insertTransaction(info);
     qDebug()<<"NEW TRANSACTION:"<<currentTransaction;
     if (currentTransaction <= 0) {
-      KMessageBox::detailedError(this, i18n("Lemon has encountered an error when openning database, click details to see the error details."), myDb->lastError(), i18n("Create New Transaction: Error"));
+      KMessageBox::detailedError(this, i18n("IotPOS has encountered an error when openning database, click details to see the error details."), myDb->lastError(), i18n("Create New Transaction: Error"));
     }
     else {
       transactionInProgress = true;
@@ -3662,7 +3662,7 @@ void lemonView::deleteCurrentTransaction()
     createNewTransaction(tSell);
   }
   else {
-    KMessageBox::detailedError(this, i18n("Lemon has encountered an error when querying the database, click details to see the error details."), myDb->lastError(), i18n("Delete Transaction: Error"));
+    KMessageBox::detailedError(this, i18n("IotPOS has encountered an error when querying the database, click details to see the error details."), myDb->lastError(), i18n("Delete Transaction: Error"));
   }
   delete myDb;
 }

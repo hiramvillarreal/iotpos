@@ -352,8 +352,8 @@ msgid "Continue"
 msgstr "Continuar"
 
 #: lemonview.cpp:163
-msgid "Welcome to Lemon"
-msgstr "Bienvenido a Lemon"
+msgid "Welcome to IotPOS"
+msgstr "Bienvenido a IotPOS"
 
 #: lemonview.cpp:164
 msgid "Enter username and password to start using the system."
@@ -533,10 +533,10 @@ msgstr "Puntos:"
 
 #: lemonview.cpp:2119
 msgid ""
-"Lemon has encountered an error when openning database, click details to see "
+"IotPOS has encountered an error when openning database, click details to see "
 "the error details."
 msgstr ""
-"Lemon ha encontrado un error al buscar en la base de datos. Presione "
+"IotPOS ha encontrado un error al buscar en la base de datos. Presione "
 "\"detalles\" para ver mas detalles del error."
 
 #: lemonview.cpp:2119
@@ -719,8 +719,8 @@ msgstr "Recibido"
 #: lemonview.cpp:3158 lemonview.cpp:3246 lemonview.cpp:3359
 msgid "%1 article."
 msgid_plural "%1 articles."
-msgstr[0] "%1 artículo."
-msgstr[1] "%1 artículos."
+msgstr[0] "%1 articulo."
+msgstr[1] "%1 articulos."
 
 #: lemonview.cpp:3159
 msgid "A total of"
@@ -805,10 +805,10 @@ msgstr "Imprimir instrucciones de ordenes especiales"
 
 #: lemonview.cpp:3515
 msgid ""
-"Lemon has encountered an error when querying the database, click details to "
+"IotPOS has encountered an error when querying the database, click details to "
 "see the error details."
 msgstr ""
-"Lemon ha encontrado un error al buscar en la base de datos. Presione "
+"IotPOS ha encontrado un error al buscar en la base de datos. Presione "
 "\"detalles\" para ver mas detalles del error."
 
 #: lemonview.cpp:3515
@@ -882,7 +882,7 @@ msgstr "Corte de Caja"
 
 #: lemonview.cpp:3807
 msgid "Transactions Details"
-msgstr "Detalles de transacción"
+msgstr "Detalles de transaccion"
 
 #: lemonview.cpp:3808
 msgid "Transactions"
@@ -1969,8 +1969,8 @@ msgstr ""
 #~ msgid "Print a random message on tickets."
 #~ msgstr "Imprimir mensajes aleatorios en tickets"
 
-#~ msgid "This is the &Terminal Number:"
-#~ msgstr "Núm de &terminal:"
+msgid "This is the &Terminal Number:"
+msgstr "Núm de &terminal:"
 
 #~ msgid ""
 #~ "Use this to enter Customer IDs at the product code input box. This can "
@@ -1987,8 +1987,8 @@ msgstr ""
 #~ "Esto puede causar que se ignoren algunos productos (dependiendo de sus "
 #~ "datos  y el modo configurado) en favor de la identificación de clientes."
 
-#~ msgid "Use Product Code Input to Identify Customers"
-#~ msgstr "Usar campo de código de producto para identificar clientes."
+msgid "Use Product Code Input to Identify Customers"
+msgstr "Usar campo de código de producto para identificar clientes."
 
 #~ msgid ""
 #~ "Use 6 digits to identify customers. Any product with 6 digits (UPC-E) "
@@ -1997,10 +1997,10 @@ msgstr ""
 #~ "Usar Id de 6 digitos para identificar clientes. Cualquier producto con "
 #~ "código de 6 digitos será ignorado."
 
-#~ msgid "As 6 digits code (exactly 6). Discard products with 6 digits code."
-#~ msgstr ""
-#~ "Como Id de 6 digitos exactamente. Descartar productos con códigos de 6 "
-#~ "digitos."
+msgid "As 6 digits code (exactly 6). Discard products with 6 digits code."
+msgstr ""
+"Como Id de 6 digitos exactamente. Descartar productos con códigos de 6 "
+"digitos."
 
 #~ msgid ""
 #~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
@@ -2034,31 +2034,31 @@ msgstr ""
 #~ "underline; color:#0000ff;\">http://en.wikipedia.org/wiki/"
 #~ "Universal_Product_Code#Prefixes</span></a></p></body></html>"
 
-#~ msgid ""
-#~ "As 12/13 Digits Starting with digit \"4\". As described in UPC Standard."
-#~ msgstr "Como un Id de 12/13 digitos comenzando con el número 4."
+msgid ""
+"As 12/13 Digits Starting with digit \"4\". As described in UPC Standard."
+msgstr "Como un Id de 12/13 digitos comenzando con el número 4."
 
-#~ msgid "Dialogs and Authorizations"
-#~ msgstr "Diálogos y autorización"
+msgid "Dialogs and Authorizations"
+msgstr "Diálogos y autorización"
 
-#~ msgid "Show a dialog when printing ticket"
-#~ msgstr "Mostrar diálogo al imprimir"
+msgid "Show a dialog when printing ticket"
+msgstr "Mostrar diálogo al imprimir"
 
-#~ msgid "Time showing the dialog:"
-#~ msgstr "Tiempo de duración del ticket en pantalla:"
+msgid "Time showing the dialog:"
+msgstr "Tiempo de duración del ticket en pantalla:"
 
 #~ msgid " seconds"
 #~ msgstr " segundos"
 
-#~ msgid "Requiere authorisation to delete items from shopping list"
-#~ msgstr ""
-#~ "Requerir autorización para borrar un elemento de la lista de compras."
+msgid "Requiere authorisation to delete items from shopping list"
+msgstr ""
+"Requerir autorización para borrar un elemento de la lista de compras."
 
 #~ msgid "Products Grid"
 #~ msgstr "Mostrar Rejilla de productos"
 
-#~ msgid "Show products grid"
-#~ msgstr "Mostrar Rejilla de productos"
+msgid "Show products grid"
+msgstr "Mostrar Rejilla de productos"
 
 #~ msgid "Low Stock"
 #~ msgstr "Inventario bajo"
