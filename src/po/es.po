@@ -1983,8 +1983,8 @@ msgstr "Núm de &terminal:"
 msgid "Use Product Code Input to Identify Customers"
 msgstr "Usar campo de código de producto para identificar clientes."
 
-msgid "Use 6 digits to identify customers. Any product with 6 digits (UPC-E) will be discarded and only clients will be searched.
-msgstr "Usar Id de 6 digitos para identificar clientes. Cualquier producto con código de 6 digitos será ignorado."
+#~ msgid "Use 6 digits to identify customers. Any product with 6 digits (UPC-E) will be discarded and only clients will be searched.
+#~ msgstr "Usar Id de 6 digitos para identificar clientes. Cualquier producto con código de 6 digitos será ignorado."
 
 msgid "As 6 digits code (exactly 6). Discard products with 6 digits code."
 msgstr "Como Id de 6 digitos exactamente. Descartar productos con códigos de 6 digitos."
