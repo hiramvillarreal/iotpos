@@ -1957,8 +1957,8 @@ msgstr "Facturas (México solamente)"
 msgid "Ask for invoice generation"
 msgstr "Preguntar generar factura"
 
-msgid "Discounts"
-msgstr "Dispositivo de impresión:"
+#~ msgid "Discounts"
+#~ msgstr "Dispositivo de impresión:"
 
 msgid "Printer Codec:"
 msgstr "Código de impresión a usar (codec):"
