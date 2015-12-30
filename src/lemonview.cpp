@@ -4353,7 +4353,7 @@ void lemonView::printBalance(QStringList lines)
       QString printerCodec=Settings::printerCodec();
       qDebug()<<"[Printing balance on "<<printerFile<<"]";
       //PrintDEV::printSmallBalance(printerFile, printerCodec, lines.join("\n"));
-   if (Settings::openDrawer()) {
+   if (Settings::printZeroTicket()) {
       QFile fOut("/home/pi/iotpos/printing/spool");
                if (fOut.open(QFile::WriteOnly | QFile::Text)) {
                    QTextStream s(&fOut);

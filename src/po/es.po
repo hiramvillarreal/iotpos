@@ -1960,8 +1960,8 @@ msgstr ""
 #~ msgid "Print Special Orders"
 #~ msgstr "Imprimir Ordenes especiales"
 
-#~ msgid "Print tickets with a ZERO total payment."
-#~ msgstr "Imprimir tickets con total en CEROS."
+#~ msgid "Print  under demand (physical bottom)."
+#~ msgstr "Imprimir tickets con botón bajo demanda."
 
 #~ msgid "Print Group/Pack Contents on tickets."
 #~ msgstr "Imprimir Contenido de los grupos o paquetes en el ticket"

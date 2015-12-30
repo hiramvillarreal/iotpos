@@ -246,7 +246,7 @@ msgstr "Entrada de efectivo"
 
 #: lemon.cpp:258 lemonview.cpp:4066
 msgid "End of day report"
-msgstr "Reporte de fin del día"
+msgstr "Reporte de fin del dia"
 
 #: lemon.cpp:265
 msgid "Add Special Order"
