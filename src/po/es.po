@@ -1677,8 +1677,8 @@ msgstr ""
 #~ msgid "Get Printer Codec to use"
 #~ msgstr "obtener codec a usar para imprimir"
 
-#~ msgid "Basic Use Toolbar"
-#~ msgstr "Barra de herramientas básica"
+msgid "Basic Use Toolbar"
+msgstr "Barra de herramientas básica"
 
 msgid "Administrator's Toolbar"
 msgstr "Barra de herramientas de configuración"
@@ -1686,53 +1686,53 @@ msgstr "Barra de herramientas de configuración"
 msgid "Ca&sh"
 msgstr "&Efectivo"
 
-#~ msgid "Ca&rd"
-#~ msgstr "&Tarjeta"
+msgid "Ca&rd"
+msgstr "&Tarjeta"
 
-#~ msgid "&Internal Credit"
-#~ msgstr "Credito &Interno"
+msgid "&Internal Credit"
+msgstr "Credito &Interno"
 
-#~ msgid "Cash &Amount:"
-#~ msgstr "C&antidad:"
+msgid "Cash &Amount:"
+msgstr "C&antidad:"
 
-#~ msgid "Currency conversion"
-#~ msgstr "Conversión de moneda"
+msgid "Currency conversion"
+msgstr "Conversión de moneda"
 
 #~ msgid "$"
 #~ msgstr "$"
 
-#~ msgid "Card &Number:"
-#~ msgstr "&Número de tarjeta:"
+msgid "Card &Number:"
+msgstr "&Número de tarjeta:"
 
-#~ msgid "Authorization number:"
-#~ msgstr "Núm. de Autorización:"
+msgid "Authorization number:"
+msgstr "Núm. de Autorización:"
 
-#~ msgid "Sale Date"
-#~ msgstr "Fecha de venta"
+msgid "Sale Date"
+msgstr "Fecha de venta"
 
-#~ msgid "Change Sale Date"
-#~ msgstr "Cambiar fecha de venta"
+msgid "Change Sale Date"
+msgstr "Cambiar fecha de venta"
 
-#~ msgid "filter by popularity this month"
-#~ msgstr "filtrar por artículos mas vendidos este mes"
+msgid "filter by popularity this month"
+msgstr "filtrar por artículos mas vendidos este mes"
 
-#~ msgid "filter by description"
-#~ msgstr "filtrar por descripción"
+msgid "filter by description"
+msgstr "filtrar por descripción"
 
-#~ msgid "filter by category"
-#~ msgstr "filtrar por categoría"
+msgid "filter by category"
+msgstr "filtrar por categoría"
 
-#~ msgid "Code"
-#~ msgstr "Código"
+msgid "Code"
+msgstr "Código"
 
-#~ msgid "Description"
-#~ msgstr "Descripción"
+msgid "Description"
+msgstr "Descripción"
 
-#~ msgid "Units"
-#~ msgstr "Unidades"
+msgid "Units"
+msgstr "Unidades"
 
-#~ msgid "Total:"
-#~ msgstr "Total:"
+msgid "Total:"
+msgstr "Total:"
 
 msgid "Change:"
 msgstr "Cambio:"
