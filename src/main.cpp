@@ -100,8 +100,8 @@ int main(int argc, char **argv)
             mysqldump.waitForFinished();
             //NOTE: The process above does not consider an error (network, mysql config, wrong password/user, etc..) and does not inform such if it happens.
             //      It just gives an empty backup file. But once everything is working fine, it will give a backup every day.
-            QProcess process;
-            process.startDetached("/bin/sh", QStringList()<< "/home/pi/iotpos/scripts/dropbox.sh");
+            //QProcess process;
+            //process.startDetached("/bin/sh", QStringList()<< "/home/pi/iotpos/scripts/dropbox.sh");
             lemon *widget = new lemon;
             widget->show();
             splash->finish(widget);
