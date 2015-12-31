@@ -42,7 +42,7 @@
 static const char description[] =
     I18N_NOOP("IotPOS, A point of sale for linux");
 
-static const char version[] = "0.9.7.0 | December 04, 2015";
+static const char version[] = "0.9.6.0 | March 04, 2013";
 
 KSplashScreen *splash;
 
@@ -76,7 +76,7 @@ int main(int argc, char **argv)
         KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
         if (args->count() == 0)
         {
-            QPixmap image (KStandardDirs().findResource("data", "iotpos/images/splash_screen.png"));
+            QPixmap image (KStandardDirs().findResource("data", "lemon/images/splash_screen.png"));
             splash = new KSplashScreen(image, Qt::WindowStaysOnTopHint);
             splash->show();
 

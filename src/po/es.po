@@ -1740,11 +1740,11 @@ msgstr "Cambio:"
 #~ msgid "Subtotal:"
 #~ msgstr "subtotal:"
 
-msgid "Go back"
-msgstr "Regresar"
+#~ msgid "Go back"
+#~ msgstr "Regresar"
 
-msgid "Enter item description:"
-msgstr "Descripción:"
+#~ msgid "Enter item description:"
+#~ msgstr "Descripción:"
 
 #~ msgid "Reprint Ticket"
 #~ msgstr "Reimprimir ticket"
