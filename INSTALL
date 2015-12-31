@@ -60,12 +60,14 @@ After installation, you need to create a database and user on mysql, to do this:
   cat lemon_mysql_real.sql | mysql -u root -p
   cat lemon_mysql.sql | mysql -u root -p
   
+  To restore a database with preloaded products and examples:
+  mysql -u root -p lemondb < lemondb.sql
   
 To start using lemon, type 
 
   lemon
   
-  If for any reason lemon binary is not found, and if your kde4 install path is /opt/kde4 do:
+If for any reason lemon binary is not found, and if your kde4 install path is /opt/kde4 do:
   
   /opt/kde4/bin/lemon
   
