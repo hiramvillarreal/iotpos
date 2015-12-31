@@ -4375,6 +4375,7 @@ void lemonView::printBalance(QStringList lines)
                    fOut.close();
                    QProcess process;
                    process.startDetached("sudo", QStringList() << "python" << "/home/pi/iotpos/scripts/push.py");
+                   if (Settings::openDrawer()) drawer->open();
                } else {
                    std::cerr << "error opening output file\n";
                    //return EXIT_FAILURE;
@@ -4382,7 +4383,9 @@ void lemonView::printBalance(QStringList lines)
 
        } // DOT-MATRIX PRINTER on /dev/lpX
    else {
-        PrintDEV::printSmallBalance(printerFile, printerCodec, lines.join("\n"));}
+        PrintDEV::printSmallBalance(printerFile, printerCodec, lines.join("\n"));
+         if (Settings::openDrawer()) drawer->open();
+         }
     }
 }
 }
