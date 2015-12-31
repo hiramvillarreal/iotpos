@@ -33,7 +33,7 @@ static const char version[] = "0.9.6.0 | March 04, 2013";
 
 int main(int argc, char **argv)
 {
-    KAboutData about("IotStock", 0, ki18n("IoT Stock"), version, ki18n(description), KAboutData::License_GPL, ki18n("(C) 2007-2011 Miguel Chavez Gamboa"), KLocalizedString(), 0, "miguel@lemonpos.org");
+    KAboutData about("squeeze", 0, ki18n("IoT Stock"), version, ki18n(description), KAboutData::License_GPL, ki18n("(C) 2007-2011 Miguel Chavez Gamboa"), KLocalizedString(), 0, "miguel@lemonpos.org");
     about.addAuthor( ki18n("Miguel Chavez Gamboa"), KLocalizedString(), "miguel@lemonpos.org" );
     about.setBugAddress("bugs.squeeze@lemonpos.org");
     KCmdLineArgs::init(argc, argv, &about);
