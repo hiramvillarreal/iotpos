@@ -120,6 +120,9 @@ p, li { white-space: pre-wrap; }
      <property name="title">
       <string>Dialogs and Authorizations</string>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+     </property>
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <property name="spacing">
        <number>2</number>
@@ -200,14 +203,23 @@ p, li { white-space: pre-wrap; }
    </item>
    <item>
     <widget class="QGroupBox" name="groupMatrix">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
      <property name="title">
       <string>Products Grid</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
      </property>
      <layout class="QVBoxLayout">
       <property name="spacing">
@@ -286,14 +298,14 @@ p, li { white-space: pre-wrap; }
         </item>
        </layout>
       </item>
+      <item>
+       <widget class="QCheckBox" name="kcfg_allowNegativeStock">
+        <property name="text">
+         <string>Allow negative stock, but alert the user.</string>
+        </property>
+       </widget>
+      </item>
      </layout>
-    </widget>
-   </item>
-   <item>
-    <widget class="QCheckBox" name="kcfg_allowNegativeStock">
-     <property name="text">
-      <string>Allow negative stock, but alert the user.</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -312,6 +324,9 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="title">
       <string>Drawer Cash Level</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
@@ -335,82 +350,34 @@ p, li { white-space: pre-wrap; }
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="groupDiscount">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
+    <widget class="QCheckBox" name="kcfg_firstDiscountOnly">
+     <property name="text">
+      <string>Apply only first discount</string>
      </property>
-     <property name="title">
-      <string>Discounts</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_4">
-      <item>
-       <widget class="QCheckBox" name="kcfg_firstDiscountOnly">
-        <property name="text">
-         <string>Apply only first discount</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="groupTax">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
+    <widget class="QCheckBox" name="kcfg_addTax">
+     <property name="text">
+      <string>Add taxes to sale (not included in price)</string>
      </property>
-     <property name="title">
-      <string>Taxes</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_4">
-      <item>
-       <widget class="QCheckBox" name="kcfg_addTax">
-        <property name="text">
-         <string>Add taxes to sale (not included in price)</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="groupRounding">
-     <property name="title">
-      <string>Rounding</string>
+    <widget class="QCheckBox" name="kcfg_roundToUSStandard">
+     <property name="toolTip">
+      <string>0.001-0.004 round down to 0.00 and 0.005 - 0.009 round up to 0.01</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_6">
-      <item>
-       <widget class="QCheckBox" name="kcfg_roundToUSStandard">
-        <property name="toolTip">
-         <string>0.001-0.004 round down to 0.00 and 0.005 - 0.009 round up to 0.01</string>
-        </property>
-        <property name="text">
-         <string>Round  using US Standard 5/4.</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <property name="text">
+      <string>Round  using US Standard 5/4.</string>
+     </property>
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="groupInvoice">
-     <property name="title">
-      <string>Invoices (Mexico Only)</string>
+    <widget class="QCheckBox" name="kcfg_askForInvoice">
+     <property name="text">
+      <string>Ask for invoice generation</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_7">
-      <item>
-       <widget class="QCheckBox" name="kcfg_askForInvoice">
-        <property name="text">
-         <string>Ask for invoice generation</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
     </widget>
    </item>
   </layout>
