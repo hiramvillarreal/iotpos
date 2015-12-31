@@ -40,15 +40,15 @@
 #include <QDate>
 
 static const char description[] =
-    I18N_NOOP("Lemon, A point of sale for linux");
+    I18N_NOOP("IotPOS, A point of sale for linux");
 
-static const char version[] = "0.9.6.0 | March 04, 2013";
+static const char version[] = "0.9.7.0 | December 04, 2015";
 
 KSplashScreen *splash;
 
 int main(int argc, char **argv)
 {
-    KAboutData about("lemon", 0, ki18n("lemon"), version, ki18n(description), KAboutData::License_GPL, ki18n("(C) 2007-2011 Miguel Chavez Gamboa"), KLocalizedString(), 0, "miguel@lemonpos.org");
+    KAboutData about("IotPOS", 0, ki18n("IoT Point of Sale"), version, ki18n(description), KAboutData::License_GPL, ki18n("(C) 2007-2011 Miguel Chavez Gamboa"), KLocalizedString(), 0, "miguel@lemonpos.org");
     about.addAuthor( ki18n("Miguel Chavez Gamboa"), KLocalizedString(), "miguel@lemonpos.org" );
     about.setBugAddress("bugs.lemon@lemonpos.org");
     KCmdLineArgs::init(argc, argv, &about);
@@ -76,7 +76,7 @@ int main(int argc, char **argv)
         KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
         if (args->count() == 0)
         {
-            QPixmap image (KStandardDirs().findResource("data", "lemon/images/splash_screen.png"));
+            QPixmap image (KStandardDirs().findResource("data", "iotpos/images/splash_screen.png"));
             splash = new KSplashScreen(image, Qt::WindowStaysOnTopHint);
             splash->show();
 
