@@ -1314,8 +1314,8 @@ msgid "Invalid username or password"
 msgstr "Usuario o contraseña inválido "
 
 #: main.cpp:43
-msgid "Lemon, A point of sale for linux"
-msgstr "Lemon, un punto de venta para linux"
+msgid "IotPOS, A point of sale for linux"
+msgstr "IotPOS, un punto de venta para linux"
 
 #: main.cpp:52
 msgid "lemon"
