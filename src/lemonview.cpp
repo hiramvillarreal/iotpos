@@ -4263,6 +4263,24 @@ void lemonView::endOfDay() {
 
     lines.append(i18n("Total Sales : %1",pdInfo.thTotalSales));
     lines.append(i18n("Total Profit: %1",pdInfo.thTotalProfit));
+    //NOTE: Is this the best place to launch the backup process?
+    QString fn = QString("%1/iotpos-backup/").arg(QDir::homePath());
+    QDir dir;
+    if (!dir.exists(fn))
+        dir.mkdir(fn);
+    fn = fn+QString("iotpos-db--backup.sql");//.arg(QDateTime::currentDateTime().toString("dd-MMM-yyyy__hh.mm.AP"));
+    qDebug()<<"BACKUP DATABASE at " << fn;
+
+    QStringList params;
+    QString pswd = "-p" + Settings::editDBPassword();
+    QString usr  = "-u" + Settings::editDBUsername();
+    QString hst  = "-h" + Settings::editDBServer();
+    QString dnm  = Settings::editDBName();
+    QString fnm  = "-r" + fn;
+    params << hst << usr << pswd << fnm << dnm;
+    QProcess mysqldump;
+    mysqldump.start("mysqldump", params);
+    mysqldump.waitForFinished();
 if (Settings::printZeroTicket()) {
     lines.append("  ");
     lines.append("\n");

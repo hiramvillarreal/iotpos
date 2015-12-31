@@ -246,7 +246,7 @@ msgstr "Entrada de efectivo"
 
 #: lemon.cpp:258 lemonview.cpp:4066
 msgid "End of day report"
-msgstr "Reporte de fin del día"
+msgstr "Reporte de fin del dia"
 
 #: lemon.cpp:265
 msgid "Add Special Order"
@@ -906,7 +906,7 @@ msgstr "Pagado"
 
 #: lemonview.cpp:3813 lemonview.cpp:4074
 msgid "Method"
-msgstr "Método"
+msgstr "Metodo"
 
 #: lemonview.cpp:3814
 msgid ""

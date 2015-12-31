@@ -80,12 +80,12 @@ int main(int argc, char **argv)
             splash = new KSplashScreen(image, Qt::WindowStaysOnTopHint);
             splash->show();
 
-            //NOTE: Is this the best place to launch the backup process?
-            QString fn = QString("%1/iotpos-backup/").arg(QDir::homePath());
-            QDir dir;
-            if (!dir.exists(fn))
-                dir.mkdir(fn);
-            fn = fn+QString("iotpos-db--backup.sql");//.arg(QDateTime::currentDateTime().toString("dd-MMM-yyyy__hh.mm.AP"));
+  /*         //NOTE: Is this the best place to launch the backup process?
+     //       QString fn = QString("%1/iotpos-backup/").arg(QDir::homePath());
+    //        QDir dir;
+    //        if (!dir.exists(fn))
+    //            dir.mkdir(fn);
+     //       fn = fn+QString("iotpos-db--backup.sql");//.arg(QDateTime::currentDateTime().toString("dd-MMM-yyyy__hh.mm.AP"));
             qDebug()<<"BACKUP DATABASE at " << fn;
             
             QStringList params;
@@ -101,7 +101,7 @@ int main(int argc, char **argv)
             //NOTE: The process above does not consider an error (network, mysql config, wrong password/user, etc..) and does not inform such if it happens.
             //      It just gives an empty backup file. But once everything is working fine, it will give a backup every day.
             //QProcess process;
-            //process.startDetached("/bin/sh", QStringList()<< "/home/pi/iotpos/scripts/dropbox.sh");
+            //process.startDetached("/bin/sh", QStringList()<< "/home/pi/iotpos/scripts/dropbox.sh");*/
             lemon *widget = new lemon;
             widget->show();
             splash->finish(widget);
