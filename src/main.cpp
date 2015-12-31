@@ -48,7 +48,7 @@ KSplashScreen *splash;
 
 int main(int argc, char **argv)
 {
-    KAboutData about("IotPOS", 0, ki18n("IoT Point of Sale"), version, ki18n(description), KAboutData::License_GPL, ki18n("(C) 2007-2011 Miguel Chavez Gamboa"), KLocalizedString(), 0, "miguel@lemonpos.org");
+    KAboutData about("lemon", 0, ki18n("IotPOS"), version, ki18n(description), KAboutData::License_GPL, ki18n("(C) 2007-2011 Miguel Chavez Gamboa"), KLocalizedString(), 0, "miguel@lemonpos.org");
     about.addAuthor( ki18n("Miguel Chavez Gamboa"), KLocalizedString(), "miguel@lemonpos.org" );
     about.setBugAddress("bugs.lemon@lemonpos.org");
     KCmdLineArgs::init(argc, argv, &about);
