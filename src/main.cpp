@@ -81,11 +81,11 @@ int main(int argc, char **argv)
             splash->show();
 
             //NOTE: Is this the best place to launch the backup process?
-            QString fn = QString("%1/lemon-backup/").arg(QDir::homePath());
+            QString fn = QString("%1/iotpos-backup/").arg(QDir::homePath());
             QDir dir;
             if (!dir.exists(fn))
                 dir.mkdir(fn);
-            fn = fn+QString("lemon-db--backup--%1.sql").arg(QDateTime::currentDateTime().toString("dd-MMM-yyyy__hh.mm.AP"));
+            fn = fn+QString("iotpos-db--backup--%1.sql").arg(QDateTime::currentDateTime().toString("dd-MMM-yyyy__hh.mm.AP"));
             qDebug()<<"BACKUP DATABASE at " << fn;
             
             QStringList params;
