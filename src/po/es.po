@@ -1746,11 +1746,6 @@ msgstr "Regresar"
 msgid "Enter item description:"
 msgstr "Introduzca descripción:"
 
-msgid "Note: Prices may not include price changes or discounts applied at "
-"the sale. Stock level may not include current/ongoing sales."
-msgstr "Nota: El precio puede no incluir cambios o descuentos aplicados a"
-"La venta final, La existencia podria no incluir las ventas ocurriendo"
-
 msgid "Price with Tax"
 msgstr "Precio con IVA"
 
