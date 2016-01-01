@@ -2930,4 +2930,3 @@ msgstr "Aceptar"
 #~ "left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
 #~ "style=\" font-size:11pt; font-weight:600;\">Reportes en pantalla</span></"
 #~ "p></body></html>"
-
