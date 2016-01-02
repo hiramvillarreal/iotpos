@@ -196,7 +196,9 @@ class ThermalPrinter(object):
         self.printer.write(chr(29))  # LEAVE
         self.printer.write(chr(107)) # LEAVE
         self.printer.write(chr(67))  # USE ABOVE CHART
-        self.printer.write(chr(13))  # USE CHART NUMBER OF CHAR 
+        line2=linecache.getline('/home/pi/iotpos/printing/spool', 3)
+        num=len(line2)-1
+        self.printer.write(chr(num))  # USE CHART NUMBER OF CHAR 
         self.printer.write(msg)
         
     def print_text(self, msg, chars_per_line=None):
@@ -375,10 +377,10 @@ if __name__ == '__main__':
     line0=linecache.getline('/home/pi/iotpos/printing/spool', 1)
     line1=linecache.getline('/home/pi/iotpos/printing/spool', 2)
     line2=linecache.getline('/home/pi/iotpos/printing/spool', 3)
-    print str.strip( line2 )
     print str.strip( line1 )
     print str.strip( line0 )
     print str.strip( line2 )
+    print len(line2)-1
     p.print_text(line0)
     p.print_text(line1)
     p.bold_off()
