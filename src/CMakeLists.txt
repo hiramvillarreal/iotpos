@@ -65,9 +65,9 @@ kde4_add_ui_files( lemon_SRCS
 
 kde4_add_kcfg_files(lemon_SRCS settings.kcfgc )
 
-kde4_add_executable(lemon ${lemon_SRCS})
+kde4_add_executable(iotpos ${lemon_SRCS})
 
-target_link_libraries(lemon
+target_link_libraries(iotpos
   ${KDE4_KDEUI_LIBS}
   ${KDE4_KIO_LIBS}
   ${QT_LIBRARIES}
@@ -83,7 +83,7 @@ IF(NOT GETTEXT_MSGFMT_EXECUTABLE)
 ------")
 ELSE(NOT GETTEXT_MSGFMT_EXECUTABLE)
 
-        SET(catalogname lemon)
+        SET(catalogname iotpos)
 
         ADD_CUSTOM_TARGET(translations ALL)
 
@@ -100,7 +100,7 @@ ELSE(NOT GETTEXT_MSGFMT_EXECUTABLE)
 
 ENDIF(NOT GETTEXT_MSGFMT_EXECUTABLE)
 
-install(TARGETS lemon DESTINATION ${BIN_INSTALL_DIR} )
+install(TARGETS iotpos DESTINATION ${BIN_INSTALL_DIR} )
 
 ##### client #####
 #set(lemon_client_SRCS
@@ -113,11 +113,11 @@ install(TARGETS lemon DESTINATION ${BIN_INSTALL_DIR} )
 ########### install files ###############
 
 install( FILES lemon.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
-install( FILES lemonui.rc     DESTINATION  ${DATA_INSTALL_DIR}/lemon )
+install( FILES lemonui.rc     DESTINATION  ${DATA_INSTALL_DIR}/iotpos )
 # With next line... the user needs to read/write the file...
 install( FILES lemonrc        DESTINATION  ${CONFIG_INSTALL_DIR} )
 #install( FILES lemonrc        DESTINATION  ${HOME}/.kde/share/config/ )
 install( FILES lemon.kcfg     DESTINATION  ${KCFG_INSTALL_DIR} )
 #For KNotifications
-install( FILES lemon.notifyrc DESTINATION ${DATA_INSTALL_DIR}/lemon)
+install( FILES lemon.notifyrc DESTINATION ${DATA_INSTALL_DIR}/iotpos)
 

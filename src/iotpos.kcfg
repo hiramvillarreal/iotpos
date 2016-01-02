@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="lemonrc"/>
+  <group name="lemon">
+    <entry name="SplitterSizes" type="IntList">
+      <label>How the main window is divided.</label>
+    </entry>
+    <entry name="GridSplitterSizes" type="IntList">
+      <label>How the grid/purchase-list is divided.</label>
+    </entry>
+  </group>
+  <group name="Store Preferences">
+    <entry name="editStoreName" type="String">
+      <label>Store Name</label>
+      <default>My Store</default>
+    </entry>
+    <entry name="storePhone" type="String">
+      <label>Store Phone Number</label>
+      <default></default>
+    </entry>
+    <entry name="storeAddress" type="String">
+      <label>Store Address</label>
+      <default></default>
+    </entry>
+    <entry name="editTicketMessage" type="String">
+      <label>Ticket Message</label>
+      <default>Thanks for your preference!</default>
+    </entry>
+    <entry name="storeLogo" type="String">
+      <label>Store Logo file</label>
+      <default></default>
+    </entry>
+    <entry name="chLogoOnTop" type="Bool">
+      <label>Print Logo on ticket Top</label>
+      <default>true</default>
+    </entry>
+  </group>
+  <group name="General Preferences">
+    <entry name="groupUserIdAsCode" type="Bool">
+      <label>Use Code Input for Customer Identification.</label>
+      <default>0</default>
+    </entry>
+    <entry name="rb6Digits" type="Bool">
+        <label>Use 6 digits for customer id.</label>
+        <default>0</default>
+    </entry>
+    <entry name="rb12DigitsCustom" type="Bool">
+        <label>Use 12/13 Digits for customer id.</label>
+        <default>0</default>
+    </entry>
+    <entry name="editTerminalNumber" type="Int">
+      <label>POS Number</label>
+      <default>1</default>
+    </entry>
+    <entry name="requiereDelAuth" type="Bool">
+      <label>Requiere delete authorisation</label>
+      <default>false</default>
+    </entry>
+    <entry name="lowSecurityMode" type="Bool">
+    <label>Low Security Mode</label>
+    <default>false</default>
+    </entry>
+    <entry name="showCurrencyOnTotal" type="Bool">
+      <label>Show Currency</label>
+      <default>true</default>
+    </entry>
+    <entry name="editCurrencyFull" type="String">
+      <label>Full Currency String</label>
+      <default>Pesos Mexicanos</default>
+    </entry>
+    <entry name="editCurrencyShort" type="String">
+      <label>Short Currency String</label>
+      <default>MXP</default>
+    </entry>
+    <entry name="showGrid" type="Bool">
+      <label>Show Products Grid</label>
+      <default>true</default>
+    </entry>
+    <entry name="stockAlertValue" type="Int">
+     <label>Low Stock Alert</label>
+     <default>5</default>
+    </entry>
+    <entry name="cashMinLevel" type="Double">
+     <label>Low Cash Level</label>
+     <default>100</default>
+    </entry>
+    <entry name="displayWarningOnLowCash" type="Bool">
+      <label>Display Low Cash Warning</label>
+      <default>true</default>
+    </entry>
+    <entry name="firstDiscountOnly" type="Bool">
+      <label>Apply only first discount</label>
+      <default>true</default>
+    </entry>
+    <entry name="addTax" type="Bool">
+      <label>Add tax to prices. Tax is not included in price</label>
+      <default>true</default>
+    </entry>
+    <entry name="roundToUSStandard" type="Bool">
+        <label>Round to US Standard 5/4</label>
+        <default>0</default>
+    </entry>
+    <entry name="askForInvoice" type="Bool">
+        <label>Ask for Invoice generation</label>
+        <default>0</default>
+    </entry>
+    <entry name="allowNegativeStock" type="Bool">
+        <label>Allow negative stock.</label>
+        <default>1</default>
+    </entry>
+  </group>
+  <group name="Database">
+    <entry name="editDBServer" type="String">
+      <label>DB Server Name</label>
+      <default>localhost</default>
+    </entry>
+    <entry name="editDBUsername" type="String">
+      <label>DB Username</label>
+      <default>lemonclient</default>
+    </entry>
+    <entry name="editDBPassword" type="String">
+      <label>DB Password</label>
+      <default>xarwit0721</default>
+    </entry>
+    <entry name="editDBName" type="String">
+      <label>DB Name</label>
+      <default>lemondb</default>
+    </entry>
+    <entry name="deleteEmptyCancelledTransactions" type="Bool">
+      <label>Delete empty cancelled transactions</label>
+      <default>true</default>
+    </entry>
+  </group>
+  <group name="Styles">
+    <entry name="useStyle" type="Bool">
+      <label>Use style</label>
+      <default>true</default>
+    </entry>
+    <entry name="styleName" type="String">
+      <label>Get Stylesheet Name</label>
+      <default>1</default>
+    </entry>
+  </group>
+  <group name="security">
+    <entry name="allowAnyUserToQuit" type="Bool">
+      <label>Allow any user to quit application</label>
+      <default>false</default>
+    </entry>
+  </group>
+  <group name="printer">
+   <entry name="showDialogOnPrinting" type="Bool">
+      <label>Show a dialog when printing the ticket</label>
+      <default>true</default>
+    </entry>
+    <entry name="ticketTime" type="Int">
+    <label>Time showing the ticket dialog</label>
+    <default>3</default>
+    </entry>
+    <entry name="openDrawer" type="Bool">
+      <label>There is a drawer and use it</label>
+      <default>false</default>
+    </entry>
+    <entry name="smallTicketDotMatrix" type="Bool">
+      <label>Print a small receipt using a ticket printer -dot matrix-.</label>
+      <default>false</default>
+    </entry>
+    <entry name="smallTicketCUPS" type="Bool">
+      <label>Print a small receipt using a thermal ticket printer -CUPS-</label>
+      <default>true</default>
+    </entry>
+    <entry name="bigReceipt" type="Bool">
+      <label>Print a big receipt using a normal printer</label>
+      <default>false</default>
+    </entry>
+    <entry name="printBalances" type="Bool">
+      <label>Print balances using ticket printer</label>
+      <default>false</default>
+    </entry>
+    <entry name="printZeroTicket" type="Bool">
+      <label>Print tickets with ZERO in the TOTAL</label>
+      <default>false</default>
+    </entry>
+    <entry name="printPackContents" type="Bool">
+      <label>Print Group/Pack Contents on tickets</label>
+      <default>true</default>
+    </entry>
+    <entry name="printSO" type="Bool">
+      <label>Print SpecialOrders Instructions</label>
+      <default>true</default>
+    </entry>
+    <entry name="printRandomMsg" type="Bool">
+      <label>Print Random Messages on tickets</label>
+      <default>true</default>
+    </entry>
+    <entry name="printTicket" type="Bool">
+      <label>Print Ticket (dou you have a ticket printer?)</label>
+      <default>false</default>
+    </entry>
+    <entry name="printChangedDateTicket" type="Bool">
+      <label>Print Date Changed Ticket</label>
+      <default>false</default>
+    </entry>
+    <entry name="printerDevice" type="String">
+      <label>Get printer device to use for printing</label>
+      <default>/dev/lp0</default>
+    </entry>
+    <entry name="printerCodec" type="String">
+      <label>Get Printer Codec to use</label>
+      <default>UTF-8</default> 
+    </entry>
+  </group>
+  
+  <group  name="Facturas">
+      <entry name="storeCity" type="String">
+          <label>Lugar</label>
+          <default>
+          </default>
+      </entry>
+      <entry name="storeRFC" type="String">
+          <label>RFC</label>
+          <default>
+          </default>
+      </entry>
+      <entry name="storeRegimen" type="String">
+          <label>Regimen Tributario</label>
+          <default>Régimen de Persona Física con actividad empresarial</default>
+      </entry>
+  </group>
+  
+</kcfg>

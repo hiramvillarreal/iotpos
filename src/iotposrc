@@ -1,0 +1,46 @@
+Height 600=600
+State=AAAA/wAAAAD9AAAAAAAAAyAAAAIeAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAAAAAA1QAAAAAAAAAAAAAAGABhAGQAbQBpAG4AVABvAG8AbABCAGEAcgEAAADVAAACSwAAAAAAAAAA
+Width 800=800
+
+[Database]
+editDBName=lemondb
+editDBPassword=xarwit0721
+editDBUsername=lemonclient
+
+[General Preferences]
+showCurrencyOnTotal=false
+
+[MainWindow]
+Height 600=616
+Height 768=768
+#MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAAv8AAAJTAAAABAAAAAQAAAAIAAAACPwAAAALAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAABoAYQBCAGEAcwBpAGMAVABvAG8AbABCAGEAcgEAAAAAAAABAgAAAAAAAAAAAAAAGABhAGQAbQBpAG4AVABvAG8AbABCAGEAcgEAAAECAAABUQAAAAAAAAAAAAAAAQAAAAAAAAACAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAIAAAAA
+Width 1024=1024
+Width 800=801
+
+[MainWindow Toolbar aBasicToolBar]
+IconSize=16
+Index=0
+Position=Left
+ToolButtonStyle=IconOnly
+
+[MainWindow Toolbar adminToolBar]
+Index=1
+Position=Left
+ToolButtonStyle=IconOnly
+
+[Store Preferences]
+editBranchName=Main
+editLogoFileName=Select One...
+editStoreName=Lemon Store
+editTicketMessage=Thanks for your preference.
+
+[Styles]
+styleName=simple
+useStyle=true
+
+[lemon]
+SplitterSizes=211,548
+
+[security]
+allowAnyUserToQuit=true

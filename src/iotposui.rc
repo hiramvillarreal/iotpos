@@ -1,0 +1,39 @@
+<!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
+<kpartgui name="lemon" version="10">
+  <ToolBar name="aBasicToolBar">
+    <text>Basic Use Toolbar</text>
+    <Action name="login" />
+    <Action name="enterCode" />
+    <Action name="searchItem" />
+    <Action name="deleteSelectedItem" />
+    <Action name="payFocus" />
+    <Action name="finishTransaction" />
+    <Action name="cancelTransaction" />
+    <Action name="cancelTicket"/>
+    <Action name="reprintTicket"/>
+    <Action name="cashOut"/>
+    <Action name="cashIn"/>
+    <Action name="cashAvailable"/>
+    <Action name="showProductsGrid"/>
+    <Action name="showPriceChecker"/>
+    <Action name="specialOrder"/>
+    <Action name="specialOrderComplete"/>
+    <Action name="makeReservation"/>
+    <Action name="resumeReservation"/>
+    <Action name="addReservationPayment"/>
+  </ToolBar>
+  <ToolBar name="adminToolBar" >
+    <text>Administrator's Toolbar</text>
+    <Action name="startOperation" />
+    <Action name="balance"/>
+    <Action name="endOfDay"/>
+    <Action name="suspendSale"/>
+    <Action name="resumeSale"/>
+    <Action name="showCredits"/>
+    <Action name="emitirFactura" />
+    <Action name="cancelarFactura" />
+    <Action name="reprintFactura" />
+    <Action name="options_configure" />
+    <Action name="file_quit" />
+ </ToolBar>
+</kpartgui>

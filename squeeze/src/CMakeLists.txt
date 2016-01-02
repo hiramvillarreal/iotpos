@@ -44,7 +44,7 @@ kde4_add_ui_files( squeeze_SRCS
 
 kde4_add_kcfg_files(squeeze_SRCS settings.kcfgc )
 
-kde4_add_executable(squeeze ${squeeze_SRCS})
+kde4_add_executable(stockpos ${squeeze_SRCS})
 
 FIND_PROGRAM(GETTEXT_MSGFMT_EXECUTABLE msgfmt)
 
@@ -72,7 +72,7 @@ ELSE(NOT GETTEXT_MSGFMT_EXECUTABLE)
 
 ENDIF(NOT GETTEXT_MSGFMT_EXECUTABLE)
 
-target_link_libraries(squeeze
+target_link_libraries(stockpos
   ${KDE4_KDEUI_LIBS}
   ${KDE4_KIO_LIBS}
   ${QT_LIBRARIES}
@@ -80,13 +80,13 @@ target_link_libraries(squeeze
   #${KDE4_KDEPRINT_LIBS}
 )
 
-install(TARGETS squeeze DESTINATION ${BIN_INSTALL_DIR} )
+install(TARGETS stockpos DESTINATION ${BIN_INSTALL_DIR} )
 
 ########### install files ###############
 
 install( FILES squeeze.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
-install( FILES squeezeui.rc  DESTINATION  ${DATA_INSTALL_DIR}/squeeze )
+install( FILES squeezeui.rc  DESTINATION  ${DATA_INSTALL_DIR}/stockpos )
 install( FILES squeeze.kcfg  DESTINATION  ${KCFG_INSTALL_DIR} )
 #For KNotifications
-install( FILES squeeze.notifyrc DESTINATION ${DATA_INSTALL_DIR}/squeeze)
+install( FILES squeeze.notifyrc DESTINATION ${DATA_INSTALL_DIR}/stockpos)
 
