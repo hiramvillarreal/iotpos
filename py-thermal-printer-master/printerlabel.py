@@ -375,7 +375,7 @@ if __name__ == '__main__':
     p.justify("C")
     p.font_b_off()
     p.bold_on()
-    line0=linecache.getline('/home/pi/iotpos/printing/spool', 1)
+    line0=linecache.getline('/home/pi/iotpos/printing/spool', 1)#read from spool lines
     line1=linecache.getline('/home/pi/iotpos/printing/spool', 2)
     locale.setlocale( locale.LC_ALL, 'en_US.UTF-8' )
     line1=Decimal(line1)
