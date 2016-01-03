@@ -1,8 +1,9 @@
 #!/usr/bin/env python 
 #coding=utf-8
-
+import locale
 import serial, time
 import linecache
+from decimal import Decimal
 #===========================================================#
 # RASPBERRY PI (tested with Raspbian Jan 2012):
 # - Ensure that ttyAMA0 is not used for serial console access:
@@ -195,7 +196,7 @@ class ThermalPrinter(object):
         # 70=I25        >1 EVEN NUMBER           
         self.printer.write(chr(29))  # LEAVE
         self.printer.write(chr(107)) # LEAVE
-        self.printer.write(chr(67))  # USE ABOVE CHART
+        self.printer.write(chr(73))  # USE ABOVE CHART
         line2=linecache.getline('/home/pi/iotpos/printing/spool', 3)
         num=len(line2)-1
         self.printer.write(chr(num))  # USE CHART NUMBER OF CHAR 
@@ -376,13 +377,18 @@ if __name__ == '__main__':
     p.bold_on()
     line0=linecache.getline('/home/pi/iotpos/printing/spool', 1)
     line1=linecache.getline('/home/pi/iotpos/printing/spool', 2)
+    locale.setlocale( locale.LC_ALL, '' )
+    line1=Decimal(line1)
+    line1=locale.currency( line1 , grouping=True )
+    line1=str(line1)
+    price=(line1 + "\n")
     line2=linecache.getline('/home/pi/iotpos/printing/spool', 3)
-    print str.strip( line1 )
+    print str.strip( price )
     print str.strip( line0 )
     print str.strip( line2 )
     print len(line2)-1
+    p.print_text(price)
     p.print_text(line0)
-    p.print_text(line1)
     p.bold_off()
     p.barcode_chr("2")
     p.barcode(line2)
