@@ -1411,7 +1411,7 @@ color: blue;</string>
         <bool>true</bool>
        </property>
        <property name="maxLength">
-        <number>1</number>
+        <number>2</number>
        </property>
       </widget>
      </item>

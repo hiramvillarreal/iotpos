@@ -549,15 +549,16 @@ void ProductEditor::printBarcode(){
   //std::ofstream fOut("/home/iotpos/printing/squeeze_spool");
   std::ofstream fOut("/home/pi/iotpos/printing/spool");
   if (fOut.is_open()){
-    int  n =  ui-> lEditBC ->text().toInt() ;
+   // int  n =  ui-> lEditBC ->text().toInt() ;
     QProcess process;
     fOut << ui->editDesc->text().toStdString()  << '\n';
     fOut << ui->editFinalPrice->text().toDouble() << '\n';
-    fOut << ui->editCode->text().toULongLong(); //<< '\n';
-   // fOut << ui->editAlphacode->text().toULongLong()  << '\n';
-    for(int i=0; i <n; i++){       
-        process.startDetached("python", QStringList()<< "/home/pi/iotpos/py-thermal-printer-master/printerlabel.py");
-    }
+    fOut << ui->editCode->text().toULongLong() <<'\n';
+    fOut << ui->lEditBC->text().toULongLong();
+    process.startDetached("python", QStringList()<< "/home/pi/iotpos/py-thermal-printer-master/printerlabel.py");
+  //  for(int i=0; i <n; i++){
+        //process.startDetached("python", QStringList()<< "/home/pi/iotpos/py-thermal-printer-master/printerlabel.py");
+  //  }
     fOut.close();
   }
 }
