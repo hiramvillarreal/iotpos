@@ -546,22 +546,17 @@ void ProductEditor::modifyStock()
 }
 
 void ProductEditor::printBarcode(){
-  std::ofstream fOut("/home/danielcc/iotpos.git/printing/squeeze_spool");
-  //std::ofstream fOut("/home/pi/iotpos/printing/spool");
+  //std::ofstream fOut("/home/iotpos/printing/squeeze_spool");
+  std::ofstream fOut("/home/pi/iotpos/printing/spool");
   if (fOut.is_open()){
-    
-    //    std::cout << " Print Barcode " << std::endl;
     int  n =  ui-> lEditBC ->text().toInt() ;
-    for(int i=0; i <n; i++){
-      // std::cout << ui->editDesc->text().toStdString()  << '\n';
-      // std::cout << ui->editCost->text().toDouble() << '\n';
-      // std::cout << ui->editCode->text().toULongLong()  << std::endl;
-      // std::cout << ui->editAlphacode->text().toULongLong()  << std::endl;;
-    
-      fOut << ui->editDesc->text().toStdString()  << '\n';
-      fOut << ui->editCost->text().toDouble() << '\n';
-      fOut << ui->editCode->text().toULongLong()  << '\n';
-      fOut << ui->editAlphacode->text().toULongLong()  << '\n';
+    QProcess process;
+    fOut << ui->editDesc->text().toStdString()  << '\n';
+    fOut << ui->editCost->text().toDouble() << '\n';
+    fOut << ui->editCode->text().toULongLong()  << '\n';
+   // fOut << ui->editAlphacode->text().toULongLong()  << '\n';
+    for(int i=0; i <n; i++){       
+        process.startDetached("/bin/sh", QStringList()<< "/home/pi/iotpos/py-thermal-printer-master/printerlabel.py");
     }
     fOut.close();
   }
