@@ -19,6 +19,9 @@ msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "X-Generator: Poedit 1.6.10\n"
 
+msgid "Print tags:"
+msgstr "Imprimir etiquetas:"
+
 #: clienteditor.cpp:41
 msgid "Client Editor"
 msgstr "Editor de clientes"
