@@ -84,7 +84,7 @@ install(TARGETS iotstock DESTINATION ${BIN_INSTALL_DIR} )
 
 ########### install files ###############
 
-install( FILES squeeze.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
+install( FILES iotstock.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
 install( FILES squeezeui.rc  DESTINATION  ${DATA_INSTALL_DIR}/iotstock )
 install( FILES squeeze.kcfg  DESTINATION  ${KCFG_INSTALL_DIR} )
 #For KNotifications

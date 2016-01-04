@@ -1,7 +1,7 @@
 /***************************************************************************
  *   Copyright (C) 2007-2009 by Miguel Chavez Gamboa                       *
  *   miguel.chavez.gamboa@gmail.com                                        *
- *                                                                         *
+ *   Modified by Daniel A. Cervantes dcchivela@gmail.com                   *
  *   This program is free software; you can redistribute it and/or modify  *
 
  *   it under the terms of the GNU General Public License as published by  *
@@ -91,6 +91,8 @@ class ProductEditor : public KDialog
     void    setVendorcode(QString c)    { ui->editVendorcode->setText(c); };
     void    setDescription(QString d)  {ui->editDesc->setText(d); };
     void    setStockQty(double q)      {ui->editStockQty->setText(QString::number(q)); };
+    
+
     void    setDepartment(QString str);
     void    setDepartment(int i);
     void    setCategory(QString str);
@@ -149,6 +151,8 @@ private slots:
     void    createNewCategory();
     void    createNewDepartment();
     void    createNewMeasure();
+    void    printBarcode();
+    
 protected slots:
     virtual void slotButtonClicked(int button);
   private:

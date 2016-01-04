@@ -26,6 +26,8 @@
 #include <QRegExpValidator>
 #include <QRegExp>
 #include <QtSql>
+//#include <QFile>
+
 
 #include "producteditor.h"
 #include "subcategoryeditor.h"
@@ -33,8 +35,8 @@
 #include "../../src/inputdialog.h"
 #include "../../mibitWidgets/mibittip.h"
 #include "../../mibitWidgets/mibitfloatpanel.h"
-
-
+#include <iostream>
+#include <fstream>
 ProductEditorUI::ProductEditorUI( QWidget *parent )
 : QFrame( parent )
 {
@@ -104,6 +106,7 @@ ProductEditor::ProductEditor( QWidget *parent, bool newProduct )
     connect( ui->editCode, SIGNAL(editingFinished()), this, SLOT(checkFieldsState()));
     connect( ui->editCode, SIGNAL(returnPressed()), this, SLOT(checkFieldsState()));
     connect( ui->btnStockCorrect,      SIGNAL( clicked() ), this, SLOT( modifyStock() ));
+    connect( ui->printBC,      SIGNAL( clicked() ), this, SLOT( printBarcode() ));
 
     connect( ui->editDesc, SIGNAL(editingFinished()), this, SLOT(checkFieldsState()));
     connect( ui->editStockQty, SIGNAL(editingFinished()), this, SLOT(checkFieldsState()));
@@ -160,7 +163,7 @@ ProductEditor::ProductEditor( QWidget *parent, bool newProduct )
     ui->editStockQty->setText("0.0");
     ui->editPoints->setText("0.0");
     ui->editExtraTaxes->setText("0.0");
-    
+    ui->lEditBC -> setText("1");
     autoCode = false;
 }
 
@@ -542,6 +545,27 @@ void ProductEditor::modifyStock()
   }
 }
 
+void ProductEditor::printBarcode(){
+  std::ofstream fOut("/home/danielcc/iotpos.git/printing/squeeze_spool");
+  //std::ofstream fOut("/home/pi/iotpos/printing/spool");
+  if (fOut.is_open()){
+    
+    //    std::cout << " Print Barcode " << std::endl;
+    int  n =  ui-> lEditBC ->text().toInt() ;
+    for(int i=0; i <n; i++){
+      // std::cout << ui->editDesc->text().toStdString()  << '\n';
+      // std::cout << ui->editCost->text().toDouble() << '\n';
+      // std::cout << ui->editCode->text().toULongLong()  << std::endl;
+      // std::cout << ui->editAlphacode->text().toULongLong()  << std::endl;;
+    
+      fOut << ui->editDesc->text().toStdString()  << '\n';
+      fOut << ui->editCost->text().toDouble() << '\n';
+      fOut << ui->editCode->text().toULongLong()  << '\n';
+      fOut << ui->editAlphacode->text().toULongLong()  << '\n';
+    }
+    fOut.close();
+  }
+}
 void ProductEditor::checkIfCodeExists()
 {
   enableButtonOk( false );

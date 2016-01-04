@@ -3,8 +3,8 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
       http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
-  <kcfgfile name="lemonrc"/>
-  <group name="lemon">
+  <kcfgfile name="iotposrc"/>
+  <group name="iotpos">
     <entry name="SplitterSizes" type="IntList">
       <label>How the main window is divided.</label>
     </entry>

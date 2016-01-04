@@ -32,14 +32,14 @@ ToolButtonStyle=IconOnly
 [Store Preferences]
 editBranchName=Main
 editLogoFileName=Select One...
-editStoreName=IotPOS Store
+editStoreName=Lemon Store
 editTicketMessage=Thanks for your preference.
 
 [Styles]
 styleName=simple
 useStyle=true
 
-[iotpos]
+[lemon]
 SplitterSizes=211,548
 
 [security]
