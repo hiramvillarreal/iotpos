@@ -383,14 +383,18 @@ if __name__ == '__main__':
     line1=str(line1)
     price=(price + "\n")
     line2=linecache.getline('/home/pi/iotpos/printing/spool', 3)
+    cp=int(linecache.getline('/home/pi/iotpos/printing/spool', 4))
     print str.strip( price )
     print str.strip( line0 )
     print str.strip( line2 )
     print len(line2)-1
-    p.print_text(price)
-    p.print_text(line0)
-    p.bold_off()
-    p.barcode_chr("2")
-    p.barcode(line2)
+    print (cp)
+    for x in xrange(cp):
+        p.print_text(price)
+        p.print_text(line0)
+        p.bold_off()
+        p.barcode_chr("2")
+        p.barcode(line2)
+
     p.font_b_on()
     linecache.clearcache()
