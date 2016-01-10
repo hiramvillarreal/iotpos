@@ -466,10 +466,10 @@ void lemonView::setupGridView()
 
 void lemonView::loadIcons()
 {
-  ui_mainview.labelImageSearch->setPixmap(DesktopIcon("edit-find", 64));
-  QString logoBottomFile = KStandardDirs::locate("appdata", "images/logo_bottom.png");
-  ui_mainview.labelBanner->setPixmap(QPixmap(logoBottomFile));
-  ui_mainview.labelBanner->setAlignment(Qt::AlignCenter);
+ // ui_mainview.labelImageSearch->setPixmap(DesktopIcon("edit-find", 64));
+ // QString logoBottomFile = KStandardDirs::locate("appdata", "images/logo_bottom.png");
+  //ui_mainview.labelBanner->setPixmap(QPixmap(logoBottomFile));
+  //ui_mainview.labelBanner->setAlignment(Qt::AlignCenter);
 }
 
 void lemonView::setUpTable()
