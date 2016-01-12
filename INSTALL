@@ -58,19 +58,19 @@ Now, copy the lemonrc file to your local .kde/share/config directory:
 After installation, you need to create a database and user on mysql, to do this:
 
   cd iotpos/database_resources
-  cat lemon_mysql_real.sql | mysql -u root -p
   cat lemon_mysql.sql | mysql -u root -p
   
-  To restore a database with preloaded products and examples:
+  ------ To restore a database with preloaded products and examples:
+  
   mysql -u root -p lemondb < lemondb.sql
   
-To start using lemon, type 
+To start using iotpos, type 
 
-  lemon
+  iotpos
   
-If for any reason lemon binary is not found, and if your kde4 install path is /opt/kde4 do:
+If for any reason iotpos binary is not found, and if your kde4 install path is /opt/kde4 do:
   
-  /opt/kde4/bin/lemon
+  /opt/kde4/bin/iotpos
   
  * The default and only user and password is (without quotation marks):
  
