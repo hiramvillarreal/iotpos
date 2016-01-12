@@ -1,7 +1,5 @@
 ------------------------Installing iotPOS on the Raspberry Pi and Hardware setup.--------------------------------------
-The first step is to make sure everything is up to date:
 
-  sudo apt-get update
   
 ---------------------------------------------------HARDWARE-SETUP------------------------------------------------------
 
@@ -16,17 +14,17 @@ But now we want to use this port for the thermal printer instead, so we’ll nee
   Serial /  Enable/Disable shell and kernel messages on the serial connection
    Would you like a login shell to be accessible over       │
           │ serial?  NO
-
+  Reboot
+  
+* The first step is to make sure everything is up to date:
+ 
+  sudo apt-get update  
+  
 * These libraries are required by the thermal printer library and example programs:
 
   sudo apt-get install python-serial python-imaging python-unidecode
 
 This takes a couple of minutes. 
-
-* Test the printer with:
-
-  cd iotpos/py-thermal-printer-master
-  sudo python printer.py
 
 CONECCTIONS FOR THE HARDWARE
 
@@ -51,7 +49,6 @@ Just in case you already didn't, make sure everything is up to date:
 Now that everything is up to date, we can install the needed kde4 packages   (kdelibs4, kdebase4, kdepimlibs4) and all of his
   dependencies (qt4...):
   
-  sudo apt-get install kde-standard libqt4-dev libqt4-core libqt4-gui 
   sudo apt-get install kde-standard libqt4-dev
 
   While kde is installed, it will prompt you to either choose LightDM or KDE. Being that we already have LXDE, we can choose LightDM since it has less resouces to install.
@@ -117,8 +114,11 @@ If for any reason lemon binary is not found, and if your kde4 install path is /o
 
   By default, squeeze has security disabled, this to let you configure squeeze database settings in case
   you have installed the database server at a different computer.
-  
 
+* Test the printer with:
+
+  cd ~/py-thermal-printer-master
+  sudo python printer.py
 
 
 
