@@ -94,12 +94,8 @@ But now we want to use this port for the thermal printer instead, so we’ll nee
   Serial /  Enable/Disable shell and kernel messages on the serial connection
    Would you like a login shell to be accessible over       │
           │ serial?  NO
-  Reboot
-  
-* The first step is to make sure everything is up to date:
- 
-  sudo apt-get update  
-  
+
+
 * These libraries are required by the thermal printer library and example programs:
 
   sudo apt-get install python-serial python-imaging python-unidecode
