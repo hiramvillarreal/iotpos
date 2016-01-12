@@ -342,13 +342,13 @@
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
-                  <height>8</height>
+                  <height>0</height>
                  </size>
                 </property>
                 <property name="maximumSize">
                  <size>
                   <width>16777215</width>
-                  <height>108</height>
+                  <height>16777215</height>
                  </size>
                 </property>
                 <property name="styleSheet">
@@ -387,13 +387,13 @@
              </property>
              <property name="minimumSize">
               <size>
-               <width>250</width>
-               <height>120</height>
+               <width>0</width>
+               <height>0</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>250</width>
+               <width>16777215</width>
                <height>16777215</height>
               </size>
              </property>
@@ -469,8 +469,8 @@
                 </property>
                 <property name="minimumSize">
                  <size>
-                  <width>200</width>
-                  <height>60</height>
+                  <width>232</width>
+                  <height>0</height>
                  </size>
                 </property>
                 <property name="maximumSize">
@@ -510,6 +510,12 @@ color:black;</string>
               <size>
                <width>0</width>
                <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
               </size>
              </property>
              <property name="autoFillBackground">
@@ -612,7 +618,7 @@ color:black;</string>
                 <property name="maximumSize">
                  <size>
                   <width>16000</width>
-                  <height>16000</height>
+                  <height>132</height>
                  </size>
                 </property>
                 <property name="baseSize">
