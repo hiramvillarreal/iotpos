@@ -1,6 +1,22 @@
 ------------------------Installing iotPOS on the Raspberry Pi and Hardware setup.--------------------------------------
 
-Note: If you don’t have a Raspberry pi and would like  to testing on a PC we recommend KUBUNTU.
+Note: If you don’t have a Raspberry pi and would like to test on a PC we recommend KUBUNTU.
+
+For raspbian users with <4gb SD card we recommend to uninstall useless apps for a dedicated point of sale:
+
+  sudo apt-get remove scratch
+  sudo apt-get remove wolfram-engine
+  sudo apt-get remove dillo
+  sudo apt-get remove netsurf-gtk
+  sudo apt-get remove sonic-pi
+  sudo apt-get remove python3
+  sudo apt-get remove minecraft-pi
+  sudo apt-get remove vlc
+  sudo apt-get auto remove
+  sudo apt-get clean
+  sudo reboot
+  
+That will give you the extraspace necessary for the next setup.
 
 
 ---------------------------------------------------SOFTWARE-SETUP------------------------------------------------------
