@@ -1,18 +1,35 @@
-Installing iotPOS on the Raspberry Pi and Hardware setup.
+------------------------Installing iotPOS on the Raspberry Pi and Hardware setup.--------------------------------------
+
+Note: If you don’t have a Raspberry pi and would like to test on a PC we recommend KUBUNTU.
+
+For raspbian users with <4gb SD card we recommend to uninstall useless apps for a dedicated point of sale:
+
+  sudo apt-get remove scratch
+  sudo apt-get remove wolfram-engine
+  sudo apt-get remove dillo
+  sudo apt-get remove netsurf-gtk
+  sudo apt-get remove sonic-pi
+  sudo apt-get remove python3
+  sudo apt-get remove minecraft-pi
+  sudo apt-get remove vlc
+  sudo apt-get auto remove
+  sudo apt-get clean
+  sudo reboot
+  
+That will give you the extraspace necessary for the next setup.
+
 
 ---------------------------------------------------SOFTWARE-SETUP------------------------------------------------------
 
 To compile and install:
 
-The first step is to make sure everything is up to date:
+Just in case you already didn't, make sure everything is up to date:
 
   sudo apt-get update
-  sudo apt-get upgrade
 
 Now that everything is up to date, we can install the needed kde4 packages   (kdelibs4, kdebase4, kdepimlibs4) and all of his
   dependencies (qt4...):
   
-  sudo apt-get install kde-standard libqt4-dev libqt4-core libqt4-gui 
   sudo apt-get install kde-standard libqt4-dev
 
   While kde is installed, it will prompt you to either choose LightDM or KDE. Being that we already have LXDE, we can choose LightDM since it has less resouces to install.
@@ -57,19 +74,19 @@ Now, copy the lemonrc file to your local .kde/share/config directory:
 After installation, you need to create a database and user on mysql, to do this:
 
   cd iotpos/database_resources
-  cat lemon_mysql_real.sql | mysql -u root -p
   cat lemon_mysql.sql | mysql -u root -p
   
-  To restore a database with preloaded products and examples:
+  ------ To restore a database with preloaded products and examples:
+  
   mysql -u root -p lemondb < lemondb.sql
   
-To start using lemon, type 
+To start using iotpos, type 
 
-  lemon
+  iotpos
   
-If for any reason lemon binary is not found, and if your kde4 install path is /opt/kde4 do:
+If for any reason iotpos binary is not found, and if your kde4 install path is /opt/kde4 do:
   
-  /opt/kde4/bin/lemon
+  /opt/kde4/bin/iotpos
   
  * The default and only user and password is (without quotation marks):
  
@@ -78,10 +95,11 @@ If for any reason lemon binary is not found, and if your kde4 install path is /o
 
   By default, squeeze has security disabled, this to let you configure squeeze database settings in case
   you have installed the database server at a different computer.
+
   
 ---------------------------------------------------HARDWARE-SETUP------------------------------------------------------
 
-SERIAL THERMAL PRINTER INSTALL
+* SERIAL THERMAL PRINTER INSTALL
 
 The serial port on the Raspberry Pi’s GPIO header is normally configured for console cable use,
 will output a Console from your Pi that,with a suitable Serial cable, you can use to control your Pi via the command-line.
@@ -93,15 +111,14 @@ But now we want to use this port for the thermal printer instead, so we’ll nee
    Would you like a login shell to be accessible over       │
           │ serial?  NO
 
-These libraries are required by the thermal printer library and example programs:
+
+* These libraries are required by the thermal printer library and example programs:
 
   sudo apt-get install python-serial python-imaging python-unidecode
 
-This takes a couple of minutes. 
+* Test the printer with:
 
-Test the printer with:
-
-  cd iotpos/py-thermal-printer-master
+  cd ~/py-thermal-printer-master
   sudo python printer.py
 
 CONECCTIONS FOR THE HARDWARE
@@ -115,6 +132,7 @@ CONECCTIONS FOR THE HARDWARE
 
 Push bottom N.O. to Physical pin 16 switch to GND.
 LED+ Physical pin 12 LED- TO any GND available.
+
 
 
 
