@@ -1,7 +1,7 @@
 #MCH: Deshabilitar debug (para alivianar el ejecutable).
 #     cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=/opt/kde4
 
-set(lemon_SRCS
+set(iotpos_SRCS
    lemon.cpp
    main.cpp
    lemonview.cpp
@@ -43,7 +43,7 @@ set(lemon_SRCS
 #qt4_add_dbus_adaptor(lemon_SRCS org.kde.lemon.lemon.xml lemon.h lemon)
 
 
-kde4_add_ui_files( lemon_SRCS
+kde4_add_ui_files( iotpos_SRCS
   ui/mainview.ui
   ui/prefs_base.ui
   ui/pref_printers.ui
@@ -63,9 +63,9 @@ kde4_add_ui_files( lemon_SRCS
   ui/refacturar.ui
   )
 
-kde4_add_kcfg_files(lemon_SRCS settings.kcfgc )
+kde4_add_kcfg_files(iotpos_SRCS settings.kcfgc )
 
-kde4_add_executable(iotpos ${lemon_SRCS})
+kde4_add_executable(iotpos ${iotpos_SRCS})
 
 target_link_libraries(iotpos
   ${KDE4_KDEUI_LIBS}
@@ -83,7 +83,7 @@ IF(NOT GETTEXT_MSGFMT_EXECUTABLE)
 ------")
 ELSE(NOT GETTEXT_MSGFMT_EXECUTABLE)
 
-        SET(catalogname lemon)
+        SET(catalogname iotpos)
 
         ADD_CUSTOM_TARGET(translations ALL)
 
