@@ -1,42 +1,7 @@
 ------------------------Installing iotPOS on the Raspberry Pi and Hardware setup.--------------------------------------
 
-  
----------------------------------------------------HARDWARE-SETUP------------------------------------------------------
+Note: If you don’t have a Raspberry pi and would like  to testing on a PC we recommend KUBUNTU.
 
-* SERIAL THERMAL PRINTER INSTALL
-
-The serial port on the Raspberry Pi’s GPIO header is normally configured for console cable use,
-will output a Console from your Pi that,with a suitable Serial cable, you can use to control your Pi via the command-line.
-But now we want to use this port for the thermal printer instead, so we’ll need to disable this default behavior.
-
-  sudo raspi-config 
-  Advanced options
-  Serial /  Enable/Disable shell and kernel messages on the serial connection
-   Would you like a login shell to be accessible over       │
-          │ serial?  NO
-  Reboot
-  
-* The first step is to make sure everything is up to date:
- 
-  sudo apt-get update  
-  
-* These libraries are required by the thermal printer library and example programs:
-
-  sudo apt-get install python-serial python-imaging python-unidecode
-
-This takes a couple of minutes. 
-
-CONECCTIONS FOR THE HARDWARE
-
------SERIAL THERMAL PRINTER----
-  Serial Data Cable rx TO    Physical pin 8 It's also commonly known as "Serial TX" ttyAMA0.
-  Serial Data Cable tx  DO NOT CONNECT IT TO THE GPIO RX AS SOME ARE 5 V TTL WILL DAMAGE THE RASPBERRY PI!!!
-  Serial GND from  serial printer to any gpio GND could use Physical pin 6,9, 14. 
-  
------Push buttom and LED.
-
-Push bottom N.O. to Physical pin 16 switch to GND.
-LED+ Physical pin 12 LED- TO any GND available.
 
 ---------------------------------------------------SOFTWARE-SETUP------------------------------------------------------
 
@@ -115,10 +80,47 @@ If for any reason lemon binary is not found, and if your kde4 install path is /o
   By default, squeeze has security disabled, this to let you configure squeeze database settings in case
   you have installed the database server at a different computer.
 
+  
+---------------------------------------------------HARDWARE-SETUP------------------------------------------------------
+
+* SERIAL THERMAL PRINTER INSTALL
+
+The serial port on the Raspberry Pi’s GPIO header is normally configured for console cable use,
+will output a Console from your Pi that,with a suitable Serial cable, you can use to control your Pi via the command-line.
+But now we want to use this port for the thermal printer instead, so we’ll need to disable this default behavior.
+
+  sudo raspi-config 
+  Advanced options
+  Serial /  Enable/Disable shell and kernel messages on the serial connection
+   Would you like a login shell to be accessible over       │
+          │ serial?  NO
+  Reboot
+  
+* The first step is to make sure everything is up to date:
+ 
+  sudo apt-get update  
+  
+* These libraries are required by the thermal printer library and example programs:
+
+  sudo apt-get install python-serial python-imaging python-unidecode
+
 * Test the printer with:
 
   cd ~/py-thermal-printer-master
   sudo python printer.py
+
+CONECCTIONS FOR THE HARDWARE
+
+-----SERIAL THERMAL PRINTER----
+  Serial Data Cable rx TO    Physical pin 8 It's also commonly known as "Serial TX" ttyAMA0.
+  Serial Data Cable tx  DO NOT CONNECT IT TO THE GPIO RX AS SOME ARE 5 V TTL WILL DAMAGE THE RASPBERRY PI!!!
+  Serial GND from  serial printer to any gpio GND could use Physical pin 6,9, 14. 
+  
+-----Push buttom and LED.
+
+Push bottom N.O. to Physical pin 16 switch to GND.
+LED+ Physical pin 12 LED- TO any GND available.
+
 
 
 
