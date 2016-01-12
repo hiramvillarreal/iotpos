@@ -1,7 +1,7 @@
 #MCH: Deshabilitar debug (para alivianar el ejecutable).
 #     cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=/opt/kde4
 
-set(iotpos_SRCS
+set(lemon_SRCS
    lemon.cpp
    main.cpp
    lemonview.cpp
@@ -43,7 +43,7 @@ set(iotpos_SRCS
 #qt4_add_dbus_adaptor(lemon_SRCS org.kde.lemon.lemon.xml lemon.h lemon)
 
 
-kde4_add_ui_files( iotpos_SRCS
+kde4_add_ui_files( lemon_SRCS
   ui/mainview.ui
   ui/prefs_base.ui
   ui/pref_printers.ui
@@ -63,9 +63,9 @@ kde4_add_ui_files( iotpos_SRCS
   ui/refacturar.ui
   )
 
-kde4_add_kcfg_files(iotpos_SRCS settings.kcfgc )
+kde4_add_kcfg_files(lemon_SRCS settings.kcfgc )
 
-kde4_add_executable(iotpos ${iotpos_SRCS})
+kde4_add_executable(iotpos ${lemon_SRCS})
 
 target_link_libraries(iotpos
   ${KDE4_KDEUI_LIBS}
@@ -113,11 +113,11 @@ install(TARGETS iotpos DESTINATION ${BIN_INSTALL_DIR} )
 ########### install files ###############
 
 install( FILES iotpos.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
-install( FILES iotposui.rc     DESTINATION  ${DATA_INSTALL_DIR}/iotpos )
+install( FILES lemonui.rc     DESTINATION  ${DATA_INSTALL_DIR}/lemon )
 # With next line... the user needs to read/write the file...
-install( FILES iotposrc        DESTINATION  ${CONFIG_INSTALL_DIR} )
+install( FILES lemonrc        DESTINATION  ${CONFIG_INSTALL_DIR} )
 #install( FILES lemonrc        DESTINATION  ${HOME}/.kde/share/config/ )
-install( FILES iotpos.kcfg     DESTINATION  ${KCFG_INSTALL_DIR} )
+install( FILES lemon.kcfg     DESTINATION  ${KCFG_INSTALL_DIR} )
 #For KNotifications
-install( FILES iotpos.notifyrc DESTINATION ${DATA_INSTALL_DIR}/iotpos)
+install( FILES lemon.notifyrc DESTINATION ${DATA_INSTALL_DIR}/lemon)
 

@@ -29,7 +29,16 @@
    <property name="spacing">
     <number>1</number>
    </property>
-   <property name="margin">
+   <property name="leftMargin">
+    <number>2</number>
+   </property>
+   <property name="topMargin">
+    <number>2</number>
+   </property>
+   <property name="rightMargin">
+    <number>2</number>
+   </property>
+   <property name="bottomMargin">
     <number>2</number>
    </property>
    <item>
@@ -37,7 +46,16 @@
      <property name="spacing">
       <number>1</number>
      </property>
-     <property name="margin">
+     <property name="leftMargin">
+      <number>1</number>
+     </property>
+     <property name="topMargin">
+      <number>1</number>
+     </property>
+     <property name="rightMargin">
+      <number>1</number>
+     </property>
+     <property name="bottomMargin">
       <number>1</number>
      </property>
      <item>
@@ -99,7 +117,7 @@
       </sizepolicy>
      </property>
      <property name="currentIndex">
-      <number>13</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="pageWelcome">
       <layout class="QGridLayout" name="gridLayout">
@@ -181,14 +199,14 @@
            <height>300</height>
           </size>
          </property>
-         <property name="backgroundColor">
+         <property name="backgroundColor" stdset="0">
           <color>
            <red>96</red>
            <green>111</green>
            <blue>0</blue>
           </color>
          </property>
-         <property name="gridColor">
+         <property name="gridColor" stdset="0">
           <color>
            <red>255</red>
            <green>0</green>
@@ -800,7 +818,7 @@
            <height>300</height>
           </size>
          </property>
-         <property name="backgroundColor">
+         <property name="backgroundColor" stdset="0">
           <color>
            <red>96</red>
            <green>111</green>
@@ -829,7 +847,7 @@
            <height>300</height>
           </size>
          </property>
-         <property name="backgroundColor">
+         <property name="backgroundColor" stdset="0">
           <color>
            <red>96</red>
            <green>111</green>
@@ -1602,14 +1620,14 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="1" column="1" rowspan="2">
-                 <widget class="KDateWidget" name="editBalancesFilterByDate">
+                 <widget class="KDateWidget" name="editBalancesFilterByDate" native="true">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
-                  <property name="date">
+                  <property name="date" stdset="0">
                    <date>
                     <year>2000</year>
                     <month>1</month>
@@ -1841,14 +1859,14 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="4" column="1">
-                 <widget class="KDateWidget" name="transactionsDateEditor">
+                 <widget class="KDateWidget" name="transactionsDateEditor" native="true">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
-                  <property name="date">
+                  <property name="date" stdset="0">
                    <date>
                     <year>2009</year>
                     <month>1</month>
@@ -2190,8 +2208,8 @@ color:black;</string>
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="KDateWidget" name="offersDateEditor">
-          <property name="date">
+         <widget class="KDateWidget" name="offersDateEditor" native="true">
+          <property name="date" stdset="0">
            <date>
             <year>2009</year>
             <month>1</month>
@@ -2242,10 +2260,19 @@ color:black;</string>
         <bool>false</bool>
        </property>
        <layout class="QGridLayout" name="gridLayout_3">
-        <property name="horizontalSpacing">
+        <property name="leftMargin">
          <number>2</number>
         </property>
-        <property name="margin">
+        <property name="topMargin">
+         <number>2</number>
+        </property>
+        <property name="rightMargin">
+         <number>2</number>
+        </property>
+        <property name="bottomMargin">
+         <number>2</number>
+        </property>
+        <property name="horizontalSpacing">
          <number>2</number>
         </property>
         <item row="0" column="0">
@@ -2379,7 +2406,16 @@ color:black;</string>
         <bool>false</bool>
        </property>
        <layout class="QGridLayout" name="gridLayout_7">
-        <property name="margin">
+        <property name="leftMargin">
+         <number>6</number>
+        </property>
+        <property name="topMargin">
+         <number>6</number>
+        </property>
+        <property name="rightMargin">
+         <number>6</number>
+        </property>
+        <property name="bottomMargin">
          <number>6</number>
         </property>
         <item row="0" column="0">
@@ -2422,7 +2458,7 @@ color:black;</string>
                </spacer>
               </item>
               <item>
-               <widget class="KDateWidget" name="datePicker"/>
+               <widget class="KDateWidget" name="datePicker" native="true"/>
               </item>
              </layout>
             </item>
@@ -2637,6 +2673,7 @@ color:black;</string>
    <class>KPlotWidget</class>
    <extends>QFrame</extends>
    <header>kplotwidget.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources/>
