@@ -2,21 +2,14 @@
 
 Note: If you don’t have a Raspberry pi and would like to test on a PC we recommend KUBUNTU.
 
-For raspbian users with <4gb SD card we recommend to uninstall useless apps for a dedicated point of sale:
+For raspbian users with we recommend to uninstall useless apps for a dedicated point of sale:
 
-  sudo apt-get remove scratch
-  sudo apt-get remove wolfram-engine
-  sudo apt-get remove dillo
-  sudo apt-get remove netsurf-gtk
-  sudo apt-get remove sonic-pi
-  sudo apt-get remove python3
-  sudo apt-get remove minecraft-pi
-  sudo apt-get remove vlc
-  sudo apt-get auto remove
-  sudo apt-get clean
-  sudo reboot
+sudo apt-get update
+sudo apt-get remove scratch wolfram-engine dillo netsurf-gtk sonic-pi minecraft-pi
+sudo apt-get clean
+sudo reboot
   
-That will give you the extraspace necessary for the next setup.
+That will give you an extra .6 Gb space, great for 4Gb SDs.
 
 
 ---------------------------------------------------SOFTWARE-SETUP------------------------------------------------------
@@ -30,7 +23,7 @@ Just in case you already didn't, make sure everything is up to date:
 Now that everything is up to date, we can install the needed kde4 packages   (kdelibs4, kdebase4, kdepimlibs4) and all of his
   dependencies (qt4...):
   
-  sudo apt-get install kde-standard libqt4-dev
+  sudo apt-get install kdebase-runtime libqt4-dev
 
   While kde is installed, it will prompt you to either choose LightDM or KDE. Being that we already have LXDE, we can choose LightDM since it has less resouces to install.
 
