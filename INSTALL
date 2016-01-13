@@ -25,7 +25,6 @@ Now that everything is up to date, we can install the needed kde4 packages   (kd
   
   sudo apt-get install kdebase-runtime libqt4-dev
 
-  While kde is installed, it will prompt you to either choose LightDM or KDE. Being that we already have LXDE, we can choose LightDM since it has less resouces to install.
 
 Once you have KDE, and QT4 installed, we can install mysql:
 
@@ -33,7 +32,7 @@ Once you have KDE, and QT4 installed, we can install mysql:
   
 Now we need to install everything else that’s needed for the compile:
 
-  sudo apt-get install build-essential g++ cmake gettext libqt4-sql-mysql kdelibs5-dev
+  sudo apt-get install   cmake gettext  kdelibs5-dev
 
  The next step is to download the source:
  
