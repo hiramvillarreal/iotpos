@@ -113,11 +113,11 @@ install(TARGETS iotpos DESTINATION ${BIN_INSTALL_DIR} )
 ########### install files ###############
 
 install( FILES iotpos.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
-install( FILES lemonui.rc     DESTINATION  ${DATA_INSTALL_DIR}/lemon )
+install( FILES iotposui.rc     DESTINATION  ${DATA_INSTALL_DIR}/lemon )
 # With next line... the user needs to read/write the file...
-install( FILES lemonrc        DESTINATION  ${CONFIG_INSTALL_DIR} )
-#install( FILES lemonrc        DESTINATION  ${HOME}/.kde/share/config/ )
-install( FILES lemon.kcfg     DESTINATION  ${KCFG_INSTALL_DIR} )
+install( FILES iotposrc        DESTINATION  ${CONFIG_INSTALL_DIR} )
+install( FILES lemonrc        DESTINATION  ${HOME}/.kde/share/config/ )
+install( FILES iotpos.kcfg     DESTINATION  ${KCFG_INSTALL_DIR} )
 #For KNotifications
-install( FILES lemon.notifyrc DESTINATION ${DATA_INSTALL_DIR}/lemon)
+install( FILES iotpos.notifyrc DESTINATION ${DATA_INSTALL_DIR}/lemon)
 
