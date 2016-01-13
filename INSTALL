@@ -1,15 +1,15 @@
 ------------------------Installing iotPOS on the Raspberry Pi and Hardware setup.--------------------------------------
 
-Note: If you don’t have a Raspberry pi and would like to test on a PC we recommend KUBUNTU.
+Note: If you don’t have a Raspberry pi and would like to test it on a PC we recommend KUBUNTU on a virtual machine.
 
-For raspbian users with we recommend to uninstall useless apps for a dedicated point of sale:
+For raspbian users we recommend to uninstall useless apps for a dedicated point of sale:
 
 sudo apt-get update
 sudo apt-get remove scratch wolfram-engine dillo netsurf-gtk sonic-pi minecraft-pi
 sudo apt-get clean
 sudo reboot
   
-That will give you an extra .6 Gb space, great for 4Gb SDs.
+That will give you an extra .6 Gb space, great for smallers SDs.
 
 
 ---------------------------------------------------SOFTWARE-SETUP------------------------------------------------------
@@ -36,6 +36,7 @@ Now we need to install everything else that’s needed for the compile:
   sudo apt-get install build-essential g++ cmake gettext libqt4-sql-mysql kdelibs5-dev
 
  The next step is to download the source:
+ 
   cd ~
   git clone https://github.com/hiramvillarreal/iotpos
   
@@ -49,10 +50,10 @@ Run CMake with your path to KDE4:
 
   cmake .. -DCMAKE_INSTALL_PREFIX=`kde4-config --prefix`
   
-        FOR UBUNTU COMPILE ONLY:
-        cmake -DCMAKE_INSTALL_PREFIX=kde4-config --prefix -DQT_QMAKE_EXECUTABLE=which qmake-qt4 -DQT_INCLUDE_DIR=/usr/include/qt4 -DCMAKE_BUILD_TYPE=Release ..
-        
-Run make to compile lemonpos. This took about an hour on the Pi A, A+, B and B+, took 15 minutes on the new Pi2:
+  FOR kUBUNTU COMPILE ONLY:
+  cmake -DCMAKE_INSTALL_PREFIX=kde4-config --prefix -DQT_QMAKE_EXECUTABLE=which qmake-qt4 -DQT_INCLUDE_DIR=/usr/include/qt4 -DCMAKE_BUILD_TYPE=Release ..
+ 
+Run make to compile iotpos. This took about an hour on the Pi A, A+, B and B+, took 15 minutes on the new Pi2:
   
   make
   
