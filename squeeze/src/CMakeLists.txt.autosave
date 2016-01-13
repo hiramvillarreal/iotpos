@@ -55,7 +55,7 @@ IF(NOT GETTEXT_MSGFMT_EXECUTABLE)
 ------")
 ELSE(NOT GETTEXT_MSGFMT_EXECUTABLE)
 
-        SET(catalogname iotstock)
+        SET(catalogname squeeze)
 
         ADD_CUSTOM_TARGET(translations ALL)
 
@@ -85,7 +85,7 @@ install(TARGETS iotstock DESTINATION ${BIN_INSTALL_DIR} )
 ########### install files ###############
 
 install( FILES iotstock.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
-install( FILES squeezeui.rc  DESTINATION  ${DATA_INSTALL_DIR}/squeeze )
+install( FILES squeezeui.rc  DESTINATION  ${DATA_INSTALL_DIR}/iotstock )
 install( FILES squeeze.kcfg  DESTINATION  ${KCFG_INSTALL_DIR} )
 #For KNotifications
 install( FILES squeeze.notifyrc DESTINATION ${DATA_INSTALL_DIR}/squeeze)
