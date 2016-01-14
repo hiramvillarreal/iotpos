@@ -32,7 +32,7 @@ ToolButtonStyle=IconOnly
 [Store Preferences]
 editBranchName=Main
 editLogoFileName=Select One...
-editStoreName=Lemon Store
+editStoreName=IotPOS Store
 editTicketMessage=Thanks for your preference.
 
 [Styles]

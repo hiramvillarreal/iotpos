@@ -35,7 +35,7 @@
     </entry>
     <entry name="chLogoOnTop" type="Bool">
       <label>Print Logo on ticket Top</label>
-      <default>true</default>
+      <default>false</default>
     </entry>
   </group>
   <group name="General Preferences">
@@ -61,7 +61,7 @@
     </entry>
     <entry name="lowSecurityMode" type="Bool">
     <label>Low Security Mode</label>
-    <default>false</default>
+    <default>true</default>
     </entry>
     <entry name="showCurrencyOnTotal" type="Bool">
       <label>Show Currency</label>
@@ -161,15 +161,15 @@
     </entry>
     <entry name="openDrawer" type="Bool">
       <label>There is a drawer and use it</label>
-      <default>false</default>
+      <default>true</default>
     </entry>
     <entry name="smallTicketDotMatrix" type="Bool">
       <label>Print a small receipt using a ticket printer -dot matrix-.</label>
-      <default>false</default>
+      <default>true</default>
     </entry>
     <entry name="smallTicketCUPS" type="Bool">
       <label>Print a small receipt using a thermal ticket printer -CUPS-</label>
-      <default>true</default>
+      <default>false</default>
     </entry>
     <entry name="bigReceipt" type="Bool">
       <label>Print a big receipt using a normal printer</label>
@@ -181,7 +181,7 @@
     </entry>
     <entry name="printZeroTicket" type="Bool">
       <label>Print tickets with ZERO in the TOTAL</label>
-      <default>false</default>
+      <default>true</default>
     </entry>
     <entry name="printPackContents" type="Bool">
       <label>Print Group/Pack Contents on tickets</label>
@@ -197,7 +197,7 @@
     </entry>
     <entry name="printTicket" type="Bool">
       <label>Print Ticket (dou you have a ticket printer?)</label>
-      <default>false</default>
+      <default>true</default>
     </entry>
     <entry name="printChangedDateTicket" type="Bool">
       <label>Print Date Changed Ticket</label>
@@ -205,7 +205,7 @@
     </entry>
     <entry name="printerDevice" type="String">
       <label>Get printer device to use for printing</label>
-      <default>/dev/lp0</default>
+      <default>/dev/ttyAMA0</default>
     </entry>
     <entry name="printerCodec" type="String">
       <label>Get Printer Codec to use</label>
