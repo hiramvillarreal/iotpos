@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>480</width>
+    <width>512</width>
     <height>292</height>
    </rect>
   </property>
@@ -57,7 +57,7 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>Small receipt using a dot-matrix ticket printer (using /dev/lpX)</string>
+         <string>Small receipt using thermal  printer (using /dev/ttyAMA0)</string>
         </property>
         <property name="checked">
          <bool>false</bool>

@@ -112,7 +112,7 @@ install(TARGETS iotpos DESTINATION ${BIN_INSTALL_DIR} )
 
 ########### install files ###############
 
-install( FILES lemon.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
+install( FILES iotpos.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
 install( FILES lemonui.rc     DESTINATION  ${DATA_INSTALL_DIR}/lemon )
 # With next line... the user needs to read/write the file...
 install( FILES lemonrc        DESTINATION  ${CONFIG_INSTALL_DIR} )
