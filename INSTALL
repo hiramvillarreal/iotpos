@@ -6,6 +6,7 @@ For raspbian users we recommend to uninstall useless apps for a dedicated point 
 
 sudo apt-get update
 sudo apt-get remove scratch wolfram-engine dillo netsurf-gtk sonic-pi minecraft-pi
+sudo apt-get autoremove
 sudo apt-get clean
 sudo reboot
   
