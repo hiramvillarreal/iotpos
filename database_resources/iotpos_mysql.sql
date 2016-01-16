@@ -1,5 +1,5 @@
 # (C) 2007-2010, Miguel Chavez Gamboa [GPL v2 or later]
-# run this as: cat lemon_mysql.sql | mysql -u root -p
+# run this as: cat iotpos_mysql.sql | mysql -u root -p
 
 CREATE DATABASE iotposdb;
 USE iotposdb;
@@ -528,20 +528,20 @@ select
 order by `transactions`.`id`;
 
 # ---------------------------------------------
-# -- Create the database user for lemon...   --
+# -- Create the database user for iotpos...   --
 
 # This user is for connecting to mysql... which makes queries to mysql.
 #If setting up a network of POS add each host (@box1, @box2, @box3)
 #Here are only 'localhost' to ensure nobody else can do any changes from other host.
 
-# Note: if you change the password to the lemonclient user (which is a must),
+# Note: if you change the password to the iotposclient user (which is a must),
 # also re-grant it again with the new password. see the grant clause below.
 
-#CREATE USER 'lemonclient'@'localhost' IDENTIFIED BY 'xarwit0721';
-GRANT ALL ON iotposdb.* TO 'lemonclient'@'localhost' IDENTIFIED BY 'xarwit0721';
+#CREATE USER 'iotposclient'@'localhost' IDENTIFIED BY 'xarwit0721';
+GRANT ALL ON iotposdb.* TO 'iotposclient'@'localhost' IDENTIFIED BY 'xarwit0721';
 
 
-# CREATE lemon users (users using lemon, cashiers... )
+# CREATE iotpos users (users using iotpos, cashiers... )
 #With password 'linux'. Note that this password is salt-hashed (SHA56).
 
 INSERT INTO iotposdb.users (id, username, password, salt, name, role) VALUES (1, 'admin', 'C07B1E799DC80B95060391DDF92B3C7EF6EECDCB', 'h60VK', 'Administrator', 2);
@@ -611,7 +611,7 @@ INSERT INTO iotposdb.bool_values (id, text) VALUES(1, 'YES');
 INSERT INTO iotposdb.config (firstrun, taxIsIncludedInPrice, storeLogo, storeName, storeAddress, storePhone, logoOnTop, useCUPS, smallPrint, db_version) VALUES ('yes, it is February 6 1978', true, '', '', '', '', true, true, true, '0950');
 
 
-#--The next data is ignored by lemon, but required to work properly.
+#--The next data is ignored by iotpos, but required to work properly.
 #--mexico_taxes.sql moved here to avoid common problems due to not running it.
 INSERT INTO iotposdb.taxmodels (modelid,tname,elementsid) VALUES(1,"Exento", "1");
 INSERT INTO iotposdb.taxelements (elementid, ename, rate) VALUES (1,"Exento de impuestos", 0);
