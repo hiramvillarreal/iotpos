@@ -119,5 +119,5 @@ install( FILES lemonrc        DESTINATION  ${CONFIG_INSTALL_DIR} )
 #install( FILES lemonrc        DESTINATION  ${HOME}/.kde/share/config/ )
 install( FILES lemon.kcfg     DESTINATION  ${KCFG_INSTALL_DIR} )
 #For KNotifications
-install( FILES iotpos.notifyrc DESTINATION ${DATA_INSTALL_DIR}/lemon)
+install( FILES lemon.notifyrc DESTINATION ${DATA_INSTALL_DIR}/lemon)
 

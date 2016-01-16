@@ -1,7 +1,7 @@
 [Global]
-IconName=iotpos
-Comment=Iot Point of Sale
-Name=iotpos
+IconName=iotstock
+Comment=iotstock - IotPOS Admin Module
+Name=iotstock
 
 [Event/information]
 Name=information

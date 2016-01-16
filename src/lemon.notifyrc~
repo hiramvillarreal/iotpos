@@ -1,7 +1,7 @@
 [Global]
-IconName=iotpos
-Comment=Iot Point of Sale
-Name=iotpos
+IconName=lemon
+Comment=Lemon Point of Sale
+Name=lemonPOS
 
 [Event/information]
 Name=information

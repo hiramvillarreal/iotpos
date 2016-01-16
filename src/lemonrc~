@@ -3,9 +3,9 @@ State=AAAA/wAAAAD9AAAAAAAAAyAAAAIeAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG
 Width 800=800
 
 [Database]
-editDBName=iotposdb
+editDBName=lemondb
 editDBPassword=xarwit0721
-editDBUsername=iotposclient
+editDBUsername=lemonclient
 
 [General Preferences]
 showCurrencyOnTotal=false

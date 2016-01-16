@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=lemon
-Exec=iotpos%i -caption "%c"
+Exec=iotpos %i -caption "%c"
 Icon=lemon
 Type=Application
 DocPath=lemon/lemon.html
