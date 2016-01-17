@@ -4484,7 +4484,7 @@ void lemonView::setupModel()
     connect(ui_mainview.rbFilterByCategory, SIGNAL(toggled(bool)), this, SLOT( setFilter()) );
     connect(ui_mainview.rbFilterBySubCategory, SIGNAL(toggled(bool)), this, SLOT( setFilter()) );
 
-    ui_mainview.rbFilterByCategory->setChecked(true);
+    ui_mainview.rbFilterByDesc->setChecked(true);
     setFilter();
   }
   setupClientsModel();

@@ -9,15 +9,14 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?"
 "atid=1011570&group_id=209899&func=browse\n"
 "POT-Creation-Date: 2012-08-09 16:28-0500\n"
-"PO-Revision-Date: 2007-11-22 23:17-0600\n"
+"PO-Revision-Date: 2016-01-17 09:23-0600\n"
 "Last-Translator: Miguel Chavez Gamboa <miguel@lemonpos.org>\n"
 "Language-Team: Español <es@lemonpos.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: ../../dataAccess/azahar.cpp:112 ../../dataAccess/azahar.cpp:139
 #: ../../dataAccess/azahar.cpp:234 ../../dataAccess/azahar.cpp:1096
@@ -979,8 +978,8 @@ msgid "Available: "
 msgstr "Disponible:"
 
 #: lemonview.cpp:4305
-msgid "Category:"
-msgstr "Categoría:"
+#msgid "Category"
+#msgstr "Categoría"
 
 #: lemonview.cpp:4306
 msgid "in stock"
@@ -1526,6 +1525,264 @@ msgstr ""
 msgid "%1 chars of %2 allowed."
 msgstr ""
 
+msgid "Delete empty cancelled transactions"
+msgstr "Borrar transacciones vacías"
+
+msgid "Use style"
+msgstr "Usar estilo"
+
+msgid "Allow any user to quit application"
+msgstr ""
+"Permitir a cualquier usuario salir del sistema (perguntando por password de "
+"administrador)"
+
+msgid "Basic Use Toolbar"
+msgstr "Barra de herramientas básica"
+
+msgid "Administrator's Toolbar"
+msgstr "Barra de herramientas de configuración"
+
+msgid "Ca&sh"
+msgstr "&Efectivo"
+
+msgid "Ca&rd"
+msgstr "&Tarjeta"
+
+msgid "&Internal Credit"
+msgstr "Credito &Interno"
+
+msgid "Cash &Amount:"
+msgstr "C&antidad:"
+
+msgid "Currency conversion"
+msgstr "Conversión de moneda"
+
+msgid "Card &Number:"
+msgstr "&Número de tarjeta:"
+
+msgid "Authorization number:"
+msgstr "Núm. de Autorización:"
+
+msgid "Sale Date"
+msgstr "Fecha de venta"
+
+msgid "Change Sale Date"
+msgstr "Cambiar fecha de venta"
+
+msgid "filter by popularity this month"
+msgstr "filtrar por popularidad este mes"
+
+msgid "filter by description"
+msgstr "filtrar por descripción"
+
+msgid "filter by category"
+msgstr "filtrar por categoría"
+
+msgid "Code"
+msgstr "Código"
+
+msgid "Description"
+msgstr "Descripción"
+
+msgid "Units"
+msgstr "Unidades"
+
+msgid "Total:"
+msgstr "Total:"
+
+msgid "Change:"
+msgstr "Cambio:"
+
+msgid "Go back"
+msgstr "Regresar"
+
+msgid "Enter item description:"
+msgstr "Introduzca descripción:"
+
+msgid "Price with Tax"
+msgstr "Precio con IVA"
+
+msgid "Stock"
+msgstr "Existencia"
+
+msgid "Alphacode"
+msgstr "Alphacódigo"
+
+msgid "Filter by"
+msgstr "Filtrar por"
+
+msgid "&Popularity"
+msgstr "&Popularidad"
+
+# msgid "Description"
+# msgstr "Descripción"
+msgid "Category"
+msgstr "Categoria"
+
+msgid "Subcategory"
+msgstr "Subcategoria"
+
+# msgid "Discount:"
+# msgstr "Descuento:"
+msgid "Type here..."
+msgstr "Escriba aqui..."
+
+msgid "Print the ticket as"
+msgstr "Imprimir el ticket como"
+
+msgid "Small receipt using a thermal ticket printer (using CUPS)"
+msgstr "Ticket pequeño usando una impresora de tickets (via CUPS)"
+
+msgid "Small receipt using the thermal ticket printer (/dev/ttyAMA0)"
+msgstr "Ticket pequeño usando la impresora de tickets (/dev/ttyAMA0)"
+
+msgid "Printer Device:"
+msgstr "Dispositivo de impresión:"
+
+msgid "Allow negative stock, but alert the user."
+msgstr "Permitir existencia negativa alertando"
+
+msgid "Apply only first discount"
+msgstr "Aplicar solo primer descuento"
+
+msgid "Invoices (Mexico Only)"
+msgstr "Facturas (México solamente)"
+
+msgid "Ask for invoice generation"
+msgstr "Preguntar generar factura"
+
+msgid "Printer Codec:"
+msgstr "Código de impresión a usar (codec):"
+
+msgid "Open drawer"
+msgstr "Abrir la gaveta"
+
+msgid "Big format [A4, Letter] receipt using normal printer (using CUPS)"
+msgstr "Un recibo grande [A4,Carta] usando una impresora normal (via CUPS)"
+
+msgid "Print Balances on your selected printer (above)."
+msgstr "Imprimir cortes de caja usando impresora seleccionada arriba"
+
+msgid "Print Date Changed Tickets"
+msgstr "Imprimir tickets cuando se cambia fecha de venta"
+
+msgid "Print Special Orders"
+msgstr "Imprimir Ordenes especiales"
+
+msgid "Print  under demand (physical bottom)."
+msgstr "Imprimir con botón bajo demanda."
+
+msgid "Print Group/Pack Contents on tickets."
+msgstr "Imprimir Contenido de los grupos o paquetes en el ticket"
+
+msgid "Print a random message on tickets."
+msgstr "Imprimir mensajes aleatorios en tickets"
+
+msgid "This is the &Terminal Number:"
+msgstr "Núm de &terminal:"
+
+msgid "Use Product Code Input to Identify Customers"
+msgstr "Usar campo de código de producto para identificar clientes."
+
+msgid "As 6 digits code (exactly 6). Discard products with 6 digits code."
+msgstr ""
+"Como Id de 6 digitos exactamente. Descartar productos con códigos de 6 "
+"digitos."
+
+msgid ""
+"As 12/13 Digits Starting with digit \"4\". As described in UPC Standard."
+msgstr "Como un Id de 12/13 digitos comenzando con el número 4."
+
+msgid "Dialogs and Authorizations"
+msgstr "Diálogos y autorización"
+
+msgid "Show a dialog when printing ticket"
+msgstr "Mostrar diálogo al imprimir"
+
+msgid "Time showing the dialog:"
+msgstr "Tiempo de duración del ticket en pantalla:"
+
+msgid "Requiere authorisation to delete items from shopping list"
+msgstr "Requerir autorización para borrar un elemento de la lista de compras."
+
+msgid "Products Grid"
+msgstr "Mostrar Rejilla de productos"
+
+msgid "Show products grid"
+msgstr "Mostrar Rejilla de productos"
+
+msgid "Low Stock"
+msgstr "Inventario bajo"
+
+msgid "Minimum value for alert"
+msgstr "Valor mínimo para alerta"
+
+msgid "Drawer Cash Level"
+msgstr "Nivel de efectivo en gaveta"
+
+msgid "Display warning message when level is lower than"
+msgstr "Mostrar mensaje de alerta cuando el nivel sea menor a"
+
+msgid "Taxes"
+msgstr "Impuestos"
+
+msgid "Add taxes to sale (not included in price)"
+msgstr "Agregar Impuestos a la venta (no incluidos en el precio)"
+
+msgid "Rounding"
+msgstr "Redondear"
+
+msgid "0.001-0.004 round down to 0.00 and 0.005 - 0.009 round up to 0.01"
+msgstr "0.01 - 0.04 baja a 0.00 y 0.05 - 0.09 sube a 0.10"
+
+msgid "Round  using US Standard 5/4."
+msgstr "Redondear usando el Estandar Estadounidense 5/4."
+
+msgid "&Server:"
+msgstr "&Servidor:"
+
+msgid "&Username:"
+msgstr "&Usuario:"
+
+msgid "&Password:"
+msgstr "&Contraseña:"
+
+msgid "&Database Name:"
+msgstr "Base de &datos:"
+
+msgid "Extra options"
+msgstr "Otras opciones"
+
+msgid "Allow any user to quit, asking for administrator's password"
+msgstr ""
+"Permitir a cualquier usuario salir del sistema (perguntando por password de "
+"administrador)"
+
+msgid "Do not ask for admin password (Low Security Mode)"
+msgstr "No requerir password de administrador (modo de baja seguridad)"
+
+msgid "Use style sheet"
+msgstr "Usar estilo"
+
+msgid "&Name:"
+msgstr "&Nombre:"
+
+msgid "&Address:"
+msgstr "&Dirección"
+
+msgid "&Phone:"
+msgstr "&Tel:"
+
+msgid "Ticket &Message:"
+msgstr "&Mensaje del ticket:"
+
+msgid "Store Logo:"
+msgstr "Logo de la tienda:"
+
+msgid "Print Logo on ticket top, otherwise at the right"
+msgstr ""
+"Imprimir logo centrado al inicio del ticket, de otra forma a la derecha."
+
 #~ msgid "Discount: %1"
 #~ msgstr "Descuento: %1"
 
@@ -1616,19 +1873,8 @@ msgstr ""
 #~ msgid "DB Name"
 #~ msgstr "Nombre de la base de datos"
 
-msgid "Delete empty cancelled transactions"
-msgstr "Borrar transacciones vacías"
-
-msgid "Use style"
-msgstr "Usar estilo"
-
 #~ msgid "Get Stylesheet Name"
 #~ msgstr "Obtener nombre de estilo"
-
-msgid "Allow any user to quit application"
-msgstr ""
-"Permitir a cualquier usuario salir del sistema (perguntando por password "
-"de administrador)"
 
 #~ msgid "Show a dialog when printing the ticket"
 #~ msgstr "Mostrar diálogo al imprimir"
@@ -1677,108 +1923,11 @@ msgstr ""
 #~ msgid "Get Printer Codec to use"
 #~ msgstr "obtener codec a usar para imprimir"
 
-msgid "Basic Use Toolbar"
-msgstr "Barra de herramientas básica"
-
-msgid "Administrator's Toolbar"
-msgstr "Barra de herramientas de configuración"
-
-msgid "Ca&sh"
-msgstr "&Efectivo"
-
-msgid "Ca&rd"
-msgstr "&Tarjeta"
-
-msgid "&Internal Credit"
-msgstr "Credito &Interno"
-
-msgid "Cash &Amount:"
-msgstr "C&antidad:"
-
-msgid "Currency conversion"
-msgstr "Conversión de moneda"
-
 #~ msgid "$"
 #~ msgstr "$"
 
-msgid "Card &Number:"
-msgstr "&Número de tarjeta:"
-
-msgid "Authorization number:"
-msgstr "Núm. de Autorización:"
-
-msgid "Sale Date"
-msgstr "Fecha de venta"
-
-msgid "Change Sale Date"
-msgstr "Cambiar fecha de venta"
-
-msgid "filter by popularity this month"
-msgstr "Filtrar por artículos mas vendidos este mes"
-
-msgid "filter by description"
-msgstr "Filtrar por descripción"
-
-msgid "filter by category"
-msgstr "Filtrar por categoría"
-
-msgid "Code"
-msgstr "Código"
-
-msgid "Description"
-msgstr "Descripción"
-
-msgid "Units"
-msgstr "Unidades"
-
-msgid "Total:"
-msgstr "Total:"
-
-msgid "Change:"
-msgstr "Cambio:"
-
 #~ msgid "Subtotal:"
 #~ msgstr "subtotal:"
-
-msgid "Go back"
-msgstr "Regresar"
-
-msgid "Enter item description:"
-msgstr "Introduzca descripción:"
-
-msgid "Price with Tax"
-msgstr "Precio con IVA"
-
-msgid "Stock"
-msgstr "Existencia"
-
-msgid "Alphacode"
-msgstr "Alphacódigo"
-
-msgid "Filter by:"
-msgstr "Filtrar por:"
-
-
-msgid "Popularity"
-msgstr "Popularidad"
-
-#msgid "Description"
-#msgstr "Descripción"
-
-msgid "Category"
-msgstr "Categoria"
-
-msgid "Subcategory"
-msgstr "Subcategoria"
-
-
-#msgid "Discount:"
-#msgstr "Descuento:"
-
-
-
-msgid "Type here..."
-msgstr "Escriba aqui..."
 
 #~ msgid "Reprint Ticket"
 #~ msgstr "Reimprimir ticket"
@@ -1964,60 +2113,6 @@ msgstr "Escriba aqui..."
 #~ msgid "Close"
 #~ msgstr "Cerrar"
 
-msgid "Print the ticket as"
-msgstr "Imprimir el ticket como"
-
-msgid "Small receipt using a thermal ticket printer (using CUPS)"
-msgstr "Ticket pequeño usando una impresora de tickets (via CUPS)"
-
-msgid "Small receipt using the thermal ticket printer (/dev/ttyAMA0)"
-msgstr "Ticket pequeño usando la impresora de tickets (/dev/ttyAMA0)"
-
-msgid "Printer Device:"
-msgstr "Dispositivo de impresión:"
-
-msgid "Allow negative stock, but alert the user."
-msgstr "Permitir existencia negativa alertando"
-
-msgid "Apply only first discount"
-msgstr "Aplicar solo primer descuento"
-
-msgid "Invoices (Mexico Only)"
-msgstr "Facturas (México solamente)"
-
-msgid "Ask for invoice generation"
-msgstr "Preguntar generar factura"
-
-msgid "Printer Codec:"
-msgstr "Código de impresión a usar (codec):"
-
-msgid "Open drawer"
-msgstr "Abrir la gaveta"
-
-msgid "Big format [A4, Letter] receipt using normal printer (using CUPS)"
-msgstr "Un recibo grande [A4,Carta] usando una impresora normal (via CUPS)"
-
-msgid "Print Balances on your selected printer (above)."
-msgstr "Imprimir cortes de caja usando impresora seleccionada arriba"
-
-msgid "Print Date Changed Tickets"
-msgstr "Imprimir tickets cuando se cambia fecha de venta"
-
-msgid "Print Special Orders"
-msgstr "Imprimir Ordenes especiales"
-
-msgid "Print  under demand (physical bottom)."
-msgstr "Imprimir con botón bajo demanda."
-
-msgid "Print Group/Pack Contents on tickets."
-msgstr "Imprimir Contenido de los grupos o paquetes en el ticket"
-
-msgid "Print a random message on tickets."
-msgstr "Imprimir mensajes aleatorios en tickets"
-
-msgid "This is the &Terminal Number:"
-msgstr "Núm de &terminal:"
-
 #~ msgid ""
 #~ "Use this to enter Customer IDs at the product code input box. This can "
 #~ "improve usability (speed up customer selection) in an environment with "
@@ -2033,20 +2128,12 @@ msgstr "Núm de &terminal:"
 #~ "Esto puede causar que se ignoren algunos productos (dependiendo de sus "
 #~ "datos  y el modo configurado) en favor de la identificación de clientes."
 
-msgid "Use Product Code Input to Identify Customers"
-msgstr "Usar campo de código de producto para identificar clientes."
-
 #~ msgid ""
 #~ "Use 6 digits to identify customers. Any product with 6 digits (UPC-E) "
 #~ "will be discarded and only clients will be searched."
 #~ msgstr ""
 #~ "Usar Id de 6 digitos para identificar clientes. Cualquier producto con "
 #~ "código de 6 digitos será ignorado."
-
-msgid "As 6 digits code (exactly 6). Discard products with 6 digits code."
-msgstr ""
-"Como Id de 6 digitos exactamente. Descartar productos con códigos de 6 "
-"digitos."
 
 #~ msgid ""
 #~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
@@ -2080,84 +2167,8 @@ msgstr ""
 #~ "underline; color:#0000ff;\">http://en.wikipedia.org/wiki/"
 #~ "Universal_Product_Code#Prefixes</span></a></p></body></html>"
 
-msgid ""
-"As 12/13 Digits Starting with digit \"4\". As described in UPC Standard."
-msgstr "Como un Id de 12/13 digitos comenzando con el número 4."
-
-msgid "Dialogs and Authorizations"
-msgstr "Diálogos y autorización"
-
-msgid "Show a dialog when printing ticket"
-msgstr "Mostrar diálogo al imprimir"
-
-msgid "Time showing the dialog:"
-msgstr "Tiempo de duración del ticket en pantalla:"
-
 #~ msgid " seconds"
 #~ msgstr " segundos"
-
-msgid "Requiere authorisation to delete items from shopping list"
-msgstr ""
-"Requerir autorización para borrar un elemento de la lista de compras."
-
-msgid "Products Grid"
-msgstr "Mostrar Rejilla de productos"
-
-msgid "Show products grid"
-msgstr "Mostrar Rejilla de productos"
-
-msgid "Low Stock"
-msgstr "Inventario bajo"
-
-msgid "Minimum value for alert"
-msgstr "Valor mínimo para alerta"
-
-msgid "Drawer Cash Level"
-msgstr "Nivel de efectivo en gaveta"
-
-msgid "Display warning message when level is lower than"
-msgstr "Mostrar mensaje de alerta cuando el nivel sea menor a"
-
-msgid "Taxes"
-msgstr "Impuestos"
-
-msgid "Add taxes to sale (not included in price)"
-msgstr "Agregar Impuestos a la venta (no incluidos en el precio)"
-
-msgid "Rounding"
-msgstr "Redondear"
-
-msgid "0.001-0.004 round down to 0.00 and 0.005 - 0.009 round up to 0.01"
-msgstr "0.01 - 0.04 baja a 0.00 y 0.05 - 0.09 sube a 0.10"
-
-msgid "Round  using US Standard 5/4."
-msgstr "Redondear usando el Estandar Estadounidense 5/4."
-
-msgid "&Server:"
-msgstr "&Servidor:"
-
-msgid "&Username:"
-msgstr "&Usuario:"
-
-msgid "&Password:"
-msgstr "&Contraseña:"
-
-msgid "&Database Name:"
-msgstr "Base de &datos:"
-
-msgid "Extra options"
-msgstr "Otras opciones"
-
-msgid "Allow any user to quit, asking for administrator's password"
-msgstr ""
-"Permitir a cualquier usuario salir del sistema (perguntando por password "
-"de administrador)"
-
-msgid "Do not ask for admin password (Low Security Mode)"
-msgstr "No requerir password de administrador (modo de baja seguridad)"
-
-msgid "Use style sheet"
-msgstr "Usar estilo"
 
 #~ msgid "Tickets from all terminals"
 #~ msgstr "Comprobantes de todas las terminales"
@@ -2333,23 +2344,3 @@ msgstr "Usar estilo"
 
 #~ msgid "Enter Client Address"
 #~ msgstr "Escriba la dirección del cliente aqui"
-
-msgid "&Name:"
-msgstr "&Nombre:"
-
-msgid "&Address:"
-msgstr "&Dirección"
-
-msgid "&Phone:"
-msgstr "&Tel:"
-
-msgid "Ticket &Message:"
-msgstr "&Mensaje del ticket:"
-
-msgid "Store Logo:"
-msgstr "Logo de la tienda:"
-
-msgid "Print Logo on ticket top, otherwise at the right"
-msgstr ""
-"Imprimir logo centrado al inicio del ticket, de otra forma a la derecha."
-
