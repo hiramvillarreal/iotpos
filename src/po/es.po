@@ -351,7 +351,7 @@ msgstr "Transacción #%1"
 msgid "Continue"
 msgstr "Continuar"
 
-#: lemonview.cpp:163
+#: lemonview.cpp:168
 msgid "Welcome to IotPOS"
 msgstr "Bienvenido a IotPOS"
 
@@ -1755,6 +1755,30 @@ msgstr "Existencia"
 msgid "Alphacode"
 msgstr "Alphacódigo"
 
+msgid "Filter by:"
+msgstr "Filtrar por:"
+
+
+msgid "Popularity"
+msgstr "Popularidad"
+
+#msgid "Description"
+#msgstr "Descripción"
+
+msgid "Category"
+msgstr "Categoria"
+
+msgid "Subcategory"
+msgstr "Subcategoria"
+
+
+#msgid "Discount:"
+#msgstr "Descuento:"
+
+
+
+msgid "Type here..."
+msgstr "Escriba aqui..."
 
 #~ msgid "Reprint Ticket"
 #~ msgstr "Reimprimir ticket"
