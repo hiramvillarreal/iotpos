@@ -33,7 +33,7 @@ Once you have KDE, and QT4 installed, we can install mysql:
   
 Now we need to install everything else that’s needed for the compile:
 
-  sudo apt-get install   cmake gettext  kdelibs5-dev
+  sudo apt-get install build-essential g++ cmake gettext libqt4-sql-mysql kdelibs5-dev
 
  The next step is to download the source:
  
