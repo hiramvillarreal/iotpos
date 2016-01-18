@@ -61,9 +61,9 @@ After the compile is finished, you will need to install everything:
   
   sudo make install
   
-Now, copy the lemonrc file to your local .kde/share/config directory:
+Now, copy the iotposrc file to your local .kde/share/config directory:
   
-  cp iotpos/src/lemonrc /home/pi/.kde/share/config/  #Replace USER with your username.
+  cp iotpos/src/iotposrc /home/USER/.kde/share/config/  #Replace USER with your username: pi.
   
 After installation, you need to create a database and user on mysql, to do this:
 
@@ -119,11 +119,12 @@ But now we want to use this port for the thermal printer instead, so we’ll nee
 
 CONECCTIONS FOR THE HARDWARE
 
------SERIAL THERMAL PRINTER----
+-----SERIAL TTL THERMAL PRINTER----
 
-WARNING!!!: Never conect the side printer Tx pin to GPIO Rx on the pi, The Tx wire is only used for rare cases where the printer
-returns data to the computer. It’s left unconnected because the printer works at 5 Volts and the Raspberry Pi at 3.3 Volts…
-connecting directly to the RXD pin could permanently damage the Raspberry Pi! (The other direction is safe as-is.).
+WARNING!!!: Make sure a TTL printer is usen, NEVER A SERIAL RS232! neither conect the side printer Tx pin to GPIO Rx on the pi, 
+the Tx wire is only used for rare cases where the printer returns data to the computer. It’s left unconnected because the printer
+works at 5 Volts and the Raspberry Pi at 3.3 Volts… connecting directly to the RXD pin could permanently damage the Raspberry Pi!
+(The other direction is safe as-is.). 
 
   Serial Data Cable rx TO    Physical pin 8 It's also commonly known as "Serial TX" ttyAMA0.
   Serial Data Cable tx  DO NOT CONNECT IT TO THE GPIO RX AS SOME ARE 5 V TTL WILL DAMAGE THE RASPBERRY PI!!!
