@@ -72,7 +72,7 @@ After installation, you need to create a database and user on mysql, to do this:
   
   ------ To restore a database with preloaded products and examples:
   
-  mysql -u root -p iotposdb < lemondb.sql
+  mysql -u root -p iotposdb < iotposdb.sql
   
 To start using iotpos, type 
 
