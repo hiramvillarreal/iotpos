@@ -12,7 +12,7 @@ cat fix_roles.sql | mysql -u root -p
 
 -----
 
-If you have database for lemonpos 0.6 or 0.6.1 you can update it for the 0.7 version running:
+If you have database for iotpos 0.6 or 0.6.1 you can update it for the 0.7 version running:
 
 cat upgrade-database_0.6_to_0.7.sql | mysql -u root -p
 
