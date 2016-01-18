@@ -1,6 +1,6 @@
 /**************************************************************************
  *   Copyright © 2007-2012 by Miguel Chavez Gamboa                         *
- *   miguel@lemonpos.org                                                   *
+ *   miguel@iotpospos.org                                                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -309,7 +309,7 @@ ProductInfo Azahar::getProductInfo(const QString &code, const bool &notConsiderD
 
       if ( info.hasUnlimitedStock )
             info.stockqty = 999999; //just make sure we do not return 0 for unlimited stock items.
-      ///NOTE:negative stock will be reported as is (negative), lemon must verify at settings if allowing negative stock with an alert.
+      ///NOTE:negative stock will be reported as is (negative), iotpos must verify at settings if allowing negative stock with an alert.
       
       /** @TODO: for future releases where taxmodel is included in code
       //get missing stuff - tax,offers for the requested product
@@ -716,8 +716,8 @@ bool Azahar::decrementGroupStock(qulonglong code, double qty, QDate date)
   return result;
 }
 
-/// WARNING: This method is DECREMENTING soldunits... not used in lemonview.cpp nor squeezeview.cpp !!!!!
-///          Do not use when doing PURCHASES in squeeze!
+/// WARNING: This method is DECREMENTING soldunits... not used in iotposview.cpp nor iotstockview.cpp !!!!!
+///          Do not use when doing PURCHASES in iotstock!
 bool Azahar::incrementProductStock(qulonglong code, double qty)
 {
   bool result = false;
@@ -742,8 +742,8 @@ bool Azahar::incrementProductStock(qulonglong code, double qty)
   return result;
 }
 
-/// WARNING: This method is DECREMENTING soldunits... not used in lemonview.cpp nor squeezeview.cpp !!!!!
-///          Do not use when doing PURCHASES in squeeze!
+/// WARNING: This method is DECREMENTING soldunits... not used in iotposview.cpp nor iotstockview.cpp !!!!!
+///          Do not use when doing PURCHASES in iotstock!
 bool Azahar::incrementGroupStock(qulonglong code, double qty)
 {
   bool result = true;

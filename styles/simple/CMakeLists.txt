@@ -8,4 +8,4 @@ install( FILES
          priceCheckerBack.png
          dialog.png
          simple.qss
-        DESTINATION  ${DATA_INSTALL_DIR}/lemon/styles/simple/ )
+        DESTINATION  ${DATA_INSTALL_DIR}/iotpos/styles/simple/ )

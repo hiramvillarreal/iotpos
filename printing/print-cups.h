@@ -1,6 +1,6 @@
 /**************************************************************************
  *   Copyright © 2007-2010 by Miguel Chavez Gamboa                         *
- *   miguel@lemonpos.org                                                   *
+ *   miguel@iotpospos.org                                                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -26,7 +26,7 @@
 * This class is for printing on printers with cups driver installed
 * Accessing them trough cups.
 *
-* @author Miguel Chavez Gamboa <miguel@lemonpos.org>
+* @author Miguel Chavez Gamboa <miguel@iotpospos.org>
 * @version 0.2
 */
 

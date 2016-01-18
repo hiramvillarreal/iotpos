@@ -72,7 +72,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
       pix.loadFromData(pixData);
     }
     else {
-      pix = QPixmap(DesktopIcon("lemon-box", 64));
+      pix = QPixmap(DesktopIcon("iotpos-box", 64));
     }
     int max = 128;
     if ((pix.height() > max) || (pix.width() > max) ) {
@@ -168,7 +168,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     } 
     if (isGroup) {
       //load pixmap
-      pix = QPixmap(DesktopIcon("lemon-groups", 32));
+      pix = QPixmap(DesktopIcon("iotpos-groups", 32));
       painter->drawPixmap(option.rect.x()+10,
                         option.rect.y()+20,
                         /*150, 20, */ pix /*Qt::AlignCenter, naStr*/);
@@ -176,7 +176,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     }
     if (nonDiscountItem) {
       //load pixmap
-      pix = QPixmap(DesktopIcon("lemon-nondiscount", 32));
+      pix = QPixmap(DesktopIcon("iotpos-nondiscount", 32));
       painter->drawPixmap(option.rect.x()+10,
                         option.rect.y()+20,
                         /*150, 20, */ pix /*Qt::AlignCenter, naStr*/);

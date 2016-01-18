@@ -21,7 +21,7 @@
 
 
 
-#include "lemon.h"
+#include "iotpos.h"
 #include "settings.h"
 
 #include <kapplication.h>
@@ -48,9 +48,9 @@ KSplashScreen *splash;
 
 int main(int argc, char **argv)
 {
-    KAboutData about("lemon", 0, ki18n("lemon"), version, ki18n(description), KAboutData::License_GPL, ki18n("(C) 2007-2011 Miguel Chavez Gamboa"), KLocalizedString(), 0, "miguel@lemonpos.org");
-    about.addAuthor( ki18n("Miguel Chavez Gamboa"), KLocalizedString(), "miguel@lemonpos.org" );
-    about.setBugAddress("bugs.lemon@lemonpos.org");
+    KAboutData about("iotpos", 0, ki18n("iotpos"), version, ki18n(description), KAboutData::License_GPL, ki18n("(C) 2007-2011 Miguel Chavez Gamboa"), KLocalizedString(), 0, "miguel@iotpospos.org");
+    about.addAuthor( ki18n("Miguel Chavez Gamboa"), KLocalizedString(), "miguel@iotpospos.org" );
+    about.setBugAddress("bugs.iotpos@iotpospos.org");
     KCmdLineArgs::init(argc, argv, &about);
 
     about.addCredit(ki18n("Biel Frontera"), ki18n("Code contributor"));
@@ -69,14 +69,14 @@ int main(int argc, char **argv)
 
     // see if we are starting with session management
     if (app.isSessionRestored())
-        RESTORE(lemon)
+        RESTORE(iotpos)
     else
     {
         // no session.. just start up normally
         KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
         if (args->count() == 0)
         {
-            QPixmap image (KStandardDirs().findResource("data", "lemon/images/splash_screen.png"));
+            QPixmap image (KStandardDirs().findResource("data", "iotpos/images/splash_screen.png"));
             splash = new KSplashScreen(image, Qt::WindowStaysOnTopHint);
             splash->show();
 
@@ -102,7 +102,7 @@ int main(int argc, char **argv)
             //      It just gives an empty backup file. But once everything is working fine, it will give a backup every day.
             //QProcess process;
             //process.startDetached("/bin/sh", QStringList()<< "/home/pi/iotpos/scripts/dropbox.sh");*/
-            lemon *widget = new lemon;
+            iotpos *widget = new iotpos;
             widget->show();
             splash->finish(widget);
         }
@@ -111,9 +111,9 @@ int main(int argc, char **argv)
             int i = 0;
             for (; i < args->count(); i++)
             {
-                lemon *widget = new lemon;
+                iotpos *widget = new iotpos;
                 widget->show();
-                qDebug()<<"lemon "<<i;
+                qDebug()<<"iotpos "<<i;
             }
         }
         args->clear();

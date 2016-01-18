@@ -136,7 +136,7 @@ LoginWindow::LoginWindow(QString caption,
     case LoginWindow::FullScreen:
       setWindowState(Qt::WindowFullScreen);
       setObjectName("loginDialog");
-      mainImage->setPixmap(DesktopIcon("lemon-user", 128));
+      mainImage->setPixmap(DesktopIcon("iotpos-user", 128));
       imageError->setPixmap(DesktopIcon("dialog-cancel", 48));
       setGeometry(QApplication::desktop()->screenGeometry(this));
       break;
@@ -145,7 +145,7 @@ LoginWindow::LoginWindow(QString caption,
       //labelUsername->hide();
       //editUsername->hide();
       editPassword->setMaximumSize(QSize(120, 28));
-      mainImage->setPixmap(DesktopIcon("lemon-user", 128));
+      mainImage->setPixmap(DesktopIcon("iotpos-user", 128));
       imageError->setPixmap(DesktopIcon("dialog-cancel", 22));
       QTimer::singleShot(3000, this, SLOT(showAdminPhoto()));
       resize(348,215); //Size of the login background...
@@ -350,7 +350,7 @@ void LoginWindow::updateUserPhoto(const QString &text)
   }
   else {
     //Repaint image if it is the same??? how to know it is the same?
-    mainImage->setPixmap(DesktopIcon("lemon-user", 128));
+    mainImage->setPixmap(DesktopIcon("iotpos-user", 128));
   }
   mainImage->setAlignment(Qt::AlignCenter);
 }

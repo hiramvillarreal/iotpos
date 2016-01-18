@@ -1,10 +1,10 @@
 #MCH: Deshabilitar debug (para alivianar el ejecutable).
 #     cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=/opt/kde4
 
-set(lemon_SRCS
-   lemon.cpp
+set(iotpos_SRCS
+   iotpos.cpp
    main.cpp
-   lemonview.cpp
+   iotposview.cpp
    sha1.cc
    hash.cpp
    gaveta.cpp
@@ -29,7 +29,7 @@ set(lemon_SRCS
    reservations.cpp
    saleqtydelegate.cpp
    dialogclientdata.cpp
-   ../squeeze/src/clienteditor.cpp
+   ../iotstock/src/clienteditor.cpp
    refacturar.cpp
    bundlelist.cpp
    #printers/sp500.cpp
@@ -40,10 +40,10 @@ set(lemon_SRCS
    nouns/Currency.cpp
  )
 
-#qt4_add_dbus_adaptor(lemon_SRCS org.kde.lemon.lemon.xml lemon.h lemon)
+#qt4_add_dbus_adaptor(iotpos_SRCS org.kde.iotpos.iotpos.xml iotpos.h iotpos)
 
 
-kde4_add_ui_files( lemon_SRCS
+kde4_add_ui_files( iotpos_SRCS
   ui/mainview.ui
   ui/prefs_base.ui
   ui/pref_printers.ui
@@ -59,13 +59,13 @@ kde4_add_ui_files( lemon_SRCS
   ui/reservations.ui
   ui/checker.ui
   ui/datoscliente.ui
-  ../squeeze/src/ui/editclient_widget.ui
+  ../iotstock/src/ui/editclient_widget.ui
   ui/refacturar.ui
   )
 
-kde4_add_kcfg_files(lemon_SRCS settings.kcfgc )
+kde4_add_kcfg_files(iotpos_SRCS settings.kcfgc )
 
-kde4_add_executable(iotpos ${lemon_SRCS})
+kde4_add_executable(iotpos ${iotpos_SRCS})
 
 target_link_libraries(iotpos
   ${KDE4_KDEUI_LIBS}
@@ -103,21 +103,21 @@ ENDIF(NOT GETTEXT_MSGFMT_EXECUTABLE)
 install(TARGETS iotpos DESTINATION ${BIN_INSTALL_DIR} )
 
 ##### client #####
-#set(lemon_client_SRCS
-#    lemon_client.cpp
+#set(iotpos_client_SRCS
+#    iotpos_client.cpp
 # )
-#kde4_add_executable(lemon_client ${lemon_client_SRCS})
-#target_link_libraries(lemon_client ${KDE4_KDECORE_LIBS})
-#install(TARGETS lemon_client DESTINATION ${BIN_INSTALL_DIR} )
+#kde4_add_executable(iotpos_client ${iotpos_client_SRCS})
+#target_link_libraries(iotpos_client ${KDE4_KDECORE_LIBS})
+#install(TARGETS iotpos_client DESTINATION ${BIN_INSTALL_DIR} )
 
 ########### install files ###############
 
 install( FILES iotpos.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
-install( FILES lemonui.rc     DESTINATION  ${DATA_INSTALL_DIR}/lemon )
+install( FILES iotposui.rc     DESTINATION  ${DATA_INSTALL_DIR}/iotpos )
 # With next line... the user needs to read/write the file...
-install( FILES lemonrc        DESTINATION  ${CONFIG_INSTALL_DIR} )
-#install( FILES lemonrc        DESTINATION  ${HOME}/.kde/share/config/ )
-install( FILES lemon.kcfg     DESTINATION  ${KCFG_INSTALL_DIR} )
+install( FILES iotposrc        DESTINATION  ${CONFIG_INSTALL_DIR} )
+#install( FILES iotposrc        DESTINATION  ${HOME}/.kde/share/config/ )
+install( FILES iotpos.kcfg     DESTINATION  ${KCFG_INSTALL_DIR} )
 #For KNotifications
-install( FILES iotpos.notifyrc DESTINATION ${DATA_INSTALL_DIR}/lemon)
+install( FILES iotpos.notifyrc DESTINATION ${DATA_INSTALL_DIR}/iotpos)
 

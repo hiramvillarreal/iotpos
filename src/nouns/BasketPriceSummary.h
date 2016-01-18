@@ -2,8 +2,8 @@
 // Created by krzysiek on 15.04.15.
 //
 
-#ifndef LEMON_BASKETPRICESUMMARY_H
-#define LEMON_BASKETPRICESUMMARY_H
+#ifndef IOTPOS_BASKETPRICESUMMARY_H
+#define IOTPOS_BASKETPRICESUMMARY_H
 
 #include "BasketEntryPriceSummary.h"
 
@@ -31,4 +31,4 @@ public: //getters
 };
 
 
-#endif //LEMON_BASKETPRICESUMMARY_H
+#endif //IOTPOS_BASKETPRICESUMMARY_H

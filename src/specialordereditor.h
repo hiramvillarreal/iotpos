@@ -54,7 +54,7 @@ class SpecialOrderEditor : public KDialog
     double  getQty()         { return ui->editQty->text().toDouble(); }
     QString getNotes()      { return  ui->editNotes->toPlainText(); }
     qulonglong getTransId() { return m_transId; }
-    double  getPayment()    { return ui->editPayment->value()/ui->editQty->value();} ///we divide the total payment by the qty of items ordered, to report them to lemonview... lemonview expects the payment to be the price for the item to be inserted (so) in order to calculate the total sale.
+    double  getPayment()    { return ui->editPayment->value()/ui->editQty->value();} ///we divide the total payment by the qty of items ordered, to report them to iotposview... iotposview expects the payment to be the price for the item to be inserted (so) in order to calculate the total sale.
     GroupInfo getGroupHash();
     QString getGroupElementsStr();
     int     getStatus();

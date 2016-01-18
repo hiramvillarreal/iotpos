@@ -1,6 +1,6 @@
 /**************************************************************************
  *   Copyright © 2007-2011 by Miguel Chavez Gamboa                         *
- *   miguel@lemonpos.org                                                   *
+ *   miguel@iotpospos.org                                                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -44,14 +44,14 @@ InputDialog::InputDialog(QWidget *parent, bool integer, DialogType type, QString
 
   // Icons for each type
   if (type == dialogMeasures) lPixmap->setPixmap(DesktopIcon("kruler", 48));
-  else if (type == dialogMoney) lPixmap->setPixmap(DesktopIcon("lemon-money", 48));
-  else if (type==dialogCashOut) lPixmap->setPixmap(DesktopIcon("lemon-cashout", 48));
-  else if (type == dialogTicket) lPixmap->setPixmap(DesktopIcon("lemon-ticket-cancel", 48));
-  else if (type == dialogSpecialOrder) lPixmap->setPixmap(DesktopIcon("lemon-ticket", 48));
-  else if (type == dialogStockCorrection) lPixmap->setPixmap(DesktopIcon("squeeze-stock-correction", 48));
-  else if (type == dialogTerminalNum) lPixmap->setPixmap(DesktopIcon("lemon-money", 48)); //FIXME: add an icon
-  else if (type == dialogTicketMsg)   lPixmap->setPixmap(DesktopIcon("lemon-ticket", 48));
-  else if (type == dialogCurrency) lPixmap->setPixmap(DesktopIcon("lemon-money", 48));
+  else if (type == dialogMoney) lPixmap->setPixmap(DesktopIcon("iotpos-money", 48));
+  else if (type==dialogCashOut) lPixmap->setPixmap(DesktopIcon("iotpos-cashout", 48));
+  else if (type == dialogTicket) lPixmap->setPixmap(DesktopIcon("iotpos-ticket-cancel", 48));
+  else if (type == dialogSpecialOrder) lPixmap->setPixmap(DesktopIcon("iotpos-ticket", 48));
+  else if (type == dialogStockCorrection) lPixmap->setPixmap(DesktopIcon("iotstock-stock-correction", 48));
+  else if (type == dialogTerminalNum) lPixmap->setPixmap(DesktopIcon("iotpos-money", 48)); //FIXME: add an icon
+  else if (type == dialogTicketMsg)   lPixmap->setPixmap(DesktopIcon("iotpos-ticket", 48));
+  else if (type == dialogCurrency) lPixmap->setPixmap(DesktopIcon("iotpos-money", 48));
 
 
   //labels
@@ -158,7 +158,7 @@ InputDialog::InputDialog(QWidget *parent, bool integer, DialogType type, QString
     // I NEED TO MAKE VALIDATION WITH REGULAR EXPRESSIONS TO SUPPORT LARGE NUMBERS if we need to do so.. ticket numbers larger
     // than 2,147,483,647. For now, its ok, its at the order of billions (thousand millions).
   } else {
-    //Some people complained about decimal places in numbers accepted by lemon. They wanted more decimal places!!!
+    //Some people complained about decimal places in numbers accepted by iotpos. They wanted more decimal places!!!
     QDoubleValidator *validator;
     if (dialogType == dialogStockCorrection) {
         validator = new QDoubleValidator(-99999999.9, max, 5,this);

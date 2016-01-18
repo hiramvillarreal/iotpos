@@ -119,7 +119,7 @@
     </entry>
     <entry name="editDBUsername" type="String">
       <label>DB Username</label>
-      <default>lemonclient</default>
+      <default>iotposclient</default>
     </entry>
     <entry name="editDBPassword" type="String">
       <label>DB Password</label>
@@ -127,7 +127,7 @@
     </entry>
     <entry name="editDBName" type="String">
       <label>DB Name</label>
-      <default>lemondb</default>
+      <default>iotposdb</default>
     </entry>
     <entry name="deleteEmptyCancelledTransactions" type="Bool">
       <label>Delete empty cancelled transactions</label>

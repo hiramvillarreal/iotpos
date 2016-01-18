@@ -95,7 +95,7 @@ void TicketPopup::paintEvent(QPaintEvent *e)
 void TicketPopup::closeIt()
 {
   timer->stop();
-  emit onTicketPopupClose(); //to let squeezeview unfreeze the widgets
+  emit onTicketPopupClose(); //to let iotstockview unfreeze the widgets
   close();
 }
 

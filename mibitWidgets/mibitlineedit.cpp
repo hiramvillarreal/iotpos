@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2009 by Miguel Chavez Gamboa                            *
- *   miguel@lemonpos.org                                                   *
+ *   miguel@iotpospos.org                                                   *
  *                                                                         *
  *   This is based on the KLineEdit class                                  *
  *                                                                         *
@@ -154,7 +154,7 @@ void MibitLineEdit::focusOutEvent( QFocusEvent *ev )
 
 void MibitLineEdit::keyPressEvent ( QKeyEvent * event )
 {
-  // Check for our special keys +,Enter (specific for lemonPOS)
+  // Check for our special keys +,Enter (specific for iotposPOS)
   // The Enter key is the one located at the numeric pad. The other is called RETURN.
   if ( event->key() == Qt::Key_Plus || event->key() == Qt::Key_Enter )
       emit plusKeyPressed();

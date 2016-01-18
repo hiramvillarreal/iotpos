@@ -1,4 +1,4 @@
-project(lemon)
+project(iotpos)
 
 find_package(KDE4 REQUIRED)
 include (KDE4Defaults)
@@ -9,7 +9,7 @@ add_subdirectory( src )
 add_subdirectory( icons )
 add_subdirectory( styles )
 add_subdirectory( images )
-add_subdirectory( squeeze )
+add_subdirectory( iotstock )
 add_subdirectory( database_resources )
 
 # MCH: add_subdirectory( doc )

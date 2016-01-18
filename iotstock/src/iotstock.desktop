@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=IotStock
+Exec=iotstock %i -caption "%c"
+Icon=iotstock
+Type=Application
+DocPath=squeeze/squeeze.html
+GenericName=IotStock administration module for IotPOS
+Terminal=0
+GenericName[en_US]=IotPOS administration module

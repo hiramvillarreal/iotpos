@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2009 by Miguel Chavez Gamboa                            *
- *   miguel@lemonpos.org                                                   *
+ *   miguel@iotpospos.org                                                   *
  *                                                                         *
  *   This library is free software; you can redistribute it and/or         *
  *   modify it under the terms of the GNU Lesser General Public            *
@@ -48,7 +48,7 @@ enum TipPosition {tpBelow, tpAbove};
   *  horizontally centered and vertically positioned below
   *  or above its partner.
   *
-  *  This was designed for lemonPOS project.
+  *  This was designed for iotposPOS project.
   *
   **/
 

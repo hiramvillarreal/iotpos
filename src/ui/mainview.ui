@@ -1276,13 +1276,6 @@ color:black;</string>
                <item row="0" column="3">
                 <widget class="QLineEdit" name="editFilterByDesc"/>
                </item>
-               <item row="0" column="0">
-                <widget class="QLabel" name="label_20">
-                 <property name="text">
-                  <string>Filter by:</string>
-                 </property>
-                </widget>
-               </item>
                <item row="0" column="2">
                 <widget class="QRadioButton" name="rbFilterByDesc">
                  <property name="text">
@@ -1293,7 +1286,7 @@ color:black;</string>
                <item row="0" column="1">
                 <widget class="QRadioButton" name="rbFilterByPopularity">
                  <property name="text">
-                  <string>Popularity</string>
+                  <string>Best sellers</string>
                  </property>
                 </widget>
                </item>

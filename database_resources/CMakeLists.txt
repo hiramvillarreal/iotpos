@@ -1,5 +1,5 @@
 install( FILES
-         lemon_mysql.sql
+         iotpos_mysql.sql
          fix_0.9.4rc8.sql
          fix_0.9.3rc.sql
          fix_0.9.3.sql
@@ -9,4 +9,4 @@ install( FILES
          mexico_taxes.sql
          README
          README-TAXMODELS
-        DESTINATION  ${DATA_INSTALL_DIR}/lemon/ )
+        DESTINATION  ${DATA_INSTALL_DIR}/iotpos/ )

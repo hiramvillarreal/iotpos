@@ -3,9 +3,9 @@ State=AAAA/wAAAAD9AAAAAAAAAyAAAAIeAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG
 Width 800=800
 
 [Database]
-editDBName=lemondb
+editDBName=iotposdb
 editDBPassword=xarwit0721
-editDBUsername=lemonclient
+editDBUsername=iotposclient
 
 [General Preferences]
 showCurrencyOnTotal=false
@@ -39,7 +39,7 @@ editTicketMessage=Thanks for your preference.
 styleName=simple
 useStyle=true
 
-[lemon]
+[iotpos]
 SplitterSizes=211,548
 
 [security]

@@ -1779,6 +1779,9 @@ msgstr "&Mensaje del ticket:"
 msgid "Store Logo:"
 msgstr "Logo de la tienda:"
 
+msgid "Best sellers"
+msgstr "Más Vendidos"
+
 msgid "Print Logo on ticket top, otherwise at the right"
 msgstr ""
 "Imprimir logo centrado al inicio del ticket, de otra forma a la derecha."

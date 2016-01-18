@@ -22,4 +22,4 @@ install( FILES
         tira.png
         dialog.png
         elegant.qss
-        DESTINATION  ${DATA_INSTALL_DIR}/lemon/styles/elegant/ )
+        DESTINATION  ${DATA_INSTALL_DIR}/iotpos/styles/elegant/ )

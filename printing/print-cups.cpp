@@ -1,6 +1,6 @@
 /**************************************************************************
 *   Copyright (C) 2009-2012 by Miguel Chavez Gamboa                       *
-*   miguel@lemonpos.org                                                   *
+*   miguel@iotpospos.org                                                   *
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
 *   it under the terms of the GNU General Public License as published by  *
@@ -375,7 +375,7 @@ bool PrintCUPS::printSmallBalance(const PrintBalanceInfo &pbInfo, QPrinter &prin
       painter.drawText((tmpOffset*3)+Margin*3, yPos, text);
       //text = data.at(1); // TYPE
       //FIXME: Pass a parameter to indicate a cash-in or cash-out. Now we take the word 'cash in/out'
-      //       The text is stored in the database, so the admin can change this text using mysql (not squeeze)...
+      //       The text is stored in the database, so the admin can change this text using mysql (not iotstock)...
       //fm = painter.fontMetrics();
       //while (fm.size(Qt::TextExpandTabs | Qt::TextDontClip, text).width() >= printer.width()-Margin*1) { text.chop(2); } //(printer.width()-fm.size(Qt::TextExpandTabs | Qt::TextDontClip, text).width())
       //textWidth = fm.size(Qt::TextExpandTabs | Qt::TextDontClip, text);

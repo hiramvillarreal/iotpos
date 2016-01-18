@@ -1,6 +1,6 @@
 [Global]
 IconName=iotpos
-Comment=Iot Point of Sale
+Comment=IoT Point of Sale
 Name=iotpos
 
 [Event/information]

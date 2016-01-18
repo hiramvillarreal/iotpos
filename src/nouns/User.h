@@ -1,5 +1,5 @@
-#ifndef LEMON_USER_H
-#define LEMON_USER_H
+#ifndef IOTPOS_USER_H
+#define IOTPOS_USER_H
 
 
 class User {
@@ -21,4 +21,4 @@ public:
 };
 
 
-#endif //LEMON_USER_H
+#endif //IOTPOS_USER_H
