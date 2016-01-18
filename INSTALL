@@ -95,7 +95,7 @@ If for any reason iotpos binary is not found, and if your kde4 install path is /
   
 ---------------------------------------------------HARDWARE-SETUP------------------------------------------------------
 
-* SERIAL THERMAL PRINTER INSTALL
+* SERIAL TTL THERMAL PRINTER INSTALL
 
 The serial port on the Raspberry Pi’s GPIO header is normally configured for console cable use,
 will output a Console from your Pi that,with a suitable Serial cable, you can use to control your Pi via the command-line.
@@ -120,6 +120,11 @@ But now we want to use this port for the thermal printer instead, so we’ll nee
 CONECCTIONS FOR THE HARDWARE
 
 -----SERIAL THERMAL PRINTER----
+
+WARNING!!!: Never conect the side printer Tx pin to GPIO Rx on the pi, The Tx wire is only used for rare cases where the printer
+returns data to the computer. It’s left unconnected because the printer works at 5 Volts and the Raspberry Pi at 3.3 Volts…
+connecting directly to the RXD pin could permanently damage the Raspberry Pi! (The other direction is safe as-is.).
+
   Serial Data Cable rx TO    Physical pin 8 It's also commonly known as "Serial TX" ttyAMA0.
   Serial Data Cable tx  DO NOT CONNECT IT TO THE GPIO RX AS SOME ARE 5 V TTL WILL DAMAGE THE RASPBERRY PI!!!
   Serial GND from  serial printer to any gpio GND could use Physical pin 6,9, 14. 
