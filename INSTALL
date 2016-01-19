@@ -1,8 +1,6 @@
 ------------------------Installing iotPOS on the Raspberry Pi and Hardware setup.--------------------------------------
 
-Note: If you don’t have a Raspberry pi and would like to test it on a PC we recommend KUBUNTU on a virtual machine.
-
-For raspbian users we recommend to uninstall useless apps for a dedicated point of sale:
+For raspbian OS we recommend to uninstall useless apps for a dedicated point of sale:
 
 sudo apt-get update
 sudo apt-get remove scratch wolfram-engine dillo netsurf-gtk sonic-pi minecraft-pi
@@ -11,7 +9,6 @@ sudo apt-get clean
 sudo reboot
   
 That will give you an extra .6 Gb space, great for smallers SDs.
-
 
 ---------------------------------------------------SOFTWARE-SETUP------------------------------------------------------
 
@@ -26,7 +23,6 @@ Now that everything is up to date, we can install the needed kde4 packages   (kd
   
   sudo apt-get install kdebase-runtime libqt4-dev
 
-
 Once you have KDE, and QT4 installed, we can install mysql:
 
   sudo apt-get install mysql-client mysql-server
@@ -40,17 +36,17 @@ Now we need to install everything else that’s needed for the compile:
   cd ~
   git clone https://github.com/hiramvillarreal/iotpos
   
-Move into the newly created directory, and create a 'build' Direcotry and move into it:
+Move into the newly created directory, and create a 'build' directory and move into it:
 
   cd iotpos 
   mkdir build
   cd build
 
-Run CMake with your path to KDE4:
+Inside build directory run CMake with your path to KDE4:
 
   cmake .. -DCMAKE_INSTALL_PREFIX=`kde4-config --prefix`
   
-  FOR kUBUNTU COMPILE ONLY:
+  FOR OTHER LINUX DISTROS TRY THIS:
   cmake -DCMAKE_INSTALL_PREFIX=kde4-config --prefix -DQT_QMAKE_EXECUTABLE=which qmake-qt4 -DQT_INCLUDE_DIR=/usr/include/qt4 -DCMAKE_BUILD_TYPE=Release ..
  
 Run make to compile iotpos. This took about an hour on the Pi A, A+, B and B+, took 15 minutes on the new Pi2:
@@ -61,7 +57,7 @@ After the compile is finished, you will need to install everything:
   
   sudo make install
   
-Now, copy the iotposrc file to your local .kde/share/config directory:
+OPTIONAL:copy the iotposrc file to your local .kde/share/config directory:
   
   cp iotpos/src/iotposrc /home/USER/.kde/share/config/  #Replace USER with your username: pi.
   
@@ -70,27 +66,26 @@ After installation, you need to create a database and user on mysql, to do this:
   cd iotpos/database_resources
   cat iotpos_mysql.sql | mysql -u root -p
   
-  ------ To restore a database with preloaded products and examples:
+To restore a database with preloaded products and examples:
   
   mysql -u root -p iotposdb < iotposdb.sql
   
-To start using iotpos, type 
+To start using the point of sale, type 
 
   iotpos
+     * The default and only user and password is (without quotation marks):
+     username: "admin"
+     password: "linux"
+  
+To start using the administration module, type:
+
+  iotstock
+  For an easy first time use, all securyty settings are disabled.  
   
 Icon apps are found at ~/iotpos/src  and  ~/iotpos/iotstock/src you can copy and paste them on the desktop.
-  
-If for any reason iotpos binary is not found, and if your kde4 install path is /opt/kde4 do:
-  
-  /opt/kde4/bin/iotpos
-  
- * The default and only user and password is (without quotation marks):
- 
-   username: "admin"
-   password: "linux"
 
-  By default, squeeze has security disabled, this to let you configure squeeze database settings in case
-  you have installed the database server at a different computer.
+By default, IotPOS and IotStock have security disabled, this to let you configure  database settings in case
+you have installed the database server at a different computer.
 
   
 ---------------------------------------------------HARDWARE-SETUP------------------------------------------------------
@@ -98,7 +93,7 @@ If for any reason iotpos binary is not found, and if your kde4 install path is /
 * SERIAL TTL THERMAL PRINTER INSTALL
 
 The serial port on the Raspberry Pi’s GPIO header is normally configured for console cable use,
-will output a Console from your Pi that,with a suitable Serial cable, you can use to control your Pi via the command-line.
+will output a Console from your Pi that, with a suitable Serial cable, you can use to control your Pi via the command-line.
 But now we want to use this port for the thermal printer instead, so we’ll need to disable this default behavior.
 
   sudo raspi-config 
@@ -121,14 +116,14 @@ CONECCTIONS FOR THE HARDWARE
 
 -----SERIAL TTL THERMAL PRINTER----
 
-WARNING!!!: Make sure a TTL printer is used, NEVER CONNECT A SERIAL RS232 TO PI'S GPIO!!! even using a TTL conection, never conect
+WARNING!!!: Make sure a serial TTL printer is used, NEVER CONNECT A SERIAL RS232 TO PI'S GPIO!!! even using a TTL conection, never conect
 the side printer Tx pin to Rx GPIO on the pi, the Tx wire is only used for rare cases where the printer returns data to the computer.
-It’s left unconnected because the printer works at 5 Volts and the Raspberry Pi at 3.3 Volts… connecting directly to the RXD pin could
+It’s left unconnected because the printer works at 5 Volts and the Raspberry Pi at 3.3 Volts… connecting directly to the Rx pin could
 permanently damage the Raspberry Pi! (The other direction is safe as-is.). 
 
-  Serial Data Cable rx TO    Physical pin 8 It's also commonly known as "Serial TX" ttyAMA0.
-  Serial Data Cable tx  DO NOT CONNECT IT TO THE GPIO RX AS SOME ARE 5 V TTL WILL DAMAGE THE RASPBERRY PI!!!
-  Serial GND from  serial printer to any gpio GND could use Physical pin 6,9, 14. 
+  Serial Data Cable Rx TO    Physical pin 8 It's also commonly known as "Serial TX" ttyAMA0.
+  Serial Data Cable Tx  DO NOT CONNECT IT TO THE GPIO RX AS SOME ARE 5 V TTL WILL DAMAGE THE RASPBERRY PI!!!
+  Serial GND from serial printer to any gpio GND could use Physical pin 6,9, 14. 
   
 -----Push buttom and LED.
 
