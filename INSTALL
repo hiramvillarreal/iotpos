@@ -70,9 +70,10 @@ To restore a database with preloaded products and examples:
   
   mysql -u root -p iotposdb < iotposdb.sql
   
-To start using the point of sale, type 
+To start using the point of sale, type:
 
   iotpos
+  
      * The default and only user and password is (without quotation marks):
      username: "admin"
      password: "linux"
@@ -80,7 +81,8 @@ To start using the point of sale, type
 To start using the administration module, type:
 
   iotstock
-  For an easy first time use, all securyty settings are disabled.  
+  
+    For an easy first time use, all securyty settings are disabled.  
   
 Icon apps are found at ~/iotpos/src  and  ~/iotpos/iotstock/src you can copy and paste them on the desktop.
 
