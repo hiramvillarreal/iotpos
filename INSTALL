@@ -36,7 +36,7 @@ Now we need to install everything else that’s needed for the compile:
   cd ~
   git clone https://github.com/hiramvillarreal/iotpos
   
-Move into the newly created directory, and create a 'build' directory and move into it:
+Move into the newly created directory, create a 'build' directory inside and move into it:
 
   cd iotpos 
   mkdir build
