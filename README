@@ -3,7 +3,7 @@ Welcome to IotPOS  an open source Point of Sale software, is targeted for micro,
 
 MySQL is employed for data management and storage, and can be used a single database with many POS terminals on a network.
 
-Being Linux or any other Unix the target operating system, your information is safer against virus attacks, and lowers the costs in licenses. IotPOS provides a modern and easy to use Interface, a search panel, a price-checker tool. Includes IoTStock  administration tool for managing your store, printed reports, and  special functions for label barcode printing it is included. No need to buy a dedicated barcode label printer.
+Being Linux or any other Unix the target operating system, your information is safer against virus attacks, and lowers the costs in licenses. IotPOS provides a modern and easy to use Interface, a search panel, a price-checker tool. Includes IoTStock  administration tool for managing your store, printed reports, a special functions for label barcode printing added; no need to buy a dedicated barcode label printer.
 
 This Point of Sale was developed for single-board computers (SBC) as the Raspberry pi, banana pi and BeagleBone Black due it make use of the GPIO interface. Even so, you can compile it with a PC for testing.
 
