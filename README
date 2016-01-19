@@ -13,3 +13,5 @@ Any generic serial TTL thermal printer could be used directly conected to the th
 
 An special function for label barcode printing it is included. No need to buy a dedicated barcode label printer.
 
+IotPos and IotStock are based on LemonPOS, to his author: Miguel Chavez Gamboa, and collaborators; all my respects.
+
