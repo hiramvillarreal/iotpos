@@ -9,5 +9,7 @@ This Point of Sale was developed for single-board computers (SBC) as the Raspber
 
 This project reduces costs because include two of the more expensive hardware parts on a Point of sale: the CPU and the thermal printer.  Just add monitor, keyboard and mouse and you ready to go. Work with many USB barcode readers, wireless keyboard and mouse. A HDMI monitor it needs, not all the HDMI to VGA converters works with some SBC like the Raspberry pi.
 
-The generic serial thermal printer it is used to conects the GPIO and the ttyAMA0 serial out. A label barcode printing function it is included.
+Any generic serial TTL thermal printer could be used directly conected to the the GPIO serial TTL Tx pi using the /dev/ttyAMA0 serial out.
+
+An special function for label barcode printing it is included. No need to buy a dedicated barcode label printer.
 
