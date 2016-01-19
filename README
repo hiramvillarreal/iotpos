@@ -14,5 +14,5 @@ This project reduces costs because include two of the more expensive hardware pa
 Any generic serial TTL thermal printer could be used directly conected to the the GPIO serial TTL Tx pi using the /dev/ttyAMA0 serial out.
 
 
-IotPos and IotStock are based on LemonPOS, to his author: Miguel Chavez Gamboa, and collaborators; all my respects.
+IotPos and IotStock are de derived from LemonPOS, to his author: Miguel Chavez Gamboa, and collaborators; all my respects.
 
