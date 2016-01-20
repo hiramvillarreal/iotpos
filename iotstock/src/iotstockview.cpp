@@ -123,6 +123,7 @@ iotstockView::iotstockView(QWidget *parent)
   QTimer::singleShot(20000, timerUpdateGraphs, SLOT(start()));
   QTimer::singleShot(2010, this, SLOT(showWelcomeGraphs()));
   QTimer::singleShot(2000, this, SLOT(login()));
+  //aquimeme
   rmTimer = new QTimer(this);
   connect(rmTimer, SIGNAL(timeout()), SLOT(reSelectModels()) );
   rmTimer->start(1000*60*2);

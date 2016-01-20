@@ -77,7 +77,7 @@ private slots:
     void loadStyle();
     void showDBConfigDialog();
     void fixGeom();
-
+    void hideMenuBar();
 private:
     void setupActions();
 

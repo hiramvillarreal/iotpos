@@ -88,7 +88,7 @@ iotstock::iotstock()
     connect(m_view, SIGNAL(signalAdminLoggedOff()), this, SLOT(disableUI()));
     connect(m_view, SIGNAL(signalSupervisorLoggedOn()), this, SLOT(enableUI()));
 
-
+    QTimer::singleShot(500, this,  SLOT(hideMenuBar()));
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(fixGeom()));
     timer->setInterval(5000);
@@ -113,6 +113,13 @@ void iotstock::fixGeom()
     geom.setWidth(QApplication::desktop()->screenGeometry(this).width()-5);
     m_view->setMaximumSize(geom.width(),geom.height());
     //setMaximumSize(geom.width()+5,geom.height()+10);
+  }
+}
+
+void iotstock::hideMenuBar()
+{
+  if (!menuBar()->isHidden()) {
+    menuBar()->hide();
   }
 }
 

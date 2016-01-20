@@ -26,6 +26,7 @@
 #include <kcmdlineargs.h>
 #include <klocale.h>
 
+
 static const char description[] =
     I18N_NOOP("Iotstock your iotpos!");
 

@@ -254,7 +254,7 @@ signals:
    void cancelarFactura();
    void departmentsOnSelected(const QModelIndex &index);
    void categoriesOnSelected(const QModelIndex &index);
-   
+
 };
 
 #endif // IOTSTOCKVIEW_H
