@@ -379,13 +379,6 @@ p, li { white-space: pre-wrap; }
      </property>
     </widget>
    </item>
-   <item>
-    <widget class="QCheckBox" name="kcfg_askForInvoice">
-     <property name="text">
-      <string>Ask for invoice generation</string>
-     </property>
-    </widget>
-   </item>
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

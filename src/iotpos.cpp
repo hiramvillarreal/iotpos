@@ -450,12 +450,12 @@ void iotpos::optionsPreferences()
     ui_store_data.setupUi(storeDataSettingsDlg);
    //NOTE: What icon to use for this??
     dialog->addPage(storeDataSettingsDlg, i18n("Store"), "go-home");
-    
+  /*
     QWidget *facturasSettingsDlg = new QWidget;
     ui_facturas_data.setupUi(facturasSettingsDlg);
     //NOTE: What icon to use for this??
     dialog->addPage(facturasSettingsDlg, i18n("Facturas"), "go-home");
-
+*/
     QWidget *dbSettingsDlg = new QWidget;
     ui_prefs_db.setupUi(dbSettingsDlg);
     dialog->addPage(dbSettingsDlg, i18n("Database"), "kexi"); // book
