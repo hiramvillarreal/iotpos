@@ -104,6 +104,8 @@ int main(int argc, char **argv)
             //process.startDetached("/bin/sh", QStringList()<< "/home/pi/iotpos/scripts/dropbox.sh");*/
             iotpos *widget = new iotpos;
             widget->show();
+            widget->hide();
+            widget->show();
             splash->finish(widget);
         }
         else
@@ -112,6 +114,8 @@ int main(int argc, char **argv)
             for (; i < args->count(); i++)
             {
                 iotpos *widget = new iotpos;
+                widget->show();
+                widget->hide();
                 widget->show();
                 qDebug()<<"iotpos "<<i;
             }

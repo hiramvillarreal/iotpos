@@ -112,7 +112,7 @@ void UsersDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option,
 QSize UsersDelegate::sizeHint(const QStyleOptionViewItem &optionUnused,
                              const QModelIndex &indexUnused) const
 {
-  return QSize(170,170);
+  return QSize(128,128);
 }
 
 #include "usersdelegate.moc"

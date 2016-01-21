@@ -4446,7 +4446,7 @@ void iotposView::setupModel()
 
     ui_mainview.listView->setModelColumn(productsModel->fieldIndex("photo"));
     ui_mainview.listView->setViewMode(QListView::IconMode);
-    ui_mainview.listView->setGridSize(QSize(170,170));
+    ui_mainview.listView->setGridSize(QSize(128,128));
     ui_mainview.listView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui_mainview.listView->setMouseTracking(true); //for the tooltip
 

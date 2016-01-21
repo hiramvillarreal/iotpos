@@ -44,7 +44,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     else
       pixName = KStandardDirs::locate("appdata", "images/itemBox.png");
     
-    painter->drawPixmap(option.rect.x()+5,option.rect.y()+5, QPixmap(pixName));
+    painter->drawPixmap(option.rect.x()+5,option.rect.y()+5, QPixmap(pixName));//only moves the itembox.png
 
     //get item data
     const QAbstractItemModel *model = index.model();
@@ -74,7 +74,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     else {
       pix = QPixmap(DesktopIcon("iotpos-box", 64));
     }
-    int max = 128;
+    int max = 86;
     if ((pix.height() > max) || (pix.width() > max) ) {
       if (pix.height() == pix.width()) {
         pix = pix.scaled(QSize(max, max));
@@ -87,7 +87,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
       }
     }
     int x = option.rect.x() + (option.rect.width()/2) - (pix.width()/2);
-    int y = option.rect.y() + (option.rect.height()/2) - (pix.height()/2) - 10;
+    int y = option.rect.y() + (option.rect.height()/2) - (pix.height()/2) - 0;
     //painting photo
     if (!pix.isNull()) painter->drawPixmap(x,y, pix);
 
@@ -110,11 +110,11 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     painter->setFont(font);
     if (option.state & QStyle::State_Selected) {
       painter->setPen(Qt::yellow);
-      painter->drawText(option.rect.x()+10,option.rect.y()+138, 150,20,  Qt::AlignCenter, nameToDisplay);
+      painter->drawText(option.rect.x()+0,option.rect.y()+102, 130,20,  Qt::AlignCenter, nameToDisplay);
     }
     else {
       painter->setPen(Qt::white);
-      painter->drawText(option.rect.x()+10,option.rect.y()+138, 150,20,  Qt::AlignCenter, nameToDisplay);
+      painter->drawText(option.rect.x()+0,option.rect.y()+102, 130,20,  Qt::AlignCenter, nameToDisplay);
     }
 
     //painting stock Availability
@@ -124,36 +124,36 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
         naStr = i18n("Unlimited Stock");
       else
         naStr = i18n(" Out of stock ");
-      font = QFont("Trebuchet MS", 12);
+      font = QFont("Trebuchet MS", 8);
       font.setBold(true);
       font.setItalic(true);
       painter->setFont(font);
       painter->setBackgroundMode(Qt::OpaqueMode);
       painter->setPen(Qt::red);
       painter->setBackground(QColor(255,180,0,160));
-      painter->drawText(option.rect.x()+10,
-                      option.rect.y()+(option.rect.height()/2)-10,
-                      150, 20, Qt::AlignCenter, naStr);
+      painter->drawText(option.rect.x()+13,
+                      option.rect.y()+(option.rect.height()/2)-0,
+                      102, 20, Qt::AlignCenter, naStr);
       painter->setBackgroundMode(Qt::TransparentMode);
     }
     
     //painting code number
-    font = QFont("Trebuchet MS", 9);
+    font = QFont("Trebuchet MS", 8);
     font.setBold(false);
     font.setItalic(true);
     painter->setFont(font);
     painter->setBackgroundMode(Qt::TransparentMode);
-    painter->setPen(Qt::darkGray);
+    painter->setPen(Qt::white);
     painter->setBackground(QColor(255,225,0,160));
     painter->drawText(option.rect.x()+10,
                       option.rect.y()+10,
-                      150, 20, Qt::AlignCenter, strCode);
+                      102, 20, Qt::AlignCenter, strCode);
     painter->setBackgroundMode(Qt::TransparentMode);
 
     //painting things like isARawProduct and isAGroup
     //TODO: Paint an icon instead of text!
     if (isRaw) {
-      font = QFont("Trebuchet MS", 9);
+      font = QFont("Trebuchet MS", 8);
       font.setBold(true);
       font.setItalic(false);
       painter->setFont(font);
@@ -162,16 +162,16 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
       painter->setBackground(QColor(255,180,0,160));
       QString naStr = i18n(" Raw Product ");
       painter->drawText(option.rect.x()+10,
-                        option.rect.y()+22,
-                        150, 20, Qt::AlignCenter, naStr);
+                        option.rect.y()+60,
+                        102, 20, Qt::AlignCenter, naStr);
                         painter->setBackgroundMode(Qt::TransparentMode);
     } 
     if (isGroup) {
       //load pixmap
       pix = QPixmap(DesktopIcon("iotpos-groups", 32));
       painter->drawPixmap(option.rect.x()+10,
-                        option.rect.y()+20,
-                        /*150, 20, */ pix /*Qt::AlignCenter, naStr*/);
+                        option.rect.y()+30,
+                        /*102, 20, */ pix /*Qt::AlignCenter, naStr*/);
                         painter->setBackgroundMode(Qt::TransparentMode);
     }
     if (nonDiscountItem) {
@@ -179,7 +179,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
       pix = QPixmap(DesktopIcon("iotpos-nondiscount", 32));
       painter->drawPixmap(option.rect.x()+10,
                         option.rect.y()+20,
-                        /*150, 20, */ pix /*Qt::AlignCenter, naStr*/);
+                        /*102, 20, */ pix /*Qt::AlignCenter, naStr*/);
                         painter->setBackgroundMode(Qt::TransparentMode);
     }
 }
@@ -188,7 +188,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
 QSize ProductDelegate::sizeHint(const QStyleOptionViewItem &optionUnused,
                              const QModelIndex &indexUnused) const
 {
-  return QSize(170,170);
+  return QSize(150,150);
 }
 
 #include "productdelegate.moc"

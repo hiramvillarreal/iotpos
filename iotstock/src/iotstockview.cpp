@@ -1058,7 +1058,7 @@ void iotstockView::setupProductsModel()
 
     ui_mainview.productsView->setModel(productsModel);
     ui_mainview.productsView->setViewMode(QListView::IconMode);
-    ui_mainview.productsView->setGridSize(QSize(170,170));
+    ui_mainview.productsView->setGridSize(QSize(128,128));
     ui_mainview.productsView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui_mainview.productsView->setResizeMode(QListView::Adjust);
     ui_mainview.productsView->setModelColumn(productsModel->fieldIndex("photo"));
