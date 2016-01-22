@@ -92,7 +92,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     if (!pix.isNull()) painter->drawPixmap(x,y, pix);
 
     //Painting name
-    QFont font = QFont("Trebuchet MS", 8);
+    QFont font = QFont("Trebuchet MS", 10);
     font.setBold(true);
     //getting name size in pixels...
     QFontMetrics fm(font);
@@ -153,7 +153,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     //painting things like isARawProduct and isAGroup
     //TODO: Paint an icon instead of text!
     if (isRaw) {
-      font = QFont("Trebuchet MS", 8);
+      font = QFont("Trebuchet MS",10);
       font.setBold(true);
       font.setItalic(false);
       painter->setFont(font);
