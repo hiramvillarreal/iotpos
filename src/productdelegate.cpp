@@ -92,7 +92,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     if (!pix.isNull()) painter->drawPixmap(x,y, pix);
 
     //Painting name
-    QFont font = QFont("roboto", 10);
+    QFont font = QFont("roboto", 12);
     font.setBold(true);
     //getting name size in pixels...
     QFontMetrics fm(font);
@@ -138,7 +138,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     }
     
     //painting code number
-    font = QFont("roboto", 8);
+    font = QFont("roboto",12);
     font.setBold(false);
     font.setItalic(true);
     painter->setFont(font);
