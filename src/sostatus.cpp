@@ -26,7 +26,7 @@
 #include <QtSql>
 
 #include "sostatus.h"
-#include "../../dataAccess/azahar.h"
+#include "../dataAccess/azahar.h"
 
 SOStatusUI::SOStatusUI( QWidget *parent )
 : QFrame( parent )

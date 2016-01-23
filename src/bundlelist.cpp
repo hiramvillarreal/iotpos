@@ -23,7 +23,7 @@
 
 
 #include "bundlelist.h"
-#include "../../dataAccess/azahar.h"
+#include "../dataAccess/azahar.h"
 
 BundleList::BundleList()
 {

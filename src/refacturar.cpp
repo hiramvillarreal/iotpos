@@ -26,7 +26,7 @@
 #include <QtSql>
 
 #include "refacturar.h"
-#include "../../dataAccess/azahar.h"
+#include "../dataAccess/azahar.h"
 
 RefacturarDialogUI::RefacturarDialogUI( QWidget *parent )
 : QFrame( parent )

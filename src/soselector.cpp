@@ -26,7 +26,7 @@
 #include <QtSql>
 
 #include "soselector.h"
-#include "../../dataAccess/azahar.h"
+#include "../dataAccess/azahar.h"
 
 SOSelectorUI::SOSelectorUI( QWidget *parent )
 : QFrame( parent )

@@ -41,9 +41,9 @@ void UsersDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option,
     QString pixName;
 
     if (option.state & QStyle::State_Selected)
-      pixName = KStandardDirs::locate("appdata", "images/itemBox_selected.png");
+      pixName = KStandardDirs::locate("appdata", "images/itemBox_selected_Big.png");
     else
-      pixName = KStandardDirs::locate("appdata", "images/itemBox.png");
+      pixName = KStandardDirs::locate("appdata", "images/itemBox_Big.png");
     
     painter->drawPixmap(option.rect.x()+5,option.rect.y()+5, QPixmap(pixName));
 
@@ -83,7 +83,7 @@ void UsersDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option,
 
 
     //Painting name
-    QFont font = QFont("Trebuchet MS", 10);
+    QFont font = QFont("DroidSans.ttf", 10);
     font.setBold(true);
     //getting name size in pixels...
     QFontMetrics fm(font);
@@ -112,7 +112,7 @@ void UsersDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option,
 QSize UsersDelegate::sizeHint(const QStyleOptionViewItem &optionUnused,
                              const QModelIndex &indexUnused) const
 {
-  return QSize(128,128);
+  return QSize(170,170);
 }
 
 #include "usersdelegate.moc"

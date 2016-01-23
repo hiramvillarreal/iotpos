@@ -92,7 +92,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     if (!pix.isNull()) painter->drawPixmap(x,y, pix);
 
     //Painting name
-    QFont font = QFont("roboto", 12);
+    QFont font = QFont("DroidSans.ttf", 12);
     font.setBold(true);
     //getting name size in pixels...
     QFontMetrics fm(font);
@@ -124,7 +124,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
         naStr = i18n("Unlimited Stock");
       else
         naStr = i18n(" Out of stock ");
-      font = QFont("roboto", 8);
+      font = QFont("DroidSans.ttf", 10);
       font.setBold(true);
       font.setItalic(true);
       painter->setFont(font);
@@ -138,7 +138,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     }
     
     //painting code number
-    font = QFont("roboto",12);
+    font = QFont("DroidSans.ttf",12);
     font.setBold(false);
     font.setItalic(true);
     painter->setFont(font);
@@ -153,7 +153,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     //painting things like isARawProduct and isAGroup
     //TODO: Paint an icon instead of text!
     if (isRaw) {
-      font = QFont("roboto",10);
+      font = QFont("DroidSans.ttf",10);
       font.setBold(true);
       font.setItalic(false);
       painter->setFont(font);

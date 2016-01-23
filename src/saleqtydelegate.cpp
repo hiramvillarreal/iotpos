@@ -2,7 +2,7 @@
 
 #include "saleqtydelegate.h"
 #include "structs.h"
-#include "../../dataAccess/azahar.h"
+#include "../dataAccess/azahar.h"
 
 SaleQtyDelegate::SaleQtyDelegate(QObject *parent)
     : QItemDelegate(parent)

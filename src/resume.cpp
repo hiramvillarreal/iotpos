@@ -26,7 +26,7 @@
 #include <QtSql>
 
 #include "resume.h"
-#include "../../dataAccess/azahar.h"
+#include "../dataAccess/azahar.h"
 
 ResumeDialogUI::ResumeDialogUI( QWidget *parent )
 : QFrame( parent )
