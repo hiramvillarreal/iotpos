@@ -124,7 +124,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
         naStr = i18n("Unlimited Stock");
       else
         naStr = i18n("Out of stock");
-      font = QFont("DroidSans.ttf", 8);
+      font = QFont("DroidSans.ttf", 10);
       font.setBold(true);
       font.setItalic(true);
       painter->setFont(font);
@@ -138,7 +138,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     }
     
     //painting code number
-    font = QFont("DroidSans.ttf",8);
+    font = QFont("DroidSans.ttf",10);
     font.setBold(false);
     font.setItalic(true);
     painter->setFont(font);
