@@ -1,6 +1,6 @@
 /***************************************************************************
- *   Copyright (C) 2007-2009 by Miguel Chavez Gamboa                  *
- *   miguel.chavez.gamboa@gmail.com                                        *
+ *   Copyright (C) 2013-2015 by Hiram R. Villarreal                        *
+ *   hiramvillarreal.ap@gmail.com                                          *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
 
@@ -55,7 +55,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     nameIndex = model->index(row, 3); //model->fieldIndex("stockqty")
     double stockqty = model->data(nameIndex, Qt::DisplayRole).toDouble();
     nameIndex = model->index(row, 0);
-    QString strCode = "# " + model->data(nameIndex, Qt::DisplayRole).toString();
+    QString strCode = "#" + model->data(nameIndex, Qt::DisplayRole).toString();
     //TODO: Add alphacode too
     nameIndex = model->index(row, 19);
     bool isGroup = model->data(nameIndex, Qt::DisplayRole).toBool();
@@ -72,7 +72,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
       pix.loadFromData(pixData);
     }
     else {
-      pix = QPixmap(DesktopIcon("iotpos-box", 64));
+      pix = QPixmap(DesktopIcon("iotpos-box", 48));
     }
     int max = 86;
     if ((pix.height() > max) || (pix.width() > max) ) {
@@ -92,7 +92,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     if (!pix.isNull()) painter->drawPixmap(x,y, pix);
 
     //Painting name
-    QFont font = QFont("DroidSans.ttf", 12);
+    QFont font = QFont("DroidSans.ttf", 10);
     font.setBold(true);
     //getting name size in pixels...
     QFontMetrics fm(font);
@@ -123,8 +123,8 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
       if (hasUnlimitedStock)
         naStr = i18n("Unlimited Stock");
       else
-        naStr = i18n(" Out of stock ");
-      font = QFont("DroidSans.ttf", 10);
+        naStr = i18n("Out of stock");
+      font = QFont("DroidSans.ttf", 8);
       font.setBold(true);
       font.setItalic(true);
       painter->setFont(font);
@@ -138,7 +138,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     }
     
     //painting code number
-    font = QFont("DroidSans.ttf",12);
+    font = QFont("DroidSans.ttf",8);
     font.setBold(false);
     font.setItalic(true);
     painter->setFont(font);

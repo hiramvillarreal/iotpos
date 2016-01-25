@@ -1,6 +1,6 @@
 /**************************************************************************
-*   Copyright © 2007-2011 by Miguel Chavez Gamboa                         *
-*   miguel@iotpospos.org                                                   *
+*   Copyright © 2013-2015 by Hiram R. Villarreal                          *
+*   hiramvillarreal.ap@gmail.com                                                  *
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
 *   it under the terms of the GNU General Public License as published by  *

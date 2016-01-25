@@ -1,6 +1,6 @@
 /**************************************************************************
- *   Copyright © 2007-2011 by Miguel Chavez Gamboa                         *
- *   miguel@iotpospos.org                                                   *
+ *   Copyright © 2013-2015 by Hiram R. Villarreal                          *
+ *   hiramvillarreal.ap@gmail.com                                          *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -669,7 +669,7 @@ void ProductEditor::checkFieldsState()
 
 void ProductEditor::setPhoto(QPixmap p)
 {
-  int max = 150;
+  int max = 82;
   QPixmap newPix;
   if ((p.height() > max) || (p.width() > max) ) {
     if (p.height() == p.width()) {

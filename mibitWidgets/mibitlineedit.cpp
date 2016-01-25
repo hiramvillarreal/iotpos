@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2009 by Miguel Chavez Gamboa                            *
- *   miguel@iotpospos.org                                                   *
+ *   hiramvillarreal.ap@gmail.com                                          *
  *                                                                         *
  *   This is based on the KLineEdit class                                  *
  *                                                                         *

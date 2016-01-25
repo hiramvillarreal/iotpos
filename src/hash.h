@@ -1,6 +1,6 @@
 /***************************************************************************
- *   Copyright (C) 2007-2009 by Miguel Chavez Gamboa                  *
- *   miguel.chavez.gamboa@gmail.com                                        *
+ *   Copyright (C) 2013-2015 by Hiram R. Villarreal                        *
+ *   hiramvillarreal.ap@gmail.com                                          *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
 
