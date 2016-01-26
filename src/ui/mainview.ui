@@ -404,13 +404,26 @@
                 </property>
                </widget>
               </item>
+              <item>
+               <spacer name="verticalSpacer_5">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
              </layout>
             </widget>
            </item>
            <item>
             <widget class="QGroupBox" name="groupClient">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -432,19 +445,19 @@
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_11">
               <property name="spacing">
-               <number>2</number>
+               <number>6</number>
               </property>
               <property name="leftMargin">
-               <number>2</number>
+               <number>9</number>
               </property>
               <property name="topMargin">
                <number>9</number>
               </property>
               <property name="rightMargin">
-               <number>2</number>
+               <number>9</number>
               </property>
               <property name="bottomMargin">
-               <number>2</number>
+               <number>9</number>
               </property>
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -526,7 +539,7 @@
                 </property>
                 <property name="font">
                  <font>
-                  <pointsize>8</pointsize>
+                  <pointsize>10</pointsize>
                  </font>
                 </property>
                 <property name="styleSheet">
