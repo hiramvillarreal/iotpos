@@ -479,6 +479,11 @@
                   <height>60</height>
                  </size>
                 </property>
+                <property name="font">
+                 <font>
+                  <pointsize>8</pointsize>
+                 </font>
+                </property>
                 <property name="styleSheet">
                  <string notr="true">background:white;
 border: 1px solid gray;
@@ -489,9 +494,6 @@ color:black;</string>
                 </property>
                 <property name="text">
                  <string/>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                 </property>
                </widget>
               </item>
@@ -937,6 +939,19 @@ color:black;</string>
            <property name="spacing">
             <number>2</number>
            </property>
+           <item row="1" column="0">
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
            <item row="1" column="1">
             <widget class="QGroupBox" name="groupTotals">
              <property name="sizePolicy">
@@ -1394,19 +1409,6 @@ color:black;</string>
               </column>
              </widget>
             </widget>
-           </item>
-           <item row="1" column="0">
-            <spacer name="horizontalSpacer_2">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
            </item>
           </layout>
          </widget>
