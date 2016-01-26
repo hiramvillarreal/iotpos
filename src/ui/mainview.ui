@@ -126,6 +126,12 @@
                <height>0</height>
               </size>
              </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>230</height>
+              </size>
+             </property>
              <property name="styleSheet">
               <string notr="true"/>
              </property>
@@ -159,7 +165,7 @@
                 <property name="maximumSize">
                  <size>
                   <width>16777215</width>
-                  <height>18</height>
+                  <height>16777215</height>
                  </size>
                 </property>
                 <property name="styleSheet">
@@ -338,6 +344,19 @@
                </widget>
               </item>
               <item>
+               <spacer name="verticalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
                <widget class="QLabel" name="labelDetailPhoto">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
@@ -354,14 +373,19 @@
                 <property name="maximumSize">
                  <size>
                   <width>16777215</width>
-                  <height>80</height>
+                  <height>16777215</height>
                  </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>8</pointsize>
+                 </font>
                 </property>
                 <property name="styleSheet">
                  <string notr="true"/>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                 <enum>QFrame::NoFrame</enum>
                 </property>
                 <property name="text">
                  <string/>
@@ -426,10 +450,22 @@
                <layout class="QHBoxLayout" name="horizontalLayout_6">
                 <item>
                  <widget class="MibitLineEdit" name="editClient">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>20</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                   <property name="maximumSize">
                    <size>
                     <width>16777215</width>
-                    <height>21</height>
+                    <height>16777215</height>
                    </size>
                   </property>
                   <property name="font">
@@ -437,12 +473,15 @@
                     <pointsize>9</pointsize>
                    </font>
                   </property>
+                  <property name="autoFillBackground">
+                   <bool>false</bool>
+                  </property>
                  </widget>
                 </item>
                 <item>
                  <widget class="QToolButton" name="btnAddClient">
                   <property name="sizePolicy">
-                   <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
@@ -482,7 +521,7 @@
                 <property name="maximumSize">
                  <size>
                   <width>16777215</width>
-                  <height>45</height>
+                  <height>50</height>
                  </size>
                 </property>
                 <property name="font">
