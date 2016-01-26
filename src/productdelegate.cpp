@@ -124,7 +124,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
         naStr = i18n("Unlimited Stock");
       else
         naStr = i18n("Out of stock");
-      font = QFont("DroidSans.ttf", 10);
+      font = QFont("DroidSans.ttf", 8);
       font.setBold(true);
       font.setItalic(true);
       painter->setFont(font);
@@ -133,12 +133,12 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
       painter->setBackground(QColor(255,180,0,160));
       painter->drawText(option.rect.x()+13,
                       option.rect.y()+(option.rect.height()/2)-0,
-                      102, 20, Qt::AlignCenter, naStr);
+                      102, 60, Qt::AlignCenter, naStr);
       painter->setBackgroundMode(Qt::TransparentMode);
     }
     
     //painting code number
-    font = QFont("DroidSans.ttf",10);
+    font = QFont("DroidSans.ttf",8);
     font.setBold(false);
     font.setItalic(true);
     painter->setFont(font);
@@ -153,7 +153,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     //painting things like isARawProduct and isAGroup
     //TODO: Paint an icon instead of text!
     if (isRaw) {
-      font = QFont("DroidSans.ttf",10);
+      font = QFont("DroidSans.ttf",8);
       font.setBold(true);
       font.setItalic(false);
       painter->setFont(font);
@@ -161,9 +161,9 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
       painter->setPen(Qt::blue);
       painter->setBackground(QColor(255,180,0,160));
       QString naStr = i18n(" Raw Product ");
-      painter->drawText(option.rect.x()+10,
+      painter->drawText(option.rect.x()+13,
                         option.rect.y()+60,
-                        102, 20, Qt::AlignCenter, naStr);
+                        102, 65, Qt::AlignCenter, naStr);
                         painter->setBackgroundMode(Qt::TransparentMode);
     } 
     if (isGroup) {
