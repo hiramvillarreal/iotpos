@@ -43,7 +43,6 @@
 #include "../mibitWidgets/mibitfloatpanel.h"
 #include "../mibitWidgets/mibitnotifier.h"
 #include "../iotstock/src/clienteditor.h"
-//#include <QProcess>
 #include "BasketPriceCalculationService.h"
 
 
@@ -52,7 +51,6 @@
 
 #include <QtGui/QPrinter>
 #include <QtGui/QPrintDialog>
-
 #include <QWidget>
 #include <QStringList>
 #include <QTimer>
@@ -3311,27 +3309,6 @@ void iotposView::printTicket(TicketInfo ticket)
   itemsForPrint.append("  ");
  }
   ticketHtml.append("</body></html>");
-  //NOTE: Is this the best place to launch the backup process?
-  QString fn = QString("%1/iotpos-backup/").arg(QDir::homePath());
-  QDir dir;
-  if (!dir.exists(fn))
-  dir.mkdir(fn);
-  fn = fn+QString("iotpos-db--backup.sql");//.arg(QDateTime::currentDateTime().toString("dd-MMM-yyyy__hh.mm.AP"));
-  qDebug()<<"BACKUP DATABASE at " << fn;
-  QStringList params;
-  QString pswd = "-p" + Settings::editDBPassword();
-  QString usr = "-u" + Settings::editDBUsername();
-  QString hst = "-h" + Settings::editDBServer();
-  QString dnm = Settings::editDBName();
-  QString fnm = "-r" + fn;
-  params << hst << usr << pswd << fnm << dnm;
-  QProcess mysqldump;
-  mysqldump.start("mysqldump", params);
-  mysqldump.waitForFinished();
-  //NOTE: The process above does not consider an error (network, mysql config, wrong password/user, etc..) and does not inform such if it happens.
-  // It just gives an empty backup file. But once everything is working fine, it will give a backup every day.
-  QProcess process;
-  //process.startDetached("/bin/sh", QStringList()<< "/home/pi/iotpos/scripts/dropbox.sh");
   //Printing...
   qDebug()<< itemsForPrint.join("\n");
 
@@ -4283,7 +4260,7 @@ void iotposView::endOfDay() {
 
     lines.append(i18n("Total Sales : %1",pdInfo.thTotalSales));
     lines.append(i18n("Total Profit: %1",pdInfo.thTotalProfit));
-    /*/NOTE: Is this the best place to launch the backup process?
+    //NOTE: Is this the best place to launch the backup process?
     QString fn = QString("%1/iotpos-backup/").arg(QDir::homePath());
     QDir dir;
     if (!dir.exists(fn))
@@ -4300,7 +4277,9 @@ void iotposView::endOfDay() {
     params << hst << usr << pswd << fnm << dnm;
     QProcess mysqldump;
     mysqldump.start("mysqldump", params);
-    mysqldump.waitForFinished();*/
+    mysqldump.waitForFinished();
+    QProcess process;
+    process.startDetached("/bin/sh", QStringList()<< "/home/pi/iotpos/scripts/dropbox.sh");
 if (Settings::printZeroTicket()) {
     lines.append("  ");
     lines.append("\n");
