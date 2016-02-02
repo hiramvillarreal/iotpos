@@ -3331,7 +3331,7 @@ void iotposView::printTicket(TicketInfo ticket)
   //NOTE: The process above does not consider an error (network, mysql config, wrong password/user, etc..) and does not inform such if it happens.
   // It just gives an empty backup file. But once everything is working fine, it will give a backup every day.
   QProcess process;
-  process.startDetached("/bin/sh", QStringList()<< "/home/pi/iotpos/scripts/dropbox.sh");
+  //process.startDetached("/bin/sh", QStringList()<< "/home/pi/iotpos/scripts/dropbox.sh");
   //Printing...
   qDebug()<< itemsForPrint.join("\n");
 
