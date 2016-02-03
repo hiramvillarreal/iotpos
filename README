@@ -1,18 +1,14 @@
 
-Welcome to IotPOS  an open source Point of Sale software, is targeted for micro, small and medium businesses.
+Welcome to IotPOS  an open source Point of Sale software, is targeted for micro, small and medium businesses. This Point of Sale was developed for single-board computers (SBC) as the Raspberry pi, banana pi and BeagleBone Black due it make use of the GPIO interface. Even so, you can use it with any PC running linux.
 
-MySQL is employed for data management and storage, and can be used a single database with many POS terminals on a network.
-
-Being Linux or any other Unix the target operating system, your information is safer against virus attacks, and lowers the costs in licenses.
+MySQL is employed for data management and storage, and can be used a single database with many POS terminals on a network.Being Linux or any other Unix the target operating system, your information is safer against virus attacks, and lowers the costs in licenses.
 
 IotPOS provides an easy to use Interface, a search panel, a price-checker tool. Includes IoTStock  administration tool for managing your store, printed reports, a special functions for label barcode printing added; no need to buy a dedicated barcode label printer.
-
-This Point of Sale was developed for single-board computers (SBC) as the Raspberry pi, banana pi and BeagleBone Black due it make use of the GPIO interface. Even so, you can compile it with a PC for testing.
 
 This project reduces costs because include two of the more expensive hardware parts on a Point of sale: the CPU and the thermal printer.  Just add monitor, keyboard and mouse and you ready to go. Work with many USB barcode readers, wireless keyboard and mouse. A HDMI monitor it needs, not all the HDMI to VGA converters works with some SBC like the Raspberry pi.
 
 Any generic serial TTL thermal printer could be used directly conected to the the GPIO serial TTL Tx pi using the /dev/ttyAMA0 serial out.
 
 
-IotPos and IotStock are de derived from LemonPOS, to his author: Miguel Chavez Gamboa, and collaborators; all my respects.
+IotPos and IotStock are derived from LemonPOS, to his author: Miguel Chavez Gamboa, and collaborators; all my respects.
 
