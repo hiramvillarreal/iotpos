@@ -1,7 +1,7 @@
 
 Welcome to IotPOS  an open source Point of Sale software, is targeted for micro, small and medium businesses. This Point of Sale was modified to work with single-board computers (SBC) as the Raspberry pi, banana pi and BeagleBone Black by making use of the GPIO interface, giving options and Internet of Things functions not possible with common laptops and PCs.
 
-This project reduces costs because it makes possible to embbebed togheter, two of the more expensive hardware parts on a Point of sale: the CPU and the ticket printer. Any generic serial TTL thermal printer could be used directly conected to the the GPIO serial TTL Tx pi using the /dev/ttyAMA0 serial out. Please see CONNECTIONS.png
+This project reduces costs because it makes possible to embbeb two of the more expensive hardware parts on a Point of sale: the CPU and the ticket printer. Any generic serial TTL thermal printer could be used directly conected to the the GPIO serial TTL Tx pi using the /dev/ttyAMA0 serial out. Please see CONNECTIONS.png
 
 Just add monitor, keyboard and mouse and you ready to go with your bussines. Work with many USB barcode readers, even includes a barcode laber printing function too. 
 
