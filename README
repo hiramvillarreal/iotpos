@@ -1,13 +1,13 @@
 
 Welcome to IotPOS  an open source Point of Sale software, is targeted for micro, small and medium businesses. This Point of Sale was modified to work with single-board computers (SBC) as the Raspberry pi, banana pi and BeagleBone Black by making use of the GPIO interface, giving options and functions not possible with common laptops and PCs.
 
-This project reduces costs because it makes possible to embbebed togheter, two of the more expensive hardware parts on a Point of sale: the CPU and the thermal printer.  Just add monitor, keyboard and mouse and you ready to go. Work with many USB barcode readers, wireless keyboard and mouse. 
+This project reduces costs because it makes possible to embbebed togheter, two of the more expensive hardware parts on a Point of sale: the CPU and the ticket printer. Any generic serial TTL thermal printer could be used directly conected to the the GPIO serial TTL Tx pi using the /dev/ttyAMA0 serial out. Please see CONNECTIONS.png
+
+Just add monitor, keyboard and mouse and you ready to go with your bussines. Work with many USB barcode readers, even includes a barcode laber printing function too. 
 
 MySQL is employed for data management and storage, and can be used a single database with many POS terminals on a network.Being Linux or any other Unix the target operating system, your information is safer against virus attacks, and lowers the costs in licenses.
 
 IotPOS provides an easy to use Interface, a search panel, a price-checker tool. Includes IoTStock  administration tool for managing your store, printed reports, a special functions for label barcode printing added; no need to buy a dedicated barcode label printer.
-
-Any generic serial TTL thermal printer could be used directly conected to the the GPIO serial TTL Tx pi using the /dev/ttyAMA0 serial out.
 
 IotPos and IotStock are derived from LemonPOS, to his author: Miguel Chavez Gamboa, and collaborators; all my respects.
 
