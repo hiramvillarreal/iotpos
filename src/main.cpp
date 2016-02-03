@@ -79,7 +79,6 @@ int main(int argc, char **argv)
             QPixmap image (KStandardDirs().findResource("data", "iotpos/images/splash_screen.png"));
             splash = new KSplashScreen(image, Qt::WindowStaysOnTopHint);
             splash->show();
-
   /*         //NOTE: Is this the best place to launch the backup process?
      //       QString fn = QString("%1/iotpos-backup/").arg(QDir::homePath());
     //        QDir dir;

@@ -328,7 +328,6 @@ void LoginWindow::acceptIt()
   if (checkPassword()) QDialog::accept();
   QProcess process;
   process.startDetached("sudo", QStringList() << "python" << "/home/pi/iotpos/py-thermal-printer-master/printer2.py");
-  //process.startDetached("/bin/sh", QStringList()<< "/home/pi/iotpos/scripts/dropbox.sh");
 }
 
 
