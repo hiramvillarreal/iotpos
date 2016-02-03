@@ -1,6 +1,7 @@
 
-Welcome to IotPOS  an open source Point of Sale software, is targeted for micro, small and medium businesses. This Point of Sale was modified to work with single-board computers (SBC) as the Raspberry pi, banana pi and BeagleBone Black and make use of the GPIO interface, giving options and functions not possible  with common laptops and PCs.
-This project reduces costs because makes possible to embbebed togheter, two of the more expensive hardware parts on a Point of sale: the CPU and the thermal printer.  Just add monitor, keyboard and mouse and you ready to go. Work with many USB barcode readers, wireless keyboard and mouse. A HDMI monitor it needs, not all the HDMI to VGA converters works with some SBC like the Raspberry pi.
+Welcome to IotPOS  an open source Point of Sale software, is targeted for micro, small and medium businesses. This Point of Sale was modified to work with single-board computers (SBC) as the Raspberry pi, banana pi and BeagleBone Black by making use of the GPIO interface, giving options and functions not possiblewith common laptops and PCs.
+
+This project reduces costs because it makes possible to embbebed togheter, two of the more expensive hardware parts on a Point of sale: the CPU and the thermal printer.  Just add monitor, keyboard and mouse and you ready to go. Work with many USB barcode readers, wireless keyboard and mouse. 
 
 MySQL is employed for data management and storage, and can be used a single database with many POS terminals on a network.Being Linux or any other Unix the target operating system, your information is safer against virus attacks, and lowers the costs in licenses.
 
