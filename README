@@ -1,5 +1,5 @@
 
-Welcome to IotPOS  an open source Point of Sale software, is targeted for micro, small and medium businesses. This Point of Sale was modified to work with single-board computers (SBC) as the Raspberry pi, banana pi and BeagleBone Black by making use of the GPIO interface, giving options and functions not possiblewith common laptops and PCs.
+Welcome to IotPOS  an open source Point of Sale software, is targeted for micro, small and medium businesses. This Point of Sale was modified to work with single-board computers (SBC) as the Raspberry pi, banana pi and BeagleBone Black by making use of the GPIO interface, giving options and functions not possible with common laptops and PCs.
 
 This project reduces costs because it makes possible to embbebed togheter, two of the more expensive hardware parts on a Point of sale: the CPU and the thermal printer.  Just add monitor, keyboard and mouse and you ready to go. Work with many USB barcode readers, wireless keyboard and mouse. 
 
