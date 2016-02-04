@@ -4260,12 +4260,12 @@ void iotposView::endOfDay() {
 
     lines.append(i18n("Total Sales : %1",pdInfo.thTotalSales));
     lines.append(i18n("Total Profit: %1",pdInfo.thTotalProfit));
-    //NOTE: Is this the best place to launch the backup process?
-    QString fn = QString("%1/iotpos-backup/").arg(QDir::homePath());
+    //NOTE: this the best place to launch the backup process
+    QString fn = QString("/media/pi/Backups/iotpos-backup/");//Backups to an USB named "Backups"en the media/pi
     QDir dir;
     if (!dir.exists(fn))
         dir.mkdir(fn);
-    fn = fn+QString("iotpos-db--backup.sql");//.arg(QDateTime::currentDateTime().toString("dd-MMM-yyyy__hh.mm.AP"));
+    fn = fn+QString("iotpos-db--backup--%1.sql").arg(QDateTime::currentDateTime().toString("dd-MMM-yyyy__hh.mm.AP"));
     qDebug()<<"BACKUP DATABASE at " << fn;
 
     QStringList params;
