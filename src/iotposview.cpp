@@ -4261,7 +4261,7 @@ void iotposView::endOfDay() {
     lines.append(i18n("Total Sales : %1",pdInfo.thTotalSales));
     lines.append(i18n("Total Profit: %1",pdInfo.thTotalProfit));
     //NOTE: this the best place to launch the backup process
-    QString fn = QString("/media/pi/Backups/iotpos-backup/");//Backups to an USB named "Backups"en the media/pi
+    QString fn = QString("/media/pi/iotpos/iotpos-backup/");//Backups to an USB named "iotpos" mount at /media/pi
     QDir dir;
     if (!dir.exists(fn))
         dir.mkdir(fn);
