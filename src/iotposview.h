@@ -49,13 +49,14 @@ class MibitNotifier;
  * @short Main view
  * @author Miguel Chavez Gamboa <miguel.chavez.gamboa@gmail.com>
  * @version 2007.11
+ * Modified by Daniel A. Cervantes  dcchivela@gmail.com
  */
 class iotposView : public QWidget, public Ui::mainview
 {
     Q_OBJECT
 public:
     iotposView();
-
+    void openDB();
     virtual ~iotposView();
 
     QString getLoggedUser();
@@ -80,6 +81,7 @@ public:
 
     QWidget *frameLeft, *frame;
   private:
+    QTimer *rmTimer;
     Ui::mainview ui_mainview;
     QString loggedUser;
     QString loggedUserName;
@@ -94,6 +96,7 @@ public:
     bool   modelsCreated;
     bool   operationStarted;
     bool   transactionInProgress;
+    bool graphSoldItemsCreated;
     QSqlDatabase db;
     LoginWindow *dlgLogin;
     LoginWindow *dlgPassword;
@@ -113,7 +116,7 @@ public:
     QDateTime transDateTime;
     double lastDiscount;
     bool completingOrder;
-
+    QTimer *timerCheckDb, *timerUpdateGraphs;
     bool availabilityDoesNotMatters;
     bool doNotAddMoreItems;
     bool finishingReservation;
@@ -151,6 +154,8 @@ public:
     RoundingInfo roundUsStandard(const double &number);
 
     BasketPriceSummary recalculateBasket(double oDiscountMoney);
+
+    KPlotObject *objSales;
 
   signals:
     /**
@@ -312,7 +317,8 @@ public:
     void focusPayInput();
     void plusPressed();
     void setupGridView();
-
+    void setupGraphs();
+    void updateGraphs();
 
     void doEmitSignalQueryDb();
 

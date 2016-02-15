@@ -73,6 +73,12 @@
 #include <QDir>
 #include <QMessageBox>
 
+#include <kplotobject.h>
+#include <kplotwidget.h>
+#include <kplotaxis.h>
+#include <kplotpoint.h>
+
+
 #include <klocale.h>
 #include <kiconloader.h>
 #include <kstandarddirs.h>
@@ -150,6 +156,31 @@ void iotposView::cancelByExit()
 
 iotposView::iotposView() //: QWidget(parent)
 {
+
+    //counter = 5;
+    modelsCreated = false;
+    //graphSoldItemsCreated = false;
+    timerCheckDb = new QTimer(this);
+    timerCheckDb->setInterval(1000);
+    timerUpdateGraphs = new QTimer(this);
+    timerUpdateGraphs->setInterval(10000);
+    categoriesHash.clear();
+    subcategoriesHash.clear();
+   // departmentsHash.clear();
+    //setupSignalConnections();
+    QTimer::singleShot(1100, this, SLOT(setupDb()));
+    QTimer::singleShot(2000, timerCheckDb, SLOT(start()));
+    QTimer::singleShot(20000, timerUpdateGraphs, SLOT(start()));
+    QTimer::singleShot(2010, this, SLOT(showWelcomeGraphs()));
+    QTimer::singleShot(2000, this, SLOT(login()));
+    //aquimeme
+    rmTimer = new QTimer(this);
+    connect(rmTimer, SIGNAL(timeout()), SLOT(reSelectModels()) );
+    rmTimer->start(1000*60*2);
+
+
+
+  QString mes = (QDate::longMonthName(QDate::currentDate().month())).toUpper();
   qDebug()<<"===STARTING IOTPOS AT "<<QDateTime::currentDateTime().toString()<<" ===";
   drawerCreated=false;
   modelsCreated=false;
@@ -169,6 +200,11 @@ iotposView::iotposView() //: QWidget(parent)
   dlgPassword = new LoginWindow(i18n("Authorisation Required"),
                              i18n("Enter administrator password please."),
                              LoginWindow::PasswordOnly);
+
+  objSales = new KPlotObject( Qt::yellow, KPlotObject::Bars, KPlotObject::Star);
+  ui_mainview.plotSales->addPlotObject( objSales );
+  ui_mainview.plotSales->axis( KPlotWidget::BottomAxis )->setLabel( i18n("%1", mes) );
+  ui_mainview.plotSales->axis( KPlotWidget::LeftAxis )->setLabel( i18n("Month Sales (%1)", KGlobal::locale()->currencySymbol()) );
 
   //MibitTips
   QString path = KStandardDirs::locate("appdata", "styles/");
@@ -291,6 +327,7 @@ iotposView::iotposView() //: QWidget(parent)
   connect(ui_mainview.btnPrintCreditReport, SIGNAL(clicked()), SLOT(printCreditReport()));
   connect(ui_mainview.editClientIdForCredit, SIGNAL(returnPressed()), SLOT(filterClientForCredit()));
   connect(ui_mainview.btnAddClient, SIGNAL(clicked()), SLOT(createClient()) );
+  connect(timerUpdateGraphs, SIGNAL(timeout()), this, SLOT(updateGraphs()));
 
   timerClock->start(1000);
 
@@ -311,7 +348,7 @@ iotposView::iotposView() //: QWidget(parent)
   transDateTime = QDateTime::currentDateTime();
   ui_mainview.editTransactionDate->setDateTime(transDateTime);
   ui_mainview.groupSaleDate->hide();
-
+  ui_mainview.plotSales->update();
 
   ui_mainview.editItemCode->setEmptyMessage(i18n("Enter code or qty*code. <Enter> or <+> Keys to go pay"));
   ui_mainview.editItemCode->setToolTip(i18n("Enter code or qty*code. <Enter> or <+> Keys to go pay"));
@@ -362,7 +399,132 @@ iotposView::iotposView() //: QWidget(parent)
  //    }
 
   ui_mainview.editItemCode->setFocus();
+  setupGraphs();
+  updateGraphs();
 }
+
+// UI and Database -- GRAPHS.
+void iotposView::updateGraphs()
+{
+  qDebug() << " update Graphs " << endl;
+  // if (!db.isOpen()) openDB();
+  if (db.isOpen()) {
+    if (!graphSoldItemsCreated ) setupGraphs();
+    else{
+      //  cout << " ----------------->>>>>>   DB  is Open " << endl;
+      Azahar *myDb = new Azahar(this);
+      myDb->setDatabase(db);
+      ///First we need to get data for the plots
+      QList<TransactionInfo> monthTrans = myDb->getMonthTransactionsForPie();
+  //    ProfitRange rangeP = myDb->getMonthProfitRange();
+      ProfitRange rangeS = myDb->getMonthSalesRange();
+      //qDebug()<<"** [Ranges] Profit:"<<rangeP.min<<","<<rangeP.max<<" Sales:"<<rangeS.min<<","<<rangeS.max;
+      TransactionInfo info;
+      ///plots
+      objSales->clearPoints();
+      int hoy=0;
+      hoy = QDate::currentDate().day();
+    
+      ui_mainview.plotSales->setLimits(0, hoy+1, rangeS.min-rangeS.min*.10, rangeS.max+rangeS.max*.10);
+      int day=0; double AccSales=0.0; double AccProfit=0.0;
+      objSales->addPoint(0,0, "0");
+
+      if (!monthTrans.isEmpty()) {  
+        // cout <<"-----------------> monthTrans is not empty  " << endl;
+        TransactionInfo inf;
+        inf.date = monthTrans.last().date.addDays(1);
+        inf.amount = 0;
+        inf.utility = 0;
+        monthTrans.append(inf);
+            }
+      //END Fix old issue.
+      // int day=0; double AccSales=0.0; double AccProfit=0.0;
+      for (int i = 0; i < monthTrans.size(); ++i) {
+        info = monthTrans.at(i);
+        ///we got one result per day (sum)
+        //insert the day,profit to the plot
+        AccSales  = info.amount;
+        AccProfit = info.utility;
+        day       = info.date.day();
+        objSales->addPoint(day,AccSales, QString::number(AccSales));
+         //objProfit->addPoint(day,AccProfit, QString::number(AccProfit));
+        qDebug()<<"ITERATING MONTH TRANSACTIONS  |  "<<day<<", sales:"<<info.amount<<" profit:"<<info.utility<<" AccSales:"<<AccSales<<" AccProfit:"<<AccProfit;
+        //ui_mainview.plotSales->update();
+      } //for each eleement
+
+
+      ui_mainview.plotSales->update();
+
+      
+      delete myDb;
+    }
+  }
+}
+
+
+
+void iotposView::setupGraphs()
+{
+  //plots...
+
+  // QString mes = (QDate::longMonthName(QDate::currentDate().month())).toUpper();
+  // ui_mainview.plotSales->setMinimumSize( 200, 200 );
+  // ui_mainview.plotSales->setAntialiasing( true );
+  // objSales = new KPlotObject( Qt::yellow, KPlotObject::Bars, KPlotObject::Star);
+  // ui_mainview.plotSales->addPlotObject( objSales );
+  // ui_mainview.plotSales->axis( KPlotWidget::BottomAxis )->setLabel( i18n("%1", mes) );
+  // ui_mainview.plotSales->axis( KPlotWidget::LeftAxis )->setLabel( i18n("Month Sales (%1)", KGlobal::locale()->currencySymbol()) );
+  // ui_mainview.plotProfit->setMinimumSize( 200, 200 );
+  // ui_mainview.plotProfit->setAntialiasing( true );
+  // objProfit = new KPlotObject( Qt::yellow, KPlotObject::Bars, KPlotObject::Star);
+  // ui_mainview.plotProfit->addPlotObject( objProfit );
+  // ui_mainview.plotProfit->axis( KPlotWidget::BottomAxis )->setLabel( i18n("%1", mes) );
+  // ui_mainview.plotProfit->axis( KPlotWidget::LeftAxis )->setLabel( i18n("Month Profit (%1)", KGlobal::locale()->currencySymbol()) );
+
+  // ui_mainview.plotMostSold->setMinimumSize( 200, 200 );
+  // ui_mainview.plotMostSold->setAntialiasing( true );
+  // objMostSold  = new KPlotObject( Qt::white, KPlotObject::Bars, KPlotObject::Star);
+  // objMostSoldB = new KPlotObject( Qt::green, KPlotObject::Bars, KPlotObject::Star);
+  // ui_mainview.plotMostSold->addPlotObject( objMostSold  );
+  // ui_mainview.plotMostSold->addPlotObject( objMostSoldB );
+  // ui_mainview.plotMostSold->axis( KPlotWidget::BottomAxis )->setLabel( i18n("Products") );
+  // ui_mainview.plotMostSold->axis( KPlotWidget::LeftAxis )->setLabel( i18n("Sold Units") );
+  // objMostSold->setShowBars(true);
+  // objMostSold->setShowPoints(true);
+  // objMostSold->setShowLines(false);
+  // objMostSoldB->setShowBars(true);
+  // objMostSoldB->setShowPoints(true);
+  // objMostSoldB->setShowLines(false);
+  // ui_mainview.plotMostSold->setShowGrid(false);
+  // objMostSold->setBarBrush( QBrush( Qt::blue, Qt::SolidPattern ) );
+  // objMostSold->setBarPen(QPen(Qt::white));
+  // objMostSold->setPointStyle(KPlotObject::Star);
+  // objMostSoldB->setBarBrush( QBrush( Qt::darkYellow, Qt::SolidPattern ) );
+  // objMostSoldB->setBarPen(QPen(Qt::white));
+  // objMostSoldB->setPointStyle(KPlotObject::Star);
+
+  objSales->setShowBars(true);
+  objSales->setShowPoints(true);
+  objSales->setShowLines(true);
+  objSales->setLinePen( QPen( Qt::blue, 1.5, Qt::DashDotLine ) );
+  objSales->setBarBrush( QBrush( Qt::lightGray, Qt::Dense6Pattern ) );
+  objSales->setBarPen(QPen(Qt::lightGray));
+  objSales->setPointStyle(KPlotObject::Star);
+
+  // objProfit->setShowBars(true);
+  // objProfit->setShowPoints(true);
+  // objProfit->setShowLines(true);
+  // objProfit->setLinePen( QPen( Qt::blue, 1.5, Qt::DashDotLine ) );
+  // objProfit->setBarBrush( QBrush( Qt::lightGray, Qt::Dense7Pattern ) );
+  // objProfit->setBarPen(QPen(Qt::lightGray));
+  // objProfit->setPointStyle(KPlotObject::Star);
+  
+  graphSoldItemsCreated = true;
+  updateGraphs();
+}
+
+
+
 
 void iotposView::qtyChanged(QTableWidgetItem *item)
 {
@@ -612,6 +774,7 @@ void iotposView::settingsChanged()
   db.setUserName(Settings::editDBUsername());
   db.setPassword(Settings::editDBPassword());
   connectToDb();
+  
   setupModel();
   setupHistoryTicketsModel();
   
@@ -621,6 +784,7 @@ void iotposView::settingsChanged()
 
   syncSettingsOnDb();
 
+  updateGraphs();
 }
 
 void iotposView::syncSettingsOnDb()
