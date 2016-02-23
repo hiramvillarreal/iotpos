@@ -407,7 +407,7 @@ iotposView::iotposView() //: QWidget(parent)
 void iotposView::updateGraphs()
 {
   qDebug() << " update Graphs " << endl;
-  // if (!db.isOpen()) openDB();
+  if (!db.isOpen());
   if (db.isOpen()) {
     if (!graphSoldItemsCreated ) setupGraphs();
     else{
