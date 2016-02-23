@@ -5,12 +5,6 @@ For raspbian OS we recommend to uninstall useless apps for a dedicated point of 
   sudo apt-get update
   sudo apt-get remove scratch wolfram-engine dillo netsurf-gtk sonic-pi minecraft-pi
   sudo apt-get purge libreoffice*
-  sudo apt-get purge libreoffice-base
-  sudo apt-get purge libreoffice-impress
-  sudo apt-get purge libreoffice-writer
-  sudo apt-get purge libreoffice-calc
-  sudo apt-get purge libreoffice-draw
-  sudo apt-get purge libreoffice-math
   sudo apt-get clean
   sudo apt-get autoremove
   sudo reboot
