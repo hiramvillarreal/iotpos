@@ -49,16 +49,7 @@
        <property name="spacing">
         <number>5</number>
        </property>
-       <property name="leftMargin">
-        <number>5</number>
-       </property>
-       <property name="topMargin">
-        <number>5</number>
-       </property>
-       <property name="rightMargin">
-        <number>5</number>
-       </property>
-       <property name="bottomMargin">
+       <property name="margin">
         <number>5</number>
        </property>
        <item>
@@ -83,16 +74,7 @@
            <property name="spacing">
             <number>2</number>
            </property>
-           <property name="leftMargin">
-            <number>2</number>
-           </property>
-           <property name="topMargin">
-            <number>2</number>
-           </property>
-           <property name="rightMargin">
-            <number>2</number>
-           </property>
-           <property name="bottomMargin">
+           <property name="margin">
             <number>2</number>
            </property>
            <item>
@@ -459,16 +441,7 @@
               <property name="spacing">
                <number>6</number>
               </property>
-              <property name="leftMargin">
-               <number>9</number>
-              </property>
-              <property name="topMargin">
-               <number>9</number>
-              </property>
-              <property name="rightMargin">
-               <number>9</number>
-              </property>
-              <property name="bottomMargin">
+              <property name="margin">
                <number>9</number>
               </property>
               <item>
@@ -828,16 +801,7 @@ color:black;</string>
                 </widget>
                 <widget class="QWidget" name="page_4">
                  <layout class="QVBoxLayout">
-                  <property name="leftMargin">
-                   <number>4</number>
-                  </property>
-                  <property name="topMargin">
-                   <number>4</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>4</number>
-                  </property>
-                  <property name="bottomMargin">
+                  <property name="margin">
                    <number>4</number>
                   </property>
                   <item>
@@ -877,7 +841,7 @@ color:black;</string>
                      </size>
                     </property>
                     <property name="inputMask">
-                     <string>0000-0000-0000-0000</string>
+                     <string>0000-0000-0000-0000; </string>
                     </property>
                     <property name="text">
                      <string>---</string>
@@ -965,16 +929,7 @@ color:black;</string>
          </widget>
          <widget class="QWidget" name="pageSearchItem">
           <layout class="QVBoxLayout">
-           <property name="leftMargin">
-            <number>2</number>
-           </property>
-           <property name="topMargin">
-            <number>2</number>
-           </property>
-           <property name="rightMargin">
-            <number>2</number>
-           </property>
-           <property name="bottomMargin">
+           <property name="margin">
             <number>2</number>
            </property>
           </layout>
@@ -1004,16 +959,7 @@ color:black;</string>
            <enum>QFrame::Raised</enum>
           </property>
           <layout class="QGridLayout" name="gridLayout_2">
-           <property name="leftMargin">
-            <number>2</number>
-           </property>
-           <property name="topMargin">
-            <number>2</number>
-           </property>
-           <property name="rightMargin">
-            <number>2</number>
-           </property>
-           <property name="bottomMargin">
+           <property name="margin">
             <number>2</number>
            </property>
            <property name="spacing">
@@ -1038,16 +984,7 @@ color:black;</string>
                <enum>QFrame::Raised</enum>
               </property>
               <layout class="QGridLayout">
-               <property name="leftMargin">
-                <number>4</number>
-               </property>
-               <property name="topMargin">
-                <number>4</number>
-               </property>
-               <property name="rightMargin">
-                <number>4</number>
-               </property>
-               <property name="bottomMargin">
+               <property name="margin">
                 <number>4</number>
                </property>
                <property name="spacing">
@@ -1518,11 +1455,11 @@ color:black;</string>
              <property name="layoutDirection">
               <enum>Qt::RightToLeft</enum>
              </property>
-             <property name="backgroundColor" stdset="0">
+             <property name="backgroundColor">
               <color>
-               <red>96</red>
-               <green>111</green>
-               <blue>0</blue>
+               <red>0</red>
+               <green>51</green>
+               <blue>153</blue>
               </color>
              </property>
             </widget>
@@ -2117,16 +2054,7 @@ font: 75 9pt &quot;Lucida Grande&quot;;</string>
          <property name="spacing">
           <number>4</number>
          </property>
-         <property name="leftMargin">
-          <number>4</number>
-         </property>
-         <property name="topMargin">
-          <number>4</number>
-         </property>
-         <property name="rightMargin">
-          <number>4</number>
-         </property>
-         <property name="bottomMargin">
+         <property name="margin">
           <number>4</number>
          </property>
          <item>
@@ -2183,16 +2111,7 @@ p, li { white-space: pre-wrap; }
             <property name="spacing">
              <number>4</number>
             </property>
-            <property name="leftMargin">
-             <number>4</number>
-            </property>
-            <property name="topMargin">
-             <number>4</number>
-            </property>
-            <property name="rightMargin">
-             <number>4</number>
-            </property>
-            <property name="bottomMargin">
+            <property name="margin">
              <number>4</number>
             </property>
             <item>

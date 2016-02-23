@@ -29,16 +29,7 @@
    <property name="spacing">
     <number>1</number>
    </property>
-   <property name="leftMargin">
-    <number>2</number>
-   </property>
-   <property name="topMargin">
-    <number>2</number>
-   </property>
-   <property name="rightMargin">
-    <number>2</number>
-   </property>
-   <property name="bottomMargin">
+   <property name="margin">
     <number>2</number>
    </property>
    <item>
@@ -46,16 +37,7 @@
      <property name="spacing">
       <number>1</number>
      </property>
-     <property name="leftMargin">
-      <number>1</number>
-     </property>
-     <property name="topMargin">
-      <number>1</number>
-     </property>
-     <property name="rightMargin">
-      <number>1</number>
-     </property>
-     <property name="bottomMargin">
+     <property name="margin">
       <number>1</number>
      </property>
      <item>
@@ -199,14 +181,14 @@
            <height>300</height>
           </size>
          </property>
-         <property name="backgroundColor" stdset="0">
+         <property name="backgroundColor">
           <color>
-           <red>96</red>
-           <green>111</green>
-           <blue>0</blue>
+           <red>0</red>
+           <green>51</green>
+           <blue>153</blue>
           </color>
          </property>
-         <property name="gridColor" stdset="0">
+         <property name="gridColor">
           <color>
            <red>255</red>
            <green>0</green>
@@ -215,6 +197,58 @@
          </property>
          <property name="grid" stdset="0">
           <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="KPlotWidget" name="plotSales">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>500</width>
+           <height>300</height>
+          </size>
+         </property>
+         <property name="backgroundColor">
+          <color>
+           <red>0</red>
+           <green>51</green>
+           <blue>153</blue>
+          </color>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="KPlotWidget" name="plotProfit">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>500</width>
+           <height>300</height>
+          </size>
+         </property>
+         <property name="backgroundColor">
+          <color>
+           <red>0</red>
+           <green>51</green>
+           <blue>153</blue>
+          </color>
          </property>
         </widget>
        </item>
@@ -802,58 +836,6 @@
            </layout>
           </item>
          </layout>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="KPlotWidget" name="plotSales">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>500</width>
-           <height>300</height>
-          </size>
-         </property>
-         <property name="backgroundColor" stdset="0">
-          <color>
-           <red>96</red>
-           <green>111</green>
-           <blue>0</blue>
-          </color>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="KPlotWidget" name="plotProfit">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>500</width>
-           <height>300</height>
-          </size>
-         </property>
-         <property name="backgroundColor" stdset="0">
-          <color>
-           <red>96</red>
-           <green>111</green>
-           <blue>0</blue>
-          </color>
-         </property>
         </widget>
        </item>
       </layout>
@@ -1620,14 +1602,14 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="1" column="1" rowspan="2">
-                 <widget class="KDateWidget" name="editBalancesFilterByDate" native="true">
+                 <widget class="KDateWidget" name="editBalancesFilterByDate">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
-                  <property name="date" stdset="0">
+                  <property name="date">
                    <date>
                     <year>2000</year>
                     <month>1</month>
@@ -1859,14 +1841,14 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="4" column="1">
-                 <widget class="KDateWidget" name="transactionsDateEditor" native="true">
+                 <widget class="KDateWidget" name="transactionsDateEditor">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
-                  <property name="date" stdset="0">
+                  <property name="date">
                    <date>
                     <year>2009</year>
                     <month>1</month>
@@ -2208,8 +2190,8 @@ color:black;</string>
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="KDateWidget" name="offersDateEditor" native="true">
-          <property name="date" stdset="0">
+         <widget class="KDateWidget" name="offersDateEditor">
+          <property name="date">
            <date>
             <year>2009</year>
             <month>1</month>
@@ -2260,19 +2242,10 @@ color:black;</string>
         <bool>false</bool>
        </property>
        <layout class="QGridLayout" name="gridLayout_3">
-        <property name="leftMargin">
-         <number>2</number>
-        </property>
-        <property name="topMargin">
-         <number>2</number>
-        </property>
-        <property name="rightMargin">
-         <number>2</number>
-        </property>
-        <property name="bottomMargin">
-         <number>2</number>
-        </property>
         <property name="horizontalSpacing">
+         <number>2</number>
+        </property>
+        <property name="margin">
          <number>2</number>
         </property>
         <item row="0" column="0">
@@ -2406,16 +2379,7 @@ color:black;</string>
         <bool>false</bool>
        </property>
        <layout class="QGridLayout" name="gridLayout_7">
-        <property name="leftMargin">
-         <number>6</number>
-        </property>
-        <property name="topMargin">
-         <number>6</number>
-        </property>
-        <property name="rightMargin">
-         <number>6</number>
-        </property>
-        <property name="bottomMargin">
+        <property name="margin">
          <number>6</number>
         </property>
         <item row="0" column="0">
@@ -2458,7 +2422,7 @@ color:black;</string>
                </spacer>
               </item>
               <item>
-               <widget class="KDateWidget" name="datePicker" native="true"/>
+               <widget class="KDateWidget" name="datePicker"/>
               </item>
              </layout>
             </item>
