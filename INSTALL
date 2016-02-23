@@ -11,8 +11,8 @@ For raspbian OS we recommend to uninstall useless apps for a dedicated point of 
   sudo apt-get purge libreoffice-calc
   sudo apt-get purge libreoffice-draw
   sudo apt-get purge libreoffice-math
-  sudo apt-get autoremove
   sudo apt-get clean
+  sudo apt-get autoremove
   sudo reboot
 
 
