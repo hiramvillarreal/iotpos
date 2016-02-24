@@ -8,10 +8,8 @@ For raspbian OS we recommend to uninstall useless apps for a dedicated point of 
   sudo apt-get clean
   sudo apt-get autoremove
   sudo reboot
-
-
   
-That will give you an extra .6 Gb space, great for smallers SDs.
+That will give you an extra 800 Mb space.
 
 ---------------------------------------------------SOFTWARE-SETUP------------------------------------------------------
 
@@ -34,7 +32,7 @@ Now we need to install everything else that’s needed for the compile:
 
   sudo apt-get install build-essential g++ cmake gettext libqt4-sql-mysql kdelibs5-dev
 
- The next step is to download the source:
+Download from git:
  
   cd ~
   git clone https://github.com/hiramvillarreal/iotpos
