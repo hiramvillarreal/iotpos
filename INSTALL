@@ -2,13 +2,14 @@
 
 For raspbian OS we recommend to uninstall useless apps for a dedicated point of sale:
 
-sudo apt-get update
-sudo apt-get remove scratch wolfram-engine dillo netsurf-gtk sonic-pi minecraft-pi
-sudo apt-get autoremove
-sudo apt-get clean
-sudo reboot
+  sudo apt-get update
+  sudo apt-get remove scratch wolfram-engine dillo netsurf-gtk sonic-pi minecraft-pi
+  sudo apt-get purge libreoffice*
+  sudo apt-get clean
+  sudo apt-get autoremove
+  sudo reboot
   
-That will give you an extra .6 Gb space, great for smallers SDs.
+That will give you an extra 800 Mb space.
 
 ---------------------------------------------------SOFTWARE-SETUP------------------------------------------------------
 
@@ -31,7 +32,7 @@ Now we need to install everything else that’s needed for the compile:
 
   sudo apt-get install build-essential g++ cmake gettext libqt4-sql-mysql kdelibs5-dev
 
- The next step is to download the source:
+Download from git:
  
   cd ~
   git clone https://github.com/hiramvillarreal/iotpos
@@ -132,11 +133,34 @@ permanently damage the Raspberry Pi! (The other direction is safe as-is.).
 Push bottom N.O. to Physical pin 16 switch to GND.
 LED+ Physical pin 12 LED- TO any GND available.
 
+----------------------------------------------
+Allow to send notifications and reports by e-mails from the Raspberry Pi.
 
+Install SSMTP and mail utilitites:
 
+  sudo apt-get install ssmtp
+  sudo apt-get install mailutils
 
+Edit the SSMTP configuration file:
 
+  sudo nano /etc/ssmtp/ssmtp.conf
+  
+  root=postmaster
+  mailhub=smtp.gmail.com:587
+  hostname=raspberrypi
+  AuthUser=YourGMailUserName@gmail.com
+  AuthPass=YourGMailPassword
+  UseSTARTTLS=YES
 
+Be sure to specify the correct GMail user name and password here, otherwise you will get authentication errors.
+If the host name of your Raspberry Pi is different from “raspberrypi”, specify your actual host name here instead.
 
+Set the permissions of the SSMTP configuration file:
 
+  sudo chmod 774 /etc/ssmtp/ssmtp.conf
 
+Edit the script: 
+
+  nano ~/iotpos/scripts/corteMail.sh
+
+replace -your_mail@gmail.com- with your gmail account.
