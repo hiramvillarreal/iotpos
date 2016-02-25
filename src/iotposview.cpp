@@ -161,7 +161,7 @@ iotposView::iotposView() //: QWidget(parent)
     modelsCreated = false;
     //graphSoldItemsCreated = false;
     timerCheckDb = new QTimer(this);
-    timerCheckDb->setInterval(1000);
+    timerCheckDb->setInterval(3000);
     timerUpdateGraphs = new QTimer(this);
     timerUpdateGraphs->setInterval(300000);
     categoriesHash.clear();
@@ -399,13 +399,16 @@ iotposView::iotposView() //: QWidget(parent)
  //    }
 
   ui_mainview.editItemCode->setFocus();
-  setupGraphs();
 
-  if (loggedUserRole == roleAdmin) {updateGraphs();}
+
+  if (loggedUserRole == roleAdmin) {setupGraphs(); updateGraphs();}
 }
 // UI and Database -- GRAPHS.
+
+
 void iotposView::updateGraphs()
 {
+   if (!db.isOpen()) setupDB();
     if (loggedUserRole == roleAdmin) {
   qDebug() << " update Graphs " << endl;
   //if (!db.isOpen());{  }
