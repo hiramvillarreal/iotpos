@@ -400,8 +400,6 @@ iotposView::iotposView() //: QWidget(parent)
 
   ui_mainview.editItemCode->setFocus();
 
-
-  if (loggedUserRole == roleAdmin) {setupGraphs(); updateGraphs();}
 }
 // UI and Database -- GRAPHS.
 
@@ -469,6 +467,8 @@ void iotposView::updateGraphs()
 
 void iotposView::setupGraphs()
 {
+ if (!db.isOpen()) setupDB();
+  if (db.isOpen())
   objSales->setShowBars(true);
   objSales->setShowPoints(true);
   objSales->setShowLines(true);
@@ -476,9 +476,7 @@ void iotposView::setupGraphs()
   objSales->setBarBrush( QBrush( Qt::lightGray, Qt::Dense6Pattern ) );
   objSales->setBarPen(QPen(Qt::lightGray));
   objSales->setPointStyle(KPlotObject::Star);
-
   graphSoldItemsCreated = true;
-  if (loggedUserRole == roleAdmin) {updateGraphs();}
 }
 
 
@@ -739,7 +737,7 @@ void iotposView::settingsChanged()
   startAgain();
 
   syncSettingsOnDb();
-  if (loggedUserRole == roleAdmin) { updateGraphs();}
+ // if (loggedUserRole == roleAdmin) {updateGraphs(); updateGraphs();}
 }
 
 void iotposView::syncSettingsOnDb()
@@ -1107,7 +1105,7 @@ void iotposView::login()
       if (loggedUserRole == roleAdmin) {
         emit signalAdminLoggedOn();
         ui_mainview.labelBanner->setVisible(false);
-        updateGraphs();
+        setupGraphs(); updateGraphs();
         //if (!canStartSelling()) startOperation();
       } else {
         emit signalAdminLoggedOff();
