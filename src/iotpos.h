@@ -151,6 +151,8 @@ private slots:
     void enableStartOp();
     void disableStartOp();
 
+    void on_kcfg_firstDiscountOnly_clicked();
+
 private:
     void setupActions();
 

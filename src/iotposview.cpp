@@ -163,7 +163,7 @@ iotposView::iotposView() //: QWidget(parent)
     timerCheckDb = new QTimer(this);
     timerCheckDb->setInterval(1000);
     timerUpdateGraphs = new QTimer(this);
-    timerUpdateGraphs->setInterval(10000);
+    timerUpdateGraphs->setInterval(300000);
     categoriesHash.clear();
     subcategoriesHash.clear();
    // departmentsHash.clear();
@@ -400,12 +400,13 @@ iotposView::iotposView() //: QWidget(parent)
 
   ui_mainview.editItemCode->setFocus();
   setupGraphs();
-  updateGraphs();
-}
 
+  if (loggedUserRole == roleAdmin) {updateGraphs();}
+}
 // UI and Database -- GRAPHS.
 void iotposView::updateGraphs()
 {
+    if (loggedUserRole == roleAdmin) {
   qDebug() << " update Graphs " << endl;
   //if (!db.isOpen());{  }
   if (db.isOpen()) {
@@ -461,48 +462,10 @@ void iotposView::updateGraphs()
   }
 }
 
-
+}
 
 void iotposView::setupGraphs()
 {
-  //plots...
-
-  // QString mes = (QDate::longMonthName(QDate::currentDate().month())).toUpper();
-  // ui_mainview.plotSales->setMinimumSize( 200, 200 );
-  // ui_mainview.plotSales->setAntialiasing( true );
-  // objSales = new KPlotObject( Qt::yellow, KPlotObject::Bars, KPlotObject::Star);
-  // ui_mainview.plotSales->addPlotObject( objSales );
-  // ui_mainview.plotSales->axis( KPlotWidget::BottomAxis )->setLabel( i18n("%1", mes) );
-  // ui_mainview.plotSales->axis( KPlotWidget::LeftAxis )->setLabel( i18n("Month Sales (%1)", KGlobal::locale()->currencySymbol()) );
-  // ui_mainview.plotProfit->setMinimumSize( 200, 200 );
-  // ui_mainview.plotProfit->setAntialiasing( true );
-  // objProfit = new KPlotObject( Qt::yellow, KPlotObject::Bars, KPlotObject::Star);
-  // ui_mainview.plotProfit->addPlotObject( objProfit );
-  // ui_mainview.plotProfit->axis( KPlotWidget::BottomAxis )->setLabel( i18n("%1", mes) );
-  // ui_mainview.plotProfit->axis( KPlotWidget::LeftAxis )->setLabel( i18n("Month Profit (%1)", KGlobal::locale()->currencySymbol()) );
-
-  // ui_mainview.plotMostSold->setMinimumSize( 200, 200 );
-  // ui_mainview.plotMostSold->setAntialiasing( true );
-  // objMostSold  = new KPlotObject( Qt::white, KPlotObject::Bars, KPlotObject::Star);
-  // objMostSoldB = new KPlotObject( Qt::green, KPlotObject::Bars, KPlotObject::Star);
-  // ui_mainview.plotMostSold->addPlotObject( objMostSold  );
-  // ui_mainview.plotMostSold->addPlotObject( objMostSoldB );
-  // ui_mainview.plotMostSold->axis( KPlotWidget::BottomAxis )->setLabel( i18n("Products") );
-  // ui_mainview.plotMostSold->axis( KPlotWidget::LeftAxis )->setLabel( i18n("Sold Units") );
-  // objMostSold->setShowBars(true);
-  // objMostSold->setShowPoints(true);
-  // objMostSold->setShowLines(false);
-  // objMostSoldB->setShowBars(true);
-  // objMostSoldB->setShowPoints(true);
-  // objMostSoldB->setShowLines(false);
-  // ui_mainview.plotMostSold->setShowGrid(false);
-  // objMostSold->setBarBrush( QBrush( Qt::blue, Qt::SolidPattern ) );
-  // objMostSold->setBarPen(QPen(Qt::white));
-  // objMostSold->setPointStyle(KPlotObject::Star);
-  // objMostSoldB->setBarBrush( QBrush( Qt::darkYellow, Qt::SolidPattern ) );
-  // objMostSoldB->setBarPen(QPen(Qt::white));
-  // objMostSoldB->setPointStyle(KPlotObject::Star);
-
   objSales->setShowBars(true);
   objSales->setShowPoints(true);
   objSales->setShowLines(true);
@@ -511,19 +474,9 @@ void iotposView::setupGraphs()
   objSales->setBarPen(QPen(Qt::lightGray));
   objSales->setPointStyle(KPlotObject::Star);
 
-  // objProfit->setShowBars(true);
-  // objProfit->setShowPoints(true);
-  // objProfit->setShowLines(true);
-  // objProfit->setLinePen( QPen( Qt::blue, 1.5, Qt::DashDotLine ) );
-  // objProfit->setBarBrush( QBrush( Qt::lightGray, Qt::Dense7Pattern ) );
-  // objProfit->setBarPen(QPen(Qt::lightGray));
-  // objProfit->setPointStyle(KPlotObject::Star);
-  
   graphSoldItemsCreated = true;
-  updateGraphs();
+  if (loggedUserRole == roleAdmin) {updateGraphs();}
 }
-
-
 
 
 void iotposView::qtyChanged(QTableWidgetItem *item)
@@ -783,8 +736,7 @@ void iotposView::settingsChanged()
   startAgain();
 
   syncSettingsOnDb();
-
-  updateGraphs();
+  if (loggedUserRole == roleAdmin) { updateGraphs();}
 }
 
 void iotposView::syncSettingsOnDb()
@@ -1151,13 +1103,17 @@ void iotposView::login()
       //Now check roles instead of names
       if (loggedUserRole == roleAdmin) {
         emit signalAdminLoggedOn();
+        ui_mainview.labelBanner->setVisible(false);
+        updateGraphs();
         //if (!canStartSelling()) startOperation();
       } else {
         emit signalAdminLoggedOff();
-        if (loggedUserRole == roleSupervisor)
-          emit signalSupervisorLoggedOn();
+        if (loggedUserRole == roleSupervisor) {
+          ui_mainview.labelBanner->setVisible(true);
+          emit signalSupervisorLoggedOn();}
         else {
           emit signalEnableStartOperationAction();
+            ui_mainview.labelBanner->setVisible(true);
           //slotDoStartOperation();
         }
       }
@@ -3167,6 +3123,7 @@ void iotposView::finishCurrentTransaction()
    if (!ui_mainview.groupSaleDate->isHidden()) ui_mainview.groupSaleDate->hide(); //finally we hide the sale date group
    completingOrder = false; //cleaning flag
    oDiscountMoney = 0; //reset discount money... the new discount type.
+   if (loggedUserRole == roleAdmin) {updateGraphs();}
 }
 
 
