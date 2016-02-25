@@ -82,7 +82,7 @@ ProductEditor::ProductEditor( QWidget *parent, bool newProduct )
     ui->btnShowGroup->setDisabled(true);
 
     ui->btnChangeCode->setIcon(QIcon(DesktopIcon("edit-clear", 32)));
-
+    ui->printBC->setIcon(QIcon(DesktopIcon("iotpos-tag", 32)));
     //Set Validators for input boxes
     QRegExp regexpC("[0-9]{1,13}"); //(EAN-13 y EAN-8) .. y productos sin codigo de barras?
     QRegExpValidator * validatorEAN13 = new QRegExpValidator(regexpC, this);

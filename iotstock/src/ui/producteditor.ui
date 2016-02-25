@@ -64,7 +64,7 @@
      </property>
     </widget>
    </item>
-   <item row="10" column="6">
+   <item row="10" column="8">
     <widget class="QCheckBox" name="chIsAGroup">
      <property name="text">
       <string>It's a Group/Pack</string>
@@ -74,7 +74,7 @@
    <item row="7" column="4">
     <widget class="QComboBox" name="subcategoriesCombo"/>
    </item>
-   <item row="10" column="7" rowspan="3">
+   <item row="10" column="9" rowspan="3">
     <widget class="QGroupBox" name="groupBox">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
@@ -513,7 +513,7 @@
      </layout>
     </widget>
    </item>
-   <item row="7" column="6">
+   <item row="7" column="8">
     <widget class="QCheckBox" name="chNotDiscountable">
      <property name="text">
       <string>Non Discount item</string>
@@ -539,6 +539,13 @@
      </property>
      <property name="buddy">
       <cstring>editFinalPrice</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="8">
+    <widget class="QPushButton" name="btnShowGroup">
+     <property name="text">
+      <string>Show Group details</string>
      </property>
     </widget>
    </item>
@@ -574,13 +581,6 @@
      </property>
     </widget>
    </item>
-   <item row="11" column="6">
-    <widget class="QPushButton" name="btnShowGroup">
-     <property name="text">
-      <string>Show Group details</string>
-     </property>
-    </widget>
-   </item>
    <item row="9" column="0">
     <widget class="QLabel" name="label_9">
      <property name="sizePolicy">
@@ -603,7 +603,7 @@
      </property>
     </widget>
    </item>
-   <item row="7" column="5">
+   <item row="7" column="7">
     <widget class="QToolButton" name="btnCreateSubcategory">
      <property name="toolTip">
       <string>Create new subcategory</string>
@@ -613,7 +613,10 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="7" rowspan="8">
+   <item row="6" column="1">
+    <widget class="QComboBox" name="departmentsCombo"/>
+   </item>
+   <item row="0" column="9" rowspan="8">
     <layout class="QVBoxLayout">
      <item>
       <widget class="QLabel" name="labelPhoto">
@@ -658,6 +661,13 @@
      </item>
     </layout>
    </item>
+   <item row="7" column="3">
+    <widget class="QLabel" name="label_17">
+     <property name="text">
+      <string>Subcategory:</string>
+     </property>
+    </widget>
+   </item>
    <item row="9" column="1" colspan="3">
     <widget class="QLineEdit" name="editCost">
      <property name="sizePolicy">
@@ -680,10 +690,13 @@
      </property>
     </widget>
    </item>
-   <item row="7" column="3">
-    <widget class="QLabel" name="label_17">
+   <item row="7" column="2">
+    <widget class="QToolButton" name="btnCreateCategory">
+     <property name="toolTip">
+      <string>Create new category</string>
+     </property>
      <property name="text">
-      <string>Subcategory:</string>
+      <string>+</string>
      </property>
     </widget>
    </item>
@@ -716,13 +729,10 @@
      </property>
     </widget>
    </item>
-   <item row="7" column="2">
-    <widget class="QToolButton" name="btnCreateCategory">
-     <property name="toolTip">
-      <string>Create new category</string>
-     </property>
+   <item row="9" column="8">
+    <widget class="QCheckBox" name="chIsARaw">
      <property name="text">
-      <string>+</string>
+      <string>It's A Raw Product</string>
      </property>
     </widget>
    </item>
@@ -779,39 +789,10 @@
      </property>
     </widget>
    </item>
-   <item row="9" column="6">
-    <widget class="QCheckBox" name="chIsARaw">
-     <property name="text">
-      <string>It's A Raw Product</string>
-     </property>
-    </widget>
-   </item>
-   <item row="12" column="5" colspan="2">
+   <item row="12" column="7" colspan="2">
     <widget class="QLabel" name="lblProfit">
      <property name="text">
       <string>...</string>
-     </property>
-    </widget>
-   </item>
-   <item row="8" column="0">
-    <widget class="QLabel" name="label_7">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="layoutDirection">
-      <enum>Qt::LeftToRight</enum>
-     </property>
-     <property name="text">
-      <string>So&amp;ld by:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="buddy">
-      <cstring>measuresCombo</cstring>
      </property>
     </widget>
    </item>
@@ -840,7 +821,7 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="1" colspan="6">
+   <item row="1" column="1" colspan="8">
     <widget class="QLineEdit" name="editAlphacode">
      <property name="sizePolicy">
       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
@@ -856,7 +837,29 @@
      </property>
     </widget>
    </item>
-   <item row="2" column="1" colspan="6">
+   <item row="8" column="0">
+    <widget class="QLabel" name="label_7">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="text">
+      <string>So&amp;ld by:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="buddy">
+      <cstring>measuresCombo</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1" colspan="8">
     <widget class="QLineEdit" name="editVendorcode"/>
    </item>
    <item row="5" column="2">
@@ -900,7 +903,7 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="1" colspan="6">
+   <item row="0" column="1" colspan="8">
     <layout class="QHBoxLayout">
      <property name="spacing">
       <number>2</number>
@@ -963,8 +966,15 @@
      </item>
     </layout>
    </item>
-   <item row="6" column="1">
-    <widget class="QComboBox" name="departmentsCombo"/>
+   <item row="8" column="2">
+    <widget class="QToolButton" name="btnCreateMeasure">
+     <property name="toolTip">
+      <string>Create New Measure</string>
+     </property>
+     <property name="text">
+      <string>+</string>
+     </property>
+    </widget>
    </item>
    <item row="11" column="0">
     <widget class="QLabel" name="label_12">
@@ -991,16 +1001,6 @@
      </property>
     </widget>
    </item>
-   <item row="8" column="2">
-    <widget class="QToolButton" name="btnCreateMeasure">
-     <property name="toolTip">
-      <string>Create New Measure</string>
-     </property>
-     <property name="text">
-      <string>+</string>
-     </property>
-    </widget>
-   </item>
    <item row="8" column="1">
     <widget class="QComboBox" name="measuresCombo">
      <property name="sizePolicy">
@@ -1008,28 +1008,6 @@
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="0">
-    <widget class="QLabel" name="label_5">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="layoutDirection">
-      <enum>Qt::LeftToRight</enum>
-     </property>
-     <property name="text">
-      <string>&amp;Code:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="buddy">
-      <cstring>editCode</cstring>
      </property>
     </widget>
    </item>
@@ -1071,7 +1049,52 @@
      </property>
     </widget>
    </item>
-   <item row="13" column="0" colspan="8">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_5">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="text">
+      <string>&amp;Code:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="buddy">
+      <cstring>editCode</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="8">
+    <widget class="QCheckBox" name="chUnlimitedStock">
+     <property name="text">
+      <string>Unlimited Stock</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1" colspan="8">
+    <widget class="QLineEdit" name="editDesc">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>200</width>
+       <height>0</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="0" colspan="10">
     <widget class="QFrame" name="groupsPanel">
      <layout class="QGridLayout" name="gridLayout_2">
       <item row="0" column="0" colspan="3">
@@ -1300,29 +1323,6 @@ color: blue;</string>
      </layout>
     </widget>
    </item>
-   <item row="8" column="6">
-    <widget class="QCheckBox" name="chUnlimitedStock">
-     <property name="text">
-      <string>Unlimited Stock</string>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="1" colspan="6">
-    <widget class="QLineEdit" name="editDesc">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>200</width>
-       <height>0</height>
-      </size>
-     </property>
-    </widget>
-   </item>
    <item row="7" column="0">
     <widget class="QLabel" name="label_8">
      <property name="sizePolicy">
@@ -1383,15 +1383,8 @@ color: blue;</string>
      </property>
     </widget>
    </item>
-   <item row="5" column="6">
+   <item row="5" column="8">
     <layout class="QHBoxLayout" name="horizontalLayout_5">
-     <item>
-      <widget class="QPushButton" name="printBC">
-       <property name="text">
-        <string>Print tags:</string>
-       </property>
-      </widget>
-     </item>
      <item>
       <spacer name="horizontalSpacer">
        <property name="orientation">
@@ -1406,12 +1399,56 @@ color: blue;</string>
       </spacer>
      </item>
      <item>
+      <widget class="QLabel" name="label_19">
+       <property name="text">
+        <string>Print tags:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QLineEdit" name="lEditBC">
        <property name="enabled">
         <bool>true</bool>
        </property>
+       <property name="maximumSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
        <property name="maxLength">
-        <number>2</number>
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="printBC">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>33</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
        </property>
       </widget>
      </item>
