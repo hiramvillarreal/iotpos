@@ -66,7 +66,9 @@ int main(int argc, char **argv)
 
     // register ourselves as a dcop client
     //app.dcopClient()->registerAs(app.name(), false);
-
+    QPixmap image (KStandardDirs().findResource("data", "iotpos/images/splash_screen.png"));
+    splash = new KSplashScreen(image, Qt::WindowStaysOnTopHint);
+    splash->show();
     // see if we are starting with session management
     if (app.isSessionRestored())
         RESTORE(iotpos)
@@ -76,36 +78,9 @@ int main(int argc, char **argv)
         KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
         if (args->count() == 0)
         {
-            QPixmap image (KStandardDirs().findResource("data", "iotpos/images/splash_screen.png"));
-            splash = new KSplashScreen(image, Qt::WindowStaysOnTopHint);
-            splash->show();
-  /*         //NOTE: Is this the best place to launch the backup process?
-     //       QString fn = QString("%1/iotpos-backup/").arg(QDir::homePath());
-    //        QDir dir;
-    //        if (!dir.exists(fn))
-    //            dir.mkdir(fn);
-     //       fn = fn+QString("iotpos-db--backup.sql");//.arg(QDateTime::currentDateTime().toString("dd-MMM-yyyy__hh.mm.AP"));
-            qDebug()<<"BACKUP DATABASE at " << fn;
-            
-            QStringList params;
-            QString pswd = "-p" + Settings::editDBPassword();
-            QString usr  = "-u" + Settings::editDBUsername();
-            QString hst  = "-h" + Settings::editDBServer();
-            QString dnm  = Settings::editDBName();
-            QString fnm  = "-r" + fn;
-            params << hst << usr << pswd << fnm << dnm;
-            QProcess mysqldump;
-            mysqldump.start("mysqldump", params);
-            mysqldump.waitForFinished();
-            //NOTE: The process above does not consider an error (network, mysql config, wrong password/user, etc..) and does not inform such if it happens.
-            //      It just gives an empty backup file. But once everything is working fine, it will give a backup every day.
-            //QProcess process;
-            //process.startDetached("/bin/sh", QStringList()<< "/home/pi/iotpos/scripts/dropbox.sh");*/
-            iotpos *widget = new iotpos;
-            widget->show();
-          //  widget->hide();
-            widget->show();
-            splash->finish(widget);
+           iotpos *widget = new iotpos;
+           widget->show();
+           splash->finish(widget);
         }
         else
         {
@@ -113,14 +88,11 @@ int main(int argc, char **argv)
             for (; i < args->count(); i++)
             {
                 iotpos *widget = new iotpos;
-                widget->show();
-             //   widget->hide();
-             //   widget->show();
+              //  widget->show();
                 qDebug()<<"iotpos "<<i;
             }
         }
         args->clear();
     }
-
     return app.exec();
 }

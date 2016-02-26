@@ -150,7 +150,6 @@ public:
     void setUpInputs();
     void setupModel();
     void setupClientsModel();
-
     RoundingInfo roundUsStandard(const double &number);
 
     BasketPriceSummary recalculateBasket(double oDiscountMoney);
@@ -289,6 +288,7 @@ public:
      * Slot used to clear the tableWidget, totals, amount and card number.
    */
     void clearUsedWidgets();
+
   /**
      * Slot used to print the ticket, show a frame message and wait a few seconds...
    **/

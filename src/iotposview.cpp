@@ -168,7 +168,7 @@ iotposView::iotposView() //: QWidget(parent)
     subcategoriesHash.clear();
    // departmentsHash.clear();
     //setupSignalConnections();
-    QTimer::singleShot(1100, this, SLOT(setupDb()));
+ //   QTimer::singleShot(1100, this, SLOT(setupDb()));
     QTimer::singleShot(2000, timerCheckDb, SLOT(start()));
     QTimer::singleShot(20000, timerUpdateGraphs, SLOT(start()));
     QTimer::singleShot(2010, this, SLOT(showWelcomeGraphs()));
@@ -262,9 +262,9 @@ iotposView::iotposView() //: QWidget(parent)
   notifierPanel = new MibitNotifier(this,path, DesktopIcon("dialog-warning", 32));
 
   refreshTotalLabel();
-  QTimer::singleShot(1000, this, SLOT(setupDB()));
+  QTimer::singleShot(1200, this, SLOT(setupDB()));
   setAutoFillBackground(true);
-  QTimer::singleShot(1500, this, SLOT(login()));
+  QTimer::singleShot(1800, this, SLOT(login()));
   QTimer *timerClock = new QTimer(this);
 
   loggedUserRole = roleBasic;
