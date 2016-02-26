@@ -169,7 +169,7 @@ iotposView::iotposView() //: QWidget(parent)
    // departmentsHash.clear();
     //setupSignalConnections();
  //   QTimer::singleShot(1100, this, SLOT(setupDb()));
-    QTimer::singleShot(2000, timerCheckDb, SLOT(start()));
+ //   QTimer::singleShot(2000, timerCheckDb, SLOT(start()));
     QTimer::singleShot(20000, timerUpdateGraphs, SLOT(start()));
     QTimer::singleShot(2010, this, SLOT(showWelcomeGraphs()));
     QTimer::singleShot(2000, this, SLOT(login()));
@@ -348,8 +348,7 @@ iotposView::iotposView() //: QWidget(parent)
   transDateTime = QDateTime::currentDateTime();
   ui_mainview.editTransactionDate->setDateTime(transDateTime);
   ui_mainview.groupSaleDate->hide();
-  ui_mainview.plotSales->update();
-
+ // ui_mainview.plotSales->update();
   ui_mainview.editItemCode->setEmptyMessage(i18n("Enter code or qty*code. <Enter> or <+> Keys to go pay"));
   ui_mainview.editItemCode->setToolTip(i18n("Enter code or qty*code. <Enter> or <+> Keys to go pay"));
   ui_mainview.editCreditTendered->setEmptyMessage(i18n("Enter an amount."));
@@ -399,7 +398,7 @@ iotposView::iotposView() //: QWidget(parent)
  //    }
 
   ui_mainview.editItemCode->setFocus();
-
+setupGraphs();
 }
 // UI and Database -- GRAPHS.
 
@@ -737,7 +736,6 @@ void iotposView::settingsChanged()
   startAgain();
 
   syncSettingsOnDb();
- // if (loggedUserRole == roleAdmin) {updateGraphs(); updateGraphs();}
 }
 
 void iotposView::syncSettingsOnDb()
@@ -1105,7 +1103,7 @@ void iotposView::login()
       if (loggedUserRole == roleAdmin) {
         emit signalAdminLoggedOn();
         ui_mainview.labelBanner->setVisible(false);
-        setupGraphs(); updateGraphs();
+        updateGraphs();
         //if (!canStartSelling()) startOperation();
       } else {
         emit signalAdminLoggedOff();
