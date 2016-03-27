@@ -367,8 +367,8 @@ void iotpos::setupActions()
   setupGUI();
 
   //FIXME: SCREEN SIZE
-//  setWindowState( windowState() | Qt::WindowFullScreen ); // set
-  setGeometry(QApplication::desktop()->screenGeometry(this));
+  setWindowState( windowState() | Qt::WindowFullScreen ); // set
+  //setGeometry(QApplication::desktop()->screenGeometry(this));
   if (!Settings::splitterSizes().isEmpty()) m_view->setTheSplitterSizes(Settings::splitterSizes());
   if (!Settings::gridSplitterSizes().isEmpty()) m_view->setTheGridSplitterSizes(Settings::gridSplitterSizes());
 }
