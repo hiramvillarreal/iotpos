@@ -1722,10 +1722,10 @@ color:black;</string>
                <enum>QFrame::StyledPanel</enum>
               </property>
               <property name="verticalScrollBarPolicy">
-               <enum>Qt::ScrollBarAsNeeded</enum>
+               <enum>Qt::ScrollBarAlwaysOn</enum>
               </property>
-              <property name="sizeAdjustPolicy">
-               <enum>QAbstractScrollArea::AdjustIgnored</enum>
+              <property name="horizontalScrollBarPolicy">
+               <enum>Qt::ScrollBarAlwaysOn</enum>
               </property>
               <property name="autoScroll">
                <bool>true</bool>
