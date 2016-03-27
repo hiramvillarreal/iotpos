@@ -1487,7 +1487,7 @@ color:black;</string>
               <property name="spacing">
                <number>0</number>
               </property>
-              <item row="0" column="1">
+              <item row="0" column="0">
                <widget class="QLabel" name="lblSubtotalPre">
                 <property name="text">
                  <string>Subtotal:</string>
@@ -1497,7 +1497,7 @@ color:black;</string>
                 </property>
                </widget>
               </item>
-              <item row="3" column="1">
+              <item row="3" column="0">
                <widget class="QLabel" name="labelTotalpre">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
@@ -1542,7 +1542,7 @@ color:black;</string>
                 </property>
                </widget>
               </item>
-              <item row="3" column="2">
+              <item row="3" column="1">
                <widget class="QLabel" name="labelTotal">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
@@ -1584,7 +1584,7 @@ color:black;</string>
                 </property>
                </widget>
               </item>
-              <item row="2" column="1">
+              <item row="2" column="0">
                <widget class="QLabel" name="labelTotalDiscountpre">
                 <property name="text">
                  <string>Discount:</string>
@@ -1594,7 +1594,7 @@ color:black;</string>
                 </property>
                </widget>
               </item>
-              <item row="0" column="2">
+              <item row="0" column="1">
                <widget class="QLabel" name="lblSubtotal">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
@@ -1622,7 +1622,7 @@ color:black;</string>
                 </property>
                </widget>
               </item>
-              <item row="4" column="1">
+              <item row="4" column="0">
                <widget class="QLabel" name="labelChangepre">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
@@ -1670,7 +1670,7 @@ color:black;</string>
                 </property>
                </widget>
               </item>
-              <item row="2" column="2">
+              <item row="2" column="1">
                <widget class="QLabel" name="labelTotalDiscount">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
@@ -1695,7 +1695,7 @@ color:black;</string>
                 </property>
                </widget>
               </item>
-              <item row="1" column="2">
+              <item row="1" column="1">
                <widget class="QLabel" name="lblSaleTaxes">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
@@ -1720,7 +1720,7 @@ color:black;</string>
                 </property>
                </widget>
               </item>
-              <item row="1" column="1">
+              <item row="1" column="0">
                <widget class="QLabel" name="lblSaleTaxesPre">
                 <property name="text">
                  <string>Taxes:</string>
@@ -1730,7 +1730,7 @@ color:black;</string>
                 </property>
                </widget>
               </item>
-              <item row="4" column="2">
+              <item row="4" column="1">
                <widget class="QLabel" name="labelChange">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
@@ -1772,22 +1772,6 @@ color:black;</string>
                 </property>
                </widget>
               </item>
-              <item row="3" column="0">
-               <spacer name="horizontalSpacer_2">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Expanding</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
              </layout>
             </widget>
            </item>
@@ -1807,7 +1791,7 @@ color:black;</string>
              </property>
              <property name="maximumSize">
               <size>
-               <width>220</width>
+               <width>340</width>
                <height>154</height>
               </size>
              </property>
@@ -1910,9 +1894,6 @@ color:black;</string>
                   </property>
                  </widget>
                 </item>
-                <item>
-                 <widget class="QComboBox" name="comboCardType"/>
-                </item>
                </layout>
               </item>
               <item>
@@ -1931,7 +1912,7 @@ color:black;</string>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>220</width>
+                  <width>340</width>
                   <height>110</height>
                  </size>
                 </property>
@@ -1948,7 +1929,7 @@ color:black;</string>
                  <enum>QFrame::StyledPanel</enum>
                 </property>
                 <property name="currentIndex">
-                 <number>0</number>
+                 <number>1</number>
                 </property>
                 <widget class="QWidget" name="page_3">
                  <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -2096,35 +2077,42 @@ color:black;</string>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="editCardNumber">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>60</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>199</width>
-                      <height>16777215</height>
-                     </size>
-                    </property>
-                    <property name="inputMask">
-                     <string>0000-0000-0000-0000</string>
-                    </property>
-                    <property name="text">
-                     <string>---</string>
-                    </property>
-                    <property name="cursorPosition">
-                     <number>19</number>
-                    </property>
-                   </widget>
+                   <layout class="QHBoxLayout" name="horizontalLayout_7">
+                    <item>
+                     <widget class="QLineEdit" name="editCardNumber">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>60</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>199</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="inputMask">
+                       <string>0000-0000-0000-0000</string>
+                      </property>
+                      <property name="text">
+                       <string>---</string>
+                      </property>
+                      <property name="cursorPosition">
+                       <number>19</number>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QComboBox" name="comboCardType"/>
+                    </item>
+                   </layout>
                   </item>
                   <item>
                    <widget class="QLabel" name="labelAuthNumber">
