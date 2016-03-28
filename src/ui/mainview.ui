@@ -139,9 +139,6 @@
            <property name="bottomMargin">
             <number>2</number>
            </property>
-           <item>
-            <widget class="QLineEdit" name="editFilterByDesc"/>
-           </item>
           </layout>
          </widget>
          <widget class="QWidget" name="pageEnterCode">
@@ -664,21 +661,14 @@
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="rbFilterByDesc">
-         <property name="text">
-          <string>Description</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboFilterBySubCategory"/>
-       </item>
-       <item>
         <widget class="QCheckBox" name="rbFilterBySubCategory">
          <property name="text">
           <string>Subcategory</string>
          </property>
         </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboFilterBySubCategory"/>
        </item>
        <item>
         <widget class="QPushButton" name="btnCurrency">
@@ -852,20 +842,16 @@
                 <number>4</number>
                </property>
                <item row="0" column="6">
-                <widget class="QRadioButton" name="rbFilterByPopularity">
-                 <property name="text">
-                  <string>Best sellers</string>
-                 </property>
-                </widget>
+                <widget class="QLineEdit" name="editFilterByDesc"/>
                </item>
-               <item row="0" column="7">
+               <item row="0" column="8">
                 <widget class="QRadioButton" name="rbFilterByCategory">
                  <property name="text">
                   <string>Category</string>
                  </property>
                 </widget>
                </item>
-               <item row="0" column="8">
+               <item row="0" column="9">
                 <widget class="QComboBox" name="comboFilterByCategory"/>
                </item>
                <item row="0" column="3">
@@ -888,7 +874,7 @@
                  </property>
                 </widget>
                </item>
-               <item row="5" column="0" colspan="11">
+               <item row="5" column="0" colspan="12">
                 <widget class="QListView" name="listView">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -907,6 +893,20 @@
                  </property>
                  <property name="autoScrollMargin">
                   <number>16</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="5">
+                <widget class="QRadioButton" name="rbFilterByDesc">
+                 <property name="text">
+                  <string>Description</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="7">
+                <widget class="QRadioButton" name="rbFilterByPopularity">
+                 <property name="text">
+                  <string>Best sellers</string>
                  </property>
                 </widget>
                </item>
@@ -1708,8 +1708,6 @@
                 </item>
                </layout>
               </widget>
-              <zorder>groupPayment</zorder>
-              <zorder>groupPayment</zorder>
              </widget>
              <widget class="QWidget" name="page_2">
               <widget class="QGroupBox" name="groupClient">
@@ -2176,8 +2174,6 @@ color:black;</string>
                 </item>
                </layout>
               </widget>
-              <zorder>groupDetails</zorder>
-              <zorder>horizontalLayoutWidget_3</zorder>
              </widget>
             </widget>
            </item>
