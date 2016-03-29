@@ -943,9 +943,6 @@
               <property name="horizontalScrollBarPolicy">
                <enum>Qt::ScrollBarAlwaysOn</enum>
               </property>
-              <property name="sizeAdjustPolicy">
-               <enum>QAbstractScrollArea::AdjustIgnored</enum>
-              </property>
               <property name="autoScroll">
                <bool>true</bool>
               </property>
@@ -1031,7 +1028,7 @@
              <property name="maximumSize">
               <size>
                <width>16777215</width>
-               <height>136</height>
+               <height>155</height>
               </size>
              </property>
              <property name="styleSheet">
@@ -1900,7 +1897,7 @@ color:black;</string>
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>180</width>
+                    <width>190</width>
                     <height>160</height>
                    </size>
                   </property>
