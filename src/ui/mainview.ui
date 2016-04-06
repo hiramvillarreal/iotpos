@@ -668,6 +668,9 @@
         </widget>
        </item>
        <item>
+        <widget class="QLineEdit" name="editFilterByDesc"/>
+       </item>
+       <item>
         <widget class="QComboBox" name="comboFilterBySubCategory"/>
        </item>
        <item>
@@ -841,9 +844,6 @@
                <property name="spacing">
                 <number>4</number>
                </property>
-               <item row="0" column="6">
-                <widget class="QLineEdit" name="editFilterByDesc"/>
-               </item>
                <item row="0" column="8">
                 <widget class="QRadioButton" name="rbFilterByCategory">
                  <property name="text">
@@ -896,17 +896,17 @@
                  </property>
                 </widget>
                </item>
-               <item row="0" column="5">
-                <widget class="QRadioButton" name="rbFilterByDesc">
-                 <property name="text">
-                  <string>Description</string>
-                 </property>
-                </widget>
-               </item>
                <item row="0" column="7">
                 <widget class="QRadioButton" name="rbFilterByPopularity">
                  <property name="text">
                   <string>Best sellers</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QRadioButton" name="rbFilterByDesc">
+                 <property name="text">
+                  <string/>
                  </property>
                 </widget>
                </item>

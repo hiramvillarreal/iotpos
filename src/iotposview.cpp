@@ -398,7 +398,7 @@ iotposView::iotposView() //: QWidget(parent)
  //    }
 
   ui_mainview.editItemCode->setFocus();
- ui_mainview.frameGridView->show();
+  ui_mainview.frameGridView->show();
 setupGraphs();
 }
 // UI and Database -- GRAPHS.
@@ -795,7 +795,7 @@ void iotposView::showEnterCodeWidget()
     ui_mainview.editFilterByDesc->setFocus();
   }else
     ui_mainview.editItemCode->setFocus();
-  ui_mainview.frameGridView->show();
+    ui_mainview.frameGridView->show();
   setUpTable();
 }
 
@@ -1571,6 +1571,22 @@ bool iotposView::incrementTableItemQty(QString code, double q)
 
 void iotposView::insertItem(QString code)
 {
+  QRegExp rL("[A-Z]");
+  QRegExp rl("[a-z]");
+  //QRegExp rds("^\\d\\d\\d\\d.\\d\\d?$");
+  //QRegExp rds("^\\d\\d\\d?$");
+  QRegExp rds("^-\\d+$");
+  
+  //qDebug() << code;
+  // qDebug() << rl.indexIn(code) << " " <<  rL.indexIn(code) ;
+  //qDebug() << " HOLA ---------" << rds.indexIn(code) ;
+  //qDebug() << "INSERTITEM ---------  " << code;
+
+  if (ui_mainview.editItemCode->text()=="*" || ui_mainview.editItemCode->text()=="")
+    productsModel->setFilter("products.isARawProduct=false");
+
+  if((rl.indexIn(code) < 0) && (rL.indexIn(code) < 0) && rds.indexIn(code) < 0  ){
+    
   if ( code.isEmpty() || code == "0" || code.startsWith("0*") || code.endsWith("0.")) {
       ui_mainview.editItemCode->clear();
       return;
@@ -1861,6 +1877,27 @@ if ( doNotAddMoreItems ) { //only for reservations
   qDebug()<<"** INSERTING A PRODUCT [updating balance/transaction]";
   updateBalance(false);
   updateTransaction();
+  productsModel->setFilter("products.isARawProduct=false");
+  }
+  else if ( rl.indexIn(code) == 0 || rL.indexIn(code) == 0 )
+    {
+      QRegExp regexp = QRegExp(code);
+      if (!regexp.isValid())  ui_mainview.editItemCode->setText("");
+      if (ui_mainview.editItemCode->text()=="*" || ui_mainview.editItemCode->text()=="")
+        productsModel->setFilter("products.isARawProduct=false");
+      else
+        productsModel->setFilter(QString("products.isARawProduct=false and products.name REGEXP '%1'").arg(ui_mainview.editItemCode->text()));
+
+      productsModel->select();
+    }
+  else if (rds.indexIn(code) == 0)
+    {
+      QString codeWOSing = code.remove(0,1); 
+      productsModel->setFilter(QString("products.isARawProduct=false and products.price=%1").arg(codeWOSing));
+    }
+ 
+
+
 }//insertItem
 
 double iotposView::getTotalQtyOnList(const ProductInfo &info)
@@ -4766,7 +4803,7 @@ void iotposView::setFilter()
   //   then NO pictures are shown; even if is refiltered again.
   QRegExp regexp = QRegExp(ui_mainview.editFilterByDesc->text());
   
-  if (ui_mainview.rbFilterByDesc->isChecked()) { //by description
+  if (ui_mainview.rbFilterByDesc->isChecked()) {       ui_mainview.editItemCode->setFocus();//by description
       if (!regexp.isValid())  ui_mainview.editFilterByDesc->setText("");
       if (ui_mainview.editFilterByDesc->text()=="*" || ui_mainview.editFilterByDesc->text()=="")
         productsModel->setFilter("products.isARawProduct=false");
