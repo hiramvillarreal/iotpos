@@ -753,7 +753,7 @@
            <item row="1" column="1">
             <widget class="QGroupBox" name="groupTotals">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -798,6 +798,34 @@
               <property name="spacing">
                <number>0</number>
               </property>
+              <item row="0" column="3">
+               <widget class="QLabel" name="lblSubtotal">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>180</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="textFormat">
+                 <enum>Qt::AutoText</enum>
+                </property>
+                <property name="scaledContents">
+                 <bool>false</bool>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
               <item row="2" column="2">
                <widget class="QLabel" name="labelTotalDiscountpre">
                 <property name="text">
@@ -899,34 +927,6 @@
                 </property>
                 <property name="scaledContents">
                  <bool>true</bool>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="3">
-               <widget class="QLabel" name="lblSubtotal">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>180</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="textFormat">
-                 <enum>Qt::AutoText</enum>
-                </property>
-                <property name="scaledContents">
-                 <bool>false</bool>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1117,22 +1117,34 @@
                <property name="spacing">
                 <number>4</number>
                </property>
-               <item row="0" column="8">
+               <item row="0" column="7">
                 <widget class="QRadioButton" name="rbFilterByCategory">
                  <property name="text">
                   <string>Category</string>
                  </property>
                 </widget>
                </item>
-               <item row="0" column="9">
+               <item row="0" column="8">
                 <widget class="QComboBox" name="comboFilterByCategory"/>
                </item>
                <item row="0" column="3">
                 <widget class="MibitLineEdit" name="editItemCode">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
                  <property name="minimumSize">
                   <size>
                    <width>260</width>
                    <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>377</width>
+                   <height>380</height>
                   </size>
                  </property>
                  <property name="frame">
@@ -1153,7 +1165,7 @@
                  </property>
                 </widget>
                </item>
-               <item row="5" column="0" colspan="12">
+               <item row="5" column="0" colspan="11">
                 <widget class="QListView" name="listView">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -1175,7 +1187,7 @@
                  </property>
                 </widget>
                </item>
-               <item row="0" column="7">
+               <item row="0" column="6">
                 <widget class="QRadioButton" name="rbFilterByPopularity">
                  <property name="text">
                   <string>Best sellers</string>
@@ -1196,7 +1208,7 @@
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
-                   <width>1</width>
+                   <width>40</width>
                    <height>20</height>
                   </size>
                  </property>
@@ -1219,6 +1231,13 @@
                 <width>0</width>
                 <height>0</height>
                </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>14</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
               </property>
               <property name="focusPolicy">
                <enum>Qt::NoFocus</enum>
@@ -1272,6 +1291,13 @@
                <property name="text">
                 <string>Code</string>
                </property>
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
               </column>
               <column>
                <property name="text">
@@ -1309,7 +1335,7 @@
            <item row="1" column="0">
             <widget class="QStackedWidget" name="stackedWidget_2">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -1317,6 +1343,12 @@
              <property name="minimumSize">
               <size>
                <width>332</width>
+               <height>154</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
                <height>154</height>
               </size>
              </property>
@@ -1859,7 +1891,7 @@ color:black;</string>
                     <number>2</number>
                    </property>
                    <property name="bottomMargin">
-                    <number>3</number>
+                    <number>8</number>
                    </property>
                    <item>
                     <widget class="QLabel" name="labelDetailDesc">
@@ -2054,19 +2086,6 @@ color:black;</string>
                       <number>18</number>
                      </property>
                     </widget>
-                   </item>
-                   <item>
-                    <spacer name="verticalSpacer_5">
-                     <property name="orientation">
-                      <enum>Qt::Vertical</enum>
-                     </property>
-                     <property name="sizeHint" stdset="0">
-                      <size>
-                       <width>17</width>
-                       <height>26</height>
-                      </size>
-                     </property>
-                    </spacer>
                    </item>
                   </layout>
                  </widget>
