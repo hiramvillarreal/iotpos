@@ -1733,7 +1733,7 @@
                  <number>9</number>
                 </property>
                 <property name="topMargin">
-                 <number>9</number>
+                 <number>3</number>
                 </property>
                 <property name="rightMargin">
                  <number>9</number>
@@ -1824,7 +1824,7 @@
                   <property name="maximumSize">
                    <size>
                     <width>16777215</width>
-                    <height>65</height>
+                    <height>58</height>
                    </size>
                   </property>
                   <property name="font">
