@@ -1137,7 +1137,7 @@
                  </property>
                  <property name="minimumSize">
                   <size>
-                   <width>260</width>
+                   <width>240</width>
                    <height>0</height>
                   </size>
                  </property>
@@ -1359,7 +1359,7 @@
               <enum>QFrame::Raised</enum>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="page">
               <widget class="QGroupBox" name="groupPayment">
@@ -1399,7 +1399,7 @@
                 <string>Payment</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_10">
                 <property name="spacing">
@@ -1427,10 +1427,6 @@
                     <property name="text">
                      <string>Ca&amp;sh</string>
                     </property>
-                    <property name="icon">
-                     <iconset>
-                      <normaloff>../../icons/hi16-actions-iotpos-money.png</normaloff>../../icons/hi16-actions-iotpos-money.png</iconset>
-                    </property>
                     <property name="checked">
                      <bool>true</bool>
                     </property>
@@ -1438,6 +1434,12 @@
                   </item>
                   <item>
                    <widget class="QRadioButton" name="checkOwnCredit">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="maximumSize">
                      <size>
                       <width>160</width>
@@ -1446,10 +1448,6 @@
                     </property>
                     <property name="text">
                      <string>&amp;Internal Credit</string>
-                    </property>
-                    <property name="icon">
-                     <iconset>
-                      <normaloff>images/owncredit.png</normaloff>images/owncredit.png</iconset>
                     </property>
                    </widget>
                   </item>
@@ -1475,10 +1473,6 @@
                     </property>
                     <property name="text">
                      <string>Ca&amp;rd</string>
-                    </property>
-                    <property name="icon">
-                     <iconset>
-                      <normaloff>images/card.png</normaloff>images/card.png</iconset>
                     </property>
                    </widget>
                   </item>
@@ -1598,6 +1592,12 @@
                       </item>
                       <item>
                        <widget class="QDateTimeEdit" name="editTransactionDate">
+                        <property name="maximumSize">
+                         <size>
+                          <width>138</width>
+                          <height>16777215</height>
+                         </size>
+                        </property>
                         <property name="calendarPopup">
                          <bool>true</bool>
                         </property>
@@ -1812,7 +1812,8 @@
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>10</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
                    </font>
                   </property>
                   <property name="styleSheet">
