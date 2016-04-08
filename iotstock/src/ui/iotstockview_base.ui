@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>884</width>
-    <height>492</height>
+    <width>711</width>
+    <height>328</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -18,8 +18,8 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>16777215</width>
-    <height>16777215</height>
+    <width>711</width>
+    <height>328</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -61,8 +61,8 @@
          </property>
          <property name="maximumSize">
           <size>
-           <width>600</width>
-           <height>350</height>
+           <width>100</width>
+           <height>100</height>
           </size>
          </property>
          <property name="backgroundColor">
@@ -100,8 +100,8 @@
          </property>
          <property name="maximumSize">
           <size>
-           <width>600</width>
-           <height>350</height>
+           <width>100</width>
+           <height>100</height>
           </size>
          </property>
          <property name="backgroundColor">
@@ -129,8 +129,8 @@
          </property>
          <property name="maximumSize">
           <size>
-           <width>600</width>
-           <height>350</height>
+           <width>100</width>
+           <height>100</height>
           </size>
          </property>
          <property name="backgroundColor">
@@ -158,8 +158,8 @@
          </property>
          <property name="maximumSize">
           <size>
-           <width>600</width>
-           <height>350</height>
+           <width>100</width>
+           <height>100</height>
           </size>
          </property>
          <property name="palette">
@@ -1273,6 +1273,12 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QLabel" name="label_6">
+         <property name="maximumSize">
+          <size>
+           <width>12</width>
+           <height>12</height>
+          </size>
+         </property>
          <property name="text">
           <string>TextLabel</string>
          </property>
@@ -1289,6 +1295,12 @@ p, li { white-space: pre-wrap; }
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>200</width>
+           <height>200</height>
+          </size>
          </property>
          <property name="currentIndex">
           <number>0</number>
@@ -1727,8 +1739,8 @@ p, li { white-space: pre-wrap; }
                 <rect>
                  <x>160</x>
                  <y>10</y>
-                 <width>602</width>
-                 <height>347</height>
+                 <width>500</width>
+                 <height>300</height>
                 </rect>
                </property>
                <property name="sizePolicy">
@@ -1745,8 +1757,8 @@ p, li { white-space: pre-wrap; }
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>760</width>
-                 <height>16777215</height>
+                 <width>500</width>
+                 <height>300</height>
                 </size>
                </property>
                <property name="title">
@@ -1759,6 +1771,33 @@ p, li { white-space: pre-wrap; }
                 <bool>false</bool>
                </property>
                <layout class="QGridLayout" name="gridLayout_2">
+                <item row="6" column="0">
+                 <widget class="QRadioButton" name="rbTransFilterByAmountLess">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Amount Paid &lt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QRadioButton" name="rbTransFilterByUser">
+                  <property name="text">
+                   <string>by Vendor Name</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="0">
+                 <widget class="QRadioButton" name="rbTransFilterByClient">
+                  <property name="text">
+                   <string>by Client Name:</string>
+                  </property>
+                 </widget>
+                </item>
                 <item row="0" column="0">
                  <widget class="QRadioButton" name="rbTransactionsFilterOnlySales">
                   <property name="text">
@@ -1815,13 +1854,6 @@ p, li { white-space: pre-wrap; }
                   </property>
                  </widget>
                 </item>
-                <item row="4" column="0">
-                 <widget class="QRadioButton" name="rbTransFilterByDate">
-                  <property name="text">
-                   <string>by Date:</string>
-                  </property>
-                 </widget>
-                </item>
                 <item row="4" column="1">
                  <widget class="KDateWidget" name="transactionsDateEditor">
                   <property name="sizePolicy">
@@ -1836,13 +1868,6 @@ p, li { white-space: pre-wrap; }
                     <month>1</month>
                     <day>1</day>
                    </date>
-                  </property>
-                 </widget>
-                </item>
-                <item row="5" column="0">
-                 <widget class="QRadioButton" name="rbTransFilterByUser">
-                  <property name="text">
-                   <string>by Vendor Name</string>
                   </property>
                  </widget>
                 </item>
@@ -1862,13 +1887,6 @@ p, li { white-space: pre-wrap; }
                   </property>
                  </widget>
                 </item>
-                <item row="6" column="0">
-                 <widget class="QRadioButton" name="rbTransFilterByClient">
-                  <property name="text">
-                   <string>by Client Name:</string>
-                  </property>
-                 </widget>
-                </item>
                 <item row="6" column="1">
                  <widget class="QLineEdit" name="editTransClientsFilter">
                   <property name="maximumSize">
@@ -1879,88 +1897,112 @@ p, li { white-space: pre-wrap; }
                   </property>
                  </widget>
                 </item>
-                <item row="7" column="0">
-                 <widget class="QRadioButton" name="rbTransFilterByAmountLess">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
+                <item row="3" column="0">
+                 <widget class="QRadioButton" name="rbTransFilterByDate">
                   <property name="text">
-                   <string>Amount Paid &lt;</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="7" column="1">
-                 <widget class="QDoubleSpinBox" name="editTransAmountLess">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>100</width>
-                    <height>80</height>
-                   </size>
-                  </property>
-                  <property name="prefix">
-                   <string>$</string>
-                  </property>
-                  <property name="maximum">
-                   <double>999999999.990000009536743</double>
-                  </property>
-                 </widget>
-                </item>
-                <item row="8" column="0">
-                 <widget class="QRadioButton" name="rbTransFilterByAmountGreater">
-                  <property name="text">
-                   <string>Amount Paid &gt;</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="8" column="1">
-                 <widget class="QDoubleSpinBox" name="editTransAmountGreater">
-                  <property name="maximumSize">
-                   <size>
-                    <width>100</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="prefix">
-                   <string>$</string>
-                  </property>
-                  <property name="maximum">
-                   <double>999999999.990000009536743</double>
-                  </property>
-                 </widget>
-                </item>
-                <item row="9" column="0">
-                 <widget class="QRadioButton" name="rbTransFilterTerminalNum">
-                  <property name="text">
-                   <string>by Terminal Number</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="9" column="1">
-                 <widget class="QSpinBox" name="editTransTermNum">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="minimum">
-                   <number>1</number>
-                  </property>
-                  <property name="maximum">
-                   <number>9999</number>
+                   <string>by Date:</string>
                   </property>
                  </widget>
                 </item>
                </layout>
+              </widget>
+              <widget class="QDoubleSpinBox" name="editTransAmountGreater">
+               <property name="geometry">
+                <rect>
+                 <x>20</x>
+                 <y>110</y>
+                 <width>100</width>
+                 <height>27</height>
+                </rect>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="prefix">
+                <string>$</string>
+               </property>
+               <property name="maximum">
+                <double>999999999.990000009536743</double>
+               </property>
+              </widget>
+              <widget class="QDoubleSpinBox" name="editTransAmountLess">
+               <property name="geometry">
+                <rect>
+                 <x>10</x>
+                 <y>140</y>
+                 <width>100</width>
+                 <height>27</height>
+                </rect>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>80</height>
+                </size>
+               </property>
+               <property name="prefix">
+                <string>$</string>
+               </property>
+               <property name="maximum">
+                <double>999999999.990000009536743</double>
+               </property>
+              </widget>
+              <widget class="QRadioButton" name="rbTransFilterTerminalNum">
+               <property name="geometry">
+                <rect>
+                 <x>10</x>
+                 <y>180</y>
+                 <width>205</width>
+                 <height>22</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>by Terminal Number</string>
+               </property>
+              </widget>
+              <widget class="QRadioButton" name="rbTransFilterByAmountGreater">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>210</y>
+                 <width>205</width>
+                 <height>22</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Amount Paid &gt;</string>
+               </property>
+              </widget>
+              <widget class="QSpinBox" name="editTransTermNum">
+               <property name="geometry">
+                <rect>
+                 <x>60</x>
+                 <y>240</y>
+                 <width>63</width>
+                 <height>27</height>
+                </rect>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>9999</number>
+               </property>
               </widget>
              </widget>
             </widget>
