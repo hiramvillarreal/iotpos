@@ -1808,19 +1808,19 @@
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_11">
                 <property name="spacing">
-                 <number>1</number>
+                 <number>0</number>
                 </property>
                 <property name="leftMargin">
                  <number>9</number>
                 </property>
                 <property name="topMargin">
-                 <number>1</number>
+                 <number>0</number>
                 </property>
                 <property name="rightMargin">
                  <number>9</number>
                 </property>
                 <property name="bottomMargin">
-                 <number>1</number>
+                 <number>0</number>
                 </property>
                 <item>
                  <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -1878,7 +1878,7 @@
                     </property>
                     <property name="font">
                      <font>
-                      <pointsize>10</pointsize>
+                      <pointsize>12</pointsize>
                      </font>
                     </property>
                     <property name="text">
@@ -1899,13 +1899,13 @@
                   <property name="minimumSize">
                    <size>
                     <width>232</width>
-                    <height>63</height>
+                    <height>80</height>
                    </size>
                   </property>
                   <property name="maximumSize">
                    <size>
                     <width>16777215</width>
-                    <height>63</height>
+                    <height>80</height>
                    </size>
                   </property>
                   <property name="font">
