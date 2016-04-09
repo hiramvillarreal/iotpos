@@ -7,11 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>779</width>
-    <height>370</height>
+    <height>378</height>
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+   <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
@@ -24,7 +24,7 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>16777215</width>
+    <width>800</width>
     <height>16777215</height>
    </size>
   </property>
@@ -56,7 +56,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="sizePolicy">
-      <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+      <sizepolicy hsizetype="Maximum" vsizetype="MinimumExpanding">
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
@@ -64,13 +64,13 @@
      <property name="minimumSize">
       <size>
        <width>768</width>
-       <height>360</height>
+       <height>368</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
-       <width>755</width>
-       <height>360</height>
+       <width>800</width>
+       <height>16777215</height>
       </size>
      </property>
      <property name="currentIndex">
@@ -87,16 +87,16 @@
           <number>4</number>
          </property>
          <property name="leftMargin">
-          <number>1</number>
+          <number>0</number>
          </property>
          <property name="topMargin">
-          <number>1</number>
+          <number>0</number>
          </property>
          <property name="rightMargin">
-          <number>1</number>
+          <number>0</number>
          </property>
          <property name="bottomMargin">
-          <number>1</number>
+          <number>0</number>
          </property>
          <item>
           <widget class="QLabel" name="label_5">
@@ -1862,10 +1862,22 @@ p, li { white-space: pre-wrap; }
        <item row="8" column="0" colspan="2">
         <widget class="QGroupBox" name="groupBox">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
          </property>
          <property name="title">
           <string>Items in this purchase</string>
@@ -1877,7 +1889,7 @@ p, li { white-space: pre-wrap; }
           <item>
            <widget class="QTableWidget" name="tableView">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
@@ -1885,7 +1897,7 @@ p, li { white-space: pre-wrap; }
             <property name="maximumSize">
              <size>
               <width>16777215</width>
-              <height>110</height>
+              <height>16777215</height>
              </size>
             </property>
             <property name="editTriggers">
@@ -1927,6 +1939,18 @@ p, li { white-space: pre-wrap; }
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="minimumSize">
+             <size>
+              <width>169</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>190</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <property name="text">
              <string>Remove Item from list</string>
             </property>
@@ -1949,7 +1973,6 @@ p, li { white-space: pre-wrap; }
   <tabstop>categoriesCombo</tabstop>
   <tabstop>editTax</tabstop>
   <tabstop>editExtraTaxes</tabstop>
-  <tabstop>chIsAGroup</tabstop>
   <tabstop>btnPhoto</tabstop>
   <tabstop>editItemsPerBox</tabstop>
   <tabstop>editPricePerBox</tabstop>
