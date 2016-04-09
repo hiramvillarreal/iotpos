@@ -51,49 +51,10 @@
      </property>
      <widget class="QWidget" name="pageWelcome">
       <layout class="QGridLayout" name="gridLayout">
-       <item row="1" column="0">
-        <widget class="KPlotWidget" name="plotMostSold">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>500</width>
-           <height>350</height>
-          </size>
-         </property>
-         <property name="backgroundColor">
-          <color>
-           <red>0</red>
-           <green>51</green>
-           <blue>153</blue>
-          </color>
-         </property>
-         <property name="gridColor">
-          <color>
-           <red>255</red>
-           <green>0</green>
-           <blue>0</blue>
-          </color>
-         </property>
-         <property name="grid" stdset="0">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
        <item row="0" column="0">
         <widget class="KPlotWidget" name="plotSales">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -122,7 +83,7 @@
        <item row="0" column="1">
         <widget class="KPlotWidget" name="plotProfit">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -151,7 +112,7 @@
        <item row="1" column="1">
         <widget class="QFrame" name="frame">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -732,6 +693,45 @@
            </layout>
           </item>
          </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="KPlotWidget" name="plotMostSold">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>500</width>
+           <height>350</height>
+          </size>
+         </property>
+         <property name="backgroundColor">
+          <color>
+           <red>0</red>
+           <green>51</green>
+           <blue>153</blue>
+          </color>
+         </property>
+         <property name="gridColor">
+          <color>
+           <red>255</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </property>
+         <property name="grid" stdset="0">
+          <bool>false</bool>
+         </property>
         </widget>
        </item>
       </layout>
