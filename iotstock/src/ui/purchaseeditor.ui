@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>768</width>
-    <height>410</height>
+    <width>779</width>
+    <height>370</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -63,14 +63,14 @@
      </property>
      <property name="minimumSize">
       <size>
-       <width>755</width>
-       <height>400</height>
+       <width>768</width>
+       <height>360</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
        <width>755</width>
-       <height>16777215</height>
+       <height>360</height>
       </size>
      </property>
      <property name="currentIndex">
@@ -78,7 +78,7 @@
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">
-       <string>Product InformaAtion</string>
+       <string>Product Information</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="0">
@@ -108,13 +108,13 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>80</width>
+             <width>60</width>
              <height>0</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
-             <width>95</width>
+             <width>65</width>
              <height>16777215</height>
             </size>
            </property>
@@ -148,7 +148,7 @@
            </property>
            <property name="maximumSize">
             <size>
-             <width>180</width>
+             <width>160</width>
              <height>16777215</height>
             </size>
            </property>
@@ -1100,7 +1100,7 @@ p, li { white-space: pre-wrap; }
            </property>
            <property name="maximumSize">
             <size>
-             <width>60</width>
+             <width>50</width>
              <height>16777215</height>
             </size>
            </property>
