@@ -1574,7 +1574,7 @@ p, li { white-space: pre-wrap; }
                  <x>0</x>
                  <y>20</y>
                  <width>161</width>
-                 <height>111</height>
+                 <height>150</height>
                 </rect>
                </property>
                <property name="sizePolicy">
@@ -2154,7 +2154,7 @@ color:black;</string>
         <rect>
          <x>10</x>
          <y>20</y>
-         <width>401</width>
+         <width>541</width>
          <height>126</height>
         </rect>
        </property>
@@ -2194,6 +2194,84 @@ color:black;</string>
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QStackedWidget" name="stackedWidget_2">
+            <property name="maximumSize">
+             <size>
+              <width>10</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <widget class="QWidget" name="page_3">
+             <widget class="QComboBox" name="comboProductsFilterBySubCategory">
+              <property name="geometry">
+               <rect>
+                <x>60</x>
+                <y>20</y>
+                <width>168</width>
+                <height>20</height>
+               </rect>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="rbProductsFilterBySubCategory">
+              <property name="geometry">
+               <rect>
+                <x>-111</x>
+                <y>20</y>
+                <width>169</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>by Subcategory</string>
+              </property>
+             </widget>
+             <zorder>comboProductsFilterBySubCategory</zorder>
+             <zorder>rbProductsFilterBySubCategory</zorder>
+             <zorder>comboProductsFilterBySubCategory</zorder>
+             <zorder>rbProductsFilterBySubCategory</zorder>
+            </widget>
+            <widget class="QWidget" name="page_5">
+             <widget class="QCheckBox" name="chChainiedFilterForCategories">
+              <property name="geometry">
+               <rect>
+                <x>-60</x>
+                <y>0</y>
+                <width>244</width>
+                <height>151</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Chain Dep/Category Filters</string>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="rbProductsFilterByDepartment">
+              <property name="geometry">
+               <rect>
+                <x>-475</x>
+                <y>0</y>
+                <width>206</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>by department</string>
+              </property>
+             </widget>
+             <widget class="QComboBox" name="comboProductsFilterByDepartment">
+              <property name="geometry">
+               <rect>
+                <x>-267</x>
+                <y>-2</y>
+                <width>205</width>
+                <height>27</height>
+               </rect>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="page_4"/>
            </widget>
           </item>
          </layout>
@@ -2240,7 +2318,7 @@ color:black;</string>
         <rect>
          <x>20</x>
          <y>140</y>
-         <width>521</width>
+         <width>671</width>
          <height>171</height>
         </rect>
        </property>
@@ -2290,6 +2368,20 @@ color:black;</string>
         <property name="horizontalSpacing">
          <number>2</number>
         </property>
+        <item row="3" column="2">
+         <widget class="QRadioButton" name="rbProductsFilterByGroup">
+          <property name="text">
+           <string>show only group/pack products</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QRadioButton" name="rbProductsFilterByAvailable">
+          <property name="text">
+           <string>show available items</string>
+          </property>
+         </widget>
+        </item>
         <item row="0" column="0">
          <widget class="QRadioButton" name="rbProductsFilterByDesc">
           <property name="text">
@@ -2307,14 +2399,35 @@ color:black;</string>
           </property>
          </widget>
         </item>
-        <item row="2" column="0">
+        <item row="0" column="2">
+         <widget class="QRadioButton" name="rbProductsFilterByAlmostSoldOut">
+          <property name="text">
+           <string>show almost sold out items</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
          <widget class="QRadioButton" name="rbProductsFilterByCategory">
           <property name="text">
            <string>by category</string>
           </property>
          </widget>
         </item>
-        <item row="2" column="1">
+        <item row="3" column="0" colspan="2">
+         <widget class="QRadioButton" name="rbProductsFilterByRaw">
+          <property name="text">
+           <string>show raw products only</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QRadioButton" name="rbProductsFilterByLessSold">
+          <property name="text">
+           <string>show less sold</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
          <widget class="QComboBox" name="comboProductsFilterByCategory">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -2324,79 +2437,17 @@ color:black;</string>
           </property>
          </widget>
         </item>
-        <item row="4" column="0">
-         <widget class="QRadioButton" name="rbProductsFilterByAvailable">
-          <property name="text">
-           <string>show available items</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="QRadioButton" name="rbProductsFilterByAlmostSoldOut">
-          <property name="text">
-           <string>show almost sold out items</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="2">
+        <item row="1" column="2">
          <widget class="QRadioButton" name="rbProductsFilterByNotAvailable">
           <property name="text">
            <string>show sold out items</string>
           </property>
          </widget>
         </item>
-        <item row="4" column="1">
+        <item row="2" column="1">
          <widget class="QRadioButton" name="rbProductsFilterByMostSold">
           <property name="text">
            <string>show most sold</string>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="0">
-         <widget class="QRadioButton" name="rbProductsFilterByRaw">
-          <property name="text">
-           <string>show raw products only</string>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="1">
-         <widget class="QRadioButton" name="rbProductsFilterByGroup">
-          <property name="text">
-           <string>show only group/pack products</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="1">
-         <widget class="QComboBox" name="comboProductsFilterBySubCategory"/>
-        </item>
-        <item row="3" column="2">
-         <widget class="QRadioButton" name="rbProductsFilterByLessSold">
-          <property name="text">
-           <string>show less sold</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QRadioButton" name="rbProductsFilterByDepartment">
-          <property name="text">
-           <string>by department</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QComboBox" name="comboProductsFilterByDepartment"/>
-        </item>
-        <item row="1" column="2">
-         <widget class="QCheckBox" name="chChainiedFilterForCategories">
-          <property name="text">
-           <string>Chain Dep/Category Filters</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="0">
-         <widget class="QRadioButton" name="rbProductsFilterBySubCategory">
-          <property name="text">
-           <string>by Subcategory</string>
           </property>
          </widget>
         </item>
@@ -2680,15 +2731,15 @@ color:black;</string>
  </widget>
  <customwidgets>
   <customwidget>
+   <class>KDateWidget</class>
+   <extends>QWidget</extends>
+   <header>kdatewidget.h</header>
+  </customwidget>
+  <customwidget>
    <class>KPlotWidget</class>
    <extends>QFrame</extends>
    <header>kplotwidget.h</header>
    <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>KDateWidget</class>
-   <extends>QWidget</extends>
-   <header>kdatewidget.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
