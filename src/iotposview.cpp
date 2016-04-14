@@ -398,6 +398,7 @@ iotposView::iotposView() //: QWidget(parent)
  //    }
 
   ui_mainview.editItemCode->setFocus();
+  ui_mainview.frameGridView->show();
 setupGraphs();
 }
 // UI and Database -- GRAPHS.
@@ -559,6 +560,7 @@ void iotposView::qtyChanged(QTableWidgetItem *item)
                 updateItem(info);
                 refreshTotalLabel();
                 ui_mainview.editItemCode->setFocus();
+                ui_mainview.frameGridView->show();
                 qDebug()<<"\n\nCurrent Item == item: "<<code<<" NEW QTY:"<<newQty<<"\n\n";
             }
         }
@@ -793,6 +795,7 @@ void iotposView::showEnterCodeWidget()
     ui_mainview.editFilterByDesc->setFocus();
   }else
     ui_mainview.editItemCode->setFocus();
+    ui_mainview.frameGridView->show();
   setUpTable();
 }
 
@@ -928,6 +931,8 @@ void iotposView::focusPayInput()
   ui_mainview.groupWidgets->setCurrentIndex(pageMain);
   ui_mainview.editAmount->setFocus();
   ui_mainview.editAmount->setSelection(0, ui_mainview.editAmount->text().length());
+  ui_mainview.stackedWidget_2->setCurrentIndex(0);
+  hideProductsGrid();
 }
 
 //This method sends the focus to the amount to be paid only when the code input is empty.
@@ -1566,6 +1571,22 @@ bool iotposView::incrementTableItemQty(QString code, double q)
 
 void iotposView::insertItem(QString code)
 {
+  QRegExp rL("[A-Z]");
+  QRegExp rl("[a-z]");
+  //QRegExp rds("^\\d\\d\\d\\d.\\d\\d?$");
+  //QRegExp rds("^\\d\\d\\d?$");
+  QRegExp rds("^-\\d+$");
+  
+  //qDebug() << code;
+  // qDebug() << rl.indexIn(code) << " " <<  rL.indexIn(code) ;
+  //qDebug() << " HOLA ---------" << rds.indexIn(code) ;
+  //qDebug() << "INSERTITEM ---------  " << code;
+
+  if (ui_mainview.editItemCode->text()=="*" || ui_mainview.editItemCode->text()=="")
+    productsModel->setFilter("products.isARawProduct=false");
+
+  if((rl.indexIn(code) < 0) && (rL.indexIn(code) < 0) && rds.indexIn(code) < 0  ){
+    
   if ( code.isEmpty() || code == "0" || code.startsWith("0*") || code.endsWith("0.")) {
       ui_mainview.editItemCode->clear();
       return;
@@ -1626,6 +1647,7 @@ if ( doNotAddMoreItems ) { //only for reservations
           notifierPanel->showNotification(i18n("Cannot change customer while Special Orders are in Purchase.",codeX),4000);
           ui_mainview.editItemCode->clear();
           ui_mainview.editItemCode->setFocus();
+          ui_mainview.frameGridView->show();
           return;
       }
       if (Settings::rb6Digits() && codeX.length() == 6) {
@@ -1661,6 +1683,7 @@ if ( doNotAddMoreItems ) { //only for reservations
             notifierPanel->showNotification(msg,4000);
             ui_mainview.editItemCode->clear();
             ui_mainview.editItemCode->setFocus();
+            ui_mainview.frameGridView->show();
             return;   
         } else {
             notifierPanel->setSize(350,150);
@@ -1668,6 +1691,7 @@ if ( doNotAddMoreItems ) { //only for reservations
             notifierPanel->showNotification(i18n("No Customer found with code %1.",codeX),4000);
             ui_mainview.editItemCode->clear();
             ui_mainview.editItemCode->setFocus();
+            ui_mainview.frameGridView->show();
             return;
         }
     }//if check...
@@ -1853,6 +1877,27 @@ if ( doNotAddMoreItems ) { //only for reservations
   qDebug()<<"** INSERTING A PRODUCT [updating balance/transaction]";
   updateBalance(false);
   updateTransaction();
+  productsModel->setFilter("products.isARawProduct=false");
+  }
+  else if ( rl.indexIn(code) == 0 || rL.indexIn(code) == 0 )
+    {
+      QRegExp regexp = QRegExp(code);
+      if (!regexp.isValid())  ui_mainview.editItemCode->setText("");
+      if (ui_mainview.editItemCode->text()=="*" || ui_mainview.editItemCode->text()=="")
+        productsModel->setFilter("products.isARawProduct=false");
+      else
+        productsModel->setFilter(QString("products.isARawProduct=false and products.name REGEXP '%1'").arg(ui_mainview.editItemCode->text()));
+
+      productsModel->select();
+    }
+  else if (rds.indexIn(code) == 0)
+    {
+      QString codeWOSing = code.remove(0,1); 
+      productsModel->setFilter(QString("products.isARawProduct=false and products.price=%1").arg(codeWOSing));
+    }
+ 
+
+
 }//insertItem
 
 double iotposView::getTotalQtyOnList(const ProductInfo &info)
@@ -1973,7 +2018,7 @@ int iotposView::doInsertItem(QString itemCode, QString itemDesc, double itemQty,
   // BFB: editFilterbyDesc keeps the focus,
   if (!ui_mainview.editFilterByDesc->hasFocus())
     ui_mainview.editItemCode->setFocus();
-
+  ui_mainview.frameGridView->show();
   ui_mainview.editItemCode->setText("");
   ui_mainview.editItemCode->setCursorPosition(0);
   ui_mainview.mainPanel->setCurrentIndex(pageMain);
@@ -2021,6 +2066,7 @@ void iotposView::deleteSelectedItem()
             //remove from listview
             ui_mainview.tableWidget->removeRow(row);
             ui_mainview.editItemCode->setFocus();
+            ui_mainview.frameGridView->show();
             if (ui_mainview.tableWidget->rowCount() == 0) ui_mainview.groupClient->setEnabled(true);
             refreshTotalLabel();
             qDebug()<<" Removing a SO when completing the Order";
@@ -2037,6 +2083,7 @@ void iotposView::deleteSelectedItem()
             log(loggedUserId, QDate::currentDate(), QTime::currentTime(), i18n("Removing an Special Item from shopping list. Authorized by %1",authBy));
             if (ui_mainview.tableWidget->rowCount() == 0) ui_mainview.groupClient->setEnabled(true);
             ui_mainview.editItemCode->setFocus();
+            ui_mainview.frameGridView->show();
             refreshTotalLabel();
             delete myDb;
             return;
@@ -2058,6 +2105,7 @@ void iotposView::deleteSelectedItem()
         }
         if (ui_mainview.tableWidget->rowCount() == 0) ui_mainview.groupClient->setEnabled(true);
         ui_mainview.editItemCode->setFocus();
+        ui_mainview.frameGridView->show();
         refreshTotalLabel();
         return; //to exit the method, we dont need to continue.
       }
@@ -2148,6 +2196,7 @@ void iotposView::itemDoubleClicked(QTableWidgetItem* item)
       specialOrders.insert(info.orderid,info);
     }
     ui_mainview.editItemCode->setFocus();
+    ui_mainview.frameGridView->show();
     refreshTotalLabel();
     return; //to exit the method, we dont need to continue.
   }
@@ -2192,6 +2241,7 @@ void iotposView::itemDoubleClicked(QTableWidgetItem* item)
     info.qtyOnList = newqty;
 
     ui_mainview.editItemCode->setFocus();
+    ui_mainview.frameGridView->show();
   } else {
     msg = i18n("<html><font color=red><b>Product not available in stock for the requested quantity.</b></font></html>");
     ui_mainview.editItemCode->clearFocus();
@@ -2241,7 +2291,8 @@ void iotposView::displayItemInfo(QTableWidgetItem* item)
         disc = info.disc;
         price = info.price;
     }
-
+    //Cambio
+    ui_mainview.stackedWidget_2->setCurrentIndex(2);
     double discP=0.0;
     if (info.validDiscount) discP = info.discpercentage;
     QString str;
@@ -2442,6 +2493,7 @@ void iotposView::finishCurrentTransaction()
       canfinish = false;
       notifierPanel->showNotification(msgC,3000);
       ui_mainview.editClient->setFocus();
+
   }
 
   if (!canfinish)
@@ -3105,6 +3157,7 @@ void iotposView::finishCurrentTransaction()
     transactionInProgress = false;
     updateModelView();
     ui_mainview.editItemCode->setFocus();
+    ui_mainview.frameGridView->show();
 
     //Check level of cash in drawer
     if (drawer->getAvailableInCash() < Settings::cashMinLevel() && Settings::displayWarningOnLowCash()) {
@@ -3123,6 +3176,9 @@ void iotposView::finishCurrentTransaction()
    completingOrder = false; //cleaning flag
    oDiscountMoney = 0; //reset discount money... the new discount type.
    if (loggedUserRole == roleAdmin) {updateGraphs();}
+   //showProductsGrid();
+   ui_mainview.frameGridView->show();
+   ui_mainview.stackedWidget_2->setCurrentIndex(1);
 }
 
 
@@ -3736,7 +3792,11 @@ void iotposView::cancelCurrentTransaction()
     } else continueIt=true; //if requiereDelAuth
   } else continueIt=true; //if no low security
 
-  if (continueIt) cancelTransaction(getCurrentTransaction());
+  if (continueIt) {cancelTransaction(getCurrentTransaction());}
+  //ui_mainview.labelDetailPoints->show();
+  ui_mainview.frameGridView->show();
+  ui_mainview.editItemCode->setFocus();
+  ui_mainview.stackedWidget_2->setCurrentIndex(1);
 }
 
 
@@ -3768,6 +3828,9 @@ void iotposView::preCancelCurrentTransaction()
   if (!ui_mainview.groupSaleDate->isHidden()) {
     ui_mainview.groupSaleDate->hide();
   }
+  ui_mainview.frameGridView->show();
+  ui_mainview.editItemCode->setFocus();
+  ui_mainview.stackedWidget_2->setCurrentIndex(1);
 }
 
 void iotposView::deleteCurrentTransaction()
@@ -3904,6 +3967,8 @@ void iotposView::cancelTransaction(qulonglong transactionNumber)
     notify->sendEvent();
   }
   delete myDb;
+  ui_mainview.frameGridView->hide();
+  ui_mainview.editItemCode->setFocus();
 }
 
 
@@ -3957,6 +4022,7 @@ void iotposView::startOperation(const QString &adminUser)
   }
   
   ui_mainview.editItemCode->setFocus();
+  ui_mainview.frameGridView->show();
 }
 
 //this method is for iotpos.cpp's action connect for button, since button's trigger(bool) will cause to ask = trigger's var.
@@ -4737,7 +4803,7 @@ void iotposView::setFilter()
   //   then NO pictures are shown; even if is refiltered again.
   QRegExp regexp = QRegExp(ui_mainview.editFilterByDesc->text());
   
-  if (ui_mainview.rbFilterByDesc->isChecked()) { //by description
+  if (ui_mainview.rbFilterByDesc->isChecked()) {       ui_mainview.editItemCode->setFocus();//by description
       if (!regexp.isValid())  ui_mainview.editFilterByDesc->setText("");
       if (ui_mainview.editFilterByDesc->text()=="*" || ui_mainview.editFilterByDesc->text()=="")
         productsModel->setFilter("products.isARawProduct=false");
@@ -4868,6 +4934,7 @@ void iotposView::clientChanged()
     updateClientInfo();
     refreshTotalLabel();
     ui_mainview.editItemCode->setFocus();
+    ui_mainview.frameGridView->show();
   }
 }
 
@@ -5526,6 +5593,7 @@ void iotposView::unlockScreen()
       emit signalEnableUI();
       emit signalEnableLogin();
       ui_mainview.editItemCode->setFocus();
+      ui_mainview.frameGridView->show();
     } else {
       lockDialog->cleanPassword();
       lockDialog->shake();
@@ -5847,6 +5915,7 @@ void iotposView::applyOccasionalDiscount()
                     notifierPanel->setOnBottom(false);
                     notifierPanel->showNotification("<b>Cannot change price</b> to product marked as not discountable.",5000);
                     ui_mainview.editItemCode->setFocus();
+                    ui_mainview.frameGridView->show();
                     return;
                 }
                 priceDiff = info.price - ui_mainview.editDiscount->text().toDouble();
@@ -5881,6 +5950,7 @@ void iotposView::applyOccasionalDiscount()
             notifierPanel->showNotification("First <b>select a product</b> to <i>change the price</i> from the sale list.",5000);
         }
         ui_mainview.editItemCode->setFocus();
+        ui_mainview.frameGridView->show();
         refreshTotalLabel();
         ui_mainview.editDiscount->clear();
         discountPanel->hidePanel();
@@ -6438,6 +6508,7 @@ void iotposView::createClient()
     }
     delete myDb;
     ui_mainview.editItemCode->setFocus();
+    ui_mainview.frameGridView->show();
 }
 
 void iotposView::showCreditPayment()

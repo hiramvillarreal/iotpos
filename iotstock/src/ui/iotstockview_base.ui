@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>884</width>
-    <height>525</height>
+    <width>715</width>
+    <height>332</height>
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
@@ -19,7 +19,7 @@
   <property name="maximumSize">
    <size>
     <width>16777215</width>
-    <height>655</height>
+    <height>16777215</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -42,73 +42,6 @@
     <number>2</number>
    </property>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <property name="spacing">
-      <number>1</number>
-     </property>
-     <property name="leftMargin">
-      <number>1</number>
-     </property>
-     <property name="topMargin">
-      <number>1</number>
-     </property>
-     <property name="rightMargin">
-      <number>1</number>
-     </property>
-     <property name="bottomMargin">
-      <number>1</number>
-     </property>
-     <item>
-      <widget class="QLabel" name="headerImg">
-       <property name="minimumSize">
-        <size>
-         <width>48</width>
-         <height>48</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>48</width>
-         <height>48</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>TextLabel</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="headerLabel">
-       <property name="minimumSize">
-        <size>
-         <width>300</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>welcome</string>
-       </property>
-       <property name="indent">
-        <number>10</number>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="logoLabel">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>TextLabel</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item>
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="sizePolicy">
       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
@@ -116,135 +49,21 @@
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
+     <property name="minimumSize">
+      <size>
+       <width>711</width>
+       <height>328</height>
+      </size>
+     </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="pageWelcome">
       <layout class="QGridLayout" name="gridLayout">
-       <item row="2" column="0">
-        <widget class="QLabel" name="lblGraphSoldItems">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="text">
-          <string>5 Most Sold Items</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLabel" name="lblGraphAlmostSoldOutItems">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="text">
-          <string>Almost Sold Out Items (Top 5 sold items)</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
        <item row="0" column="0">
-        <widget class="QLabel" name="lblGraphSales">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="text">
-          <string>Sales</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLabel" name="lblGraphProfit">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="text">
-          <string>Profit</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="KPlotWidget" name="plotMostSold">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>500</width>
-           <height>300</height>
-          </size>
-         </property>
-         <property name="backgroundColor" stdset="0">
-          <color>
-           <red>0</red>
-           <green>51</green>
-           <blue>153</blue>
-          </color>
-         </property>
-         <property name="gridColor" stdset="0">
-          <color>
-           <red>255</red>
-           <green>0</green>
-           <blue>0</blue>
-          </color>
-         </property>
-         <property name="grid" stdset="0">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
         <widget class="KPlotWidget" name="plotSales">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>500</width>
-           <height>300</height>
-          </size>
-         </property>
-         <property name="backgroundColor" stdset="0">
-          <color>
-           <red>0</red>
-           <green>51</green>
-           <blue>153</blue>
-          </color>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="KPlotWidget" name="plotProfit">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -258,7 +77,7 @@
          <property name="maximumSize">
           <size>
            <width>500</width>
-           <height>300</height>
+           <height>350</height>
           </size>
          </property>
          <property name="backgroundColor" stdset="0">
@@ -270,24 +89,53 @@
          </property>
         </widget>
        </item>
-       <item row="3" column="1">
-        <widget class="QFrame" name="frame">
+       <item row="0" column="1">
+        <widget class="KPlotWidget" name="plotProfit">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
          <property name="minimumSize">
           <size>
-           <width>250</width>
+           <width>0</width>
            <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
            <width>500</width>
-           <height>300</height>
+           <height>350</height>
+          </size>
+         </property>
+         <property name="backgroundColor" stdset="0">
+          <color>
+           <red>0</red>
+           <green>51</green>
+           <blue>153</blue>
+          </color>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QFrame" name="frame">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>500</width>
+           <height>350</height>
           </size>
          </property>
          <property name="palette">
@@ -716,6 +564,451 @@
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_17">
           <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_15">
+            <property name="spacing">
+             <number>3</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="lblGraphAlmostSoldOutItems">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="palette">
+               <palette>
+                <active>
+                 <colorrole role="WindowText">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Button">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Light">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Midlight">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Dark">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>127</red>
+                    <green>127</green>
+                    <blue>127</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Mid">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>170</red>
+                    <green>170</green>
+                    <blue>170</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Text">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="BrightText">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="ButtonText">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Base">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Window">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Shadow">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="AlternateBase">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="ToolTipBase">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>220</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="ToolTipText">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                </active>
+                <inactive>
+                 <colorrole role="WindowText">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Button">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Light">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Midlight">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Dark">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>127</red>
+                    <green>127</green>
+                    <blue>127</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Mid">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>170</red>
+                    <green>170</green>
+                    <blue>170</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Text">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="BrightText">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="ButtonText">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Base">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Window">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Shadow">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="AlternateBase">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="ToolTipBase">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>220</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="ToolTipText">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                </inactive>
+                <disabled>
+                 <colorrole role="WindowText">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>127</red>
+                    <green>127</green>
+                    <blue>127</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Button">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Light">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Midlight">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Dark">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>127</red>
+                    <green>127</green>
+                    <blue>127</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Mid">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>170</red>
+                    <green>170</green>
+                    <blue>170</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Text">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>127</red>
+                    <green>127</green>
+                    <blue>127</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="BrightText">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="ButtonText">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>127</red>
+                    <green>127</green>
+                    <blue>127</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Base">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Window">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="Shadow">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="AlternateBase">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="ToolTipBase">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>220</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                 <colorrole role="ToolTipText">
+                  <brush brushstyle="SolidPattern">
+                   <color alpha="255">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                   </color>
+                  </brush>
+                 </colorrole>
+                </disabled>
+               </palette>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Almost Sold Out Items (Top 5 sold items)</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
            <layout class="QHBoxLayout" name="horizontalLayout_7">
             <item>
              <widget class="QLabel" name="lblProd1">
@@ -832,7 +1125,7 @@
              <widget class="QLabel" name="lblProd5">
               <property name="minimumSize">
                <size>
-                <width>250</width>
+                <width>0</width>
                 <height>0</height>
                </size>
               </property>
@@ -854,6 +1147,45 @@
            </layout>
           </item>
          </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="KPlotWidget" name="plotMostSold">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>500</width>
+           <height>350</height>
+          </size>
+         </property>
+         <property name="backgroundColor" stdset="0">
+          <color>
+           <red>0</red>
+           <green>51</green>
+           <blue>153</blue>
+          </color>
+         </property>
+         <property name="gridColor" stdset="0">
+          <color>
+           <red>255</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </property>
+         <property name="grid" stdset="0">
+          <bool>false</bool>
+         </property>
         </widget>
        </item>
       </layout>
@@ -1184,6 +1516,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <layout class="QHBoxLayout">
+         <property name="spacing">
+          <number>0</number>
+         </property>
          <item>
           <spacer>
            <property name="orientation">
@@ -1308,7 +1643,111 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="pageSO">
       <layout class="QVBoxLayout" name="verticalLayout_9">
        <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="headerImg">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>48</width>
+             <height>5</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="headerLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>260</width>
+             <height>5</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>welcome</string>
+           </property>
+           <property name="indent">
+            <number>10</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="logoLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>5</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
         <widget class="QLabel" name="label_6">
+         <property name="maximumSize">
+          <size>
+           <width>12</width>
+           <height>12</height>
+          </size>
+         </property>
          <property name="text">
           <string>TextLabel</string>
          </property>
@@ -1325,6 +1764,12 @@ p, li { white-space: pre-wrap; }
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
          </property>
          <property name="currentIndex">
           <number>0</number>
@@ -1574,7 +2019,7 @@ p, li { white-space: pre-wrap; }
                  <x>0</x>
                  <y>20</y>
                  <width>161</width>
-                 <height>111</height>
+                 <height>150</height>
                 </rect>
                </property>
                <property name="sizePolicy">
@@ -1763,8 +2208,8 @@ p, li { white-space: pre-wrap; }
                 <rect>
                  <x>160</x>
                  <y>10</y>
-                 <width>602</width>
-                 <height>347</height>
+                 <width>500</width>
+                 <height>300</height>
                 </rect>
                </property>
                <property name="sizePolicy">
@@ -1781,8 +2226,8 @@ p, li { white-space: pre-wrap; }
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>760</width>
-                 <height>16777215</height>
+                 <width>500</width>
+                 <height>300</height>
                 </size>
                </property>
                <property name="title">
@@ -1795,6 +2240,48 @@ p, li { white-space: pre-wrap; }
                 <bool>false</bool>
                </property>
                <layout class="QGridLayout" name="gridLayout_2">
+                <property name="leftMargin">
+                 <number>1</number>
+                </property>
+                <property name="topMargin">
+                 <number>1</number>
+                </property>
+                <property name="rightMargin">
+                 <number>1</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>1</number>
+                </property>
+                <property name="spacing">
+                 <number>1</number>
+                </property>
+                <item row="8" column="0">
+                 <widget class="QRadioButton" name="rbTransFilterByAmountLess">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Amount Paid &lt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="6" column="0">
+                 <widget class="QRadioButton" name="rbTransFilterByUser">
+                  <property name="text">
+                   <string>by Vendor Name</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="0">
+                 <widget class="QRadioButton" name="rbTransFilterByClient">
+                  <property name="text">
+                   <string>by Client Name:</string>
+                  </property>
+                 </widget>
+                </item>
                 <item row="0" column="0">
                  <widget class="QRadioButton" name="rbTransactionsFilterOnlySales">
                   <property name="text">
@@ -1844,21 +2331,54 @@ p, li { white-space: pre-wrap; }
                   </item>
                  </layout>
                 </item>
-                <item row="3" column="1">
+                <item row="5" column="1">
                  <widget class="QRadioButton" name="rbTransFilterByPaidCash">
                   <property name="text">
                    <string>show transactions paid in cash</string>
                   </property>
                  </widget>
                 </item>
-                <item row="4" column="0">
-                 <widget class="QRadioButton" name="rbTransFilterByDate">
-                  <property name="text">
-                   <string>by Date:</string>
+                <item row="7" column="1">
+                 <widget class="QLineEdit" name="editTransUsersFilter">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>300</width>
+                    <height>16777215</height>
+                   </size>
                   </property>
                  </widget>
                 </item>
-                <item row="4" column="1">
+                <item row="8" column="1">
+                 <widget class="QLineEdit" name="editTransClientsFilter">
+                  <property name="maximumSize">
+                   <size>
+                    <width>300</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QRadioButton" name="rbTransFilterTerminalNum">
+                  <property name="text">
+                   <string>by Terminal Number</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QRadioButton" name="rbTransFilterByAmountGreater">
+                  <property name="text">
+                   <string>Amount Paid &gt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="6" column="1">
                  <widget class="KDateWidget" name="transactionsDateEditor" native="true">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
@@ -1876,59 +2396,29 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="5" column="0">
-                 <widget class="QRadioButton" name="rbTransFilterByUser">
+                 <widget class="QRadioButton" name="rbTransFilterByDate">
                   <property name="text">
-                   <string>by Vendor Name</string>
+                   <string>by Date:</string>
                   </property>
                  </widget>
                 </item>
-                <item row="5" column="1">
-                 <widget class="QLineEdit" name="editTransUsersFilter">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
+                <item row="4" column="1">
+                 <widget class="QDoubleSpinBox" name="editTransAmountGreater">
                   <property name="maximumSize">
                    <size>
-                    <width>300</width>
+                    <width>100</width>
                     <height>16777215</height>
                    </size>
                   </property>
-                 </widget>
-                </item>
-                <item row="6" column="0">
-                 <widget class="QRadioButton" name="rbTransFilterByClient">
-                  <property name="text">
-                   <string>by Client Name:</string>
+                  <property name="prefix">
+                   <string>$</string>
+                  </property>
+                  <property name="maximum">
+                   <double>999999999.990000009536743</double>
                   </property>
                  </widget>
                 </item>
-                <item row="6" column="1">
-                 <widget class="QLineEdit" name="editTransClientsFilter">
-                  <property name="maximumSize">
-                   <size>
-                    <width>300</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                 </widget>
-                </item>
-                <item row="7" column="0">
-                 <widget class="QRadioButton" name="rbTransFilterByAmountLess">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="text">
-                   <string>Amount Paid &lt;</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="7" column="1">
+                <item row="9" column="1">
                  <widget class="QDoubleSpinBox" name="editTransAmountLess">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -1950,37 +2440,7 @@ p, li { white-space: pre-wrap; }
                   </property>
                  </widget>
                 </item>
-                <item row="8" column="0">
-                 <widget class="QRadioButton" name="rbTransFilterByAmountGreater">
-                  <property name="text">
-                   <string>Amount Paid &gt;</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="8" column="1">
-                 <widget class="QDoubleSpinBox" name="editTransAmountGreater">
-                  <property name="maximumSize">
-                   <size>
-                    <width>100</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="prefix">
-                   <string>$</string>
-                  </property>
-                  <property name="maximum">
-                   <double>999999999.990000009536743</double>
-                  </property>
-                 </widget>
-                </item>
                 <item row="9" column="0">
-                 <widget class="QRadioButton" name="rbTransFilterTerminalNum">
-                  <property name="text">
-                   <string>by Terminal Number</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="9" column="1">
                  <widget class="QSpinBox" name="editTransTermNum">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -2139,7 +2599,7 @@ color:black;</string>
         <rect>
          <x>10</x>
          <y>20</y>
-         <width>401</width>
+         <width>541</width>
          <height>126</height>
         </rect>
        </property>
@@ -2179,6 +2639,80 @@ color:black;</string>
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QStackedWidget" name="stackedWidget_2">
+            <property name="maximumSize">
+             <size>
+              <width>10</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <widget class="QWidget" name="page_3">
+             <widget class="QComboBox" name="comboProductsFilterBySubCategory">
+              <property name="geometry">
+               <rect>
+                <x>60</x>
+                <y>20</y>
+                <width>168</width>
+                <height>20</height>
+               </rect>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="rbProductsFilterBySubCategory">
+              <property name="geometry">
+               <rect>
+                <x>-111</x>
+                <y>20</y>
+                <width>169</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>by Subcategory</string>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="page_5">
+             <widget class="QCheckBox" name="chChainiedFilterForCategories">
+              <property name="geometry">
+               <rect>
+                <x>-60</x>
+                <y>0</y>
+                <width>244</width>
+                <height>151</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Chain Dep/Category Filters</string>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="rbProductsFilterByDepartment">
+              <property name="geometry">
+               <rect>
+                <x>-475</x>
+                <y>0</y>
+                <width>206</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>by department</string>
+              </property>
+             </widget>
+             <widget class="QComboBox" name="comboProductsFilterByDepartment">
+              <property name="geometry">
+               <rect>
+                <x>-267</x>
+                <y>-2</y>
+                <width>205</width>
+                <height>27</height>
+               </rect>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="page_4"/>
            </widget>
           </item>
          </layout>
@@ -2225,7 +2759,7 @@ color:black;</string>
         <rect>
          <x>20</x>
          <y>140</y>
-         <width>521</width>
+         <width>671</width>
          <height>171</height>
         </rect>
        </property>
@@ -2275,6 +2809,20 @@ color:black;</string>
         <property name="horizontalSpacing">
          <number>2</number>
         </property>
+        <item row="3" column="2">
+         <widget class="QRadioButton" name="rbProductsFilterByGroup">
+          <property name="text">
+           <string>show only group/pack products</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QRadioButton" name="rbProductsFilterByAvailable">
+          <property name="text">
+           <string>show available items</string>
+          </property>
+         </widget>
+        </item>
         <item row="0" column="0">
          <widget class="QRadioButton" name="rbProductsFilterByDesc">
           <property name="text">
@@ -2292,14 +2840,35 @@ color:black;</string>
           </property>
          </widget>
         </item>
-        <item row="2" column="0">
+        <item row="0" column="2">
+         <widget class="QRadioButton" name="rbProductsFilterByAlmostSoldOut">
+          <property name="text">
+           <string>show almost sold out items</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
          <widget class="QRadioButton" name="rbProductsFilterByCategory">
           <property name="text">
            <string>by category</string>
           </property>
          </widget>
         </item>
-        <item row="2" column="1">
+        <item row="3" column="0" colspan="2">
+         <widget class="QRadioButton" name="rbProductsFilterByRaw">
+          <property name="text">
+           <string>show raw products only</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QRadioButton" name="rbProductsFilterByLessSold">
+          <property name="text">
+           <string>show less sold</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
          <widget class="QComboBox" name="comboProductsFilterByCategory">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -2309,79 +2878,17 @@ color:black;</string>
           </property>
          </widget>
         </item>
-        <item row="4" column="0">
-         <widget class="QRadioButton" name="rbProductsFilterByAvailable">
-          <property name="text">
-           <string>show available items</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="QRadioButton" name="rbProductsFilterByAlmostSoldOut">
-          <property name="text">
-           <string>show almost sold out items</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="2">
+        <item row="1" column="2">
          <widget class="QRadioButton" name="rbProductsFilterByNotAvailable">
           <property name="text">
            <string>show sold out items</string>
           </property>
          </widget>
         </item>
-        <item row="4" column="1">
+        <item row="2" column="1">
          <widget class="QRadioButton" name="rbProductsFilterByMostSold">
           <property name="text">
            <string>show most sold</string>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="0">
-         <widget class="QRadioButton" name="rbProductsFilterByRaw">
-          <property name="text">
-           <string>show raw products only</string>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="1">
-         <widget class="QRadioButton" name="rbProductsFilterByGroup">
-          <property name="text">
-           <string>show only group/pack products</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="1">
-         <widget class="QComboBox" name="comboProductsFilterBySubCategory"/>
-        </item>
-        <item row="3" column="2">
-         <widget class="QRadioButton" name="rbProductsFilterByLessSold">
-          <property name="text">
-           <string>show less sold</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QRadioButton" name="rbProductsFilterByDepartment">
-          <property name="text">
-           <string>by department</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QComboBox" name="comboProductsFilterByDepartment"/>
-        </item>
-        <item row="1" column="2">
-         <widget class="QCheckBox" name="chChainiedFilterForCategories">
-          <property name="text">
-           <string>Chain Dep/Category Filters</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="0">
-         <widget class="QRadioButton" name="rbProductsFilterBySubCategory">
-          <property name="text">
-           <string>by Subcategory</string>
           </property>
          </widget>
         </item>

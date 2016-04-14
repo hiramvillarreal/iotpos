@@ -55,7 +55,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     nameIndex = model->index(row, 3); //model->fieldIndex("stockqty")
     double stockqty = model->data(nameIndex, Qt::DisplayRole).toDouble();
     nameIndex = model->index(row, 0);
-    QString strCode = "#" + model->data(nameIndex, Qt::DisplayRole).toString();
+    QString strCode =  model->data(nameIndex, Qt::DisplayRole).toString();
     //TODO: Add alphacode too
     nameIndex = model->index(row, 19);
     bool isGroup = model->data(nameIndex, Qt::DisplayRole).toBool();
@@ -103,7 +103,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     if (strSize > boxSize) {
       int excess = strSize-boxSize;
       int charEx = (excess/aproxPerChar)+4;
-      nameToDisplay = name.left(name.length()-charEx-1) +"...";
+      nameToDisplay = name.left(name.length()-charEx-1) +"-";
       //qDebug()<<"Text does not fit, strSize="<<strSize<<" boxSize:"
       //<<boxSize<<" excess="<<excess<<" charEx="<<charEx<<"nameToDisplay="<<nameToDisplay;
     }
@@ -138,15 +138,15 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     }
     
     //painting code number
-    font = QFont("DroidSans.ttf",8);
+    font = QFont("DroidSans.ttf",9);
     font.setBold(false);
-    font.setItalic(true);
+    font.setItalic(false);
     painter->setFont(font);
     painter->setBackgroundMode(Qt::TransparentMode);
     painter->setPen(Qt::white);
     painter->setBackground(QColor(255,225,0,160));
-    painter->drawText(option.rect.x()+10,
-                      option.rect.y()+10,
+    painter->drawText(option.rect.x()+14,
+                      option.rect.y()+8,
                       102, 20, Qt::AlignCenter, strCode);
     painter->setBackgroundMode(Qt::TransparentMode);
 
