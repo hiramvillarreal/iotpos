@@ -669,7 +669,7 @@ void ProductEditor::checkFieldsState()
 
 void ProductEditor::setPhoto(QPixmap p)
 {
-  int max = 82;
+  int max = 150;
   QPixmap newPix;
   if ((p.height() > max) || (p.width() > max) ) {
     if (p.height() == p.width()) {
