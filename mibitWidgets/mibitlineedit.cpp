@@ -38,6 +38,7 @@ MibitLineEdit::MibitLineEdit( QWidget *parent )
     shakeTimer = new QTimer(this);
     shakeTimer->setInterval(20);
     timer->setInterval(30);
+    //emptyMessage = emptyMessage(i18n("Type here..."));
     emptyMessage =  "Type here..."; //what about localization?
     connect(this, SIGNAL(textEdited( const QString & ) ), SLOT(onTextChange(const QString &)) );
     connect(timer, SIGNAL(timeout()), this, SLOT(stepColors()));

@@ -74,7 +74,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     else {
       pix = QPixmap(DesktopIcon("iotpos-box", 48));
     }
-    int max = 86;
+    int max = 80;
     if ((pix.height() > max) || (pix.width() > max) ) {
       if (pix.height() == pix.width()) {
         pix = pix.scaled(QSize(max, max));

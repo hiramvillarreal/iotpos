@@ -367,8 +367,8 @@ msgid "Enter administrator password please."
 msgstr "Escriba la contraseña de administrador"
 
 #: lemonview.cpp:310 lemonview.cpp:311
-msgid "Enter description, code or qty*code. <Enter> or <+> Keys to go pay. <->price<Enter> to search by price."
-msgstr "Entre descripción, código, cantidad*código. <Enter> ó <+> para ir a pagar. <->precio<Enter> para busqueda por precio."
+msgid "Enter description, code, qty*code <Enter> or <+> Keys to go pay. <->Price<Enter> to search by price."
+msgstr "Entre descripción, código, cantidad*código <Enter> ó <+> para ir a pagar. <->Precio<Enter> para búsqueda por precio."
 
 #: lemonview.cpp:312
 msgid "Enter an amount."

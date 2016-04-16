@@ -110,7 +110,7 @@ class BalanceDialog : public QDialog
       gridLayout = new QGridLayout(this);
       editText = new QTextEdit(str);
       editText->setReadOnly(true);
-      editText->setMinimumSize(QSize(320,450));
+      editText->setMinimumSize(QSize(320,360));
       gridLayout->addWidget(editText, 0, 0);
       buttonClose = new QPushButton(this);
       buttonClose->setText(i18n("Continue"));
@@ -349,8 +349,8 @@ iotposView::iotposView() //: QWidget(parent)
   ui_mainview.editTransactionDate->setDateTime(transDateTime);
   ui_mainview.groupSaleDate->hide();
  // ui_mainview.plotSales->update();
-  ui_mainview.editItemCode->setEmptyMessage(i18n("Enter description, code or qty*code. <Enter> or <+> Keys to go pay. <->price<Enter> to search by price."));
-  ui_mainview.editItemCode->setToolTip(i18n("Enter description, code or qty*code. <Enter> or <+> Keys to go pay. <->price<Enter> to search by price."));
+  ui_mainview.editItemCode->setEmptyMessage(i18n("Enter description, code, qty*code <Enter> or <+> Keys to go pay. <->Price<Enter> to search by price."));
+  ui_mainview.editItemCode->setToolTip(i18n("Enter description, code, qty*code <Enter> or <+> Keys to go pay. <->Price<Enter> to search by price."));
   ui_mainview.editCreditTendered->setEmptyMessage(i18n("Enter an amount."));
 
   clearUsedWidgets();
@@ -789,6 +789,7 @@ void iotposView::settingsChangedOnInitConfig()
 void iotposView::showEnterCodeWidget()
 {
   ui_mainview.groupWidgets->setCurrentIndex(pageMain);
+  ui_mainview.stackedWidget_2->setCurrentIndex(1);
   // BFB. Toggle editItemCode and editFilterByDesc.
   if (ui_mainview.editItemCode->hasFocus()){
     ui_mainview.rbFilterByDesc->setChecked(true);
@@ -796,6 +797,7 @@ void iotposView::showEnterCodeWidget()
   }else
     ui_mainview.editItemCode->setFocus();
     ui_mainview.frameGridView->show();
+    ui_mainview.rbFilterByDesc->setChecked(true);
   setUpTable();
 }
 
@@ -2291,7 +2293,6 @@ void iotposView::displayItemInfo(QTableWidgetItem* item)
         disc = info.disc;
         price = info.price;
     }
-    //Cambio
     ui_mainview.stackedWidget_2->setCurrentIndex(2);
     double discP=0.0;
     if (info.validDiscount) discP = info.discpercentage;
@@ -3753,6 +3754,7 @@ void iotposView::unfreezeWidgets()
 {
   emit signalEnableUI();
   startAgain();
+  ui_mainview.editItemCode->setFocus();
 }
 
 void iotposView::startAgain()
@@ -4622,6 +4624,7 @@ void iotposView::setupModel()
 
     //Categories popuplist
     populateCategoriesHash();
+    ui_mainview.comboFilterByCategory->clear();
     QHashIterator<QString, int> item(categoriesHash);
     while (item.hasNext()) {
       item.next();
@@ -4633,6 +4636,7 @@ void iotposView::setupModel()
 
     //Subcategories popuplist
     populateSubCategoriesHash();
+    ui_mainview.comboFilterBySubCategory->clear();
     QHashIterator<QString, int> itemS(subcategoriesHash);
     while (itemS.hasNext()) {
       itemS.next();
