@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>769</width>
-    <height>468</height>
+    <height>450</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -815,13 +815,13 @@
              <property name="minimumSize">
               <size>
                <width>0</width>
-               <height>155</height>
+               <height>160</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
                <width>16777215</width>
-               <height>155</height>
+               <height>160</height>
               </size>
              </property>
              <property name="styleSheet">
@@ -838,13 +838,13 @@
              </property>
              <layout class="QGridLayout">
               <property name="leftMargin">
-               <number>5</number>
+               <number>0</number>
               </property>
               <property name="topMargin">
                <number>0</number>
               </property>
               <property name="rightMargin">
-               <number>10</number>
+               <number>8</number>
               </property>
               <property name="bottomMargin">
                <number>10</number>
@@ -1406,13 +1406,13 @@
              <property name="minimumSize">
               <size>
                <width>332</width>
-               <height>155</height>
+               <height>160</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
                <width>16777215</width>
-               <height>154</height>
+               <height>160</height>
               </size>
              </property>
              <property name="frameShape">
@@ -3211,15 +3211,15 @@ p, li { white-space: pre-wrap; }
  </widget>
  <customwidgets>
   <customwidget>
-   <class>MibitLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>../../mibitWidgets/mibitlineedit.h</header>
-  </customwidget>
-  <customwidget>
    <class>KPlotWidget</class>
    <extends>QFrame</extends>
    <header>kplotwidget.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MibitLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>../../mibitWidgets/mibitlineedit.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

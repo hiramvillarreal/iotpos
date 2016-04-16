@@ -1951,7 +1951,7 @@ p, li { white-space: pre-wrap; }
        <number>0</number>
       </property>
       <property name="topMargin">
-       <number>0</number>
+       <number>4</number>
       </property>
       <property name="rightMargin">
        <number>0</number>
@@ -2040,9 +2040,6 @@ p, li { white-space: pre-wrap; }
   <zorder></zorder>
   <zorder></zorder>
   <zorder></zorder>
-  <zorder>horizontalLayoutWidget</zorder>
-  <zorder>btnAddItem</zorder>
-  <zorder>btnAddItem</zorder>
   <zorder>verticalSpacer_2</zorder>
  </widget>
  <tabstops>
