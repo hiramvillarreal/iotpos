@@ -862,7 +862,7 @@
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>180</width>
+                  <width>16777215</width>
                   <height>16777215</height>
                  </size>
                 </property>
@@ -955,13 +955,13 @@
                 </property>
                 <property name="minimumSize">
                  <size>
-                  <width>0</width>
-                  <height>0</height>
+                  <width>200</width>
+                  <height>40</height>
                  </size>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>180</width>
+                  <width>16777215</width>
                   <height>16777215</height>
                  </size>
                 </property>
@@ -1045,7 +1045,7 @@
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>180</width>
+                  <width>16777215</width>
                   <height>16777215</height>
                  </size>
                 </property>
@@ -1070,7 +1070,7 @@
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>180</width>
+                  <width>16777215</width>
                   <height>16777215</height>
                  </size>
                 </property>
@@ -1105,13 +1105,13 @@
                 </property>
                 <property name="minimumSize">
                  <size>
-                  <width>0</width>
-                  <height>0</height>
+                  <width>200</width>
+                  <height>40</height>
                  </size>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>180</width>
+                  <width>16777215</width>
                   <height>16777215</height>
                  </size>
                 </property>
@@ -1190,7 +1190,7 @@
                  </property>
                  <property name="minimumSize">
                   <size>
-                   <width>320</width>
+                   <width>340</width>
                    <height>0</height>
                   </size>
                  </property>
@@ -3211,15 +3211,15 @@ p, li { white-space: pre-wrap; }
  </widget>
  <customwidgets>
   <customwidget>
+   <class>MibitLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>../../mibitWidgets/mibitlineedit.h</header>
+  </customwidget>
+  <customwidget>
    <class>KPlotWidget</class>
    <extends>QFrame</extends>
    <header>kplotwidget.h</header>
    <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>MibitLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>../../mibitWidgets/mibitlineedit.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
