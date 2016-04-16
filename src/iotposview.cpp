@@ -349,8 +349,8 @@ iotposView::iotposView() //: QWidget(parent)
   ui_mainview.editTransactionDate->setDateTime(transDateTime);
   ui_mainview.groupSaleDate->hide();
  // ui_mainview.plotSales->update();
-  ui_mainview.editItemCode->setEmptyMessage(i18n("Enter code or qty*code. <Enter> or <+> Keys to go pay"));
-  ui_mainview.editItemCode->setToolTip(i18n("Enter code or qty*code. <Enter> or <+> Keys to go pay"));
+  ui_mainview.editItemCode->setEmptyMessage(i18n("Enter description, code or qty*code. <Enter> or <+> Keys to go pay. <->price<Enter> to search by price."));
+  ui_mainview.editItemCode->setToolTip(i18n("Enter description, code or qty*code. <Enter> or <+> Keys to go pay. <->price<Enter> to search by price."));
   ui_mainview.editCreditTendered->setEmptyMessage(i18n("Enter an amount."));
 
   clearUsedWidgets();

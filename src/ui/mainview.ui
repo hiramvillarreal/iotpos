@@ -1180,16 +1180,6 @@
                <property name="spacing">
                 <number>4</number>
                </property>
-               <item row="0" column="7">
-                <widget class="QRadioButton" name="rbFilterByCategory">
-                 <property name="text">
-                  <string>Category</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="8">
-                <widget class="QComboBox" name="comboFilterByCategory"/>
-               </item>
                <item row="0" column="3">
                 <widget class="MibitLineEdit" name="editItemCode">
                  <property name="sizePolicy">
@@ -1200,13 +1190,13 @@
                  </property>
                  <property name="minimumSize">
                   <size>
-                   <width>240</width>
+                   <width>320</width>
                    <height>0</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>377</width>
+                   <width>420</width>
                    <height>380</height>
                   </size>
                  </property>
@@ -1218,13 +1208,10 @@
                  </property>
                 </widget>
                </item>
-               <item row="0" column="2">
-                <widget class="QLabel" name="label">
+               <item row="0" column="7">
+                <widget class="QRadioButton" name="rbFilterByCategory">
                  <property name="text">
-                  <string>&amp;Code:</string>
-                 </property>
-                 <property name="buddy">
-                  <cstring>editItemCode</cstring>
+                  <string>Category</string>
                  </property>
                 </widget>
                </item>
@@ -1250,10 +1237,16 @@
                  </property>
                 </widget>
                </item>
-               <item row="0" column="6">
-                <widget class="QRadioButton" name="rbFilterByPopularity">
+               <item row="0" column="8">
+                <widget class="QComboBox" name="comboFilterByCategory"/>
+               </item>
+               <item row="0" column="2">
+                <widget class="QLabel" name="label">
                  <property name="text">
-                  <string>Best sellers</string>
+                  <string/>
+                 </property>
+                 <property name="buddy">
+                  <cstring>editItemCode</cstring>
                  </property>
                 </widget>
                </item>
@@ -1261,6 +1254,13 @@
                 <widget class="QRadioButton" name="rbFilterByDesc">
                  <property name="text">
                   <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="6">
+                <widget class="QRadioButton" name="rbFilterByPopularity">
+                 <property name="text">
+                  <string>Best sellers</string>
                  </property>
                 </widget>
                </item>
@@ -1422,7 +1422,7 @@
               <enum>QFrame::Raised</enum>
              </property>
              <property name="currentIndex">
-              <number>2</number>
+              <number>1</number>
              </property>
              <widget class="QWidget" name="page">
               <widget class="QGroupBox" name="groupPayment">
@@ -1936,7 +1936,7 @@ color:black;</string>
                 <rect>
                  <x>-20</x>
                  <y>2</y>
-                 <width>249</width>
+                 <width>261</width>
                  <height>156</height>
                 </rect>
                </property>
@@ -1960,7 +1960,7 @@ color:black;</string>
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>210</width>
+                    <width>220</width>
                     <height>160</height>
                    </size>
                   </property>
