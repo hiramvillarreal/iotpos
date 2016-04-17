@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>768</width>
-    <height>327</height>
+    <height>350</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -1951,7 +1951,7 @@ p, li { white-space: pre-wrap; }
        <number>0</number>
       </property>
       <property name="topMargin">
-       <number>4</number>
+       <number>6</number>
       </property>
       <property name="rightMargin">
        <number>0</number>
@@ -1981,6 +1981,9 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="selectionBehavior">
          <enum>QAbstractItemView::SelectRows</enum>
+        </property>
+        <property name="cornerButtonEnabled">
+         <bool>true</bool>
         </property>
         <column>
          <property name="text">

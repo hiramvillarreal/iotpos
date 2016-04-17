@@ -1405,7 +1405,7 @@
              </property>
              <property name="minimumSize">
               <size>
-               <width>332</width>
+               <width>360</width>
                <height>160</height>
               </size>
              </property>
@@ -1987,7 +1987,7 @@ color:black;</string>
                     <number>0</number>
                    </property>
                    <property name="rightMargin">
-                    <number>2</number>
+                    <number>0</number>
                    </property>
                    <property name="bottomMargin">
                     <number>8</number>
@@ -2214,8 +2214,8 @@ color:black;</string>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>82</width>
-                 <height>82</height>
+                 <width>150</width>
+                 <height>150</height>
                 </size>
                </property>
                <property name="font">
