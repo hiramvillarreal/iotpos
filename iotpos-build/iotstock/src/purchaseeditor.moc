@@ -1,0 +1,196 @@
+/****************************************************************************
+** Meta object code from reading C++ file 'purchaseeditor.h'
+**
+** Created by: The Qt Meta Object Compiler version 63 (Qt 4.8.6)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#include "../../../iotstock/src/purchaseeditor.h"
+#if !defined(Q_MOC_OUTPUT_REVISION)
+#error "The header file 'purchaseeditor.h' doesn't include <QObject>."
+#elif Q_MOC_OUTPUT_REVISION != 63
+#error "This file was generated using the moc from 4.8.6. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+QT_BEGIN_MOC_NAMESPACE
+static const uint qt_meta_data_PurchaseEditorUI[] = {
+
+ // content:
+       6,       // revision
+       0,       // classname
+       0,    0, // classinfo
+       0,    0, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       0,       // signalCount
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_PurchaseEditorUI[] = {
+    "PurchaseEditorUI\0"
+};
+
+void PurchaseEditorUI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    Q_UNUSED(_o);
+    Q_UNUSED(_id);
+    Q_UNUSED(_c);
+    Q_UNUSED(_a);
+}
+
+const QMetaObjectExtraData PurchaseEditorUI::staticMetaObjectExtraData = {
+    0,  qt_static_metacall 
+};
+
+const QMetaObject PurchaseEditorUI::staticMetaObject = {
+    { &QFrame::staticMetaObject, qt_meta_stringdata_PurchaseEditorUI,
+      qt_meta_data_PurchaseEditorUI, &staticMetaObjectExtraData }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &PurchaseEditorUI::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
+
+const QMetaObject *PurchaseEditorUI::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+}
+
+void *PurchaseEditorUI::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_PurchaseEditorUI))
+        return static_cast<void*>(const_cast< PurchaseEditorUI*>(this));
+    if (!strcmp(_clname, "Ui::purchaseEditor"))
+        return static_cast< Ui::purchaseEditor*>(const_cast< PurchaseEditorUI*>(this));
+    return QFrame::qt_metacast(_clname);
+}
+
+int PurchaseEditorUI::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QFrame::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    return _id;
+}
+static const uint qt_meta_data_PurchaseEditor[] = {
+
+ // content:
+       6,       // revision
+       0,       // classname
+       0,    0, // classinfo
+      17,   14, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       0,       // signalCount
+
+ // slots: signature, parameters, type, tag, flags
+      16,   15,   15,   15, 0x08,
+      30,   15,   15,   15, 0x08,
+      47,   15,   15,   15, 0x08,
+      60,   15,   15,   15, 0x08,
+      72,   15,   15,   15, 0x08,
+      92,   15,   15,   15, 0x08,
+     108,   15,   15,   15, 0x08,
+     125,  121,   15,   15, 0x08,
+     148,   15,   15,   15, 0x08,
+     174,  169,   15,   15, 0x08,
+     201,   15,   15,   15, 0x08,
+     218,   15,   15,   15, 0x08,
+     237,   15,   15,   15, 0x08,
+     259,   15,   15,   15, 0x08,
+     282,   15,   15,   15, 0x08,
+     302,   15,   15,   15, 0x08,
+     328,  321,   15,   15, 0x09,
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_PurchaseEditor[] = {
+    "PurchaseEditor\0\0changePhoto()\0"
+    "calculatePrice()\0timerCheck()\0justCheck()\0"
+    "checkIfCodeExists()\0addItemToList()\0"
+    "setupTable()\0set\0focusItemsPerBox(bool)\0"
+    "deleteSelectedItem()\0info\0"
+    "insertProduct(ProductInfo)\0modifyCategory()\0"
+    "modifyDepartment()\0createNewDepartment()\0"
+    "createNewSubcategory()\0createNewCategory()\0"
+    "createNewMeasure()\0button\0"
+    "slotButtonClicked(int)\0"
+};
+
+void PurchaseEditor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        Q_ASSERT(staticMetaObject.cast(_o));
+        PurchaseEditor *_t = static_cast<PurchaseEditor *>(_o);
+        switch (_id) {
+        case 0: _t->changePhoto(); break;
+        case 1: _t->calculatePrice(); break;
+        case 2: _t->timerCheck(); break;
+        case 3: _t->justCheck(); break;
+        case 4: _t->checkIfCodeExists(); break;
+        case 5: _t->addItemToList(); break;
+        case 6: _t->setupTable(); break;
+        case 7: _t->focusItemsPerBox((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 8: _t->deleteSelectedItem(); break;
+        case 9: _t->insertProduct((*reinterpret_cast< ProductInfo(*)>(_a[1]))); break;
+        case 10: _t->modifyCategory(); break;
+        case 11: _t->modifyDepartment(); break;
+        case 12: _t->createNewDepartment(); break;
+        case 13: _t->createNewSubcategory(); break;
+        case 14: _t->createNewCategory(); break;
+        case 15: _t->createNewMeasure(); break;
+        case 16: _t->slotButtonClicked((*reinterpret_cast< int(*)>(_a[1]))); break;
+        default: ;
+        }
+    }
+}
+
+const QMetaObjectExtraData PurchaseEditor::staticMetaObjectExtraData = {
+    0,  qt_static_metacall 
+};
+
+const QMetaObject PurchaseEditor::staticMetaObject = {
+    { &KDialog::staticMetaObject, qt_meta_stringdata_PurchaseEditor,
+      qt_meta_data_PurchaseEditor, &staticMetaObjectExtraData }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &PurchaseEditor::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
+
+const QMetaObject *PurchaseEditor::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+}
+
+void *PurchaseEditor::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_PurchaseEditor))
+        return static_cast<void*>(const_cast< PurchaseEditor*>(this));
+    return KDialog::qt_metacast(_clname);
+}
+
+int PurchaseEditor::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = KDialog::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 17)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 17;
+    }
+    return _id;
+}
+QT_END_MOC_NAMESPACE

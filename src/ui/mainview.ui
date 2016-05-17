@@ -2763,35 +2763,25 @@ font: 75 9pt &quot;Lucida Grande&quot;;</string>
           </widget>
          </item>
          <item>
-          <widget class="QRadioButton" name="rbPercentage">
-           <property name="text">
-            <string>By Percentage</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="rbMoney">
-           <property name="text">
-            <string>By dollar and cents</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="rbPriceChange">
-           <property name="text">
-            <string>Change Price</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="rbCoupon">
-           <property name="text">
-            <string>By coupon code</string>
-           </property>
-          </widget>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <item>
+            <widget class="QRadioButton" name="rbPriceChange">
+             <property name="text">
+              <string>Change Price</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="rbPercentage">
+             <property name="text">
+              <string>By Percentage</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -3193,6 +3183,32 @@ p, li { white-space: pre-wrap; }
           </spacer>
          </item>
         </layout>
+       </widget>
+       <widget class="QRadioButton" name="rbMoney">
+        <property name="geometry">
+         <rect>
+          <x>530</x>
+          <y>80</y>
+          <width>239</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>By dollar and cents</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="rbCoupon">
+        <property name="geometry">
+         <rect>
+          <x>530</x>
+          <y>110</y>
+          <width>239</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>By coupon code</string>
+        </property>
        </widget>
       </widget>
      </widget>
