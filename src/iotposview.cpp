@@ -3180,6 +3180,8 @@ void iotposView::finishCurrentTransaction()
    //showProductsGrid();
    ui_mainview.frameGridView->show();
    ui_mainview.stackedWidget_2->setCurrentIndex(1);
+   ui_mainview.editItemCode->setFocus();
+   ui_mainview.rbFilterByDesc->setChecked(true);
 }
 
 
@@ -4835,7 +4837,7 @@ void iotposView::setFilter()
         productsModel->setFilter(QString("products.isARawProduct=false and products.category=%1").arg(catId));
     } else { //by most sold products in current month --biel
       productsModel->setFilter("products.isARawProduct=false and (products.datelastsold > ADDDATE(sysdate( ), INTERVAL -31 DAY )) ORDER BY products.datelastsold DESC"); //limit or not the result to 5?
-      
+
       //products.code IN (SELECT * FROM (SELECT product_id FROM (SELECT product_id, sum( units ) AS sold_items FROM transactions t, transactionitems ti WHERE  t.id = ti.transaction_id AND t.date > ADDDATE( sysdate( ) , INTERVAL -31 DAY ) GROUP BY ti.product_id) month_sold_items ORDER BY sold_items DESC LIMIT 5) popular_products)
     }
   }
@@ -7135,4 +7137,16 @@ BasketPriceSummary iotposView::recalculateBasket(double oDiscountMoney) {
 
 #include "iotposview.moc"
 
+
+
+void iotposView::on_rbFilterByPopularity_clicked()
+{
+    ui_mainview.editItemCode->clear();
+}
+
+
+void iotposView::on_editItemCode_returnPressed()
+{
+   ui_mainview.rbFilterByDesc->setChecked(true);
+}
 
