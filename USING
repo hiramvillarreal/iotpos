@@ -1,10 +1,10 @@
 There is a users guide at the wiki:
 
-http://sourceforge.net/apps/mediawiki/lemonpos/
+http://sourceforge.net/apps/mediawiki/iotpospos/
 
 For use you need:
 
-  * Start lemon
+  * Start iotpos
   * Login as an user, the only one after installation is "admin" with password "linux".
   * Start operations
      -enter the requiered data (admin's password and money quantity to deposit at the cash drawer).
@@ -22,25 +22,25 @@ Note:
    Until now, if you do not have a printer, the program hangs (waiting the printer to finish).
    The program searches for a printer at /dev/lp0 -the default configuration-. 
    You can configure another location for your device, changing these device file at the printer
-   configuration section of lemon.
-   The device file must have lp group. Also your  user (which runs lemon) has to be member 
+   configuration section of iotpos.
+   The device file must have lp group. Also your  user (which runs iotpos) has to be member 
    of lp group. See udev documentation for more details regarding device permissions.
    
    If you have a different printer brand/model, please test it and send me any comments about.
    
-   For the moment, by default lemon is configured to do not print a ticket, but if you have one
+   For the moment, by default iotpos is configured to do not print a ticket, but if you have one
    enable it at the preferences dialog under the printer section.
    
 
-For administration backend, run "squeeze". You will be asked for admin's password.
+For administration backend, run "iotstock". You will be asked for admin's password.
 
-   By default, security is disabled, this to let you configure squeeze database settings in case
+   By default, security is disabled, this to let you configure iotstock database settings in case
    you have installed the database server at a different computer.
 
    There is a quick information section to show you some basic data of sales, profit, most sold 
    products and products near sold-out. All represented in a graphical way.
    
-   With squeeze you can modify, insert and delete products, users, clients, offers, categories, 
+   With iotstock you can modify, insert and delete products, users, clients, offers, categories, 
    weights and measures. There is also a purchase option at "Stock Movements, Check-in" to enter
    products that were purchased to the database.
    

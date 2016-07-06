@@ -625,7 +625,7 @@ void iotposView::setUpInputs()
   ui_mainview.editAmount->setValidator(validatorFloat);
   //Item code (to insert) //
   //QRegExp regexpC("[0-9]+[0-9]*[//.]{0,1}[0-9]{0,2}[//*]{0,1}[0-9]*[A-Za-z_0-9\\\\/\\-]{0,30}"); // Instead of {0,13} fro EAN13, open for up to 30 chars.
-  QRegExp regexpC("[0-9]*[//.]{0,1}[0-9]{0,5}[//*]{0,1}[0-9]*[A-Za-z_0-9\\\\/\\-]{0,30}"); // Instead of {0,13} fro EAN13, open for up to 30 chars.
+  QRegExp regexpC("[0-9]*[//.]{0,1}[0-9]{0,5}[//*]{0,1}[0-9]*[A-Za-z_0-9\\s\\/\\-]{0,30}"); // Instead of {0,13} fro EAN13, open for up to 30 chars.
   //NOTE: We remove the xX from the regexp for use as the separator between qtys and code. Only * can be used now, for Alphacode support
   QRegExpValidator * validatorEAN13 = new QRegExpValidator(regexpC, this);
   ui_mainview.editItemCode->setValidator(validatorEAN13);
