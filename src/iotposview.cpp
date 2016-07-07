@@ -2294,6 +2294,7 @@ void iotposView::displayItemInfo(QTableWidgetItem* item)
         price = info.price;
     }
     ui_mainview.stackedWidget_2->setCurrentIndex(2);
+    ui_mainview.stackedWidget_3->setCurrentIndex(0);
     double discP=0.0;
     if (info.validDiscount) discP = info.discpercentage;
     QString str;
@@ -3182,6 +3183,7 @@ void iotposView::finishCurrentTransaction()
    ui_mainview.stackedWidget_2->setCurrentIndex(1);
    ui_mainview.editItemCode->setFocus();
    ui_mainview.rbFilterByDesc->setChecked(true);
+   ui_mainview.stackedWidget_3->setCurrentIndex(1);
 }
 
 
@@ -3801,6 +3803,7 @@ void iotposView::cancelCurrentTransaction()
   ui_mainview.frameGridView->show();
   ui_mainview.editItemCode->setFocus();
   ui_mainview.stackedWidget_2->setCurrentIndex(1);
+  ui_mainview.stackedWidget_3->setCurrentIndex(1);
 }
 
 
@@ -7137,6 +7140,10 @@ BasketPriceSummary iotposView::recalculateBasket(double oDiscountMoney) {
 
 #include "iotposview.moc"
 
+void iotposView::on_rbFilterByCategory_clicked()
+{
+    ui_mainview.editItemCode->clear();
+}
 
 
 void iotposView::on_rbFilterByPopularity_clicked()
