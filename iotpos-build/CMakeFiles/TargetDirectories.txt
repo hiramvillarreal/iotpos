@@ -1,6 +1,0 @@
-/home/earth/iotpos/iotpos-build/src/CMakeFiles/iotpos.dir
-/home/earth/iotpos/iotpos-build/src/CMakeFiles/iotpos_automoc.dir
-/home/earth/iotpos/iotpos-build/iotstock/src/CMakeFiles/iotstock.dir
-/home/earth/iotpos/iotpos-build/iotstock/src/CMakeFiles/iotstock_automoc.dir
-/home/earth/iotpos/iotpos-build/iotstock/src/CMakeFiles/translations.dir
-/home/earth/iotpos/iotpos-build/CMakeFiles/uninstall.dir
