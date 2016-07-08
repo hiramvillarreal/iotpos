@@ -455,7 +455,7 @@ void iotposView::updateGraphs()
       } //for each eleement
 
 
-      ui_mainview.plotSales->update();
+    //  ui_mainview.plotSales->update();
 
       
       delete myDb;
@@ -1109,7 +1109,7 @@ void iotposView::login()
       //Now check roles instead of names
       if (loggedUserRole == roleAdmin) {
         emit signalAdminLoggedOn();
-        ui_mainview.labelBanner->setVisible(false);
+        ui_mainview.labelBanner->setVisible(true);
         updateGraphs();
         //if (!canStartSelling()) startOperation();
       } else {

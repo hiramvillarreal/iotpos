@@ -961,6 +961,9 @@ msgstr "Total de impuestos recaudados en ésta terminal:"
 msgid "Total Sales : %1"
 msgstr "Ventas totales: %1"
 
+msgid "Month Sales (%1)"
+msgstr "Ventas del mes (%1)"
+
 #: lemonview.cpp:4109
 msgid "Total Profit: %1"
 msgstr "Utilidades totales: %1"
@@ -1929,7 +1932,7 @@ msgstr "Mostrar mensaje de alerta en nivel bajo de efectivo"
 #~ msgstr "$"
 
 msgid "Subtotal:"
-msgstr "subtotal:"
+msgstr "Subtotal:"
 
 msgid "Reprint Ticket"
 msgstr "Reimprimir ticket"

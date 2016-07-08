@@ -171,6 +171,44 @@
         </widget>
        </item>
        <item>
+        <widget class="KPlotWidget" name="plotSales">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>160</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>360</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
+         <property name="backgroundColor" stdset="0">
+          <color>
+           <red>0</red>
+           <green>51</green>
+           <blue>153</blue>
+          </color>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QCheckBox" name="rbFilterBySubCategory">
          <property name="text">
           <string>Subcategory</string>
@@ -441,15 +479,15 @@
                  </property>
                 </widget>
                </item>
+               <item row="0" column="8">
+                <widget class="QComboBox" name="comboFilterByCategory"/>
+               </item>
                <item row="0" column="7">
                 <widget class="QRadioButton" name="rbFilterByCategory">
                  <property name="text">
                   <string>Category</string>
                  </property>
                 </widget>
-               </item>
-               <item row="0" column="8">
-                <widget class="QComboBox" name="comboFilterByCategory"/>
                </item>
               </layout>
              </widget>
@@ -1103,8 +1141,6 @@ color:black;</string>
                 </item>
                </layout>
               </widget>
-              <zorder>groupClient</zorder>
-              <zorder>stackedWidget_3</zorder>
              </widget>
              <widget class="QWidget" name="page_5">
               <widget class="QLabel" name="labelDetailPhoto">
@@ -1420,6 +1456,22 @@ color:black;</string>
               </widget>
              </widget>
             </widget>
+           </item>
+           <item row="1" column="1">
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Expanding</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
            </item>
            <item row="1" column="2">
             <widget class="QStackedWidget" name="stackedWidget_3">
@@ -1796,14 +1848,12 @@ color:black;</string>
                 </item>
                </layout>
               </widget>
-              <zorder>groupTotals</zorder>
-              <zorder>groupTotals</zorder>
              </widget>
              <widget class="QWidget" name="page_11">
               <widget class="QLabel" name="labelBanner">
                <property name="geometry">
                 <rect>
-                 <x>-1</x>
+                 <x>10</x>
                  <y>0</y>
                  <width>361</width>
                  <height>160</height>
@@ -2261,71 +2311,8 @@ color:black;</string>
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
               </widget>
-              <widget class="KPlotWidget" name="plotSales">
-               <property name="enabled">
-                <bool>true</bool>
-               </property>
-               <property name="geometry">
-                <rect>
-                 <x>0</x>
-                 <y>0</y>
-                 <width>360</width>
-                 <height>160</height>
-                </rect>
-               </property>
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>360</width>
-                 <height>160</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>360</width>
-                 <height>160</height>
-                </size>
-               </property>
-               <property name="layoutDirection">
-                <enum>Qt::RightToLeft</enum>
-               </property>
-               <property name="lineWidth">
-                <number>0</number>
-               </property>
-               <property name="backgroundColor" stdset="0">
-                <color>
-                 <red>0</red>
-                 <green>51</green>
-                 <blue>153</blue>
-                </color>
-               </property>
-               <zorder>labelBanner</zorder>
-              </widget>
-              <zorder>plotSales</zorder>
-              <zorder>labelBanner</zorder>
              </widget>
             </widget>
-           </item>
-           <item row="1" column="1">
-            <spacer name="horizontalSpacer_3">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeType">
-              <enum>QSizePolicy::Expanding</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>10</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
            </item>
           </layout>
          </widget>
