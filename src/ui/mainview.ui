@@ -1217,7 +1217,7 @@ color:black;</string>
                <property name="maximumSize">
                 <size>
                  <width>220</width>
-                 <height>160</height>
+                 <height>170</height>
                 </size>
                </property>
                <property name="layoutDirection">
@@ -1246,12 +1246,12 @@ color:black;</string>
                  <number>0</number>
                 </property>
                 <property name="bottomMargin">
-                 <number>8</number>
+                 <number>6</number>
                 </property>
                 <item>
                  <widget class="QLabel" name="labelDetailDesc">
                   <property name="sizePolicy">
-                   <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
@@ -1486,11 +1486,17 @@ color:black;</string>
              <property name="layoutDirection">
               <enum>Qt::LeftToRight</enum>
              </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Plain</enum>
+             </property>
              <property name="lineWidth">
               <number>0</number>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="page_10">
               <widget class="QGroupBox" name="groupTotals">
@@ -1503,7 +1509,7 @@ color:black;</string>
                 </rect>
                </property>
                <property name="sizePolicy">
-                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Maximum">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
@@ -1545,8 +1551,11 @@ color:black;</string>
                 <property name="bottomMargin">
                  <number>10</number>
                 </property>
-                <property name="spacing">
+                <property name="horizontalSpacing">
                  <number>0</number>
+                </property>
+                <property name="verticalSpacing">
+                 <number>1</number>
                 </property>
                 <item row="0" column="3">
                  <widget class="QLabel" name="lblSubtotal">
