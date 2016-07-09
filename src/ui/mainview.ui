@@ -392,44 +392,46 @@
                <property name="spacing">
                 <number>4</number>
                </property>
-               <item row="0" column="2">
-                <widget class="QLabel" name="label">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="buddy">
-                  <cstring>editItemCode</cstring>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="1">
-                <widget class="QRadioButton" name="rbFilterByDesc">
-                 <property name="text">
-                  <string/>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="4">
-                <spacer name="horizontalSpacer_2">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item row="0" column="6">
+               <item row="0" column="7">
                 <widget class="QRadioButton" name="rbFilterByPopularity">
                  <property name="text">
                   <string>Best sellers</string>
                  </property>
                 </widget>
                </item>
-               <item row="0" column="3">
+               <item row="5" column="0" colspan="12">
+                <widget class="QListView" name="listView">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="layoutDirection">
+                  <enum>Qt::LeftToRight</enum>
+                 </property>
+                 <property name="autoScrollMargin">
+                  <number>16</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="8">
+                <widget class="QRadioButton" name="rbFilterByCategory">
+                 <property name="text">
+                  <string>Category</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="9">
+                <widget class="QComboBox" name="comboFilterByCategory"/>
+               </item>
+               <item row="0" column="2">
                 <widget class="MibitLineEdit" name="editItemCode">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
@@ -457,35 +459,23 @@
                  </property>
                 </widget>
                </item>
-               <item row="5" column="0" colspan="11">
-                <widget class="QListView" name="listView">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
+               <item row="0" column="6">
+                <spacer name="horizontalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
                  </property>
-                 <property name="minimumSize">
+                 <property name="sizeHint" stdset="0">
                   <size>
-                   <width>0</width>
-                   <height>0</height>
+                   <width>40</width>
+                   <height>20</height>
                   </size>
                  </property>
-                 <property name="layoutDirection">
-                  <enum>Qt::LeftToRight</enum>
-                 </property>
-                 <property name="autoScrollMargin">
-                  <number>16</number>
-                 </property>
-                </widget>
+                </spacer>
                </item>
-               <item row="0" column="8">
-                <widget class="QComboBox" name="comboFilterByCategory"/>
-               </item>
-               <item row="0" column="7">
-                <widget class="QRadioButton" name="rbFilterByCategory">
+               <item row="0" column="1">
+                <widget class="QRadioButton" name="rbFilterByDesc">
                  <property name="text">
-                  <string>Category</string>
+                  <string/>
                  </property>
                 </widget>
                </item>

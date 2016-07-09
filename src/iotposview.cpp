@@ -1898,8 +1898,8 @@ if ( doNotAddMoreItems ) { //only for reservations
       productsModel->setFilter(QString("products.isARawProduct=false and products.price=%1").arg(codeWOSing));
     }
  
-
-
+ refreshTotalLabel();
+ ui_mainview.rbFilterByDesc->setChecked(true);
 }//insertItem
 
 double iotposView::getTotalQtyOnList(const ProductInfo &info)
@@ -2019,7 +2019,7 @@ int iotposView::doInsertItem(QString itemCode, QString itemDesc, double itemQty,
   refreshTotalLabel();
   // BFB: editFilterbyDesc keeps the focus,
   if (!ui_mainview.editFilterByDesc->hasFocus())
-    ui_mainview.editItemCode->setFocus();
+  ui_mainview.editItemCode->setFocus();
   ui_mainview.frameGridView->show();
   ui_mainview.editItemCode->setText("");
   ui_mainview.editItemCode->setCursorPosition(0);
