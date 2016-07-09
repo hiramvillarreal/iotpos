@@ -1503,7 +1503,7 @@ color:black;</string>
                <property name="geometry">
                 <rect>
                  <x>0</x>
-                 <y>0</y>
+                 <y>-5</y>
                  <width>401</width>
                  <height>160</height>
                 </rect>
@@ -1546,7 +1546,7 @@ color:black;</string>
                  <number>0</number>
                 </property>
                 <property name="rightMargin">
-                 <number>12</number>
+                 <number>32</number>
                 </property>
                 <property name="bottomMargin">
                  <number>10</number>
@@ -1567,7 +1567,7 @@ color:black;</string>
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>16777215</width>
+                    <width>200</width>
                     <height>16777215</height>
                    </size>
                   </property>
@@ -1656,7 +1656,7 @@ color:black;</string>
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>16777215</width>
+                    <width>200</width>
                     <height>16777215</height>
                    </size>
                   </property>
@@ -1743,7 +1743,7 @@ color:black;</string>
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>16777215</width>
+                    <width>200</width>
                     <height>16777215</height>
                    </size>
                   </property>
@@ -1768,7 +1768,7 @@ color:black;</string>
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>16777215</width>
+                    <width>200</width>
                     <height>16777215</height>
                    </size>
                   </property>
@@ -1819,7 +1819,7 @@ color:black;</string>
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>16777215</width>
+                    <width>200</width>
                     <height>16777215</height>
                    </size>
                   </property>
