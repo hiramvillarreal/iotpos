@@ -624,7 +624,7 @@
               <enum>QFrame::Raised</enum>
              </property>
              <property name="currentIndex">
-              <number>2</number>
+              <number>1</number>
              </property>
              <widget class="QWidget" name="page">
               <widget class="QGroupBox" name="groupPayment">
@@ -1503,7 +1503,7 @@ color:black;</string>
                <property name="geometry">
                 <rect>
                  <x>0</x>
-                 <y>0</y>
+                 <y>-4</y>
                  <width>380</width>
                  <height>180</height>
                 </rect>
