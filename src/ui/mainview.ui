@@ -608,13 +608,13 @@
              <property name="minimumSize">
               <size>
                <width>380</width>
-               <height>160</height>
+               <height>165</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
                <width>16777215</width>
-               <height>160</height>
+               <height>180</height>
               </size>
              </property>
              <property name="frameShape">
@@ -1444,9 +1444,6 @@ color:black;</string>
                 </item>
                </layout>
               </widget>
-              <zorder>labelDetailPhoto</zorder>
-              <zorder>groupDetails</zorder>
-              <zorder>groupTotals</zorder>
              </widget>
             </widget>
            </item>
@@ -1477,13 +1474,13 @@ color:black;</string>
              <property name="minimumSize">
               <size>
                <width>380</width>
-               <height>160</height>
+               <height>165</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
                <width>16777215</width>
-               <height>160</height>
+               <height>180</height>
               </size>
              </property>
              <property name="layoutDirection">
@@ -1506,7 +1503,7 @@ color:black;</string>
                <property name="geometry">
                 <rect>
                  <x>0</x>
-                 <y>-6</y>
+                 <y>-4</y>
                  <width>380</width>
                  <height>160</height>
                 </rect>
@@ -1526,7 +1523,7 @@ color:black;</string>
                <property name="maximumSize">
                 <size>
                  <width>380</width>
-                 <height>160</height>
+                 <height>180</height>
                 </size>
                </property>
                <property name="styleSheet">
@@ -1581,7 +1578,7 @@ color:black;</string>
                    <bool>false</bool>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                   </property>
                  </widget>
                 </item>
@@ -1591,7 +1588,7 @@ color:black;</string>
                    <string>Discount:</string>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                   </property>
                  </widget>
                 </item>
@@ -1627,13 +1624,13 @@ color:black;</string>
                    <enum>QFrame::NoFrame</enum>
                   </property>
                   <property name="text">
-                   <string>Togtal:</string>
+                   <string>Total:</string>
                   </property>
                   <property name="scaledContents">
                    <bool>true</bool>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                   </property>
                   <property name="indent">
                    <number>0</number>
@@ -1646,7 +1643,7 @@ color:black;</string>
                    <string>Subtotal:</string>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                   </property>
                  </widget>
                 </item>
@@ -1674,7 +1671,7 @@ color:black;</string>
                    <bool>false</bool>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                   </property>
                  </widget>
                 </item>
@@ -1716,7 +1713,7 @@ color:black;</string>
                    <bool>true</bool>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                   </property>
                  </widget>
                 </item>
@@ -1761,7 +1758,7 @@ color:black;</string>
                    <bool>true</bool>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                   </property>
                   <property name="margin">
                    <number>0</number>
@@ -1809,7 +1806,7 @@ color:black;</string>
                    <bool>true</bool>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                   </property>
                  </widget>
                 </item>
@@ -1819,7 +1816,7 @@ color:black;</string>
                    <string>Taxes:</string>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                   </property>
                  </widget>
                 </item>
@@ -1844,7 +1841,7 @@ color:black;</string>
                    <bool>true</bool>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                   </property>
                  </widget>
                 </item>
