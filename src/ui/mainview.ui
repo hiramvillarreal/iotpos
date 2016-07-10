@@ -1217,7 +1217,7 @@ color:black;</string>
                <property name="maximumSize">
                 <size>
                  <width>220</width>
-                 <height>170</height>
+                 <height>180</height>
                 </size>
                </property>
                <property name="layoutDirection">
@@ -1371,7 +1371,7 @@ color:black;</string>
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>9</pointsize>
+                    <pointsize>11</pointsize>
                    </font>
                   </property>
                   <property name="styleSheet">
@@ -1398,7 +1398,7 @@ color:black;</string>
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>9</pointsize>
+                    <pointsize>11</pointsize>
                    </font>
                   </property>
                   <property name="styleSheet">
@@ -1425,7 +1425,7 @@ color:black;</string>
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>9</pointsize>
+                    <pointsize>11</pointsize>
                    </font>
                   </property>
                   <property name="styleSheet">
