@@ -1900,6 +1900,8 @@ if ( doNotAddMoreItems ) { //only for reservations
  
  refreshTotalLabel();
  ui_mainview.rbFilterByDesc->setChecked(true);
+ //tableWidget->verticalScrollBar()->setSliderPosition (tableWidget->verticalScrollBar()->maximum());
+ ui_mainview.tableWidget->scrollToBottom();
 }//insertItem
 
 double iotposView::getTotalQtyOnList(const ProductInfo &info)
