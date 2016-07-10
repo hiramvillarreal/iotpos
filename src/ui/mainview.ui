@@ -1444,6 +1444,9 @@ color:black;</string>
                 </item>
                </layout>
               </widget>
+              <zorder>labelDetailPhoto</zorder>
+              <zorder>groupDetails</zorder>
+              <zorder>groupTotals</zorder>
              </widget>
             </widget>
            </item>
@@ -1503,13 +1506,13 @@ color:black;</string>
                <property name="geometry">
                 <rect>
                  <x>0</x>
-                 <y>-5</y>
-                 <width>401</width>
+                 <y>-6</y>
+                 <width>380</width>
                  <height>160</height>
                 </rect>
                </property>
                <property name="sizePolicy">
-                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
@@ -1522,7 +1525,7 @@ color:black;</string>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>16777215</width>
+                 <width>380</width>
                  <height>160</height>
                 </size>
                </property>
@@ -1533,7 +1536,7 @@ color:black;</string>
                 <string/>
                </property>
                <property name="alignment">
-                <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                </property>
                <property name="flat">
                 <bool>false</bool>
@@ -1546,10 +1549,10 @@ color:black;</string>
                  <number>0</number>
                 </property>
                 <property name="rightMargin">
-                 <number>32</number>
+                 <number>12</number>
                 </property>
                 <property name="bottomMargin">
-                 <number>10</number>
+                 <number>0</number>
                 </property>
                 <property name="horizontalSpacing">
                  <number>0</number>
@@ -1557,8 +1560,8 @@ color:black;</string>
                 <property name="verticalSpacing">
                  <number>1</number>
                 </property>
-                <item row="0" column="3">
-                 <widget class="QLabel" name="lblSubtotal">
+                <item row="1" column="3">
+                 <widget class="QLabel" name="lblSaleTaxes">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
@@ -1574,14 +1577,11 @@ color:black;</string>
                   <property name="text">
                    <string/>
                   </property>
-                  <property name="textFormat">
-                   <enum>Qt::AutoText</enum>
-                  </property>
                   <property name="scaledContents">
                    <bool>false</bool>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
                   </property>
                  </widget>
                 </item>
@@ -1591,14 +1591,14 @@ color:black;</string>
                    <string>Discount:</string>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
                   </property>
                  </widget>
                 </item>
                 <item row="3" column="2">
                  <widget class="QLabel" name="labelTotalpre">
                   <property name="sizePolicy">
-                   <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
@@ -1627,16 +1627,54 @@ color:black;</string>
                    <enum>QFrame::NoFrame</enum>
                   </property>
                   <property name="text">
-                   <string>Total:</string>
+                   <string>Togtal:</string>
                   </property>
                   <property name="scaledContents">
                    <bool>true</bool>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
                   </property>
                   <property name="indent">
                    <number>0</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="2">
+                 <widget class="QLabel" name="lblSubtotalPre">
+                  <property name="text">
+                   <string>Subtotal:</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="3">
+                 <widget class="QLabel" name="lblSubtotal">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>200</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="textFormat">
+                   <enum>Qt::AutoText</enum>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>false</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
                   </property>
                  </widget>
                 </item>
@@ -1678,14 +1716,14 @@ color:black;</string>
                    <bool>true</bool>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
                   </property>
                  </widget>
                 </item>
                 <item row="4" column="2">
                  <widget class="QLabel" name="labelChangepre">
                   <property name="sizePolicy">
-                   <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
@@ -1693,7 +1731,7 @@ color:black;</string>
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
-                    <height>42</height>
+                    <height>0</height>
                    </size>
                   </property>
                   <property name="maximumSize">
@@ -1723,83 +1761,13 @@ color:black;</string>
                    <bool>true</bool>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
                   </property>
                   <property name="margin">
                    <number>0</number>
                   </property>
                   <property name="indent">
                    <number>0</number>
-                  </property>
-                 </widget>
-                </item>
-                <item row="2" column="3">
-                 <widget class="QLabel" name="labelTotalDiscount">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="scaledContents">
-                   <bool>true</bool>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="3">
-                 <widget class="QLabel" name="lblSaleTaxes">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="scaledContents">
-                   <bool>false</bool>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="2">
-                 <widget class="QLabel" name="lblSaleTaxesPre">
-                  <property name="text">
-                   <string>Taxes:</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="2">
-                 <widget class="QLabel" name="lblSubtotalPre">
-                  <property name="text">
-                   <string>Subtotal:</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                   </property>
                  </widget>
                 </item>
@@ -1814,7 +1782,7 @@ color:black;</string>
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
-                    <height>42</height>
+                    <height>0</height>
                    </size>
                   </property>
                   <property name="maximumSize">
@@ -1841,7 +1809,42 @@ color:black;</string>
                    <bool>true</bool>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QLabel" name="lblSaleTaxesPre">
+                  <property name="text">
+                   <string>Taxes:</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="3">
+                 <widget class="QLabel" name="labelTotalDiscount">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>200</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
                   </property>
                  </widget>
                 </item>
