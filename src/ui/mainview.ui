@@ -608,7 +608,7 @@
              <property name="minimumSize">
               <size>
                <width>380</width>
-               <height>165</height>
+               <height>180</height>
               </size>
              </property>
              <property name="maximumSize">
@@ -624,7 +624,7 @@
               <enum>QFrame::Raised</enum>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>2</number>
              </property>
              <widget class="QWidget" name="page">
               <widget class="QGroupBox" name="groupPayment">
@@ -1137,7 +1137,7 @@ color:black;</string>
                <property name="geometry">
                 <rect>
                  <x>220</x>
-                 <y>0</y>
+                 <y>15</y>
                  <width>150</width>
                  <height>150</height>
                 </rect>
@@ -1197,7 +1197,7 @@ color:black;</string>
                <property name="geometry">
                 <rect>
                  <x>0</x>
-                 <y>-5</y>
+                 <y>0</y>
                  <width>220</width>
                  <height>154</height>
                 </rect>
@@ -1474,7 +1474,7 @@ color:black;</string>
              <property name="minimumSize">
               <size>
                <width>380</width>
-               <height>165</height>
+               <height>180</height>
               </size>
              </property>
              <property name="maximumSize">
@@ -1503,9 +1503,9 @@ color:black;</string>
                <property name="geometry">
                 <rect>
                  <x>0</x>
-                 <y>-4</y>
+                 <y>0</y>
                  <width>380</width>
-                 <height>160</height>
+                 <height>180</height>
                 </rect>
                </property>
                <property name="sizePolicy">
@@ -1517,7 +1517,7 @@ color:black;</string>
                <property name="minimumSize">
                 <size>
                  <width>0</width>
-                 <height>0</height>
+                 <height>165</height>
                 </size>
                </property>
                <property name="maximumSize">
@@ -1533,7 +1533,7 @@ color:black;</string>
                 <string/>
                </property>
                <property name="alignment">
-                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
                <property name="flat">
                 <bool>false</bool>
