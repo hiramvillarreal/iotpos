@@ -359,7 +359,7 @@ iotposView::iotposView() //: QWidget(parent)
   loadIcons();
   setUpInputs();
   QTimer::singleShot(500, this, SLOT(setUpTable()));
-  ui_mainview.groupWidgets->setCurrentIndex(pageMain);
+  //ui_mainview.groupWidgets->setCurrentIndex(pageMain);
   ui_mainview.mainPanel->setCurrentIndex(pageMain);
   ui_mainview.stackedWidget_3->setCurrentIndex(1);
   // point the public ui pointers
@@ -790,12 +790,13 @@ void iotposView::settingsChangedOnInitConfig()
 
 void iotposView::showEnterCodeWidget()
 {
-  ui_mainview.groupWidgets->setCurrentIndex(pageMain);
+  //ui_mainview.groupWidgets->setCurrentIndex(pageMain);
   ui_mainview.stackedWidget_2->setCurrentIndex(1);
+  ui_mainview.mainPanel->setCurrentIndex(0); // back to welcome widget
   // BFB. Toggle editItemCode and editFilterByDesc.
   if (ui_mainview.editItemCode->hasFocus()){
     ui_mainview.rbFilterByDesc->setChecked(true);
-    ui_mainview.editFilterByDesc->setFocus();
+    //ui_mainview.editFilterByDesc->setFocus();
   }else
     ui_mainview.editItemCode->setFocus();
     ui_mainview.frameGridView->show();
@@ -819,6 +820,8 @@ void iotposView::buttonDone()
   ui_mainview.mainPanel->setCurrentIndex(0); // back to welcome widget
   ui_mainview.frameGridView->show();
   ui_mainview.stackedWidget_2->setCurrentIndex(1);
+  ui_mainview.rbFilterByDesc->setChecked(true);
+  ui_mainview.editItemCode->setFocus();
 }
 
 void iotposView::checksChanged()
@@ -934,7 +937,8 @@ void iotposView::askForTicketToReturnProduct()
 
 void iotposView::focusPayInput()
 {
-  ui_mainview.groupWidgets->setCurrentIndex(pageMain);
+  //ui_mainview.groupWidgets->setCurrentIndex(pageMain);
+  ui_mainview.mainPanel->setCurrentIndex(0); // back to welcome widget
   ui_mainview.editAmount->setFocus();
   ui_mainview.editAmount->setSelection(0, ui_mainview.editAmount->text().length());
   ui_mainview.stackedWidget_2->setCurrentIndex(0);
@@ -3806,9 +3810,11 @@ void iotposView::cancelCurrentTransaction()
   if (continueIt) {cancelTransaction(getCurrentTransaction());}
   //ui_mainview.labelDetailPoints->show();
   ui_mainview.frameGridView->show();
+  ui_mainview.mainPanel->setCurrentIndex(0);
   ui_mainview.editItemCode->setFocus();
   ui_mainview.stackedWidget_2->setCurrentIndex(1);
   ui_mainview.stackedWidget_3->setCurrentIndex(1);
+
 }
 
 

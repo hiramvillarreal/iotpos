@@ -120,7 +120,7 @@
           </sizepolicy>
          </property>
          <property name="currentIndex">
-          <number>2</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="pageIntro">
           <property name="sizePolicy">
@@ -409,14 +409,14 @@
                  </property>
                  <property name="minimumSize">
                   <size>
-                   <width>380</width>
+                   <width>360</width>
                    <height>0</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
                    <width>16777215</width>
-                   <height>380</height>
+                   <height>16777215</height>
                   </size>
                  </property>
                  <property name="frame">
