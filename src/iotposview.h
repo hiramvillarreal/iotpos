@@ -418,6 +418,7 @@ public:
     void on_rbFilterByPopularity_clicked();
     void on_rbFilterByCategory_clicked();
     void on_editItemCode_returnPressed();
+    void on_buttonSearchDone_clicked();
 };
 
 #endif // IOTPOSVIEW_H

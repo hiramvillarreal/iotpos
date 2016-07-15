@@ -287,6 +287,8 @@ iotposView::iotposView() //: QWidget(parent)
   connect(ui_mainview.listView, SIGNAL(clicked(const QModelIndex &)), SLOT(listViewOnClick(const QModelIndex &)));
   connect(ui_mainview.listView, SIGNAL(entered(const QModelIndex &)), SLOT(listViewOnMouseMove(const QModelIndex &)));
   connect(ui_mainview.buttonSearchDone, SIGNAL(clicked()), SLOT(buttonDone()) );
+  connect(ui_mainview.buttonSearchDone_2, SIGNAL(clicked()), SLOT(buttonDone()) );
+  connect(ui_mainview.buttonSearchDone_3, SIGNAL(clicked()), SLOT(buttonDone()) );
   connect(ui_mainview.checkCard, SIGNAL(toggled(bool)), SLOT(checksChanged())  );
   connect(ui_mainview.checkCash, SIGNAL(toggled(bool)), SLOT(checksChanged())  );
   connect(ui_mainview.checkOwnCredit, SIGNAL(toggled(bool)), SLOT(checksChanged())  );
@@ -815,6 +817,8 @@ void iotposView::buttonDone()
   ui_mainview.editItemDescSearch->setText("");
   ui_mainview.editItemCode->setCursorPosition(0);
   ui_mainview.mainPanel->setCurrentIndex(0); // back to welcome widget
+  ui_mainview.frameGridView->show();
+  ui_mainview.stackedWidget_2->setCurrentIndex(1);
 }
 
 void iotposView::checksChanged()
