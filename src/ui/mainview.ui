@@ -392,7 +392,14 @@
                <property name="spacing">
                 <number>4</number>
                </property>
-               <item row="0" column="7">
+               <item row="0" column="3">
+                <widget class="QRadioButton" name="rbFilterByPopularity">
+                 <property name="text">
+                  <string>Best sellers</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="5">
                 <widget class="QRadioButton" name="rbFilterByCategory">
                  <property name="text">
                   <string>Category</string>
@@ -409,7 +416,7 @@
                  </property>
                  <property name="minimumSize">
                   <size>
-                   <width>360</width>
+                   <width>0</width>
                    <height>0</height>
                   </size>
                  </property>
@@ -432,16 +439,9 @@
                 </widget>
                </item>
                <item row="0" column="6">
-                <widget class="QRadioButton" name="rbFilterByPopularity">
-                 <property name="text">
-                  <string>Best sellers</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="8">
                 <widget class="QComboBox" name="comboFilterByCategory"/>
                </item>
-               <item row="5" column="0" colspan="11">
+               <item row="5" column="0" colspan="9">
                 <widget class="QListView" name="listView">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -592,7 +592,7 @@
              <property name="minimumSize">
               <size>
                <width>380</width>
-               <height>180</height>
+               <height>160</height>
               </size>
              </property>
              <property name="maximumSize">
@@ -617,7 +617,7 @@
                  <x>0</x>
                  <y>0</y>
                  <width>380</width>
-                 <height>154</height>
+                 <height>160</height>
                 </rect>
                </property>
                <property name="sizePolicy">
@@ -1135,7 +1135,7 @@ color:black;</string>
                <property name="geometry">
                 <rect>
                  <x>230</x>
-                 <y>15</y>
+                 <y>10</y>
                  <width>150</width>
                  <height>150</height>
                 </rect>
@@ -1195,7 +1195,7 @@ color:black;</string>
                <property name="geometry">
                 <rect>
                  <x>0</x>
-                 <y>0</y>
+                 <y>-10</y>
                  <width>220</width>
                  <height>160</height>
                 </rect>
@@ -1477,7 +1477,7 @@ color:black;</string>
              <property name="minimumSize">
               <size>
                <width>380</width>
-               <height>180</height>
+               <height>160</height>
               </size>
              </property>
              <property name="maximumSize">
@@ -1506,9 +1506,9 @@ color:black;</string>
                <property name="geometry">
                 <rect>
                  <x>0</x>
-                 <y>-4</y>
+                 <y>0</y>
                  <width>380</width>
-                 <height>180</height>
+                 <height>160</height>
                 </rect>
                </property>
                <property name="sizePolicy">
@@ -1520,13 +1520,13 @@ color:black;</string>
                <property name="minimumSize">
                 <size>
                  <width>0</width>
-                 <height>165</height>
+                 <height>160</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
                  <width>380</width>
-                 <height>185</height>
+                 <height>160</height>
                 </size>
                </property>
                <property name="styleSheet">
@@ -1554,11 +1554,8 @@ color:black;</string>
                 <property name="bottomMargin">
                  <number>0</number>
                 </property>
-                <property name="horizontalSpacing">
+                <property name="spacing">
                  <number>0</number>
-                </property>
-                <property name="verticalSpacing">
-                 <number>1</number>
                 </property>
                 <item row="1" column="3">
                  <widget class="QLabel" name="lblSaleTaxes">

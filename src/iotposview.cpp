@@ -1593,7 +1593,7 @@ void iotposView::insertItem(QString code)
   //qDebug() << "INSERTITEM ---------  " << code;
 
   if (ui_mainview.editItemCode->text()=="*" || ui_mainview.editItemCode->text()=="")
-    productsModel->setFilter("products.isARawProduct=false");
+    productsModel->setFilter("products.isARawProduct=false ORDER BY products.datelastsold DESC");
 
   if((rl.indexIn(code) < 0) && (rL.indexIn(code) < 0) && rds.indexIn(code) < 0  ){
     
@@ -1887,14 +1887,14 @@ if ( doNotAddMoreItems ) { //only for reservations
   qDebug()<<"** INSERTING A PRODUCT [updating balance/transaction]";
   updateBalance(false);
   updateTransaction();
-  productsModel->setFilter("products.isARawProduct=false");
+  productsModel->setFilter("products.isARawProduct=false ORDER BY products.datelastsold DESC ");
   }
   else if ( rl.indexIn(code) == 0 || rL.indexIn(code) == 0 )
     {
       QRegExp regexp = QRegExp(code);
       if (!regexp.isValid())  ui_mainview.editItemCode->setText("");
       if (ui_mainview.editItemCode->text()=="*" || ui_mainview.editItemCode->text()=="")
-        productsModel->setFilter("products.isARawProduct=false");
+        productsModel->setFilter("products.isARawProduct=false ORDER BY products.datelastsold DESC");
       else
         productsModel->setFilter(QString("products.isARawProduct=false and products.name REGEXP '%1'").arg(ui_mainview.editItemCode->text()));
 
@@ -4822,7 +4822,7 @@ void iotposView::setFilter()
   //   If filter by description is selected and the text is empty, and later is re-filtered
   //   then NO pictures are shown; even if is refiltered again.
   QRegExp regexp = QRegExp(ui_mainview.editFilterByDesc->text());
-  
+
   if (ui_mainview.rbFilterByDesc->isChecked()) {       ui_mainview.editItemCode->setFocus();//by description
       if (!regexp.isValid())  ui_mainview.editFilterByDesc->setText("");
       if (ui_mainview.editFilterByDesc->text()=="*" || ui_mainview.editFilterByDesc->text()=="")
