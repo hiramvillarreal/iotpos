@@ -792,6 +792,7 @@ void iotposView::showEnterCodeWidget()
 {
   //ui_mainview.groupWidgets->setCurrentIndex(pageMain);
   ui_mainview.stackedWidget_2->setCurrentIndex(1);
+  ui_mainview.stackedWidget_3->setCurrentIndex(0);
   ui_mainview.mainPanel->setCurrentIndex(0); // back to welcome widget
   // BFB. Toggle editItemCode and editFilterByDesc.
   if (ui_mainview.editItemCode->hasFocus()){
@@ -942,6 +943,7 @@ void iotposView::focusPayInput()
   ui_mainview.editAmount->setFocus();
   ui_mainview.editAmount->setSelection(0, ui_mainview.editAmount->text().length());
   ui_mainview.stackedWidget_2->setCurrentIndex(0);
+  ui_mainview.stackedWidget_3->setCurrentIndex(2);
   hideProductsGrid();
 }
 
@@ -3193,6 +3195,7 @@ void iotposView::finishCurrentTransaction()
    ui_mainview.editItemCode->setFocus();
    ui_mainview.rbFilterByDesc->setChecked(true);
    ui_mainview.stackedWidget_3->setCurrentIndex(1);
+
 }
 
 
@@ -5779,6 +5782,8 @@ void iotposView::suspendSale()
     notify->setPixmap(pixmap);
     notify->sendEvent();
   }
+ui_mainview.stackedWidget_2->setCurrentIndex(1);
+ui_mainview.stackedWidget_3->setCurrentIndex(1);
 }
 
 //This will resume the sale, using a new balanceid.
@@ -6529,6 +6534,7 @@ void iotposView::createClient()
     delete myDb;
     ui_mainview.editItemCode->setFocus();
     ui_mainview.frameGridView->show();
+
 }
 
 void iotposView::showCreditPayment()
