@@ -598,7 +598,7 @@
              <property name="maximumSize">
               <size>
                <width>16777215</width>
-               <height>180</height>
+               <height>160</height>
               </size>
              </property>
              <property name="frameShape">
@@ -1484,7 +1484,7 @@ color:black;</string>
              <property name="maximumSize">
               <size>
                <width>16777215</width>
-               <height>180</height>
+               <height>160</height>
               </size>
              </property>
              <property name="layoutDirection">
@@ -1500,7 +1500,7 @@ color:black;</string>
               <number>0</number>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="page_10">
               <widget class="QGroupBox" name="groupTotals">
@@ -1558,19 +1558,46 @@ color:black;</string>
                 <property name="spacing">
                  <number>0</number>
                 </property>
-                <item row="2" column="3">
-                 <widget class="QLabel" name="labelTotalDiscount">
+                <item row="3" column="2">
+                 <widget class="QLabel" name="lblSubtotalPre">
+                  <property name="text">
+                   <string>Subtotal:</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="6" column="3">
+                 <widget class="QLabel" name="labelTotal">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                   <property name="maximumSize">
                    <size>
                     <width>200</width>
                     <height>16777215</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>28</pointsize>
+                   </font>
+                  </property>
+                  <property name="layoutDirection">
+                   <enum>Qt::LeftToRight</enum>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::NoFrame</enum>
                   </property>
                   <property name="text">
                    <string/>
@@ -1583,7 +1610,52 @@ color:black;</string>
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="2">
+                <item row="6" column="2">
+                 <widget class="QLabel" name="labelTotalpre">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>28</pointsize>
+                   </font>
+                  </property>
+                  <property name="layoutDirection">
+                   <enum>Qt::LeftToRight</enum>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::NoFrame</enum>
+                  </property>
+                  <property name="text">
+                   <string>Total:</string>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+                  </property>
+                  <property name="indent">
+                   <number>0</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="2">
                  <widget class="QLabel" name="lblSaleTaxesPre">
                   <property name="text">
                    <string>Taxes:</string>
@@ -1593,13 +1665,70 @@ color:black;</string>
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="3">
-                 <widget class="QLabel" name="lblSaleTaxes">
+                <item row="7" column="2">
+                 <widget class="QLabel" name="labelChangepre">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>28</pointsize>
+                   </font>
+                  </property>
+                  <property name="layoutDirection">
+                   <enum>Qt::LeftToRight</enum>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::NoFrame</enum>
+                  </property>
+                  <property name="lineWidth">
+                   <number>1</number>
+                  </property>
+                  <property name="text">
+                   <string>Change:</string>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+                  </property>
+                  <property name="margin">
+                   <number>0</number>
+                  </property>
+                  <property name="indent">
+                   <number>0</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="3">
+                 <widget class="QLabel" name="labelChange">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
                   </property>
                   <property name="maximumSize">
                    <size>
@@ -1607,31 +1736,22 @@ color:black;</string>
                     <height>16777215</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>28</pointsize>
+                   </font>
+                  </property>
+                  <property name="layoutDirection">
+                   <enum>Qt::LeftToRight</enum>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::NoFrame</enum>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
                   <property name="scaledContents">
-                   <bool>false</bool>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
-                  </property>
-                 </widget>
-                </item>
-                <item row="2" column="2">
-                 <widget class="QLabel" name="labelTotalDiscountpre">
-                  <property name="text">
-                   <string>Discount:</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
-                  </property>
-                 </widget>
-                </item>
-                <item row="3" column="2">
-                 <widget class="QLabel" name="lblSubtotalPre">
-                  <property name="text">
-                   <string>Subtotal:</string>
+                   <bool>true</bool>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
@@ -1657,6 +1777,31 @@ color:black;</string>
                   </property>
                   <property name="textFormat">
                    <enum>Qt::AutoText</enum>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>false</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="3">
+                 <widget class="QLabel" name="lblSaleTaxes">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>200</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
                   </property>
                   <property name="scaledContents">
                    <bool>false</bool>
@@ -2133,13 +2278,13 @@ color:black;</string>
               </widget>
              </widget>
              <widget class="QWidget" name="page_7">
-              <widget class="QLabel" name="labelChange">
+              <widget class="QLabel" name="labelTotalDiscount">
                <property name="geometry">
                 <rect>
                  <x>170</x>
-                 <y>110</y>
+                 <y>20</y>
                  <width>200</width>
-                 <height>43</height>
+                 <height>48</height>
                 </rect>
                </property>
                <property name="sizePolicy">
@@ -2148,28 +2293,11 @@ color:black;</string>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>0</height>
-                </size>
-               </property>
                <property name="maximumSize">
                 <size>
                  <width>200</width>
                  <height>16777215</height>
                 </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>28</pointsize>
-                </font>
-               </property>
-               <property name="layoutDirection">
-                <enum>Qt::LeftToRight</enum>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
                </property>
                <property name="text">
                 <string/>
@@ -2181,157 +2309,17 @@ color:black;</string>
                 <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
                </property>
               </widget>
-              <widget class="QLabel" name="labelTotalpre">
+              <widget class="QLabel" name="labelTotalDiscountpre">
                <property name="geometry">
                 <rect>
                  <x>10</x>
-                 <y>67</y>
+                 <y>20</y>
                  <width>160</width>
-                 <height>43</height>
+                 <height>48</height>
                 </rect>
                </property>
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>28</pointsize>
-                </font>
-               </property>
-               <property name="layoutDirection">
-                <enum>Qt::LeftToRight</enum>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
-               </property>
                <property name="text">
-                <string>Total:</string>
-               </property>
-               <property name="scaledContents">
-                <bool>true</bool>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
-               </property>
-               <property name="indent">
-                <number>0</number>
-               </property>
-              </widget>
-              <widget class="QLabel" name="labelChangepre">
-               <property name="geometry">
-                <rect>
-                 <x>10</x>
-                 <y>110</y>
-                 <width>160</width>
-                 <height>43</height>
-                </rect>
-               </property>
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>28</pointsize>
-                </font>
-               </property>
-               <property name="layoutDirection">
-                <enum>Qt::LeftToRight</enum>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
-               </property>
-               <property name="lineWidth">
-                <number>1</number>
-               </property>
-               <property name="text">
-                <string>Change:</string>
-               </property>
-               <property name="scaledContents">
-                <bool>true</bool>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
-               </property>
-               <property name="margin">
-                <number>0</number>
-               </property>
-               <property name="indent">
-                <number>0</number>
-               </property>
-              </widget>
-              <widget class="QLabel" name="labelTotal">
-               <property name="geometry">
-                <rect>
-                 <x>170</x>
-                 <y>67</y>
-                 <width>200</width>
-                 <height>43</height>
-                </rect>
-               </property>
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>200</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>28</pointsize>
-                </font>
-               </property>
-               <property name="layoutDirection">
-                <enum>Qt::LeftToRight</enum>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="scaledContents">
-                <bool>true</bool>
+                <string>Discount:</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
