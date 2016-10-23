@@ -63,7 +63,7 @@ OPTIONAL:copy the iotposrc file to your local .kde/share/config directory:
   
 After installation, you need to create a database and user on mysql, to do this:
 
-  cd iotpos/database_resources
+  cd ~/iotpos/database_resources
   cat iotpos_mysql.sql | mysql -u root -p
   
 To restore a database with preloaded products and examples:
