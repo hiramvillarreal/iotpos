@@ -118,10 +118,22 @@ CONECCTIONS FOR THE HARDWARE
 
 -----SERIAL TTL THERMAL PRINTER----
 
-WARNING!!!: Make sure a serial TTL printer is used, NEVER CONNECT A SERIAL RS232 TO PI'S GPIO!!! even using a TTL conection, never conect
-the side printer Tx pin to Rx GPIO on the pi, the Tx wire is only used for rare cases where the printer returns data to the computer.
-It’s left unconnected because the printer works at 5 Volts and the Raspberry Pi at 3.3 Volts… connecting directly to the Rx pin could
-permanently damage the Raspberry Pi! (The other direction is safe as-is.). 
+NOTE: TTL printers are not supported on the Raspberry Pi 3 by default. You have to Add device tree to /boot/config.txt to disable the Raspberry Pi 3 bluetooth.
+
+  sudo nano /boot/config.txt
+  
+Add at the end of the file:
+
+  dtoverlay=pi3-disable-bt
+
+Exit the editor saving your changes.
+
+Reboot the pi
+
+  sudo reboot
+  
+
+WARNING!!!: Make sure a serial TTL printer is used, NEVER CONNECT A SERIAL RS232 TO PI'S GPIO!!! even using a TTL conection, never conect the side printer Tx pin to Rx GPIO on the pi, the Tx wire is only used for rare cases where the printer returns data to the computer. It’s left unconnected because the printer works at 5 Volts and the Raspberry Pi at 3.3 Volts… connecting directly to the Rx pin could permanently damage the Raspberry Pi! (The other direction is safe as-is.). 
 
   Serial Data Cable Rx TO    Physical pin 8 It's also commonly known as "Serial TX" ttyAMA0.
   Serial Data Cable Tx  DO NOT CONNECT IT TO THE GPIO RX AS SOME ARE 5 V TTL WILL DAMAGE THE RASPBERRY PI!!!
