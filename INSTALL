@@ -1,37 +1,22 @@
------------------------Installing iotPOS on the Raspberry Pi and Hardware setup.--------------------------------------
+-----------------------Installing iotPOS on the Raspberry Pi and Hardware setup--------------------------------------
 
-For raspbian OS we recommend to uninstall useless apps for a dedicated point of sale:
-
-  sudo apt-get update
-  sudo apt-get remove scratch wolfram-engine dillo netsurf-gtk sonic-pi minecraft-pi
-  sudo apt-get clean
-  sudo apt-get autoremove
-  sudo reboot
-  
-That will give you an extra 800 Mb space.
 
 ---------------------------------------------------SOFTWARE-SETUP------------------------------------------------------
-
-To compile and install:
 
 Just in case you already didn't, make sure everything is up to date:
 
   sudo apt-get update
 
 Now that everything is up to date, we can install the needed kde4 packages   (kdelibs4, kdebase4, kdepimlibs4) and all of his
-  dependencies (qt4...):
+  dependencies (qt4...), and everything else we need  for the compile and install:
   
-  sudo apt-get install kdebase-runtime libqt4-dev
+  sudo apt-get install kdebase-runtime libqt4-dev build-essential g++ cmake gettext libqt4-sql-mysql kdelibs5-dev
 
 Once you have KDE, and QT4 installed, we can install mysql:
 
-  sudo apt-get install mysql-client mysql-server
-  
-Now we need to install everything else that’s needed for the compile:
+  sudo apt-get install mysql-client mysql-server 
 
-  sudo apt-get install build-essential g++ cmake gettext libqt4-sql-mysql kdelibs5-dev
-
-Download from git:
+Now you can download the app from git:
  
   cd ~
   git clone https://github.com/hiramvillarreal/iotpos
