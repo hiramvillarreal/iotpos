@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>715</width>
-    <height>332</height>
+    <height>526</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -56,7 +56,7 @@
       </size>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>13</number>
      </property>
      <widget class="QWidget" name="pageWelcome">
       <layout class="QGridLayout" name="gridLayout">
@@ -1221,9 +1221,36 @@
            <property name="title">
             <string/>
            </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
            <layout class="QHBoxLayout" name="horizontalLayout">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
             <item>
              <widget class="QLabel" name="label">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
               <property name="text">
                <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -1235,6 +1262,12 @@ p, li { white-space: pre-wrap; }
             </item>
             <item>
              <widget class="QRadioButton" name="chViewProductsListAsTable">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
               <property name="text">
                <string>Table</string>
               </property>
@@ -1242,6 +1275,18 @@ p, li { white-space: pre-wrap; }
             </item>
             <item>
              <widget class="QRadioButton" name="chViewProductsListAsGrid">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="baseSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
               <property name="text">
                <string>Grid</string>
               </property>
@@ -1342,6 +1387,13 @@ p, li { white-space: pre-wrap; }
        <item>
         <layout class="QHBoxLayout">
          <item>
+          <widget class="QLabel" name="errLabel">
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+         </item>
+         <item>
           <spacer>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
@@ -1376,13 +1428,6 @@ p, li { white-space: pre-wrap; }
           </widget>
          </item>
         </layout>
-       </item>
-       <item>
-        <widget class="QLabel" name="errLabel">
-         <property name="text">
-          <string>TextLabel</string>
-         </property>
-        </widget>
        </item>
       </layout>
      </widget>
@@ -2827,6 +2872,9 @@ color:black;</string>
          <widget class="QRadioButton" name="rbProductsFilterByDesc">
           <property name="text">
            <string>by description</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
           </property>
          </widget>
         </item>

@@ -58,7 +58,7 @@
      <property name="minimumSize">
       <size>
        <width>736</width>
-       <height>450</height>
+       <height>420</height>
       </size>
      </property>
      <property name="maximumSize">
@@ -1235,7 +1235,7 @@ color:black;</string>
                  <number>0</number>
                 </property>
                 <property name="leftMargin">
-                 <number>2</number>
+                 <number>0</number>
                 </property>
                 <property name="topMargin">
                  <number>0</number>
@@ -1269,11 +1269,14 @@ color:black;</string>
                   <property name="text">
                    <string>label</string>
                   </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
                   <property name="wordWrap">
                    <bool>true</bool>
                   </property>
                   <property name="indent">
-                   <number>6</number>
+                   <number>4</number>
                   </property>
                  </widget>
                 </item>
@@ -1500,7 +1503,7 @@ color:black;</string>
               <number>0</number>
              </property>
              <property name="currentIndex">
-              <number>0</number>
+              <number>1</number>
              </property>
              <widget class="QWidget" name="page_10">
               <widget class="QGroupBox" name="groupTotals">
@@ -3281,15 +3284,15 @@ p, li { white-space: pre-wrap; }
  </widget>
  <customwidgets>
   <customwidget>
-   <class>MibitLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>../../mibitWidgets/mibitlineedit.h</header>
-  </customwidget>
-  <customwidget>
    <class>KPlotWidget</class>
    <extends>QFrame</extends>
    <header>kplotwidget.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MibitLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>../../mibitWidgets/mibitlineedit.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
