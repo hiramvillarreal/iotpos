@@ -1,38 +1,22 @@
------------------------Installing iotPOS on the Raspberry Pi and Hardware setup.--------------------------------------
+-----------------------Installing iotPOS on the Raspberry Pi and Hardware setup--------------------------------------
 
-For raspbian OS we recommend to uninstall useless apps for a dedicated point of sale:
-
-  sudo apt-get update
-  sudo apt-get remove scratch wolfram-engine dillo netsurf-gtk sonic-pi minecraft-pi
-  sudo apt-get purge libreoffice*
-  sudo apt-get clean
-  sudo apt-get autoremove
-  sudo reboot
-  
-That will give you an extra 800 Mb space.
 
 ---------------------------------------------------SOFTWARE-SETUP------------------------------------------------------
-
-To compile and install:
 
 Just in case you already didn't, make sure everything is up to date:
 
   sudo apt-get update
 
 Now that everything is up to date, we can install the needed kde4 packages   (kdelibs4, kdebase4, kdepimlibs4) and all of his
-  dependencies (qt4...):
+  dependencies (qt4...), and everything else we need  for the compile and install:
   
-  sudo apt-get install kdebase-runtime libqt4-dev
+  sudo apt-get install kdebase-runtime libqt4-dev build-essential g++ cmake gettext libqt4-sql-mysql kdelibs5-dev
 
 Once you have KDE, and QT4 installed, we can install mysql:
 
-  sudo apt-get install mysql-client mysql-server
-  
-Now we need to install everything else that’s needed for the compile:
+  sudo apt-get install mysql-client mysql-server 
 
-  sudo apt-get install build-essential g++ cmake gettext libqt4-sql-mysql kdelibs5-dev
-
-Download from git:
+Now you can download the app from git:
  
   cd ~
   git clone https://github.com/hiramvillarreal/iotpos
@@ -64,7 +48,7 @@ OPTIONAL:copy the iotposrc file to your local .kde/share/config directory:
   
 After installation, you need to create a database and user on mysql, to do this:
 
-  cd iotpos/database_resources
+  cd ~/iotpos/database_resources
   cat iotpos_mysql.sql | mysql -u root -p
   
 To restore a database with preloaded products and examples:
@@ -119,10 +103,22 @@ CONECCTIONS FOR THE HARDWARE
 
 -----SERIAL TTL THERMAL PRINTER----
 
-WARNING!!!: Make sure a serial TTL printer is used, NEVER CONNECT A SERIAL RS232 TO PI'S GPIO!!! even using a TTL conection, never conect
-the side printer Tx pin to Rx GPIO on the pi, the Tx wire is only used for rare cases where the printer returns data to the computer.
-It’s left unconnected because the printer works at 5 Volts and the Raspberry Pi at 3.3 Volts… connecting directly to the Rx pin could
-permanently damage the Raspberry Pi! (The other direction is safe as-is.). 
+NOTE: TTL printers are not supported on the Raspberry Pi 3 by default. You have to Add device tree to /boot/config.txt to disable the Raspberry Pi 3 bluetooth.
+
+  sudo nano /boot/config.txt
+  
+Add at the end of the file:
+
+  dtoverlay=pi3-disable-bt
+
+Exit the editor saving your changes.
+
+Reboot the pi
+
+  sudo reboot
+  
+
+WARNING!!!: Make sure a serial TTL printer is used, NEVER CONNECT A SERIAL RS232 TO PI'S GPIO!!! even using a TTL conection, never conect the side printer Tx pin to Rx GPIO on the pi, the Tx wire is only used for rare cases where the printer returns data to the computer. It’s left unconnected because the printer works at 5 Volts and the Raspberry Pi at 3.3 Volts… connecting directly to the Rx pin could permanently damage the Raspberry Pi! (The other direction is safe as-is.). 
 
   Serial Data Cable Rx TO    Physical pin 8 It's also commonly known as "Serial TX" ttyAMA0.
   Serial Data Cable Tx  DO NOT CONNECT IT TO THE GPIO RX AS SOME ARE 5 V TTL WILL DAMAGE THE RASPBERRY PI!!!

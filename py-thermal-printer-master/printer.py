@@ -394,14 +394,6 @@ fc font b centred (next line blank)
 nl
 il inverse left
 """
-    p.print_markup(markup)
-
-    # runtime dependency on Python Imaging Library
-    import Image, ImageDraw
-    i = Image.open("example-lammas.png")
-    data = list(i.getdata())
-    w, h = i.size
-    p.print_bitmap(data, w, h, True)
     p.linefeed()
     p.justify("C")
     p.barcode_chr("2")
