@@ -56,7 +56,7 @@
       </size>
      </property>
      <property name="currentIndex">
-      <number>13</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="pageWelcome">
       <layout class="QGridLayout" name="gridLayout">

@@ -45,7 +45,8 @@
 #include <kstandarddirs.h>
 
 iotstock::iotstock()
-    : KXmlGuiWindow(0,Qt::FramelessWindowHint ),
+    //: KXmlGuiWindow(0,Qt::FramelessWindowHint ),
+     : KXmlGuiWindow( ),
       m_view(new iotstockView(this)),
       m_printer(0)
 {

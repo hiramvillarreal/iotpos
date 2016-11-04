@@ -57,8 +57,8 @@
 
 //For a frameless window: KMainWindow(0, Qt::FramelessWindowHint)
 iotpos::iotpos()
-  //: KXmlGuiWindow(0,Qt::FramelessWindowHint),
-: KXmlGuiWindow(0,Qt::FramelessWindowHint),
+: KXmlGuiWindow(),
+//: KXmlGuiWindow(0,Qt::FramelessWindowHint),
       m_view(new iotposView())
 {
     setObjectName(QLatin1String("iotpos"));
