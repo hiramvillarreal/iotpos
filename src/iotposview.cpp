@@ -110,7 +110,7 @@ class BalanceDialog : public QDialog
       gridLayout = new QGridLayout(this);
       editText = new QTextEdit(str);
       editText->setReadOnly(true);
-      editText->setMinimumSize(QSize(420,360));
+      editText->setMinimumSize(QSize(380,360));
       gridLayout->addWidget(editText, 0, 0);
       buttonClose = new QPushButton(this);
       buttonClose->setText(i18n("Continue"));
@@ -7170,5 +7170,6 @@ void iotposView::on_rbFilterByPopularity_clicked()
 void iotposView::on_editItemCode_returnPressed()
 {
    ui_mainview.rbFilterByDesc->setChecked(true);
+
 }
 

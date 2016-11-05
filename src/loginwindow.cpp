@@ -300,6 +300,7 @@ bool LoginWindow::checkPassword()
     }//if password is ok
     else {
       showError = true;
+
     }
   } else showError = true;
   if (showError) showErrorMessage(i18n("Invalid username or password"));
@@ -327,6 +328,7 @@ void LoginWindow::acceptIt()
 {
   if (checkPassword()) QDialog::accept();
   QProcess process;
+  int y = (QApplication::desktop()->height());
   process.startDetached("sudo", QStringList() << "python" << "/home/pi/iotpos/py-thermal-printer-master/printer2.py");
   process.startDetached("/bin/sh", QStringList()<< "/home/pi/iotpos/scripts/signMail.sh");
 }

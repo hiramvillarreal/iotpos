@@ -55,9 +55,12 @@
 #include <QFileInfo>
 
 
+
 //For a frameless window: KMainWindow(0, Qt::FramelessWindowHint)
 iotpos::iotpos()
+
 : KXmlGuiWindow(),
+
 //: KXmlGuiWindow(0,Qt::FramelessWindowHint),
       m_view(new iotposView())
 {
@@ -368,7 +371,11 @@ void iotpos::setupActions()
   setupGUI();
 
   //FIXME: SCREEN SIZE
-  setWindowState( windowState() | Qt::WindowMaximized); // set
+  int y = (QApplication::desktop()->height());
+  if (y < 640){
+       setWindowState( windowState() | Qt::WindowFullScreen); // set
+
+  }else setWindowState( windowState() | Qt::WindowMaximized); // set
   //setGeometry(QApplication::desktop()->screenGeometry(this));
   if (!Settings::splitterSizes().isEmpty()) m_view->setTheSplitterSizes(Settings::splitterSizes());
   if (!Settings::gridSplitterSizes().isEmpty()) m_view->setTheGridSplitterSizes(Settings::gridSplitterSizes());
