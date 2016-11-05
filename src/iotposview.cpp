@@ -405,7 +405,7 @@ setupGraphs();
 }
 // UI and Database -- GRAPHS.
 
-/*
+
 void iotposView::updateGraphs()
 {
    if (!db.isOpen()) setupDB();
@@ -466,7 +466,7 @@ void iotposView::updateGraphs()
 }
 
 }
-*/
+
 void iotposView::setupGraphs()
 {
  if (!db.isOpen()) setupDB();
