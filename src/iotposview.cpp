@@ -110,7 +110,7 @@ class BalanceDialog : public QDialog
       gridLayout = new QGridLayout(this);
       editText = new QTextEdit(str);
       editText->setReadOnly(true);
-      editText->setMinimumSize(QSize(320,360));
+      editText->setMinimumSize(QSize(420,360));
       gridLayout->addWidget(editText, 0, 0);
       buttonClose = new QPushButton(this);
       buttonClose->setText(i18n("Continue"));
@@ -162,15 +162,15 @@ iotposView::iotposView() //: QWidget(parent)
     //graphSoldItemsCreated = false;
     timerCheckDb = new QTimer(this);
     timerCheckDb->setInterval(3000);
-    timerUpdateGraphs = new QTimer(this);
-    timerUpdateGraphs->setInterval(300000);
+   // timerUpdateGraphs = new QTimer(this);
+  //  timerUpdateGraphs->setInterval(300000);
     categoriesHash.clear();
     subcategoriesHash.clear();
    // departmentsHash.clear();
     //setupSignalConnections();
  //   QTimer::singleShot(1100, this, SLOT(setupDb()));
  //   QTimer::singleShot(2000, timerCheckDb, SLOT(start()));
-    QTimer::singleShot(20000, timerUpdateGraphs, SLOT(start()));
+   // QTimer::singleShot(20000, timerUpdateGraphs, SLOT(start()));
     QTimer::singleShot(2010, this, SLOT(showWelcomeGraphs()));
     QTimer::singleShot(2000, this, SLOT(login()));
     //aquimeme
@@ -329,7 +329,7 @@ iotposView::iotposView() //: QWidget(parent)
   connect(ui_mainview.btnPrintCreditReport, SIGNAL(clicked()), SLOT(printCreditReport()));
   connect(ui_mainview.editClientIdForCredit, SIGNAL(returnPressed()), SLOT(filterClientForCredit()));
   connect(ui_mainview.btnAddClient, SIGNAL(clicked()), SLOT(createClient()) );
-  connect(timerUpdateGraphs, SIGNAL(timeout()), this, SLOT(updateGraphs()));
+ // connect(timerUpdateGraphs, SIGNAL(timeout()), this, SLOT(updateGraphs()));
 
   timerClock->start(1000);
 
@@ -405,7 +405,7 @@ setupGraphs();
 }
 // UI and Database -- GRAPHS.
 
-
+/*
 void iotposView::updateGraphs()
 {
    if (!db.isOpen()) setupDB();
@@ -466,7 +466,7 @@ void iotposView::updateGraphs()
 }
 
 }
-
+*/
 void iotposView::setupGraphs()
 {
  if (!db.isOpen()) setupDB();
@@ -1118,7 +1118,7 @@ void iotposView::login()
       if (loggedUserRole == roleAdmin) {
         emit signalAdminLoggedOn();
         ui_mainview.labelBanner->setVisible(true);
-        updateGraphs();
+       // updateGraphs();
         //if (!canStartSelling()) startOperation();
       } else {
         emit signalAdminLoggedOff();
@@ -3186,7 +3186,7 @@ void iotposView::finishCurrentTransaction()
    if (!ui_mainview.groupSaleDate->isHidden()) ui_mainview.groupSaleDate->hide(); //finally we hide the sale date group
    completingOrder = false; //cleaning flag
    oDiscountMoney = 0; //reset discount money... the new discount type.
-   if (loggedUserRole == roleAdmin) {updateGraphs();}
+   if (loggedUserRole == roleAdmin) {/*updateGraphs();*/}
    //showProductsGrid();
    ui_mainview.frameGridView->show();
    ui_mainview.stackedWidget_2->setCurrentIndex(1);
