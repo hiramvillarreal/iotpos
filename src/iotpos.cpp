@@ -374,8 +374,10 @@ void iotpos::setupActions()
   int y = (QApplication::desktop()->height());
   if (y < 640){
        setWindowState( windowState() | Qt::WindowFullScreen); // set
-
-  }else setWindowState( windowState() | Qt::WindowMaximized); // set
+  }
+  else {
+      setWindowState( windowState() | Qt::WindowMaximized);
+  }// set
   //setGeometry(QApplication::desktop()->screenGeometry(this));
   if (!Settings::splitterSizes().isEmpty()) m_view->setTheSplitterSizes(Settings::splitterSizes());
   if (!Settings::gridSplitterSizes().isEmpty()) m_view->setTheGridSplitterSizes(Settings::gridSplitterSizes());
