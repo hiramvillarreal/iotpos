@@ -1,6 +1,12 @@
 -----------------------Installing iotPOS on the Raspberry Pi and Hardware setup--------------------------------------
-
-
+-For raspbian OS we recommend to uninstall useless apps for a dedicated point of sale:		
+	
+ -  sudo apt-get update		
+ -  sudo apt-get remove scratch wolfram-engine sonic-pi minecraft-pi		
+ -  sudo apt-get clean		
+ -  sudo apt-get autoremove		
+ -  sudo reboot
+ 
 ---------------------------------------------------SOFTWARE-SETUP------------------------------------------------------
 
 Just in case you already didn't, make sure everything is up to date:
