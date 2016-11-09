@@ -32,7 +32,6 @@
  <ToolBar name="aBasicToolBar">
   <text>Basic Use Toolbar</text>
   <Action name="startOperation"/>
-  <text>Basic Use Toolbar</text>
   <Action name="enterCode"/>
   <Action name="deleteSelectedItem"/>
   <Action name="payFocus"/>
