@@ -68,7 +68,14 @@ iotstock::iotstock()
 
     // Add typical actions and save size/toolbars/statusbar
     setupGUI();
-    setWindowState( windowState() | Qt::WindowMaximized );
+    int y = (QApplication::desktop()->height());
+    if (y < 640){
+    setWindowState( windowState() | Qt::WindowFullScreen );// set
+    }
+    else {
+        setWindowState( windowState() | Qt::WindowMaximized);
+    }// set
+
     disableUI();
     // allow the view to change the statusbar and caption
     connect(m_view, SIGNAL(signalChangeStatusbar(const QString&)),
