@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>490</width>
-    <height>759</height>
+    <height>856</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -207,7 +207,7 @@
        <item row="3" column="1">
         <layout class="QHBoxLayout" name="horizontalLayout_4">
          <item>
-          <widget class="KDateTimeWidget" name="deliveryDT"/>
+          <widget class="KDateTimeWidget" name="deliveryDT" native="true"/>
          </item>
          <item>
           <widget class="QLabel" name="lblDateError">
@@ -633,7 +633,7 @@ p, li { white-space: pre-wrap; }
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="MibitLineEdit" name="editClientCell">
+         <widget class="MibitLineEdit" name="editClientMail">
           <property name="minimumSize">
            <size>
             <width>150</width>
@@ -688,14 +688,14 @@ p, li { white-space: pre-wrap; }
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KDateTimeWidget</class>
-   <extends>QWidget</extends>
-   <header>kdatetimewidget.h</header>
-  </customwidget>
-  <customwidget>
    <class>MibitLineEdit</class>
    <extends>QLineEdit</extends>
    <header>../../mibitWidgets/mibitlineedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KDateTimeWidget</class>
+   <extends>QWidget</extends>
+   <header>kdatetimewidget.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

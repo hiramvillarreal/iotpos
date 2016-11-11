@@ -39,8 +39,8 @@ msgid "Phone number"
 msgstr "Número telefónico"
 
 #: clienteditor.cpp:60
-msgid "Cell phone number"
-msgstr "Celular:"
+msgid "E-mail"
+msgstr "E-mail:"
 
 #: clienteditor.cpp:61
 msgid "Accumulated points"
@@ -247,8 +247,8 @@ msgstr "Teléfono:"
 #. i18n: ectx: property (text), widget (QLabel, label_18)
 #: po/extractedrc.cpp:33 po/extractedrc.cpp:96 extractedrc.cpp:33
 #: extractedrc.cpp:96
-msgid "Cell Phone:"
-msgstr "Celular:"
+msgid "E-mail:"
+msgstr "E-mail:"
 
 #. i18n: file: ui/editclient_widget.ui:133
 #. i18n: ectx: property (text), widget (QPushButton, btnChangeClientPhoto)
@@ -1249,8 +1249,8 @@ msgstr "Teléfono"
 #. i18n: file: ui/providerseditor.ui:78
 #. i18n: ectx: property (text), widget (QLabel, label_18)
 #: po/extractedrc.cpp:481 extractedrc.cpp:481
-msgid "&Cell Phone:"
-msgstr "Celular:"
+msgid "&E-mail:"
+msgstr "E-mail:"
 
 #. i18n: file: ui/providerseditor.ui:97
 #. i18n: ectx: property (title), widget (QGroupBox, groupProducts)

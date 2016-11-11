@@ -43,7 +43,7 @@ class ClientEditor : public KDialog
     void setName(QString name) { ui->editClientName->setText(name); };
     void setAddress(QString address) { ui->editClientAddress->setText(address); } ;
     void setPhone(QString phone) { ui->editClientPhone->setText(phone); };
-    void setCell(QString cell) { ui->editClientCell->setText(cell); };
+    void setCell(QString cell) { ui->editClientMail->setText(cell); };
     void setPoints(qulonglong p) { ui->editClientPoints->setText(QString::number(p)); };
     void setDiscount(double d) {ui->editClientDiscount->setText(QString::number(d)); };
     void setPhoto(QPixmap photo) { ui->labelClientPhoto->setPixmap(photo); pix = photo; };
@@ -54,7 +54,7 @@ class ClientEditor : public KDialog
     QString getName(){ return ui->editClientName->text();};
     QString getAddress(){ return ui->editClientAddress->toPlainText();};
     QString getPhone(){ return ui->editClientPhone->text();};
-    QString getCell(){ return ui->editClientCell->text();};
+    QString getCell(){ return ui->editClientMail->text();};
     qulonglong getPoints() { return ui->editClientPoints->text().toULongLong(); };
     double  getDiscount() {return ui->editClientDiscount->text().toDouble(); }
     QPixmap getPhoto(){ return pix;};

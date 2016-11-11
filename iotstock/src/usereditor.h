@@ -42,7 +42,7 @@ class UserEditor : public KDialog
     void setRealName(QString rname) { ui->editUsersName->setText(rname); };
     void setAddress(QString address) { ui->editUsersAddress->setText(address); } ;
     void setPhone(QString phone) { ui->editUsersPhone->setText(phone); };
-    void setCell(QString cell) { ui->editUsersCell->setText(cell); };
+    void setCell(QString cell) { ui->editUsersMail->setText(cell); };
     void setPhoto(QPixmap photo) { ui->labelUsersPhoto->setPixmap(photo); pix = photo; };
     void setId(long int id) { userId = id; };
     void setUserRole(const int &role);
@@ -53,7 +53,7 @@ class UserEditor : public KDialog
     QString getRealName(){ return ui->editUsersName->text();};
     QString getAddress(){ return ui->editUsersAddress->toPlainText();};
     QString getPhone(){ return ui->editUsersPhone->text();};
-    QString getCell(){ return ui->editUsersCell->text();};
+    QString getCell(){ return ui->editUsersMail->text();};
     QString getNewPassword() { return ui->editUsersPassword->text(); };
     QPixmap getPhoto(){ return pix;};
     int     getUserRole();

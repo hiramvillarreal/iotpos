@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>380</width>
-    <height>374</height>
+    <height>314</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -65,22 +65,6 @@
      </property>
     </widget>
    </item>
-   <item row="5" column="0" colspan="2">
-    <widget class="QTextEdit" name="editClientAddress">
-     <property name="maximumSize">
-      <size>
-       <width>16777215</width>
-       <height>60</height>
-      </size>
-     </property>
-     <property name="tabChangesFocus">
-      <bool>true</bool>
-     </property>
-     <property name="acceptRichText">
-      <bool>false</bool>
-     </property>
-    </widget>
-   </item>
    <item row="6" column="0">
     <widget class="QLabel" name="label_17">
      <property name="text">
@@ -94,10 +78,10 @@
    <item row="6" column="1">
     <widget class="QLabel" name="label_18">
      <property name="text">
-      <string>Cell Phone:</string>
+      <string>E-mail</string>
      </property>
      <property name="buddy">
-      <cstring>editClientCell</cstring>
+      <cstring>editClientMail</cstring>
      </property>
     </widget>
    </item>
@@ -118,7 +102,7 @@
     </widget>
    </item>
    <item row="7" column="1">
-    <widget class="MibitLineEdit" name="editClientCell">
+    <widget class="MibitLineEdit" name="editClientMail">
      <property name="maximumSize">
       <size>
        <width>100</width>
@@ -220,18 +204,34 @@
      </property>
     </widget>
    </item>
+   <item row="5" column="0" colspan="2">
+    <widget class="QTextEdit" name="editClientAddress">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="tabChangesFocus">
+      <bool>true</bool>
+     </property>
+     <property name="acceptRichText">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>MibitLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>../../mibitWidgets/mibitlineedit.h</header>
-  </customwidget>
-  <customwidget>
    <class>KDateWidget</class>
    <extends>QWidget</extends>
    <header>kdatewidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>MibitLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>../../mibitWidgets/mibitlineedit.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>
@@ -239,7 +239,7 @@
   <tabstop>editClientName</tabstop>
   <tabstop>editClientAddress</tabstop>
   <tabstop>editClientPhone</tabstop>
-  <tabstop>editClientCell</tabstop>
+  <tabstop>editClientMail</tabstop>
   <tabstop>editClientPoints</tabstop>
   <tabstop>editClientDiscount</tabstop>
   <tabstop>sinceDatePicker</tabstop>

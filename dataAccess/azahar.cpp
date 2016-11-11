@@ -2024,7 +2024,7 @@ bool Azahar::insertUser(UserInfo info)
   if (!db.isOpen()) db.open();
   if (db.isOpen()) {
     QSqlQuery query(db);
-    query.prepare("INSERT INTO users (username, password, salt, name, address, phone, phone_movil, role, photo) VALUES(:uname, :pass, :salt, :name, :address, :phone, :cell, :rol, :photo)");
+    query.prepare("INSERT INTO users (username, password, salt, name, address, phone, e_mail, role, photo) VALUES(:uname, :pass, :salt, :name, :address, :phone, :cell, :rol, :photo)");
     query.bindValue(":photo", info.photo);
     query.bindValue(":uname", info.username);
     query.bindValue(":name", info.name);
@@ -2116,7 +2116,7 @@ bool Azahar::updateUser(UserInfo info)
   bool result=false;
   if (!db.isOpen()) db.open();
   QSqlQuery query(db);
-  query.prepare("UPDATE users SET photo=:photo, username=:uname, name=:name, address=:address, phone=:phone, phone_movil=:cell, salt=:salt, password=:pass, role=:rol  WHERE id=:code;");
+  query.prepare("UPDATE users SET photo=:photo, username=:uname, name=:name, address=:address, phone=:phone, e_mail=:cell, salt=:salt, password=:pass, role=:rol  WHERE id=:code;");
   query.bindValue(":code", info.id);
   query.bindValue(":photo", info.photo);
   query.bindValue(":uname", info.username);
@@ -2264,7 +2264,7 @@ bool Azahar::insertClient(ClientInfo info)
   if (!db.isOpen()) db.open();
   if (db.isOpen()) {
     QSqlQuery query(db);
-    query.prepare("INSERT INTO clients (name, address, phone, phone_movil, points, discount, photo, since, code) VALUES(:name, :address, :phone, :cell,:points, :discount, :photo, :since, :code)");
+    query.prepare("INSERT INTO clients (name, address, phone, e_mail, points, discount, photo, since, code) VALUES(:name, :address, :phone, :cell,:points, :discount, :photo, :since, :code)");
     query.bindValue(":photo", info.photo);
     query.bindValue(":points", info.points);
     query.bindValue(":discount", info.discount);
@@ -2284,7 +2284,7 @@ bool Azahar::updateClient(ClientInfo info)
   bool result=false;
   if (!db.isOpen()) db.open();
   QSqlQuery query(db);
-  query.prepare("UPDATE clients SET photo=:photo, name=:name, code=:code, address=:address, phone=:phone, phone_movil=:cell, points=:points, discount=:disc, since=:since  WHERE id=:id;");
+  query.prepare("UPDATE clients SET photo=:photo, name=:name, code=:code, address=:address, phone=:phone, e_mail=:cell, points=:points, discount=:disc, since=:since  WHERE id=:id;");
   query.bindValue(":id", info.id);
   query.bindValue(":photo", info.photo);
   query.bindValue(":points", info.points);
@@ -2342,7 +2342,7 @@ ClientInfo Azahar::getClientInfo(qulonglong clientId)
           int fieldDisc   = qC.record().indexOf("discount");
           int fieldSince  = qC.record().indexOf("since");
           int fieldPhone  = qC.record().indexOf("phone");
-          int fieldCell   = qC.record().indexOf("phone_movil");
+          int fieldCell   = qC.record().indexOf("e_mail");
           int fieldAdd    = qC.record().indexOf("address");
           //Should be only one
           info.id         = qC.value(fieldId).toUInt();
@@ -2382,7 +2382,7 @@ ClientInfo Azahar::getClientInfo(QString clientCode)
                 int fieldDisc   = qC.record().indexOf("discount");
                 int fieldSince  = qC.record().indexOf("since");
                 int fieldPhone  = qC.record().indexOf("phone");
-                int fieldCell   = qC.record().indexOf("phone_movil");
+                int fieldCell   = qC.record().indexOf("e_mail");
                 int fieldAdd    = qC.record().indexOf("address");
                 info.id         = qC.value(fieldId).toUInt();
                 info.code       = qC.value(fieldCode).toString();

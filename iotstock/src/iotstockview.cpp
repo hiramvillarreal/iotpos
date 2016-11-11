@@ -2052,7 +2052,7 @@ void iotstockView::usersViewOnSelected(const QModelIndex & index)
     QString address = model->data(indx, Qt::DisplayRole).toString();
     indx = model->index(row, usersModel->fieldIndex("phone"));
     QString phone = model->data(indx, Qt::DisplayRole).toString();
-    indx = model->index(row, usersModel->fieldIndex("phone_movil"));
+    indx = model->index(row, usersModel->fieldIndex("e_mail"));
     QString cell = model->data(indx, Qt::DisplayRole).toString();
     indx = model->index(row, usersModel->fieldIndex("photo"));
     QByteArray photoBA = model->data(indx, Qt::DisplayRole).toByteArray();
@@ -2228,7 +2228,7 @@ void iotstockView::clientsViewOnSelected(const QModelIndex & index)
     QString address = model->data(indx, Qt::DisplayRole).toString();
     indx = model->index(row, clientsModel->fieldIndex("phone"));
     QString phone = model->data(indx, Qt::DisplayRole).toString();
-    indx = model->index(row, clientsModel->fieldIndex("phone_movil"));
+    indx = model->index(row, clientsModel->fieldIndex("e_mail"));
     QString cell = model->data(indx, Qt::DisplayRole).toString();
     indx = model->index(row, clientsModel->fieldIndex("points"));
     qulonglong points = model->data(indx, Qt::DisplayRole).toULongLong();

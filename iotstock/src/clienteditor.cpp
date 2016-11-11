@@ -63,7 +63,7 @@ ClientEditor::ClientEditor( QWidget *parent )
     ui->editClientCode->setEmptyMessage(i18n("Enter a 6, 12, or 13 digits Bar Code."));
     ui->editClientName->setEmptyMessage(i18n("Enter customer full name"));
     ui->editClientPhone->setEmptyMessage(i18n("Phone number"));
-    ui->editClientCell->setEmptyMessage(i18n("Cell phone number"));
+    ui->editClientMail->setEmptyMessage(i18n("E-mail"));
     ui->editClientPoints->setEmptyMessage(i18n("Accumulated points"));
     ui->editClientDiscount->setEmptyMessage(i18n("Personal discount"));
 

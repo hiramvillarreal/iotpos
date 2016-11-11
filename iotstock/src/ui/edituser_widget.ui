@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>420</width>
-    <height>389</height>
+    <height>359</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,39 +22,6 @@
      <property name="buddy">
       <cstring>editUsersUsername</cstring>
      </property>
-    </widget>
-   </item>
-   <item row="8" column="1">
-    <widget class="QGroupBox" name="groupRoles">
-     <property name="title">
-      <string>User Role</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <widget class="QRadioButton" name="chRoleBasic">
-        <property name="text">
-         <string>Vendor</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="chRoleSupervisor">
-        <property name="text">
-         <string>Supervisor</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="chRoleAdmin">
-        <property name="text">
-         <string>Administrator</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
     </widget>
    </item>
    <item row="0" column="1" rowspan="5">
@@ -98,11 +65,11 @@
      </property>
     </widget>
    </item>
-   <item row="3" column="0">
-    <widget class="QLineEdit" name="editUsersPassword"/>
-   </item>
    <item row="5" column="0">
     <widget class="QLineEdit" name="editUsersName"/>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLineEdit" name="editUsersPassword"/>
    </item>
    <item row="4" column="0">
     <widget class="QLabel" name="label_15">
@@ -111,6 +78,22 @@
      </property>
      <property name="buddy">
       <cstring>editUsersName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QTextEdit" name="editUsersAddress">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="tabChangesFocus">
+      <bool>true</bool>
+     </property>
+     <property name="acceptRichText">
+      <bool>false</bool>
      </property>
     </widget>
    </item>
@@ -128,22 +111,6 @@
      </property>
      <property name="buddy">
       <cstring>editUsersAddress</cstring>
-     </property>
-    </widget>
-   </item>
-   <item row="7" column="0">
-    <widget class="QTextEdit" name="editUsersAddress">
-     <property name="maximumSize">
-      <size>
-       <width>16777215</width>
-       <height>60</height>
-      </size>
-     </property>
-     <property name="tabChangesFocus">
-      <bool>true</bool>
-     </property>
-     <property name="acceptRichText">
-      <bool>false</bool>
      </property>
     </widget>
    </item>
@@ -188,13 +155,13 @@
        </rect>
       </property>
       <property name="text">
-       <string>Cell Phone:</string>
+       <string>E-mail</string>
       </property>
       <property name="buddy">
-       <cstring>editUsersCell</cstring>
+       <cstring>editUsersMail</cstring>
       </property>
      </widget>
-     <widget class="QLineEdit" name="editUsersCell">
+     <widget class="QLineEdit" name="editUsersMail">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -205,14 +172,42 @@
       </property>
      </widget>
      <zorder>editUsersPhone</zorder>
-     <zorder>label_17</zorder>
-     <zorder>editUsersCell</zorder>
      <zorder>label_18</zorder>
+     <zorder>editUsersMail</zorder>
      <zorder>label_17</zorder>
-     <zorder>editUsersPhone</zorder>
-     <zorder>label_18</zorder>
-     <zorder>editUsersCell</zorder>
-     <zorder></zorder>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="QGroupBox" name="groupRoles">
+     <property name="title">
+      <string>User Role</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QRadioButton" name="chRoleBasic">
+        <property name="text">
+         <string>Vendor</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="chRoleSupervisor">
+        <property name="text">
+         <string>Supervisor</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="chRoleAdmin">
+        <property name="text">
+         <string>Administrator</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </item>
   </layout>
