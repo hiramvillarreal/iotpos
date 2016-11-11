@@ -1891,8 +1891,6 @@ if ( doNotAddMoreItems ) { //only for reservations
   qDebug()<<"** INSERTING A PRODUCT [updating balance/transaction]";
   updateBalance(false);
   updateTransaction();
-  //aquiestaelasunto//////////////////////////////////
-
   if (ui_mainview.rbFilterByDesc->isChecked()) {
       ui_mainview.editItemCode->setFocus();//by description
       productsModel->setFilter("products.isARawProduct=false");
