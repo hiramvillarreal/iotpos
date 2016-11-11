@@ -795,13 +795,10 @@ void iotposView::showEnterCodeWidget()
   ui_mainview.stackedWidget_2->setCurrentIndex(1);
   ui_mainview.mainPanel->setCurrentIndex(0); // back to welcome widget
   // BFB. Toggle editItemCode and editFilterByDesc.
-  if (ui_mainview.editItemCode->hasFocus()){
-    //ui_mainview.rbFilterByDesc->setChecked(true);
-    //ui_mainview.editFilterByDesc->setFocus();
-  }else
+  if (!ui_mainview.editItemCode->hasFocus()){
     ui_mainview.editItemCode->setFocus();
-    ui_mainview.frameGridView->show();
-    //ui_mainview.rbFilterByDesc->setChecked(true);
+  }
+  ui_mainview.frameGridView->show();
   setUpTable();
 }
 
@@ -821,7 +818,6 @@ void iotposView::buttonDone()
   ui_mainview.mainPanel->setCurrentIndex(0); // back to welcome widget
   ui_mainview.frameGridView->show();
   ui_mainview.stackedWidget_2->setCurrentIndex(1);
-  //ui_mainview.rbFilterByDesc->setChecked(true);
   ui_mainview.editItemCode->setFocus();
 }
 
@@ -1596,8 +1592,6 @@ void iotposView::insertItem(QString code)
   if (ui_mainview.editItemCode->text()=="*" || ui_mainview.editItemCode->text()=="")
     {
       productsModel->setFilter("products.isARawProduct=false");
-      //aqui2
-      //productsModel->setFilter("products.isARawProduct=false ORDER BY products.datelastsold DESC");
    }
   if((rl.indexIn(code) < 0) && (rL.indexIn(code) < 0) && rds.indexIn(code) < 0  ){
     
@@ -1891,8 +1885,6 @@ if ( doNotAddMoreItems ) { //only for reservations
   qDebug()<<"** INSERTING A PRODUCT [updating balance/transaction]";
   updateBalance(false);
   updateTransaction();
-  //aquiestaelasunto//////////////////////////////////
-
   if (ui_mainview.rbFilterByDesc->isChecked()) {
       ui_mainview.editItemCode->setFocus();//by description
       productsModel->setFilter("products.isARawProduct=false");
@@ -3213,7 +3205,6 @@ void iotposView::finishCurrentTransaction()
    ui_mainview.frameGridView->show();
    ui_mainview.stackedWidget_2->setCurrentIndex(1);
    ui_mainview.editItemCode->setFocus();
-   //ui_mainview.rbFilterByDesc->setChecked(true);
    ui_mainview.stackedWidget_3->setCurrentIndex(1);
 
 }
@@ -4691,8 +4682,6 @@ void iotposView::setupModel()
     connect(ui_mainview.rbFilterByDesc, SIGNAL(toggled(bool)), this, SLOT( setFilter()) );
     connect(ui_mainview.rbFilterByCategory, SIGNAL(toggled(bool)), this, SLOT( setFilter()) );
     connect(ui_mainview.rbFilterBySubCategory, SIGNAL(toggled(bool)), this, SLOT( setFilter()) );
-
-    //ui_mainview.rbFilterByDesc->setChecked(true);
     setFilter();
   }
   setupClientsModel();
@@ -4851,9 +4840,7 @@ void iotposView::setFilter()
       if (!regexp.isValid())  ui_mainview.editFilterByDesc->setText("");
       if (ui_mainview.editFilterByDesc->text()=="*" || ui_mainview.editFilterByDesc->text()=="")
         productsModel->setFilter("products.isARawProduct=false");
-     // else
-       // productsModel->setFilter(QString("products.isARawProduct=false and products.name REGEXP '%1'").arg(ui_mainview.editFilterByDesc->text()));
-  }
+ }
   else {
     if (ui_mainview.rbFilterByCategory->isChecked()) { //by category
       //Find catId for the text on the combobox.
@@ -7191,9 +7178,5 @@ void iotposView::on_rbFilterByPopularity_clicked()
 }
 
 
-void iotposView::on_editItemCode_returnPressed()
-{
-   //ui_mainview.rbFilterByDesc->setChecked(true);
 
-}
 

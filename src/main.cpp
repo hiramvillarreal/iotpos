@@ -68,7 +68,6 @@ int main(int argc, char **argv)
     //app.dcopClient()->registerAs(app.name(), false);
     QPixmap image (KStandardDirs().findResource("data", "iotpos/images/splash_screen.png"));
     splash = new KSplashScreen(image, Qt::WindowStaysOnTopHint);
-    //aquimero
     splash->show();
     // see if we are starting with session management
     if (app.isSessionRestored())

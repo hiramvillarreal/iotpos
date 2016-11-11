@@ -417,7 +417,6 @@ public:
     void resizeSearchTable();
     void on_rbFilterByPopularity_clicked();
     void on_rbFilterByCategory_clicked();
-    void on_editItemCode_returnPressed();
 };
 
 #endif // IOTPOSVIEW_H
