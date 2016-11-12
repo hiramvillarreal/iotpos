@@ -213,6 +213,7 @@ iotposView::iotposView() //: QWidget(parent)
   path = KStandardDirs::locate("appdata", "styles/")+"rotated_tip.svg";
   tipAmount = new MibitTip(this, ui_mainview.groupPayment, path, DesktopIcon("dialog-warning",32), tpAbove );
 
+
   QTimer::singleShot(1000, this, SLOT(setupGridView()));
 
   //MibitPasswordDialog
@@ -260,6 +261,7 @@ iotposView::iotposView() //: QWidget(parent)
   path = KStandardDirs::locate("appdata", "styles/");
   path = path+"tip.svg";
   notifierPanel = new MibitNotifier(this,path, DesktopIcon("dialog-warning", 32));
+
 
   refreshTotalLabel();
   QTimer::singleShot(1200, this, SLOT(setupDB()));
@@ -799,6 +801,10 @@ void iotposView::showEnterCodeWidget()
     ui_mainview.editItemCode->setFocus();
   }
   ui_mainview.frameGridView->show();
+  ui_mainview.lblSubtotalPre->show();
+  ui_mainview.lblSubtotal->show();
+  ui_mainview.labelChangepre->hide();
+  ui_mainview.labelChange->hide();
   setUpTable();
 }
 
@@ -819,6 +825,10 @@ void iotposView::buttonDone()
   ui_mainview.frameGridView->show();
   ui_mainview.stackedWidget_2->setCurrentIndex(1);
   ui_mainview.editItemCode->setFocus();
+  ui_mainview.lblSubtotalPre->show();
+  ui_mainview.lblSubtotal->show();
+  ui_mainview.labelChangepre->hide();
+  ui_mainview.labelChange->hide();
 }
 
 void iotposView::checksChanged()
@@ -939,6 +949,10 @@ void iotposView::focusPayInput()
   ui_mainview.editAmount->setFocus();
   ui_mainview.editAmount->setSelection(0, ui_mainview.editAmount->text().length());
   ui_mainview.stackedWidget_2->setCurrentIndex(0);
+  ui_mainview.lblSubtotalPre->hide();
+  ui_mainview.lblSubtotal->hide();
+  ui_mainview.labelChangepre->show();
+  ui_mainview.labelChange->show();
   hideProductsGrid();
 }
 
@@ -2318,6 +2332,10 @@ void iotposView::displayItemInfo(QTableWidgetItem* item)
     }
     ui_mainview.stackedWidget_2->setCurrentIndex(2);
     ui_mainview.stackedWidget_3->setCurrentIndex(0);
+    ui_mainview.lblSubtotalPre->show();
+    ui_mainview.lblSubtotal->show();
+    ui_mainview.labelChangepre->hide();
+    ui_mainview.labelChange->hide();
     double discP=0.0;
     if (info.validDiscount) discP = info.discpercentage;
     QString str;
@@ -3205,8 +3223,6 @@ void iotposView::finishCurrentTransaction()
    ui_mainview.frameGridView->show();
    ui_mainview.stackedWidget_2->setCurrentIndex(1);
    ui_mainview.editItemCode->setFocus();
-   ui_mainview.stackedWidget_3->setCurrentIndex(1);
-
 }
 
 
@@ -3782,6 +3798,7 @@ void iotposView::unfreezeWidgets()
   emit signalEnableUI();
   startAgain();
   ui_mainview.editItemCode->setFocus();
+  ui_mainview.stackedWidget_3->setCurrentIndex(1);
 }
 
 void iotposView::startAgain()
