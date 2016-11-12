@@ -363,7 +363,7 @@ iotposView::iotposView() //: QWidget(parent)
   QTimer::singleShot(500, this, SLOT(setUpTable()));
   //ui_mainview.groupWidgets->setCurrentIndex(pageMain);
   ui_mainview.mainPanel->setCurrentIndex(pageMain);
-  ui_mainview.stackedWidget_3->setCurrentIndex(1);
+  //ui_mainview.stackedWidget_3->setCurrentIndex(1);
   // point the public ui pointers
   frameLeft = ui_mainview.frameLeft;
   frame     = ui_mainview.frame;
