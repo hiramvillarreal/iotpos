@@ -199,7 +199,7 @@ InputDialog::InputDialog(QWidget *parent, bool integer, DialogType type, QString
   productCodeEdit->setMaximumSize(QSize(260, 27));
   
   iValue = 0;
-  dValue = 0.0;
+  dValue = 0;
   reason = "";
 
   label->setObjectName("titleLabelInputDialog");

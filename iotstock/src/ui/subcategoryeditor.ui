@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>402</width>
-    <height>223</height>
+    <height>61</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -35,6 +35,12 @@
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QLabel" name="lblChildText">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="text">
         <string>label</string>
        </property>
@@ -42,6 +48,12 @@
      </item>
      <item>
       <widget class="QToolButton" name="btnAdd">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="toolTip">
         <string>Add new</string>
        </property>
@@ -53,7 +65,14 @@
     </layout>
    </item>
    <item>
-    <widget class="QListWidget" name="listView"/>
+    <widget class="QListWidget" name="listView">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>0</height>
+      </size>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>
