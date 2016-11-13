@@ -57,6 +57,10 @@ After installation, you need to create a database and user on mysql, to do this:
   cd ~/iotpos/database_resources
   cat iotpos_mysql.sql | mysql -u root -p
   
+Note, if you are using 0.9.7, to migrate from 0.9.7 to 0.9.8.0 database version run this as:
+
+  cat fix_0.98.sql | mysql -u root -p
+  
 To restore a database with preloaded products and examples:
   
   mysql -u root -p iotposdb < iotposdb.sql
@@ -75,7 +79,7 @@ To start using the administration module, type:
   
     For an easy first time use, all securyty settings are disabled.  
   
-Icon apps are found at ~/iotpos/src  and  ~/iotpos/iotstock/src you can copy and paste them on the desktop.
+Shorcut apps  will be found inside the aplication menu in raspbian under Others item or at ~/iotpos/src  and  ~/iotpos/iotstock/src you can copy and paste them on the desktop.
 
 By default, IotPOS and IotStock have security disabled, this to let you configure  database settings in case
 you have installed the database server at a different computer.
