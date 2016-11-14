@@ -123,6 +123,12 @@ Add at the end of the file:
 
 Exit the editor saving your changes.
 
+Now disable the Serial Console edit the file using
+
+  sudo nano /boot/cmdline.txt
+  
+Remove the word phase "console=serial0,115200" or "console=ttyAMA0,115200" exit the editor saving your changes.
+
 Reboot the pi
 
   sudo reboot
