@@ -248,11 +248,11 @@ void InputDialog::acceptIt()
   ///Check dialog type for cases to valid
 
   if (dialogType == dialogStockCorrection) { //needs 3 fields
-    if (lineEdit->hasAcceptableInput() && !reasonEdit->text().isEmpty() && !productCodeEdit->text().isEmpty() )
+    if (lineEdit->hasAcceptableInput() && !productCodeEdit->text().isEmpty() )
       QDialog::accept();
   }
   else if (dialogType == dialogCashOut) { //needs 2 fields : amount & reason
-    if (lineEdit->hasAcceptableInput() && !reasonEdit->text().isEmpty()) {
+    if (lineEdit->hasAcceptableInput()) {
       QDialog::accept();
     }
     else {
@@ -266,7 +266,7 @@ void InputDialog::acceptIt()
     }
   }
   else if (dialogType == dialogTicketMsg) {
-    if (lineEdit->hasAcceptableInput() && !reasonEdit->text().isEmpty()) {
+    if (lineEdit->hasAcceptableInput()) {
       //The user is responsible for the correct month/season number... depending on what is based.
       QDialog::accept();
     }
@@ -295,7 +295,7 @@ void InputDialog::setAmount(int iamnt)
 void InputDialog::setProductCodeReadOnly()
 {
   productCodeEdit->setReadOnly(true);
-  reasonEdit->setFocus();
+  lineEdit->setFocus();
 }
 
 #include "inputdialog.moc"
