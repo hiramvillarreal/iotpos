@@ -17,6 +17,10 @@ Now that everything is up to date, we can install the needed kde4 packages   (kd
   dependencies (qt4...), and everything else we need  for the compile and install:
   
   sudo apt-get install kdebase-runtime libqt4-dev build-essential g++ cmake gettext libqt4-sql-mysql kdelibs5-dev
+  
+For a spanish KDE app: 
+
+  sudo apt-get install kde-l10n-es
 
 Once you have KDE, and QT4 installed, we can install mysql:
 
