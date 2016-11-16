@@ -17,6 +17,10 @@ Now that everything is up to date, we can install the needed kde4 packages   (kd
   dependencies (qt4...), and everything else we need  for the compile and install:
   
   sudo apt-get install kdebase-runtime libqt4-dev build-essential g++ cmake gettext libqt4-sql-mysql kdelibs5-dev
+  
+For a spanish KDE app: 
+
+  sudo apt-get install kde-l10n-es
 
 Once you have KDE, and QT4 installed, we can install mysql:
 
@@ -122,6 +126,12 @@ Add at the end of the file:
   dtoverlay=pi3-disable-bt
 
 Exit the editor saving your changes.
+
+Now disable the Serial Console edit the file using
+
+  sudo nano /boot/cmdline.txt
+  
+Remove the word phase "console=serial0,115200" or "console=ttyAMA0,115200" exit the editor saving your changes.
 
 Reboot the pi
 
