@@ -76,7 +76,7 @@ void UsersDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option,
         pix = pix.scaledToWidth(max);
       }
     }
-    int x = option.rect.x() + (option.rect.width()/2) - (pix.width()/2);
+    int x = option.rect.x() + (option.rect.width()/2) - (pix.width()/2) -1;
     int y = option.rect.y() + (option.rect.height()/2) - (pix.height()/2) - 10;
     //painting photo
     if (!pix.isNull()) painter->drawPixmap(x,y, pix);
@@ -99,11 +99,11 @@ void UsersDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option,
     painter->setFont(font);
     if (option.state & QStyle::State_Selected) {
       painter->setPen(Qt::yellow);
-      painter->drawText(option.rect.x()+10,option.rect.y()+138, 150,20,  Qt::AlignCenter, nameToDisplay);
+      painter->drawText(option.rect.x()+10,option.rect.y()+138, 147,20,  Qt::AlignCenter, nameToDisplay);
     }
     else {
       painter->setPen(Qt::white);
-      painter->drawText(option.rect.x()+10,option.rect.y()+138, 150,20,  Qt::AlignCenter, nameToDisplay);
+      painter->drawText(option.rect.x()+10,option.rect.y()+138, 147,20,  Qt::AlignCenter, nameToDisplay);
     }
 
 }

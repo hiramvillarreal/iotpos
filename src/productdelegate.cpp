@@ -110,11 +110,11 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     painter->setFont(font);
     if (option.state & QStyle::State_Selected) {
       painter->setPen(Qt::yellow);
-      painter->drawText(option.rect.x()+0,option.rect.y()+102, 130,20,  Qt::AlignCenter, nameToDisplay);
+      painter->drawText(option.rect.x()+0,option.rect.y()+102, 129,23,  Qt::AlignCenter, nameToDisplay);
     }
     else {
       painter->setPen(Qt::white);
-      painter->drawText(option.rect.x()+0,option.rect.y()+102, 130,20,  Qt::AlignCenter, nameToDisplay);
+      painter->drawText(option.rect.x()+0,option.rect.y()+102, 129,23,  Qt::AlignCenter, nameToDisplay);
     }
 
     //painting stock Availability
@@ -143,11 +143,15 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     font.setItalic(false);
     painter->setFont(font);
     painter->setBackgroundMode(Qt::TransparentMode);
+    if (option.state & QStyle::State_Selected) {
+    painter->setPen(Qt::darkBlue);
+    }
+    else {
     painter->setPen(Qt::white);
+    }
     painter->setBackground(QColor(255,225,0,160));
     painter->drawText(option.rect.x()+14,
-                      option.rect.y()+8,
-                      102, 20, Qt::AlignCenter, strCode);
+                      option.rect.y()+8,101, 18, Qt::AlignCenter, strCode);
     painter->setBackgroundMode(Qt::TransparentMode);
 
     //painting things like isARawProduct and isAGroup
