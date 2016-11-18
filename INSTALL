@@ -180,3 +180,40 @@ Edit the script:
   nano ~/iotpos/scripts/corteMail.sh
 
 replace -your_mail@gmail.com- with your gmail account.
+
+----------------------------------------------------QT CREATOR INSTALL---------------------------------------------------------
+
+Needed only for Developer and contributor:
+
+If you want to cntribuite with the proyect you need to install Qt4 on the Raspberry Pi
+
+  sudo apt-get install qt4-dev-tools
+
+Then:
+
+  sudo apt-get install qtcreator
+
+Also installed:
+
+  sudo apt-get install gcc xterm subversion
+ 
+this gives as a result Qt Creator 2.5 with Qt 4.8.1 32 bit
+
+--------------------------------------------------Configure toolchain.---------------------------------------------------------
+
+Open QT under Application menu>Programming>Qt Creator
+
+Go to:
+
+  Tools/Options > build & run > tab tool chains > button add Choose GCC
+
+Then set compiler path : /usr/bin/arm-linux-gnueabihf-gcc-4.6
+Debugger : /usr/bin/gdb
+Mkspec : default
+Go to menu help > about plugins
+Uncheck device support > remote linux
+Restart Qt Creator
+Go to tools > options TAB > build & run > Qt versions > add "/usr/bin/qmake-qt4"
+
+
+
