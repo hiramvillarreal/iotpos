@@ -950,9 +950,11 @@ void iotposView::focusPayInput()
   ui_mainview.editAmount->setSelection(0, ui_mainview.editAmount->text().length());
   ui_mainview.stackedWidget_2->setCurrentIndex(0);
   ui_mainview.lblSubtotalPre->hide();
+  ui_mainview.checkCash->setChecked(true);
   ui_mainview.lblSubtotal->hide();
   ui_mainview.labelChangepre->show();
   ui_mainview.labelChange->show();
+
   hideProductsGrid();
 }
 
@@ -2502,7 +2504,7 @@ void iotposView::finishCurrentTransaction()
       //ui_mainview.editCardNumber->setStyleSheet("background-color: rgb(255,100,0); color:white; font-weight:bold; selection-color: white;");
       //ui_mainview.editAmount->setStyleSheet("");
       //ui_mainview.editCardNumber->setSelection(0, ui_mainview.editCardNumber->text().length());
-      msg = i18n("<html><font color=red><b>Note: card number missing.</b></font></html>");
+     // msg = i18n("<html><font color=red><b>Note: card number missing.</b></font></html>");
     }
     else if (!ui_mainview.editCardAuthNumber->hasAcceptableInput() || cna.isEmpty() || cna.length()<4) {
       canfinish = true; //false; //NOTE: A request by Darius @ March 19 2012. FIXME Later: make a config option
@@ -2515,11 +2517,12 @@ void iotposView::finishCurrentTransaction()
 
     //check if card type is != none.
     qDebug()<<"CARD TYPE index:"<<ui_mainview.comboCardType->currentIndex();
+
     if ( ui_mainview.comboCardType->currentIndex() == 0 ) {
         //currentIndex == 0 => Type NONE.
-        canfinish = false;
-        msg = i18n("<html><font color=red><b>The Card Type must be of some valid type.</b></font></html>");
-        ui_mainview.comboCardType->setFocus();
+        canfinish = true;
+       // msg = i18n("<html><font color=red><b>The Card Type must be of some valid type.</b></font></html>");
+        //ui_mainview.comboCardType->setFocus();
     }
     
     if (!msg.isEmpty())

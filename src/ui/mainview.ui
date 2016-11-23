@@ -691,25 +691,6 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QRadioButton" name="checkOwnCredit">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>160</width>
-                      <height>16777215</height>
-                     </size>
-                    </property>
-                    <property name="text">
-                     <string>&amp;Internal Credit</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
                    <widget class="QRadioButton" name="checkCard">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -731,6 +712,25 @@
                     </property>
                     <property name="text">
                      <string>Ca&amp;rd</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QRadioButton" name="checkOwnCredit">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>160</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>&amp;Internal Credit</string>
                     </property>
                    </widget>
                   </item>
@@ -3271,15 +3271,15 @@ p, li { white-space: pre-wrap; }
  </widget>
  <customwidgets>
   <customwidget>
-   <class>MibitLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>../../mibitWidgets/mibitlineedit.h</header>
-  </customwidget>
-  <customwidget>
    <class>KPlotWidget</class>
    <extends>QFrame</extends>
    <header>kplotwidget.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MibitLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>../../mibitWidgets/mibitlineedit.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
