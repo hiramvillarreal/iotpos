@@ -2068,7 +2068,6 @@ int iotposView::doInsertItem(QString itemCode, QString itemDesc, double itemQty,
       ui_mainview.editItemCode->setText("");
       ui_mainview.editItemCode->setCursorPosition(0);
   }
-  ui_mainview.editItemCode->setCursorPosition(0);
   ui_mainview.mainPanel->setCurrentIndex(pageMain);
 
   return rowCount;
