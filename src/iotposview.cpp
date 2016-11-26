@@ -1995,7 +1995,7 @@ void iotposView::updateItem(ProductInfo prod)
         item->setData(Qt::EditRole, QVariant(prod.price-itemDiscount));
     } else {
         item  = ui_mainview.tableWidget->item(prod.row, colDisc);
-        QBrush b = QBrush(QColor::fromRgb(255,0,0), Qt::SolidPattern);
+        QBrush b = QBrush(QColor::fromRgb(0,0,0), Qt::SolidPattern); //it used to paint RED the discount cell after more than 1 item added
         item->setForeground(b);
         item->setData(Qt::EditRole, QVariant(itemDiscount));
         //when the item has a previous price change to higer price, the price then is changed
