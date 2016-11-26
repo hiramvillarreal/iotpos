@@ -1586,7 +1586,9 @@ bool iotposView::incrementTableItemQty(QString code, double q)
     refreshTotalLabel();
     QTableWidgetItem *item = ui_mainview.tableWidget->item(info.row, colCode);//item code
     displayItemInfo(item); //TODO: Cambiar para desplegar de ProductInfo.
-    ui_mainview.editItemCode->clear();
+    if (QApplication::keyboardModifiers().testFlag(Qt::ControlModifier) == false) {
+        ui_mainview.editItemCode->clear();
+    }
    } //if productsHash.contains...
 
   return done;
@@ -1903,7 +1905,9 @@ if ( doNotAddMoreItems ) { //only for reservations
   updateTransaction();
   if (ui_mainview.rbFilterByDesc->isChecked()) {
       ui_mainview.editItemCode->setFocus();//by description
-      productsModel->setFilter("products.isARawProduct=false");
+     if (QApplication::keyboardModifiers().testFlag(Qt::ControlModifier) == false){
+         productsModel->setFilter("products.isARawProduct=false");
+     }
   }
   else {
   if (ui_mainview.rbFilterByCategory->isChecked()) { //by category
@@ -2060,7 +2064,10 @@ int iotposView::doInsertItem(QString itemCode, QString itemDesc, double itemQty,
   if (!ui_mainview.editFilterByDesc->hasFocus())
   ui_mainview.editItemCode->setFocus();
   ui_mainview.frameGridView->show();
-  ui_mainview.editItemCode->setText("");
+  if (QApplication::keyboardModifiers().testFlag(Qt::ControlModifier) == false){
+      ui_mainview.editItemCode->setText("");
+      ui_mainview.editItemCode->setCursorPosition(0);
+  }
   ui_mainview.editItemCode->setCursorPosition(0);
   ui_mainview.mainPanel->setCurrentIndex(pageMain);
 
