@@ -40,6 +40,8 @@ class ProductEditorUI : public QFrame, public Ui::productEditor
   Q_OBJECT
   public:
     ProductEditorUI( QWidget *parent=0);
+private slots:
+    void on_chRise_clicked(bool checked);
 };
 
 class ProductEditor : public KDialog

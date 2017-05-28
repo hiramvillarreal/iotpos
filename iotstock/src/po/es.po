@@ -1014,8 +1014,11 @@ msgstr ""
 #: po/extractedrc.cpp:269 po/extractedrc.cpp:400 extractedrc.cpp:269
 #: extractedrc.cpp:400
 #, no-c-format
-msgid "Price drop % for the group:"
-msgstr "Porcentaje de descuento % para el grupo:"
+msgid "Price drop % or"
+msgstr "Descuento % o"
+
+msgid "Rise %"
+msgstr "Incremento %"
 
 #. i18n: file: ui/producteditor.bkp.ui:1062
 #. i18n: ectx: property (text), widget (QLabel, label_4)
@@ -1198,7 +1201,7 @@ msgstr "Código alfanumérico"
 #. i18n: file: ui/producteditor.ui:1141
 #. i18n: ectx: property (text), widget (QLabel, label_16)
 #: po/extractedrc.cpp:409 extractedrc.cpp:409
-msgid "qty:"
+msgid "Qty:"
 msgstr "Cant:"
 
 #. i18n: file: ui/producteditor.ui:1274

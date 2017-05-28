@@ -1920,10 +1920,14 @@ if ( doNotAddMoreItems ) { //only for reservations
       catId = categoriesHash.value(catText);
     }
    productsModel->setFilter(QString("products.isARawProduct=false and products.category=%1").arg(catId));
-  } else {
+  }
+ // else {
       //by most sold products in current month --biel
-    productsModel->setFilter("products.isARawProduct=false and (products.datelastsold > ADDDATE(sysdate( ), INTERVAL -31 DAY )) ORDER BY products.datelastsold DESC LIMIT 20"); //limit or not the result to 5?
-   }
+ //   productsModel->setFilter("products.isARawProduct=false and (products.datelastsold > ADDDATE(sysdate( ), INTERVAL -31 DAY )) ORDER BY products.datelastsold DESC LIMIT 20"); //limit or not the result to 5?
+  // }
+
+
+
   }
  }
   else if ( rl.indexIn(code) == 0 || rL.indexIn(code) == 0 )
@@ -4886,12 +4890,15 @@ void iotposView::setFilter()
         productsModel->setFilter(QString("products.isARawProduct=false and products.category=%1 and products.subcategory=%2").arg(catId).arg(subCatId));
       else
         productsModel->setFilter(QString("products.isARawProduct=false and products.category=%1").arg(catId));
-    } else { //by most sold products in current month --biel
-        {
-      productsModel->setFilter("products.isARawProduct=false and (products.datelastsold > ADDDATE(sysdate( ), INTERVAL -31 DAY )) ORDER BY products.datelastsold DESC LIMIT 20"); //limit or not the result to 5?
-      }
-      //products.code IN (SELECT * FROM (SELECT product_id FROM (SELECT product_id, sum( units ) AS sold_items FROM transactions t, transactionitems ti WHERE  t.id = ti.transaction_id AND t.date > ADDDATE( sysdate( ) , INTERVAL -31 DAY ) GROUP BY ti.product_id) month_sold_items ORDER BY sold_items DESC LIMIT 5) popular_products)
     }
+    //else { //by most sold products in current month --biel
+    //    {
+    //  productsModel->setFilter("products.isARawProduct=false and (products.datelastsold > ADDDATE(sysdate( ), INTERVAL -31 DAY )) ORDER BY products.datelastsold DESC LIMIT 20"); //limit or not the result to 5?
+   //   }
+      //products.code IN (SELECT * FROM (SELECT product_id FROM (SELECT product_id, sum( units ) AS sold_items FROM transactions t, transactionitems ti WHERE  t.id = ti.transaction_id AND t.date > ADDDATE( sysdate( ) , INTERVAL -31 DAY ) GROUP BY ti.product_id) month_sold_items ORDER BY sold_items DESC LIMIT 5) popular_products)
+  //  }
+
+
   }
   productsModel->select();
 }

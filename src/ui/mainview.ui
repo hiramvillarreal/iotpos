@@ -206,20 +206,52 @@
            <blue>153</blue>
           </color>
          </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="rbFilterBySubCategory">
-         <property name="text">
-          <string>Subcategory</string>
-         </property>
+         <widget class="QRadioButton" name="rbFilterByPopularity">
+          <property name="geometry">
+           <rect>
+            <x>-10</x>
+            <y>110</y>
+            <width>109</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Best sellers</string>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="rbFilterBySubCategory">
+          <property name="geometry">
+           <rect>
+            <x>-20</x>
+            <y>90</y>
+            <width>56</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Sub</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="comboFilterBySubCategory">
+          <property name="geometry">
+           <rect>
+            <x>-40</x>
+            <y>60</y>
+            <width>85</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>160</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
         </widget>
        </item>
        <item>
         <widget class="QLineEdit" name="editFilterByDesc"/>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboFilterBySubCategory"/>
        </item>
        <item>
         <widget class="QPushButton" name="btnCurrency">
@@ -392,13 +424,6 @@
                <property name="spacing">
                 <number>4</number>
                </property>
-               <item row="0" column="3">
-                <widget class="QRadioButton" name="rbFilterByPopularity">
-                 <property name="text">
-                  <string>Best sellers</string>
-                 </property>
-                </widget>
-               </item>
                <item row="0" column="5">
                 <widget class="QRadioButton" name="rbFilterByCategory">
                  <property name="text">
@@ -439,9 +464,16 @@
                 </widget>
                </item>
                <item row="0" column="6">
-                <widget class="QComboBox" name="comboFilterByCategory"/>
+                <widget class="QComboBox" name="comboFilterByCategory">
+                 <property name="maximumSize">
+                  <size>
+                   <width>160</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                </widget>
                </item>
-               <item row="5" column="0" colspan="9">
+               <item row="5" column="0" colspan="8">
                 <widget class="QListView" name="listView">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">

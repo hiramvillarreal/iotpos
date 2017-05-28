@@ -75,7 +75,7 @@ ProductEditor::ProductEditor( QWidget *parent, bool newProduct )
     path = KStandardDirs::locate("appdata", "styles/");
     path = path+"floating_bottom.svg";
     groupPanel = new MibitFloatPanel(this, path, Bottom);
-    groupPanel->setSize(550,250);
+    groupPanel->setSize(650,250);
     groupPanel->addWidget(ui->groupsPanel);
     groupPanel->setMode(pmManual);
     groupPanel->setHiddenTotally(true);
@@ -130,7 +130,7 @@ ProductEditor::ProductEditor( QWidget *parent, bool newProduct )
     connect( ui->editFinalPrice, SIGNAL(textChanged(QString) ), SLOT(calculateProfit(QString)) );
 
     connect( ui->chUnlimitedStock, SIGNAL(clicked(bool)), SLOT(setUnlimitedStock(bool)) );
-
+    connect( ui->chRise, SIGNAL(clicked(bool)), SLOT(on_chRise_clicked(bool)) );
     connect( ui->editAlphacode,  SIGNAL(textEdited(const QString &)), this, SLOT(verifyAlphacodeDuplicates()) );
     connect( ui->editVendorcode,  SIGNAL(textEdited(const QString &)), this, SLOT(verifyVendorcodeDuplicates()) );
 
@@ -1022,7 +1022,11 @@ void ProductEditor::calculateGroupValues()
     //update groupInfo
     groupInfo.count += info.qtyOnList;
     groupInfo.cost  += info.cost*info.qtyOnList;
+    if (ui->chRise->isChecked()) {
+       groupInfo.price += (info.price +info.price*(groupInfo.priceDrop/100)) * info.qtyOnList; //info.price*info.qtyOnList;
+    } else {
     groupInfo.price += (info.price -info.price*(groupInfo.priceDrop/100)) * info.qtyOnList; //info.price*info.qtyOnList;
+    }
     groupInfo.taxMoney += info.totaltax*info.qtyOnList;
     bool yes = false;
     if (info.stockqty >= info.qtyOnList ) yes = true;
@@ -1262,3 +1266,9 @@ void ProductEditor::createNewMeasure()
 }
 
 #include "producteditor.moc"
+
+
+void ProductEditorUI::on_chRise_clicked(bool checked)
+{
+
+}
