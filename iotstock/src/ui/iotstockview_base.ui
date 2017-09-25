@@ -51,8 +51,8 @@
      </property>
      <property name="minimumSize">
       <size>
-       <width>711</width>
-       <height>328</height>
+       <width>440</width>
+       <height>300</height>
       </size>
      </property>
      <property name="currentIndex">
@@ -3220,15 +3220,15 @@ color:black;</string>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KDateWidget</class>
-   <extends>QWidget</extends>
-   <header>kdatewidget.h</header>
-  </customwidget>
-  <customwidget>
    <class>KPlotWidget</class>
    <extends>QFrame</extends>
    <header>kplotwidget.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>KDateWidget</class>
+   <extends>QWidget</extends>
+   <header>kdatewidget.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
