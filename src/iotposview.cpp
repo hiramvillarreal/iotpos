@@ -794,7 +794,7 @@ void iotposView::settingsChangedOnInitConfig()
 void iotposView::showEnterCodeWidget()
 {
   //ui_mainview.groupWidgets->setCurrentIndex(pageMain);
-  ui_mainview.stackedWidget_2->setCurrentIndex(1);
+  ui_mainview.stackedWidget_3->setCurrentIndex(1);
   ui_mainview.mainPanel->setCurrentIndex(0); // back to welcome widget
   // BFB. Toggle editItemCode and editFilterByDesc.
   if (!ui_mainview.editItemCode->hasFocus()){
@@ -823,7 +823,7 @@ void iotposView::buttonDone()
   ui_mainview.editItemCode->setCursorPosition(0);
   ui_mainview.mainPanel->setCurrentIndex(0); // back to welcome widget
   ui_mainview.frameGridView->show();
-  ui_mainview.stackedWidget_2->setCurrentIndex(1);
+  ui_mainview.stackedWidget_3->setCurrentIndex(1);
   ui_mainview.editItemCode->setFocus();
   ui_mainview.lblSubtotalPre->show();
   ui_mainview.lblSubtotal->show();
@@ -948,7 +948,7 @@ void iotposView::focusPayInput()
   ui_mainview.mainPanel->setCurrentIndex(0); // back to welcome widget
   ui_mainview.editAmount->setFocus();
   ui_mainview.editAmount->setSelection(0, ui_mainview.editAmount->text().length());
-  ui_mainview.stackedWidget_2->setCurrentIndex(0);
+  ui_mainview.stackedWidget_3->setCurrentIndex(2);
   ui_mainview.lblSubtotalPre->hide();
   ui_mainview.checkCash->setChecked(true);
   ui_mainview.lblSubtotal->hide();
@@ -2342,8 +2342,9 @@ void iotposView::displayItemInfo(QTableWidgetItem* item)
         disc = info.disc;
         price = info.price;
     }
-    ui_mainview.stackedWidget_2->setCurrentIndex(2);
+    ui_mainview.stackedWidget_2->setCurrentIndex(1);
     ui_mainview.stackedWidget_3->setCurrentIndex(0);
+
     ui_mainview.lblSubtotalPre->show();
     ui_mainview.lblSubtotal->show();
     ui_mainview.labelChangepre->hide();
@@ -3234,7 +3235,7 @@ void iotposView::finishCurrentTransaction()
    if (loggedUserRole == roleAdmin) {/*updateGraphs();*/}
    //showProductsGrid();
    ui_mainview.frameGridView->show();
-   ui_mainview.stackedWidget_2->setCurrentIndex(1);
+   ui_mainview.stackedWidget_3->setCurrentIndex(1);
    ui_mainview.editItemCode->setFocus();
 }
 
@@ -3856,7 +3857,7 @@ void iotposView::cancelCurrentTransaction()
   ui_mainview.frameGridView->show();
   ui_mainview.mainPanel->setCurrentIndex(0);
   ui_mainview.editItemCode->setFocus();
-  ui_mainview.stackedWidget_2->setCurrentIndex(1);
+  ui_mainview.stackedWidget_3->setCurrentIndex(1);
   ui_mainview.stackedWidget_3->setCurrentIndex(1);
 
 }
@@ -3892,7 +3893,7 @@ void iotposView::preCancelCurrentTransaction()
   }
   ui_mainview.frameGridView->show();
   ui_mainview.editItemCode->setFocus();
-  ui_mainview.stackedWidget_2->setCurrentIndex(1);
+  ui_mainview.stackedWidget_3->setCurrentIndex(1);
 }
 
 void iotposView::deleteCurrentTransaction()
@@ -5824,7 +5825,7 @@ void iotposView::suspendSale()
     notify->setPixmap(pixmap);
     notify->sendEvent();
   }
-ui_mainview.stackedWidget_2->setCurrentIndex(1);
+ui_mainview.stackedWidget_3->setCurrentIndex(1);
 ui_mainview.stackedWidget_3->setCurrentIndex(1);
 }
 
