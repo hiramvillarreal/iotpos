@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>532</width>
-    <height>346</height>
+    <width>467</width>
+    <height>334</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -18,8 +18,8 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>460</width>
-    <height>305</height>
+    <width>320</width>
+    <height>240</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -1466,13 +1466,8 @@
               </property>
              </widget>
             </widget>
-            <widget class="QWidget" name="page_2">
-             <zorder>comboCardType</zorder>
-            </widget>
-            <widget class="QWidget" name="page_5">
-             <zorder>stackedWidget_3</zorder>
-             <zorder>horizontalSpacer_3</zorder>
-            </widget>
+            <widget class="QWidget" name="page_2"/>
+            <widget class="QWidget" name="page_5"/>
            </widget>
           </item>
          </layout>
@@ -1569,7 +1564,7 @@
              <property name="minimumSize">
               <size>
                <width>0</width>
-               <height>55</height>
+               <height>65</height>
               </size>
              </property>
              <property name="maximumSize">
@@ -1695,7 +1690,7 @@
               </widget>
              </widget>
              <widget class="QWidget" name="page_11">
-              <widget class="QWidget" name="">
+              <widget class="QWidget" name="layoutWidget">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -1785,13 +1780,13 @@
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
-                    <height>50</height>
+                    <height>0</height>
                    </size>
                   </property>
                   <property name="maximumSize">
                    <size>
                     <width>16777215</width>
-                    <height>16777215</height>
+                    <height>50</height>
                    </size>
                   </property>
                   <property name="font">
@@ -1811,17 +1806,16 @@ color:black;</string>
                   <property name="text">
                    <string/>
                   </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                  </property>
                  </widget>
                 </item>
                </layout>
               </widget>
-              <zorder>horizontalSpacer_3</zorder>
-              <zorder></zorder>
-              <zorder></zorder>
-              <zorder></zorder>
              </widget>
              <widget class="QWidget" name="page_7">
-              <widget class="QWidget" name="">
+              <widget class="QWidget" name="layoutWidget">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -2110,11 +2104,6 @@ color:black;</string>
                 </layout>
                </widget>
               </widget>
-              <zorder>stackedWidget_2</zorder>
-              <zorder></zorder>
-              <zorder>stackedWidget</zorder>
-              <zorder></zorder>
-              <zorder>stackedWidget</zorder>
              </widget>
             </widget>
            </item>
@@ -2129,7 +2118,7 @@ color:black;</string>
              <property name="minimumSize">
               <size>
                <width>0</width>
-               <height>240</height>
+               <height>230</height>
               </size>
              </property>
              <property name="maximumSize">
@@ -2151,7 +2140,7 @@ color:black;</string>
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>165</height>
+                <height>170</height>
                </size>
               </property>
               <property name="frameShape">
@@ -2236,7 +2225,7 @@ color:black;</string>
                  <property name="minimumSize">
                   <size>
                    <width>0</width>
-                   <height>0</height>
+                   <height>132</height>
                   </size>
                  </property>
                  <property name="layoutDirection">
@@ -2262,7 +2251,7 @@ color:black;</string>
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>80</height>
+                <height>75</height>
                </size>
               </property>
               <property name="maximumSize">
