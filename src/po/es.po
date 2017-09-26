@@ -356,7 +356,7 @@ msgstr "Bienvenido a IotPOS"
 
 #: lemonview.cpp:164
 msgid "Enter username and password to start using the system."
-msgstr "Escriba su usuario y contraseña para iniciar el punto de venta"
+msgstr "Escriba su usuario y contraseña para iniciar"
 
 #: lemonview.cpp:167
 msgid "Authorisation Required"

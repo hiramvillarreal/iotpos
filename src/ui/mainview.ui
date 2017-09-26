@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>435</width>
-    <height>347</height>
+    <height>352</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -2104,7 +2104,7 @@ color:black;</string>
                  <x>0</x>
                  <y>1</y>
                  <width>421</width>
-                 <height>29</height>
+                 <height>34</height>
                 </rect>
                </property>
                <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -2174,6 +2174,13 @@ color:black;</string>
                     <width>16777215</width>
                     <height>16777215</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>14</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
                   </property>
                   <property name="inputMask">
                    <string/>
