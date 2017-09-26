@@ -44,7 +44,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     else
       pixName = KStandardDirs::locate("appdata", "images/itemBox.png");
     
-    painter->drawPixmap(option.rect.x()+5,option.rect.y()+5, QPixmap(pixName));//only moves the itembox.png
+    painter->drawPixmap(option.rect.x()+5,option.rect.y()+0, QPixmap(pixName));//only moves the itembox.png
 
     //get item data
     const QAbstractItemModel *model = index.model();
@@ -87,7 +87,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
       }
     }
     int x = option.rect.x() + (option.rect.width()/2) - (pix.width()/2);
-    int y = option.rect.y() + (option.rect.height()/2) - (pix.height()/2) - 0;
+    int y = option.rect.y() + (option.rect.height()/2) - (pix.height()/2) - 5;
     //painting photo
     if (!pix.isNull()) painter->drawPixmap(x,y, pix);
 
@@ -110,11 +110,11 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     painter->setFont(font);
     if (option.state & QStyle::State_Selected) {
       painter->setPen(Qt::yellow);
-      painter->drawText(option.rect.x()+0,option.rect.y()+102, 129,23,  Qt::AlignCenter, nameToDisplay);
+      painter->drawText(option.rect.x()+0,option.rect.y()+97, 128,23,  Qt::AlignCenter, nameToDisplay);
     }
     else {
       painter->setPen(Qt::white);
-      painter->drawText(option.rect.x()+0,option.rect.y()+102, 129,23,  Qt::AlignCenter, nameToDisplay);
+      painter->drawText(option.rect.x()+0,option.rect.y()+97, 128,23,  Qt::AlignCenter, nameToDisplay);
     }
 
     //painting stock Availability
@@ -150,8 +150,8 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     painter->setPen(Qt::white);
     }
     painter->setBackground(QColor(255,225,0,160));
-    painter->drawText(option.rect.x()+14,
-                      option.rect.y()+8,101, 18, Qt::AlignCenter, strCode);
+    painter->drawText(option.rect.x()+2,
+                      option.rect.y()+2,122, 18, Qt::AlignCenter, strCode);
     painter->setBackgroundMode(Qt::TransparentMode);
 
     //painting things like isARawProduct and isAGroup

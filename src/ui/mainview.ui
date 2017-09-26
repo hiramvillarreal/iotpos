@@ -1593,7 +1593,7 @@
                <property name="geometry">
                 <rect>
                  <x>0</x>
-                 <y>10</y>
+                 <y>20</y>
                  <width>160</width>
                  <height>41</height>
                 </rect>
@@ -1644,7 +1644,7 @@
                <property name="geometry">
                 <rect>
                  <x>160</x>
-                 <y>10</y>
+                 <y>20</y>
                  <width>200</width>
                  <height>41</height>
                 </rect>
@@ -1732,7 +1732,7 @@
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>16777215</width>
+                    <width>165</width>
                     <height>16777215</height>
                    </size>
                   </property>
@@ -1792,7 +1792,7 @@
                   <property name="maximumSize">
                    <size>
                     <width>16777215</width>
-                    <height>50</height>
+                    <height>16777215</height>
                    </size>
                   </property>
                   <property name="font">
@@ -2127,7 +2127,7 @@ color:black;</string>
              <property name="minimumSize">
               <size>
                <width>0</width>
-               <height>230</height>
+               <height>220</height>
               </size>
              </property>
              <property name="maximumSize">
@@ -2152,7 +2152,7 @@ color:black;</string>
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>160</height>
+                <height>155</height>
                </size>
               </property>
               <property name="frameShape">
@@ -2240,7 +2240,7 @@ color:black;</string>
                  <property name="minimumSize">
                   <size>
                    <width>0</width>
-                   <height>116</height>
+                   <height>112</height>
                   </size>
                  </property>
                  <property name="maximumSize">
