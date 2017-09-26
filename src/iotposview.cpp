@@ -948,16 +948,17 @@ void iotposView::focusPayInput()
 {
   //ui_mainview.groupWidgets->setCurrentIndex(pageMain);
   ui_mainview.mainPanel->setCurrentIndex(0); // back to welcome widget
-  ui_mainview.editAmount->setFocus();
   ui_mainview.editAmount->setSelection(0, ui_mainview.editAmount->text().length());
+  ui_mainview.editAmount->setFocus();
+  ui_mainview.editAmount->setText(QString::number(totalSum));
   ui_mainview.stackedWidget_3->setCurrentIndex(2);
   ui_mainview.lblSubtotalPre->hide();
   ui_mainview.checkCash->setChecked(true);
   ui_mainview.lblSubtotal->hide();
   ui_mainview.labelChangepre->show();
   ui_mainview.labelChange->show();
-
   hideProductsGrid();
+  ui_mainview.editAmount->selectAll();
 }
 
 //This method sends the focus to the amount to be paid only when the code input is empty.
@@ -1388,7 +1389,6 @@ void iotposView::refreshTotalLabel()
     else {
         change = 0.0;
     }
-
     ui_mainview.labelTotal->setText(QString("%1").arg(KGlobal::locale()->formatMoney(summary.getGross().toDouble())));
     ui_mainview.lblSubtotal->setText(QString("%1").arg(KGlobal::locale()->formatMoney(summary.getNet().toDouble()+summary.getDiscountGross().toDouble())));//FIXME temporal, seems than  gross and net are equal without + summary.getDiscountGross().toDouble()
     ui_mainview.labelChange->setText(QString("%1") .arg(KGlobal::locale()->formatMoney(change)));

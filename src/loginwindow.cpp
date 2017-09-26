@@ -109,8 +109,8 @@ LoginWindow::LoginWindow(QString caption,
   btnQuit->setMinimumSize(QSize(120, 27));
   editUsername->setMinimumSize(QSize(120, 28));
   editPassword->setMinimumSize(QSize(120, 28));
-  editUsername->setMaximumSize(QSize(160, 28));
-  editPassword->setMaximumSize(QSize(160, 28));
+  editUsername->setMaximumSize(QSize(140, 28));
+  editPassword->setMaximumSize(QSize(140, 28));
 
   //FIXME: Para el cuadro de login&password, se necesita un groupbox para ponerle el fondo semitransparente.
   //Porque para diferentes resoluciones de pantalla, se acomodara el layout de diferente forma.
