@@ -3795,7 +3795,7 @@ ptInfo.tDisc = KGlobal::locale()->formatMoney(-discMoney, QString(), 2);
 
   if (Settings::showDialogOnPrinting())
   {
-    TicketPopup *popup = new TicketPopup(ticketHtml.join(" "), DesktopIcon("iotpos-printer", 48), Settings::ticketTime()*1000);
+    TicketPopup *popup = new TicketPopup(ticketHtml.join(" "), DesktopIcon("iotpos-printer", 22), Settings::ticketTime()*1000);
     connect (popup, SIGNAL(onTicketPopupClose()), this, SLOT(unfreezeWidgets()) );
     QApplication::beep();
     popup->popup();
