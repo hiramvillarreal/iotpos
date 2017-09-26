@@ -110,7 +110,7 @@ class BalanceDialog : public QDialog
       gridLayout = new QGridLayout(this);
       editText = new QTextEdit(str);
       editText->setReadOnly(true);
-      editText->setMinimumSize(QSize(380,360));
+      editText->setMinimumSize(QSize(360,260));
       gridLayout->addWidget(editText, 0, 0);
       buttonClose = new QPushButton(this);
       buttonClose->setText(i18n("Continue"));
