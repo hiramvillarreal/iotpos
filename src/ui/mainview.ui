@@ -1677,7 +1677,7 @@
                  <property name="minimumSize">
                   <size>
                    <width>0</width>
-                   <height>116</height>
+                   <height>124</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -1821,7 +1821,7 @@
              </widget>
             </widget>
            </item>
-           <item row="1" column="0" colspan="2">
+           <item row="1" column="0">
             <widget class="QStackedWidget" name="stackedWidget_3">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
@@ -1974,10 +1974,22 @@
                 <property name="sizeConstraint">
                  <enum>QLayout::SetDefaultConstraint</enum>
                 </property>
+                <property name="rightMargin">
+                 <number>30</number>
+                </property>
                 <item>
                  <widget class="QLabel" name="label">
+                  <property name="maximumSize">
+                   <size>
+                    <width>65</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
                   <property name="text">
                    <string>Client:</string>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>false</bool>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -2000,7 +2012,7 @@
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>165</width>
+                    <width>16777215</width>
                     <height>16777215</height>
                    </size>
                   </property>
@@ -2026,7 +2038,7 @@
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>16777215</width>
+                    <width>21</width>
                     <height>21</height>
                    </size>
                   </property>
@@ -2091,7 +2103,7 @@ color:black;</string>
                 <rect>
                  <x>0</x>
                  <y>1</y>
-                 <width>451</width>
+                 <width>431</width>
                  <height>29</height>
                 </rect>
                </property>
