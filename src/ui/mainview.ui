@@ -1564,7 +1564,7 @@
              <property name="minimumSize">
               <size>
                <width>0</width>
-               <height>70</height>
+               <height>66</height>
               </size>
              </property>
              <property name="maximumSize">
@@ -2127,7 +2127,7 @@ color:black;</string>
              <property name="minimumSize">
               <size>
                <width>0</width>
-               <height>220</height>
+               <height>224</height>
               </size>
              </property>
              <property name="maximumSize">
@@ -2272,7 +2272,7 @@ color:black;</string>
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>75</height>
+                <height>72</height>
                </size>
               </property>
               <property name="maximumSize">
@@ -2301,7 +2301,7 @@ color:black;</string>
                <enum>Qt::ScrollBarAsNeeded</enum>
               </property>
               <property name="horizontalScrollBarPolicy">
-               <enum>Qt::ScrollBarAsNeeded</enum>
+               <enum>Qt::ScrollBarAlwaysOn</enum>
               </property>
               <property name="autoScroll">
                <bool>true</bool>
