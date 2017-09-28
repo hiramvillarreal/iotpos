@@ -66,7 +66,7 @@ void TicketPopup::popup()
 
  //aquipop
   if (y < 160){
-  setGeometry(x,y,335,240);
+  setGeometry(x,0,335,240);
   }
   else {
       setGeometry(x,y,335,340);

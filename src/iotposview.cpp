@@ -604,8 +604,7 @@ void iotposView::setUpTable()
   ui_mainview.tableWidget->horizontalHeader()->resizeSection(colUnits, portion-15);//UNITS
   ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDisc, portion); //Discount
   ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDue, portion+10); //DUE
-  ui_mainview.tableWidget->horizontalHeader()->setFixedHeight(22);
-  //ui_mainview.tableWidget->horizontalHeader()->hide();
+  ui_mainview.tableWidget->horizontalHeader()->setFixedHeight(24);
   resizeSearchTable();
 }
 
@@ -3237,7 +3236,7 @@ void iotposView::finishCurrentTransaction()
    if (loggedUserRole == roleAdmin) {/*updateGraphs();*/}
    //showProductsGrid();
    ui_mainview.frameGridView->show();
-   ui_mainview.stackedWidget_3->setCurrentIndex(1);
+   ui_mainview.stackedWidget_3->setCurrentIndex(3);
    ui_mainview.editItemCode->setFocus();
 }
 
