@@ -2493,6 +2493,9 @@ void iotposView::finishCurrentTransaction()
       ui_mainview.editAmount->setSelection(0, ui_mainview.editAmount->text().length());
       msg = i18n("<html><font color=red><b>Please fill the correct payment amount before finishing a transaction.</b></font></html>");
       tipAmount->showTip(msg, 4000);
+      ui_mainview.editAmount->setFocus();
+      ui_mainview.editAmount->setText(QString::number(totalSum));
+      ui_mainview.editAmount->selectAll();
     } else if (ui_mainview.editAmount->text().length() >= 8 )  {
       if (ui_mainview.editAmount->text().contains(".00") || ui_mainview.editAmount->text().contains(",00"))
         canfinish = true; // it was not entered by the barcode reader.
