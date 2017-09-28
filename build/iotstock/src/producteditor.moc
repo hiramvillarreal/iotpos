@@ -1,0 +1,238 @@
+/****************************************************************************
+** Meta object code from reading C++ file 'producteditor.h'
+**
+** Created by: The Qt Meta Object Compiler version 63 (Qt 4.8.7)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#include "../../../iotstock/src/producteditor.h"
+#if !defined(Q_MOC_OUTPUT_REVISION)
+#error "The header file 'producteditor.h' doesn't include <QObject>."
+#elif Q_MOC_OUTPUT_REVISION != 63
+#error "This file was generated using the moc from 4.8.7. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+QT_BEGIN_MOC_NAMESPACE
+static const uint qt_meta_data_ProductEditorUI[] = {
+
+ // content:
+       6,       // revision
+       0,       // classname
+       0,    0, // classinfo
+       1,   14, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       0,       // signalCount
+
+ // slots: signature, parameters, type, tag, flags
+      25,   17,   16,   16, 0x08,
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_ProductEditorUI[] = {
+    "ProductEditorUI\0\0checked\0"
+    "on_chRise_clicked(bool)\0"
+};
+
+void ProductEditorUI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        Q_ASSERT(staticMetaObject.cast(_o));
+        ProductEditorUI *_t = static_cast<ProductEditorUI *>(_o);
+        switch (_id) {
+        case 0: _t->on_chRise_clicked((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        default: ;
+        }
+    }
+}
+
+const QMetaObjectExtraData ProductEditorUI::staticMetaObjectExtraData = {
+    0,  qt_static_metacall 
+};
+
+const QMetaObject ProductEditorUI::staticMetaObject = {
+    { &QFrame::staticMetaObject, qt_meta_stringdata_ProductEditorUI,
+      qt_meta_data_ProductEditorUI, &staticMetaObjectExtraData }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &ProductEditorUI::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
+
+const QMetaObject *ProductEditorUI::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+}
+
+void *ProductEditorUI::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_ProductEditorUI))
+        return static_cast<void*>(const_cast< ProductEditorUI*>(this));
+    if (!strcmp(_clname, "Ui::productEditor"))
+        return static_cast< Ui::productEditor*>(const_cast< ProductEditorUI*>(this));
+    return QFrame::qt_metacast(_clname);
+}
+
+int ProductEditorUI::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QFrame::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 1)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 1;
+    }
+    return _id;
+}
+static const uint qt_meta_data_ProductEditor[] = {
+
+ // content:
+       6,       // revision
+       0,       // classname
+       0,    0, // classinfo
+      28,   14, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       0,       // signalCount
+
+ // slots: signature, parameters, type, tag, flags
+      15,   14,   14,   14, 0x08,
+      29,   14,   14,   14, 0x08,
+      42,   14,   14,   14, 0x08,
+      56,   14,   14,   14, 0x08,
+      83,   73,   14,   14, 0x08,
+     108,   14,   14,   14, 0x08,
+     128,   14,   14,   14, 0x08,
+     155,  147,   14,   14, 0x08,
+     173,  147,   14,   14, 0x08,
+     194,  189,   14,   14, 0x08,
+     215,   14,   14,   14, 0x08,
+     229,   14,   14,   14, 0x08,
+     239,   14,   14,   14, 0x08,
+     257,  252,   14,   14, 0x08,
+     300,  294,   14,   14, 0x08,
+     324,  294,   14,   14, 0x08,
+     349,  294,   14,   14, 0x08,
+     384,   14,  373,   14, 0x08,
+     398,   14,   14,   14, 0x08,
+     427,   14,   14,   14, 0x08,
+     455,   14,   14,   14, 0x08,
+     474,   14,   14,   14, 0x08,
+     491,   14,   14,   14, 0x08,
+     514,   14,   14,   14, 0x08,
+     534,   14,   14,   14, 0x08,
+     556,   14,   14,   14, 0x08,
+     575,   14,   14,   14, 0x08,
+     597,  590,   14,   14, 0x09,
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_ProductEditor[] = {
+    "ProductEditor\0\0changePhoto()\0changeCode()\0"
+    "modifyStock()\0calculatePrice()\0amountStr\0"
+    "calculateProfit(QString)\0checkIfCodeExists()\0"
+    "checkFieldsState()\0checked\0toggleGroup(bool)\0"
+    "toggleRaw(bool)\0text\0applyFilter(QString)\0"
+    "applyFilter()\0addItem()\0removeItem()\0"
+    "item\0itemDoubleClicked(QTableWidgetItem*)\0"
+    "value\0updatePriceDrop(double)\0"
+    "setNotDiscountable(bool)\0"
+    "setUnlimitedStock(bool)\0qulonglong\0"
+    "getNextCode()\0verifyVendorcodeDuplicates()\0"
+    "verifyAlphacodeDuplicates()\0"
+    "modifyDepartment()\0modifyCategory()\0"
+    "createNewSubcategory()\0createNewCategory()\0"
+    "createNewDepartment()\0createNewMeasure()\0"
+    "printBarcode()\0button\0slotButtonClicked(int)\0"
+};
+
+void ProductEditor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        Q_ASSERT(staticMetaObject.cast(_o));
+        ProductEditor *_t = static_cast<ProductEditor *>(_o);
+        switch (_id) {
+        case 0: _t->changePhoto(); break;
+        case 1: _t->changeCode(); break;
+        case 2: _t->modifyStock(); break;
+        case 3: _t->calculatePrice(); break;
+        case 4: _t->calculateProfit((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 5: _t->checkIfCodeExists(); break;
+        case 6: _t->checkFieldsState(); break;
+        case 7: _t->toggleGroup((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 8: _t->toggleRaw((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 9: _t->applyFilter((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 10: _t->applyFilter(); break;
+        case 11: _t->addItem(); break;
+        case 12: _t->removeItem(); break;
+        case 13: _t->itemDoubleClicked((*reinterpret_cast< QTableWidgetItem*(*)>(_a[1]))); break;
+        case 14: _t->updatePriceDrop((*reinterpret_cast< double(*)>(_a[1]))); break;
+        case 15: _t->setNotDiscountable((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 16: _t->setUnlimitedStock((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 17: { qulonglong _r = _t->getNextCode();
+            if (_a[0]) *reinterpret_cast< qulonglong*>(_a[0]) = _r; }  break;
+        case 18: _t->verifyVendorcodeDuplicates(); break;
+        case 19: _t->verifyAlphacodeDuplicates(); break;
+        case 20: _t->modifyDepartment(); break;
+        case 21: _t->modifyCategory(); break;
+        case 22: _t->createNewSubcategory(); break;
+        case 23: _t->createNewCategory(); break;
+        case 24: _t->createNewDepartment(); break;
+        case 25: _t->createNewMeasure(); break;
+        case 26: _t->printBarcode(); break;
+        case 27: _t->slotButtonClicked((*reinterpret_cast< int(*)>(_a[1]))); break;
+        default: ;
+        }
+    }
+}
+
+const QMetaObjectExtraData ProductEditor::staticMetaObjectExtraData = {
+    0,  qt_static_metacall 
+};
+
+const QMetaObject ProductEditor::staticMetaObject = {
+    { &KDialog::staticMetaObject, qt_meta_stringdata_ProductEditor,
+      qt_meta_data_ProductEditor, &staticMetaObjectExtraData }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &ProductEditor::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
+
+const QMetaObject *ProductEditor::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+}
+
+void *ProductEditor::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_ProductEditor))
+        return static_cast<void*>(const_cast< ProductEditor*>(this));
+    return KDialog::qt_metacast(_clname);
+}
+
+int ProductEditor::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = KDialog::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 28)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 28;
+    }
+    return _id;
+}
+QT_END_MOC_NAMESPACE

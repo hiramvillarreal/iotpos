@@ -302,7 +302,8 @@ iotposView::iotposView() //: QWidget(parent)
   connect(ui_mainview.splitterGrid, SIGNAL(splitterMoved(int, int)), SLOT(setUpTable()));
   connect(ui_mainview.editClient, SIGNAL(returnPressed()), SLOT(filterClient()));
   connect(ui_mainview.btnChangeSaleDate, SIGNAL(clicked()), SLOT(showChangeDate()));
-
+  ui_mainview.listView->setStyleSheet("QScrollBar:vertical { width: 25px; }");
+  ui_mainview.tableWidget->verticalScrollBar()->setStyleSheet("QScrollBar:vertical { width: 25px; }");
   ui_mainview.editTicketDatePicker->setDate(QDate::currentDate());
   connect(ui_mainview.editTicketDatePicker, SIGNAL(dateChanged(const QDate &)), SLOT(setHistoryFilter()) );
   connect(ui_mainview.btnTicketDone, SIGNAL(clicked()), SLOT(btnTicketsDone()) );
@@ -608,7 +609,7 @@ void iotposView::setUpTable()
    resizeSearchTable();
   if (x < 600){
    ui_mainview.tableWidget->hideColumn(6);
-   ui_mainview.tableWidget->hideColumn(4);
+   ui_mainview.tableWidget->hideColumn(5);
   }
 }
 
@@ -798,7 +799,7 @@ void iotposView::settingsChangedOnInitConfig()
 
 void iotposView::showEnterCodeWidget()
 {
-  //ui_mainview.groupWidgets->setCurrentIndex(pageMain);
+  //ui_mainview.groupWidgets->setCurrentIndex(pageMain);  
   ui_mainview.stackedWidget_3->setCurrentIndex(1);
   ui_mainview.listView->scrollToTop();
   ui_mainview.mainPanel->setCurrentIndex(0); // back to welcome widget

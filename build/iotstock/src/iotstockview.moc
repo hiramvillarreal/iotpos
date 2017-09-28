@@ -1,0 +1,480 @@
+/****************************************************************************
+** Meta object code from reading C++ file 'iotstockview.h'
+**
+** Created by: The Qt Meta Object Compiler version 63 (Qt 4.8.7)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#include "../../../iotstock/src/iotstockview.h"
+#if !defined(Q_MOC_OUTPUT_REVISION)
+#error "The header file 'iotstockview.h' doesn't include <QObject>."
+#elif Q_MOC_OUTPUT_REVISION != 63
+#error "This file was generated using the moc from 4.8.7. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+QT_BEGIN_MOC_NAMESPACE
+static const uint qt_meta_data_iotstockView[] = {
+
+ // content:
+       6,       // revision
+       0,       // classname
+       0,    0, // classinfo
+     122,   14, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+      11,       // signalCount
+
+ // signals: signature, parameters, type, tag, flags
+      19,   14,   13,   13, 0x05,
+      50,   14,   13,   13, 0x05,
+      79,   13,   13,   13, 0x05,
+      97,   13,   13,   13, 0x05,
+     118,   13,   13,   13, 0x05,
+     141,   13,   13,   13, 0x05,
+     159,   13,   13,   13, 0x05,
+     181,   13,   13,   13, 0x05,
+     208,   13,   13,   13, 0x05,
+     231,   13,   13,   13, 0x05,
+     245,   13,   13,   13, 0x05,
+
+ // slots: signature, parameters, type, tag, flags
+     266,   13,   13,   13, 0x08,
+     274,   13,   13,   13, 0x08,
+     292,   13,   13,   13, 0x08,
+     322,   13,   13,   13, 0x08,
+     347,   13,   13,   13, 0x08,
+     370,  365,   13,   13, 0x08,
+     392,   13,   13,   13, 0x08,
+     411,   13,   13,   13, 0x08,
+     428,   13,   13,   13, 0x08,
+     444,   13,   13,   13, 0x08,
+     463,   13,   13,   13, 0x08,
+     484,   13,   13,   13, 0x08,
+     506,   13,   13,   13, 0x08,
+     530,   13,   13,   13, 0x08,
+     548,   13,   13,   13, 0x08,
+     571,   13,   13,   13, 0x08,
+     585,   13,   13,   13, 0x08,
+     608,  602,   13,   13, 0x08,
+     641,  602,   13,   13, 0x08,
+     677,  602,   13,   13, 0x08,
+     712,   13,   13,   13, 0x08,
+     725,   13,   13,   13, 0x08,
+     743,   13,   13,   13, 0x08,
+     763,   13,   13,   13, 0x08,
+     775,   13,   13,   13, 0x08,
+     793,   13,   13,   13, 0x08,
+     813,   13,   13,   13, 0x08,
+     827,   13,   13,   13, 0x08,
+     842,   13,   13,   13, 0x08,
+     854,   13,   13,   13, 0x08,
+     865,   13,   13,   13, 0x08,
+     885,   13,   13,   13, 0x08,
+     910,   13,   13,   13, 0x08,
+     934,   13,   13,   13, 0x08,
+     957,   13,   13,   13, 0x08,
+     984,   13,   13,   13, 0x08,
+    1005,   13,   13,   13, 0x08,
+    1027,   13,   13,   13, 0x08,
+    1049,   13,   13,   13, 0x08,
+    1068,   13,   13,   13, 0x08,
+    1089,   13,   13,   13, 0x08,
+    1108,   13,   13,   13, 0x08,
+    1128,   13,   13,   13, 0x08,
+    1149,   13,   13,   13, 0x08,
+    1175,   13,   13,   13, 0x08,
+    1200,   13,   13,   13, 0x08,
+    1222,   13,   13,   13, 0x08,
+    1239,   13,   13,   13, 0x08,
+    1273,   13,   13,   13, 0x08,
+    1293,   13,   13,   13, 0x08,
+    1309,   13,   13,   13, 0x08,
+    1327,   13,   13,   13, 0x08,
+    1351,   13,   13,   13, 0x08,
+    1374,   13,   13,   13, 0x08,
+    1387,   13,   13,   13, 0x08,
+    1410,   13,   13,   13, 0x08,
+    1423,   13,   13,   13, 0x08,
+    1437,   13,   13,   13, 0x08,
+    1453,   13,   13,   13, 0x08,
+    1469,   13,   13,   13, 0x08,
+    1486,   13,   13,   13, 0x08,
+    1505,   13,   13,   13, 0x08,
+    1525,   13,   13,   13, 0x08,
+    1540,   13,   13,   13, 0x08,
+    1558,   13,   13,   13, 0x08,
+    1575,   13,   13,   13, 0x08,
+    1600,   13,   13,   13, 0x08,
+    1622,   13,   13,   13, 0x08,
+    1643,   13,   13,   13, 0x08,
+    1667,   13,   13,   13, 0x08,
+    1691,   13,   13,   13, 0x08,
+    1718,   13,   13,   13, 0x08,
+    1743,   13,   13,   13, 0x08,
+    1771,   13,   13,   13, 0x08,
+    1794,   13,   13,   13, 0x08,
+    1820,   13,   13,   13, 0x08,
+    1845,   13,   13,   13, 0x08,
+    1869,   13,   13,   13, 0x08,
+    1897,   13,   13,   13, 0x08,
+    1917,   13,   13,   13, 0x08,
+    1941,   13,   13,   13, 0x08,
+    1991, 1961,   13,   13, 0x08,
+    2059, 2054, 2038,   13, 0x08,
+    2087,   13,   13,   13, 0x08,
+    2097,   13,   13,   13, 0x08,
+    2115,   13,   13,   13, 0x08,
+    2134,   13,   13,   13, 0x08,
+    2155,   13,   13,   13, 0x08,
+    2176,   13,   13,   13, 0x08,
+    2199,   13,   13,   13, 0x08,
+    2223,   13,   13,   13, 0x08,
+    2249,   13,   13,   13, 0x08,
+    2269,   13,   13,   13, 0x08,
+    2294,   13,   13,   13, 0x08,
+    2317,   13,   13,   13, 0x08,
+    2333,   13,   13,   13, 0x08,
+    2347,   13,   13,   13, 0x08,
+    2371, 2361,   13,   13, 0x08,
+    2427, 2408,   13,   13, 0x08,
+    2463,   13,   13,   13, 0x08,
+    2474,   13,   13,   13, 0x08,
+    2491,   13,   13,   13, 0x08,
+    2510,   13,   13,   13, 0x08,
+    2535,  602,   13,   13, 0x08,
+    2571,   13,   13,   13, 0x08,
+    2594,   13,   13,   13, 0x08,
+    2611,   13,   13,   13, 0x08,
+    2630,   13,   13,   13, 0x08,
+    2651,   13,   13,   13, 0x08,
+    2669,  602,   13,   13, 0x08,
+    2704,  602,   13,   13, 0x08,
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_iotstockView[] = {
+    "iotstockView\0\0text\0signalChangeStatusbar(QString)\0"
+    "signalChangeCaption(QString)\0"
+    "signalConnected()\0signalDisconnected()\0"
+    "signalConnectActions()\0signalShowPrefs()\0"
+    "signalAdminLoggedOn()\0signalSupervisorLoggedOn()\0"
+    "signalAdminLoggedOff()\0signalSalir()\0"
+    "signalShowDbConfig()\0login()\0"
+    "settingsChanged()\0settingsChangedOnInitConfig()\0"
+    "setupSignalConnections()\0setOffersFilter()\0"
+    "show\0toggleFilterBox(bool)\0"
+    "showProductsPage()\0showOffersPage()\0"
+    "showUsersPage()\0showMeasuresPage()\0"
+    "showCategoriesPage()\0showDepartmentsPage()\0"
+    "showSubCategoriesPage()\0showClientsPage()\0"
+    "showTransactionsPage()\0showReports()\0"
+    "showRandomMsgs()\0index\0"
+    "usersViewOnSelected(QModelIndex)\0"
+    "productsViewOnSelected(QModelIndex)\0"
+    "clientsViewOnSelected(QModelIndex)\0"
+    "doPurchase()\0stockCorrection()\0"
+    "adjustOffersTable()\0showPrefs()\0"
+    "cleanErrorLabel()\0showWelcomeGraphs()\0"
+    "setupGraphs()\0updateGraphs()\0disableUI()\0"
+    "enableUI()\0doEmitSignalSalir()\0"
+    "updateDepartmentsCombo()\0"
+    "updateCategoriesCombo()\0updateCardTypesCombo()\0"
+    "updateSubCategoriesCombo()\0"
+    "showProdListAsGrid()\0showProdListAsTable()\0"
+    "adjustProductsTable()\0showBalancesPage()\0"
+    "setupBalancesModel()\0showCashFlowPage()\0"
+    "showSpecialOrders()\0setupCashFlowModel()\0"
+    "setupSpecialOrdersModel()\0"
+    "setSpecialOrdersFilter()\0setupRandomMsgModel()\0"
+    "showCurrencies()\0reportActivated(QListWidgetItem*)\0"
+    "printGralEndOfDay()\0printEndOfDay()\0"
+    "printEndOfMonth()\0printLowStockProducts()\0"
+    "printSoldOutProducts()\0printStock()\0"
+    "printSelectedBalance()\0createUser()\0"
+    "createOffer()\0createProduct()\0"
+    "createMeasure()\0createCategory()\0"
+    "createDepartment()\0createSubCategory()\0"
+    "createClient()\0createRandomMsg()\0"
+    "createCurrency()\0deleteSelectedCurrency()\0"
+    "deleteSelectedOffer()\0deleteSelectedUser()\0"
+    "deleteSelectedProduct()\0deleteSelectedMeasure()\0"
+    "deleteSelectedDepartment()\0"
+    "deleteSelectedCategory()\0"
+    "deleteSelectedSubCategory()\0"
+    "deleteSelectedClient()\0populateDepartmentsHash()\0"
+    "populateCategoriesHash()\0"
+    "populateCardTypesHash()\0"
+    "populateSubCategoriesHash()\0"
+    "setProductsFilter()\0setTransactionsFilter()\0"
+    "setBalancesFilter()\0code,oldStock,newStock,reason\0"
+    "correctStock(qulonglong,double,double,QString)\0"
+    "TransactionInfo\0info\0createPurchase(ProductInfo)\0"
+    "setupDb()\0setupUsersModel()\0"
+    "setupOffersModel()\0setupProductsModel()\0"
+    "setupMeasuresModel()\0setupCategoriesModel()\0"
+    "setupDepartmentsModel()\0"
+    "setupSubCategoriesModel()\0setupClientsModel()\0"
+    "setupTransactionsModel()\0"
+    "setupCurrenciesModel()\0checkDBStatus()\0"
+    "connectToDb()\0exportTable()\0tableview\0"
+    "exportQTableView(QAbstractItemView*)\0"
+    "uid,date,time,text\0"
+    "log(qulonglong,QDate,QTime,QString)\0"
+    "showLogs()\0setupLogsModel()\0"
+    "showReservations()\0setupReservationsModel()\0"
+    "reservationsOnSelected(QModelIndex)\0"
+    "createFloatingPanels()\0reSelectModels()\0"
+    "checkDefaultView()\0agregarSerieFolios()\0"
+    "cancelarFactura()\0departmentsOnSelected(QModelIndex)\0"
+    "categoriesOnSelected(QModelIndex)\0"
+};
+
+void iotstockView::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        Q_ASSERT(staticMetaObject.cast(_o));
+        iotstockView *_t = static_cast<iotstockView *>(_o);
+        switch (_id) {
+        case 0: _t->signalChangeStatusbar((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 1: _t->signalChangeCaption((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 2: _t->signalConnected(); break;
+        case 3: _t->signalDisconnected(); break;
+        case 4: _t->signalConnectActions(); break;
+        case 5: _t->signalShowPrefs(); break;
+        case 6: _t->signalAdminLoggedOn(); break;
+        case 7: _t->signalSupervisorLoggedOn(); break;
+        case 8: _t->signalAdminLoggedOff(); break;
+        case 9: _t->signalSalir(); break;
+        case 10: _t->signalShowDbConfig(); break;
+        case 11: _t->login(); break;
+        case 12: _t->settingsChanged(); break;
+        case 13: _t->settingsChangedOnInitConfig(); break;
+        case 14: _t->setupSignalConnections(); break;
+        case 15: _t->setOffersFilter(); break;
+        case 16: _t->toggleFilterBox((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 17: _t->showProductsPage(); break;
+        case 18: _t->showOffersPage(); break;
+        case 19: _t->showUsersPage(); break;
+        case 20: _t->showMeasuresPage(); break;
+        case 21: _t->showCategoriesPage(); break;
+        case 22: _t->showDepartmentsPage(); break;
+        case 23: _t->showSubCategoriesPage(); break;
+        case 24: _t->showClientsPage(); break;
+        case 25: _t->showTransactionsPage(); break;
+        case 26: _t->showReports(); break;
+        case 27: _t->showRandomMsgs(); break;
+        case 28: _t->usersViewOnSelected((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
+        case 29: _t->productsViewOnSelected((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
+        case 30: _t->clientsViewOnSelected((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
+        case 31: _t->doPurchase(); break;
+        case 32: _t->stockCorrection(); break;
+        case 33: _t->adjustOffersTable(); break;
+        case 34: _t->showPrefs(); break;
+        case 35: _t->cleanErrorLabel(); break;
+        case 36: _t->showWelcomeGraphs(); break;
+        case 37: _t->setupGraphs(); break;
+        case 38: _t->updateGraphs(); break;
+        case 39: _t->disableUI(); break;
+        case 40: _t->enableUI(); break;
+        case 41: _t->doEmitSignalSalir(); break;
+        case 42: _t->updateDepartmentsCombo(); break;
+        case 43: _t->updateCategoriesCombo(); break;
+        case 44: _t->updateCardTypesCombo(); break;
+        case 45: _t->updateSubCategoriesCombo(); break;
+        case 46: _t->showProdListAsGrid(); break;
+        case 47: _t->showProdListAsTable(); break;
+        case 48: _t->adjustProductsTable(); break;
+        case 49: _t->showBalancesPage(); break;
+        case 50: _t->setupBalancesModel(); break;
+        case 51: _t->showCashFlowPage(); break;
+        case 52: _t->showSpecialOrders(); break;
+        case 53: _t->setupCashFlowModel(); break;
+        case 54: _t->setupSpecialOrdersModel(); break;
+        case 55: _t->setSpecialOrdersFilter(); break;
+        case 56: _t->setupRandomMsgModel(); break;
+        case 57: _t->showCurrencies(); break;
+        case 58: _t->reportActivated((*reinterpret_cast< QListWidgetItem*(*)>(_a[1]))); break;
+        case 59: _t->printGralEndOfDay(); break;
+        case 60: _t->printEndOfDay(); break;
+        case 61: _t->printEndOfMonth(); break;
+        case 62: _t->printLowStockProducts(); break;
+        case 63: _t->printSoldOutProducts(); break;
+        case 64: _t->printStock(); break;
+        case 65: _t->printSelectedBalance(); break;
+        case 66: _t->createUser(); break;
+        case 67: _t->createOffer(); break;
+        case 68: _t->createProduct(); break;
+        case 69: _t->createMeasure(); break;
+        case 70: _t->createCategory(); break;
+        case 71: _t->createDepartment(); break;
+        case 72: _t->createSubCategory(); break;
+        case 73: _t->createClient(); break;
+        case 74: _t->createRandomMsg(); break;
+        case 75: _t->createCurrency(); break;
+        case 76: _t->deleteSelectedCurrency(); break;
+        case 77: _t->deleteSelectedOffer(); break;
+        case 78: _t->deleteSelectedUser(); break;
+        case 79: _t->deleteSelectedProduct(); break;
+        case 80: _t->deleteSelectedMeasure(); break;
+        case 81: _t->deleteSelectedDepartment(); break;
+        case 82: _t->deleteSelectedCategory(); break;
+        case 83: _t->deleteSelectedSubCategory(); break;
+        case 84: _t->deleteSelectedClient(); break;
+        case 85: _t->populateDepartmentsHash(); break;
+        case 86: _t->populateCategoriesHash(); break;
+        case 87: _t->populateCardTypesHash(); break;
+        case 88: _t->populateSubCategoriesHash(); break;
+        case 89: _t->setProductsFilter(); break;
+        case 90: _t->setTransactionsFilter(); break;
+        case 91: _t->setBalancesFilter(); break;
+        case 92: _t->correctStock((*reinterpret_cast< qulonglong(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3])),(*reinterpret_cast< const QString(*)>(_a[4]))); break;
+        case 93: { TransactionInfo _r = _t->createPurchase((*reinterpret_cast< ProductInfo(*)>(_a[1])));
+            if (_a[0]) *reinterpret_cast< TransactionInfo*>(_a[0]) = _r; }  break;
+        case 94: _t->setupDb(); break;
+        case 95: _t->setupUsersModel(); break;
+        case 96: _t->setupOffersModel(); break;
+        case 97: _t->setupProductsModel(); break;
+        case 98: _t->setupMeasuresModel(); break;
+        case 99: _t->setupCategoriesModel(); break;
+        case 100: _t->setupDepartmentsModel(); break;
+        case 101: _t->setupSubCategoriesModel(); break;
+        case 102: _t->setupClientsModel(); break;
+        case 103: _t->setupTransactionsModel(); break;
+        case 104: _t->setupCurrenciesModel(); break;
+        case 105: _t->checkDBStatus(); break;
+        case 106: _t->connectToDb(); break;
+        case 107: _t->exportTable(); break;
+        case 108: _t->exportQTableView((*reinterpret_cast< QAbstractItemView*(*)>(_a[1]))); break;
+        case 109: _t->log((*reinterpret_cast< const qulonglong(*)>(_a[1])),(*reinterpret_cast< const QDate(*)>(_a[2])),(*reinterpret_cast< const QTime(*)>(_a[3])),(*reinterpret_cast< const QString(*)>(_a[4]))); break;
+        case 110: _t->showLogs(); break;
+        case 111: _t->setupLogsModel(); break;
+        case 112: _t->showReservations(); break;
+        case 113: _t->setupReservationsModel(); break;
+        case 114: _t->reservationsOnSelected((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
+        case 115: _t->createFloatingPanels(); break;
+        case 116: _t->reSelectModels(); break;
+        case 117: _t->checkDefaultView(); break;
+        case 118: _t->agregarSerieFolios(); break;
+        case 119: _t->cancelarFactura(); break;
+        case 120: _t->departmentsOnSelected((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
+        case 121: _t->categoriesOnSelected((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
+        default: ;
+        }
+    }
+}
+
+const QMetaObjectExtraData iotstockView::staticMetaObjectExtraData = {
+    0,  qt_static_metacall 
+};
+
+const QMetaObject iotstockView::staticMetaObject = {
+    { &QWidget::staticMetaObject, qt_meta_stringdata_iotstockView,
+      qt_meta_data_iotstockView, &staticMetaObjectExtraData }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &iotstockView::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
+
+const QMetaObject *iotstockView::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+}
+
+void *iotstockView::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_iotstockView))
+        return static_cast<void*>(const_cast< iotstockView*>(this));
+    if (!strcmp(_clname, "Ui::iotstockview_base"))
+        return static_cast< Ui::iotstockview_base*>(const_cast< iotstockView*>(this));
+    return QWidget::qt_metacast(_clname);
+}
+
+int iotstockView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QWidget::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 122)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 122;
+    }
+    return _id;
+}
+
+// SIGNAL 0
+void iotstockView::signalChangeStatusbar(const QString & _t1)
+{
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 0, _a);
+}
+
+// SIGNAL 1
+void iotstockView::signalChangeCaption(const QString & _t1)
+{
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 1, _a);
+}
+
+// SIGNAL 2
+void iotstockView::signalConnected()
+{
+    QMetaObject::activate(this, &staticMetaObject, 2, 0);
+}
+
+// SIGNAL 3
+void iotstockView::signalDisconnected()
+{
+    QMetaObject::activate(this, &staticMetaObject, 3, 0);
+}
+
+// SIGNAL 4
+void iotstockView::signalConnectActions()
+{
+    QMetaObject::activate(this, &staticMetaObject, 4, 0);
+}
+
+// SIGNAL 5
+void iotstockView::signalShowPrefs()
+{
+    QMetaObject::activate(this, &staticMetaObject, 5, 0);
+}
+
+// SIGNAL 6
+void iotstockView::signalAdminLoggedOn()
+{
+    QMetaObject::activate(this, &staticMetaObject, 6, 0);
+}
+
+// SIGNAL 7
+void iotstockView::signalSupervisorLoggedOn()
+{
+    QMetaObject::activate(this, &staticMetaObject, 7, 0);
+}
+
+// SIGNAL 8
+void iotstockView::signalAdminLoggedOff()
+{
+    QMetaObject::activate(this, &staticMetaObject, 8, 0);
+}
+
+// SIGNAL 9
+void iotstockView::signalSalir()
+{
+    QMetaObject::activate(this, &staticMetaObject, 9, 0);
+}
+
+// SIGNAL 10
+void iotstockView::signalShowDbConfig()
+{
+    QMetaObject::activate(this, &staticMetaObject, 10, 0);
+}
+QT_END_MOC_NAMESPACE

@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="iotpos" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\usr\;CMake Files\..\..\..\usr\share\;CMake Files\..\..\..\usr\share\kde4\;CMake Files\..\..\..\usr\share\kde4\apps\;CMake Files\..\..\..\usr\share\kde4\apps\cmake\;CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\;CMake Files\..\..\..\usr\lib\;CMake Files\..\..\..\usr\lib\automoc4\;CMake Files\src\;CMake Files\icons\;CMake Files\styles\;CMake Files\styles\simple\;CMake Files\styles\elegant\;CMake Files\images\;CMake Files\iotstock\;CMake Files\iotstock\src\;CMake Files\iotstock\icons\;CMake Files\iotstock\images\;CMake Files\iotstock\style\;CMake Files\iotstock\style\simple\;CMake Files\database_resources\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/earth/iotpos/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="list_install_components">
+         <Option working_dir="/home/earth/iotpos/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 list_install_components" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="install">
+         <Option working_dir="/home/earth/iotpos/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 install" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/earth/iotpos/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="edit_cache">
+         <Option working_dir="/home/earth/iotpos/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 edit_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="uninstall">
+         <Option working_dir="/home/earth/iotpos/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 uninstall" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="install/strip">
+         <Option working_dir="/home/earth/iotpos/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 install/strip" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="install/local">
+         <Option working_dir="/home/earth/iotpos/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 install/local" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="test">
+         <Option working_dir="/home/earth/iotpos/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 test" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="iotpos_automoc">
+         <Option working_dir="/home/earth/iotpos/build/src" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/earth/iotpos/build/src/Makefile&quot;  VERBOSE=1 iotpos_automoc" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/earth/iotpos/build/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/src/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/src/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="iotpos">
+         <Option output="/home/earth/iotpos/build/src/iotpos" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_DEFAULT_SOURCE" />
+            <Add option="-D_BSD_SOURCE" />
+            <Add directory="/home/earth/iotpos/build/src" />
+            <Add directory="/home/earth/iotpos/src" />
+            <Add directory="/usr/include/KDE" />
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/Qt" />
+            <Add directory="/usr/include/qt4/Qt3Support" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/usr/include/qt4/QtDBus" />
+            <Add directory="/usr/include/qt4/QtDeclarative" />
+            <Add directory="/usr/include/qt4/QtDesigner" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/qt4/QtHelp" />
+            <Add directory="/usr/include/qt4/QtNetwork" />
+            <Add directory="/usr/include/qt4/QtOpenGL" />
+            <Add directory="/usr/include/qt4/QtScript" />
+            <Add directory="/usr/include/qt4/QtScriptTools" />
+            <Add directory="/usr/include/qt4/QtSql" />
+            <Add directory="/usr/include/qt4/QtSvg" />
+            <Add directory="/usr/include/qt4/QtTest" />
+            <Add directory="/usr/include/qt4/QtUiTools" />
+            <Add directory="/usr/include/qt4/QtXml" />
+            <Add directory="/usr/include/qt4/QtXmlPatterns" />
+            <Add directory="/usr/share/qt4/mkspecs/default" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/earth/iotpos/build/src/Makefile&quot;  VERBOSE=1 iotpos" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/earth/iotpos/build/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/src/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/src/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="iotpos/fast">
+         <Option output="/home/earth/iotpos/build/src/iotpos" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_DEFAULT_SOURCE" />
+            <Add option="-D_BSD_SOURCE" />
+            <Add directory="/home/earth/iotpos/build/src" />
+            <Add directory="/home/earth/iotpos/src" />
+            <Add directory="/usr/include/KDE" />
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/Qt" />
+            <Add directory="/usr/include/qt4/Qt3Support" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/usr/include/qt4/QtDBus" />
+            <Add directory="/usr/include/qt4/QtDeclarative" />
+            <Add directory="/usr/include/qt4/QtDesigner" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/qt4/QtHelp" />
+            <Add directory="/usr/include/qt4/QtNetwork" />
+            <Add directory="/usr/include/qt4/QtOpenGL" />
+            <Add directory="/usr/include/qt4/QtScript" />
+            <Add directory="/usr/include/qt4/QtScriptTools" />
+            <Add directory="/usr/include/qt4/QtSql" />
+            <Add directory="/usr/include/qt4/QtSvg" />
+            <Add directory="/usr/include/qt4/QtTest" />
+            <Add directory="/usr/include/qt4/QtUiTools" />
+            <Add directory="/usr/include/qt4/QtXml" />
+            <Add directory="/usr/include/qt4/QtXmlPatterns" />
+            <Add directory="/usr/share/qt4/mkspecs/default" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/earth/iotpos/build/src/Makefile&quot;  VERBOSE=1 iotpos/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/earth/iotpos/build/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/src/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/src/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="translations">
+         <Option working_dir="/home/earth/iotpos/build/src" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/earth/iotpos/build/src/Makefile&quot;  VERBOSE=1 translations" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/earth/iotpos/build/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/src/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/src/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="iotstock_automoc">
+         <Option working_dir="/home/earth/iotpos/build/iotstock/src" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/earth/iotpos/build/iotstock/src/Makefile&quot;  VERBOSE=1 iotstock_automoc" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/earth/iotpos/build/iotstock/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/iotstock/src/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/iotstock/src/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="translations">
+         <Option working_dir="/home/earth/iotpos/build/iotstock/src" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/earth/iotpos/build/iotstock/src/Makefile&quot;  VERBOSE=1 translations" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/earth/iotpos/build/iotstock/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/iotstock/src/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/iotstock/src/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="iotstock">
+         <Option output="/home/earth/iotpos/build/iotstock/src/iotstock" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_DEFAULT_SOURCE" />
+            <Add option="-D_BSD_SOURCE" />
+            <Add directory="/home/earth/iotpos/build/iotstock/src" />
+            <Add directory="/home/earth/iotpos/iotstock/src" />
+            <Add directory="/usr/include/KDE" />
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/Qt" />
+            <Add directory="/usr/include/qt4/Qt3Support" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/usr/include/qt4/QtDBus" />
+            <Add directory="/usr/include/qt4/QtDeclarative" />
+            <Add directory="/usr/include/qt4/QtDesigner" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/qt4/QtHelp" />
+            <Add directory="/usr/include/qt4/QtNetwork" />
+            <Add directory="/usr/include/qt4/QtOpenGL" />
+            <Add directory="/usr/include/qt4/QtScript" />
+            <Add directory="/usr/include/qt4/QtScriptTools" />
+            <Add directory="/usr/include/qt4/QtSql" />
+            <Add directory="/usr/include/qt4/QtSvg" />
+            <Add directory="/usr/include/qt4/QtTest" />
+            <Add directory="/usr/include/qt4/QtUiTools" />
+            <Add directory="/usr/include/qt4/QtXml" />
+            <Add directory="/usr/include/qt4/QtXmlPatterns" />
+            <Add directory="/usr/share/qt4/mkspecs/default" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/earth/iotpos/build/iotstock/src/Makefile&quot;  VERBOSE=1 iotstock" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/earth/iotpos/build/iotstock/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/iotstock/src/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/iotstock/src/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="iotstock/fast">
+         <Option output="/home/earth/iotpos/build/iotstock/src/iotstock" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_DEFAULT_SOURCE" />
+            <Add option="-D_BSD_SOURCE" />
+            <Add directory="/home/earth/iotpos/build/iotstock/src" />
+            <Add directory="/home/earth/iotpos/iotstock/src" />
+            <Add directory="/usr/include/KDE" />
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/Qt" />
+            <Add directory="/usr/include/qt4/Qt3Support" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/usr/include/qt4/QtDBus" />
+            <Add directory="/usr/include/qt4/QtDeclarative" />
+            <Add directory="/usr/include/qt4/QtDesigner" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/qt4/QtHelp" />
+            <Add directory="/usr/include/qt4/QtNetwork" />
+            <Add directory="/usr/include/qt4/QtOpenGL" />
+            <Add directory="/usr/include/qt4/QtScript" />
+            <Add directory="/usr/include/qt4/QtScriptTools" />
+            <Add directory="/usr/include/qt4/QtSql" />
+            <Add directory="/usr/include/qt4/QtSvg" />
+            <Add directory="/usr/include/qt4/QtTest" />
+            <Add directory="/usr/include/qt4/QtUiTools" />
+            <Add directory="/usr/include/qt4/QtXml" />
+            <Add directory="/usr/include/qt4/QtXmlPatterns" />
+            <Add directory="/usr/share/qt4/mkspecs/default" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/earth/iotpos/build/iotstock/src/Makefile&quot;  VERBOSE=1 iotstock/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/earth/iotpos/build/iotstock/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/iotstock/src/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/earth/iotpos/build/iotstock/src/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/earth/iotpos/dataAccess/azahar.cpp">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/dataAccess/azahar.h">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/clienteditor.cpp">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/clienteditor.h">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/dialogseriefolios.cpp">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/dialogseriefolios.h">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/iotstock.cpp">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/iotstock.h">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/iotstockview.cpp">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/iotstockview.h">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/main.cpp">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/offersdelegate.cpp">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/offersdelegate.h">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/producteditor.cpp">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/producteditor.h">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/promoeditor.cpp">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/promoeditor.h">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/purchaseeditor.cpp">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/purchaseeditor.h">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/settings.kcfgc">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/subcategoryeditor.cpp">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/subcategoryeditor.h">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/ui/editclient_widget.ui">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/ui/editfolios.ui">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/ui/editpromo_widget.ui">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/ui/edituser_widget.ui">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/ui/iotstockview_base.ui">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/ui/pref_printers.ui">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/ui/prefs_base.ui">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/ui/prefs_db.ui">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/ui/producteditor.ui">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/ui/purchaseeditor.ui">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/ui/subcategoryeditor.ui">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/usereditor.cpp">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/usereditor.h">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/usersdelegate.cpp">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/usersdelegate.h">
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/mibitWidgets/mibitfloatpanel.cpp">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/mibitWidgets/mibitfloatpanel.h">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/mibitWidgets/mibitlineedit.cpp">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/mibitWidgets/mibitlineedit.h">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/mibitWidgets/mibitnotifier.cpp">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/mibitWidgets/mibitnotifier.h">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/mibitWidgets/mibitpassworddlg.cpp">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/mibitWidgets/mibitpassworddlg.h">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/mibitWidgets/mibittip.cpp">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/mibitWidgets/mibittip.h">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/printing/print-cups.cpp">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/printing/print-cups.h">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/printing/print-dev.cpp">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/printing/print-dev.h">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/BasketPriceCalculationService.cpp">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/BasketPriceCalculationService.h">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/bundlelist.cpp">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/bundlelist.h">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/dialogclientdata.cpp">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/dialogclientdata.h">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/gaveta.cpp">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/gaveta.h">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/hash.cpp">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/hash.h">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/inputdialog.cpp">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/inputdialog.h">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/iotpos.cpp">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/iotpos.h">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/iotposview.cpp">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/iotposview.h">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/loginwindow.cpp">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/loginwindow.h">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/main.cpp">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/misc.cpp">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/misc.h">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/nouns/BasketEntryPriceSummary.cpp">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/nouns/BasketEntryPriceSummary.h">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/nouns/BasketPriceSummary.cpp">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/nouns/BasketPriceSummary.h">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/nouns/Currency.cpp">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/nouns/Currency.h">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/nouns/User.cpp">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/nouns/User.h">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/pricechecker.cpp">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/pricechecker.h">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/productdelegate.cpp">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/productdelegate.h">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/refacturar.cpp">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/refacturar.h">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/reservations.cpp">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/reservations.h">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/resume.cpp">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/resume.h">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/saleqtydelegate.cpp">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/saleqtydelegate.h">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/settings.kcfgc">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/sha1.cc">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/sha1.h">
+         <Option target="iotpos"/>
+         <Option target="iotstock"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/soselector.cpp">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/soselector.h">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/sostatus.cpp">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/sostatus.h">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/specialordereditor.cpp">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/specialordereditor.h">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/ticketpopup.cpp">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/ticketpopup.h">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/ui/checker.ui">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/ui/datoscliente.ui">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/ui/facturas_data.ui">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/ui/mainview.ui">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/ui/pref_printers.ui">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/ui/pref_security.ui">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/ui/pref_style.ui">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/ui/prefs_base.ui">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/ui/prefs_db.ui">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/ui/refacturar.ui">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/ui/reservations.ui">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/ui/resume.ui">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/ui/soselector.ui">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/ui/sostatus.ui">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/ui/special_order.ui">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/ui/store_data.ui">
+         <Option target="iotpos"/>
+      </Unit>
+      <Unit filename="/home/earth/iotpos/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/FindKDE4Internal.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/MacroEnsureVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/FindQt4.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/MacroPushRequiredVars.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/Qt4Macros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/Qt4ConfigDependentSettings.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/FindX11.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/FindAutomoc4.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/MacroLibrary.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/MacroOptionalFindPackage.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/MacroOptionalAddSubdirectory.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/MacroAdditionalCleanFiles.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/MacroAddCompileFlags.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/MacroAddLinkFlags.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/MacroAppendIf.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/MacroEnsureOutOfSourceBuild.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/MacroBoolTo01.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/MacroPushRequiredVars.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/MacroLogFeature.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/MacroWriteBasicCMakeVersionFile.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/KDELibsDependencies.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/KDEPlatformProfile.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/KDELibs4ToolsTargets.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/KDELibs4ToolsTargets-debian.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/KDELibs4LibraryTargets.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/KDELibs4LibraryTargets-debian.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/FindPhonon.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/KDE4Macros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/kde4_cmake_uninstall.cmake.in">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/KDE4Defaults.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/FindKDE4Internal.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/KDE4Defaults.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/FindKDE4Internal.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/share/kde4/apps/cmake/modules/KDE4Defaults.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\kde4\apps\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/lib/automoc4/Automoc4Config.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\automoc4\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/lib/automoc4/Automoc4Version.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\automoc4\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/lib/automoc4/automoc4.files.in">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\automoc4\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/lib/automoc4/automoc4.files.in">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\automoc4\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/../../../usr/lib/automoc4/automoc4.files.in">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\automoc4\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\src\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/icons/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\icons\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/styles/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\styles\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/styles/simple/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\styles\simple\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/styles/elegant/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\styles\elegant\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/images/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\images\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\iotstock\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\iotstock\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\iotstock\src\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\iotstock\src\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/icons/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\iotstock\icons\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/icons/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\iotstock\icons\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/images/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\iotstock\images\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/images/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\iotstock\images\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/style/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\iotstock\style\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/style/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\iotstock\style\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/style/simple/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\iotstock\style\simple\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/iotstock/style/simple/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\iotstock\style\simple\" />
+      </Unit>
+      <Unit filename="/home/earth/iotpos/database_resources/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\database_resources\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

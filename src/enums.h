@@ -26,7 +26,7 @@ enum PaymentType      {pUnknown=99, pCash=1, pCard=2, pOwnCredit=3 };
 enum cashFlowType     {ctCashOut=1, ctCashOutMoneyReturnOnCancel=2, ctCashOutMoneyReturnOnProductReturn=3, ctCashIn=4, ctCashInReservation=5, ctCashOutReservation=6, ctCashInCreditPayment=7, ctCashInDebit=8};
 enum TransactionState {tNotCompleted=1, tCompleted=2, tCancelled=3, tPOPending=4, tPOCompleted=5, tPOIncomplete=6, tReserved=7, tCompletedOwnCreditPending=8 /*8->Really not pending*/ , tCompletedOwnCreditPaid=9 /*9->Not used*/ };
 enum SellUnits        {uPiece=1, uWeightKg=2, uLengthMts=3, uVolumeLitre=4, uVolumeCubicMts=5}; //not needed anymore stored on database
-enum                  {colQty=0,  colUnits=1, colDesc=2, colPrice=3,  colDisc=4, colDue=5,  colCode=6 }; //column names and numbers..
+enum                  {colQty=0,  colUnits=1, colDesc=2, colPrice=3,  colDue=4, colDisc=5,  colCode=6 }; //column names and numbers..
 enum                  {pageMain=0, pageSearch=1, pageReprintTicket=2, pageRerturnProducts=3, pageAdds=4};
 
 enum userRoles        {roleBasic=1, roleAdmin=2, roleSupervisor=3 };
