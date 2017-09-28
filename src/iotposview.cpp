@@ -363,7 +363,6 @@ iotposView::iotposView() //: QWidget(parent)
   QTimer::singleShot(500, this, SLOT(setUpTable()));
   //ui_mainview.groupWidgets->setCurrentIndex(pageMain);
   ui_mainview.mainPanel->setCurrentIndex(pageMain);
-  //ui_mainview.stackedWidget_3->setCurrentIndex(1);
   // point the public ui pointers
   frameLeft = ui_mainview.frameLeft;
   frame     = ui_mainview.frame;
@@ -610,7 +609,6 @@ void iotposView::setUpTable()
   if (x < 600){
    ui_mainview.tableWidget->hideColumn(6);
    ui_mainview.tableWidget->hideColumn(4);
-   ui_mainview.tableWidget->hideColumn(3);
   }
 }
 
@@ -802,6 +800,7 @@ void iotposView::showEnterCodeWidget()
 {
   //ui_mainview.groupWidgets->setCurrentIndex(pageMain);
   ui_mainview.stackedWidget_3->setCurrentIndex(1);
+  ui_mainview.listView->scrollToTop();
   ui_mainview.mainPanel->setCurrentIndex(0); // back to welcome widget
   // BFB. Toggle editItemCode and editFilterByDesc.
   if (!ui_mainview.editItemCode->hasFocus()){
@@ -831,6 +830,7 @@ void iotposView::buttonDone()
   ui_mainview.mainPanel->setCurrentIndex(0); // back to welcome widget
   ui_mainview.frameGridView->show();
   ui_mainview.stackedWidget_3->setCurrentIndex(1);
+  ui_mainview.listView->scrollToTop();
   ui_mainview.editItemCode->setFocus();
   ui_mainview.lblSubtotalPre->show();
   ui_mainview.lblSubtotal->show();
@@ -3823,6 +3823,7 @@ void iotposView::unfreezeWidgets()
   startAgain();
   ui_mainview.editItemCode->setFocus();
   ui_mainview.stackedWidget_3->setCurrentIndex(1);
+  ui_mainview.listView->scrollToTop();
 }
 
 void iotposView::startAgain()
@@ -3868,7 +3869,7 @@ void iotposView::cancelCurrentTransaction()
   ui_mainview.mainPanel->setCurrentIndex(0);
   ui_mainview.editItemCode->setFocus();
   ui_mainview.stackedWidget_3->setCurrentIndex(1);
-  ui_mainview.stackedWidget_3->setCurrentIndex(1);
+  ui_mainview.listView->scrollToTop();
 
 }
 
@@ -3904,6 +3905,7 @@ void iotposView::preCancelCurrentTransaction()
   ui_mainview.frameGridView->show();
   ui_mainview.editItemCode->setFocus();
   ui_mainview.stackedWidget_3->setCurrentIndex(1);
+  ui_mainview.listView->scrollToTop();
 }
 
 void iotposView::deleteCurrentTransaction()
@@ -5836,7 +5838,7 @@ void iotposView::suspendSale()
     notify->sendEvent();
   }
 ui_mainview.stackedWidget_3->setCurrentIndex(1);
-ui_mainview.stackedWidget_3->setCurrentIndex(1);
+ui_mainview.listView->scrollToTop();
 }
 
 //This will resume the sale, using a new balanceid.
