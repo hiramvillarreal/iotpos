@@ -11,13 +11,13 @@ SaleQtyDelegate::SaleQtyDelegate(QObject *parent)
 
 QWidget *SaleQtyDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &, const QModelIndex & index) const
 {
-    if (index.column() == 3) {
+    if (index.column() == 0) {
         QSpinBox *editor = new QSpinBox(parent);
         ///We need to get the maximum, with stock level. Take into account the unlimited stock products.
         //get item data from db.
         Azahar *myDb = new Azahar;
         myDb->setDatabase(db);
-        QModelIndex sibling = index.sibling( index.row(), 0 ); // colCode=0
+        QModelIndex sibling = index.sibling( index.row(), 6 ); // colCode=6
         qulonglong code = sibling.data(Qt::DisplayRole).toULongLong();
         int stock = myDb->getProductStockQty( code );
         //the  spinbox only support integers. We need a config option to turn ON/OFF this feature.

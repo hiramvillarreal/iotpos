@@ -605,7 +605,13 @@ void iotposView::setUpTable()
   ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDisc, portion); //Discount
   ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDue, portion+10); //DUE
   ui_mainview.tableWidget->horizontalHeader()->setFixedHeight(24);
-  resizeSearchTable();
+  int x = (QApplication::desktop()->width());
+   resizeSearchTable();
+  if (x < 600){
+   ui_mainview.tableWidget->hideColumn(6);
+   ui_mainview.tableWidget->hideColumn(4);
+   ui_mainview.tableWidget->hideColumn(3);
+  }
 }
 
 
