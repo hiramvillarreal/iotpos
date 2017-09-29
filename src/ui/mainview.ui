@@ -1705,12 +1705,12 @@
               </column>
               <column>
                <property name="text">
-                <string>Discount</string>
+                <string>Total</string>
                </property>
               </column>
               <column>
                <property name="text">
-                <string>Total</string>
+                <string>Discount</string>
                </property>
               </column>
               <column>
