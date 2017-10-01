@@ -611,13 +611,13 @@ void iotposView::setUpTable()
   }
   else{
       ui_mainview.tableWidget->horizontalHeader()->setResizeMode(QHeaderView::Interactive);
-      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colQty, (portion/3));  //QTY
-      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colUnits, (portion/3));//UNITS
-      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDesc, (portion*2.8)); //DESCRIPTION
+      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colQty, (portion/3)+10);  //QTY
+      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colUnits, (portion/3)+10);//UNITS
+      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDesc, (portion*2.7)); //DESCRIPTION
       ui_mainview.tableWidget->horizontalHeader()->resizeSection(colPrice, (portion/2)); //PRICE
       ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDue, (portion/2)); //DUE
-      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDisc, (portion/2)); //Discount
-      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colCode, portion); //BAR CODE
+      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDisc, (portion/2)+10); //Discount
+      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colCode, portion-20); //BAR CODE
     //resizeSearchTable();
   }
 

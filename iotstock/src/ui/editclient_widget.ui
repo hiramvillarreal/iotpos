@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>380</width>
-    <height>314</height>
+    <height>374</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -81,7 +81,7 @@
       <string>E-mail</string>
      </property>
      <property name="buddy">
-      <cstring>editClientMail</cstring>
+      <cstring>editClientCell</cstring>
      </property>
     </widget>
    </item>
@@ -102,7 +102,7 @@
     </widget>
    </item>
    <item row="7" column="1">
-    <widget class="MibitLineEdit" name="editClientMail">
+    <widget class="MibitLineEdit" name="editClientCell">
      <property name="maximumSize">
       <size>
        <width>100</width>
@@ -224,14 +224,14 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KDateWidget</class>
-   <extends>QWidget</extends>
-   <header>kdatewidget.h</header>
-  </customwidget>
-  <customwidget>
    <class>MibitLineEdit</class>
    <extends>QLineEdit</extends>
    <header>../../mibitWidgets/mibitlineedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KDateWidget</class>
+   <extends>QWidget</extends>
+   <header>kdatewidget.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>
@@ -239,7 +239,7 @@
   <tabstop>editClientName</tabstop>
   <tabstop>editClientAddress</tabstop>
   <tabstop>editClientPhone</tabstop>
-  <tabstop>editClientMail</tabstop>
+  <tabstop>editClientCell</tabstop>
   <tabstop>editClientPoints</tabstop>
   <tabstop>editClientDiscount</tabstop>
   <tabstop>sinceDatePicker</tabstop>
