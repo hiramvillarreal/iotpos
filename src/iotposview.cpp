@@ -595,24 +595,30 @@ void iotposView::loadIcons()
 void iotposView::setUpTable()
 {
   QSize tableSize = ui_mainview.tableWidget->size();
-  int portion = tableSize.width()/10;
-  ui_mainview.tableWidget->horizontalHeader()->setResizeMode(QHeaderView::Interactive);
-  ui_mainview.tableWidget->horizontalHeader()->resizeSection(colCode, portion); //BAR CODE
-  ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDesc, (portion*4)+9); //DESCRIPTION
-  ui_mainview.tableWidget->horizontalHeader()->resizeSection(colPrice, portion); //PRICE
-  ui_mainview.tableWidget->horizontalHeader()->resizeSection(colQty, portion-20);  //QTY
-  ui_mainview.tableWidget->horizontalHeader()->resizeSection(colUnits, portion-15);//UNITS
-  ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDisc, portion); //Discount
-  ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDue, portion+10); //DUE
+  int portion = tableSize.width()/6;
   ui_mainview.tableWidget->horizontalHeader()->setFixedHeight(24);
   int x = (QApplication::desktop()->width());
   if (x < 600){
+   ui_mainview.tableWidget->horizontalHeader()->setResizeMode(QHeaderView::Interactive);
+   ui_mainview.tableWidget->horizontalHeader()->resizeSection(colQty, (portion/2));  //QTY
+   ui_mainview.tableWidget->horizontalHeader()->resizeSection(colUnits, (portion/1.8));//UNITS
+   ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDesc, (portion*2.9)); //DESCRIPTION
+   ui_mainview.tableWidget->horizontalHeader()->resizeSection(colPrice, (portion)-10); //PRICE
+   ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDue, (portion)-10); //DUE
    ui_mainview.tableWidget->hideColumn(6);
    ui_mainview.tableWidget->hideColumn(5);
-   resizeSearchTableSmall();
+   //resizeSearchTableSmall();
   }
   else{
-    resizeSearchTable();
+      ui_mainview.tableWidget->horizontalHeader()->setResizeMode(QHeaderView::Interactive);
+      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colQty, (portion/3));  //QTY
+      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colUnits, (portion/3));//UNITS
+      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDesc, (portion*2.8)); //DESCRIPTION
+      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colPrice, (portion/2)); //PRICE
+      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDue, (portion/2)); //DUE
+      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDisc, (portion/2)); //Discount
+      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colCode, portion); //BAR CODE
+    //resizeSearchTable();
   }
 
 }
@@ -621,8 +627,8 @@ void iotposView::setUpTable()
 void iotposView::resizeSearchTable()
 {
     QSize tableSize = ui_mainview.tableSearch->size();
-   /*
-    int portion = tableSize.width()/12;
+
+    int portion = tableSize.width()/7;
     ui_mainview.tableSearch->horizontalHeader()->setResizeMode(QHeaderView::Interactive);
     ui_mainview.tableSearch->horizontalHeader()->resizeSection(0, portion*1); //QTY
     ui_mainview.tableSearch->horizontalHeader()->resizeSection(1, portion*2); //UNIT
@@ -631,22 +637,20 @@ void iotposView::resizeSearchTable()
     ui_mainview.tableSearch->horizontalHeader()->resizeSection(4, portion*5);//TOTAL
     ui_mainview.tableSearch->horizontalHeader()->resizeSection(5, portion*6); //DISCOUNT
     ui_mainview.tableSearch->horizontalHeader()->resizeSection(6, portion*7); //CODE
-    */
+
 }
 
 void iotposView::resizeSearchTableSmall()
 {
     QSize tableSize = ui_mainview.tableSearch->size();
-    /*
-    int portion = tableSize.width()/12;
+
+    int portion = tableSize.width()/5;
     ui_mainview.tableSearch->horizontalHeader()->setResizeMode(QHeaderView::Interactive);
     ui_mainview.tableSearch->horizontalHeader()->resizeSection(0, portion*1); //QTY
-    ui_mainview.tableSearch->horizontalHeader()->resizeSection(1, portion*1); //UNIT
-    ui_mainview.tableSearch->horizontalHeader()->resizeSection(2, portion*1); //DESCRIPTION
-    ui_mainview.tableSearch->horizontalHeader()->resizeSection(3, portion);  //PRICE
-    ui_mainview.tableSearch->horizontalHeader()->resizeSection(4, portion*1);//TOTAL
-    ui_mainview.tableSearch->horizontalHeader()->resizeSection(5, portion*1); //DISCOUNT
-    */
+    ui_mainview.tableSearch->horizontalHeader()->resizeSection(1, portion*2); //UNIT
+    ui_mainview.tableSearch->horizontalHeader()->resizeSection(2, portion*3); //DESCRIPTION
+    ui_mainview.tableSearch->horizontalHeader()->resizeSection(3, portion*4);  //PRICE
+    ui_mainview.tableSearch->horizontalHeader()->resizeSection(4, portion*5);//TOTAL
 }
 
 void iotposView::setUpInputs()

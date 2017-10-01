@@ -1588,7 +1588,7 @@ msgid "Description"
 msgstr "Descripción"
 
 msgid "Units"
-msgstr "Unidades"
+msgstr "Uni."
 
 msgid "Total:"
 msgstr "Total:"
