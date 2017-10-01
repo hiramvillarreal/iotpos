@@ -504,7 +504,7 @@ msgstr ""
 
 #: lemonview.cpp:2025
 msgid "Taxes:"
-msgstr "Impuestos:"
+msgstr "IVA:"
 
 #: lemonview.cpp:2026
 msgid "Tax:"
@@ -1727,7 +1727,7 @@ msgid "Display warning message when level is lower than"
 msgstr "Mostrar mensaje de alerta cuando el nivel sea menor a"
 
 msgid "Taxes"
-msgstr "Impuestos"
+msgstr "IVA"
 
 msgid "Add taxes to sale (not included in price)"
 msgstr "Agregar Impuestos a la venta (no incluidos en el precio)"

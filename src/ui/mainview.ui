@@ -1691,7 +1691,7 @@
               <number>0</number>
              </property>
              <property name="currentIndex">
-              <number>0</number>
+              <number>1</number>
              </property>
              <widget class="QWidget" name="page_10">
               <widget class="QWidget" name="horizontalLayoutWidget">
@@ -1699,7 +1699,7 @@
                 <rect>
                  <x>0</x>
                  <y>30</y>
-                 <width>461</width>
+                 <width>431</width>
                  <height>41</height>
                 </rect>
                </property>
@@ -1801,7 +1801,7 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>461</width>
+                 <width>431</width>
                  <height>31</height>
                 </rect>
                </property>
@@ -2056,7 +2056,7 @@ color:black;</string>
                 <rect>
                  <x>0</x>
                  <y>1</y>
-                 <width>421</width>
+                 <width>431</width>
                  <height>34</height>
                 </rect>
                </property>
@@ -2369,7 +2369,7 @@ color:black;</string>
                 <rect>
                  <x>0</x>
                  <y>30</y>
-                 <width>461</width>
+                 <width>431</width>
                  <height>41</height>
                 </rect>
                </property>
