@@ -65,11 +65,11 @@ void TicketPopup::popup()
   int y = (QApplication::desktop()->height()/2)-(frameGeometry().height()/2);
 
  //aquipop
-  if (y < 160){
+  if (y < 100){
   setGeometry(x,0,335,250);
   }
   else {
-      setGeometry(x,y,335,340);
+      setGeometry(x,0,335,340);
   }
   timer->start();
 }

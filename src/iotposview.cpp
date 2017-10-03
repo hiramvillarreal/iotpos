@@ -2096,8 +2096,8 @@ int iotposView::doInsertItem(QString itemCode, QString itemDesc, double itemQty,
     ///WARNING: March 17 2012. Im implementing a double clicking feature for adding a delegate for typing the new QTY for the clicked item.
     ///         So, this will cause problems with this call (maybe more).
   }
-
   refreshTotalLabel();
+  ui_mainview.editItemCode->setFocus();
   // BFB: editFilterbyDesc keeps the focus,
   if (!ui_mainview.editFilterByDesc->hasFocus())
   ui_mainview.editItemCode->setFocus();
@@ -2324,9 +2324,8 @@ void iotposView::itemDoubleClicked(QTableWidgetItem* item)
     i2Modify = ui_mainview.tableWidget->item(row, colDisc);
     i2Modify->setData(Qt::EditRole, QVariant(newdiscount));
     info.qtyOnList = newqty;
-
-    ui_mainview.editItemCode->setFocus();
     ui_mainview.frameGridView->show();
+    ui_mainview.editItemCode->setFocus();
   } else {
     msg = i18n("<html><font color=red><b>Product not available in stock for the requested quantity.</b></font></html>");
     ui_mainview.editItemCode->clearFocus();
