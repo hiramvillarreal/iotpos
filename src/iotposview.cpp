@@ -598,9 +598,9 @@ void iotposView::setUpTable()
   int portion = tableSize.width()/6;
   ui_mainview.tableWidget->horizontalHeader()->setFixedHeight(24);
   int x = (QApplication::desktop()->width());
-  if (x < 600){
+  if (x < 6000){
    ui_mainview.tableWidget->horizontalHeader()->setResizeMode(QHeaderView::Interactive);
-   ui_mainview.tableWidget->horizontalHeader()->resizeSection(colQty, (portion/2));  //QTY
+   ui_mainview.tableWidget->horizontalHeader()->resizeSection(colQty, (portion/1.5));  //QTY
    ui_mainview.tableWidget->horizontalHeader()->resizeSection(colUnits, (portion/1.8));//UNITS
    ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDesc, (portion*2.9)); //DESCRIPTION
    ui_mainview.tableWidget->horizontalHeader()->resizeSection(colPrice, (portion)-10); //PRICE
