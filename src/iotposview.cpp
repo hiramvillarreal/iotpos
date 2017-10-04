@@ -250,9 +250,9 @@ iotposView::iotposView() //: QWidget(parent)
 
   //float panel for credits.
   path = KStandardDirs::locate("appdata", "styles/");
-  path = path+ "panel_top_big.svg";
+  path = path+ "panel_top.svg";
   creditPanel = new MibitFloatPanel(ui_mainview.frame, path, Top);
-  creditPanel->setSize(800,450);
+  creditPanel->setSize(460,300);
   creditPanel->addWidget(ui_mainview.creditWidget);
   creditPanel->setMode(pmManual);
   creditPanel->setHiddenTotally(true);
@@ -605,7 +605,7 @@ void iotposView::setUpTable()
    ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDesc, (portion*2.9)); //DESCRIPTION
    ui_mainview.tableWidget->horizontalHeader()->resizeSection(colPrice, (portion)-10); //PRICE
    ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDue, (portion)-10); //DUE
-   ui_mainview.tableWidget->hideColumn(6);
+   ui_mainview.tableWidget->hideColumn(0);
    ui_mainview.tableWidget->hideColumn(5);
    //resizeSearchTableSmall();
   }

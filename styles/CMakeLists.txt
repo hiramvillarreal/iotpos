@@ -4,6 +4,7 @@ install( FILES
   floating_bottom.svg
   floating_top.svg
   panel_top_big.svg
+  panel_top.svg
   dialog.svg
 DESTINATION  ${DATA_INSTALL_DIR}/iotpos/styles/ )
 

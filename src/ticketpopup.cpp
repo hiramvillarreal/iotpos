@@ -38,7 +38,7 @@ TicketPopup::TicketPopup(QString text, QPixmap pixmap, int timeToClose)
   gridLayout->addWidget(imagelabel, 0, 0);
   editText = new QTextEdit(this);
   editText->setHtml(text);
-  editText->setReadOnly(true);
+  editText->setReadOnly(true);  
   gridLayout->addWidget(editText, 1, 0);
   gridLayout->setMargin(17);
 
@@ -70,7 +70,8 @@ void TicketPopup::popup()
   }
   else {
       setGeometry(x,0,335,340);
-  }  
+  }
+  //editText->verticalScrollBar()->maximum();
   timer->start();
 }
 

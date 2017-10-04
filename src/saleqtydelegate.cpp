@@ -17,7 +17,7 @@ QWidget *SaleQtyDelegate::createEditor(QWidget *parent, const QStyleOptionViewIt
         //get item data from db.
         Azahar *myDb = new Azahar;
         myDb->setDatabase(db);
-        QModelIndex sibling = index.sibling( index.row(), 6 ); // colCode=6
+        QModelIndex sibling = index.sibling( index.row(), 0 ); // colCode=0
         qulonglong code = sibling.data(Qt::DisplayRole).toULongLong();
         int stock = myDb->getProductStockQty( code );
         //the  spinbox only support integers. We need a config option to turn ON/OFF this feature.
