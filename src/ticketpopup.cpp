@@ -70,7 +70,7 @@ void TicketPopup::popup()
   }
   else {
       setGeometry(x,0,335,340);
-  }
+  }  
   timer->start();
 }
 
