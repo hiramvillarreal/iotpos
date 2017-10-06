@@ -1427,7 +1427,11 @@ void iotposView::refreshTotalLabel()
     ui_mainview.lblSubtotal->setText(QString("%1").arg(KGlobal::locale()->formatMoney(summary.getNet().toDouble()+summary.getDiscountGross().toDouble())));//FIXME temporal, seems than  gross and net are equal without + summary.getDiscountGross().toDouble()
     ui_mainview.labelChange->setText(QString("%1") .arg(KGlobal::locale()->formatMoney(change)));
     ui_mainview.labelTotalDiscount->setText(QString("%1") .arg(KGlobal::locale()->formatMoney(summary.getDiscountGross().toDouble())));
-    if (summary.getDiscountGross().toDouble() > 0){
+    if (summary.getDiscountGross().toDouble() == 0 && !ui_mainview.labelTotalDiscount->isHidden()){
+        ui_mainview.labelTotalDiscountpre->hide();
+        ui_mainview.labelTotalDiscount->hide();
+    }
+    else if (summary.getDiscountGross().toDouble() > 0){
         ui_mainview.labelTotalDiscountpre->show();
         ui_mainview.labelTotalDiscount->show();
     }
