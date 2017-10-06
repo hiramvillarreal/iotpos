@@ -404,6 +404,8 @@ iotposView::iotposView() //: QWidget(parent)
   ui_mainview.editItemCode->setFocus();
   ui_mainview.rbFilterByDesc->setChecked(true);
   ui_mainview.frameGridView->show();
+  ui_mainview.labelTotalDiscountpre->hide();
+  ui_mainview.labelTotalDiscount->hide();
 setupGraphs();
 }
 // UI and Database -- GRAPHS.
@@ -1425,6 +1427,10 @@ void iotposView::refreshTotalLabel()
     ui_mainview.lblSubtotal->setText(QString("%1").arg(KGlobal::locale()->formatMoney(summary.getNet().toDouble()+summary.getDiscountGross().toDouble())));//FIXME temporal, seems than  gross and net are equal without + summary.getDiscountGross().toDouble()
     ui_mainview.labelChange->setText(QString("%1") .arg(KGlobal::locale()->formatMoney(change)));
     ui_mainview.labelTotalDiscount->setText(QString("%1") .arg(KGlobal::locale()->formatMoney(summary.getDiscountGross().toDouble())));
+    if (summary.getDiscountGross().toDouble() > 0){
+        ui_mainview.labelTotalDiscountpre->show();
+        ui_mainview.labelTotalDiscount->show();
+    }
     ui_mainview.lblSaleTaxes->setText(QString("%1") .arg(KGlobal::locale()->formatMoney(summary.getTax().toDouble())));
     ///update client discount
     //QString dStr;
@@ -3271,6 +3277,8 @@ void iotposView::finishCurrentTransaction()
    if (loggedUserRole == roleAdmin) {/*updateGraphs();*/}
    //showProductsGrid();
    ui_mainview.frameGridView->show();
+   ui_mainview.labelTotalDiscountpre->hide();
+   ui_mainview.labelTotalDiscount->hide();
    ui_mainview.stackedWidget_3->setCurrentIndex(3);
    ui_mainview.editItemCode->setFocus();
 }
@@ -3891,6 +3899,8 @@ void iotposView::cancelCurrentTransaction()
 
   if (continueIt) {cancelTransaction(getCurrentTransaction());}
   //ui_mainview.labelDetailPoints->show();
+  ui_mainview.labelTotalDiscountpre->hide();
+  ui_mainview.labelTotalDiscount->hide();
   ui_mainview.frameGridView->show();
   ui_mainview.mainPanel->setCurrentIndex(0);
   ui_mainview.editItemCode->setFocus();
@@ -3928,6 +3938,8 @@ void iotposView::preCancelCurrentTransaction()
   if (!ui_mainview.groupSaleDate->isHidden()) {
     ui_mainview.groupSaleDate->hide();
   }
+  ui_mainview.labelTotalDiscountpre->hide();
+  ui_mainview.labelTotalDiscount->hide();
   ui_mainview.frameGridView->show();
   ui_mainview.editItemCode->setFocus();
   ui_mainview.stackedWidget_3->setCurrentIndex(1);
