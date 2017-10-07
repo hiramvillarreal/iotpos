@@ -3047,10 +3047,10 @@ font: 75 9pt &quot;Lucida Grande&quot;;</string>
        <widget class="QWidget" name="resumeWidget" native="true">
         <property name="geometry">
          <rect>
-          <x>-110</x>
-          <y>490</y>
+          <x>30</x>
+          <y>500</y>
           <width>580</width>
-          <height>492</height>
+          <height>380</height>
          </rect>
         </property>
         <property name="minimumSize">

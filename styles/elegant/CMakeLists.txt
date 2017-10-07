@@ -12,9 +12,6 @@ install( FILES
         headerview_hover.png
         hgroupbox.png
         loginBackground.png
-        loginBackground_1280x800.png
-	loginBackground_1280x1024.png
-        loginBackground_1024x768.png
         passwordBackground.png
         passwordBackground_wide.png
         radiobutton_off.png
