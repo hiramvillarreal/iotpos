@@ -6569,6 +6569,7 @@ void iotposView::filterClientForCredit()
         delete myDb;
         //calculate total for unpaid customer credits
         calculateTotalForClient();
+        ui_mainview.creditPaymentWidget->show();
     }
 }
 
@@ -6732,7 +6733,6 @@ void iotposView::doCreditPayment()
 
     //print ticket. NOTE: This prints the credit report.. We want to print the NEW PAYMENT ALSO, so add to the document.
     calculateTotalForClient();
-    
     printCreditReport();
 
     //close db and credit dialog, delaying a bit.
@@ -6772,6 +6772,10 @@ void iotposView::printCreditReport()
             printer.setPaperSize(QSizeF(72,200), QPrinter::Millimeter);
             ui_mainview.creditContent->print(&printer);
         }
+    }
+    else
+    {
+
     }
 }
 
@@ -6886,30 +6890,28 @@ void iotposView::calculateTotalForClient()
                     break; //finish here, with only one we need to print it.
                 }
             }
+            itemsTable = cursor.insertTable(1, 3, itemsTableFormat);
 
+            //table
+            itemsFrameFormat = cursor.currentFrame()->frameFormat();
+            itemsFrameFormat.setBorder(0);
+            itemsFrameFormat.setPadding(1);
+            cursor.currentFrame()->setFrameFormat(itemsFrameFormat);
+            cursor = itemsTable->cellAt(0, 0).firstCursorPosition();
+            cursor.insertText(i18n("Date"), hdrFormat); //NOTE: It is not really needed to include the date in TODAY history.
+            cursor = itemsTable->cellAt(0, 1).firstCursorPosition();
+            cursor.insertText(i18n("Amount"), hdrFormat);
+            cursor = itemsTable->cellAt(0, 2).firstCursorPosition();
+            cursor.insertText(i18n("Sale #"), hdrFormat);
+            //cursor = itemsTable->cellAt(0, 3).firstCursorPosition();
+            //cursor.insertText(i18n("Invoice"), hdrFormat);
+            //cursor.insertHtml("<hr>");
             if (todayNum > 0) {
-                cursor.setBlockFormat(blockCenter);
-                cursor.insertBlock();
-                cursor.insertText(i18n("Today Credit History"), italicsFormat);
-                cursor.insertBlock();
-                cursor.insertHtml("<hr>");
-
-                itemsTable = cursor.insertTable(1, 4, itemsTableFormat);
-
-                //table
-                itemsFrameFormat = cursor.currentFrame()->frameFormat();
-                itemsFrameFormat.setBorder(0);
-                itemsFrameFormat.setPadding(1);
-                cursor.currentFrame()->setFrameFormat(itemsFrameFormat);
-                cursor = itemsTable->cellAt(0, 0).firstCursorPosition();
-                cursor.insertText(i18n("Date"), hdrFormat); //NOTE: It is not really needed to include the date in TODAY history.
-                cursor = itemsTable->cellAt(0, 1).firstCursorPosition();
-                cursor.insertText(i18n("Amount"), hdrFormat);
-                cursor = itemsTable->cellAt(0, 2).firstCursorPosition();
-                cursor.insertText(i18n("Sale #"), hdrFormat);
-                cursor = itemsTable->cellAt(0, 3).firstCursorPosition();
-                cursor.insertText(i18n("Invoice"), hdrFormat);
-
+                //cursor.setBlockFormat(blockCenter);
+                //cursor.insertBlock();
+                //cursor.insertText(i18n("Today Credit History"), italicsFormat);
+                //cursor.insertBlock();
+                //cursor.insertHtml("<hr>");
                 foreach(CreditHistoryInfo credit, creditHistory){
                     if (credit.date == QDate::currentDate() ) {
                         int row = itemsTable->rows();
@@ -6923,13 +6925,13 @@ void iotposView::calculateTotalForClient()
                             cursor.insertText(i18n("Payment"), textFormat);
                         else
                             cursor.insertText(QString::number(credit.saleId), textFormat);
-                        cursor = itemsTable->cellAt(row, 3).firstCursorPosition();
+                        //cursor = itemsTable->cellAt(row, 3).firstCursorPosition();
                         //The Factura number that belongs to this credit/sale.  Apr 24 2012.
-                        QString folio = myDb->getFolioFactura(credit.saleId);
-                        cursor.insertText(folio, textFormat);
+                       // QString folio = myDb->getFolioFactura(credit.saleId);
+                       // cursor.insertText(folio, textFormat);
 
                         ///now, we can print products for each sale asociated to the credit.
-                        if (credit.saleId > 0) {
+                    /*    if (credit.saleId > 0) {
                             QList<TransactionItemInfo> saleItems = myDb->getTransactionItems(credit.saleId);
                             foreach(TransactionItemInfo item, saleItems) {
                                 int row = itemsTable->rows();
@@ -6938,39 +6940,40 @@ void iotposView::calculateTotalForClient()
                                 QString line = QString("  %1x %2   %3").arg(item.qty).arg(item.name.left(30)).arg(KGlobal::locale()->formatMoney(item.total));
                                 cursor.insertText(line, smTextFormat);
                             }
-                        }
+                        }*/
                     }
                 }
             } //any today entry?
 
             //Beyond today...
             cursor.movePosition(QTextCursor::NextBlock);
-            cursor.setBlockFormat(blockCenter);
-            cursor.insertBlock();
-            cursor.insertBlock();
-            cursor.insertText(i18n("Credit History"), italicsFormat);
-            cursor.insertBlock();
-            cursor.insertHtml("<hr>");
+            //cursor.setBlockFormat(blockCenter);
+            //cursor.insertBlock();
+           // cursor.insertBlock();
+           // cursor.insertText(i18n("Credit History"), italicsFormat);
+            //cursor.insertBlock();
+           // cursor.insertHtml("<hr>");
             //cursor.insertBlock();
 
             //QTextTableFormat itemsTableFormat;
             itemsTableFormat.setAlignment(Qt::AlignHCenter);
             itemsTableFormat.setWidth(QTextLength(QTextLength::PercentageLength, 100));
-            /*QTextTable **/itemsTable = cursor.insertTable(1, 4, itemsTableFormat);
+            /*QTextTable **/
+            //itemsTable = cursor.insertTable(1, 3, itemsTableFormat);
 
             //table
             /*QTextFrameFormat*/ itemsFrameFormat = cursor.currentFrame()->frameFormat();
-            itemsFrameFormat.setBorder(0);
-            itemsFrameFormat.setPadding(1);
-            cursor.currentFrame()->setFrameFormat(itemsFrameFormat);
-            cursor = itemsTable->cellAt(0, 0).firstCursorPosition();
-            cursor.insertText(i18n("Date"), hdrFormat);
-            cursor = itemsTable->cellAt(0, 1).firstCursorPosition();
-            cursor.insertText(i18n("Amount"), hdrFormat);
-            cursor = itemsTable->cellAt(0, 2).firstCursorPosition();
-            cursor.insertText(i18n("Sale #"), hdrFormat);
-            cursor = itemsTable->cellAt(0, 3).firstCursorPosition();
-            cursor.insertText(i18n("Invoice"), hdrFormat);
+            //itemsFrameFormat.setBorder(0);
+           // itemsFrameFormat.setPadding(1);
+           // cursor.currentFrame()->setFrameFormat(itemsFrameFormat);
+            //cursor = itemsTable->cellAt(0, 0).firstCursorPosition();
+           // cursor.insertText(i18n("Date"), hdrFormat);
+           // cursor = itemsTable->cellAt(0, 1).firstCursorPosition();
+           // cursor.insertText(i18n("Amount"), hdrFormat);
+           // cursor = itemsTable->cellAt(0, 2).firstCursorPosition();
+           // cursor.insertText(i18n("Sale #"), hdrFormat);
+           // cursor = itemsTable->cellAt(0, 3).firstCursorPosition();
+           // cursor.insertText(i18n("Invoice"), hdrFormat);
 
             foreach(CreditHistoryInfo credit, creditHistory){
                 if (credit.date != QDate::currentDate() ) {
@@ -6985,13 +6988,13 @@ void iotposView::calculateTotalForClient()
                         cursor.insertText(i18n("Payment"), textFormat);
                     else
                         cursor.insertText(QString::number(credit.saleId), textFormat);
-                    cursor = itemsTable->cellAt(row, 3).firstCursorPosition();
+                    //cursor = itemsTable->cellAt(row, 3).firstCursorPosition();
                     //The Factura number that belongs to this credit/sale.  Apr 24 2012.
-                    QString folio = myDb->getFolioFactura(credit.saleId);
-                    cursor.insertText(folio, textFormat);
-                    
+                   // QString folio = myDb->getFolioFactura(credit.saleId);
+                    //cursor.insertText(folio, textFormat);
+
                     ///now, we can print products for each sale asociated to the credit.
-                    if (credit.saleId > 0) {
+                  /*  if (credit.saleId > 0) {
                         QList<TransactionItemInfo> saleItems = myDb->getTransactionItems(credit.saleId);
                         foreach(TransactionItemInfo item, saleItems) {
                             int row = itemsTable->rows();
@@ -7001,11 +7004,11 @@ void iotposView::calculateTotalForClient()
                             QString line = QString("  %1x %2   %3").arg(item.qty).arg(item.name.left(30)).arg(KGlobal::locale()->formatMoney(item.total));
                             cursor.insertText(line, smTextFormat);
                         }
-                    }
+                    }*/
                 }
             }
         } //if not empty creditHistory
-        
+
         delete myDb;
     }
     ui_mainview.creditContent->setReadOnly(true);
