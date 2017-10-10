@@ -6729,14 +6729,14 @@ void iotposView::doCreditPayment()
     
     qDebug()<<"Credit remaining:"<<crInfo.total<<" Payment:"<<crHistory.amount<<" Change:"<<change;
     
-    ui_mainview.creditPaymentWidget->hide();
+    //ui_mainview.creditPaymentWidget->hide();
 
     //print ticket. NOTE: This prints the credit report.. We want to print the NEW PAYMENT ALSO, so add to the document.
     calculateTotalForClient();
     printCreditReport();
 
     //close db and credit dialog, delaying a bit.
-    QTimer::singleShot(1000, creditPanel, SLOT(hidePanel()));
+    //QTimer::singleShot(1000, creditPanel, SLOT(hidePanel()));
     delete myDb;
 }
 
