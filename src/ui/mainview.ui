@@ -3216,7 +3216,7 @@ p, li { white-space: pre-wrap; }
            </property>
            <property name="maximumSize">
             <size>
-             <width>16777215</width>
+             <width>220</width>
              <height>16777215</height>
             </size>
            </property>
@@ -3235,10 +3235,10 @@ p, li { white-space: pre-wrap; }
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_9">
             <property name="leftMargin">
-             <number>9</number>
+             <number>4</number>
             </property>
             <property name="rightMargin">
-             <number>9</number>
+             <number>12</number>
             </property>
             <item>
              <widget class="QLabel" name="label_16">
@@ -3289,6 +3289,9 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="topMargin">
              <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>12</number>
             </property>
             <property name="bottomMargin">
              <number>0</number>
@@ -3341,10 +3344,13 @@ p, li { white-space: pre-wrap; }
              <number>3</number>
             </property>
             <property name="leftMargin">
-             <number>9</number>
+             <number>4</number>
             </property>
             <property name="topMargin">
              <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>12</number>
             </property>
             <property name="bottomMargin">
              <number>0</number>
