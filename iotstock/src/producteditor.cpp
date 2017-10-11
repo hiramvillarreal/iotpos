@@ -75,7 +75,7 @@ ProductEditor::ProductEditor( QWidget *parent, bool newProduct )
     path = KStandardDirs::locate("appdata", "styles/");
     path = path+"floating_bottom.svg";
     groupPanel = new MibitFloatPanel(this, path, Bottom);
-    groupPanel->setSize(650,250);
+    groupPanel->setSize(460,250);
     groupPanel->addWidget(ui->groupsPanel);
     groupPanel->setMode(pmManual);
     groupPanel->setHiddenTotally(true);

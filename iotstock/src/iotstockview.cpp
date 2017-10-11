@@ -178,11 +178,11 @@ void iotstockView::createFloatingPanels()
 {
   QString path = KStandardDirs::locate("appdata", "styles/");
   path = path+"floating_top.svg";
-  fpFilterTrans    = new MibitFloatPanel(ui_mainview.transactionsTable, path, Top,700,300);
-  fpFilterProducts = new MibitFloatPanel(ui_mainview.productsView, path, Top,700,200);
+  fpFilterTrans    = new MibitFloatPanel(ui_mainview.transactionsTable, path, Top,460,300);
+  fpFilterProducts = new MibitFloatPanel(ui_mainview.productsView, path, Top,460,200);
   fpFilterOffers   = new MibitFloatPanel(ui_mainview.tableBrowseOffers, path, Top,500,200);
-  fpFilterBalances = new MibitFloatPanel(ui_mainview.balancesTable, path, Top,700,240);
-  fpFilterSpecialOrders = new MibitFloatPanel(ui_mainview.tableSO, path, Top,700,240);
+  fpFilterBalances = new MibitFloatPanel(ui_mainview.balancesTable, path, Top,460,240);
+  fpFilterSpecialOrders = new MibitFloatPanel(ui_mainview.tableSO, path, Top,460,240);
   fpFilterTrans->addWidget(ui_mainview.groupFilterTransactions);
   fpFilterProducts->addWidget(ui_mainview.groupFilterProducts);
   fpFilterBalances->addWidget(ui_mainview.groupFilterBalances);
