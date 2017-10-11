@@ -691,7 +691,6 @@ void iotstockView::setupGraphs()
   ui_mainview.plotProfit->addPlotObject( objProfit );
   ui_mainview.plotProfit->axis( KPlotWidget::BottomAxis )->setLabel( i18n("%1", mes) );
   ui_mainview.plotProfit->axis( KPlotWidget::LeftAxis )->setLabel( i18n("Month Profit (%1)", KGlobal::locale()->currencySymbol()) );
-
   ui_mainview.plotMostSold->setMinimumSize( 200, 200 );
   ui_mainview.plotMostSold->setAntialiasing( true );
   objMostSold  = new KPlotObject( Qt::white, KPlotObject::Bars, KPlotObject::Star);
@@ -731,6 +730,12 @@ void iotstockView::setupGraphs()
   objProfit->setPointStyle(KPlotObject::Star);
   
   graphSoldItemsCreated = true;
+  int y = (QApplication::desktop()->height());
+  if (y < 400){
+  ui_mainview.plotProfit->hide();
+  ui_mainview.plotMostSold->hide();
+  ui_mainview.frame->hide();
+  }
   updateGraphs();
 }
 
