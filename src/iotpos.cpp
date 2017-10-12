@@ -419,6 +419,7 @@ void iotpos::loadStyle()
     if (op) file.close();
   }
   showToolBars();
+
 }
 
 
