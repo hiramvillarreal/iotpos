@@ -11,7 +11,7 @@ SaleQtyDelegate::SaleQtyDelegate(QObject *parent)
 
 QWidget *SaleQtyDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &, const QModelIndex & index) const
 {
-    if (index.column() == 0) {
+    if (index.column() == 1) {
         QSpinBox *editor = new QSpinBox(parent);
         ///We need to get the maximum, with stock level. Take into account the unlimited stock products.
         //get item data from db.

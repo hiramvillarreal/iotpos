@@ -2294,7 +2294,7 @@ color:black;</string>
                <item row="4" column="0" colspan="4">
                 <widget class="QListView" name="listView">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -2302,7 +2302,7 @@ color:black;</string>
                  <property name="minimumSize">
                   <size>
                    <width>0</width>
-                   <height>120</height>
+                   <height>110</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -2326,7 +2326,7 @@ color:black;</string>
                <bool>true</bool>
               </property>
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>

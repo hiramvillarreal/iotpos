@@ -4898,10 +4898,11 @@ void iotposView::updateModelView()
 void iotposView::showProductsGrid(bool show)
 {
   if (show || Settings::showGrid()) {
-    ui_mainview.frameGridView->show();
+    ui_mainview.frameGridView->hide();
   }
   else {
-    ui_mainview.frameGridView->hide();
+      ui_mainview.frameGridView->show();
+
   }
 }
 
