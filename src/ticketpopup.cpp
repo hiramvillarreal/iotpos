@@ -39,10 +39,9 @@ TicketPopup::TicketPopup(QString text, QPixmap pixmap, int timeToClose)
   editText = new QTextEdit(this);
   editText->setHtml(text);
   editText->setReadOnly(true);
-  editText->verticalScrollBar()->maximum();
+
   gridLayout->addWidget(editText, 1, 0);
   gridLayout->setMargin(17);
-
   timer = new QTimer(this);
   timer->setInterval(timeToClose);
   connect(timer, SIGNAL(timeout()), this, SLOT(closeIt()));
