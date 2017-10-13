@@ -2314,6 +2314,9 @@ color:black;</string>
                  <property name="layoutDirection">
                   <enum>Qt::LeftToRight</enum>
                  </property>
+                 <property name="horizontalScrollBarPolicy">
+                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                 </property>
                  <property name="autoScrollMargin">
                   <number>16</number>
                  </property>
@@ -2360,7 +2363,7 @@ color:black;</string>
                <enum>QFrame::StyledPanel</enum>
               </property>
               <property name="verticalScrollBarPolicy">
-               <enum>Qt::ScrollBarAlwaysOn</enum>
+               <enum>Qt::ScrollBarAsNeeded</enum>
               </property>
               <property name="horizontalScrollBarPolicy">
                <enum>Qt::ScrollBarAlwaysOff</enum>

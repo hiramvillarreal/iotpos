@@ -1711,8 +1711,8 @@ msgstr "Requerir autorización para borrar un elemento de la lista de compras."
 msgid "Products Grid"
 msgstr "Mostrar Rejilla de productos"
 
-msgid "Hide products grid"
-msgstr "Ocultar Rejilla de productos"
+msgid "Show products grid"
+msgstr "Mostrar Rejilla de productos"
 
 msgid "Low Stock"
 msgstr "Inventario bajo"
