@@ -1951,7 +1951,8 @@ if ( doNotAddMoreItems ) { //only for reservations
   if (ui_mainview.rbFilterByDesc->isChecked()) {
       ui_mainview.editItemCode->setFocus();//by description
      if (QApplication::keyboardModifiers().testFlag(Qt::ControlModifier) == false){
-         productsModel->setFilter("products.isARawProduct=false");
+         //productsModel->setFilter("products.isARawProduct=false");
+         productsModel->setFilter("products.isARawProduct=false and (products.datelastsold > ADDDATE(sysdate( ), INTERVAL -31 DAY )) ORDER BY products.datelastsold DESC ");
      }
   }
   else {
@@ -1959,7 +1960,7 @@ if ( doNotAddMoreItems ) { //only for reservations
     ui_mainview.frameGridView->show();
     //Find catId for the text on the combobox.
     int catId=-1;
-    int subCatId = -1;
+  //  int subCatId = -1;
     QString catText = ui_mainview.comboFilterByCategory->currentText();
     if (categoriesHash.contains(catText)) {
       catId = categoriesHash.value(catText);
@@ -1990,6 +1991,7 @@ if ( doNotAddMoreItems ) { //only for reservations
     {
       QString codeWOSing = code.remove(0,1); 
       productsModel->setFilter(QString("products.isARawProduct=false and products.price=%1").arg(codeWOSing));
+      ui_mainview.frameGridView->show();
     }
  refreshTotalLabel();
  ui_mainview.tableWidget->scrollToBottom();
@@ -3288,7 +3290,8 @@ void iotposView::finishCurrentTransaction()
    ui_mainview.stackedWidget_3->setCurrentIndex(3);
    ui_mainview.editItemCode->setFocus();
    if (ui_mainview.rbFilterByCategory->isChecked()) { //by category
-     ui_mainview.frameGridView->show();}
+     ui_mainview.frameGridView->show();
+   }
 }
 
 
@@ -4930,38 +4933,41 @@ void iotposView::setFilter()
       ui_mainview.editItemCode->setFocus();//by description
       if (!regexp.isValid())  ui_mainview.editFilterByDesc->setText("");
       if (ui_mainview.editFilterByDesc->text()=="*" || ui_mainview.editFilterByDesc->text()=="")
-        productsModel->setFilter("products.isARawProduct=false");
+        //productsModel->setFilter("products.isARawProduct=false");
+          productsModel->setFilter("products.isARawProduct=false and (products.datelastsold > ADDDATE(sysdate( ), INTERVAL -31 DAY )) ORDER BY products.datelastsold DESC ");
  }
   else {
     if (ui_mainview.rbFilterByCategory->isChecked()) { //by category
       ui_mainview.frameGridView->show();
       //Find catId for the text on the combobox.
       int catId=-1;
-      int subCatId = -1;
+      //int subCatId = -1;
       QString catText = ui_mainview.comboFilterByCategory->currentText();
       if (categoriesHash.contains(catText)) {
         catId = categoriesHash.value(catText);
       }
+      productsModel->setFilter(QString("products.isARawProduct=false and products.category=%1").arg(catId));
+      //REMOVE SUBCATEGORY FILTER
       //Now check subcategory
-      if (ui_mainview.rbFilterBySubCategory->isChecked()){
-        QString subCatText = ui_mainview.comboFilterBySubCategory->currentText();
-        if (subcategoriesHash.contains(subCatText))
-            subCatId = subcategoriesHash.value(subCatText);
+   //   if (ui_mainview.rbFilterBySubCategory->isChecked()){
+       // QString subCatText = ui_mainview.comboFilterBySubCategory->currentText();
+       // if (subcategoriesHash.contains(subCatText))
+         //   subCatId = subcategoriesHash.value(subCatText);
       }//filter by subcategory, only if filterByCategory is checked.
-      if (subCatId > 0)
-        productsModel->setFilter(QString("products.isARawProduct=false and products.category=%1 and products.subcategory=%2").arg(catId).arg(subCatId));
-      else
-        productsModel->setFilter(QString("products.isARawProduct=false and products.category=%1").arg(catId));
+     // if (subCatId > 0)
+      //  productsModel->setFilter(QString("products.isARawProduct=false and products.category=%1 and products.subcategory=%2").arg(catId).arg(subCatId));
+      //else
+        //productsModel->setFilter(QString("products.isARawProduct=false and products.category=%1").arg(catId));
     }
     //else { //by most sold products in current month --biel
     //    {
     //  productsModel->setFilter("products.isARawProduct=false and (products.datelastsold > ADDDATE(sysdate( ), INTERVAL -31 DAY )) ORDER BY products.datelastsold DESC LIMIT 20"); //limit or not the result to 5?
    //   }
       //products.code IN (SELECT * FROM (SELECT product_id FROM (SELECT product_id, sum( units ) AS sold_items FROM transactions t, transactionitems ti WHERE  t.id = ti.transaction_id AND t.date > ADDDATE( sysdate( ) , INTERVAL -31 DAY ) GROUP BY ti.product_id) month_sold_items ORDER BY sold_items DESC LIMIT 5) popular_products)
-  //  }
+   // }
 
 
-  }
+ // }
   productsModel->select();
 }
 

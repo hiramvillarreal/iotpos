@@ -39,11 +39,11 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     //Painting frame
     painter->setRenderHint(QPainter::Antialiasing);
     QString pixName;
-    if (option.state & QStyle::State_Selected) 
+    if (option.state & QStyle::State_Selected)
       pixName = KStandardDirs::locate("appdata", "images/itemBox_selected.png");
     else
       pixName = KStandardDirs::locate("appdata", "images/itemBox.png");
-    
+
     painter->drawPixmap(option.rect.x()+5,option.rect.y()+0, QPixmap(pixName));//only moves the itembox.png
 
     //get item data
@@ -136,7 +136,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
                       102, 60, Qt::AlignCenter, naStr);
       painter->setBackgroundMode(Qt::TransparentMode);
     }
-    
+
     //painting code number
     font = QFont("DroidSans.ttf",9);
     font.setBold(false);
@@ -169,7 +169,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
                         option.rect.y()+60,
                         102, 65, Qt::AlignCenter, naStr);
                         painter->setBackgroundMode(Qt::TransparentMode);
-    } 
+    }
     if (isGroup) {
       //load pixmap
       pix = QPixmap(DesktopIcon("iotpos-groups", 32));
