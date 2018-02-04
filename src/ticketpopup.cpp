@@ -41,7 +41,7 @@ TicketPopup::TicketPopup(QString text, QPixmap pixmap, int timeToClose)
   editText->setReadOnly(true);
 
   gridLayout->addWidget(editText, 1, 0);
-  gridLayout->setMargin(17);
+  gridLayout->setMargin(8);
   timer = new QTimer(this);
   timer->setInterval(timeToClose);
   connect(timer, SIGNAL(timeout()), this, SLOT(closeIt()));
@@ -64,10 +64,10 @@ void TicketPopup::popup()
   int x = (QApplication::desktop()->width()/2 )-(frameGeometry().width()/2);
   int y = (QApplication::desktop()->height()/2)-(frameGeometry().height()/2);
   if (y < 100){
-  setGeometry(x,0,335,250);
+  setGeometry(x,0,340,250);
   }
   else {
-      setGeometry(x,0,335,340);
+      setGeometry(x,0,340,340);
   }
   timer->start();
 }
