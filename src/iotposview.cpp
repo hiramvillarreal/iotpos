@@ -110,7 +110,7 @@ class BalanceDialog : public QDialog
       gridLayout = new QGridLayout(this);
       editText = new QTextEdit(str);
       editText->setReadOnly(true);
-      editText->setMinimumSize(QSize(380,360));
+      editText->setMinimumSize(QSize(360,260));
       gridLayout->addWidget(editText, 0, 0);
       buttonClose = new QPushButton(this);
       buttonClose->setText(i18n("Continue"));
@@ -250,9 +250,9 @@ iotposView::iotposView() //: QWidget(parent)
 
   //float panel for credits.
   path = KStandardDirs::locate("appdata", "styles/");
-  path = path+ "panel_top_big.svg";
+  path = path+ "panel_top.svg";
   creditPanel = new MibitFloatPanel(ui_mainview.frame, path, Top);
-  creditPanel->setSize(800,450);
+  creditPanel->setSize(460,300);
   creditPanel->addWidget(ui_mainview.creditWidget);
   creditPanel->setMode(pmManual);
   creditPanel->setHiddenTotally(true);
@@ -302,7 +302,8 @@ iotposView::iotposView() //: QWidget(parent)
   connect(ui_mainview.splitterGrid, SIGNAL(splitterMoved(int, int)), SLOT(setUpTable()));
   connect(ui_mainview.editClient, SIGNAL(returnPressed()), SLOT(filterClient()));
   connect(ui_mainview.btnChangeSaleDate, SIGNAL(clicked()), SLOT(showChangeDate()));
-
+  ui_mainview.listView->setStyleSheet("QScrollBar:vertical { width: 25px; }");
+  ui_mainview.tableWidget->verticalScrollBar()->setStyleSheet("QScrollBar:vertical { width: 25px; }");
   ui_mainview.editTicketDatePicker->setDate(QDate::currentDate());
   connect(ui_mainview.editTicketDatePicker, SIGNAL(dateChanged(const QDate &)), SLOT(setHistoryFilter()) );
   connect(ui_mainview.btnTicketDone, SIGNAL(clicked()), SLOT(btnTicketsDone()) );
@@ -363,7 +364,6 @@ iotposView::iotposView() //: QWidget(parent)
   QTimer::singleShot(500, this, SLOT(setUpTable()));
   //ui_mainview.groupWidgets->setCurrentIndex(pageMain);
   ui_mainview.mainPanel->setCurrentIndex(pageMain);
-  //ui_mainview.stackedWidget_3->setCurrentIndex(1);
   // point the public ui pointers
   frameLeft = ui_mainview.frameLeft;
   frame     = ui_mainview.frame;
@@ -403,7 +403,9 @@ iotposView::iotposView() //: QWidget(parent)
 
   ui_mainview.editItemCode->setFocus();
   ui_mainview.rbFilterByDesc->setChecked(true);
-  ui_mainview.frameGridView->show();
+  setupGridView();
+  ui_mainview.labelTotalDiscountpre->hide();
+  ui_mainview.labelTotalDiscount->hide();
 setupGraphs();
 }
 // UI and Database -- GRAPHS.
@@ -565,7 +567,7 @@ void iotposView::qtyChanged(QTableWidgetItem *item)
                 updateItem(info);
                 refreshTotalLabel();
                 ui_mainview.editItemCode->setFocus();
-                ui_mainview.frameGridView->show();
+                setupGridView();
                 qDebug()<<"\n\nCurrent Item == item: "<<code<<" NEW QTY:"<<newQty<<"\n\n";
             }
         }
@@ -595,30 +597,63 @@ void iotposView::loadIcons()
 void iotposView::setUpTable()
 {
   QSize tableSize = ui_mainview.tableWidget->size();
-  int portion = tableSize.width()/10;
-  ui_mainview.tableWidget->horizontalHeader()->setResizeMode(QHeaderView::Interactive);
-  ui_mainview.tableWidget->horizontalHeader()->resizeSection(colCode, portion); //BAR CODE
-  ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDesc, (portion*4)+9); //DESCRIPTION
-  ui_mainview.tableWidget->horizontalHeader()->resizeSection(colPrice, portion); //PRICE
-  ui_mainview.tableWidget->horizontalHeader()->resizeSection(colQty, portion-20);  //QTY
-  ui_mainview.tableWidget->horizontalHeader()->resizeSection(colUnits, portion-15);//UNITS
-  ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDisc, portion); //Discount
-  ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDue, portion+10); //DUE
-  resizeSearchTable();
+  int portion = tableSize.width()/6;
+  ui_mainview.tableWidget->horizontalHeader()->setFixedHeight(24);
+  int x = (QApplication::desktop()->width());
+  if (x < 600){
+   ui_mainview.tableWidget->horizontalHeader()->setResizeMode(QHeaderView::Interactive);
+   ui_mainview.tableWidget->horizontalHeader()->resizeSection(colQty, (portion/1.5));  //QTY
+   ui_mainview.tableWidget->horizontalHeader()->resizeSection(colUnits, (portion/3)+20);//UNITS
+   ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDesc, (portion*2.75)); //DESCRIPTION
+   ui_mainview.tableWidget->horizontalHeader()->resizeSection(colPrice, (portion)-10); //PRICE
+   ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDue, (portion)-10); //DUE
+   ui_mainview.tableWidget->hideColumn(0);
+   ui_mainview.tableWidget->hideColumn(5);
+  }
+  else{
+      ui_mainview.tableWidget->horizontalHeader()->setResizeMode(QHeaderView::Interactive);
+      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colCode, portion-20); //BAR CODE
+      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colQty, (portion/3)+10);  //QTY
+      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colUnits, (portion/3)+10);//UNITS
+      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDesc, (portion*2.7)); //DESCRIPTION
+      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colPrice, (portion/2)); //PRICE
+      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDisc, (portion/2)+10); //Discount
+      ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDue, (portion/2)); //DUE
+
+
+    //resizeSearchTable();
+  }
+
 }
 
 
 void iotposView::resizeSearchTable()
 {
     QSize tableSize = ui_mainview.tableSearch->size();
-    int portion = tableSize.width()/12;
+
+    int portion = tableSize.width()/7;
     ui_mainview.tableSearch->horizontalHeader()->setResizeMode(QHeaderView::Interactive);
-    ui_mainview.tableSearch->horizontalHeader()->resizeSection(0, portion*4); //description
-    ui_mainview.tableSearch->horizontalHeader()->resizeSection(1, portion*1.3); //PRICe
-    ui_mainview.tableSearch->horizontalHeader()->resizeSection(2, portion*1.5); //PRICE+TAX
-    ui_mainview.tableSearch->horizontalHeader()->resizeSection(3, portion);  //STOCK
-    ui_mainview.tableSearch->horizontalHeader()->resizeSection(4, portion*1.8);//ALPHACODE
-    ui_mainview.tableSearch->horizontalHeader()->resizeSection(5, portion*1.8); //CODE
+    ui_mainview.tableSearch->horizontalHeader()->resizeSection(0, portion*1); //QTY
+    ui_mainview.tableSearch->horizontalHeader()->resizeSection(1, portion*2); //UNIT
+    ui_mainview.tableSearch->horizontalHeader()->resizeSection(2, portion*3); //DESCRIPTION
+    ui_mainview.tableSearch->horizontalHeader()->resizeSection(3, portion*4);  //PRICE
+    ui_mainview.tableSearch->horizontalHeader()->resizeSection(4, portion*5);//TOTAL
+    ui_mainview.tableSearch->horizontalHeader()->resizeSection(5, portion*6); //DISCOUNT
+    ui_mainview.tableSearch->horizontalHeader()->resizeSection(6, portion*7); //CODE
+
+}
+
+void iotposView::resizeSearchTableSmall()
+{
+    QSize tableSize = ui_mainview.tableSearch->size();
+
+    int portion = tableSize.width()/5;
+    ui_mainview.tableSearch->horizontalHeader()->setResizeMode(QHeaderView::Interactive);
+    ui_mainview.tableSearch->horizontalHeader()->resizeSection(0, portion*1); //QTY
+    ui_mainview.tableSearch->horizontalHeader()->resizeSection(1, portion*2); //UNIT
+    ui_mainview.tableSearch->horizontalHeader()->resizeSection(2, portion*3); //DESCRIPTION
+    ui_mainview.tableSearch->horizontalHeader()->resizeSection(3, portion*4);  //PRICE
+    ui_mainview.tableSearch->horizontalHeader()->resizeSection(4, portion*5);//TOTAL
 }
 
 void iotposView::setUpInputs()
@@ -793,18 +828,19 @@ void iotposView::settingsChangedOnInitConfig()
 
 void iotposView::showEnterCodeWidget()
 {
-  //ui_mainview.groupWidgets->setCurrentIndex(pageMain);
-  ui_mainview.stackedWidget_2->setCurrentIndex(1);
+  //ui_mainview.groupWidgets->setCurrentIndex(pageMain);  
+  ui_mainview.stackedWidget_3->setCurrentIndex(1);
+  ui_mainview.listView->scrollToTop();
   ui_mainview.mainPanel->setCurrentIndex(0); // back to welcome widget
   // BFB. Toggle editItemCode and editFilterByDesc.
   if (!ui_mainview.editItemCode->hasFocus()){
     ui_mainview.editItemCode->setFocus();
   }
-  ui_mainview.frameGridView->show();
-  ui_mainview.lblSubtotalPre->show();
-  ui_mainview.lblSubtotal->show();
-  ui_mainview.labelChangepre->hide();
-  ui_mainview.labelChange->hide();
+  setupGridView();
+  //ui_mainview.lblSubtotalPre->show();
+  //ui_mainview.lblSubtotal->show();
+  //ui_mainview.labelChangepre->hide();
+  //ui_mainview.labelChange->hide();
   setUpTable();
 }
 
@@ -822,13 +858,14 @@ void iotposView::buttonDone()
   ui_mainview.editItemDescSearch->setText("");
   ui_mainview.editItemCode->setCursorPosition(0);
   ui_mainview.mainPanel->setCurrentIndex(0); // back to welcome widget
-  ui_mainview.frameGridView->show();
-  ui_mainview.stackedWidget_2->setCurrentIndex(1);
+  setupGridView();
+  ui_mainview.stackedWidget_3->setCurrentIndex(1);
+  ui_mainview.listView->scrollToTop();
   ui_mainview.editItemCode->setFocus();
-  ui_mainview.lblSubtotalPre->show();
-  ui_mainview.lblSubtotal->show();
-  ui_mainview.labelChangepre->hide();
-  ui_mainview.labelChange->hide();
+  //ui_mainview.lblSubtotalPre->show();
+  //ui_mainview.lblSubtotal->show();
+  //ui_mainview.labelChangepre->hide();
+  //ui_mainview.labelChange->hide();
 }
 
 void iotposView::checksChanged()
@@ -944,18 +981,19 @@ void iotposView::askForTicketToReturnProduct()
 
 void iotposView::focusPayInput()
 {
-  //ui_mainview.groupWidgets->setCurrentIndex(pageMain);
+  ui_mainview.groupWidgets->setCurrentIndex(pageMain);
   ui_mainview.mainPanel->setCurrentIndex(0); // back to welcome widget
-  ui_mainview.editAmount->setFocus();
   ui_mainview.editAmount->setSelection(0, ui_mainview.editAmount->text().length());
-  ui_mainview.stackedWidget_2->setCurrentIndex(0);
-  ui_mainview.lblSubtotalPre->hide();
+  ui_mainview.editAmount->setFocus();
+  ui_mainview.editAmount->setText(QString::number(totalSum));
+  ui_mainview.stackedWidget_3->setCurrentIndex(2);
+  //ui_mainview.lblSubtotalPre->hide();
   ui_mainview.checkCash->setChecked(true);
-  ui_mainview.lblSubtotal->hide();
-  ui_mainview.labelChangepre->show();
-  ui_mainview.labelChange->show();
-
+  //ui_mainview.lblSubtotal->hide();
+  //ui_mainview.labelChangepre->show();
+  //ui_mainview.labelChange->show();
   hideProductsGrid();
+  ui_mainview.editAmount->selectAll();
 }
 
 //This method sends the focus to the amount to be paid only when the code input is empty.
@@ -1386,11 +1424,18 @@ void iotposView::refreshTotalLabel()
     else {
         change = 0.0;
     }
-
     ui_mainview.labelTotal->setText(QString("%1").arg(KGlobal::locale()->formatMoney(summary.getGross().toDouble())));
     ui_mainview.lblSubtotal->setText(QString("%1").arg(KGlobal::locale()->formatMoney(summary.getNet().toDouble()+summary.getDiscountGross().toDouble())));//FIXME temporal, seems than  gross and net are equal without + summary.getDiscountGross().toDouble()
     ui_mainview.labelChange->setText(QString("%1") .arg(KGlobal::locale()->formatMoney(change)));
     ui_mainview.labelTotalDiscount->setText(QString("%1") .arg(KGlobal::locale()->formatMoney(summary.getDiscountGross().toDouble())));
+    if (summary.getDiscountGross().toDouble() == 0 && !ui_mainview.labelTotalDiscount->isHidden()){
+        ui_mainview.labelTotalDiscountpre->hide();
+        ui_mainview.labelTotalDiscount->hide();
+    }
+    else if (summary.getDiscountGross().toDouble() > 0){
+        ui_mainview.labelTotalDiscountpre->show();
+        ui_mainview.labelTotalDiscount->show();
+    }
     ui_mainview.lblSaleTaxes->setText(QString("%1") .arg(KGlobal::locale()->formatMoney(summary.getTax().toDouble())));
     ///update client discount
     //QString dStr;
@@ -1673,7 +1718,7 @@ if ( doNotAddMoreItems ) { //only for reservations
           notifierPanel->showNotification(i18n("Cannot change customer while Special Orders are in Purchase.",codeX),4000);
           ui_mainview.editItemCode->clear();
           ui_mainview.editItemCode->setFocus();
-          ui_mainview.frameGridView->show();
+          setupGridView();
           return;
       }
       if (Settings::rb6Digits() && codeX.length() == 6) {
@@ -1709,7 +1754,7 @@ if ( doNotAddMoreItems ) { //only for reservations
             notifierPanel->showNotification(msg,4000);
             ui_mainview.editItemCode->clear();
             ui_mainview.editItemCode->setFocus();
-            ui_mainview.frameGridView->show();
+            setupGridView();
             return;   
         } else {
             notifierPanel->setSize(350,150);
@@ -1717,7 +1762,7 @@ if ( doNotAddMoreItems ) { //only for reservations
             notifierPanel->showNotification(i18n("No Customer found with code %1.",codeX),4000);
             ui_mainview.editItemCode->clear();
             ui_mainview.editItemCode->setFocus();
-            ui_mainview.frameGridView->show();
+            setupGridView();
             return;
         }
     }//if check...
@@ -1906,15 +1951,16 @@ if ( doNotAddMoreItems ) { //only for reservations
   if (ui_mainview.rbFilterByDesc->isChecked()) {
       ui_mainview.editItemCode->setFocus();//by description
      if (QApplication::keyboardModifiers().testFlag(Qt::ControlModifier) == false){
-         productsModel->setFilter("products.isARawProduct=false");
+         //productsModel->setFilter("products.isARawProduct=false");
+         productsModel->setFilter("products.isARawProduct=false and (products.datelastsold > ADDDATE(sysdate( ), INTERVAL -31 DAY )) ORDER BY products.datelastsold DESC ");
      }
   }
   else {
   if (ui_mainview.rbFilterByCategory->isChecked()) { //by category
-
+    ui_mainview.frameGridView->show();
     //Find catId for the text on the combobox.
     int catId=-1;
-    int subCatId = -1;
+  //  int subCatId = -1;
     QString catText = ui_mainview.comboFilterByCategory->currentText();
     if (categoriesHash.contains(catText)) {
       catId = categoriesHash.value(catText);
@@ -1938,12 +1984,14 @@ if ( doNotAddMoreItems ) { //only for reservations
         productsModel->setFilter("products.isARawProduct=false ORDER BY products.datelastsold DESC");
       else
         productsModel->setFilter(QString("products.isARawProduct=false and products.name REGEXP '%1'").arg(ui_mainview.editItemCode->text()));
+        ui_mainview.frameGridView->show();
         productsModel->select();
     }
   else if (rds.indexIn(code) == 0)
     {
       QString codeWOSing = code.remove(0,1); 
       productsModel->setFilter(QString("products.isARawProduct=false and products.price=%1").arg(codeWOSing));
+      ui_mainview.frameGridView->show();
     }
  refreshTotalLabel();
  ui_mainview.tableWidget->scrollToBottom();
@@ -2062,12 +2110,12 @@ int iotposView::doInsertItem(QString itemCode, QString itemDesc, double itemQty,
     ///WARNING: March 17 2012. Im implementing a double clicking feature for adding a delegate for typing the new QTY for the clicked item.
     ///         So, this will cause problems with this call (maybe more).
   }
-
   refreshTotalLabel();
+  ui_mainview.editItemCode->setFocus();
   // BFB: editFilterbyDesc keeps the focus,
   if (!ui_mainview.editFilterByDesc->hasFocus())
   ui_mainview.editItemCode->setFocus();
-  ui_mainview.frameGridView->show();
+  setupGridView();
   if (QApplication::keyboardModifiers().testFlag(Qt::ControlModifier) == false){
       ui_mainview.editItemCode->setText("");
       ui_mainview.editItemCode->setCursorPosition(0);
@@ -2117,7 +2165,7 @@ void iotposView::deleteSelectedItem()
             //remove from listview
             ui_mainview.tableWidget->removeRow(row);
             ui_mainview.editItemCode->setFocus();
-            ui_mainview.frameGridView->show();
+            setupGridView();
             if (ui_mainview.tableWidget->rowCount() == 0) ui_mainview.groupClient->setEnabled(true);
             refreshTotalLabel();
             qDebug()<<" Removing a SO when completing the Order";
@@ -2134,7 +2182,7 @@ void iotposView::deleteSelectedItem()
             log(loggedUserId, QDate::currentDate(), QTime::currentTime(), i18n("Removing an Special Item from shopping list. Authorized by %1",authBy));
             if (ui_mainview.tableWidget->rowCount() == 0) ui_mainview.groupClient->setEnabled(true);
             ui_mainview.editItemCode->setFocus();
-            ui_mainview.frameGridView->show();
+            setupGridView();
             refreshTotalLabel();
             delete myDb;
             return;
@@ -2156,7 +2204,7 @@ void iotposView::deleteSelectedItem()
         }
         if (ui_mainview.tableWidget->rowCount() == 0) ui_mainview.groupClient->setEnabled(true);
         ui_mainview.editItemCode->setFocus();
-        ui_mainview.frameGridView->show();
+        setupGridView();
         refreshTotalLabel();
         return; //to exit the method, we dont need to continue.
       }
@@ -2247,7 +2295,7 @@ void iotposView::itemDoubleClicked(QTableWidgetItem* item)
       specialOrders.insert(info.orderid,info);
     }
     ui_mainview.editItemCode->setFocus();
-    ui_mainview.frameGridView->show();
+    setupGridView();
     refreshTotalLabel();
     return; //to exit the method, we dont need to continue.
   }
@@ -2290,9 +2338,8 @@ void iotposView::itemDoubleClicked(QTableWidgetItem* item)
     i2Modify = ui_mainview.tableWidget->item(row, colDisc);
     i2Modify->setData(Qt::EditRole, QVariant(newdiscount));
     info.qtyOnList = newqty;
-
+    setupGridView();
     ui_mainview.editItemCode->setFocus();
-    ui_mainview.frameGridView->show();
   } else {
     msg = i18n("<html><font color=red><b>Product not available in stock for the requested quantity.</b></font></html>");
     ui_mainview.editItemCode->clearFocus();
@@ -2342,12 +2389,13 @@ void iotposView::displayItemInfo(QTableWidgetItem* item)
         disc = info.disc;
         price = info.price;
     }
-    ui_mainview.stackedWidget_2->setCurrentIndex(2);
+    ui_mainview.stackedWidget_2->setCurrentIndex(1);
     ui_mainview.stackedWidget_3->setCurrentIndex(0);
-    ui_mainview.lblSubtotalPre->show();
-    ui_mainview.lblSubtotal->show();
-    ui_mainview.labelChangepre->hide();
-    ui_mainview.labelChange->hide();
+
+    //ui_mainview.lblSubtotalPre->show();
+   // ui_mainview.lblSubtotal->show();
+    //ui_mainview.labelChangepre->hide();
+    //ui_mainview.labelChange->hide();
     double discP=0.0;
     if (info.validDiscount) discP = info.discpercentage;
     QString str;
@@ -2491,6 +2539,9 @@ void iotposView::finishCurrentTransaction()
       ui_mainview.editAmount->setSelection(0, ui_mainview.editAmount->text().length());
       msg = i18n("<html><font color=red><b>Please fill the correct payment amount before finishing a transaction.</b></font></html>");
       tipAmount->showTip(msg, 4000);
+      ui_mainview.editAmount->setFocus();
+      ui_mainview.editAmount->setText(QString::number(totalSum));
+      ui_mainview.editAmount->selectAll();
     } else if (ui_mainview.editAmount->text().length() >= 8 )  {
       if (ui_mainview.editAmount->text().contains(".00") || ui_mainview.editAmount->text().contains(",00"))
         canfinish = true; // it was not entered by the barcode reader.
@@ -3213,7 +3264,7 @@ void iotposView::finishCurrentTransaction()
     transactionInProgress = false;
     updateModelView();
     ui_mainview.editItemCode->setFocus();
-    ui_mainview.frameGridView->show();
+    setupGridView();
 
     //Check level of cash in drawer
     if (drawer->getAvailableInCash() < Settings::cashMinLevel() && Settings::displayWarningOnLowCash()) {
@@ -3233,9 +3284,14 @@ void iotposView::finishCurrentTransaction()
    oDiscountMoney = 0; //reset discount money... the new discount type.
    if (loggedUserRole == roleAdmin) {/*updateGraphs();*/}
    //showProductsGrid();
-   ui_mainview.frameGridView->show();
-   ui_mainview.stackedWidget_2->setCurrentIndex(1);
+   setupGridView();
+   ui_mainview.labelTotalDiscountpre->hide();
+   ui_mainview.labelTotalDiscount->hide();
+   ui_mainview.stackedWidget_3->setCurrentIndex(3);
    ui_mainview.editItemCode->setFocus();
+   if (ui_mainview.rbFilterByCategory->isChecked()) { //by category
+     ui_mainview.frameGridView->show();
+   }
 }
 
 
@@ -3792,7 +3848,7 @@ ptInfo.tDisc = KGlobal::locale()->formatMoney(-discMoney, QString(), 2);
 
   if (Settings::showDialogOnPrinting())
   {
-    TicketPopup *popup = new TicketPopup(ticketHtml.join(" "), DesktopIcon("iotpos-printer", 48), Settings::ticketTime()*1000);
+    TicketPopup *popup = new TicketPopup(ticketHtml.join(" "), DesktopIcon("iotpos-printer", 32), Settings::ticketTime()*1000);
     connect (popup, SIGNAL(onTicketPopupClose()), this, SLOT(unfreezeWidgets()) );
     QApplication::beep();
     popup->popup();
@@ -3812,6 +3868,7 @@ void iotposView::unfreezeWidgets()
   startAgain();
   ui_mainview.editItemCode->setFocus();
   ui_mainview.stackedWidget_3->setCurrentIndex(1);
+  ui_mainview.listView->scrollToTop();
 }
 
 void iotposView::startAgain()
@@ -3853,11 +3910,13 @@ void iotposView::cancelCurrentTransaction()
 
   if (continueIt) {cancelTransaction(getCurrentTransaction());}
   //ui_mainview.labelDetailPoints->show();
-  ui_mainview.frameGridView->show();
+  ui_mainview.labelTotalDiscountpre->hide();
+  ui_mainview.labelTotalDiscount->hide();
+  setupGridView();
   ui_mainview.mainPanel->setCurrentIndex(0);
   ui_mainview.editItemCode->setFocus();
-  ui_mainview.stackedWidget_2->setCurrentIndex(1);
   ui_mainview.stackedWidget_3->setCurrentIndex(1);
+  ui_mainview.listView->scrollToTop();
 
 }
 
@@ -3890,9 +3949,12 @@ void iotposView::preCancelCurrentTransaction()
   if (!ui_mainview.groupSaleDate->isHidden()) {
     ui_mainview.groupSaleDate->hide();
   }
-  ui_mainview.frameGridView->show();
+  ui_mainview.labelTotalDiscountpre->hide();
+  ui_mainview.labelTotalDiscount->hide();
+  setupGridView();
   ui_mainview.editItemCode->setFocus();
-  ui_mainview.stackedWidget_2->setCurrentIndex(1);
+  ui_mainview.stackedWidget_3->setCurrentIndex(1);
+  ui_mainview.listView->scrollToTop();
 }
 
 void iotposView::deleteCurrentTransaction()
@@ -4029,7 +4091,7 @@ void iotposView::cancelTransaction(qulonglong transactionNumber)
     notify->sendEvent();
   }
   delete myDb;
-  ui_mainview.frameGridView->hide();
+  setupGridView();
   ui_mainview.editItemCode->setFocus();
 }
 
@@ -4084,7 +4146,7 @@ void iotposView::startOperation(const QString &adminUser)
   }
   
   ui_mainview.editItemCode->setFocus();
-  ui_mainview.frameGridView->show();
+  setupGridView();
 }
 
 //this method is for iotpos.cpp's action connect for button, since button's trigger(bool) will cause to ask = trigger's var.
@@ -4838,11 +4900,12 @@ void iotposView::updateModelView()
 
 void iotposView::showProductsGrid(bool show)
 {
-  if (show) {
+  if (show || Settings::showGrid()) {
     ui_mainview.frameGridView->show();
   }
   else {
-    ui_mainview.frameGridView->hide();
+      ui_mainview.frameGridView->hide();
+
   }
 }
 
@@ -4866,40 +4929,45 @@ void iotposView::setFilter()
   QRegExp regexp = QRegExp(ui_mainview.editFilterByDesc->text());
 
   if (ui_mainview.rbFilterByDesc->isChecked()) {
+      setupGridView();
       ui_mainview.editItemCode->setFocus();//by description
       if (!regexp.isValid())  ui_mainview.editFilterByDesc->setText("");
       if (ui_mainview.editFilterByDesc->text()=="*" || ui_mainview.editFilterByDesc->text()=="")
-        productsModel->setFilter("products.isARawProduct=false");
+        //productsModel->setFilter("products.isARawProduct=false");
+          productsModel->setFilter("products.isARawProduct=false and (products.datelastsold > ADDDATE(sysdate( ), INTERVAL -31 DAY )) ORDER BY products.datelastsold DESC ");
  }
   else {
     if (ui_mainview.rbFilterByCategory->isChecked()) { //by category
+      ui_mainview.frameGridView->show();
       //Find catId for the text on the combobox.
       int catId=-1;
-      int subCatId = -1;
+      //int subCatId = -1;
       QString catText = ui_mainview.comboFilterByCategory->currentText();
       if (categoriesHash.contains(catText)) {
         catId = categoriesHash.value(catText);
       }
+      productsModel->setFilter(QString("products.isARawProduct=false and products.category=%1").arg(catId));
+      //REMOVE SUBCATEGORY FILTER
       //Now check subcategory
-      if (ui_mainview.rbFilterBySubCategory->isChecked()){
-        QString subCatText = ui_mainview.comboFilterBySubCategory->currentText();
-        if (subcategoriesHash.contains(subCatText))
-            subCatId = subcategoriesHash.value(subCatText);
+   //   if (ui_mainview.rbFilterBySubCategory->isChecked()){
+       // QString subCatText = ui_mainview.comboFilterBySubCategory->currentText();
+       // if (subcategoriesHash.contains(subCatText))
+         //   subCatId = subcategoriesHash.value(subCatText);
       }//filter by subcategory, only if filterByCategory is checked.
-      if (subCatId > 0)
-        productsModel->setFilter(QString("products.isARawProduct=false and products.category=%1 and products.subcategory=%2").arg(catId).arg(subCatId));
-      else
-        productsModel->setFilter(QString("products.isARawProduct=false and products.category=%1").arg(catId));
+     // if (subCatId > 0)
+      //  productsModel->setFilter(QString("products.isARawProduct=false and products.category=%1 and products.subcategory=%2").arg(catId).arg(subCatId));
+      //else
+        //productsModel->setFilter(QString("products.isARawProduct=false and products.category=%1").arg(catId));
     }
     //else { //by most sold products in current month --biel
     //    {
     //  productsModel->setFilter("products.isARawProduct=false and (products.datelastsold > ADDDATE(sysdate( ), INTERVAL -31 DAY )) ORDER BY products.datelastsold DESC LIMIT 20"); //limit or not the result to 5?
    //   }
       //products.code IN (SELECT * FROM (SELECT product_id FROM (SELECT product_id, sum( units ) AS sold_items FROM transactions t, transactionitems ti WHERE  t.id = ti.transaction_id AND t.date > ADDDATE( sysdate( ) , INTERVAL -31 DAY ) GROUP BY ti.product_id) month_sold_items ORDER BY sold_items DESC LIMIT 5) popular_products)
-  //  }
+   // }
 
 
-  }
+ // }
   productsModel->select();
 }
 
@@ -4999,7 +5067,7 @@ void iotposView::clientChanged()
     updateClientInfo();
     refreshTotalLabel();
     ui_mainview.editItemCode->setFocus();
-    ui_mainview.frameGridView->show();
+    setupGridView();
   }
 }
 
@@ -5658,7 +5726,7 @@ void iotposView::unlockScreen()
       emit signalEnableUI();
       emit signalEnableLogin();
       ui_mainview.editItemCode->setFocus();
-      ui_mainview.frameGridView->show();
+      setupGridView();
     } else {
       lockDialog->cleanPassword();
       lockDialog->shake();
@@ -5824,8 +5892,8 @@ void iotposView::suspendSale()
     notify->setPixmap(pixmap);
     notify->sendEvent();
   }
-ui_mainview.stackedWidget_2->setCurrentIndex(1);
 ui_mainview.stackedWidget_3->setCurrentIndex(1);
+ui_mainview.listView->scrollToTop();
 }
 
 //This will resume the sale, using a new balanceid.
@@ -5982,7 +6050,7 @@ void iotposView::applyOccasionalDiscount()
                     notifierPanel->setOnBottom(false);
                     notifierPanel->showNotification("<b>Cannot change price</b> to product marked as not discountable.",5000);
                     ui_mainview.editItemCode->setFocus();
-                    ui_mainview.frameGridView->show();
+                    setupGridView();
                     return;
                 }
                 priceDiff = info.price - ui_mainview.editDiscount->text().toDouble();
@@ -6017,7 +6085,7 @@ void iotposView::applyOccasionalDiscount()
             notifierPanel->showNotification("First <b>select a product</b> to <i>change the price</i> from the sale list.",5000);
         }
         ui_mainview.editItemCode->setFocus();
-        ui_mainview.frameGridView->show();
+        setupGridView();
         refreshTotalLabel();
         ui_mainview.editDiscount->clear();
         discountPanel->hidePanel();
@@ -6514,6 +6582,7 @@ void iotposView::filterClientForCredit()
         delete myDb;
         //calculate total for unpaid customer credits
         calculateTotalForClient();
+        ui_mainview.creditPaymentWidget->show();
     }
 }
 
@@ -6575,7 +6644,7 @@ void iotposView::createClient()
     }
     delete myDb;
     ui_mainview.editItemCode->setFocus();
-    ui_mainview.frameGridView->show();
+    setupGridView();
 
 }
 
@@ -6673,15 +6742,15 @@ void iotposView::doCreditPayment()
     
     qDebug()<<"Credit remaining:"<<crInfo.total<<" Payment:"<<crHistory.amount<<" Change:"<<change;
     
-    ui_mainview.creditPaymentWidget->hide();
-
+    //ui_mainview.creditPaymentWidget->hide();
+    //ui_mainview.editClientIdForCredit->clear();
+    ui_mainview.editCreditTendered->clear();
     //print ticket. NOTE: This prints the credit report.. We want to print the NEW PAYMENT ALSO, so add to the document.
     calculateTotalForClient();
-    
     printCreditReport();
 
     //close db and credit dialog, delaying a bit.
-    QTimer::singleShot(1000, creditPanel, SLOT(hidePanel()));
+    //QTimer::singleShot(3000, creditPanel, SLOT(hidePanel()));
     delete myDb;
 }
 
@@ -6717,6 +6786,10 @@ void iotposView::printCreditReport()
             printer.setPaperSize(QSizeF(72,200), QPrinter::Millimeter);
             ui_mainview.creditContent->print(&printer);
         }
+    }
+    else
+    {
+
     }
 }
 
@@ -6831,30 +6904,20 @@ void iotposView::calculateTotalForClient()
                     break; //finish here, with only one we need to print it.
                 }
             }
+            itemsTable = cursor.insertTable(1, 3, itemsTableFormat);
 
+            //table
+            itemsFrameFormat = cursor.currentFrame()->frameFormat();
+            itemsFrameFormat.setBorder(0);
+            itemsFrameFormat.setPadding(1);
+            cursor.currentFrame()->setFrameFormat(itemsFrameFormat);
+            cursor = itemsTable->cellAt(0, 0).firstCursorPosition();
+            cursor.insertText(i18n("Date"), hdrFormat); //NOTE: It is not really needed to include the date in TODAY history.
+            cursor = itemsTable->cellAt(0, 1).firstCursorPosition();
+            cursor.insertText(i18n("Amount"), hdrFormat);
+            cursor = itemsTable->cellAt(0, 2).firstCursorPosition();
+            cursor.insertText(i18n("Sale #"), hdrFormat);
             if (todayNum > 0) {
-                cursor.setBlockFormat(blockCenter);
-                cursor.insertBlock();
-                cursor.insertText(i18n("Today Credit History"), italicsFormat);
-                cursor.insertBlock();
-                cursor.insertHtml("<hr>");
-
-                itemsTable = cursor.insertTable(1, 4, itemsTableFormat);
-
-                //table
-                itemsFrameFormat = cursor.currentFrame()->frameFormat();
-                itemsFrameFormat.setBorder(0);
-                itemsFrameFormat.setPadding(1);
-                cursor.currentFrame()->setFrameFormat(itemsFrameFormat);
-                cursor = itemsTable->cellAt(0, 0).firstCursorPosition();
-                cursor.insertText(i18n("Date"), hdrFormat); //NOTE: It is not really needed to include the date in TODAY history.
-                cursor = itemsTable->cellAt(0, 1).firstCursorPosition();
-                cursor.insertText(i18n("Amount"), hdrFormat);
-                cursor = itemsTable->cellAt(0, 2).firstCursorPosition();
-                cursor.insertText(i18n("Sale #"), hdrFormat);
-                cursor = itemsTable->cellAt(0, 3).firstCursorPosition();
-                cursor.insertText(i18n("Invoice"), hdrFormat);
-
                 foreach(CreditHistoryInfo credit, creditHistory){
                     if (credit.date == QDate::currentDate() ) {
                         int row = itemsTable->rows();
@@ -6868,54 +6931,14 @@ void iotposView::calculateTotalForClient()
                             cursor.insertText(i18n("Payment"), textFormat);
                         else
                             cursor.insertText(QString::number(credit.saleId), textFormat);
-                        cursor = itemsTable->cellAt(row, 3).firstCursorPosition();
-                        //The Factura number that belongs to this credit/sale.  Apr 24 2012.
-                        QString folio = myDb->getFolioFactura(credit.saleId);
-                        cursor.insertText(folio, textFormat);
-
-                        ///now, we can print products for each sale asociated to the credit.
-                        if (credit.saleId > 0) {
-                            QList<TransactionItemInfo> saleItems = myDb->getTransactionItems(credit.saleId);
-                            foreach(TransactionItemInfo item, saleItems) {
-                                int row = itemsTable->rows();
-                                itemsTable->insertRows(row, 1); //insert item name in the first column. Wee need to see the text length to not add very long text.
-                                itemsTable->mergeCells(row, 0, 1,4);
-                                QString line = QString("  %1x %2   %3").arg(item.qty).arg(item.name.left(30)).arg(KGlobal::locale()->formatMoney(item.total));
-                                cursor.insertText(line, smTextFormat);
-                            }
-                        }
                     }
                 }
             } //any today entry?
 
             //Beyond today...
             cursor.movePosition(QTextCursor::NextBlock);
-            cursor.setBlockFormat(blockCenter);
-            cursor.insertBlock();
-            cursor.insertBlock();
-            cursor.insertText(i18n("Credit History"), italicsFormat);
-            cursor.insertBlock();
-            cursor.insertHtml("<hr>");
-            //cursor.insertBlock();
-
-            //QTextTableFormat itemsTableFormat;
             itemsTableFormat.setAlignment(Qt::AlignHCenter);
             itemsTableFormat.setWidth(QTextLength(QTextLength::PercentageLength, 100));
-            /*QTextTable **/itemsTable = cursor.insertTable(1, 4, itemsTableFormat);
-
-            //table
-            /*QTextFrameFormat*/ itemsFrameFormat = cursor.currentFrame()->frameFormat();
-            itemsFrameFormat.setBorder(0);
-            itemsFrameFormat.setPadding(1);
-            cursor.currentFrame()->setFrameFormat(itemsFrameFormat);
-            cursor = itemsTable->cellAt(0, 0).firstCursorPosition();
-            cursor.insertText(i18n("Date"), hdrFormat);
-            cursor = itemsTable->cellAt(0, 1).firstCursorPosition();
-            cursor.insertText(i18n("Amount"), hdrFormat);
-            cursor = itemsTable->cellAt(0, 2).firstCursorPosition();
-            cursor.insertText(i18n("Sale #"), hdrFormat);
-            cursor = itemsTable->cellAt(0, 3).firstCursorPosition();
-            cursor.insertText(i18n("Invoice"), hdrFormat);
 
             foreach(CreditHistoryInfo credit, creditHistory){
                 if (credit.date != QDate::currentDate() ) {
@@ -6930,27 +6953,10 @@ void iotposView::calculateTotalForClient()
                         cursor.insertText(i18n("Payment"), textFormat);
                     else
                         cursor.insertText(QString::number(credit.saleId), textFormat);
-                    cursor = itemsTable->cellAt(row, 3).firstCursorPosition();
-                    //The Factura number that belongs to this credit/sale.  Apr 24 2012.
-                    QString folio = myDb->getFolioFactura(credit.saleId);
-                    cursor.insertText(folio, textFormat);
-                    
-                    ///now, we can print products for each sale asociated to the credit.
-                    if (credit.saleId > 0) {
-                        QList<TransactionItemInfo> saleItems = myDb->getTransactionItems(credit.saleId);
-                        foreach(TransactionItemInfo item, saleItems) {
-                            int row = itemsTable->rows();
-                            itemsTable->insertRows(row, 1); //insert item name in the first column. Wee need to see the text length to not add very long text.
-                            cursor = itemsTable->cellAt(row, 0).firstCursorPosition();
-                            itemsTable->mergeCells(row, 0, 1,4);
-                            QString line = QString("  %1x %2   %3").arg(item.qty).arg(item.name.left(30)).arg(KGlobal::locale()->formatMoney(item.total));
-                            cursor.insertText(line, smTextFormat);
-                        }
-                    }
                 }
             }
         } //if not empty creditHistory
-        
+
         delete myDb;
     }
     ui_mainview.creditContent->setReadOnly(true);
@@ -7202,6 +7208,7 @@ BasketPriceSummary iotposView::recalculateBasket(double oDiscountMoney) {
 void iotposView::on_rbFilterByCategory_clicked()
 {
     ui_mainview.editItemCode->clear();
+    ui_mainview.frameGridView->show();
 }
 
 

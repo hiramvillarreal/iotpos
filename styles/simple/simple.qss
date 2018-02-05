@@ -25,14 +25,14 @@
 */
 
 LoginWindow#passwordDialog {
-   background-image: url([STYLE_PATH]passwordBackground_1366x768.png); /* choose resolution and provide the image */
+   background-image: url([STYLE_PATH]passwordBackground.png); /* choose resolution and provide the image */
    background-position: top left;
    background-attachment: fixed;
    background-repeat:no-repeat;
 }
 
 LoginWindow#loginDialog {
-   background-image: url([STYLE_PATH]loginBackground_1366x768.png); /* choose resolution and provide the image */
+   background-image: url([STYLE_PATH]loginBackground.png); /* choose resolution and provide the image */
    background-position: center center;
    background-attachment: fixed;
    background-repeat:no-repeat;

@@ -2098,7 +2098,7 @@ msgstr "Ofertas"
 
 #: squeeze.cpp:343
 msgid "Quick Plots"
-msgstr "Gráficas informativas"
+msgstr "Gráficas"
 
 #: squeeze.cpp:355
 msgid "Check Out"

@@ -419,6 +419,7 @@ void iotpos::loadStyle()
     if (op) file.close();
   }
   showToolBars();
+
 }
 
 
@@ -806,7 +807,7 @@ void iotpos::updateUserName()
 void iotpos::updateTransaction()
 {
   QString tn = m_view->getCurrentTransactionString();
-  labelTransaction->setText(i18n("Transaction #%1", tn));
+  labelTransaction->setText(i18n(" #%1", tn));
 }
 
 

@@ -158,10 +158,10 @@
        <string>E-mail</string>
       </property>
       <property name="buddy">
-       <cstring>editUsersMail</cstring>
+       <cstring>editUsersCell</cstring>
       </property>
      </widget>
-     <widget class="QLineEdit" name="editUsersMail">
+     <widget class="QLineEdit" name="editUsersCell">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -173,7 +173,7 @@
      </widget>
      <zorder>editUsersPhone</zorder>
      <zorder>label_18</zorder>
-     <zorder>editUsersMail</zorder>
+     <zorder>editUsersCell</zorder>
      <zorder>label_17</zorder>
     </widget>
    </item>

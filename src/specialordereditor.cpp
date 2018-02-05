@@ -105,7 +105,7 @@ SpecialOrderEditor::SpecialOrderEditor( QWidget *parent, bool newOne )
     newClientPanel->setHiddenTotally(true);
     ui->editClientName->setEmptyMessage(i18n("Enter client name here..."));
     ui->editClientPhone->setEmptyMessage(i18n("Enter client phone here..."));
-    ui->editClientMail->setEmptyMessage(i18n("Enter client E-mail here..."));
+    ui->editClientCell->setEmptyMessage(i18n("Enter client E-mail here..."));
 
     connect( ui->btnNewClient, SIGNAL(clicked()), newClientPanel, SLOT(showPanel() ));
     connect( ui->btnNewClient, SIGNAL(clicked()), this, SLOT(enableCreateClient() ));
@@ -114,7 +114,7 @@ SpecialOrderEditor::SpecialOrderEditor( QWidget *parent, bool newOne )
     connect( ui->editClientName, SIGNAL(textEdited(const QString &)), this, SLOT(checkValidInfo()) );
     connect( ui->editClientAddress, SIGNAL(textChanged()), this, SLOT(checkValidInfo()) );
     connect( ui->editClientPhone, SIGNAL(textEdited(const QString &)), this, SLOT(checkValidInfo()) );
-    connect( ui->editClientMail, SIGNAL(textEdited(const QString &)), this, SLOT(checkValidInfo()) );
+    connect( ui->editClientCell, SIGNAL(textEdited(const QString &)), this, SLOT(checkValidInfo()) );
 
     setDefaultButton(KDialog::None);
     ui->btnFilter->setDefault(true);
@@ -574,7 +574,7 @@ void SpecialOrderEditor::createClient()
   if ( !ui->editClientName->text().isEmpty()     &&
        !ui->editClientAddress->toPlainText().isEmpty()
      ) ready = true;
-  if (ui->editClientPhone->text().isEmpty() && ui->editClientMail->text().isEmpty())
+  if (ui->editClientPhone->text().isEmpty() && ui->editClientCell->text().isEmpty())
     ready = ready && false; //only one can be empty..
   else
     ready = ready && true;
@@ -584,7 +584,7 @@ void SpecialOrderEditor::createClient()
     info.name    = ui->editClientName->text();
     info.address = ui->editClientAddress->toPlainText();
     info.phone   = ui->editClientPhone->text();
-    info.cell    = ui->editClientMail->text();
+    info.cell    = ui->editClientCell->text();
     info.points  = 0;
     info.discount= 0;
     info.since   = QDate::currentDate();
@@ -609,7 +609,7 @@ void SpecialOrderEditor::checkValidInfo()
   if ( !ui->editClientName->text().isEmpty()     &&
     !ui->editClientAddress->toPlainText().isEmpty()
     ) ready = true;
-  if (ui->editClientPhone->text().isEmpty() && ui->editClientMail->text().isEmpty())
+  if (ui->editClientPhone->text().isEmpty() && ui->editClientCell->text().isEmpty())
     ready = ready && false; //only one can be empty..
     else
       ready = ready && true;

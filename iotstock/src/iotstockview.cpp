@@ -178,11 +178,11 @@ void iotstockView::createFloatingPanels()
 {
   QString path = KStandardDirs::locate("appdata", "styles/");
   path = path+"floating_top.svg";
-  fpFilterTrans    = new MibitFloatPanel(ui_mainview.transactionsTable, path, Top,700,300);
-  fpFilterProducts = new MibitFloatPanel(ui_mainview.productsView, path, Top,700,200);
+  fpFilterTrans    = new MibitFloatPanel(ui_mainview.transactionsTable, path, Top,460,300);
+  fpFilterProducts = new MibitFloatPanel(ui_mainview.productsView, path, Top,460,200);
   fpFilterOffers   = new MibitFloatPanel(ui_mainview.tableBrowseOffers, path, Top,500,200);
-  fpFilterBalances = new MibitFloatPanel(ui_mainview.balancesTable, path, Top,700,240);
-  fpFilterSpecialOrders = new MibitFloatPanel(ui_mainview.tableSO, path, Top,700,240);
+  fpFilterBalances = new MibitFloatPanel(ui_mainview.balancesTable, path, Top,460,240);
+  fpFilterSpecialOrders = new MibitFloatPanel(ui_mainview.tableSO, path, Top,460,240);
   fpFilterTrans->addWidget(ui_mainview.groupFilterTransactions);
   fpFilterProducts->addWidget(ui_mainview.groupFilterProducts);
   fpFilterBalances->addWidget(ui_mainview.groupFilterBalances);
@@ -691,7 +691,6 @@ void iotstockView::setupGraphs()
   ui_mainview.plotProfit->addPlotObject( objProfit );
   ui_mainview.plotProfit->axis( KPlotWidget::BottomAxis )->setLabel( i18n("%1", mes) );
   ui_mainview.plotProfit->axis( KPlotWidget::LeftAxis )->setLabel( i18n("Month Profit (%1)", KGlobal::locale()->currencySymbol()) );
-
   ui_mainview.plotMostSold->setMinimumSize( 200, 200 );
   ui_mainview.plotMostSold->setAntialiasing( true );
   objMostSold  = new KPlotObject( Qt::white, KPlotObject::Bars, KPlotObject::Star);
@@ -731,6 +730,12 @@ void iotstockView::setupGraphs()
   objProfit->setPointStyle(KPlotObject::Star);
   
   graphSoldItemsCreated = true;
+  int y = (QApplication::desktop()->height());
+  if (y < 400){
+  ui_mainview.plotProfit->hide();
+  ui_mainview.plotMostSold->hide();
+  ui_mainview.frame->hide();
+  }
   updateGraphs();
 }
 
@@ -2052,7 +2057,7 @@ void iotstockView::usersViewOnSelected(const QModelIndex & index)
     QString address = model->data(indx, Qt::DisplayRole).toString();
     indx = model->index(row, usersModel->fieldIndex("phone"));
     QString phone = model->data(indx, Qt::DisplayRole).toString();
-    indx = model->index(row, usersModel->fieldIndex("e_mail"));
+    indx = model->index(row, usersModel->fieldIndex("phone_movil"));
     QString cell = model->data(indx, Qt::DisplayRole).toString();
     indx = model->index(row, usersModel->fieldIndex("photo"));
     QByteArray photoBA = model->data(indx, Qt::DisplayRole).toByteArray();
@@ -2228,7 +2233,7 @@ void iotstockView::clientsViewOnSelected(const QModelIndex & index)
     QString address = model->data(indx, Qt::DisplayRole).toString();
     indx = model->index(row, clientsModel->fieldIndex("phone"));
     QString phone = model->data(indx, Qt::DisplayRole).toString();
-    indx = model->index(row, clientsModel->fieldIndex("e_mail"));
+    indx = model->index(row, clientsModel->fieldIndex("phone_movil"));
     QString cell = model->data(indx, Qt::DisplayRole).toString();
     indx = model->index(row, clientsModel->fieldIndex("points"));
     qulonglong points = model->data(indx, Qt::DisplayRole).toULongLong();

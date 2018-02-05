@@ -415,6 +415,7 @@ public:
     void reprintFactura();
     void facturasLibres();
     void resizeSearchTable();
+    void resizeSearchTableSmall();
     void on_rbFilterByPopularity_clicked();
     void on_rbFilterByCategory_clicked();
 };

@@ -1,6 +1,6 @@
 # translation of es.po to Español
 # Copyright (C) 2007-2010 Miguel Chavez Gamboa
-# This file is distributed under the same license as the lemonpos package.
+# This file is distributed under the same license as the iotpos package.
 #
 # Miguel Chavez Gamboa <miguel.chavez.gamboa@gmail.com>, 2007-2011.
 msgid ""
@@ -10,8 +10,8 @@ msgstr ""
 "atid=1011570&group_id=209899&func=browse\n"
 "POT-Creation-Date: 2012-08-09 16:28-0500\n"
 "PO-Revision-Date: 2016-01-17 09:23-0600\n"
-"Last-Translator: Miguel Chavez Gamboa <miguel@lemonpos.org>\n"
-"Language-Team: Español <es@lemonpos.org>\n"
+"Last-Translator: Miguel Chavez Gamboa <hiramvillarreal.ap@gmail.com>\n"
+"Language-Team: Español <es@iotpos.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -178,163 +178,163 @@ msgstr "Aceptar"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: lemon.cpp:155
+#: iotpos.cpp:155
 msgid "Login"
 msgstr "Login"
 
-#: lemon.cpp:161
+#: iotpos.cpp:161
 msgctxt "Account balance"
 msgid "Balance"
 msgstr "Corte de caja"
 
-#: lemon.cpp:167
+#: iotpos.cpp:167
 msgid "Enter Code"
 msgstr "Entrar código"
 
-#: lemon.cpp:173
+#: iotpos.cpp:173
 msgid "Search Item"
 msgstr "Buscar Artículo"
 
-#: lemon.cpp:179
+#: iotpos.cpp:179
 msgid "Delete Selected Item"
 msgstr "Borrar artículo seleccionado"
 
-#: lemon.cpp:189
+#: iotpos.cpp:189
 msgid "Finish transaction"
 msgstr "Terminar transacción"
 
-#: lemon.cpp:195
+#: iotpos.cpp:195
 msgid "Cancel transaction"
 msgstr "Cancelar transacción"
 
-#: lemon.cpp:201
+#: iotpos.cpp:201
 msgid "Cancel a ticket"
 msgstr "Cancelar ticket"
 
-#: lemon.cpp:208
+#: iotpos.cpp:208
 msgid "Start Operation"
 msgstr "Iniciar Operaciones"
 
-#: lemon.cpp:214
+#: iotpos.cpp:214
 msgid "Pay focus"
 msgstr "Ir a pagar"
 
-#: lemon.cpp:221
+#: iotpos.cpp:221
 msgid "Show/Hide Products Grid"
 msgstr "Mostrar/Ocultar Rejilla de productos"
 
-#: lemon.cpp:228
+#: iotpos.cpp:228
 msgid "Show Price Checker"
 msgstr "Mostrar checador de precios"
 
-#: lemon.cpp:234
+#: iotpos.cpp:234
 msgid "Reprint ticket"
 msgstr "Reimprimir ticket"
 
-#: lemon.cpp:240 lemonview.cpp:4804
+#: iotpos.cpp:240 iotposview.cpp:4804
 msgid "Cash Out"
 msgstr "Salida de efectivo"
 
-#: lemon.cpp:246
+#: iotpos.cpp:246
 msgid "Cash in drawer"
 msgstr "Efectivo en gaveta"
 
-#: lemon.cpp:252 lemonview.cpp:4847
+#: iotpos.cpp:252 iotposview.cpp:4847
 msgid "Cash In"
 msgstr "Entrada de efectivo"
 
-#: lemon.cpp:258 lemonview.cpp:4066
+#: iotpos.cpp:258 iotposview.cpp:4066
 msgid "End of day report"
 msgstr "Reporte de fin del dia"
 
-#: lemon.cpp:265
+#: iotpos.cpp:265
 msgid "Add Special Order"
 msgstr "Agregar Orden Especial"
 
-#: lemon.cpp:273
+#: iotpos.cpp:273
 msgid "Complete Special Order"
 msgstr "Completar Orden Especial"
 
-#: lemon.cpp:280
+#: iotpos.cpp:280
 msgid "Lock Screen"
 msgstr "Bloquear pantalla"
 
-#: lemon.cpp:287
+#: iotpos.cpp:287
 msgid "Suspend Sale"
 msgstr "Suspender venta"
 
-#: lemon.cpp:294 lemon.cpp:301
+#: iotpos.cpp:294 iotpos.cpp:301
 msgid "Change Special Order Status"
 msgstr "Cambiar estado de Ordenes Especiales"
 
-#: lemon.cpp:308 resume.cpp:46
+#: iotpos.cpp:308 resume.cpp:46
 msgid "Resume Sale"
 msgstr "Retomar venta"
 
-#: lemon.cpp:315
+#: iotpos.cpp:315
 msgid "Reserve Items"
 msgstr "Reservar Productos"
 
-#: lemon.cpp:322 reservations.cpp:59
+#: iotpos.cpp:322 reservations.cpp:59
 msgid "Reservations"
 msgstr "Apartados"
 
-#: lemon.cpp:329
+#: iotpos.cpp:329
 msgid "Show Credits"
 msgstr "Mostrar Créditos"
 
-#: lemon.cpp:336
+#: iotpos.cpp:336
 #, fuzzy
 msgid "Add Reservation Payment"
 msgstr "Total de la apartado"
 
-#: lemon.cpp:343
+#: iotpos.cpp:343
 msgid "Emitir una factura"
 msgstr ""
 
-#: lemon.cpp:349
+#: iotpos.cpp:349
 #, fuzzy
 msgid "Cancelar una factura"
 msgstr "Cancelar ticket"
 
-#: lemon.cpp:355
+#: iotpos.cpp:355
 msgid "Reimprimir una factura"
 msgstr ""
 
-#: lemon.cpp:361
+#: iotpos.cpp:361
 msgid "Número de facturas disponibles"
 msgstr ""
 
-#: lemon.cpp:452 lemon.cpp:484
+#: iotpos.cpp:452 iotpos.cpp:484
 msgid "Database"
 msgstr "Base de datos"
 
-#: lemon.cpp:470
+#: iotpos.cpp:470
 msgid "General"
 msgstr "General"
 
-#: lemon.cpp:475
+#: iotpos.cpp:475
 msgid "Store"
 msgstr "Tienda"
 
-#: lemon.cpp:480
+#: iotpos.cpp:480
 #, fuzzy
 msgid "Facturas"
 msgstr "Factor:"
 
-#: lemon.cpp:488
+#: iotpos.cpp:488
 msgid "Appearence"
 msgstr "Apariencia"
 
-#: lemon.cpp:495
+#: iotpos.cpp:495
 msgid "Security"
 msgstr "Seguridad"
 
-#: lemon.cpp:499
+#: iotpos.cpp:499
 msgid "Printer"
 msgstr "Impresora"
 
-#: lemon.cpp:564
+#: iotpos.cpp:564
 msgid ""
 "Administrator or Supervisor needs to start operation before you can start "
 "selling..."
@@ -342,43 +342,43 @@ msgstr ""
 "El administrador o supervisor necesita iniciar operaciones antes de poder "
 "vender..."
 
-#: lemon.cpp:823
+#: iotpos.cpp:823
 msgid "Transaction #%1"
 msgstr "Transacción #%1"
 
-#: lemonview.cpp:106
+#: iotposview.cpp:106
 msgid "Continue"
 msgstr "Continuar"
 
-#: lemonview.cpp:168
+#: iotposview.cpp:168
 msgid "Welcome to IotPOS"
 msgstr "Bienvenido a IotPOS"
 
-#: lemonview.cpp:164
+#: iotposview.cpp:164
 msgid "Enter username and password to start using the system."
-msgstr "Escriba su usuario y contraseña para iniciar el punto de venta"
+msgstr "Escriba su usuario y contraseña para iniciar"
 
-#: lemonview.cpp:167
+#: iotposview.cpp:167
 msgid "Authorisation Required"
 msgstr "Autorización requerida"
 
-#: lemonview.cpp:168
+#: iotposview.cpp:168
 msgid "Enter administrator password please."
 msgstr "Escriba la contraseña de administrador"
 
-#: lemonview.cpp:310 lemonview.cpp:311
+#: iotposview.cpp:310 iotposview.cpp:311
 msgid "Enter description, code, qty*code <Enter> or <+> Keys to go pay. <->Price<Enter> to search by price."
 msgstr "Entre descripción, código, cantidad*código <Enter> ó <+> para ir a pagar, <->precio<Enter> para búsqueda por precio."
 
-#: lemonview.cpp:312
+#: iotposview.cpp:312
 msgid "Enter an amount."
 msgstr "Escriba la cantidad."
 
-#: lemonview.cpp:403 lemonview.cpp:1357 lemonview.cpp:1591
+#: iotposview.cpp:403 iotposview.cpp:1357 iotposview.cpp:1591
 msgid "%1 has %2 %3 but requested %4 + %5"
 msgstr "%1 tiene %2 %3 pero se requirió %4 + %5"
 
-#: lemonview.cpp:421 lemonview.cpp:1372 lemonview.cpp:1601
+#: iotposview.cpp:421 iotposview.cpp:1372 iotposview.cpp:1601
 msgid ""
 "<html><font color=red><b>The group/pack is not available because:<br>%1</b></"
 "font></html>"
@@ -386,7 +386,7 @@ msgstr ""
 "<html><font color=red><b>Grupo/Paquete no disponible debido a: <br>%1</b></"
 "font></html>"
 
-#: lemonview.cpp:423 lemonview.cpp:1374 lemonview.cpp:1611
+#: iotposview.cpp:423 iotposview.cpp:1374 iotposview.cpp:1611
 msgid ""
 "<html><font color=red><b>There are only %1 articles of your choice at stock."
 "<br> You requested %2</b></font></html>"
@@ -394,23 +394,23 @@ msgstr ""
 "<html><font color=red><b>Sólo hay %1 artículos disponibles en inventario."
 "<br> Requirió %2</b></font></html>"
 
-#: lemonview.cpp:555
+#: iotposview.cpp:555
 msgid "Invalid input"
 msgstr ""
 
-#: lemonview.cpp:730
+#: iotposview.cpp:730
 msgid "No product selected"
 msgstr "No hay productos seleccionados."
 
-#: lemonview.cpp:759
+#: iotposview.cpp:759
 msgid "Enter the ticket number to cancel"
 msgstr "Escriba el numero de ticket a cancelar"
 
-#: lemonview.cpp:792
+#: iotposview.cpp:792
 msgid "Enter the ticket number"
 msgstr "Escriba el numero de ticket"
 
-#: lemonview.cpp:973
+#: iotposview.cpp:973
 msgid ""
 "Could not connect to database, please press 'login' button again to raise a "
 "database configuration."
@@ -418,21 +418,21 @@ msgstr ""
 "No se pudo conectar a la base de datos, presione el boton de login para "
 "lanzar el dialogo de configuración."
 
-#: lemonview.cpp:974
+#: iotposview.cpp:974
 msgid "Error:"
 msgstr "Error:"
 
-#: lemonview.cpp:1068
+#: iotposview.cpp:1068
 msgid "%1 item found"
 msgid_plural "%1 items found."
 msgstr[0] "%1 artículo encontrado."
 msgstr[1] "%1 artículos encontrados."
 
-#: lemonview.cpp:1069
+#: iotposview.cpp:1069
 msgid "No items found."
 msgstr "No se encontraron artículos"
 
-#: lemonview.cpp:1410
+#: iotposview.cpp:1410
 msgid ""
 "Only Special Orders can be added. Please finish the current special order "
 "before adding any other product."
@@ -440,29 +440,29 @@ msgstr ""
 "Solo Ordenes especiales pueden ser agregadas. Por favor termine esta venta "
 "antes de agregar otro producto."
 
-#: lemonview.cpp:1421
+#: iotposview.cpp:1421
 msgid "Cannot Add more items to the Reservation."
 msgstr "No se pueden agregar mas productos al apartado"
 
-#: lemonview.cpp:1460
+#: iotposview.cpp:1460
 msgid "Cannot change client while Special Orders are in Purchase."
 msgstr "No se puede cambiar de cliente mientras toma Ordenes Especiales."
 
-#: lemonview.cpp:1488
+#: iotposview.cpp:1488
 #, fuzzy
 msgid "<b>Welcome</b> <i>%1</i>. You have remaining <b>debit</b> of %2 to use."
 msgstr "<b>Bienvenido</b> <i>%1</i>. Tiene %2 en su cuenta para usarse."
 
-#: lemonview.cpp:1490
+#: iotposview.cpp:1490
 #, fuzzy
 msgid "<b>Welcome</b> <i>%1</i>. You have remaining <b>credit</b> of %2 used."
 msgstr "<b>Bienvenido</b> <i>%1</i>. Tiene %2 en su cuenta para usarse."
 
-#: lemonview.cpp:1502
+#: iotposview.cpp:1502
 msgid "No Client found with code %1."
 msgstr "No se encontró cliente con código %1."
 
-#: lemonview.cpp:1544
+#: iotposview.cpp:1544
 msgid ""
 "The requiered qty is %1 and its not allowed for the required product, please "
 "verify the quantity"
@@ -470,31 +470,31 @@ msgstr ""
 "La cantidad requerida es %1, pero no es permitida para el producto "
 "requerido. Verifique la cantidad."
 
-#: lemonview.cpp:1564
+#: iotposview.cpp:1564
 msgid ""
 "<html><font color=red><b>Product not found in database.</b></font></html>"
 msgstr ""
 "<html><font color=red><b>Producto no encontrado en la base de datos.</b></"
 "font></html>"
 
-#: lemonview.cpp:1770
+#: iotposview.cpp:1770
 msgid "Cannot delete items from a reservation."
 msgstr "No se puede borrar productos de un apartado."
 
-#: lemonview.cpp:1819
+#: iotposview.cpp:1819
 msgid "Removing an Special Item from shopping list. Authorized by %1"
 msgstr ""
 "Removiendo una Orden Especial de la lista de compras. Autorizado por %1"
 
-#: lemonview.cpp:1885
+#: iotposview.cpp:1885
 msgid "Removing an article from shopping list. Authorized by %1"
 msgstr "Removiendo un artículo de la lista de compras. Autorizado por %1"
 
-#: lemonview.cpp:1939
+#: iotposview.cpp:1939
 msgid "Enter the number of %1"
 msgstr "Número de %1"
 
-#: lemonview.cpp:1974
+#: iotposview.cpp:1974
 msgid ""
 "<html><font color=red><b>Product not available in stock for the requested "
 "quantity.</b></font></html>"
@@ -502,35 +502,35 @@ msgstr ""
 "<html><font color=red><b>Producto no disponible en la cantidad solicitada.</"
 "b></font></html>"
 
-#: lemonview.cpp:2025
+#: iotposview.cpp:2025
 msgid "Taxes:"
-msgstr "Impuestos:"
+msgstr "IVA:"
 
-#: lemonview.cpp:2026
+#: iotposview.cpp:2026
 msgid "Tax:"
 msgstr "Impuesto:"
 
-#: lemonview.cpp:2027
+#: iotposview.cpp:2027
 msgid "Other taxes:"
 msgstr "Otros impuestos:"
 
-#: lemonview.cpp:2028
+#: iotposview.cpp:2028
 msgid "Sold by:"
 msgstr "Vendido por:"
 
-#: lemonview.cpp:2029
+#: iotposview.cpp:2029
 msgid "Price:"
 msgstr "Precio:"
 
-#: lemonview.cpp:2030 lemonview.cpp:4304 pricechecker.cpp:53
+#: iotposview.cpp:2030 iotposview.cpp:4304 pricechecker.cpp:53
 msgid "Discount:"
 msgstr "Descuento:"
 
-#: lemonview.cpp:2031
+#: iotposview.cpp:2031
 msgid "Points:"
 msgstr "Puntos:"
 
-#: lemonview.cpp:2119
+#: iotposview.cpp:2119
 msgid ""
 "IotPOS has encountered an error when openning database, click details to see "
 "the error details."
@@ -538,11 +538,11 @@ msgstr ""
 "IotPOS ha encontrado un error al buscar en la base de datos. Presione "
 "\"detalles\" para ver mas detalles del error."
 
-#: lemonview.cpp:2119
+#: iotposview.cpp:2119
 msgid "Create New Transaction: Error"
 msgstr "Crear nueva transacción: Error"
 
-#: lemonview.cpp:2178
+#: iotposview.cpp:2178
 msgid ""
 "<html><font color=red><b>Please fill the correct payment amount before "
 "finishing a transaction.</b></font></html>"
@@ -550,7 +550,7 @@ msgstr ""
 "<html><font color=red><b>Por favor llene la cantidad correcta a pagar antes "
 "de finalizar.</b></font></html>"
 
-#: lemonview.cpp:2187
+#: iotposview.cpp:2187
 msgid ""
 "Please be sure to enter an appropiate amount in this field. The number seems "
 "to be a barcode entered by mistake in the amount field."
@@ -558,12 +558,12 @@ msgstr ""
 "Por favor asegurese de poner una cantidad apropiada en este campo. El número "
 "parece ser un código de barras puesto por error en el campo de cantidad."
 
-#: lemonview.cpp:2203
+#: iotposview.cpp:2203
 #, fuzzy
 msgid "<html><font color=red><b>Note: card number missing.</b></font></html>"
 msgstr "<html><font color=red><b>Llene el número de tarjeta.</b></font></html>"
 
-#: lemonview.cpp:2211
+#: iotposview.cpp:2211
 #, fuzzy
 msgid ""
 "<html><font color=red><b>Note: Authorisation number from the bank voucher "
@@ -572,7 +572,7 @@ msgstr ""
 "<html><font color=red><b>Llene el número de autorización del banco.</b></"
 "font></html>"
 
-#: lemonview.cpp:2219
+#: iotposview.cpp:2219
 #, fuzzy
 msgid ""
 "<html><font color=red><b>The Card Type must be of some valid type.</b></"
@@ -581,11 +581,11 @@ msgstr ""
 "<html><font color=red><b>La fecha de entrega esta en el pasado.</b></font></"
 "html>"
 
-#: lemonview.cpp:2229
+#: iotposview.cpp:2229
 msgid "Before selling, you must start operations."
 msgstr "Antes de vender, debe iniciar operaciones."
 
-#: lemonview.cpp:2233
+#: iotposview.cpp:2233
 #, fuzzy
 msgid ""
 "<html><font color=red><b>The Client for an interal credit sale must not be "
@@ -594,40 +594,40 @@ msgstr ""
 "<html><font color=red><b>La fecha de entrega esta en el pasado.</b></font></"
 "html>"
 
-#: lemonview.cpp:2668
+#: iotposview.cpp:2668
 msgid "The Drawer is not initialized, please start operation first."
 msgstr "La gaveta no esta inicializada, por favor inicie operaciones."
 
-#: lemonview.cpp:2757
+#: iotposview.cpp:2757
 msgid "Facturación"
 msgstr ""
 
-#: lemonview.cpp:2757
+#: iotposview.cpp:2757
 msgid "¿Desea facturar?"
 msgstr ""
 
-#: lemonview.cpp:2819
+#: iotposview.cpp:2819
 msgid "No se pudo crear la factura"
 msgstr ""
 
-#: lemonview.cpp:2825
+#: iotposview.cpp:2825
 msgid "Folio Obtenido es invalido."
 msgstr ""
 
-#: lemonview.cpp:2880
+#: iotposview.cpp:2880
 msgid "Cash level in drawer is low."
 msgstr "El nivel de efectivo en gaveta es bajo."
 
-#: lemonview.cpp:2955 lemonview.cpp:3041 lemonview.cpp:4718 lemonview.cpp:5070
-#: lemonview.cpp:6528
+#: iotposview.cpp:2955 iotposview.cpp:3041 iotposview.cpp:4718 iotposview.cpp:5070
+#: iotposview.cpp:6528
 msgid "Notes:"
 msgstr "Notas:"
 
-#: lemonview.cpp:2984
+#: iotposview.cpp:2984
 msgid "Imprimir Factura"
 msgstr ""
 
-#: lemonview.cpp:3016
+#: iotposview.cpp:3016
 msgid ""
 "The ticket was not printed because it is ZERO in the amount to pay. Just to "
 "save trees."
@@ -635,113 +635,113 @@ msgstr ""
 "El ticket no fue impreso porque el total esta en CEROS. Sólo para salvar un "
 "árbol."
 
-#: lemonview.cpp:3025
+#: iotposview.cpp:3025
 msgid "Salesperson: %1"
 msgstr "Vendedor: %1"
 
-#: lemonview.cpp:3026 lemonview.cpp:3241 lemonview.cpp:3353 lemonview.cpp:3390
+#: iotposview.cpp:3026 iotposview.cpp:3241 iotposview.cpp:3353 iotposview.cpp:3390
 msgid "Qty"
 msgstr "Cant."
 
-#: lemonview.cpp:3027
+#: iotposview.cpp:3027
 msgid "Product"
 msgstr "Producto"
 
-#: lemonview.cpp:3028
+#: iotposview.cpp:3028
 msgid "Price"
 msgstr "Precio"
 
-#: lemonview.cpp:3029 lemonview.cpp:4563
+#: iotposview.cpp:3029 iotposview.cpp:4563
 msgid "Discount"
 msgstr "Descuento"
 
-#: lemonview.cpp:3030 lemonview.cpp:4562 refacturar.cpp:117
+#: iotposview.cpp:3030 iotposview.cpp:4562 refacturar.cpp:117
 msgid "Total"
 msgstr "Total"
 
-#: lemonview.cpp:3031
+#: iotposview.cpp:3031
 msgid "Your Personal Discount"
 msgstr "Su Descuento Personal"
 
-#: lemonview.cpp:3032
+#: iotposview.cpp:3032
 msgid "Your points this buy: %1"
 msgstr "Puntos de esta compra: %1"
 
-#: lemonview.cpp:3033
+#: iotposview.cpp:3033
 msgid "Your total points: %1"
 msgstr "Puntos totales: %1"
 
-#: lemonview.cpp:3034
+#: iotposview.cpp:3034
 msgid "# %1"
 msgstr "# %1"
 
-#: lemonview.cpp:3035
+#: iotposview.cpp:3035
 msgid "Terminal #%1"
 msgstr "Terminal #%1"
 
-#: lemonview.cpp:3036
+#: iotposview.cpp:3036
 msgid "PRE PAYMENT OF"
 msgstr "  ANTICIPO DE   "
 
-#: lemonview.cpp:3037
+#: iotposview.cpp:3037
 msgid "COMPLETED PAYMENT WITH"
 msgstr "  PAGO COMPLETADO CON "
 
-#: lemonview.cpp:3038
+#: iotposview.cpp:3038
 msgid "To complete your payment"
 msgstr "  Para completar el pago"
 
-#: lemonview.cpp:3039
+#: iotposview.cpp:3039
 msgid "Your pre payment"
 msgstr "  Su anticipo"
 
-#: lemonview.cpp:3040
+#: iotposview.cpp:3040
 msgid "SPECIAL ORDERS"
 msgstr "ORDENES ESPECIALES"
 
-#: lemonview.cpp:3042
+#: iotposview.cpp:3042
 msgid "Delivery"
 msgstr "  Entrega: "
 
-#: lemonview.cpp:3043
+#: iotposview.cpp:3043
 msgid "Tax"
 msgstr "Imp"
 
-#: lemonview.cpp:3044
+#: iotposview.cpp:3044
 msgid "Subtotal"
 msgstr "Subtotal"
 
-#: lemonview.cpp:3045
+#: iotposview.cpp:3045
 msgid "Tendered"
 msgstr "Recibido"
 
-#: lemonview.cpp:3158 lemonview.cpp:3246 lemonview.cpp:3359
+#: iotposview.cpp:3158 iotposview.cpp:3246 iotposview.cpp:3359
 msgid "%1 article."
 msgid_plural "%1 articles."
 msgstr[0] "%1 articulo."
 msgstr[1] "%1 articulos."
 
-#: lemonview.cpp:3159
+#: iotposview.cpp:3159
 msgid "A total of"
 msgstr "Un total de"
 
-#: lemonview.cpp:3162
+#: iotposview.cpp:3162
 msgid "<br>Paid with %1, your change is <b>%2</b><br>"
 msgstr "<br>Pagado con %1, su cambio es <b>%2</b><br>"
 
-#: lemonview.cpp:3171
+#: iotposview.cpp:3171
 msgid "You saved %1"
 msgstr "Usted Ahorró %1"
 
-#: lemonview.cpp:3178
+#: iotposview.cpp:3178
 msgid "Paid with %1, your change is %2"
 msgstr "Pagado con %1, su cambio %2"
 
-#: lemonview.cpp:3183
+#: iotposview.cpp:3183
 msgid "<br>Card # %1<br>Authorisation # %2"
 msgstr "<br>Tarjeta # %1<br>Autorización # %2"
 
-#: lemonview.cpp:3184
+#: iotposview.cpp:3184
 msgid ""
 "Card Number:%1 \n"
 "Authorisation #:%2"
@@ -749,60 +749,60 @@ msgstr ""
 "Tarjeta # %1\n"
 " Autorización # %2"
 
-#: lemonview.cpp:3224
+#: iotposview.cpp:3224
 #, fuzzy
 msgid ""
 " %3 [ %4 ]| You got %1 points | Your accumulated is :%2 | | Your credit "
 "balance is: %5"
 msgstr " %3 [ %4 ]| Obtuvo %1 puntos | Su acumulado es: %2 | "
 
-#: lemonview.cpp:3226 lemonview.cpp:3358
+#: iotposview.cpp:3226 iotposview.cpp:3358
 msgid " %3 [ %4 ]| You got %1 points | Your accumulated is :%2 | "
 msgstr " %3 [ %4 ]| Obtuvo %1 puntos | Su acumulado es: %2 | "
 
-#: lemonview.cpp:3237 lemonview.cpp:3349
+#: iotposview.cpp:3237 iotposview.cpp:3349
 msgid "Phone: "
 msgstr "Tel:"
 
-#: lemonview.cpp:3249
+#: iotposview.cpp:3249
 msgid "Change"
 msgstr "Cambio:"
 
-#: lemonview.cpp:3251
+#: iotposview.cpp:3251
 msgid "Card Number  : %1"
 msgstr "Número de tarjeta: %1"
 
-#: lemonview.cpp:3252
+#: iotposview.cpp:3252
 msgid "Authorization : %1"
 msgstr "Núm. de Autorización: %1"
 
-#: lemonview.cpp:3271
+#: iotposview.cpp:3271
 msgid " RESERVATION "
 msgstr " APARTADO "
 
-#: lemonview.cpp:3273
+#: iotposview.cpp:3273
 msgid "Purchase Total Amount"
 msgstr "Total de la compra"
 
-#: lemonview.cpp:3275
+#: iotposview.cpp:3275
 msgid "Reservation Total Amount"
 msgstr "Total de la apartado"
 
-#: lemonview.cpp:3289
+#: iotposview.cpp:3289
 msgid ""
-"Print Receipt -- Press ESC to export to PDF to your home/lemon-printing/ "
+"Print Receipt -- Press ESC to export to PDF to your home/iotpos-printing/ "
 "folder"
 msgstr "Imprimir Recibo -- Presione ESC para exportar a PDF."
 
-#: lemonview.cpp:3372
+#: iotposview.cpp:3372
 msgid "Print Receipt"
 msgstr "Imprimir Recibo"
 
-#: lemonview.cpp:3406
+#: iotposview.cpp:3406
 msgid "Print Special Order Instructions "
 msgstr "Imprimir instrucciones de ordenes especiales"
 
-#: lemonview.cpp:3515
+#: iotposview.cpp:3515
 msgid ""
 "IotPOS has encountered an error when querying the database, click details to "
 "see the error details."
@@ -810,295 +810,295 @@ msgstr ""
 "IotPOS ha encontrado un error al buscar en la base de datos. Presione "
 "\"detalles\" para ver mas detalles del error."
 
-#: lemonview.cpp:3515
+#: iotposview.cpp:3515
 msgid "Delete Transaction: Error"
 msgstr "Borrar Transacción: Error"
 
-#: lemonview.cpp:3571
+#: iotposview.cpp:3571
 msgid ""
 "The ticket cannot be cancelled because it was paid with a credit/debit card."
 msgstr "El ticket no puede ser cancelado porque fué pagado con tarjeta."
 
-#: lemonview.cpp:3583
+#: iotposview.cpp:3583
 msgid "Cancelling transaction #%1. Authorized by %2"
 msgstr "Cancelando transaccion #%1, Autorizada por %2"
 
-#: lemonview.cpp:3593
+#: iotposview.cpp:3593
 msgid "The ticket was sucessfully cancelled."
 msgstr "El ticket fue cancelado con éxito."
 
-#: lemonview.cpp:3605
+#: iotposview.cpp:3605
 msgid "Error cancelling ticket: %1"
 msgstr "Error cancelando ticket #%1"
 
-#: lemonview.cpp:3628 reservations.cpp:248
+#: iotposview.cpp:3628 reservations.cpp:248
 msgid "There is not enough cash available in the drawer."
 msgstr "No hay suficiente efectivo disponible en gaveta"
 
-#: lemonview.cpp:3630
+#: iotposview.cpp:3630
 msgid "Ticket to cancel does not exists!"
 msgstr "El ticket a cancelar no existe!"
 
-#: lemonview.cpp:3648
+#: iotposview.cpp:3648
 msgid "Enter the amount of money to deposit in the drawer"
 msgstr "Cantidad de dinero a depositar en la gaveta:"
 
-#: lemonview.cpp:3672
+#: iotposview.cpp:3672
 msgid "Operation Started by %1 at terminal %2"
 msgstr "Operaciones iniciadas por %1 en terminal %2"
 
-#: lemonview.cpp:3794
+#: iotposview.cpp:3794
 msgid "Balance Id:%1"
 msgstr "Corte de caja # %1"
 
-#: lemonview.cpp:3800
+#: iotposview.cpp:3800
 msgid "%1 at Terminal # %2"
 msgstr "%1 en Terminal # %2"
 
-#: lemonview.cpp:3801
+#: iotposview.cpp:3801
 msgid "Initial Amount deposited:"
 msgstr "Cantidad inicial en la gaveta:"
 
-#: lemonview.cpp:3802
+#: iotposview.cpp:3802
 msgid "Deposit"
 msgstr "Depósito"
 
-#: lemonview.cpp:3803
+#: iotposview.cpp:3803
 msgid "In"
 msgstr "Entrada"
 
-#: lemonview.cpp:3804
+#: iotposview.cpp:3804
 msgid "Out"
 msgstr "Salida"
 
-#: lemonview.cpp:3805
+#: iotposview.cpp:3805
 msgid "In Drawer"
 msgstr "En la gaveta"
 
-#: lemonview.cpp:3806
+#: iotposview.cpp:3806
 msgid "Drawer Balance"
 msgstr "Corte de Caja"
 
-#: lemonview.cpp:3807
+#: iotposview.cpp:3807
 msgid "Transactions Details"
 msgstr "Detalles de transaccion"
 
-#: lemonview.cpp:3808
+#: iotposview.cpp:3808
 msgid "Transactions"
 msgstr "Transacciones"
 
-#: lemonview.cpp:3809 lemonview.cpp:4067
+#: iotposview.cpp:3809 iotposview.cpp:4067
 msgid "Id"
 msgstr "Num"
 
-#: lemonview.cpp:3810 lemonview.cpp:3844 lemonview.cpp:4071 resume.cpp:155
+#: iotposview.cpp:3810 iotposview.cpp:3844 iotposview.cpp:4071 resume.cpp:155
 msgid "Time"
 msgstr "Hora"
 
-#: lemonview.cpp:3811 lemonview.cpp:4072 lemonview.cpp:6347 lemonview.cpp:6409
+#: iotposview.cpp:3811 iotposview.cpp:4072 iotposview.cpp:6347 iotposview.cpp:6409
 msgid "Amount"
 msgstr "Cantidad"
 
-#: lemonview.cpp:3812
+#: iotposview.cpp:3812
 msgid "Paid"
 msgstr "Pagado"
 
-#: lemonview.cpp:3813 lemonview.cpp:4074
+#: iotposview.cpp:3813 iotposview.cpp:4074
 msgid "Method"
 msgstr "Metodo"
 
-#: lemonview.cpp:3814
+#: iotposview.cpp:3814
 msgid ""
 "When Completing Reservations, the Amount may be grater than Paid (amount) "
 "because of the reservation payment."
 msgstr ""
 
-#: lemonview.cpp:3833
+#: iotposview.cpp:3833
 msgid "Start: %1"
 msgstr "Inicio: %1"
 
-#: lemonview.cpp:3834
+#: iotposview.cpp:3834
 msgid "End  : %1"
 msgstr "Fin : %1"
 
-#: lemonview.cpp:3841
+#: iotposview.cpp:3841
 msgid "Cash flow Details"
 msgstr "Detalles de flujo de efectivo"
 
-#: lemonview.cpp:3842
+#: iotposview.cpp:3842
 msgid "Type"
 msgstr "Tipo"
 
-#: lemonview.cpp:3843
+#: iotposview.cpp:3843
 msgid "Reason"
 msgstr "Razón:"
 
-#: lemonview.cpp:3845
+#: iotposview.cpp:3845
 msgid "This payment was not paid in cash."
 msgstr "Este pago no fue hecho en efectivo."
 
-#: lemonview.cpp:3993
+#: iotposview.cpp:3993
 msgid "Print Balance"
 msgstr "Imprimir Corte de caja"
 
-#: lemonview.cpp:4049
+#: iotposview.cpp:4049
 msgid "End of Day report printed by %1 at terminal %2 on %3"
 msgstr "Reporte de Fin del día impreso por %1 en terminal %2 el %3"
 
-#: lemonview.cpp:4069
+#: iotposview.cpp:4069
 msgid "at terminal # %1"
 msgstr "en terminal # %1"
 
-#: lemonview.cpp:4073
+#: iotposview.cpp:4073
 msgid "Profit"
 msgstr "Utilidades"
 
-#: lemonview.cpp:4075
+#: iotposview.cpp:4075
 msgid "Total taxes collected for this terminal: "
 msgstr "Total de impuestos recaudados en ésta terminal:"
 
-#: lemonview.cpp:4108
+#: iotposview.cpp:4108
 msgid "Total Sales : %1"
 msgstr "Ventas totales: %1"
 
 msgid "Month Sales (%1)"
 msgstr "Ventas del mes (%1)"
 
-#: lemonview.cpp:4109
+#: iotposview.cpp:4109
 msgid "Total Profit: %1"
 msgstr "Utilidades totales: %1"
 
-#: lemonview.cpp:4127 lemonview.cpp:4153
+#: iotposview.cpp:4127 iotposview.cpp:4153
 msgid "Print end of day report"
 msgstr "Imprimir reporte de fin del día"
 
-#: lemonview.cpp:4302
+#: iotposview.cpp:4302
 msgid "Price: "
 msgstr "Precio:"
 
-#: lemonview.cpp:4303
+#: iotposview.cpp:4303
 msgid "Available: "
 msgstr "Disponible:"
 
-#: lemonview.cpp:4305
+#: iotposview.cpp:4305
 #msgid "Category"
 #msgstr "Categoría"
 
-#: lemonview.cpp:4306
+#: iotposview.cpp:4306
 msgid "in stock"
 msgstr "en invetario"
 
-#: lemonview.cpp:4307
+#: iotposview.cpp:4307
 msgid "in your shopping cart, Total Available"
 msgstr "en su carrito de compras, Total Disponible"
 
-#: lemonview.cpp:4512
+#: iotposview.cpp:4512
 #, fuzzy
 msgid "Discount: <b>%1%</b> [<b>%2</b>]"
 msgstr "Descuento: %1% [%2]"
 
-#: lemonview.cpp:4514
+#: iotposview.cpp:4514
 #, fuzzy
 msgid "Discount: <b>%1%</b>"
 msgstr "Descuento: %1% "
 
-#: lemonview.cpp:4517
+#: iotposview.cpp:4517
 #, fuzzy
 msgid "<i>%1</i> points"
 msgstr "%1 puntos"
 
-#: lemonview.cpp:4531
+#: iotposview.cpp:4531
 #, fuzzy
 msgid "Credit Total: <i>%1</i>"
 msgstr "Total del credito: %1"
 
-#: lemonview.cpp:4557
+#: iotposview.cpp:4557
 msgid "Tr"
 msgstr "Ticket #"
 
-#: lemonview.cpp:4558 reservations.cpp:174 resume.cpp:158
+#: iotposview.cpp:4558 reservations.cpp:174 resume.cpp:158
 msgid "Client"
 msgstr "Cliente"
 
-#: lemonview.cpp:4559 lemonview.cpp:6345 lemonview.cpp:6407
+#: iotposview.cpp:4559 iotposview.cpp:6345 iotposview.cpp:6407
 #: reservations.cpp:173 resume.cpp:156 soselector.cpp:171 sostatus.cpp:167
 msgid "Date"
 msgstr "Fecha"
 
-#: lemonview.cpp:4560
+#: iotposview.cpp:4560
 msgid "User"
 msgstr "Usuario"
 
-#: lemonview.cpp:4561
+#: iotposview.cpp:4561
 msgid "Items"
 msgstr "Artículos"
 
-#: lemonview.cpp:4614
+#: iotposview.cpp:4614
 msgid "Please select a ticket to print."
 msgstr "Por favor seleccione un ticket a imprimir"
 
-#: lemonview.cpp:4614
+#: iotposview.cpp:4614
 msgid "Cannot print ticket"
 msgstr "No se pudo imprimir ticket"
 
-#: lemonview.cpp:4634
+#: iotposview.cpp:4634
 msgid "Reprint ticket cancelled."
 msgstr "Se cancelo la Reimpresión de tickes"
 
-#: lemonview.cpp:4798
+#: iotposview.cpp:4798
 msgid "Cash not available at drawer!"
 msgstr "Efectivo no disponible en gaveta"
 
-#: lemonview.cpp:4825
+#: iotposview.cpp:4825
 msgid "Cash-OUT by %1 at terminal %2 on %3"
 msgstr "Salida de Efectivo por %1 en terminal %2 el %3"
 
-#: lemonview.cpp:4869
+#: iotposview.cpp:4869
 msgid "Cash-IN [%1] by %2 at terminal %3 on %4"
 msgstr "Entrada de Efectivo por %1 en terminal %2 el %3"
 
-#: lemonview.cpp:4880
+#: iotposview.cpp:4880
 msgid "There are <b> %1 in cash </b> available at the drawer."
 msgstr "Hay <b>%1 disponibles</b> en la gaveta."
 
-#: lemonview.cpp:4901
+#: iotposview.cpp:4901
 msgid "Please finish the current transaction before creating a special order."
 msgstr "Por favor termine la venta actual antes de crear una orden especial."
 
-#: lemonview.cpp:5006
+#: iotposview.cpp:5006
 msgid ""
 "Please finish the current transaction before completing a special order."
 msgstr ""
 "Por favor termine la venta actual antes de completar una orden especial."
 
-#: lemonview.cpp:5023
+#: iotposview.cpp:5023
 msgid "The given ticket number does not contains any special order."
 msgstr "El número de ticket no contiene ninguna orden especial."
 
-#: lemonview.cpp:5030
+#: iotposview.cpp:5030
 msgid "These special orders cannot be completed because:"
 msgstr "Esta orden especial no puede ser completada porque:"
 
-#: lemonview.cpp:5037
+#: iotposview.cpp:5037
 msgid "<b>is Cancelled</b>"
 msgstr "<b>está Cancelada</b>"
 
-#: lemonview.cpp:5039
+#: iotposview.cpp:5039
 msgid "is already <b>Delivered</b>"
 msgstr "ya ha sido <b>Entregada</b>"
 
-#: lemonview.cpp:5040
+#: iotposview.cpp:5040
 msgid "%1 %2."
 msgstr "%1 %2."
 
-#: lemonview.cpp:5051
+#: iotposview.cpp:5051
 msgid ""
 "The special order %1 in ticket %2 is completely paid. Marked as delivered."
 msgstr ""
 "La orden especial %1 en ticket %2 esta pagada por completo. Marcada como "
 "entregada."
 
-#: lemonview.cpp:5136
+#: iotposview.cpp:5136
 msgid ""
 "<b>This terminal is locked.</b> <br><i>Please enter the user's password to "
 "unlock it</i>."
@@ -1106,15 +1106,15 @@ msgstr ""
 "<b>La terminal esta bloqueada.</b> <br><i>Por favor escriba la contraseña "
 "del usuario para desbloquearla.</i>"
 
-#: lemonview.cpp:5324
+#: iotposview.cpp:5324
 msgid "The sale %1 has been sucessfully suspended."
 msgstr "La venta %1 fue suspendida con éxito."
 
-#: lemonview.cpp:5376 specialordereditor.cpp:493
+#: iotposview.cpp:5376 specialordereditor.cpp:493
 msgid "Notes: %1"
 msgstr "Notas: %1"
 
-#: lemonview.cpp:5405
+#: iotposview.cpp:5405
 msgid ""
 "Please finish the current transaction before changing state for a special "
 "order."
@@ -1122,30 +1122,30 @@ msgstr ""
 "Por favor termine la venta actual antes de cambiar el estado de una orden "
 "especial."
 
-#: lemonview.cpp:5503
+#: iotposview.cpp:5503
 msgid "Changing price to product %1, from %2 to %3. Authorized by %4"
 msgstr "Cambiando el precio al producto %1, de %2 a %3. Autorizado por %4"
 
-#: lemonview.cpp:5536
+#: iotposview.cpp:5536
 msgid "Applying occasional discount. Authorized by %1"
 msgstr "Aplicando descuento ocasional. Autorizado por %1"
 
-#: lemonview.cpp:5607
+#: iotposview.cpp:5607
 msgid ""
 "Please Enter the reservation Amount in the Payment Amount and try again."
 msgstr ""
 "Por favor escriba la cantidad con la que se aparta en el campo de cantidad a "
 "pagar."
 
-#: lemonview.cpp:5678
+#: iotposview.cpp:5678
 msgid "Reservation #%1 [tr. %2]"
 msgstr "Apartado #%1 [Tr. %2]"
 
-#: lemonview.cpp:5700
+#: iotposview.cpp:5700
 msgid "Cash-IN [%1] for RESERVATION [%5] by %2 at terminal %3 on %4"
 msgstr "Entrada de Efectivo %1 para APARTADO [%5] por %2 en terminal %3 el %4"
 
-#: lemonview.cpp:5760
+#: iotposview.cpp:5760
 msgid ""
 "Cannot make a reservation, no products on the list. Special Orders are not "
 "considered."
@@ -1153,11 +1153,11 @@ msgstr ""
 "No se puede hacer un apartado, no hay productos que apartar. Las Ordenes "
 "especiales no pueden apartarse."
 
-#: lemonview.cpp:5785
+#: iotposview.cpp:5785
 msgid "The sale %1 has been sucessfully reserved."
 msgstr "La venta %1 fue apartada con éxito."
 
-#: lemonview.cpp:5891
+#: iotposview.cpp:5891
 #, fuzzy
 msgid ""
 "You need to finish or suspend the current sale or reservation before adding "
@@ -1166,16 +1166,16 @@ msgstr ""
 "Por favor termine la venta actual antes de cambiar el estado de una orden "
 "especial."
 
-#: lemonview.cpp:5913
+#: iotposview.cpp:5913
 msgid "Enter the amount to pay to the reservation. The Maximum amount is %1"
 msgstr ""
 
-#: lemonview.cpp:5941
+#: iotposview.cpp:5941
 #, fuzzy
 msgid "Payment for Reservation %1"
 msgstr "Pago por Credito %1"
 
-#: lemonview.cpp:5956
+#: iotposview.cpp:5956
 #, fuzzy
 msgid ""
 "Cash-IN-ReservationPayment [%1] for reservation %5 by %2 at terminal %3 on %4"
@@ -1183,115 +1183,115 @@ msgstr ""
 "Entrada de Efectivo [%1] para Pago del Credito %5, por %2 en terminal %3 el "
 "%4"
 
-#: lemonview.cpp:6106
+#: iotposview.cpp:6106
 msgid "Make partial payment"
 msgstr "Hacer un pago parcial"
 
-#: lemonview.cpp:6108
+#: iotposview.cpp:6108
 msgid "Pay"
 msgstr "Pagar"
 
-#: lemonview.cpp:6226
+#: iotposview.cpp:6226
 msgid "Payment for Credit %1"
 msgstr "Pago por Credito %1"
 
-#: lemonview.cpp:6241
+#: iotposview.cpp:6241
 msgid "Cash-IN-CreditPayment [%1] for credit %5 by %2 at terminal %3 on %4"
 msgstr ""
 "Entrada de Efectivo [%1] para Pago del Credito %5, por %2 en terminal %3 el "
 "%4"
 
-#: lemonview.cpp:6296
+#: iotposview.cpp:6296
 msgid "CREDIT REPORT"
 msgstr "REPORTE DE CREDITO"
 
-#: lemonview.cpp:6308
+#: iotposview.cpp:6308
 #, fuzzy
 msgid "Balance: %1"
 msgstr "Corte de caja # %1"
 
-#: lemonview.cpp:6333
+#: iotposview.cpp:6333
 #, fuzzy
 msgid "Today Credit History"
 msgstr "Historial del Crédito"
 
-#: lemonview.cpp:6349 lemonview.cpp:6411
+#: iotposview.cpp:6349 iotposview.cpp:6411
 msgid "Sale #"
 msgstr "Venta #"
 
-#: lemonview.cpp:6351 lemonview.cpp:6413
+#: iotposview.cpp:6351 iotposview.cpp:6413
 msgid "Invoice"
 msgstr ""
 
-#: lemonview.cpp:6363 lemonview.cpp:6425
+#: iotposview.cpp:6363 iotposview.cpp:6425
 msgid "Payment"
 msgstr "Pago"
 
-#: lemonview.cpp:6391
+#: iotposview.cpp:6391
 msgid "Credit History"
 msgstr "Historial del Crédito"
 
-#: lemonview.cpp:6467 lemonview.cpp:6472 lemonview.cpp:6486 lemonview.cpp:6571
-#: lemonview.cpp:6616 lemonview.cpp:6619
+#: iotposview.cpp:6467 iotposview.cpp:6472 iotposview.cpp:6486 iotposview.cpp:6571
+#: iotposview.cpp:6616 iotposview.cpp:6619
 #, fuzzy
 msgid "Facturar"
 msgstr "Factor:"
 
-#: lemonview.cpp:6467
+#: iotposview.cpp:6467
 msgid "No hay folios disponibles. No se puede facturar"
 msgstr ""
 
-#: lemonview.cpp:6472
+#: iotposview.cpp:6472
 msgid "Numero de Ticket:"
 msgstr ""
 
-#: lemonview.cpp:6486
+#: iotposview.cpp:6486
 msgid ""
 "No se puede facturar, la venta YA HABIA SIDO FACTURADA.\n"
 "El folio de esta venta es el %1"
 msgstr ""
 
-#: lemonview.cpp:6571
+#: iotposview.cpp:6571
 msgid ""
 "No se puede facturar. El folio obtenido es inválido, verifique sus folios."
 msgstr ""
 
-#: lemonview.cpp:6616
+#: iotposview.cpp:6616
 msgid "El ticket %1 no existe. No se puede facturar"
 msgstr ""
 
-#: lemonview.cpp:6619
+#: iotposview.cpp:6619
 msgid "No se escribio un numero de ticket. No se puede facturar"
 msgstr ""
 
-#: lemonview.cpp:6634
+#: iotposview.cpp:6634
 #, fuzzy
 msgid "Cancelar Factura"
 msgstr "Cancelar ticket"
 
-#: lemonview.cpp:6634
+#: iotposview.cpp:6634
 msgid "Folio de la Factura:"
 msgstr ""
 
-#: lemonview.cpp:6642 lemonview.cpp:6644 lemonview.cpp:6648 lemonview.cpp:6650
+#: iotposview.cpp:6642 iotposview.cpp:6644 iotposview.cpp:6648 iotposview.cpp:6650
 msgid "Cancelación de factura"
 msgstr ""
 
-#: lemonview.cpp:6642
+#: iotposview.cpp:6642
 msgid "Se cancelo la factura con folio %1."
 msgstr ""
 
-#: lemonview.cpp:6644
+#: iotposview.cpp:6644
 msgid ""
 "No se pudo cancelar la factura con folio %1.\n"
 " Detalle:"
 msgstr ""
 
-#: lemonview.cpp:6648
+#: iotposview.cpp:6648
 msgid "La factura %1 ya estaba cancelada"
 msgstr ""
 
-#: lemonview.cpp:6650
+#: iotposview.cpp:6650
 msgid "La factura %1 no existe."
 msgstr ""
 
@@ -1320,8 +1320,8 @@ msgid "IotPOS, A point of sale for linux"
 msgstr "IotPOS, un punto de venta para linux"
 
 #: main.cpp:52
-msgid "lemon"
-msgstr "lemon"
+msgid "iotpos"
+msgstr "iotpos"
 
 #: main.cpp:52
 msgid "(C) 2007-2011 Miguel Chavez Gamboa"
@@ -1377,7 +1377,7 @@ msgstr "Miguel Chávez Gamboa"
 #: po/extractedrc.cpp:2 extractedrc.cpp:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "miguel@lemonpos.org"
+msgstr "hiramvillarreal.ap@gmail.com"
 
 #: pricechecker.cpp:45
 msgid "Price Checker"
@@ -1588,7 +1588,7 @@ msgid "Description"
 msgstr "Descripción"
 
 msgid "Units"
-msgstr "Unidades"
+msgstr "Uni."
 
 msgid "Total:"
 msgstr "Total:"
@@ -1727,7 +1727,7 @@ msgid "Display warning message when level is lower than"
 msgstr "Mostrar mensaje de alerta cuando el nivel sea menor a"
 
 msgid "Taxes"
-msgstr "Impuestos"
+msgstr "IVA"
 
 msgid "Add taxes to sale (not included in price)"
 msgstr "Agregar Impuestos a la venta (no incluidos en el precio)"

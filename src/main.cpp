@@ -42,17 +42,18 @@
 static const char description[] =
     I18N_NOOP("IotPOS, A point of sale for linux");
 
-static const char version[] = "0.9.6.0 | March 04, 2013";
+static const char version[] = "0.9.8.0 | October 04, 2017";
 
-KSplashScreen *splash;
+
 
 int main(int argc, char **argv)
 {
-    KAboutData about("iotpos", 0, ki18n("iotpos"), version, ki18n(description), KAboutData::License_GPL, ki18n("(C) 2007-2011 Miguel Chavez Gamboa"), KLocalizedString(), 0, "miguel@iotpospos.org");
-    about.addAuthor( ki18n("Miguel Chavez Gamboa"), KLocalizedString(), "miguel@iotpospos.org" );
-    about.setBugAddress("bugs.iotpos@iotpospos.org");
+    KAboutData about("iotpos", 0, ki18n("iotpos"), version, ki18n(description), KAboutData::License_GPL, ki18n("(C) 2013-2017 Hiram Ronquillo Villarreal"), KLocalizedString(), 0, "hiramvillarreal.ap@gmail.com");
+    about.addAuthor( ki18n("Hiram Ronquillo Villarreal"), KLocalizedString(), "hiramvillarreal.ap@gmail.com" );
+    about.setBugAddress("hiramvillarreal.ap@gmail.com");
     KCmdLineArgs::init(argc, argv, &about);
 
+    about.addCredit(ki18n("Miguel Chavez Gamboa"), ki18n("Code contributor"));
     about.addCredit(ki18n("Biel Frontera"), ki18n("Code contributor"));
     about.addCredit(ki18n("Vitali Kari"), ki18n("Code contributor"));
     about.addCredit(ki18n("Jose Nivar"), ki18n("Many ideas, bug reports and testing"));
@@ -64,11 +65,6 @@ int main(int argc, char **argv)
     KCmdLineArgs::addCmdLineOptions(options);
     KApplication app;
 
-    // register ourselves as a dcop client
-    //app.dcopClient()->registerAs(app.name(), false);
-    QPixmap image (KStandardDirs().findResource("data", "iotpos/images/splash_screen.png"));
-    splash = new KSplashScreen(image, Qt::WindowStaysOnTopHint);
-    splash->show();
     // see if we are starting with session management
     if (app.isSessionRestored())
         RESTORE(iotpos)
@@ -80,7 +76,6 @@ int main(int argc, char **argv)
         {
            iotpos *widget = new iotpos;
            widget->show();
-           splash->finish(widget);
         }
         else
         {
@@ -88,7 +83,7 @@ int main(int argc, char **argv)
             for (; i < args->count(); i++)
             {
                 iotpos *widget = new iotpos;
-              //  widget->show();
+                widget->show();
                 qDebug()<<"iotpos "<<i;
             }
         }
