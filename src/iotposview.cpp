@@ -1951,8 +1951,8 @@ if ( doNotAddMoreItems ) { //only for reservations
   if (ui_mainview.rbFilterByDesc->isChecked()) {
       ui_mainview.editItemCode->setFocus();//by description
      if (QApplication::keyboardModifiers().testFlag(Qt::ControlModifier) == false){
-         //productsModel->setFilter("products.isARawProduct=false");
-         productsModel->setFilter("products.isARawProduct=false and (products.datelastsold > ADDDATE(sysdate( ), INTERVAL -31 DAY )) ORDER BY products.datelastsold DESC ");
+         productsModel->setFilter("products.isARawProduct=false");
+         //productsModel->setFilter("products.isARawProduct=false and (products.datelastsold > ADDDATE(sysdate( ), INTERVAL -31 DAY )) ORDER BY products.datelastsold DESC ");
      }
   }
   else {
@@ -4933,8 +4933,8 @@ void iotposView::setFilter()
       ui_mainview.editItemCode->setFocus();//by description
       if (!regexp.isValid())  ui_mainview.editFilterByDesc->setText("");
       if (ui_mainview.editFilterByDesc->text()=="*" || ui_mainview.editFilterByDesc->text()=="")
-        //productsModel->setFilter("products.isARawProduct=false");
-          productsModel->setFilter("products.isARawProduct=false and (products.datelastsold > ADDDATE(sysdate( ), INTERVAL -31 DAY )) ORDER BY products.datelastsold DESC ");
+        productsModel->setFilter("products.isARawProduct=false");
+          //productsModel->setFilter("products.isARawProduct=false and (products.datelastsold > ADDDATE(sysdate( ), INTERVAL -31 DAY )) ORDER BY products.datelastsold DESC ");
  }
   else {
     if (ui_mainview.rbFilterByCategory->isChecked()) { //by category
