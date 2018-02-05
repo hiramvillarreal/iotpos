@@ -69,7 +69,7 @@ To restore a database with preloaded products and examples:
   
   mysql -u root -p iotposdb < iotposdb.sql
   
-To start using the point of sale, type:
+To start using the point of sale, in terminal type:
 
   iotpos
   
@@ -77,7 +77,7 @@ To start using the point of sale, type:
      username: "admin"
      password: "linux"
   
-To start using the administration module, type:
+To start using the administration module, in terminal type:
 
   iotstock
   
