@@ -92,7 +92,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     if (!pix.isNull()) painter->drawPixmap(x,y, pix);
 
     //Painting name
-    QFont font = QFont("DroidSans.ttf", 10);
+    QFont font = QFont("DroidSans.ttf", 9);
     font.setBold(true);
     //getting name size in pixels...
     QFontMetrics fm(font);
@@ -102,7 +102,7 @@ void ProductDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     int boxSize = option.rect.width()-15; //minus margin and frame-lines
     if (strSize > boxSize) {
       int excess = strSize-boxSize;
-      int charEx = (excess/aproxPerChar)+4;
+      int charEx = (excess/aproxPerChar)+3;
       nameToDisplay = name.left(name.length()-charEx-1) +"-";
       //qDebug()<<"Text does not fit, strSize="<<strSize<<" boxSize:"
       //<<boxSize<<" excess="<<excess<<" charEx="<<charEx<<"nameToDisplay="<<nameToDisplay;
