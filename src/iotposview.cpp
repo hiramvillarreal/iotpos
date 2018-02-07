@@ -609,6 +609,7 @@ void iotposView::setUpTable()
    ui_mainview.tableWidget->horizontalHeader()->resizeSection(colDue, (portion)-10); //DUE
    ui_mainview.tableWidget->hideColumn(0);
    ui_mainview.tableWidget->hideColumn(5);
+   if (x < 400) ui_mainview.frameLeft->hide();
   }
   else{
       ui_mainview.tableWidget->horizontalHeader()->setResizeMode(QHeaderView::Interactive);

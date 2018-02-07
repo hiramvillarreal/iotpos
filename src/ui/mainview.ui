@@ -2267,8 +2267,6 @@ color:black;</string>
                  </item>
                 </layout>
                </widget>
-               <zorder>groupTotals</zorder>
-               <zorder>groupSaleDate</zorder>
               </widget>
              </widget>
             </widget>
