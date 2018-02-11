@@ -342,30 +342,6 @@ void iotpos::setupActions()
   connect(addResPaymentAction, SIGNAL(triggered(bool)), m_view, SLOT( addReservationPayment() ));
   qDebug()<<"ReservationPayment shortcut:"<<addResPaymentAction->shortcuts();
 
-  QAction *action = actionCollection()->addAction( "emitirFactura" );
-  action->setText(i18n("Emitir una factura"));
-  action->setIcon(KIcon("iotpos-ticket"));
-  action->setShortcut(Qt::CTRL+Qt::Key_F);
-  //connect(action, SIGNAL(triggered(bool)),m_view, SLOT(emitirFactura()));
-  
-  action = actionCollection()->addAction( "cancelarFactura" );
-  action->setText(i18n("Cancelar una factura"));
-  action->setIcon(KIcon("iotpos-ticket-cancel"));
-  action->setShortcut(Qt::CTRL+Qt::ALT+Qt::Key_F);
-  //connect(action, SIGNAL(triggered(bool)),m_view, SLOT(cancelarFactura()));
-
-  action = actionCollection()->addAction( "reprintFactura" );
-  action->setText(i18n("Reimprimir una factura"));
-  action->setIcon(KIcon("iotpos-ticket-cancel"));
-  action->setShortcut(Qt::CTRL+Qt::SHIFT+Qt::Key_F);
-  //connect(action, SIGNAL(triggered(bool)),m_view, SLOT(reprintFactura()));
-  
-  action = actionCollection()->addAction( "freeFacturas" );
-  action->setText(i18n("Número de facturas disponibles"));
-  action->setIcon(KIcon("iotpos-ticket-cancel"));
-  action->setShortcut(Qt::CTRL+Qt::SHIFT+Qt::Key_L);
-  //connect(action, SIGNAL(triggered(bool)),m_view, SLOT(facturasLibres()));
-
   //NOTE: There is a weird bug: When the iotpos-reservation-* icon is used at 22x22 pixels (default/medium size) it is not found, instead used iotpos app icon.
   
   setupGUI();
@@ -619,15 +595,6 @@ void iotpos::disableUi()
 
   action = actionCollection()->action("login");
   action->setEnabled(true); //enable login!
-
-  action = actionCollection()->action("emitirFactura");
-  action->setDisabled(true);
-
-  action = actionCollection()->action("cancelarFactura");
-  action->setDisabled(true);
-
-  action = actionCollection()->action("reprintFactura");
-  action->setDisabled(true);
   
   disableConfig();
 }
@@ -705,15 +672,6 @@ void iotpos::enableUi()
   action = actionCollection()->action("showCredits");
   action->setEnabled(true);
 
-  action = actionCollection()->action("emitirFactura");
-  action->setEnabled(true);
-  
-  action = actionCollection()->action("cancelarFactura");
-  action->setEnabled(true);
-
-  action = actionCollection()->action("reprintFactura");
-  action->setEnabled(true);
-  
   if (m_view->canStartSelling()) {
 //     action = actionCollection()->action("suspendSale");
 //     action->setEnabled(true);

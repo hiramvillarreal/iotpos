@@ -212,22 +212,6 @@
       <default>UTF-8</default> 
     </entry>
   </group>
-  
-  <group  name="Facturas">
-      <entry name="storeCity" type="String">
-          <label>Lugar</label>
-          <default>
-          </default>
-      </entry>
-      <entry name="storeRFC" type="String">
-          <label>RFC</label>
-          <default>
-          </default>
-      </entry>
-      <entry name="storeRegimen" type="String">
-          <label>Regimen Tributario</label>
-          <default>Régimen de Persona Física con actividad empresarial</default>
-      </entry>
-  </group>
+
   
 </kcfg>

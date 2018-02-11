@@ -30,7 +30,6 @@
 #include "promoeditor.h"
 #include "producteditor.h"
 #include "purchaseeditor.h"
-#include "dialogseriefolios.h"
 #include "subcategoryeditor.h"
 #include "../../src/hash.h"
 #include "../../src/misc.h"
