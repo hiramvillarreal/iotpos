@@ -3108,95 +3108,14 @@ void iotposView::finishCurrentTransaction()
 
     qDebug() << "KB: sub and total " << ticket.subTotal << " / " << ticket.totalTax;
     //ptInfo.totDisc = summary.getDiscountGross().toDouble();
-
-
-
-    bool facturar = false;
-    if (!specialOrders.isEmpty() )
-        facturar = completingOrder;
-    else if ( startingReservation )
-        facturar = false;
-    else if ( finishingReservation )
-        facturar = finishingReservation;
-    else if (ticket.total == 0)
-        facturar = false;
-    else
-        facturar = true;
-    
-
-    if ( facturar && Settings::askForInvoice() ) {
-        QMessageBox::StandardButton reply;
-        reply = QMessageBox::question(this, i18n("Facturación"), i18n("¿Desea facturar?"), QMessageBox::Yes | QMessageBox::No);
-
-        if (reply == QMessageBox::Yes) {
-            qDebug()<<"Creando Factura...";
-            //Crear la factura.
-            FacturaCBB factura;
-            QPixmap logoPixmap;
-            logoPixmap.load(Settings::storeLogo());
-            bool completar = false;
-            if (clientInfo.id == 1) {
-                //preguntar NOMBRE y RFC del cliente;
-                DialogClientData *dlgClient = new DialogClientData(this);
-
-                int resultado = dlgClient->exec();
-                //while ( resultado != QDialog::Accepted ) {
-                //    resultado = dlgClient->exec();
-                //}
-                if ( resultado == QDialog::Accepted ){
-                    factura.nombreCliente    = dlgClient->getNombre();
-                    factura.RFCCliente = dlgClient->getRFC();
-                    factura.direccionCliente = dlgClient->getDireccion();
-                    completar = true;
-                } else {
-                    qDebug()<<"REJECTED! this should not be happened.";
-                    completar = false;//se cancelo.
-                }
-            } else {
-                factura.nombreCliente    = clientInfo.name;
-                factura.RFCCliente = clientInfo.code;
-                factura.direccionCliente = clientInfo.address;
-                completar = true;
-            }
-            if (completar) {
-                freezeWidgets();
-                QTimer::singleShot(500, this, SLOT(unfreezeWidgets()));
-            } else { //completar
-                qDebug()<<"Se cancelo el proceso de facturacion.";
-                //We only print ticket if no creating invoice.
-                if (printDTticket)
-                    printTicket(ticket);
-                else {
-                    //if not printing ticket, it means it is config to not print date changed tickets.. but this affects to the freeze/unfreeze UI, and to call startAgain().
-                    freezeWidgets();
-                    QTimer::singleShot(500, this, SLOT(unfreezeWidgets()));
-                    qDebug()<<"Not printing ticket...";
-                }
-            }
-        } else {
-            qDebug()<<"No se deseo facturar.";
-            //We only print ticket if no creating invoice.
-            if (printDTticket)
-                printTicket(ticket);
-            else {
-                //if not printing ticket, it means it is config to not print date changed tickets.. but this affects to the freeze/unfreeze UI, and to call startAgain().
-                freezeWidgets();
-                QTimer::singleShot(500, this, SLOT(unfreezeWidgets()));
-                qDebug()<<"Not printing ticket...";
-            }
-        } //no invoice
-    } else {
-        qDebug()<<"No se puede facturar: Apartados|SpecialOrdersNotCompleted";
-        //We only print ticket if no creating invoice.
-        if (printDTticket)
-            printTicket(ticket);
-        else {
-            //if not printing ticket, it means it is config to not print date changed tickets.. but this affects to the freeze/unfreeze UI, and to call startAgain().
-            freezeWidgets();
-            QTimer::singleShot(500, this, SLOT(unfreezeWidgets()));
-            qDebug()<<"Not printing ticket...";
+    if (printDTticket)
+        printTicket(ticket);
+      else {
+          //if not printing ticket, it means it is config to not print date changed tickets.. but this affects to the freeze/unfreeze UI, and to call startAgain().
+          freezeWidgets();
+          QTimer::singleShot(500, this, SLOT(unfreezeWidgets()));
+          qDebug()<<"Not printing ticket...";
         }
-    } //no invoice
 
     
     //update balance

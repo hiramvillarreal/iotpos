@@ -352,19 +352,19 @@ void iotpos::setupActions()
   action->setText(i18n("Cancelar una factura"));
   action->setIcon(KIcon("iotpos-ticket-cancel"));
   action->setShortcut(Qt::CTRL+Qt::ALT+Qt::Key_F);
-  connect(action, SIGNAL(triggered(bool)),m_view, SLOT(cancelarFactura()));
+  //connect(action, SIGNAL(triggered(bool)),m_view, SLOT(cancelarFactura()));
 
   action = actionCollection()->addAction( "reprintFactura" );
   action->setText(i18n("Reimprimir una factura"));
   action->setIcon(KIcon("iotpos-ticket-cancel"));
   action->setShortcut(Qt::CTRL+Qt::SHIFT+Qt::Key_F);
-  connect(action, SIGNAL(triggered(bool)),m_view, SLOT(reprintFactura()));
+  //connect(action, SIGNAL(triggered(bool)),m_view, SLOT(reprintFactura()));
   
   action = actionCollection()->addAction( "freeFacturas" );
   action->setText(i18n("Número de facturas disponibles"));
   action->setIcon(KIcon("iotpos-ticket-cancel"));
   action->setShortcut(Qt::CTRL+Qt::SHIFT+Qt::Key_L);
-  connect(action, SIGNAL(triggered(bool)),m_view, SLOT(facturasLibres()));
+  //connect(action, SIGNAL(triggered(bool)),m_view, SLOT(facturasLibres()));
 
   //NOTE: There is a weird bug: When the iotpos-reservation-* icon is used at 22x22 pixels (default/medium size) it is not found, instead used iotpos app icon.
   
@@ -460,12 +460,7 @@ void iotpos::optionsPreferences()
     ui_store_data.setupUi(storeDataSettingsDlg);
    //NOTE: What icon to use for this??
     dialog->addPage(storeDataSettingsDlg, i18n("Store"), "go-home");
-  /*
-    QWidget *facturasSettingsDlg = new QWidget;
-    ui_facturas_data.setupUi(facturasSettingsDlg);
-    //NOTE: What icon to use for this??
-    dialog->addPage(facturasSettingsDlg, i18n("Facturas"), "go-home");
-*/
+
     QWidget *dbSettingsDlg = new QWidget;
     ui_prefs_db.setupUi(dbSettingsDlg);
     dialog->addPage(dbSettingsDlg, i18n("Database"), "kexi"); // book
