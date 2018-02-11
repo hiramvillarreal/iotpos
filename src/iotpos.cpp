@@ -346,7 +346,7 @@ void iotpos::setupActions()
   action->setText(i18n("Emitir una factura"));
   action->setIcon(KIcon("iotpos-ticket"));
   action->setShortcut(Qt::CTRL+Qt::Key_F);
-  connect(action, SIGNAL(triggered(bool)),m_view, SLOT(emitirFactura()));
+  //connect(action, SIGNAL(triggered(bool)),m_view, SLOT(emitirFactura()));
   
   action = actionCollection()->addAction( "cancelarFactura" );
   action->setText(i18n("Cancelar una factura"));

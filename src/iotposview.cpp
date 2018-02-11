@@ -164,17 +164,16 @@ iotposView::iotposView() //: QWidget(parent)
    // timerUpdateGraphs = new QTimer(this);
   //  timerUpdateGraphs->setInterval(300000);
     categoriesHash.clear();
-    subcategoriesHash.clear();
    // departmentsHash.clear();
     //setupSignalConnections();
  //   QTimer::singleShot(1100, this, SLOT(setupDb()));
  //   QTimer::singleShot(2000, timerCheckDb, SLOT(start()));
    // QTimer::singleShot(20000, timerUpdateGraphs, SLOT(start()));
-    QTimer::singleShot(2010, this, SLOT(showWelcomeGraphs()));
+   // QTimer::singleShot(2010, this, SLOT(showWelcomeGraphs()));
     QTimer::singleShot(2000, this, SLOT(login()));
     //aquimeme
     rmTimer = new QTimer(this);
-    connect(rmTimer, SIGNAL(timeout()), SLOT(reSelectModels()) );
+    //connect(rmTimer, SIGNAL(timeout()), SLOT(reSelectModels()) );
     rmTimer->start(1000*60*2);
 
 
@@ -1961,7 +1960,6 @@ if ( doNotAddMoreItems ) { //only for reservations
     ui_mainview.frameGridView->show();
     //Find catId for the text on the combobox.
     int catId=-1;
-  //  int subCatId = -1;
     QString catText = ui_mainview.comboFilterByCategory->currentText();
     if (categoriesHash.contains(catText)) {
       catId = categoriesHash.value(catText);
@@ -4495,27 +4493,12 @@ void iotposView::setupModel()
       ui_mainview.comboFilterByCategory->addItem(item.key());
       //qDebug()<<"iterando por el hash en el item:"<<item.key()<<"/"<<item.value();
     }
-
     populateCardTypes();
-
-    //Subcategories popuplist
-    populateSubCategoriesHash();
-    ui_mainview.comboFilterBySubCategory->clear();
-    QHashIterator<QString, int> itemS(subcategoriesHash);
-    while (itemS.hasNext()) {
-      itemS.next();
-      ui_mainview.comboFilterBySubCategory->addItem(itemS.key());
-    }
-
     ui_mainview.comboFilterByCategory->setCurrentIndex(0);
-    ui_mainview.comboFilterBySubCategory->setCurrentIndex(0);
     connect(ui_mainview.comboFilterByCategory,SIGNAL(currentIndexChanged(int)), this, SLOT( setFilter()) );
-    connect(ui_mainview.comboFilterBySubCategory,SIGNAL(currentIndexChanged(int)), this, SLOT( setFilter()) );
-//     connect(ui_mainview.editFilterByDesc,SIGNAL(textEdited(const QString &)), this, SLOT( setFilter()) ); //THIS MAKES SLOW SEARCH WITH LARGE DB.
     connect(ui_mainview.editFilterByDesc,SIGNAL(returnPressed()), this, SLOT( setFilter()) );
     connect(ui_mainview.rbFilterByDesc, SIGNAL(toggled(bool)), this, SLOT( setFilter()) );
     connect(ui_mainview.rbFilterByCategory, SIGNAL(toggled(bool)), this, SLOT( setFilter()) );
-    connect(ui_mainview.rbFilterBySubCategory, SIGNAL(toggled(bool)), this, SLOT( setFilter()) );
     setFilter();
   }
   setupClientsModel();
@@ -4572,13 +4555,7 @@ void iotposView::populateCategoriesHash()
   delete myDb;
 }
 
-void iotposView::populateSubCategoriesHash()
-{
-    Azahar * myDb = new Azahar;
-    myDb->setDatabase(db);
-    subcategoriesHash = myDb->getSubCategoriesHash();
-    delete myDb;
-}
+
 
 void iotposView::listViewOnMouseMove(const QModelIndex & index)
 {
@@ -4683,33 +4660,14 @@ void iotposView::setFilter()
       ui_mainview.frameGridView->show();
       //Find catId for the text on the combobox.
       int catId=-1;
-      //int subCatId = -1;
       QString catText = ui_mainview.comboFilterByCategory->currentText();
       if (categoriesHash.contains(catText)) {
         catId = categoriesHash.value(catText);
       }
       productsModel->setFilter(QString("products.isARawProduct=false and products.category=%1").arg(catId));
-      //REMOVE SUBCATEGORY FILTER
-      //Now check subcategory
-   //   if (ui_mainview.rbFilterBySubCategory->isChecked()){
-       // QString subCatText = ui_mainview.comboFilterBySubCategory->currentText();
-       // if (subcategoriesHash.contains(subCatText))
-         //   subCatId = subcategoriesHash.value(subCatText);
-      }//filter by subcategory, only if filterByCategory is checked.
-     // if (subCatId > 0)
-      //  productsModel->setFilter(QString("products.isARawProduct=false and products.category=%1 and products.subcategory=%2").arg(catId).arg(subCatId));
-      //else
-        //productsModel->setFilter(QString("products.isARawProduct=false and products.category=%1").arg(catId));
+
+      }
     }
-    //else { //by most sold products in current month --biel
-    //    {
-    //  productsModel->setFilter("products.isARawProduct=false and (products.datelastsold > ADDDATE(sysdate( ), INTERVAL -31 DAY )) ORDER BY products.datelastsold DESC LIMIT 20"); //limit or not the result to 5?
-   //   }
-      //products.code IN (SELECT * FROM (SELECT product_id FROM (SELECT product_id, sum( units ) AS sold_items FROM transactions t, transactionitems ti WHERE  t.id = ti.transaction_id AND t.date > ADDDATE( sysdate( ) , INTERVAL -31 DAY ) GROUP BY ti.product_id) month_sold_items ORDER BY sold_items DESC LIMIT 5) popular_products)
-   // }
-
-
- // }
   productsModel->select();
 }
 
