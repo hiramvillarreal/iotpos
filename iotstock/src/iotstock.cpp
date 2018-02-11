@@ -479,7 +479,7 @@ void iotstock::setupActions()
     action->setText(i18n("Cancelar una factura"));
     action->setIcon(KIcon("iotpos-ticket-cancel"));
     action->setShortcut(Qt::CTRL+Qt::ALT+Qt::Key_F);
-    connect(action, SIGNAL(triggered(bool)),m_view, SLOT(cancelarFactura()));
+    //connect(action, SIGNAL(triggered(bool)),m_view, SLOT(cancelarFactura()));
 
 }
 

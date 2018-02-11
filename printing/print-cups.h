@@ -48,10 +48,7 @@ class PrintCUPS {
     //static bool printSmallReservationTicket(const PrintTicketInfo &ptInfo, QPrinter &printer); //NOTE:WHAT ABOUT THIS!
 
 
-    //FacturasMX
-    static void printFooter(const FacturaCBB &factura, QPrinter &printer, QPainter &painter, int columnPrice, const bool &isCopy);
-    static void printFactura(const FacturaCBB &factura, QPrinter &printer, const QString &fDate, const bool &isCopy);
-    
+
 };
 
 #endif
