@@ -33,7 +33,6 @@
 #include "soselector.h"
 #include "sostatus.h"
 #include "resume.h"
-#include "refacturar.h"
 #include "reservations.h"
 #include "saleqtydelegate.h"
 #include "dialogclientdata.h"
@@ -165,17 +164,16 @@ iotposView::iotposView() //: QWidget(parent)
    // timerUpdateGraphs = new QTimer(this);
   //  timerUpdateGraphs->setInterval(300000);
     categoriesHash.clear();
-    subcategoriesHash.clear();
    // departmentsHash.clear();
     //setupSignalConnections();
  //   QTimer::singleShot(1100, this, SLOT(setupDb()));
  //   QTimer::singleShot(2000, timerCheckDb, SLOT(start()));
    // QTimer::singleShot(20000, timerUpdateGraphs, SLOT(start()));
-    QTimer::singleShot(2010, this, SLOT(showWelcomeGraphs()));
+   // QTimer::singleShot(2010, this, SLOT(showWelcomeGraphs()));
     QTimer::singleShot(2000, this, SLOT(login()));
     //aquimeme
     rmTimer = new QTimer(this);
-    connect(rmTimer, SIGNAL(timeout()), SLOT(reSelectModels()) );
+    //connect(rmTimer, SIGNAL(timeout()), SLOT(reSelectModels()) );
     rmTimer->start(1000*60*2);
 
 
@@ -1962,7 +1960,6 @@ if ( doNotAddMoreItems ) { //only for reservations
     ui_mainview.frameGridView->show();
     //Find catId for the text on the combobox.
     int catId=-1;
-  //  int subCatId = -1;
     QString catText = ui_mainview.comboFilterByCategory->currentText();
     if (categoriesHash.contains(catText)) {
       catId = categoriesHash.value(catText);
@@ -3109,154 +3106,14 @@ void iotposView::finishCurrentTransaction()
 
     qDebug() << "KB: sub and total " << ticket.subTotal << " / " << ticket.totalTax;
     //ptInfo.totDisc = summary.getDiscountGross().toDouble();
-
-
-    ///TODO: Imprimir FACTURA.
-    ///      * Factura o Ticket ?? Preguntar si imprimir FACTURa, si NO solo imprimir ticket, si SI imprimir SOLO FACTURA, sin ticket. (VERIFICAR ESTO)
-    ///      * Casos en los que no se puede imprimir factura:
-    ///          * S.O. si no esta completada.
-    ///          * Apartados si no estan completados (pagados totalmente).
-
-    bool facturar = false;
-    if (!specialOrders.isEmpty() )
-        facturar = completingOrder;
-    else if ( startingReservation )
-        facturar = false;
-    else if ( finishingReservation )
-        facturar = finishingReservation;
-    else if (ticket.total == 0)
-        facturar = false;
-    else
-        facturar = true;
-    
-    //finalmente ver si hay folios disponibles
-    int foliosDisponibles = myDb->getFoliosLibres();
-    if ( foliosDisponibles > 0 ) {
-        facturar = true;
-        if (foliosDisponibles < 6)
-            notifierPanel->showNotification(QString("<b>ATENCION:</b> Hay %1 folios disponibles.").arg(foliosDisponibles),5000);
-    } else {
-        facturar = false;
-        qDebug()<<"No hay folios disponibles, no se puede facturar!";
-        if (Settings::askForInvoice())
-          notifierPanel->showNotification("<b>Imposible facturar:</b> No hay folios disponibles.",5000);
-        //A message box would be better to get attention.
-        //QMessageBox::critical(this, "Facturación","No se puede facturar, no hay folios disponibles!", QMessageBox::Ok);
-    }
-
-    qDebug()<<" --Facturar:"<<facturar<<"--";
-
-    if ( facturar && Settings::askForInvoice() ) {
-        QMessageBox::StandardButton reply;
-        reply = QMessageBox::question(this, i18n("Facturación"), i18n("¿Desea facturar?"), QMessageBox::Yes | QMessageBox::No);
-
-        if (reply == QMessageBox::Yes) {
-            qDebug()<<"Creando Factura...";
-            //Crear la factura.
-            FacturaCBB factura;
-            QPixmap logoPixmap;
-            logoPixmap.load(Settings::storeLogo());
-            bool completar = false;
-            if (clientInfo.id == 1) {
-                //preguntar NOMBRE y RFC del cliente;
-                DialogClientData *dlgClient = new DialogClientData(this);
-
-                int resultado = dlgClient->exec();
-                //while ( resultado != QDialog::Accepted ) {
-                //    resultado = dlgClient->exec();
-                //}
-                if ( resultado == QDialog::Accepted ){
-                    factura.nombreCliente    = dlgClient->getNombre();
-                    factura.RFCCliente = dlgClient->getRFC();
-                    factura.direccionCliente = dlgClient->getDireccion();
-                    completar = true;
-                } else {
-                    qDebug()<<"REJECTED! this should not be happened.";
-                    completar = false;//se cancelo.
-                }
-            } else {
-                factura.nombreCliente    = clientInfo.name;
-                factura.RFCCliente = clientInfo.code;
-                factura.direccionCliente = clientInfo.address;
-                completar = true;
-            }
-            if (completar) {
-                //TODO:formatear direccion
-                
-                factura.valida = true;
-                factura.trId = currentTransaction;
-                factura.fecha = QDate::currentDate();
-                factura.lineas = ticketLines;
-                ///FIXME: Si en settings esta otra moneda, con simbolo diferente a $, entonces no funcionara el workaround siguiente:
-                factura.subTotal = realSubtotal.remove(',').remove('$').remove(' ').toDouble(); //realSubtotal is affected with discounts/taxes (see line 5408)   //subTotalSum
-                factura.descuentos = discMoney;
-                factura.impuestos = totalTax;
-                factura.impuestosTasa = gTaxPercentage;
-                factura.total = totalSum;
-                factura.totalLetra = "pendiente";
-                factura.storeName  = Settings::editStoreName();
-                factura.storeRFC   = Settings::storeRFC();
-                factura.storeRegimen = Settings::storeRegimen();
-                factura.storeAddr  = Settings::storeAddress();
-                factura.storeLugar = Settings::storeCity();
-                factura.storePhone = Settings::storePhone();
-                factura.storeLogo  = logoPixmap;
-                //Obtener folio
-                FolioInfo elFolio = myDb->getSiguienteFolio();
-                FoliosPool pool = myDb->getFolioPool(elFolio.poolId);
-                factura.folio = elFolio.numero;
-                factura.authFolios = pool.numAprobacion;
-                factura.fechaAutFolios = pool.fechaAprobacion;
-                factura.cbb = pool.cbb; //byteArray
-                //insertar factura en db.
-                if (!myDb->insertFactura(factura)) {
-                    QMessageBox::critical(this, i18n("No se pudo crear la factura"),myDb->lastError(), QMessageBox::Ok);
-                } else {
-                    //mandar imprimir...
-                    if (elFolio.valido)
-                        printFactura(factura);
-                    else
-                        QMessageBox::critical(this, i18n("Folio Obtenido es invalido."),myDb->lastError(), QMessageBox::Ok);
-                    //No print ticket.
-                }
-                freezeWidgets();
-                QTimer::singleShot(500, this, SLOT(unfreezeWidgets()));
-            } else { //completar
-                qDebug()<<"Se cancelo el proceso de facturacion.";
-                //We only print ticket if no creating invoice.
-                if (printDTticket)
-                    printTicket(ticket);
-                else {
-                    //if not printing ticket, it means it is config to not print date changed tickets.. but this affects to the freeze/unfreeze UI, and to call startAgain().
-                    freezeWidgets();
-                    QTimer::singleShot(500, this, SLOT(unfreezeWidgets()));
-                    qDebug()<<"Not printing ticket...";
-                }
-            }
-        } else {
-            qDebug()<<"No se deseo facturar.";
-            //We only print ticket if no creating invoice.
-            if (printDTticket)
-                printTicket(ticket);
-            else {
-                //if not printing ticket, it means it is config to not print date changed tickets.. but this affects to the freeze/unfreeze UI, and to call startAgain().
-                freezeWidgets();
-                QTimer::singleShot(500, this, SLOT(unfreezeWidgets()));
-                qDebug()<<"Not printing ticket...";
-            }
-        } //no invoice
-    } else {
-        qDebug()<<"No se puede facturar: Apartados|SpecialOrdersNotCompleted";
-        //We only print ticket if no creating invoice.
-        if (printDTticket)
-            printTicket(ticket);
-        else {
-            //if not printing ticket, it means it is config to not print date changed tickets.. but this affects to the freeze/unfreeze UI, and to call startAgain().
-            freezeWidgets();
-            QTimer::singleShot(500, this, SLOT(unfreezeWidgets()));
-            qDebug()<<"Not printing ticket...";
+    if (printDTticket)
+        printTicket(ticket);
+      else {
+          //if not printing ticket, it means it is config to not print date changed tickets.. but this affects to the freeze/unfreeze UI, and to call startAgain().
+          freezeWidgets();
+          QTimer::singleShot(500, this, SLOT(unfreezeWidgets()));
+          qDebug()<<"Not printing ticket...";
         }
-    } //no invoice
 
     
     //update balance
@@ -3294,125 +3151,6 @@ void iotposView::finishCurrentTransaction()
    if (ui_mainview.rbFilterByCategory->isChecked()) { //by category
      ui_mainview.frameGridView->show();
    }
-}
-
-
-void iotposView::reprintFactura() {
-    if (!Settings::askForInvoice()){
-        qDebug()<<"Not using FacturaMX feature.";
-        return;
-    }
-    
-    Azahar *myDb = new Azahar;
-    FacturaCBB factura;
-    QList<TicketLineInfo> theLines;
-    myDb->setDatabase(db);
-
-    RefacturarDialog *dlg = new RefacturarDialog(this);
-    dlg->setDb(db);
-    
-    if (dlg->exec()) {
-        //get data
-        QString folio = dlg->getSelectedInvoice();
-        FacturaCBB factura = myDb->getFacturaInfo(folio);
-        //append additional data from the store
-        factura.storeName  = Settings::editStoreName();
-        factura.storeRFC   = Settings::storeRFC();
-        factura.storeRegimen = Settings::storeRegimen();
-        factura.storeAddr  = Settings::storeAddress();
-        factura.storeLugar = Settings::storeCity();
-        factura.storePhone = Settings::storePhone();
-        QPixmap logoPixmap;
-        logoPixmap.load(Settings::storeLogo());
-        factura.storeLogo  = logoPixmap;
-
-        if (factura.folio == folio && factura.valida) {
-            //get factura items
-            QList<TransactionItemInfo> pListItems = myDb->getTransactionItems(factura.trId);
-            for (int i = 0; i < pListItems.size(); ++i) {
-                TransactionItemInfo trItem = pListItems.at(i);
-                TicketLineInfo tLineInfo;
-                tLineInfo.qty     = trItem.qty;
-                tLineInfo.unitStr = trItem.unitStr;
-                tLineInfo.desc    = trItem.name;
-                tLineInfo.price   = trItem.price;
-                tLineInfo.disc    = trItem.disc;
-                tLineInfo.total   = trItem.total;
-                tLineInfo.payment = trItem.payment;
-                tLineInfo.completePayment = trItem.completePayment;
-                tLineInfo.isGroup = trItem.isGroup;
-                tLineInfo.deliveryDateTime = trItem.deliveryDateTime;
-                tLineInfo.tax     = trItem.tax;
-                double gtotal     = trItem.total + trItem.tax;
-                tLineInfo.gtotal  =  Settings::addTax()  ? gtotal : tLineInfo.total;
-
-                QString newName;
-                newName = trItem.soId;
-                qulonglong sorderid = newName.remove(0,3).toULongLong();
-                QString    soNotes  = myDb->getSONotes(sorderid);
-                soNotes = soNotes.replace("\n", "|  ");
-                if (sorderid > 0) {
-                    QList<ProductInfo> pList = myDb->getSpecialOrderProductsList(sorderid);
-                    newName = "";
-                    foreach(ProductInfo info, pList ) {
-                        QString unitStr;
-                        if (info.units == 1 ) unitStr=" "; else unitStr = info.unitStr;
-                        newName += "|  " + QString::number(info.qtyOnList) + " "+ unitStr +" "+ info.desc;
-                    }
-                    tLineInfo.geForPrint = trItem.name+newName+"|  |"+i18n("Notes:")+soNotes+" | ";
-                } else tLineInfo.geForPrint = "";
-                
-                if (trItem.isGroup) {
-                    tLineInfo.geForPrint = trItem.name;
-                    QString n = trItem.name.section('|',0,0);
-                    trItem.name = n;
-                    tLineInfo.desc    = trItem.name;
-                }
-
-                //append data to the invoice.
-                theLines.append(tLineInfo);
-            }//for each item
-            factura.lineas = theLines;
-            //fianlly print it.
-            printFactura(factura);
-        }//factura valida
-    }
-}
-
-void iotposView::printFactura(FacturaCBB factura)
-{
-    QPrinter printer;
-    printer.setFullPage( true );
-    
-    //This is lost when the user chooses a printer. Because the printer overrides the paper sizes.
-    printer.setPageMargins(0,0,0,0,QPrinter::Millimeter);
-    //QString pName = printer.printerName(); //default printer name
-    QPrintDialog printDialog( &printer );
-    printDialog.setWindowTitle(i18n("Imprimir Factura"));
-    
-    if ( printDialog.exec() ) {
-        //this overrides what the user chooses if he does change sizes and margins.
-        printer.setPageMargins(0,0,0,0,QPrinter::Millimeter);
-        PrintCUPS::printFactura(factura, printer, KGlobal::locale()->formatDate(factura.fecha, KLocale::LongDate), false); //original
-        PrintCUPS::printFactura(factura, printer, KGlobal::locale()->formatDate(factura.fecha, KLocale::LongDate), true); //copy
-    }
-
-    //export to PDF.
-    QString fn = QString("%1/iotpos-printing/").arg(QDir::homePath());
-    QString fn2 = QString("%1/iotpos-printing/").arg(QDir::homePath());
-    QDir dir;
-    if (!dir.exists(fn))
-        dir.mkdir(fn);
-    fn = fn+QString("factura-%1__%2.pdf").arg(factura.folio).arg(factura.fecha.toString("dd-MMM-yy"));
-    fn2 = fn2+QString("copia_factura-%1__%2.pdf").arg(factura.folio).arg(factura.fecha.toString("dd-MMM-yy"));
-    qDebug()<<fn;
-
-    printer.setOutputFileName(fn);
-    printer.setPageMargins(0,0,0,0,QPrinter::Millimeter);
-
-    PrintCUPS::printFactura(factura, printer, KGlobal::locale()->formatDate(factura.fecha, KLocale::LongDate), false);//original
-    printer.setOutputFileName(fn2);
-    PrintCUPS::printFactura(factura, printer, KGlobal::locale()->formatDate(factura.fecha, KLocale::LongDate), true); //copy
 }
 
 void iotposView::printTicket(TicketInfo ticket)
@@ -4755,27 +4493,12 @@ void iotposView::setupModel()
       ui_mainview.comboFilterByCategory->addItem(item.key());
       //qDebug()<<"iterando por el hash en el item:"<<item.key()<<"/"<<item.value();
     }
-
     populateCardTypes();
-
-    //Subcategories popuplist
-    populateSubCategoriesHash();
-    ui_mainview.comboFilterBySubCategory->clear();
-    QHashIterator<QString, int> itemS(subcategoriesHash);
-    while (itemS.hasNext()) {
-      itemS.next();
-      ui_mainview.comboFilterBySubCategory->addItem(itemS.key());
-    }
-
     ui_mainview.comboFilterByCategory->setCurrentIndex(0);
-    ui_mainview.comboFilterBySubCategory->setCurrentIndex(0);
     connect(ui_mainview.comboFilterByCategory,SIGNAL(currentIndexChanged(int)), this, SLOT( setFilter()) );
-    connect(ui_mainview.comboFilterBySubCategory,SIGNAL(currentIndexChanged(int)), this, SLOT( setFilter()) );
-//     connect(ui_mainview.editFilterByDesc,SIGNAL(textEdited(const QString &)), this, SLOT( setFilter()) ); //THIS MAKES SLOW SEARCH WITH LARGE DB.
     connect(ui_mainview.editFilterByDesc,SIGNAL(returnPressed()), this, SLOT( setFilter()) );
     connect(ui_mainview.rbFilterByDesc, SIGNAL(toggled(bool)), this, SLOT( setFilter()) );
     connect(ui_mainview.rbFilterByCategory, SIGNAL(toggled(bool)), this, SLOT( setFilter()) );
-    connect(ui_mainview.rbFilterBySubCategory, SIGNAL(toggled(bool)), this, SLOT( setFilter()) );
     setFilter();
   }
   setupClientsModel();
@@ -4832,13 +4555,7 @@ void iotposView::populateCategoriesHash()
   delete myDb;
 }
 
-void iotposView::populateSubCategoriesHash()
-{
-    Azahar * myDb = new Azahar;
-    myDb->setDatabase(db);
-    subcategoriesHash = myDb->getSubCategoriesHash();
-    delete myDb;
-}
+
 
 void iotposView::listViewOnMouseMove(const QModelIndex & index)
 {
@@ -4943,33 +4660,14 @@ void iotposView::setFilter()
       ui_mainview.frameGridView->show();
       //Find catId for the text on the combobox.
       int catId=-1;
-      //int subCatId = -1;
       QString catText = ui_mainview.comboFilterByCategory->currentText();
       if (categoriesHash.contains(catText)) {
         catId = categoriesHash.value(catText);
       }
       productsModel->setFilter(QString("products.isARawProduct=false and products.category=%1").arg(catId));
-      //REMOVE SUBCATEGORY FILTER
-      //Now check subcategory
-   //   if (ui_mainview.rbFilterBySubCategory->isChecked()){
-       // QString subCatText = ui_mainview.comboFilterBySubCategory->currentText();
-       // if (subcategoriesHash.contains(subCatText))
-         //   subCatId = subcategoriesHash.value(subCatText);
-      }//filter by subcategory, only if filterByCategory is checked.
-     // if (subCatId > 0)
-      //  productsModel->setFilter(QString("products.isARawProduct=false and products.category=%1 and products.subcategory=%2").arg(catId).arg(subCatId));
-      //else
-        //productsModel->setFilter(QString("products.isARawProduct=false and products.category=%1").arg(catId));
+
+      }
     }
-    //else { //by most sold products in current month --biel
-    //    {
-    //  productsModel->setFilter("products.isARawProduct=false and (products.datelastsold > ADDDATE(sysdate( ), INTERVAL -31 DAY )) ORDER BY products.datelastsold DESC LIMIT 20"); //limit or not the result to 5?
-   //   }
-      //products.code IN (SELECT * FROM (SELECT product_id FROM (SELECT product_id, sum( units ) AS sold_items FROM transactions t, transactionitems ti WHERE  t.id = ti.transaction_id AND t.date > ADDDATE( sysdate( ) , INTERVAL -31 DAY ) GROUP BY ti.product_id) month_sold_items ORDER BY sold_items DESC LIMIT 5) popular_products)
-   // }
-
-
- // }
   productsModel->select();
 }
 
@@ -6962,230 +6660,6 @@ void iotposView::calculateTotalForClient()
         delete myDb;
     }
     ui_mainview.creditContent->setReadOnly(true);
-}
-
-
-void iotposView::emitirFactura()
-{
-    if (!Settings::askForInvoice()){
-        qDebug()<<"Not using FacturaMX feature.";
-        return;
-    }
-    
-    Azahar *myDb = new Azahar;
-    FacturaCBB factura;
-    QList<TicketLineInfo> ticketLines;
-    myDb->setDatabase(db);
-
-    //check if a folio can be obtained.
-    if (myDb->getFoliosLibres() <= 0) {
-        QMessageBox::critical(this, i18n("Facturar"),i18n("No hay folios disponibles. No se puede facturar"), QMessageBox::Ok);
-        return;
-    }
-    
-    bool ok;
-    QString trIdStr = QInputDialog::getText(this, i18n("Facturar"), i18n("Numero de Ticket:"), QLineEdit::Normal, "", &ok);
-    qulonglong trId = trIdStr.toULongLong();
-    
-    if (ok && !trIdStr.isEmpty() ) {
-        //ok get transaction details
-        TransactionInfo trInfo = myDb->getTransactionInfo(trId);
-        QList<TransactionItemInfo> pListItems = myDb->getTransactionItems(trId);
-        double itemsDiscount=0;
-        double soGTotal = 0;
-        QDateTime soDeliveryDT;
-        //check that is a valid transaction
-        //Checar que la transaccion NO ESTE FACTURADA YA.
-        if ( myDb->ventaFacturada(trId) ) {
-            QString folioFactura = myDb->getFolioFactura(trId); //devuelve el ultimo folio de esta trId (el ultimo es el unico que puede ser valido)
-            QMessageBox::critical(this, i18n("Facturar"),i18n("No se puede facturar, la venta YA HABIA SIDO FACTURADA.\nEl folio de esta venta es el %1", folioFactura), QMessageBox::Ok);
-            return;
-        }
-        if ( trInfo.id == trId && trInfo.id > 0) {
-            //ok, examine each item
-            for (int i = 0; i < pListItems.size(); ++i) {
-                TransactionItemInfo trItem = pListItems.at(i);
-                // add line to ticketLines
-                TicketLineInfo tLineInfo;
-                tLineInfo.qty     = trItem.qty;
-                tLineInfo.unitStr = trItem.unitStr;
-                tLineInfo.desc    = trItem.name;
-                tLineInfo.price   = trItem.price;
-                tLineInfo.disc    = trItem.disc;
-                tLineInfo.total   = trItem.total;
-                tLineInfo.payment = trItem.payment;
-                tLineInfo.completePayment = trItem.completePayment;
-                tLineInfo.isGroup = trItem.isGroup;
-                tLineInfo.deliveryDateTime = trItem.deliveryDateTime;
-                tLineInfo.tax     = trItem.tax;
-                itemsDiscount    += tLineInfo.disc;
-                
-                double gtotal     = trItem.total + trItem.tax;
-                tLineInfo.gtotal  =  Settings::addTax()  ? gtotal : tLineInfo.total;
-                soGTotal         += tLineInfo.gtotal;
-                soDeliveryDT      = trItem.deliveryDateTime; // this will be the same for all the SO, so it does not matter if overwrited.
-                
-                //qDebug()<<"\n*** item discount:"<<tLineInfo.disc<<" total itemsDiscount:"<<itemsDiscount<<"\n";
-                //qDebug()<<"\n*** soGTotal:"<<soGTotal<<" deliveryDT:"<<soDeliveryDT<<"\n";
-                QString newName;
-                newName = trItem.soId;
-                qulonglong sorderid = newName.remove(0,3).toULongLong();
-                QString    soNotes  = myDb->getSONotes(sorderid);
-                soNotes = soNotes.replace("\n", "|  ");
-                if (sorderid > 0) {
-                    QList<ProductInfo> pList = myDb->getSpecialOrderProductsList(sorderid);
-                    newName = "";
-                    foreach(ProductInfo info, pList ) {
-                        QString unitStr;
-                        if (info.units == 1 ) unitStr=" "; else unitStr = info.unitStr;
-                        newName += "|  " + QString::number(info.qtyOnList) + " "+ unitStr +" "+ info.desc;
-                    }
-                    tLineInfo.geForPrint = trItem.name+newName+"|  |"+i18n("Notes:")+soNotes+" | ";
-                } else tLineInfo.geForPrint = "";
-                                                                           
-                                                                           //qDebug()<<"isGROUP:"<<trItem.isGroup;
-                if (trItem.isGroup) {
-                    tLineInfo.geForPrint = trItem.name;
-                    QString n = trItem.name.section('|',0,0);
-                    trItem.name = n;
-                    tLineInfo.desc    = trItem.name;
-                }
-                
-                ticketLines.append(tLineInfo);
-            } //examine each item in the sale
-
-            bool completar = false;
-            if (trInfo.clientid == 1) {
-                //preguntar NOMBRE y RFC del cliente;
-                DialogClientData *dlgClient = new DialogClientData(this);
-                int resultado = dlgClient->exec();
-                if ( resultado == QDialog::Accepted ){
-                    factura.nombreCliente    = dlgClient->getNombre();
-                    factura.RFCCliente = dlgClient->getRFC();
-                    factura.direccionCliente = dlgClient->getDireccion();
-                    completar = true;
-                } else {
-                    qDebug()<<"Se cancelo el proceso de facturacion.";
-                    return; //cancelar!
-                }//El nombre/rfc del cliente, si es DEFAULT.
-            } else {
-                //cliente de la venta
-                ClientInfo cliente = myDb->getClientInfo(trInfo.clientid);
-                factura.nombreCliente    = cliente.name;
-                factura.RFCCliente = cliente.code;
-                factura.direccionCliente = cliente.address;
-                completar = true;
-            }
-
-            if (completar) {
-                //now, create the factura.
-                FolioInfo elFolio = myDb->getSiguienteFolio();
-                FoliosPool pool = myDb->getFolioPool(elFolio.poolId);
-                //check if folio is valid.
-                if (!elFolio.valido) {
-                    QMessageBox::critical(this, i18n("Facturar"),i18n("No se puede facturar. El folio obtenido es inválido, verifique sus folios."), QMessageBox::Ok);
-                    qDebug()<<"No se puede facturar. El folio obtenido es inválido, verifique sus folios.";
-                    return;
-                }
-                // OK, continue...
-                factura.folio = elFolio.numero;
-                factura.authFolios = pool.numAprobacion;
-                factura.fechaAutFolios = pool.fechaAprobacion;
-                factura.cbb = pool.cbb; //byteArray
-                // llenar datos
-                factura.valida = true;
-                factura.trId = trId;
-                factura.fecha = QDate::currentDate(); //La fecha de la factura es la de EXPEDICION, no de venta.
-                factura.lineas = ticketLines;
-                factura.impuestos = trInfo.totalTax;
-                factura.descuentos = trInfo.discmoney;
-                //factura.impuestosTasa = 0; FIXME!
-                factura.total = trInfo.amount; //including taxes and discounts.
-                double subtotal = trInfo.amount + trInfo.discmoney;
-                if (Settings::addTax()) {
-                    subtotal -= trInfo.totalTax;
-                    qDebug()<<" ADDTAX: NO";
-                }
-                factura.subTotal = subtotal;
-                qDebug()<<"Subtotal de factura:"<<factura.subTotal<<" | Total:"<<trInfo.amount<<" Discounts:"<<trInfo.discmoney<<" Taxes:"<<trInfo.totalTax;
-                factura.totalLetra = "pendiente";
-                factura.storeName  = Settings::editStoreName();
-                factura.storeRFC   = Settings::storeRFC();
-                factura.storeRegimen = Settings::storeRegimen();
-                factura.storeAddr  = Settings::storeAddress();
-                factura.storeLugar = Settings::storeCity();
-                factura.storePhone = Settings::storePhone();
-
-                QPixmap logoPixmap;
-                logoPixmap.load(Settings::storeLogo());
-                factura.storeLogo = logoPixmap;
-
-                //save it!
-                myDb->insertFactura(factura);
-
-                //Print...
-                printFactura(factura);
-            }
-        } else {
-            qDebug()<<"Invalid ticket number:"<<trId;
-            QMessageBox::critical(this, i18n("Facturar"),i18n("El ticket %1 no existe. No se puede facturar", trId), QMessageBox::Ok);
-        }
-    } else {
-        QMessageBox::critical(this, i18n("Facturar"),i18n("No se escribio un numero de ticket. No se puede facturar"), QMessageBox::Ok);
-    }
-    delete myDb;
-}
-
-
-void iotposView::cancelarFactura()
-{
-    if (!Settings::askForInvoice()){
-        qDebug()<<"Not using FacturaMX feature.";
-        return;
-    }
-    
-    Azahar *myDb = new Azahar;
-    myDb->setDatabase(db);
-    
-    bool ok;
-    QString folio = QInputDialog::getText(this, i18n("Cancelar Factura"), i18n("Folio de la Factura:"), QLineEdit::Normal, "", &ok);
-    if (ok && !folio.isEmpty()) {
-        //get invoice data.
-        FacturaCBB factura = myDb->getFacturaInfo(folio);
-        qDebug()<<"Cancelando Factura:"<<factura.folio;
-        if (factura.folio == folio && factura.valida) {
-            bool r = myDb->cancelFactura( folio ); //this cancels the invoice as well as the folio itself.
-            if (r)
-                QMessageBox::information(this, i18n("Cancelación de factura"),i18n("Se cancelo la factura con folio %1.",folio), QMessageBox::Ok);
-            else
-                QMessageBox::information(this, i18n("Cancelación de factura"),i18n("No se pudo cancelar la factura con folio %1.\n Detalle:",folio, myDb->lastError()), QMessageBox::Ok);
-            qDebug()<<"Factura Cancelada:"<<r;
-        } else {
-            if (factura.folio == folio && !factura.valida)
-                QMessageBox::critical(this, i18n("Cancelación de factura"),i18n("La factura %1 ya estaba cancelada", folio), QMessageBox::Ok);
-            else if ( factura.folio.isEmpty() || factura.folio == " " )
-                QMessageBox::critical(this, i18n("Cancelación de factura"),i18n("La factura %1 no existe.", folio), QMessageBox::Ok);
-            else
-                qDebug()<<"Factura invalida, inexistente o ya cancelada...";
-        }
-    }
-    delete myDb;
-}
-
-
-void iotposView::facturasLibres()
-{
-    if (!Settings::askForInvoice()){
-        qDebug()<<"Not using FacturaMX feature.";
-        return;
-    }
-
-    Azahar *myDb = new Azahar;
-    double num = myDb->getFoliosLibres();
-    notifierPanel->setSize(350,150);
-    notifierPanel->showNotification(QString("<i>%1</i> Folios <b>disponibles</b> para facturar.").arg(num),5000);
-    
-    delete myDb;
 }
 
 BasketPriceSummary iotposView::recalculateBasket(double oDiscountMoney) {

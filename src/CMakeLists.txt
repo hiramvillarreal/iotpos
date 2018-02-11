@@ -30,7 +30,6 @@ set(iotpos_SRCS
    saleqtydelegate.cpp
    dialogclientdata.cpp
    ../iotstock/src/clienteditor.cpp
-   refacturar.cpp
    bundlelist.cpp
    #printers/sp500.cpp
    BasketPriceCalculationService.cpp
@@ -48,7 +47,6 @@ kde4_add_ui_files( iotpos_SRCS
   ui/prefs_base.ui
   ui/pref_printers.ui
   ui/store_data.ui
-  ui/facturas_data.ui
   ui/prefs_db.ui
   ui/pref_style.ui
   ui/pref_security.ui
@@ -60,7 +58,6 @@ kde4_add_ui_files( iotpos_SRCS
   ui/checker.ui
   ui/datoscliente.ui
   ../iotstock/src/ui/editclient_widget.ui
-  ui/refacturar.ui
   )
 
 kde4_add_kcfg_files(iotpos_SRCS settings.kcfgc )

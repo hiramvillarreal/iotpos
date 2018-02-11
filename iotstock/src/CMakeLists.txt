@@ -10,7 +10,6 @@ set(iotstock_SRCS
    producteditor.cpp
    purchaseeditor.cpp
    offersdelegate.cpp
-   dialogseriefolios.cpp
    subcategoryeditor.cpp
    ../../src/inputdialog.cpp
    ../../src/loginwindow.cpp
@@ -37,7 +36,6 @@ kde4_add_ui_files( iotstock_SRCS
   ui/editpromo_widget.ui
   ui/producteditor.ui
   ui/purchaseeditor.ui
-  ui/editfolios.ui
   ui/subcategoryeditor.ui
   )
 

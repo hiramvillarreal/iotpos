@@ -1764,35 +1764,6 @@ color:black;</string>
               </widget>
              </widget>
              <widget class="QWidget" name="page_8">
-              <widget class="QComboBox" name="comboFilterBySubCategory">
-               <property name="geometry">
-                <rect>
-                 <x>40</x>
-                 <y>20</y>
-                 <width>119</width>
-                 <height>27</height>
-                </rect>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>160</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-              </widget>
-              <widget class="QCheckBox" name="rbFilterBySubCategory">
-               <property name="geometry">
-                <rect>
-                 <x>0</x>
-                 <y>20</y>
-                 <width>119</width>
-                 <height>22</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>Sub</string>
-               </property>
-              </widget>
               <widget class="QRadioButton" name="rbFilterByPopularity">
                <property name="geometry">
                 <rect>

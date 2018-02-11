@@ -30,7 +30,6 @@
 #include "promoeditor.h"
 #include "producteditor.h"
 #include "purchaseeditor.h"
-#include "dialogseriefolios.h"
 #include "subcategoryeditor.h"
 #include "../../src/hash.h"
 #include "../../src/misc.h"
@@ -4179,69 +4178,6 @@ void iotstockView::reSelectModels()
   }
 }
 
-
-//FACTURACION MX
-void iotstockView::agregarSerieFolios()
-{
-    qDebug()<<"Agregando serie de folios CBB...";
-    Azahar *myDb = new Azahar;
-    myDb->setDatabase(db);
-    DialogSerieFolios *dlgF = new DialogSerieFolios(this);
-
-    if (dlgF->exec()) {
-        //get data
-        FoliosPool pool;
-        pool.fechaAprobacion = dlgF->getFechaAprobacion();
-        pool.numAprobacion   = dlgF->getNumeroAprobacion();
-        pool.folioInicial    = dlgF->getFolioInicial();
-        pool.folioFinal      = dlgF->getFolioFinal();
-        pool.cbb             = Misc::pixmap2ByteArray(new QPixmap(dlgF->getCBB()), false); //do not scale
-        pool.cantidadFolios  = dlgF->getCantidadFolios();
-        bool inserted = myDb->insertSerieFolios(pool);
-
-        if (inserted) {
-            //inform how many folios where added.
-            QMessageBox::information(this, i18n("Serie de folios"),i18n("Se agregaron %1 folios.", pool.cantidadFolios), QMessageBox::Ok);
-        } else {
-            //inform about errors.
-            QMessageBox::critical(this, i18n("No se pudo agregar folios"),myDb->lastError(), QMessageBox::Ok);
-        }
-    }
-
-    delete myDb;
-    delete dlgF;
-}
-
-
-void iotstockView::cancelarFactura()
-{
-    Azahar *myDb = new Azahar;
-    myDb->setDatabase(db);
-
-    bool ok;
-    QString folio = QInputDialog::getText(this, i18n("Cancelar Factura"), i18n("Folio de la Factura:"), QLineEdit::Normal, "", &ok);
-    if (ok && !folio.isEmpty()) {
-        //get invoice data.
-        FacturaCBB factura = myDb->getFacturaInfo(folio);
-        qDebug()<<"Cancelando Factura:"<<factura.folio;
-        if (factura.folio == folio && factura.valida) {
-            bool r = myDb->cancelFactura( folio ); //this cancels the invoice as well as the folio itself.
-            if (r)
-                QMessageBox::information(this, i18n("Cancelación de factura"),i18n("Se cancelo la factura con folio %1.",folio), QMessageBox::Ok);
-            else
-                QMessageBox::information(this, i18n("Cancelación de factura"),i18n("No se pudo cancelar la factura con folio %1.\n Detalle:",folio, myDb->lastError()), QMessageBox::Ok);
-            qDebug()<<"Factura Cancelada:"<<r;
-        } else {
-            if (factura.folio == folio && !factura.valida)
-                QMessageBox::critical(this, i18n("Cancelación de factura"),i18n("La factura %1 ya estaba cancelada", folio), QMessageBox::Ok);
-            else if ( factura.folio.isEmpty() || factura.folio == " " )
-                QMessageBox::critical(this, i18n("Cancelación de factura"),i18n("La factura %1 no existe.", folio), QMessageBox::Ok);
-            else
-                qDebug()<<"Factura invalida, inexistente o ya cancelada...";
-        }
-    }
-    delete myDb;
-}
 
 void iotstockView::departmentsOnSelected(const QModelIndex &index)
 {

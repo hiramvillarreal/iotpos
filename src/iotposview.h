@@ -104,7 +104,6 @@ public:
     QSqlTableModel *productsModel;
     QSqlQueryModel *clientsModel; //for the credits panel, completer.
     QHash<QString, int> categoriesHash;
-    QHash<QString, int> subcategoriesHash;
     ClientInfo clientInfo;
     QHash<QString, ClientInfo> clientsHash;
     qulonglong buyPoints;
@@ -343,7 +342,6 @@ public:
     void hideProductsGrid();
     void populateCategoriesHash();
     void populateCardTypes();
-    void populateSubCategoriesHash();
     void setFilter();
     void showChangeDate();
 
@@ -409,11 +407,6 @@ public:
     void modifyClientsFilterModelB();
     void verifyDiscountEntry();
     void createClient();
-    void printFactura(FacturaCBB factura);
-    void cancelarFactura();
-    void emitirFactura();
-    void reprintFactura();
-    void facturasLibres();
     void resizeSearchTable();
     void resizeSearchTableSmall();
     void on_rbFilterByPopularity_clicked();

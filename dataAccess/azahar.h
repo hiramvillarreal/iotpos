@@ -302,23 +302,6 @@ class Azahar : public QObject
     bool              updateCredit(const CreditInfo &info);
     qulonglong        insertCreditHistory(const CreditHistoryInfo &info);
 
-    //FACTURAS MX (Invoices)
-    bool         insertSerieFolios(const FoliosPool &pool);
-    bool         updateCantidadSerieFolios(  const QString &numAprobacion, const int &cant);
-    bool         markUsedFolio(const QString &folio);
-    bool         cancelFolio(const QString &folio); //DEBERIA SER METODO PRIVADO. Llamado por el metodo cancelFactura.
-    bool         cancelFactura(const QString &folio);
-    bool         deleteSerieFolios(const QString &numAprobacion);
-    FolioInfo    getSiguienteFolio(); //regresa los datos de la serie de folios en uso. siguienteDisponible contiene el siguiente folio para ser usado.
-    int          getFoliosLibres(); // numero de folios libres.
-    QByteArray   getCbbForSerie(const QString &pool);
-    FoliosPool   getFolioPool(const QString &pool);
-    QString      getFolioFactura(const qulonglong &trId);
-    bool         facturaValida(const qulonglong &folio);
-    bool         ventaFacturada(const qulonglong &trId);
-    FacturaCBB   getFacturaInfo(const QString &folio);
-
-    bool         insertFactura( const FacturaCBB &factura );
 
 };
 
