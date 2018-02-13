@@ -1,15 +1,21 @@
 #!/bin/bash
 sudo apt-get update
-sudo apt-get install kdebase-runtime libqt4-dev build-essential g++ cmake gettext libqt4-sql-mysql kdelibs5-dev
-sudo apt-get install mysql-client mysql-server 
+echo "installing required programs"
+sudo apt-get install kdebase-runtime libqt4-dev build-essential g++ cmake gettext libqt4-sql-mysql kdelibs5-dev -y
+echo"installing mysql"
+sudo apt-get install mysql-client mysql-server -y
 cd ~
+echo "cloning iotpos"
 git clone https://github.com/hiramvillarreal/iotpos
 cd iotpos 
+echo "begin build"
 mkdir build
 cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=`kde4-config --prefix`
 make
+echo "installing IOTPOS"
 sudo make install
-cd ~/iotpos/database_resources
-
+echo "install complete now to setup database"
+cd ~/iotpos/database_resource
 cat iotpos_mysql.sql | sudo mysql -u root -p
+echo"all done :)"
