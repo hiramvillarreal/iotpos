@@ -5,8 +5,6 @@ sudo apt-get install kdebase-runtime libqt4-dev build-essential g++ cmake gettex
 echo "installing mysql"
 sudo apt-get install mysql-client mysql-server -y
 cd ~
-echo "cloning iotpos"
-git clone https://github.com/hiramvillarreal/iotpos
 cd iotpos 
 echo "begin build"
 mkdir build
