@@ -2,7 +2,7 @@
 sudo apt-get update
 echo "installing required programs"
 sudo apt-get install kdebase-runtime libqt4-dev build-essential g++ cmake gettext libqt4-sql-mysql kdelibs5-dev -y
-echo"installing mysql"
+echo "installing mysql"
 sudo apt-get install mysql-client mysql-server -y
 cd ~
 echo "cloning iotpos"
@@ -18,4 +18,4 @@ sudo make install
 echo "install complete now to setup database"
 cd ~/iotpos/database_resources
 cat iotpos_mysql.sql | sudo mysql -u root -p
-echo"all done :)"
+echo "all done :)"
