@@ -6,8 +6,27 @@
  -  sudo apt-get clean		
  -  sudo apt-get autoremove		
  -  sudo reboot
- 
----------------------------------------------------SOFTWARE-SETUP------------------------------------------------------
+---------------------------------------------------AUTO SOFTWARE-SETUP-------------------------------------------------------
+This method is the easy way to setup and install iotpos.
+
+Just copy and paste the following into a terminal
+------
+git clone https://www.github.com/hiramvillarreal/iotpos
+
+cd iotpos
+
+sudo chmod +x install.sh
+
+sudo ./install.sh
+
+If the sudo ./install.sh does not work try
+
+sudo sh install.sh
+---------
+If you wish to setup and install manually please see below
+
+
+---------------------------------------------------MANUAL SOFTWARE-SETUP----------------------------------------------------
 
 Just in case you already didn't, make sure everything is up to date:
 
