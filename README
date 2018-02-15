@@ -10,3 +10,28 @@ IotPOS provides an easy to use Interface, a search panel, a price-checker tool. 
 
 IotPos and IotStock are derived from LemonPOS, to his author: Miguel Chavez Gamboa, and collaborators; all my respects.
 
+-This method is the easy way to setup and install iotpos.
+
+Just copy and paste the following lines into a terminal:
+
+	sudo apt-get update
+	git clone https://www.github.com/hiramvillarreal/iotpos
+	cd iotpos
+	sudo chmod +x install.sh
+	sudo ./install.sh
+  
+To start using the point of sale, in terminal type:
+
+  iotpos
+  
+     * The default and only user and password is (without quotation marks):
+     username: "admin"
+     password: "linux"
+  
+To start using the administration module, in terminal type:
+
+  iotstock
+  
+    For an easy first time use, all securyty settings are disabled.  
+
+For more details please read: USING file and doc folder.
