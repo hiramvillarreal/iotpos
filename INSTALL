@@ -1,30 +1,31 @@
 -----------------------Installing iotPOS on the Raspberry Pi and Hardware setup--------------------------------------
--For raspbian OS we recommend to uninstall useless apps for a dedicated point of sale:		
+
+-Only for or Raspbian OS users, we recommend to uninstall useless apps for a dedicated point of sale:		
 	
- -  sudo apt-get update		
- -  sudo apt-get remove scratch wolfram-engine sonic-pi minecraft-pi		
- -  sudo apt-get clean		
- -  sudo apt-get autoremove		
- -  sudo reboot
+   sudo apt-get update		
+   sudo apt-get remove scratch wolfram-engine sonic-pi minecraft-pi		
+   sudo apt-get clean		
+   sudo apt-get autoremove		
+   sudo reboot
+   
 ---------------------------------------------------AUTO SOFTWARE-SETUP-------------------------------------------------------
-This method is the easy way to setup and install iotpos.
+-This method is the easy way to setup and install iotpos.
 
-Just copy and paste the following into a terminal
-------
-git clone https://www.github.com/hiramvillarreal/iotpos
+Just copy and paste the following lines into a terminal:
 
-cd iotpos
+	sudo apt-get update
+	git clone https://www.github.com/hiramvillarreal/iotpos
+	cd iotpos
+	sudo chmod +x install.sh
+	sudo ./install.sh
 
-sudo chmod +x install.sh
+NOTE: For Raspberry Pi Zero/W users this could take almost an hour to compile so be patient.
 
-sudo ./install.sh
+If the sudo ./install.sh does not work try:
 
-If the sudo ./install.sh does not work try
+	sudo sh install.sh
 
-sudo sh install.sh
----------
-If you wish to setup and install manually please see below
-
+If you wish to setup and install manually please see below:
 
 ---------------------------------------------------MANUAL SOFTWARE-SETUP----------------------------------------------------
 
@@ -102,7 +103,8 @@ To start using the administration module, in terminal type:
   
     For an easy first time use, all securyty settings are disabled.  
   
-Shorcut apps  will be found inside the aplication menu in raspbian under Others item or at ~/iotpos/src  and  ~/iotpos/iotstock/src you can copy and paste them on the desktop.
+Shorcut apps  will be found inside the aplication menu in raspbian under Others item or at ~/iotpos/src  and
+~/iotpos/iotstock/src you can copy and paste them on the desktop.
 
 By default, IotPOS and IotStock have security disabled, this to let you configure  database settings in case
 you have installed the database server at a different computer.
@@ -136,7 +138,8 @@ CONECCTIONS FOR THE HARDWARE
 
 -----SERIAL TTL THERMAL PRINTER----
 
-NOTE: TTL printers are not supported on the Raspberry Pi 3 by default. You have to Add device tree to /boot/config.txt to disable the Raspberry Pi 3 bluetooth.
+NOTE: TTL printers are not supported on the Raspberry Pi 3 by default. You have to Add device tree to /boot/config.txt
+to disable the Raspberry Pi 3 bluetooth.
 
   sudo nano /boot/config.txt
   
@@ -168,8 +171,7 @@ WARNING!!!: Make sure a serial TTL printer is used, NEVER CONNECT A SERIAL RS232
 Push bottom N.O. to Physical pin 16 switch to GND.
 LED+ Physical pin 12 LED- TO any GND available.
 
-----------------------------------------------
-Allow to send notifications and reports by e-mails from the Raspberry Pi.
+-----------------------Allow to send notifications and reports by e-mails from the Raspberry Pi.  -----------------------
 
 Install SSMTP and mail utilitites:
 
@@ -202,7 +204,7 @@ replace -your_mail@gmail.com- with your gmail account.
 
 ----------------------------------------------------QT CREATOR INSTALL---------------------------------------------------------
 
-Needed only for Developer and contributor:
+Needed only for Developers.
 
 If you want to cntribuite with the proyect you need to install Qt4 on the Raspberry Pi
 
