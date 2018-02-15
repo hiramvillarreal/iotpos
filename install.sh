@@ -13,6 +13,7 @@ make
 echo "installing IOTPOS"
 sudo make install
 echo "install complete now to setup database"
-cd ~/iotpos/database_resources
+cd ..
+cd database_resources
 cat iotpos_mysql.sql | sudo mysql -u root -p
 echo "all done :)"
