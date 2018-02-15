@@ -5,8 +5,6 @@ echo "installing required programs"
 sudo apt-get install kdebase-runtime libqt4-dev build-essential g++ cmake gettext libqt4-sql-mysql kdelibs5-dev -y
 echo "installing mysql"
 sudo apt-get install mysql-client mysql-server -y
-cd ~
-cd iotpos 
 echo "begin build"
 mkdir build
 cd build
