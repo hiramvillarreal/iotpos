@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "Update the package list"
 sudo apt-get update
 echo "installing required programs"
 sudo apt-get install kdebase-runtime libqt4-dev build-essential g++ cmake gettext libqt4-sql-mysql kdelibs5-dev -y
