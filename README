@@ -14,7 +14,6 @@ IotPos and IotStock are derived from LemonPOS, to his author: Miguel Chavez Gamb
 
 Just copy and paste the following lines into a terminal:
 
-	sudo apt-get update
 	git clone https://www.github.com/hiramvillarreal/iotpos
 	cd iotpos
 	sudo chmod +x install.sh
