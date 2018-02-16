@@ -6495,6 +6495,16 @@ void iotposView::printCreditReport()
             printer.setPaperSize(QSizeF(72,200), QPrinter::Millimeter);
             ui_mainview.creditContent->print(&printer);
         }
+        if (Settings::printZeroTicket()) {
+        // Send to spool file
+			QPrinter printer(QPrinter::HighResolution);
+            printer.setFullPage( true );
+            printer.setPageMargins(0,0,0,0,QPrinter::Millimeter);
+            qDebug()<<"-Paper Widt: "<<printer.widthMM()<<"mm"<<"; Page Widt: "<<printer.width();
+			ui_mainview.creditContent->print(&printer);
+			
+			}	
+
     }
     else
     {
