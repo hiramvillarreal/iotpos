@@ -993,6 +993,15 @@ void iotposView::focusPayInput()
   //ui_mainview.labelChangepre->show();
   //ui_mainview.labelChange->show();
   hideProductsGrid();
+  ui_mainview.labelDetailTax1->setText("");
+  ui_mainview.labelDetailTax2->setText("");
+  ui_mainview.labelDetailUnits->setText("");
+  ui_mainview.labelDetailDesc->setText(i18n("No product selected"));
+  ui_mainview.labelDetailPrice->setText("");
+  ui_mainview.labelDetailDiscount->setText("");
+  ui_mainview.labelDetailTotalTaxes->setText("");
+  ui_mainview.labelDetailPhoto->clear();
+  ui_mainview.labelDetailPoints->clear();
   ui_mainview.editAmount->selectAll();
 }
 

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>644</width>
-    <height>413</height>
+    <width>726</width>
+    <height>543</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -85,7 +85,7 @@
       </property>
       <property name="maximumSize">
        <size>
-        <width>16777215</width>
+        <width>210</width>
         <height>16777215</height>
        </size>
       </property>
@@ -114,7 +114,7 @@
        <item>
         <widget class="QGroupBox" name="groupDetails">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -127,7 +127,7 @@
          </property>
          <property name="maximumSize">
           <size>
-           <width>16777215</width>
+           <width>200</width>
            <height>16777215</height>
           </size>
          </property>
@@ -444,14 +444,14 @@
             </property>
             <property name="minimumSize">
              <size>
-              <width>155</width>
-              <height>68</height>
+              <width>199</width>
+              <height>67</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>155</width>
-              <height>73</height>
+              <width>199</width>
+              <height>67</height>
              </size>
             </property>
             <property name="palette">
@@ -1005,7 +1005,7 @@
               <number>0</number>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>2</number>
              </property>
              <widget class="QWidget" name="page_10">
               <widget class="QWidget" name="horizontalLayoutWidget">
@@ -1584,7 +1584,7 @@ color:black;</string>
                       </sizepolicy>
                      </property>
                      <property name="text">
-                      <string>  #:</string>
+                      <string>  Card #:</string>
                      </property>
                      <property name="buddy">
                       <cstring>editCardNumber</cstring>
