@@ -6495,15 +6495,26 @@ void iotposView::printCreditReport()
             printer.setPaperSize(QSizeF(72,200), QPrinter::Millimeter);
             ui_mainview.creditContent->print(&printer);
         }
-        if (Settings::printZeroTicket()) {
+         else if (Settings::printZeroTicket()) {
         // Send to spool file
-			QPrinter printer(QPrinter::HighResolution);
+		 QPrinter printer(QPrinter::HighResolution);
             printer.setFullPage( true );
             printer.setPageMargins(0,0,0,0,QPrinter::Millimeter);
             qDebug()<<"-Paper Widt: "<<printer.widthMM()<<"mm"<<"; Page Widt: "<<printer.width();
 			ui_mainview.creditContent->print(&printer);
 			
-			}	
+			}
+	  else {
+		  // this will send internal credit to default printer ig
+		  // print button is clicked
+		  // TODO: GET DIALOG BOX UP.
+		 QPrinter printer(QPrinter::HighResolution);
+            printer.setFullPage( true );
+            printer.setPageMargins(0,0,0,0,QPrinter::Millimeter);
+            qDebug()<<"-Paper Widt: "<<printer.widthMM()<<"mm"<<"; Page Widt: "<<printer.width();
+		  ui_mainview.creditContent->print(&printer);
+			
+		  }
 
     }
     else
