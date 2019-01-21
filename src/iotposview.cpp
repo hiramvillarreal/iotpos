@@ -268,13 +268,13 @@ iotposView::iotposView() //: QWidget(parent)
   QTimer *timerClock = new QTimer(this);
 
   loggedUserRole = roleBasic;
-  
+
   //Signals
   connect(timerClock, SIGNAL(timeout()), SLOT(timerTimeout()) );
   connect(ui_mainview.editItemDescSearch, SIGNAL(returnPressed()), this, SLOT(doSearchItemDesc()));
   //connect(ui_mainview.editItemDescSearch, SIGNAL(textEdited(const QString&)), this, SLOT(doSearchItemDesc()));
   //WARNING: Above. With many products when searching, it may be too slow and give problems. It is better to have onreturnPressed instead of textEdited signal.
-  
+
   connect(ui_mainview.editItemCode, SIGNAL(returnPressed()), this, SLOT(doEmitSignalQueryDb()));
   connect(this, SIGNAL(signalQueryDb(QString)), this, SLOT(insertItem(QString)) );
   //NOTE:Disabling For editing. connect(ui_mainview.tableWidget, SIGNAL(itemDoubleClicked(QTableWidgetItem*)), SLOT(itemDoubleClicked(QTableWidgetItem*)) );
@@ -338,14 +338,14 @@ iotposView::iotposView() //: QWidget(parent)
   drawer->setPrinterDevice(Settings::printerDevice());
   //NOTE: setPrinterDevice: what about CUPS printers recently added support for?
   drawerCreated = true;
-  
+
   operationStarted = false;
   productsHash.clear();
   specialOrders.clear();
   clientsHash.clear();
 
   bundlesHash = new BundleList(); //remember to delete it.
-  
+
   //ui_mainview.lblClientPhoto->hide();
   //ui_mainview.labelInsertCodeMsg->hide();
   transDateTime = QDateTime::currentDateTime();
@@ -433,12 +433,12 @@ void iotposView::updateGraphs()
       objSales->clearPoints();
       int hoy=0;
       hoy = QDate::currentDate().day();
-    
+
       ui_mainview.plotSales->setLimits(0, hoy+1, rangeS.min-rangeS.min*.10, rangeS.max+rangeS.max*.10);
       int day=0; double AccSales=0.0; double AccProfit=0.0;
       objSales->addPoint(0,0, "0");
 
-      if (!monthTrans.isEmpty()) {  
+      if (!monthTrans.isEmpty()) {
         // cout <<"-----------------> monthTrans is not empty  " << endl;
         TransactionInfo inf;
         inf.date = monthTrans.last().date.addDays(1);
@@ -464,7 +464,7 @@ void iotposView::updateGraphs()
 
     //  ui_mainview.plotSales->update();
 
-      
+
       delete myDb;
     }
   }
@@ -583,7 +583,7 @@ void iotposView::setupGridView()
 {
   if (Settings::showGrid()) emit signalShowProdGrid();
   else showProductsGrid(false);
-  
+
 }
 
 void iotposView::loadIcons()
@@ -769,10 +769,10 @@ void iotposView::settingsChanged()
   db.setUserName(Settings::editDBUsername());
   db.setPassword(Settings::editDBPassword());
   connectToDb();
-  
+
   setupModel();
   setupHistoryTicketsModel();
-  
+
   currentBalanceId = 0;
   insertBalance(); //this updates the currentBalanceId
   startAgain();
@@ -798,7 +798,7 @@ void iotposView::syncSettingsOnDb()
   myDb->setConfigUseCUPS(!Settings::smallTicketDotMatrix());
   myDb->setConfigLogoOnTop(Settings::chLogoOnTop());
   myDb->setConfigTaxIsIncludedInPrice(!Settings::addTax());//NOTE: the AddTax means the tax is NOT included in price, thats why this is negated.
-  
+
   delete myDb;
 }
 
@@ -828,7 +828,7 @@ void iotposView::settingsChangedOnInitConfig()
 
 void iotposView::showEnterCodeWidget()
 {
-  //ui_mainview.groupWidgets->setCurrentIndex(pageMain);  
+  //ui_mainview.groupWidgets->setCurrentIndex(pageMain);
   ui_mainview.stackedWidget_3->setCurrentIndex(1);
   ui_mainview.listView->scrollToTop();
   ui_mainview.mainPanel->setCurrentIndex(0); // back to welcome widget
@@ -963,7 +963,7 @@ void iotposView::askForTicketToReturnProduct()
   } else {//     qDebug()<<"NO LOW security mode, NO AUTH REQUIRED...";
     continuar=true;
   }
-  
+
   if (continuar) { //show input dialog to get ticket number
     bool ok=false;
     InputDialog *dlg = new InputDialog(this, true, dialogTicket, i18n("Enter the ticket number"));
@@ -974,7 +974,7 @@ void iotposView::askForTicketToReturnProduct()
     delete dlg;
     if (ok) {
       // show dialog to select which items to return.
-      
+
     }//ok=true
   } //continuar
 }
@@ -1010,7 +1010,7 @@ void iotposView::plusPressed()
 {
   if ( !ui_mainview.editItemCode->text().isEmpty() )
     doEmitSignalQueryDb();
-  else 
+  else
     focusPayInput();
 }
 
@@ -1024,7 +1024,7 @@ void iotposView::getCurrencies()
 {
     Azahar *myDb = new Azahar();
     myDb->setDatabase(db);
-    
+
     //get currencies from database
     QList<CurrencyInfo> currencyList = myDb->getCurrencyList();
     //load currencies to combobox
@@ -1032,7 +1032,7 @@ void iotposView::getCurrencies()
     foreach( CurrencyInfo info, currencyList ) {
         ui_mainview.comboCurrency->addItem( info.name );
     }
-    
+
     //select first one and set the factor to the edit.
     if ( !currencyList.isEmpty() ) {
         CurrencyInfo info = currencyList.first();
@@ -1051,7 +1051,7 @@ void iotposView::comboCurrencyOnChange()
 
     CurrencyInfo info = myDb->getCurrency( ui_mainview.comboCurrency->currentText() );
     ui_mainview.editConvFactor->setText( QString::number( info.factor ) );
-    
+
     doCurrencyConversion();
 
     ui_mainview.editConvQty->setFocus();
@@ -1085,7 +1085,7 @@ void iotposView::populateCardTypes()
 {
     Azahar *myDb = new Azahar();
     myDb->setDatabase(db);
-    
+
     //get currencies from database
     QStringList cardTypes = myDb->getCardTypes();
     //load currencies to combobox
@@ -1093,7 +1093,7 @@ void iotposView::populateCardTypes()
     foreach( QString type, cardTypes ) {
         ui_mainview.comboCardType->addItem( type );
     }
-    
+
     delete myDb;
 }
 
@@ -1156,7 +1156,7 @@ void iotposView::login()
   //qDebug()<<"In Cash:"<<drawer->getAvailableInCash()<<"Transactions:"<<drawer->getTransactionsCount();
   drawer->reset();
   emit signalNoLoggedUser();
-  
+
   dlgLogin->clearLines();
   if (!db.isOpen()) {
       qDebug()<<"(login): Calling connectToDb()...";
@@ -1343,7 +1343,7 @@ void iotposView::refreshTotalLabel()
             if ( gDiscountPercentage > 0 ) //apply general discount. gDiscountPercentage is in PERCENTAGE Already... do not divide by 100.
                 iPrice -= (gDiscountPercentage)*iPrice; /// prod.price NOTE: if gDiscountPercentage is greater than 1 then it will produce negative price!
 
-            if (extractTaxes) 
+            if (extractTaxes)
                 iTaxM = iPrice - (iPrice/(1+((prod.tax+prod.extratax)/100))); //one item
             else
                 iTaxM = iPrice * ((prod.tax+prod.extratax)/100); //one item
@@ -1484,13 +1484,13 @@ RoundingInfo iotposView::roundUsStandard(const double &number)
     result.strResult = "0.0";
 
     if (number == 0.0) return result;
-    
+
     QString num = QString::number(number, 'f', 2 ); //round to two decimal places first and get a string. The number is represented as INT_PART.XX
     QString decPart = num.right(2); //last two digits are the decimal part.
     num.chop(3); //remove last 2 digits and decimals separator. DO NOT USE num any more to get data from the whole number
     QString intPart = num;
     QString newDecPart = "00"; //we will fill this number
-    
+
     // X1 -> X4 rounds down to X0
     // X5 -> X9 rounds up to (X+1)0
     //Example:  22 rounds down to 20, 68 rounds up to 70
@@ -1499,7 +1499,7 @@ RoundingInfo iotposView::roundUsStandard(const double &number)
     int iLdDecPart = ldDecPart.toInt();
     int iFdDecPart = fdDecPart.toInt();
     int intIntPart = intPart.toInt();
-    
+
     //We need to examine the last digit in the decPart. decPart is two digits (ex: 01, 78, 99)
     if ( iLdDecPart == 0 )
         newDecPart = fdDecPart+"0"; // no rounding..
@@ -1512,7 +1512,7 @@ RoundingInfo iotposView::roundUsStandard(const double &number)
             newDecPart = "00"; // rounds up to .00
             intIntPart += 1; // INT_PART+1
         } else {
-            newDecPart = QString::number( xPlusOne )+"0"; 
+            newDecPart = QString::number( xPlusOne )+"0";
         }
         //qDebug()<<"fdDecPart:"<<fdDecPart<<"iFdDecPart:"<<iFdDecPart<<"xPlusOne:"<<xPlusOne;
     }
@@ -1556,7 +1556,7 @@ bool iotposView::incrementTableItemQty(QString code, double q)
     bool allowNegativeStock = Settings::allowNegativeStock();
     bool overSelling = false;
     QString msg;
-    
+
     //stock qty for groups are different. NEW: Take into account the negative stock settings.
     bool available = true;
     if (info.isAGroup) {
@@ -1606,7 +1606,7 @@ bool iotposView::incrementTableItemQty(QString code, double q)
         msg = i18n("<html><font color=red><b>The group/pack is not available because:<br>%1</b></font></html>", itemsNotAvailable.join("<br>"));
       else
         msg = i18n("<html><font color=red><b>There are only %1 articles of your choice at stock.<br> You requested %2</b></font></html>", info.stockqty,q+onList);
-      
+
       if (ui_mainview.mainPanel->currentIndex() == pageSearch) {
          ui_mainview.labelSearchMsg->setText(msg);
          ui_mainview.labelSearchMsg->show();
@@ -1619,7 +1619,7 @@ bool iotposView::incrementTableItemQty(QString code, double q)
         ui_mainview.editItemCode->clearFocus();
         tipCode->showTip(msg, 6000);
     }
-    
+
     QTableWidgetItem *itemQ = ui_mainview.tableWidget->item(info.row, colQty);//item qty
     itemQ->setData(Qt::EditRole, QVariant(qty));
     done = true;
@@ -1655,7 +1655,7 @@ void iotposView::insertItem(QString code)
   //QRegExp rds("^\\d\\d\\d\\d.\\d\\d?$");
   //QRegExp rds("^\\d\\d\\d?$");
   QRegExp rds("^-\\d+$");
-  
+
   //qDebug() << code;
   // qDebug() << rl.indexIn(code) << " " <<  rL.indexIn(code) ;
   //qDebug() << " HOLA ---------" << rds.indexIn(code) ;
@@ -1666,12 +1666,12 @@ void iotposView::insertItem(QString code)
       productsModel->setFilter("products.isARawProduct=false");
    }
   if((rl.indexIn(code) < 0) && (rL.indexIn(code) < 0) && rds.indexIn(code) < 0  ){
-    
+
   if ( code.isEmpty() || code == "0" || code.startsWith("0*") || code.endsWith("0.")) {
       ui_mainview.editItemCode->clear();
       return;
   }
-  
+
   if ( !specialOrders.isEmpty() ) {
     KNotification *notify = new KNotification("information", this);
     notify->setText(i18n("Only Special Orders can be added. Please finish the current special order before adding any other product."));
@@ -1692,7 +1692,7 @@ if ( doNotAddMoreItems ) { //only for reservations
     ui_mainview.editItemCode->clear();
     return;
 }
-  
+
   double qty  = 1;
   bool qtyWritten = false;
   QString codeX = code;
@@ -1745,7 +1745,7 @@ if ( doNotAddMoreItems ) { //only for reservations
     } else
         check = false; // no 6digit or 12digit code configured,
         //Check for products any way?
-    
+
     if (check) {
         if (clientFound) {
             QString msg;
@@ -1764,7 +1764,7 @@ if ( doNotAddMoreItems ) { //only for reservations
             ui_mainview.editItemCode->clear();
             ui_mainview.editItemCode->setFocus();
             setupGridView();
-            return;   
+            return;
         } else {
             notifierPanel->setSize(350,150);
             notifierPanel->setOnBottom(false);
@@ -1856,7 +1856,7 @@ if ( doNotAddMoreItems ) { //only for reservations
   }
 
   delete myDb;
-  
+
   if (!incrementTableItemQty( QString::number(info.code) /*codeX*/, qty) ) {
     info.qtyOnList = qty;
 
@@ -1997,7 +1997,7 @@ if ( doNotAddMoreItems ) { //only for reservations
     }
   else if (rds.indexIn(code) == 0)
     {
-      QString codeWOSing = code.remove(0,1); 
+      QString codeWOSing = code.remove(0,1);
       productsModel->setFilter(QString("products.isARawProduct=false and products.price=%1").arg(codeWOSing));
       ui_mainview.frameGridView->show();
     }
@@ -2045,8 +2045,8 @@ void iotposView::updateItem(ProductInfo prod)
         if ( prod.discpercentage > 0 && prod.validDiscount )
             itemDiscount += (prod.discpercentage/100)*prod.qtyOnList; //item offer
     }
-    
-    
+
+
     if (itemDiscount < 0) {
         //item changed price to higer. So do not say it is a discount.
         item  = ui_mainview.tableWidget->item(prod.row, colDisc);
@@ -2141,9 +2141,9 @@ void iotposView::deleteSelectedItem()
       QPixmap pixmap = DesktopIcon("dialog-information",32);
       notify->setPixmap(pixmap);
       notify->sendEvent();
-      return;     
+      return;
   }
-  
+
   bool continueIt=false;
   bool reinsert = false;
   double qty=0;
@@ -2199,14 +2199,14 @@ void iotposView::deleteSelectedItem()
           double iqty = info.qty-1;
           info.qty = iqty;
           double newdiscount = info.disc * info.payment * iqty;
-          
+
           item = ui_mainview.tableWidget->item(row, colQty);
           item->setData(Qt::EditRole, QVariant(iqty));
           item = ui_mainview.tableWidget->item(row, colDue);
           item->setData(Qt::EditRole, QVariant((iqty*info.payment)-newdiscount));
           item = ui_mainview.tableWidget->item(row, colDisc);
           item->setData(Qt::EditRole, QVariant(newdiscount));
-          
+
           //reinsert to the hash
           specialOrders.insert(info.orderid,info);
         }
@@ -2216,7 +2216,7 @@ void iotposView::deleteSelectedItem()
         refreshTotalLabel();
         return; //to exit the method, we dont need to continue.
       }
-      
+
       qulonglong code = item->data(Qt::DisplayRole).toULongLong();
       ProductInfo info = productsHash.take(code); //insert it later...
       qty = info.qtyOnList; //this must be the same as obtaining from the table... this arrived on Dec 18 2007
@@ -2261,7 +2261,7 @@ void iotposView::deleteSelectedItem()
        qDebug()<<"** REMOVING A PRODUCT [updating balance/transaction]";
        updateBalance(false);
        updateTransaction();
-       
+
     }//continueIt
   }//there is something to delete..
 
@@ -2275,7 +2275,7 @@ void iotposView::itemDoubleClicked(QTableWidgetItem* item)
   double dqty = 0.0;
   bool   ok   = false;
   int    iqty = 0;
-  
+
   QTableWidgetItem *i2Modify = ui_mainview.tableWidget->item(row, colCode);
   qulonglong code = i2Modify->data(Qt::DisplayRole).toULongLong();
   if (!productsHash.contains(code)) {
@@ -2307,7 +2307,7 @@ void iotposView::itemDoubleClicked(QTableWidgetItem* item)
     refreshTotalLabel();
     return; //to exit the method, we dont need to continue.
   }
-  
+
   ProductInfo info = productsHash.take(code);
   double dmaxItems = info.stockqty;
   QString msg = i18n("Enter the number of %1", info.unitStr); //Added on Dec 15, 2007
@@ -2519,7 +2519,7 @@ void iotposView::finishCurrentTransaction()
   bool canfinish = true;
   completingOrder = false; //reset flag..
   TicketInfo ticket;
-  
+
   refreshTotalLabel();
   QString msg;
   ui_mainview.mainPanel->setCurrentIndex(pageMain);
@@ -2537,7 +2537,7 @@ void iotposView::finishCurrentTransaction()
     QString amntStr = localeForPrinting.toString(amnt, 'f', 2); //amount tendered
     QString totalStr = localeForPrinting.toString(totalSum, 'f', 2); //total
     qDebug()<<" Tendered Str:"<<amntStr<<" Total Str:"<<totalStr;
-    
+
 
     if ( amnt < totalSum ) {
       canfinish = false;
@@ -2593,7 +2593,7 @@ void iotposView::finishCurrentTransaction()
        // msg = i18n("<html><font color=red><b>The Card Type must be of some valid type.</b></font></html>");
         //ui_mainview.comboCardType->setFocus();
     }
-    
+
     if (!msg.isEmpty())
       tipAmount->showTip(msg, 4000);
   }
@@ -2628,7 +2628,7 @@ void iotposView::finishCurrentTransaction()
     QString          cardNum = "";
     QString          paidStr = "'[Not Available]'";
     QStringList      groupList;
-    
+
     payTotal = totalSum;
     if (ui_mainview.checkCash->isChecked()) {
       pType = pCash;
@@ -2660,7 +2660,7 @@ void iotposView::finishCurrentTransaction()
     tInfo.type = 0;//already on db.
 
     qDebug()<<"FinishingReservation:"<<finishingReservation<<" reservation Payment:"<<reservationPayment;
-    if (finishingReservation) 
+    if (finishingReservation)
         tInfo.amount = totalSum + reservationPayment; //at the transaction the REAL total must be considered (for accountability)
     else
         tInfo.amount = totalSum;
@@ -2678,7 +2678,7 @@ void iotposView::finishCurrentTransaction()
       tInfo.time   = QTime::currentTime();
       ticket.datetime = QDateTime::currentDateTime();
     }
-    
+
     tInfo.paywith= payWith;
     tInfo.changegiven =changeGiven;
     tInfo.paymethod = pType;
@@ -2835,7 +2835,7 @@ void iotposView::finishCurrentTransaction()
 
       iname = iname.replace("\n", "|");
 
-      // add line to ticketLines 
+      // add line to ticketLines
       TicketLineInfo tLineInfo;
       tLineInfo.qty     = i.value().qtyOnList;
       tLineInfo.unitStr = i.value().unitStr;
@@ -2853,14 +2853,14 @@ void iotposView::finishCurrentTransaction()
           tLineInfo.price   = i.value().price - i.value().disc;
           qDebug()<<"* There is a higher price change:"<<tLineInfo.price;
       } else tLineInfo.price   = i.value().price;
-      
+
       tLineInfo.disc    = i.value().disc*i.value().qtyOnList;
       tLineInfo.total   = tItemInfo.total;
       tLineInfo.tax     = tItemInfo.tax;
-      //tLineInfo.geForPrint = 
+      //tLineInfo.geForPrint =
       ticketLines.append(tLineInfo);
     } //each product on productHash
-    
+
     // KB:performance optimization
     //re-select the transactionItems model
     historyTicketsModel->select();
@@ -2900,7 +2900,7 @@ void iotposView::finishCurrentTransaction()
             //      quantity, to be multiplied by the price and cost to get the TOTAL SALE cost and price for each SO.
           }
         }
-        
+
         if (siInfo.units == 1) cantidad += siInfo.qty; else cantidad +=1;
         //from Biel
         // save transactionItem
@@ -2933,7 +2933,7 @@ void iotposView::finishCurrentTransaction()
         tItemInfo.isGroup         = false;
 
         if (siInfo.completePayment && siInfo.status == stReady) completePayments++;
-        
+
         myDb->insertTransactionItem(tItemInfo);
         //re-select the transactionItems model
         historyTicketsModel->select();
@@ -2947,7 +2947,7 @@ void iotposView::finishCurrentTransaction()
         tLineInfo.disc    = siInfo.disc * siInfo.price * siInfo.qty; // april 5 2005: Now SO can have discounts
         tLineInfo.partialDisc =disc2;
         tLineInfo.total   = tItemInfo.total;
-        double gtotal     = tItemInfo.total + tItemInfo.tax; 
+        double gtotal     = tItemInfo.total + tItemInfo.tax;
         tLineInfo.gtotal  =  Settings::addTax()  ? gtotal : tLineInfo.total;
         soGTotal         += tLineInfo.gtotal;
         soDeliveryDT      = siInfo.deliveryDateTime; // this will be the same for all the SO, so it does not matter if overwrited.
@@ -2966,14 +2966,14 @@ void iotposView::finishCurrentTransaction()
         ticketLines.append(tLineInfo);
 
         switch (siInfo.status) {
-          case stPending:  
+          case stPending:
             siInfo.status = stInProgress;
             //some clients makes the total payment when ordering.
             if (siInfo.completePayment)
               siInfo.completedOnTrNum = tInfo.id;
             myDb->updateSpecialOrder(siInfo);
             break;
-          case stInProgress: 
+          case stInProgress:
             qDebug()<<"There is an inappropiate state (In progress) for a SO to be here.";
             break;
           case stReady:
@@ -2997,10 +2997,10 @@ void iotposView::finishCurrentTransaction()
         completingOrder = siInfo.completePayment; //considering the last one at the end, all SO must have the same status!
       } //for each
     }// !specialOrders.isEmpty
-    
+
     // taking into account the client discount. Applied over other products discount.
     // discMoney is the money discounted because of client discount.
-    
+
     //double _taxes = 0;
     //if (!Settings::addTax()) _taxes = totalTax;
     // NOTE: If taxes included in price ( !addTax() ) the profit include tax amount.
@@ -3124,11 +3124,11 @@ void iotposView::finishCurrentTransaction()
           qDebug()<<"Not printing ticket...";
         }
 
-    
+
     //update balance
     qDebug()<<"FINISH TRANSACTION, UPDATING BALANCE #"<<currentBalanceId;
     updateBalance(false);//for sessions.
-    
+
     transactionInProgress = false;
     updateModelView();
     ui_mainview.editItemCode->setFocus();
@@ -3143,10 +3143,10 @@ void iotposView::finishCurrentTransaction()
       notify->setPixmap(pixmap);
       notify->sendEvent();
     }
-    
+
     delete myDb;
    }
-   
+
    if (!ui_mainview.groupSaleDate->isHidden()) ui_mainview.groupSaleDate->hide(); //finally we hide the sale date group
    completingOrder = false; //cleaning flag
    oDiscountMoney = 0; //reset discount money... the new discount type.
@@ -3232,7 +3232,7 @@ void iotposView::printTicket(TicketInfo ticket)
   itemsForPrint.append(hQty +"  "+ hProduct +"  "+ hPrice+ "  "+ hTotal);
   itemsForPrint.append("------  --------------  -------  -------");
 
-  QLocale localeForPrinting; // needed to convert double to a string better 
+  QLocale localeForPrinting; // needed to convert double to a string better
   for (int i = 0; i < ticket.lines.size(); ++i)
   {
     TicketLineInfo tLine = ticket.lines.at(i);
@@ -3254,7 +3254,7 @@ void iotposView::printTicket(TicketInfo ticket)
     //get contents, remove the first which is the name of the SO
     QStringList contentsList = tLine.geForPrint.split("|");
     if (!contentsList.isEmpty()) contentsList.removeFirst();
-    
+
     //HTML Ticket
     ticketHtml.append(QString("<tr><td>%1</td><td>%2</td><td>%3</td><td>%4</td><td>%5</td></tr>")
         .arg(iqty).arg(idesc).arg(iprice).arg(idiscount).arg(idue));
@@ -3278,7 +3278,7 @@ void iotposView::printTicket(TicketInfo ticket)
     iqty.append("      ").truncate(6);
     while (iprice.length()<7) iprice = QString(" ").append(iprice);
     while (idue.length()<7) idue = QString(" ").append(idue);
-    
+
 //     while (iqty.length()<7) iqty = iqty.insert(iqty.length(), ' ');
 //     while (idiscount.length()<4) idiscount = idiscount.insert(idiscount.length(), ' ');
 
@@ -3458,7 +3458,7 @@ void iotposView::printTicket(TicketInfo ticket)
 
       QPrinter printer;
       printer.setFullPage( true );
-      
+
       //This is lost when the user chooses a printer. Because the printer overrides the paper sizes.
       printer.setPageMargins(0,0,0,0,QPrinter::Millimeter);
       //TODO:Nueva impresora. printer.setPaperSize(QSizeF(72,200), QPrinter::Millimeter); //setting small ticket paper size. 72mm x 200mm
@@ -3466,7 +3466,7 @@ void iotposView::printTicket(TicketInfo ticket)
       //NOTE: El calculo del tamano de fuente no es correcta para papeles mayores a 72mm de anchos.
 
       QString pName = printer.printerName(); //default printer name
-      
+
       QPrintDialog printDialog( &printer );
       printDialog.setWindowTitle(i18n("Print Receipt -- Press ESC to export to PDF to your home/iotpos-printing/ folder"));
 ptInfo.totDisc = discMoney;
@@ -3485,10 +3485,10 @@ ptInfo.tDisc = KGlobal::locale()->formatMoney(-discMoney, QString(), 2);
             dir.mkdir(fn);
         fn = fn+QString("ticket-%1__%2.pdf").arg(ticket.number).arg(ticket.datetime.date().toString("dd-MMM-yy"));
         qDebug()<<fn;
-        
+
         printer.setOutputFileName(fn);
         printer.setPageMargins(0,0,0,0,QPrinter::Millimeter);
-        
+
         PrintCUPS::printSmallTicket(ptInfo, printer);
       } else {
           //NOTE: This is a proposition:
@@ -3501,7 +3501,7 @@ ptInfo.tDisc = KGlobal::locale()->formatMoney(-discMoney, QString(), 2);
               dir.mkdir(fn);
           fn = fn+QString("ticket-%1__%2.pdf").arg(ticket.number).arg(ticket.datetime.date().toString("dd-MMM-yy"));
           qDebug()<<fn;
-          
+
           printer.setOutputFileName(fn);
           printer.setPageMargins(0,0,0,0,QPrinter::Millimeter);
           printer.setPaperSize(QSizeF(72,200), QPrinter::Millimeter); //setting small ticket paper size. 72mm x 200mm
@@ -3520,7 +3520,7 @@ ptInfo.tDisc = KGlobal::locale()->formatMoney(-discMoney, QString(), 2);
       Azahar *myDb = new Azahar;
       myDb->setDatabase(db);
       QString clientName = myDb->getClientInfo(ticket.clientid).name;
-      
+
       ptInfo.ticketInfo = ticket;
       ptInfo.storeLogo  = logoPixmap;
       ptInfo.storeName  = Settings::editStoreName();
@@ -3562,7 +3562,7 @@ ptInfo.tDisc = KGlobal::locale()->formatMoney(-discMoney, QString(), 2);
     if (Settings::printSO() && ticket.hasSpecialOrders && !ticket.completingSpecialOrder){
       qDebug()<<"Printing small receipt for SPECIAL ORDERS using CUPS";
       PrintTicketInfo ptInfo;
-      
+
       ptInfo.ticketInfo = ticket;
       ptInfo.storeName  = hSpecialOrder; //user for header
       ptInfo.salesPerson= loggedUserName;
@@ -3581,8 +3581,8 @@ ptInfo.tDisc = KGlobal::locale()->formatMoney(-discMoney, QString(), 2);
       ptInfo.nextPaymentStr = hNextPaymentStr;
       ptInfo.lastPaymentStr = hLastPaymentStr;
       ptInfo.deliveryDateStr = hDeliveryDT;
-      
-      
+
+
       QPrinter printer;
       printer.setFullPage( true );
       QPrintDialog printDialog( &printer );
@@ -3764,9 +3764,9 @@ void iotposView::cancelTransaction(qulonglong transactionNumber)
       enoughCashAvailable = true;
     }
   }
-  
+
   //Mark as cancelled if possible
-  
+
   //Check if payment was with cash.
   //FIXME: Allow card payments to be cancelled!!! DIC 2009
   if (tinfo.paymethod != 1 ) {
@@ -3777,7 +3777,7 @@ void iotposView::cancelTransaction(qulonglong transactionNumber)
     notify->sendEvent();
     return;
   }
-  
+
   if  (enoughCashAvailable || transToCancelIsInProgress) {
     qDebug()<<" ok, trans is in progress or cash is enough";
     if (myDb->cancelTransaction(transactionNumber, transToCancelIsInProgress)) {
@@ -3858,7 +3858,7 @@ void iotposView::startOperation(const QString &adminUser)
     if (qty >= 0) ok = true; //allow no deposit...
   }
   delete dlg;
-  
+
   if (ok) {
     if (!drawerCreated) {
       drawer = new Gaveta();
@@ -3893,7 +3893,7 @@ void iotposView::startOperation(const QString &adminUser)
     qDebug()<<"StartOperations::UPDATE_BALANCE [should not occurr, balanceId="<<currentBalanceId<<"]";
     updateBalance(false);
   }
-  
+
   ui_mainview.editItemCode->setFocus();
   setupGridView();
 }
@@ -3912,7 +3912,7 @@ void iotposView::slotDoStartOperation(const bool &ask)
   // is ask is true we ask for auth, else we dont because it was previously asked for (calling method from corteDeCaja)
 
   //qDebug()<<"bool ask = "<<ask;
-  
+
   qDebug()<<"doStartOperations..";
   if (!operationStarted) {
     bool doit = false;
@@ -3963,14 +3963,14 @@ void iotposView::corteDeCaja()
     //     notify->setPixmap(pixmap);
     //     if (!loggedUser.isEmpty())
     //       notify->sendEvent();
-    
+
     //Things to do even if balance is not needed.
     operationStarted = false;
     currentBalanceId = 0;
     startAgain();
     return;
   }
-  
+
   bool doit = false;
   //ASK for security if no lowSecurityMode.
   if (Settings::lowSecurityMode()) {
@@ -4208,7 +4208,7 @@ void iotposView::corteDeCaja()
         //TODO:Nueva impresora. printer.setPaperSize(QSizeF(72,200), QPrinter::Millimeter); //setting small ticket paper size. 72mm x 200mm
         //NOTE: Ojo: si se hace click en el boton "Properties" del dialogo de Imprimir, aunque se presione "cancel", el "PAGE" se pone como 204mm
         //NOTE: El calculo del tamano de fuente no es correcta para papeles mayores a 72mm de anchos.
-        
+
         //TODO: Set Copies: printer.setCopyCount(2); //NOTE:Introduced in Qt 4.7 --WARNING-- See also setCollateCopies()
         PrintCUPS::printSmallBalance(pbInfo, printer);
       } else {
@@ -4222,11 +4222,11 @@ void iotposView::corteDeCaja()
               dir.mkdir(fn);
           fn = fn+QString("balance-%1__%2.pdf").arg(currentBalanceId).arg(QDateTime::currentDateTime().toString("dd-MMM-yy"));
           qDebug()<<fn;
-          
+
           printer.setOutputFileName(fn);
           printer.setPageMargins(0,0,0,0,QPrinter::Millimeter);
           printer.setPaperSize(QSizeF(72,200), QPrinter::Millimeter); //setting small ticket paper size. 72mm x 200mm
-          
+
           PrintCUPS::printSmallBalance(pbInfo, printer);
       }
     }
@@ -4396,11 +4396,11 @@ if (Settings::printZeroTicket()) {
               dir.mkdir(fn);
           fn = fn+QString("endOfDay__%1.pdf").arg(QDateTime::currentDateTime().toString("dd-MMM-yy"));
           qDebug()<<fn;
-          
+
           printer.setOutputFileName(fn);
           printer.setPageMargins(0,0,0,0,QPrinter::Millimeter);
           printer.setPaperSize(QSizeF(72,200), QPrinter::Millimeter); //setting small ticket paper size. 72mm x 200mm
-          
+
           PrintCUPS::printSmallEndOfDay(pdInfo, printer);
       }
     } else { //big printer
@@ -4787,11 +4787,11 @@ void iotposView::updateClientInfo()
   BasketPriceSummary summary = basketPriceCalculationService.calculateBasketPrice(this->productsHash, this->clientInfo, oDiscountMoney);
   double discMoney = summary.getDiscountGross().toDouble(); //(clientInfo.discount/100)*totalSumWODisc;
   dStr = i18n("Discount: <b>%1%</b> [<b>%2</b>]",clientInfo.discount, KGlobal::locale()->formatMoney(discMoney));
-  
+
   QString pStr = i18n("<i>%1</i> points", clientInfo.points);
   if (clientInfo.points <= 0)
       pStr = "";
-  
+
   //QPixmap pix; //What about using a QTextEditor, and embed the photo inside? still uses space.
   //pix.loadFromData(clientInfo.photo);
   //ui_mainview.lblClientPhoto->setPixmap(pix);
@@ -4808,7 +4808,7 @@ void iotposView::updateClientInfo()
 
   //The format is: CLIENT-NAME (Client-Code) <br>Credit <br>Discount<br>Points.
   ui_mainview.lblClientDetails->setText(QString("<b>%1</b> (<i>%2</i>)<br>%3<br>%4<br>%5").arg(clientInfo.name).arg(clientInfo.code).arg(creditStr).arg(dStr).arg(pStr));
-  
+
   delete myDb;
   qDebug()<<"Updating customer info...";
 }
@@ -4827,7 +4827,7 @@ void iotposView::setupHistoryTicketsModel()
     historyTicketsModel->setTable("v_transactions");
     historyTicketsModel->setRelation(historyTicketsModel->fieldIndex("clientid"), QSqlRelation("clients", "id", "name"));
     historyTicketsModel->setRelation(historyTicketsModel->fieldIndex("userid"), QSqlRelation("users", "id", "username"));
-    
+
     historyTicketsModel->setHeaderData(historyTicketsModel->fieldIndex("id"), Qt::Horizontal, i18n("Tr"));
     historyTicketsModel->setHeaderData(historyTicketsModel->fieldIndex("clientid"), Qt::Horizontal, i18n("Customer"));
     historyTicketsModel->setHeaderData(historyTicketsModel->fieldIndex("datetime"), Qt::Horizontal, i18n("Date"));
@@ -4843,7 +4843,7 @@ void iotposView::setupHistoryTicketsModel()
     ui_mainview.ticketView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui_mainview.ticketView->resizeColumnsToContents();
     ui_mainview.ticketView->setCurrentIndex(historyTicketsModel->index(0, 0));
-    
+
     historyTicketsModel->setSort(historyTicketsModel->fieldIndex("id"),Qt::DescendingOrder);
     historyTicketsModel->select();
   }
@@ -4922,11 +4922,11 @@ void iotposView::printTicketFromTransaction(qulonglong transactionNumber)
   ticketLines.clear();
   ticket.hasSpecialOrders = false;
   ticket.completingSpecialOrder = false;
-  
+
   if (!db.isOpen()) db.open();
   Azahar *myDb = new Azahar;
   myDb->setDatabase(db);
-  
+
   TransactionInfo trInfo = myDb->getTransactionInfo(transactionNumber);
   QList<TransactionItemInfo> pListItems = myDb->getTransactionItems(transactionNumber);
   double itemsDiscount=0;
@@ -4945,11 +4945,11 @@ void iotposView::printTicketFromTransaction(qulonglong transactionNumber)
       if ( rInfo.status == rCompleted ) //NOTE: This is not saved in the rInfo, but only completed reservations can be re-printed.
           ticket.reservationStarted = false;
       else
-        ticket.reservationStarted = true; 
+        ticket.reservationStarted = true;
       ticket.reservationPayment = rInfo.payment;
       ticket.purchaseTotal = rInfo.total;
   } //end fixing...
-  
+
   for (int i = 0; i < pListItems.size(); ++i) {
     TransactionItemInfo trItem = pListItems.at(i);
     // add line to ticketLines
@@ -4971,7 +4971,7 @@ void iotposView::printTicketFromTransaction(qulonglong transactionNumber)
     tLineInfo.gtotal  =  Settings::addTax()  ? gtotal : tLineInfo.total;
     soGTotal         += tLineInfo.gtotal;
     soDeliveryDT      = trItem.deliveryDateTime; // this will be the same for all the SO, so it does not matter if overwrited.
-    
+
     qDebug()<<"\n*** item discount:"<<tLineInfo.disc<<" total itemsDiscount:"<<itemsDiscount<<"\n";
     qDebug()<<"\n*** soGTotal:"<<soGTotal<<" deliveryDT:"<<soDeliveryDT<<"\n";
     QString newName;
@@ -4999,10 +4999,10 @@ void iotposView::printTicketFromTransaction(qulonglong transactionNumber)
       trItem.name = n;
       tLineInfo.desc    = trItem.name;
     }
-    
+
     ticketLines.append(tLineInfo);
   }
-  
+
   //Ticket
   QDateTime dt;
   dt.setDate(trInfo.date);
@@ -5039,7 +5039,7 @@ void iotposView::printTicketFromTransaction(qulonglong transactionNumber)
   ticket.subTotal = realSubtotal;
   if (ticket.hasSpecialOrders) ticket.deliveryDT = soDeliveryDT;
   ticket.soTotal = soGTotal;
-  
+
   printTicket(ticket);
   delete myDb;
 }
@@ -5062,7 +5062,7 @@ void iotposView::cashOut()
     dlgPassword->hide();
     doit = dlgPassword->exec();
   }//else lowsecurity
-  
+
   if (doit) {
     double max = drawer->getAvailableInCash();
     if (!max>0) {
@@ -5116,7 +5116,7 @@ void iotposView::cashIn()
     dlgPassword->hide();
     doit = dlgPassword->exec();
   }//else lowsecurity
-  
+
   if (doit) {
     InputDialog *dlg = new InputDialog(this, false, dialogCashOut, i18n("Cash In"));
     if (dlg->exec() ) {
@@ -5181,7 +5181,7 @@ void iotposView::addSpecialOrder()
 
   //first, if the sale contains another SO, then only the same client is allowed, and we must disable the client selection on the SO editor.
   bool allowClientSelection = specialOrders.isEmpty();
-  
+
   SpecialOrderInfo soInfo;
   qulonglong newSOId = 0;
   SpecialOrderEditor *soEditor = new SpecialOrderEditor(this);
@@ -5214,14 +5214,14 @@ void iotposView::addSpecialOrder()
       soInfo.completePayment = true;
     else
       soInfo.completePayment = false;
-    
+
     soInfo.dateTime = soEditor->getDateTime();
 
     if (soInfo.payment == soInfo.price)
       soInfo.completedOnTrNum = currentTransaction;
     else
       soInfo.completedOnTrNum = 0;
-    
+
     soInfo.clientId = soEditor->getClientId();
     soInfo.userId = soEditor->getUserId();
 
@@ -5240,7 +5240,7 @@ void iotposView::addSpecialOrder()
 
     //discount from SO elements
     soInfo.disc = myDb->getSpecialOrderAverageDiscount(soInfo.orderid)/100; //in percentage.
-    double soDiscount = soInfo.disc * soInfo.payment *soInfo.qty; 
+    double soDiscount = soInfo.disc * soInfo.payment *soInfo.qty;
 
     //add info to the buy list
 
@@ -5265,7 +5265,7 @@ void iotposView::addSpecialOrder()
 
     //disable client combo box.
     ui_mainview.groupClient->setDisabled(true);
-    
+
     delete myDb;
   }
   //finally delete de ui
@@ -5286,7 +5286,7 @@ void iotposView::specialOrderComplete()
 
   SOSelector *dlg = new SOSelector(this);
   dlg->setDb(db);
-  
+
   if (dlg->exec() ) {
     qulonglong tNum=dlg->getSelectedTicket();
     Azahar *myDb = new Azahar;
@@ -5360,7 +5360,7 @@ void iotposView::specialOrderComplete()
 
         ///after inserting so in the db, calculate tax.
         soInfo.averageTax = myDb->getSpecialOrderAverageTax(soInfo.orderid);
-        
+
         //add to the hash
         specialOrders.insert(soInfo.orderid, soInfo);
         refreshTotalLabel();
@@ -5377,10 +5377,10 @@ void iotposView::specialOrderComplete()
     lastDiscount = 0;
     lastDiscount = myDb->getTransactionDiscMoney(tNum);
     qDebug()<<" Originating transaction discount:"<<lastDiscount<<" applying it to the profit.";
-    
+
     updateClientInfo();
     refreshTotalLabel();
-    
+
     if (paidOrders.count()> 1) { // the first is the pre-message
       KNotification *notify = new KNotification("information", this);
       notify->setText(paidOrders.join("\n"));
@@ -5392,7 +5392,7 @@ void iotposView::specialOrderComplete()
     qDebug()<<"** COMPLETING A SPECIAL ORDER [updating balance/transaction]";
     updateBalance(false);
     updateTransaction();
-    
+
     //disable clients combo box
     ui_mainview.groupClient->setDisabled(true);
 
@@ -5449,7 +5449,7 @@ void iotposView::insertBalance()
 {
   Azahar *myDb = new Azahar;
   myDb->setDatabase(db);
-  
+
   //This creates an empty balance
   BalanceInfo info;
   info.id = 0;
@@ -5463,7 +5463,7 @@ void iotposView::insertBalance()
   info.cash          = drawer->getAvailableInCash();
   info.card          = drawer->getAvailableInCard();
   info.terminal      = Settings::editTerminalNumber();
-  
+
   info.transactions  = "";
   info.cashflows     = "";
   info.done = false;
@@ -5476,7 +5476,7 @@ void iotposView::updateBalance(bool finish)
 {
   Azahar *myDb = new Azahar;
   myDb->setDatabase(db);
-  
+
   //got info from drawer..
   BalanceInfo info;
   info.id = currentBalanceId;
@@ -5547,7 +5547,7 @@ void iotposView::updateTransaction()
     tmpList << QString::number(pi.code) + "/" + QString::number(pi.qtyOnList);
   }
   info.itemlist   = tmpList.join(","); //Only save normal products. Its almost DEPRECATED.
-  
+
   tmpList.clear();
   foreach(SpecialOrderInfo soi, specialOrders) {
     profit += (soi.price - soi.cost) * soi.qty;
@@ -5576,7 +5576,7 @@ void iotposView::suspendSale()
   myDb->setDatabase(db);
   ReservationInfo tRInfo = myDb->getReservationInfoFromTr( currentTransaction );
   delete myDb;
-  
+
   if ( operationStarted && count>0 ) {
     qulonglong tmpId = currentTransaction;
     qDebug()<<"THE SALE HAS BEEN SUSPENDED. Id="<<tmpId;
@@ -5593,7 +5593,7 @@ void iotposView::suspendSale()
         //reservationPayment
         qDebug()<<"Reservation Payment:"<<reservationPayment;
     }
-    
+
     //inform the user
     KNotification *notify = new KNotification("information", this);
     notify->setText(i18n("The sale %1 has been sucessfully suspended.", tmpId));
@@ -5685,7 +5685,7 @@ void iotposView::changeSOStatus()
     notify->sendEvent();
     return;
   }
-  
+
   SOStatus *dlg = new SOStatus(this);
   dlg->setDb(db);
 
@@ -5714,7 +5714,7 @@ void  iotposView::occasionalDiscount()
     dlgPassword->clearLines();
     continuar = dlgPassword->exec();
   }
-  
+
   if (continuar) {
     //SHOW THE NEW DISCOUNT PANEL
     discountPanel->showPanel();
@@ -5727,7 +5727,7 @@ void iotposView::applyOccasionalDiscount()
 
     ///NOTE: FIXME! The nonDiscountable items should not be discounted with dollar discount or Percentage discount.
     ///             Now the problem is with special Orders. How to allow/disallow discounts for them?
-    
+
     //validate discount: the input has a proper validator.
     if (ui_mainview.rbPercentage->isChecked()) {
         oDiscountMoney = 0; //this is 0 when applying a percentage discount.
@@ -5778,7 +5778,7 @@ void iotposView::applyOccasionalDiscount()
                 myDb->setDatabase(db);
                 QString authBy = dlgPassword->username();
                 if (authBy.isEmpty()) authBy = myDb->getUserName(1); //default admin.
-                log(loggedUserId, QDate::currentDate(), QTime::currentTime(), i18n("Changing price to product %1, from %2 to %3. Authorized by %4", 
+                log(loggedUserId, QDate::currentDate(), QTime::currentTime(), i18n("Changing price to product %1, from %2 to %3. Authorized by %4",
                                                                                    code, info.price, ui_mainview.editDiscount->text().toDouble(), authBy));
                 delete myDb;
                 qDebug()<<QString("Changing price to: %1, from %2 to %3.").arg(code).arg(info.price).arg(ui_mainview.editDiscount->text().toDouble());
@@ -5846,7 +5846,7 @@ void iotposView::reserveItems()
         notifierPanel->setSize(350,150);
         notifierPanel->setOnBottom(false);
         notifierPanel->showNotification("<b>Cannot reserve this transaction</b> because it is <i>already reserved</i>.<br>You may finish this reservation or suspend sale if you selected this sale by mistake.",8000);
-        
+
         qDebug()<<"This transaction already has a reservation. Tr id:"<<currentTransaction<<" Reservation Id:"<<tRInfo.id;
         return;
     }
@@ -5860,7 +5860,7 @@ void iotposView::reserveItems()
     reservationPayment = ui_mainview.editAmount->text().toDouble();
     payWith = reservationPayment;
     //change given is allways 0.
-    
+
     //check if there are items in the list. Only on normal products, not SO.
     if (!productsHash.isEmpty()) {
         ReservationInfo rInfo;
@@ -5927,7 +5927,7 @@ void iotposView::reserveItems()
             tLineInfo.qty     = pi.qtyOnList;
             tLineInfo.unitStr = pi.unitStr;
             tLineInfo.isGroup = false;
-            if (pi.isAGroup) { 
+            if (pi.isAGroup) {
                 tLineInfo.geForPrint    =iname;
                 tLineInfo.completePayment = true;
                 tLineInfo.payment = 0;
@@ -5943,7 +5943,7 @@ void iotposView::reserveItems()
             //adding info for each product discount if any..
             if (pi.disc > 0)
                 discItems.append(QString("%1/%2").arg(pi.code).arg(pi.disc));
-            
+
         } //for each product
 
         //now we have the discItems, assign to the rInfo.
@@ -5973,7 +5973,7 @@ void iotposView::reserveItems()
             drawer->insertCashflow(cfId);
         }
 
-        //write a log 
+        //write a log
         QString authBy = dlgPassword->username();
         if (authBy.isEmpty()) authBy = myDb->getUserName(1); //default admin.
             log(loggedUserId, QDate::currentDate(), QTime::currentTime(), i18n("Cash-IN [%1] for RESERVATION [%5] by %2 at terminal %3 on %4",QString::number(info.amount, 'f',2),authBy,Settings::editTerminalNumber(),QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm")).arg(rId));
@@ -6000,7 +6000,7 @@ void iotposView::reserveItems()
         else
             realSubtotal = KGlobal::locale()->formatMoney(subTotalSum-totalTax+discMoney+pDiscounts, QString(), 2); //FIXME: es +discMoney o -discMoney??
             qDebug()<<"\n********** Total Taxes:"<<totalTax<<" total Discount:"<<discMoney<<" Prod Discounts:"<<pDiscounts;
-        
+
         ticket.number = currentTransaction;
         ticket.subTotal = realSubtotal; //This is the subtotal-taxes-discount
         ticket.total  = reservationPayment; qDebug()<<" *************** totalSum:"<<totalSum;
@@ -6086,7 +6086,7 @@ void iotposView::resumeReservation()
         // We can use a flag to indicate to do such thing on the finishCurrentTransaction() method.
         startingReservation = false;
         finishingReservation= true;
-        
+
         //get data
         QList<ProductInfo>      pList = dlg->getProductsList();
         qulonglong trNumber           = dlg->getSelectedTransaction();
@@ -6098,7 +6098,7 @@ void iotposView::resumeReservation()
         //Check if there is a transaction, and suspend it before resume the reservation.
         suspendSale();
         currentTransaction = trNumber;
-        
+
         emit signalUpdateTransactionInfo();
         clientInfo = myDb->getClientInfo(clientId);
         updateClientInfo();
@@ -6173,12 +6173,12 @@ void iotposView::addReservationPayment()
         notify->sendEvent();
         return;
     }
-    
+
     Azahar *myDb = new Azahar;
     myDb->setDatabase(db);
     ReservationsDialog *dlg = new ReservationsDialog(this, drawer, loggedUserId);
     dlg->setDb(db);
-    
+
     if (dlg->exec()) {
         qulonglong rId = dlg->getSelectedReservation();
         //check if the reservation is not fully paid.
@@ -6214,7 +6214,7 @@ void iotposView::insertCashInForReservationPayment(const qulonglong &rid, const 
 {
     Azahar *myDb = new Azahar;
     myDb->setDatabase(db);
-    
+
     CashFlowInfo info;
     info.amount = amount;
     info.reason = i18n("Payment for Reservation %1", rid);
@@ -6230,10 +6230,10 @@ void iotposView::insertCashInForReservationPayment(const qulonglong &rid, const 
         drawer->open();
     drawer->addCash(amount);
     drawer->insertCashflow(cfId);
-    
+
     QString authBy = loggedUserName;
     log(loggedUserId, QDate::currentDate(), QTime::currentTime(), i18n("Cash-IN-ReservationPayment [%1] for reservation %5 by %2 at terminal %3 on %4",QString::number(amount, 'f',2),authBy,Settings::editTerminalNumber(),QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm"), rid));
-    
+
     delete myDb;
 }
 
@@ -6251,7 +6251,7 @@ void iotposView::showCredits()
     ui_mainview.lblCreditChange->setText("0.0");
     creditPanel->showPanel();
     ui_mainview.editClientIdForCredit->setFocus();
-    
+
     crInfo.id = 0;
     crClientInfo.id = 0;
 }
@@ -6275,7 +6275,7 @@ void iotposView::filterClientForCredit()
     //    }
     //}
 
-    
+
     QString clientCode = ui_mainview.editClientIdForCredit->text();
     if (clientCode.isEmpty() || clientCode == " "){ //clean filter
         ui_mainview.creditContent->clear();//clear totals for customer credits
@@ -6302,7 +6302,7 @@ void iotposView::filterClient()
     ui_mainview.editClient->setText(searchedTrimmed); //The CODE only, set this in the lineedit...
     QString clientCode = searchedTrimmed;
     qDebug()<<"Filtering Clients | SEARCHED TEXT:"<<searched<<" TRIMMED:"<<searchedTrimmed<<" Code:"<<clientCode;
-    
+
     if (clientCode.isEmpty() || clientCode == " "){ //clean filter
         //do not anything now.
     } else {
@@ -6315,13 +6315,13 @@ void iotposView::createClient()
 {
     Azahar *myDb = new Azahar;
     myDb->setDatabase(db);
-    
+
     if (db.isOpen()) {
         ClientEditor *clientEditorDlg = new ClientEditor(this);
         clientEditorDlg->setTitle("Add Customer");
         ClientInfo info;
         QPixmap photo;
-        
+
         if (clientEditorDlg->exec() ) {
             info.code     = clientEditorDlg->getCode();
             info.name     = clientEditorDlg->getName();
@@ -6332,11 +6332,11 @@ void iotposView::createClient()
             info.points   = clientEditorDlg->getPoints();
             info.discount = clientEditorDlg->getDiscount();
             info.since    = QDate::currentDate();
-            
+
             info.photo = Misc::pixmap2ByteArray(new QPixmap(photo));
             if (!db.isOpen()) db.open();
             if (!myDb->insertClient(info)) qDebug()<<myDb->lastError();
-            
+
             //Select the new client and update info.
             if ( specialOrders.isEmpty() ) {
                 clientsHash = myDb->getClientsHash(); //refresh clients with this new info.
@@ -6347,7 +6347,7 @@ void iotposView::createClient()
                 qDebug()<<"Cannot change customer while using Special Orders";
                 ui_mainview.editClient->clear();
             }
-            
+
         }
         delete clientEditorDlg;
     }
@@ -6378,7 +6378,7 @@ void iotposView::tenderedChanged()
     if (crInfo.id <= 0 || crClientInfo.id <= 0) return; //PLEASE ENTER CLIENT CODE FIRST!!!
     double tendered = ui_mainview.editCreditTendered->text().toDouble();
     double change = 0;
-    
+
     if (crInfo.total <= 0)
         change = 0; //no change, since no +credit.
     else
@@ -6402,7 +6402,7 @@ void iotposView::doCreditPayment()
     if (tendered <= 0) {
         ui_mainview.editCreditTendered->setFocus();
         ui_mainview.editCreditTendered->shake();
-        return; //no tendered amount!   
+        return; //no tendered amount!
     }
     if (crInfo.total <= 0)
         change = 0; //no change, since no +credit.
@@ -6444,19 +6444,28 @@ void iotposView::doCreditPayment()
         cIn = tendered;
         qDebug()<<" CASE 3 | final results:  cr.total:"<<crInfo.total<<" crHistory.amount:"<<crHistory.amount<<" Tendered:"<<tendered;
     }
-    
+
     myDb->insertCreditHistory( crHistory );
     myDb->updateCredit( crInfo );
     insertCashInForCredit( crInfo, cIn );
-    
+
     qDebug()<<"Credit remaining:"<<crInfo.total<<" Payment:"<<crHistory.amount<<" Change:"<<change;
-    
+
     //ui_mainview.creditPaymentWidget->hide();
     //ui_mainview.editClientIdForCredit->clear();
     ui_mainview.editCreditTendered->clear();
     //print ticket. NOTE: This prints the credit report.. We want to print the NEW PAYMENT ALSO, so add to the document.
     calculateTotalForClient();
-    printCreditReport();
+    //Small chaneg by Shane Rees to bring up a message box before printing after partial payments
+    QMessageBox::StandardButton reply
+    reply = QMessageBox::question(this, il8n("Print payment ticket", il8n("Do you wish to print partial payment ticket?"), QMessageBox::Yes|QMessageBox::NO );
+    if(reply == QMessageBox::Yes){
+      qDebug() << "Printing partial ticket";
+      printCreditReport();
+    } else{
+      qDebug() << "Skipping partial ticket printing"
+    }
+
 
     //close db and credit dialog, delaying a bit.
     //QTimer::singleShot(3000, creditPanel, SLOT(hidePanel()));
@@ -6477,11 +6486,11 @@ void iotposView::printCreditReport()
 
             if (printer.widthMM() > 150)
                 printer.setPaperSize(QSizeF(104,110), QPrinter::Millimeter); // Resetting to 104mm (4 inches) paper.
-            
+
             qDebug()<<"+Paper Width: "<<printer.widthMM()<<"mm"<<"; Page Width: "<<printer.width();
-            
+
             ui_mainview.creditContent->print(&printer); //this prints directly to the default printer. No print dialog.
-            
+
             //if export to pdf
             QString fn = QString("%1/iotpos-printing/").arg(QDir::homePath());
             QDir dir;
@@ -6502,7 +6511,7 @@ void iotposView::printCreditReport()
             printer.setPageMargins(0,0,0,0,QPrinter::Millimeter);
             qDebug()<<"-Paper Widt: "<<printer.widthMM()<<"mm"<<"; Page Widt: "<<printer.width();
 			ui_mainview.creditContent->print(&printer);
-			
+
 			}
 	  else {
 		  // this will send internal credit to default printer ig
@@ -6513,7 +6522,7 @@ void iotposView::printCreditReport()
             printer.setPageMargins(0,0,0,0,QPrinter::Millimeter);
             qDebug()<<"-Paper Widt: "<<printer.widthMM()<<"mm"<<"; Page Widt: "<<printer.width();
 		  ui_mainview.creditContent->print(&printer);
-			
+
 		  }
 
     }
@@ -6528,7 +6537,7 @@ void iotposView::insertCashInForCredit(const CreditInfo &credit, const double &a
 {
     Azahar *myDb = new Azahar;
     myDb->setDatabase(db);
-    
+
     CashFlowInfo info;
     info.amount = amount;
     info.reason = i18n("Payment for Credit %1", credit.id);
@@ -6544,7 +6553,7 @@ void iotposView::insertCashInForCredit(const CreditInfo &credit, const double &a
         drawer->open();
     drawer->addCash(info.amount);
     drawer->insertCashflow(cfId);
-    
+
     QString authBy = loggedUserName;
     log(loggedUserId, QDate::currentDate(), QTime::currentTime(), i18n("Cash-IN-CreditPayment [%1] for credit %5 by %2 at terminal %3 on %4",QString::number(info.amount, 'f',2),authBy,Settings::editTerminalNumber(),QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm"), credit.id));
 
@@ -6563,17 +6572,17 @@ void iotposView::calculateTotalForClient()
         myDb->setDatabase(db);
         //TODO: Limit the credit History result, to the last ones (5?) and paid/unpaid?
         QList<CreditHistoryInfo> creditHistory = myDb->getCreditHistoryForClient(crClientInfo.id, 30); //limit last 30 days credits.
-        
+
         //print client info.
         ///Use QTextDocument via QTextEdit
         QTextCursor cursor(ui_mainview.creditContent->textCursor());
         cursor.movePosition(QTextCursor::Start);
-        
+
         QTextFrame *topFrame = cursor.currentFrame();
         QTextFrameFormat topFrameFormat = topFrame->frameFormat();
         topFrameFormat.setPadding(5);
         topFrame->setFrameFormat(topFrameFormat);
-        
+
         QTextCharFormat textFormat;
         QTextCharFormat smTextFormat;
         QTextCharFormat boldFormat;
@@ -6598,7 +6607,7 @@ void iotposView::calculateTotalForClient()
         blockCenter.setAlignment(Qt::AlignHCenter);
         blockLeft.setAlignment(Qt::AlignLeft);
         blockRight.setAlignment(Qt::AlignRight);
-        
+
         //title
         cursor.setBlockFormat(blockCenter);
         cursor.insertText(i18n("CREDIT REPORT"), titleFormat);
@@ -6722,7 +6731,3 @@ void iotposView::on_rbFilterByPopularity_clicked()
 {
     ui_mainview.editItemCode->clear();
 }
-
-
-
-
