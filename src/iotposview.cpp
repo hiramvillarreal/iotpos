@@ -6458,7 +6458,7 @@ void iotposView::doCreditPayment()
     calculateTotalForClient();
     //Small change by Shane Rees to bring up a message box before printing after partial payments
     QMessageBox::StandardButton reply;
-    reply = QMessageBox::question(this, il8n("Print payment ticket", il8n("Do you wish to print partial payment ticket?"), QMessageBox::Yes|QMessageBox::NO );
+    reply = QMessageBox::question(this, "Print payment ticket", "Do you wish to print partial payment ticket?", QMessageBox::Yes|QMessageBox::No);
     if(reply == QMessageBox::Yes){
       qDebug() << "Printing partial ticket";
       printCreditReport();
