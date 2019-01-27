@@ -6456,14 +6456,14 @@ void iotposView::doCreditPayment()
     ui_mainview.editCreditTendered->clear();
     //print ticket. NOTE: This prints the credit report.. We want to print the NEW PAYMENT ALSO, so add to the document.
     calculateTotalForClient();
-    //Small chaneg by Shane Rees to bring up a message box before printing after partial payments
-    QMessageBox::StandardButton reply
+    //Small change by Shane Rees to bring up a message box before printing after partial payments
+    QMessageBox::StandardButton reply;
     reply = QMessageBox::question(this, il8n("Print payment ticket", il8n("Do you wish to print partial payment ticket?"), QMessageBox::Yes|QMessageBox::NO );
     if(reply == QMessageBox::Yes){
       qDebug() << "Printing partial ticket";
       printCreditReport();
     } else{
-      qDebug() << "Skipping partial ticket printing"
+      qDebug() << "Skipping partial ticket printing";
     }
 
 
