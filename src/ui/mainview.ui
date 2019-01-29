@@ -1575,67 +1575,6 @@ color:black;</string>
                    <property name="rightMargin">
                     <number>18</number>
                    </property>
-                   <item>
-                    <widget class="QLabel" name="labelCardNumber">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="text">
-                      <string>  Card #:</string>
-                     </property>
-                     <property name="buddy">
-                      <cstring>editCardNumber</cstring>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="editCardNumber">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>160</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>180</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="inputMask">
-                      <string>0000-0000-0000-0000</string>
-                     </property>
-                     <property name="text">
-                      <string>---</string>
-                     </property>
-                     <property name="cursorPosition">
-                      <number>19</number>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLabel" name="labelAuthNumber">
-                     <property name="text">
-                      <string>Aut #:</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="editCardAuthNumber">
-                     <property name="text">
-                      <string>-</string>
-                     </property>
-                    </widget>
-                   </item>
                   </layout>
                  </item>
                 </layout>
