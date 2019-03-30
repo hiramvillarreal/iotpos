@@ -2577,7 +2577,7 @@ void iotposView::finishCurrentTransaction()
     else if (accept == QMessageBox::No) {
       // If the credit card has not been accepted then cancel the transaction.
       cancelCurrentTransaction();
-      qDebug() << "Transaction canceled due to filed credit card"
+      qDebug() << "Transaction canceled due to filed credit card";
       //
     }
 
