@@ -2567,7 +2567,7 @@ void iotposView::finishCurrentTransaction()
   }
   else {
     //Remove the Creditcard boxes as no longer tenderedChanged
-    QMessageBox::StandardButton accept
+    QMessageBox::StandardButton accept;
     accept = QMessageBox::question(this, i18n("Credit Card Accepted?"), i18n("Please refer to EFTPOS terminal\n Has payment been accepted?"), QMessageBox::No|QMessageBox::Yes);
     if (accept == QMessageBox::Yes) {
       // If the credit card has been accepted then continue on
