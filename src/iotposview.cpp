@@ -1,8 +1,11 @@
 /**************************************************************************
- *   Copyright © 2013-2015 by Hiram R. Villarreal                          *
+ *   Copyright © 2013-2019 by Hiram R. Villarreal                          *
  *   hiramvillarreal.ap@gmail.com                                          *
- *   Modified by Daniel A. Cervantes Cabrera *
- *   dcchivela@gmail.com                                                                        *
+ *   Modified by Daniel A. Cervantes Cabrera                               *
+ *   dcchivela@gmail.com                                                   *
+ *   Code changes and minor fixes and imporvements  by Shane Rees          *
+ *   pager.pigeon@gmail.com                                                *
+ *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
  *   the Free Software Foundation; either version 2 of the License, or     *
@@ -294,8 +297,8 @@ iotposView::iotposView() //: QWidget(parent)
   connect(ui_mainview.checkOwnCredit, SIGNAL(toggled(bool)), SLOT(checksChanged())  );
   connect(ui_mainview.editAmount,SIGNAL(returnPressed()), SLOT(finishCurrentTransaction()) );
   connect(ui_mainview.editAmount, SIGNAL(textChanged(const QString &)), SLOT(refreshTotalLabel()));
-  connect(ui_mainview.editCardNumber, SIGNAL(returnPressed()), SLOT(goSelectCardAuthNumber()) );
-  connect(ui_mainview.editCardAuthNumber, SIGNAL(returnPressed()), SLOT(finishCurrentTransaction()) );
+  //connect(ui_mainview.editCardNumber, SIGNAL(returnPressed()), SLOT(goSelectCardAuthNumber()) );
+  //connect(ui_mainview.editCardAuthNumber, SIGNAL(returnPressed()), SLOT(finishCurrentTransaction()) );
   connect(ui_mainview.splitter, SIGNAL(splitterMoved(int, int)), SLOT(setUpTable()));
   connect(ui_mainview.splitterGrid, SIGNAL(splitterMoved(int, int)), SLOT(setUpTable()));
   connect(ui_mainview.editClient, SIGNAL(returnPressed()), SLOT(filterClient()));
@@ -671,7 +674,7 @@ void iotposView::setUpInputs()
   ui_mainview.editItemCode->setValidator(validatorEAN13);
   QRegExp regexpAN("[A-Za-z_0-9\\\\/\\-]+");//any letter, number, both slashes, dash and lower dash.
   QRegExpValidator *regexpAlpha = new QRegExpValidator(regexpAN, this);
-  ui_mainview.editCardAuthNumber->setValidator(regexpAlpha);
+  //ui_mainview.editCardAuthNumber->setValidator(regexpAlpha);
 
   //QRegExp regexpCC("[0-9]{1,13}"); //We need to support also names. So we need to remove this validator. Just text
   QRegExp regexpAN2("[A-Za-z_0-9\\s\\\\/\\-]+");//any letter, number, both slashes, dash and lower dash. and any space
@@ -881,10 +884,8 @@ void iotposView::checksChanged()
   }//cash
   else if (ui_mainview.checkCard->isChecked()) //Card, need editCardkNumber...
   {
-    ui_mainview.stackedWidget->setCurrentIndex(1);
     ui_mainview.editAmount->setText(QString::number(totalSum));
-    ui_mainview.editCardNumber->setFocus();
-    ui_mainview.editCardNumber->setSelection(0,ui_mainview.editCardNumber->text().length());
+    ui_mainview.editAmount->setFocus();
   } else { //own credit. Do not allow change the amount.
     ui_mainview.stackedWidget->setCurrentIndex(0);
     ui_mainview.editAmount->setText(QString::number(totalSum));
@@ -896,8 +897,8 @@ void iotposView::checksChanged()
 void iotposView::clearUsedWidgets()
 {
   ui_mainview.editAmount->setText("");
-  ui_mainview.editCardNumber->setText("");
-  ui_mainview.editCardAuthNumber->setText("-");
+  //ui_mainview.editCardNumber->setText("");
+  //ui_mainview.editCardAuthNumber->setText("-");
   ui_mainview.tableWidget->clearContents();
   ui_mainview.tableWidget->setRowCount(0);
   totalSum = 0.0;
@@ -1016,7 +1017,7 @@ void iotposView::plusPressed()
 
 void iotposView::goSelectCardAuthNumber()
 {
-  ui_mainview.editCardAuthNumber->setFocus();
+  //ui_mainview.editCardAuthNumber->setFocus();
 }
 
 
@@ -2543,7 +2544,7 @@ void iotposView::finishCurrentTransaction()
       canfinish = false;
       ui_mainview.editAmount->setFocus();
       ui_mainview.editAmount->setStyleSheet("background-color: rgb(255,100,0); color:white; selection-color: white; font-weight:bold;");
-      ui_mainview.editCardNumber->setStyleSheet("");
+      //ui_mainview.editCardNumber->setStyleSheet("");
       ui_mainview.editAmount->setSelection(0, ui_mainview.editAmount->text().length());
       msg = i18n("<html><font color=red><b>Please fill the correct payment amount before finishing a transaction.</b></font></html>");
       tipAmount->showTip(msg, 4000);
@@ -2565,23 +2566,19 @@ void iotposView::finishCurrentTransaction()
     }
   }
   else {
-    QString cn =  ui_mainview.editCardNumber->text();
-    QString cna = ui_mainview.editCardAuthNumber->text();
-    if (!ui_mainview.editCardNumber->hasAcceptableInput() || cn.isEmpty() || cn == "---") {
-      canfinish = true; //false; //NOTE: A request by Darius @ March 19 2012.  FIXME Later: make a config option
-      //ui_mainview.editCardNumber->setFocus();
-      //ui_mainview.editCardNumber->setStyleSheet("background-color: rgb(255,100,0); color:white; font-weight:bold; selection-color: white;");
-      //ui_mainview.editAmount->setStyleSheet("");
-      //ui_mainview.editCardNumber->setSelection(0, ui_mainview.editCardNumber->text().length());
-     // msg = i18n("<html><font color=red><b>Note: card number missing.</b></font></html>");
+    //Remove the Creditcard boxes as no longer tenderedChanged
+    QMessageBox::StandardButton accept;
+    accept = QMessageBox::question(this, i18n("Credit Card Accepted?"), i18n("Please refer to EFTPOS terminal\n Has payment been accepted?"), QMessageBox::No|QMessageBox::Yes);
+    if (accept == QMessageBox::Yes) {
+      // If the credit card has been accepted then continue on
+      qDebug() << "Credit card payment accepted";
+      canfinish = true;
     }
-    else if (!ui_mainview.editCardAuthNumber->hasAcceptableInput() || cna.isEmpty() || cna.length()<4) {
-      canfinish = true; //false; //NOTE: A request by Darius @ March 19 2012. FIXME Later: make a config option
-      //ui_mainview.editCardAuthNumber->setFocus();
-      //ui_mainview.editCardAuthNumber->setStyleSheet("background-color: rgb(255,100,0); color:white; font-weight:bold; selection-color: white;");
-      //ui_mainview.editAmount->setStyleSheet("");
-      //ui_mainview.editCardAuthNumber->setSelection(0, ui_mainview.editCardAuthNumber->text().length());
-      msg = i18n("<html><font color=red><b>Note: Authorisation number from the bank voucher missing.</b></font></html>");
+    else if (accept == QMessageBox::No) {
+      // If the credit card has not been accepted then cancel the transaction.
+      cancelCurrentTransaction();
+      qDebug() << "Transaction canceled due to filed credit card";
+      //
     }
 
     //check if card type is != none.
@@ -2617,7 +2614,7 @@ void iotposView::finishCurrentTransaction()
   if (canfinish) // Ticket #52: Allow ZERO DUE.
   {
     ui_mainview.editAmount->setStyleSheet("");
-    ui_mainview.editCardNumber->setStyleSheet("");
+    //ui_mainview.editCardNumber->setStyleSheet("");
     TransactionInfo tInfo;
     tInfo.cardType = 1; //none
     PaymentType      pType;
@@ -2636,17 +2633,7 @@ void iotposView::finishCurrentTransaction()
       changeGiven = payWith- totalSum;
     } else if (ui_mainview.checkCard->isChecked()) {
       pType = pCard;
-      Azahar *myDb = new Azahar;
-      myDb->setDatabase(db);
-      tInfo.cardTypeStr = ui_mainview.comboCardType->currentText();
-      tInfo.cardType = myDb->getCardTypeId( tInfo.cardTypeStr );
-      qDebug()<<"CARD TYPE ID:"<<tInfo.cardType<<" Card Type STR:"<<tInfo.cardTypeStr;
-      delete myDb;
-      if (ui_mainview.editCardNumber->hasAcceptableInput() ) {
-        cardNum = ui_mainview.editCardNumber->text().replace(0,15,"***************"); //FIXED: Only save last 4 digits;
-      }
-      if (ui_mainview.editCardAuthNumber->hasAcceptableInput())
-        authnumber = ui_mainview.editCardAuthNumber->text();
+      qDebug()<<"Credit Card Selected";
       payWith = payTotal;
     } else { //own credit
       pType = pOwnCredit;
@@ -5983,7 +5970,7 @@ void iotposView::reserveItems()
         myDb->addReservationPayment(rId, rInfo.payment);
 
         ui_mainview.editAmount->setStyleSheet("");
-        ui_mainview.editCardNumber->setStyleSheet("");
+        //ui_mainview.editCardNumber->setStyleSheet("");
 
         //TODO:PRINT A TICKET  - Print it twice? one for client other for store (stick it at the product)
         // investigate how to manipulate printer settings (cups) NOTE: See at Credits code, there is an answer.
